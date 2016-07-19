@@ -17,7 +17,7 @@
     <li><a accesskey="3" href="#menu">Vai alla navigazione del sito</a></li>
 </ul>
 
-<header class="Header">
+<header class="Header Headroom--fixed">
 
     <div class="Header-banner">
         <div class="Header-serviceLink">
@@ -30,7 +30,7 @@
 
     <div class="Header-navbar Grid Grid--alignMiddle">
 
-        <a class="Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open" aria-controls="menu" aria-label="accedi al menu" title="navigazione">
+        <a class="Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open" aria-controls="menu" aria-label="accedi al menu" title="navigazione" href="#">
             <span class="Hamburger-toggle"></span>
             <p class="Header-toggleText">Menu</p>
         </a>
@@ -66,9 +66,9 @@
             <div class="Header-search">
                 <form class="Form">
                     <div class="Form-field Form-field--withPlaceholder">
-                        <input class="Form-input u-text-s" required id="cerca">
+                        <input class="Form-input u-text-r-s" required id="cerca">
                         <label class="Form-label" for="cerca">Cerca...</label>
-                        <button class="icon-magnifier u-background-40 u-color-white u-padding-all-s u-text-m"></button>
+                        <button class="icon-magnifier u-background-40 u-color-white u-padding-all-s u-text-r-m"></button>
                     </div>
                 </form>
             </div>
@@ -82,6 +82,7 @@
     <!-- Header-navbar -->
 
     <div class="u-textCenter">
+
         <nav class="Megamenu Megamenu--styled js-megamenu">
             <ul class="Megamenu-list">
                 <li class="Megamenu-item">
@@ -158,20 +159,21 @@
                 </li>
             </ul>
         </nav>
+
     </div>
 
 </header>
 
 <div class="Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas" id="menu">
     <div class="Offcanvas-content u-background-white">
-        <div class="u-padding-bottom-l u-background-70">
+        <div class="Offcanvas-toggleContainer u-padding-bottom-l u-background-70">
             <button class="Hamburger-toggleContainer u-block u-color-white u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close" aria-controls="menu" aria-label="chiudi il menu" title="esci dalla navigazione">
         <span class="Hamburger-toggle is-active">
         </span>
       </button>
         </div>
         <nav>
-            <ul class="Linklist Treeview js-fr-treeview u-layout-prose">
+            <ul class="Linklist Treeview js-fr-treeview u-layout-prose u-text-r-xs">
                 <li tabindex="0"><a>Fruits</a>
                     <ul>
                         <li><a>Oranges</a></li>
@@ -231,7 +233,7 @@
     <section class="Grid">
 
     <div class="Grid-cell u-sizeFull u-md-size1of2 u-lg-size1of2 u-padding-all-l">
-        <div class="Grid Grid--fit u-margin-bottom-m u-text-xxs">
+        <div class="Grid Grid--fit u-margin-bottom-m u-text-r-xs">
             <p class="Grid-cell">
                 <span class="Dot u-background-50"></span>
                 <strong><a class="u-textClean" href="">La categoria</a></strong>
@@ -242,7 +244,7 @@
         </div>
         <div>
             <h2 class="u-text-h2 u-margin-bottom-xxl">Il Foia è legge</h2>
-            <p class="u-text-l u-textSecondary">Il ministro Madia: abbiamo mantenuto la promessa. Approvato definitivamente il decreto, ora continua l’impegno per Open Government</p>
+            <p class="u-text-r-l u-textSecondary">Il ministro Madia: abbiamo mantenuto la promessa. Approvato definitivamente il decreto, ora continua l’impegno per Open Government</p>
         </div>
     </div>
 
@@ -280,12 +282,27 @@
     <div class="u-layout-wide u-layoutCenter u-padding-top-xl u-padding-bottom-xl u-layout-withGutter">
       <div class="u-layout-centerContent u-background-grey-20">
     <section class="u-layout-wide u-padding-top-xxl u-padding-bottom-xxl">
+
         <div class="Grid Grid--withGutter u-padding-bottom-xxl">
-            <div class="Grid-cell u-md-size1of2 u-lg-size1of2">
-                <h2 class="u-text-l">Notizie</h2>
+            <div class="Grid-cell
+          u-flex
+          u-flexJustifyCenter
+          u-sm-flexJustifyStart
+          u-md-flexJustifyStart
+          u-lg-flexJustifyStart
+          u-md-size1of2
+          u-lg-size1of2">
+                <h2 class="u-text-r-l">Notizie</h2>
             </div>
-            <div class="Grid-cell u-flexAlignItemsEnd u-flexJustifyEnd u-flex u-md-size1of2 u-lg-size1of2">
-                <h2 class="u-text-m"><a class=" u-color-50" href="">Vedi tutto</a></h2>
+            <div class="Grid-cell
+          u-flex
+          u-flexJustifyCenter
+          u-sm-flexJustifyEnd
+          u-md-flexJustifyEnd
+          u-lg-flexJustifyEnd
+          u-md-size1of2
+          u-lg-size1of2">
+                <h2 class="u-text-r-m"><a class=" u-color-50" href="">Vedi tutto</a></h2>
             </div>
         </div>
 
@@ -294,15 +311,15 @@
             <div class="Grid-cell Card u-md-size3of4 u-lg-size3of4">
 
                 <div class="Grid Grid--withGutter">
-                    <div class="Grid-cell u-md-sizeFit u-lg-sizeFit">
-                        <img src="http://placehold.it/330x330?text=placeholder" />
+                    <div class="Grid-cell u-sm-sizeFit u-md-sizeFit u-lg-sizeFit">
+                        <img src="http://placehold.it/330x330?text=placeholder" class="u-sizeFull u-sm-sizeFit u-md-sizeFit u-lg-sizeFit" />
                     </div>
                     <div class="Grid-cell u-md-sizeFill u-lg-sizeFill">
                         <div class="Card-content u-color-grey-30 u-border-top-xxs u-padding-right-xxl">
                             <p class="Card-extra">
                                 <span class="Dot u-background-70"></span>
                                 <a class="Card-extraLink u-color-50" href="">Notizie</a>
-                                <span class="u-text-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
+                                <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
                             </p>
                             <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
                             <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum. Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt
@@ -318,7 +335,7 @@
                     <p class="Card-extra">
                         <span class="Dot u-background-70"></span>
                         <a class="Card-extraLink u-color-50" href="">Notizie</a>
-                        <span class="u-text-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
+                        <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
                     </p>
                     <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
                     <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum. Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt mollit
@@ -332,7 +349,7 @@
                     <p class="Card-extra">
                         <span class="Dot u-background-70"></span>
                         <a class="Card-extraLink u-color-50" href="">Notizie</a>
-                        <span class="u-text-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
+                        <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
                     </p>
                     <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
                     <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum. Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt mollit
@@ -346,7 +363,7 @@
                     <p class="Card-extra">
                         <span class="Dot u-background-70"></span>
                         <a class="Card-extraLink u-color-50" href="">Notizie</a>
-                        <span class="u-text-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
+                        <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
                     </p>
                     <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
                     <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum. Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt mollit
@@ -360,7 +377,7 @@
                     <p class="Card-extra">
                         <span class="Dot u-background-70"></span>
                         <a class="Card-extraLink u-color-50" href="">Notizie</a>
-                        <span class="u-text-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
+                        <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
                     </p>
                     <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
                     <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum. Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt mollit
@@ -374,7 +391,7 @@
                     <p class="Card-extra">
                         <span class="Dot u-background-70"></span>
                         <a class="Card-extraLink u-color-50" href="">Notizie</a>
-                        <span class="u-text-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
+                        <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
                     </p>
                     <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
                     <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum. Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt mollit
