@@ -208,17 +208,19 @@
                     
                     <div class="Browser-fileContent" data-role="code" id="code-index-js">
                         <code class="Code Code--lang-javascript">
-                            <pre><span class="hljs-keyword">import</span> Frbypasslinks <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-bypasslinks'</span>;
+                            <pre><span class="hljs-keyword">import</span> Frbypasslinks <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-bypasslinks'</span>
 
 <span class="hljs-comment">/* eslint-disable no-unused-vars */</span>
 
-<span class="hljs-keyword">import</span> stylesheet <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-bypasslinks/bypasslinks.css'</span>;
+<span class="hljs-keyword">import</span> stylesheet <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-bypasslinks/bypasslinks.css'</span>
 
 <span class="hljs-comment">/* eslint-enable */</span>
 
-<span class="hljs-built_in">module</span>.exports = Frbypasslinks({
+<span class="hljs-keyword">const</span> bypassLinks = Frbypasslinks({
   selector: <span class="hljs-string">'.js-fr-bypasslinks'</span>
-});
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> { bypassLinks, Frbypasslinks }
 </pre>
                         </code>
                     </div>

@@ -309,15 +309,15 @@
                     
                     <div class="Browser-fileContent" data-role="code" id="code-index-js">
                         <code class="Code Code--lang-javascript">
-                            <pre><span class="hljs-keyword">import</span> Fraccordion <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-accordion'</span>;
+                            <pre><span class="hljs-keyword">import</span> Fraccordion <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-accordion'</span>
 
 <span class="hljs-comment">/* eslint-disable no-unused-vars */</span>
 
-<span class="hljs-keyword">import</span> stylesheet <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-accordion/accordion.css'</span>;
+<span class="hljs-keyword">import</span> stylesheet <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-accordion/accordion.css'</span>
 
 <span class="hljs-comment">/* eslint-enable */</span>
 
-<span class="hljs-built_in">module</span>.exports = Fraccordion({
+<span class="hljs-keyword">const</span> accordion = Fraccordion({
 	<span class="hljs-comment">// String - Use header id on element to tie each accordion panel to its header - see panelIdPrefix</span>
 	headerIdPrefix: <span class="hljs-string">'accordion-header'</span>,
 	<span class="hljs-comment">// String - Use panel id on element to tie each accordion header to its panel - see headerIdPrefix</span>
@@ -328,7 +328,9 @@
 	multiselectable: <span class="hljs-literal">false</span>,
 	<span class="hljs-comment">// String - Class name that will be added to the selector when the component has been initialised</span>
 	readyClass: <span class="hljs-string">'fr-accordion--is-ready'</span>
-});
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> { accordion, Fraccordion }
 </pre>
                         </code>
                     </div>

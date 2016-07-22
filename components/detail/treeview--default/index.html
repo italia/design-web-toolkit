@@ -384,7 +384,7 @@
                     
                     <div class="Browser-fileContent" data-role="code" id="code-index-js">
                         <code class="Code Code--lang-javascript">
-                            <pre><span class="hljs-comment">/* global $ */</span>
+                            <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>
 
 <span class="hljs-comment">/*
  *	<span class="hljs-doctag">TODO:</span>
@@ -406,16 +406,16 @@
 } = {}</span>) </span>{
 
   <span class="hljs-comment">// CONSTANTS</span>
-  <span class="hljs-keyword">const</span> doc = <span class="hljs-built_in">document</span>;
-  <span class="hljs-keyword">const</span> docEl = doc.documentElement;
-  <span class="hljs-keyword">const</span> _q = (el, ctx = doc) =&gt; [].slice.call(ctx.querySelectorAll(el));
+  <span class="hljs-keyword">const</span> doc = <span class="hljs-built_in">document</span>
+  <span class="hljs-keyword">const</span> docEl = doc.documentElement
+  <span class="hljs-keyword">const</span> _q = (el, ctx = doc) =&gt; [].slice.call(ctx.querySelectorAll(el))
 
   <span class="hljs-comment">// SUPPORTS</span>
-  <span class="hljs-keyword">if</span> (!(<span class="hljs-string">'querySelector'</span> <span class="hljs-keyword">in</span> doc) || !(<span class="hljs-string">'addEventListener'</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>) || !docEl.classList) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">if</span> (!(<span class="hljs-string">'querySelector'</span> <span class="hljs-keyword">in</span> doc) || !(<span class="hljs-string">'addEventListener'</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>) || !docEl.classList) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
 
   <span class="hljs-comment">// SETUP</span>
   <span class="hljs-comment">// set treeview element NodeLists</span>
-  <span class="hljs-keyword">let</span> treeviewContainers = _q(selector);
+  <span class="hljs-keyword">let</span> treeviewContainers = _q(selector)
 
   <span class="hljs-keyword">const</span> keys = {
     tab: <span class="hljs-number">9</span>,
@@ -430,90 +430,90 @@
     right: <span class="hljs-number">39</span>,
     down: <span class="hljs-number">40</span>,
     asterisk: <span class="hljs-number">106</span>
-  };
+  }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_collapseAll</span>(<span class="hljs-params">treeview</span>) </span>{
     treeview.$parents.each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">if</span> ($(<span class="hljs-keyword">this</span>).attr(<span class="hljs-string">'aria-expanded'</span>) == <span class="hljs-string">'false'</span>) {
-        $(<span class="hljs-keyword">this</span>).children(<span class="hljs-string">'ul'</span>).attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>);
+        $(<span class="hljs-keyword">this</span>).children(<span class="hljs-string">'ul'</span>).attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>)
       }
-    });
-    treeview.$visibleItems = treeview.$el.find(<span class="hljs-string">'li:visible'</span>);
+    })
+    treeview.$visibleItems = treeview.$el.find(<span class="hljs-string">'li:visible'</span>)
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_collapseSiblings</span>(<span class="hljs-params">treeview, $item</span>) </span>{
     $item.closest(<span class="hljs-string">'ul'</span>).find(<span class="hljs-string">'.'</span> + classParent).not($item).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
 			<span class="hljs-keyword">if</span> ($(<span class="hljs-keyword">this</span>).attr(<span class="hljs-string">'aria-expanded'</span>) != <span class="hljs-string">'false'</span>) {
-				$(<span class="hljs-keyword">this</span>).children(<span class="hljs-string">'ul'</span>).slideUp();
-	      $(<span class="hljs-keyword">this</span>).children(<span class="hljs-string">'ul'</span>).attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>);
-				$(<span class="hljs-keyword">this</span>).attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>);
+				$(<span class="hljs-keyword">this</span>).children(<span class="hljs-string">'ul'</span>).slideUp()
+	      $(<span class="hljs-keyword">this</span>).children(<span class="hljs-string">'ul'</span>).attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>)
+				$(<span class="hljs-keyword">this</span>).attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>)
 			}
-    });
-    treeview.$visibleItems = treeview.$el.find(<span class="hljs-string">'li:visible'</span>);
+    })
+    treeview.$visibleItems = treeview.$el.find(<span class="hljs-string">'li:visible'</span>)
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_expandGroup</span>(<span class="hljs-params">treeview, $item</span>) </span>{
-    <span class="hljs-keyword">let</span> $group = $item.children(<span class="hljs-string">'ul'</span>);
-		$group.slideDown();
-    $group.attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'false'</span>);
-    $item.attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'true'</span>);
-    treeview.$visibleItems = treeview.$el.find(<span class="hljs-string">'li:visible'</span>);
+    <span class="hljs-keyword">let</span> $group = $item.children(<span class="hljs-string">'ul'</span>)
+		$group.slideDown()
+    $group.attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'false'</span>)
+    $item.attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'true'</span>)
+    treeview.$visibleItems = treeview.$el.find(<span class="hljs-string">'li:visible'</span>)
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_collapseGroup</span>(<span class="hljs-params">treeview, $item</span>) </span>{
-    <span class="hljs-keyword">let</span> $group = $item.children(<span class="hljs-string">'ul'</span>);
-		$group.slideUp();
-    $group.attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>);
-    $item.attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>);
-    treeview.$visibleItems = treeview.$el.find(<span class="hljs-string">'li:visible'</span>);
+    <span class="hljs-keyword">let</span> $group = $item.children(<span class="hljs-string">'ul'</span>)
+		$group.slideUp()
+    $group.attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>)
+    $item.attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>)
+    treeview.$visibleItems = treeview.$el.find(<span class="hljs-string">'li:visible'</span>)
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_toggleGroup</span>(<span class="hljs-params">treeview, $item</span>) </span>{
     <span class="hljs-keyword">if</span> (!multiselectable) {
-      _collapseSiblings(treeview, $item);
+      _collapseSiblings(treeview, $item)
     }
     <span class="hljs-keyword">if</span> ($item.attr(<span class="hljs-string">'aria-expanded'</span>) == <span class="hljs-string">'true'</span>) {
-      _collapseGroup(treeview, $item);
+      _collapseGroup(treeview, $item)
     } <span class="hljs-keyword">else</span> {
-      _expandGroup(treeview, $item);
+      _expandGroup(treeview, $item)
     }
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_updateStyling</span>(<span class="hljs-params">treeview, $item</span>) </span>{
-    treeview.$items.removeClass(classFocused).attr(<span class="hljs-string">'tabindex'</span>, <span class="hljs-string">'-1'</span>);
-    $item.addClass(classFocused).attr(<span class="hljs-string">'tabindex'</span>, <span class="hljs-string">'0'</span>);
+    treeview.$items.removeClass(classFocused).attr(<span class="hljs-string">'tabindex'</span>, <span class="hljs-string">'-1'</span>)
+    $item.addClass(classFocused).attr(<span class="hljs-string">'tabindex'</span>, <span class="hljs-string">'0'</span>)
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_handleKeyDown</span>(<span class="hljs-params">treeview, $item, e</span>) </span>{
-    <span class="hljs-keyword">let</span> curNdx = treeview.$visibleItems.index($item);
+    <span class="hljs-keyword">let</span> curNdx = treeview.$visibleItems.index($item)
 
     <span class="hljs-keyword">if</span> ((e.altKey || e.ctrlKey) ||
       (e.shiftKey &amp;&amp; e.keyCode != keys.tab)) {
-      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
     }
 
     <span class="hljs-keyword">switch</span> (e.keyCode) {
       <span class="hljs-keyword">case</span> keys.tab:
         {
-          treeview.$activeItem = <span class="hljs-literal">null</span>;
-          $item.removeClass(classFocused);
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+          treeview.$activeItem = <span class="hljs-literal">null</span>
+          $item.removeClass(classFocused)
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
         }
 
       <span class="hljs-keyword">case</span> keys.home:
         {
-          treeview.$activeItem = treeview.$parents.first();
-          treeview.$activeItem.focus();
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          treeview.$activeItem = treeview.$parents.first()
+          treeview.$activeItem.focus()
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
 
       <span class="hljs-keyword">case</span> keys.end:
         {
-          treeview.$activeItem = treeview.$visibleItems.last();
-          treeview.$activeItem.focus();
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          treeview.$activeItem = treeview.$visibleItems.last()
+          treeview.$activeItem.focus()
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
 
       <span class="hljs-keyword">case</span> keys.enter:
@@ -522,24 +522,24 @@
           <span class="hljs-keyword">if</span> (!$item.is(<span class="hljs-string">'.'</span> + classParent)) {
             <span class="hljs-comment">// do nothing</span>
           } <span class="hljs-keyword">else</span> {
-            _toggleGroup(treeview, $item);
+            _toggleGroup(treeview, $item)
           }
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
 
       <span class="hljs-keyword">case</span> keys.left:
         {
           <span class="hljs-keyword">if</span> ($item.is(<span class="hljs-string">'.'</span> + classParent) &amp;&amp; $item.attr(<span class="hljs-string">'aria-expanded'</span>) == <span class="hljs-string">'true'</span>) {
-            _collapseGroup(treeview, $item);
+            _collapseGroup(treeview, $item)
           } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">let</span> $itemUL = $item.parent();
-            <span class="hljs-keyword">let</span> $itemParent = $itemUL.parent();
-            treeview.$activeItem = $itemParent;
-            treeview.$activeItem.focus();
+            <span class="hljs-keyword">let</span> $itemUL = $item.parent()
+            <span class="hljs-keyword">let</span> $itemParent = $itemUL.parent()
+            treeview.$activeItem = $itemParent
+            treeview.$activeItem.focus()
           }
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
 
       <span class="hljs-keyword">case</span> keys.right:
@@ -547,60 +547,60 @@
           <span class="hljs-keyword">if</span> (!$item.is(<span class="hljs-string">'.'</span> + classParent)) {
             <span class="hljs-comment">// do nothing</span>
           } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($item.attr(<span class="hljs-string">'aria-expanded'</span>) == <span class="hljs-string">'false'</span>) {
-            _expandGroup(treeview, $item);
+            _expandGroup(treeview, $item)
           } <span class="hljs-keyword">else</span> {
-            treeview.$activeItem = $item.children(<span class="hljs-string">'ul'</span>).children(<span class="hljs-string">'li'</span>).first();
-            treeview.$activeItem.focus();
+            treeview.$activeItem = $item.children(<span class="hljs-string">'ul'</span>).children(<span class="hljs-string">'li'</span>).first()
+            treeview.$activeItem.focus()
           }
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
 
       <span class="hljs-keyword">case</span> keys.up:
         {
           <span class="hljs-keyword">if</span> (curNdx &gt; <span class="hljs-number">0</span>) {
-            <span class="hljs-keyword">let</span> $prev = treeview.$visibleItems.eq(curNdx - <span class="hljs-number">1</span>);
-            treeview.$activeItem = $prev;
-            $prev.focus();
+            <span class="hljs-keyword">let</span> $prev = treeview.$visibleItems.eq(curNdx - <span class="hljs-number">1</span>)
+            treeview.$activeItem = $prev
+            $prev.focus()
           }
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
 
       <span class="hljs-keyword">case</span> keys.down:
         {
           <span class="hljs-keyword">if</span> (curNdx &lt; treeview.$visibleItems.length - <span class="hljs-number">1</span>) {
-            <span class="hljs-keyword">let</span> $next = treeview.$visibleItems.eq(curNdx + <span class="hljs-number">1</span>);
-            treeview.$activeItem = $next;
-            $next.focus();
+            <span class="hljs-keyword">let</span> $next = treeview.$visibleItems.eq(curNdx + <span class="hljs-number">1</span>)
+            treeview.$activeItem = $next
+            $next.focus()
           }
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
 
       <span class="hljs-keyword">case</span> keys.asterisk:
         {
           treeview.$parents.each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-            _expandGroup(treeview, $(<span class="hljs-keyword">this</span>));
-          });
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            _expandGroup(treeview, $(<span class="hljs-keyword">this</span>))
+          })
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
 
     }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_handleKeyPress</span>(<span class="hljs-params">treeview, $item, e</span>) </span>{
     <span class="hljs-keyword">if</span> (e.altKey || e.ctrlKey || e.shiftKey) {
       <span class="hljs-comment">// do nothing</span>
-      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
     }
 
     <span class="hljs-keyword">switch</span> (e.keyCode) {
       <span class="hljs-keyword">case</span> keys.tab:
         {
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
         }
       <span class="hljs-keyword">case</span> keys.enter:
       <span class="hljs-keyword">case</span> keys.home:
@@ -610,111 +610,111 @@
       <span class="hljs-keyword">case</span> keys.up:
       <span class="hljs-keyword">case</span> keys.down:
         {
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
       <span class="hljs-keyword">default</span>:
         {
-          <span class="hljs-keyword">let</span> chr = <span class="hljs-built_in">String</span>.fromCharCode(e.which);
-          <span class="hljs-keyword">let</span> bMatch = <span class="hljs-literal">false</span>;
-          <span class="hljs-keyword">let</span> itemNdx = treeview.$visibleItems.index($item);
-          <span class="hljs-keyword">let</span> itemCnt = treeview.$visibleItems.length;
-          <span class="hljs-keyword">let</span> curNdx = itemNdx + <span class="hljs-number">1</span>;
+          <span class="hljs-keyword">let</span> chr = <span class="hljs-built_in">String</span>.fromCharCode(e.which)
+          <span class="hljs-keyword">let</span> bMatch = <span class="hljs-literal">false</span>
+          <span class="hljs-keyword">let</span> itemNdx = treeview.$visibleItems.index($item)
+          <span class="hljs-keyword">let</span> itemCnt = treeview.$visibleItems.length
+          <span class="hljs-keyword">let</span> curNdx = itemNdx + <span class="hljs-number">1</span>
 
           <span class="hljs-comment">// check if the active item was the last one on the list</span>
           <span class="hljs-keyword">if</span> (curNdx == itemCnt) {
-            curNdx = <span class="hljs-number">0</span>;
+            curNdx = <span class="hljs-number">0</span>
           }
 
           <span class="hljs-comment">// Iterate through the menu items (starting from the current item and wrapping) until a match is found</span>
           <span class="hljs-comment">// or the loop returns to the current menu item</span>
           <span class="hljs-keyword">while</span> (curNdx != itemNdx) {
 
-            <span class="hljs-keyword">let</span> $curItem = treeview.$visibleItems.eq(curNdx);
-            <span class="hljs-keyword">let</span> titleChr = $curItem.text().charAt(<span class="hljs-number">0</span>);
+            <span class="hljs-keyword">let</span> $curItem = treeview.$visibleItems.eq(curNdx)
+            <span class="hljs-keyword">let</span> titleChr = $curItem.text().charAt(<span class="hljs-number">0</span>)
 
             <span class="hljs-keyword">if</span> ($curItem.is(<span class="hljs-string">'.'</span> + classParent)) {
-              titleChr = $curItem.find(<span class="hljs-string">'span'</span>).text().charAt(<span class="hljs-number">0</span>);
+              titleChr = $curItem.find(<span class="hljs-string">'span'</span>).text().charAt(<span class="hljs-number">0</span>)
             }
 
             <span class="hljs-keyword">if</span> (titleChr.toLowerCase() == chr) {
-              bMatch = <span class="hljs-literal">true</span>;
-              <span class="hljs-keyword">break</span>;
+              bMatch = <span class="hljs-literal">true</span>
+              <span class="hljs-keyword">break</span>
             }
 
-            curNdx = curNdx + <span class="hljs-number">1</span>;
+            curNdx = curNdx + <span class="hljs-number">1</span>
 
             <span class="hljs-keyword">if</span> (curNdx == itemCnt) {
               <span class="hljs-comment">// reached the end of the list, start again at the beginning</span>
-              curNdx = <span class="hljs-number">0</span>;
+              curNdx = <span class="hljs-number">0</span>
             }
           }
 
           <span class="hljs-keyword">if</span> (bMatch == <span class="hljs-literal">true</span>) {
-            treeview.$activeItem = treeview.$visibleItems.eq(curNdx);
-            treeview.$activeItem.focus();
+            treeview.$activeItem = treeview.$visibleItems.eq(curNdx)
+            treeview.$activeItem.focus()
           }
 
-          e.stopPropagation();
-          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          e.stopPropagation()
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
         }
     }
 
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_handleDblClick</span>(<span class="hljs-params">treeview, $item, e</span>) </span>{
     <span class="hljs-keyword">if</span> (e.altKey || e.ctrlKey || e.shiftKey) {
       <span class="hljs-comment">// do nothing</span>
-      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
     }
-    treeview.$activeItem = $item;
-    _updateStyling(treeview, $item);
-    _toggleGroup(treeview, $item);
-    e.stopPropagation();
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    treeview.$activeItem = $item
+    _updateStyling(treeview, $item)
+    _toggleGroup(treeview, $item)
+    e.stopPropagation()
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_handleClick</span>(<span class="hljs-params">treeview, $item, e</span>) </span>{
     <span class="hljs-keyword">if</span> (e.altKey || e.ctrlKey || e.shiftKey) {
       <span class="hljs-comment">// do nothing</span>
-      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
     }
-    treeview.$activeItem = treeview.$el;
-    _updateStyling(treeview, $item);
-    e.stopPropagation();
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    treeview.$activeItem = treeview.$el
+    _updateStyling(treeview, $item)
+    e.stopPropagation()
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_bindEvents</span>(<span class="hljs-params">treeview</span>) </span>{
     <span class="hljs-keyword">if</span> (openOnClick) {
       treeview.$parents.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-        <span class="hljs-keyword">return</span> _handleDblClick(treeview, $(<span class="hljs-keyword">this</span>), e);
-      });
+        <span class="hljs-keyword">return</span> _handleDblClick(treeview, $(<span class="hljs-keyword">this</span>), e)
+      })
     } <span class="hljs-keyword">else</span> {
       treeview.$parents.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-        <span class="hljs-keyword">return</span> _handleDblClick(treeview, $(<span class="hljs-keyword">this</span>), e);
-      });
+        <span class="hljs-keyword">return</span> _handleDblClick(treeview, $(<span class="hljs-keyword">this</span>), e)
+      })
       treeview.$items.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-        <span class="hljs-keyword">return</span> _handleClick(treeview, $(<span class="hljs-keyword">this</span>), e);
-      });
+        <span class="hljs-keyword">return</span> _handleClick(treeview, $(<span class="hljs-keyword">this</span>), e)
+      })
     }
 
     treeview.$items.keydown(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-      <span class="hljs-keyword">return</span> _handleKeyDown(treeview, $(<span class="hljs-keyword">this</span>), e);
-    });
+      <span class="hljs-keyword">return</span> _handleKeyDown(treeview, $(<span class="hljs-keyword">this</span>), e)
+    })
 
     treeview.$items.keypress(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-      <span class="hljs-keyword">return</span> _handleKeyPress(treeview, $(<span class="hljs-keyword">this</span>), e);
-    });
+      <span class="hljs-keyword">return</span> _handleKeyPress(treeview, $(<span class="hljs-keyword">this</span>), e)
+    })
 
     $(<span class="hljs-built_in">document</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">if</span> (treeview.$activeItem != <span class="hljs-literal">null</span>) {
-        treeview.$activeItem.removeClass(classFocused);
-        treeview.$activeItem = <span class="hljs-literal">null</span>;
+        treeview.$activeItem.removeClass(classFocused)
+        treeview.$activeItem = <span class="hljs-literal">null</span>
       }
-      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
-    });
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    })
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">destroy</span>(<span class="hljs-params"></span>) </span>{
@@ -722,47 +722,47 @@
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_addA11y</span>(<span class="hljs-params">$el</span>) </span>{
-    $el.attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'tree'</span>);
+    $el.attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'tree'</span>)
 
     <span class="hljs-comment">// Put role="treeitem" on every LI</span>
     <span class="hljs-comment">// Put aria-expanded="false" on every LI (if it has no aria-expanded attr)</span>
     <span class="hljs-comment">// Put tabindex="-1" on every LI (if it's not the first one)</span>
     <span class="hljs-comment">// Put class=&lt;classParent&gt; on every LI that contains an UL</span>
     $el.find(<span class="hljs-string">'li'</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">i, li</span>) </span>{
-      <span class="hljs-keyword">const</span> $li = $(li);
-      $li.attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'treeitem'</span>);
-      $li.attr(<span class="hljs-string">'tabindex'</span>, <span class="hljs-string">'-1'</span>);
+      <span class="hljs-keyword">const</span> $li = $(li)
+      $li.attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'treeitem'</span>)
+      $li.attr(<span class="hljs-string">'tabindex'</span>, <span class="hljs-string">'-1'</span>)
       <span class="hljs-keyword">if</span> ($li.find(<span class="hljs-string">'ul'</span>).length !== <span class="hljs-number">0</span>) {
         <span class="hljs-keyword">if</span> (!li.hasAttribute(<span class="hljs-string">'aria-expanded'</span>)) {
-          $li.attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>);
+          $li.attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>)
         }
-        $li.addClass(classParent);
+        $li.addClass(classParent)
       }
-    });
+    })
 
     <span class="hljs-comment">// Put role="group" on every contained UL</span>
-    $el.find(<span class="hljs-string">'ul'</span>).attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'group'</span>);
+    $el.find(<span class="hljs-string">'ul'</span>).attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'group'</span>)
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">if</span> (treeviewContainers.length) {
       treeviewContainers.forEach((treeviewContainer) =&gt; {
-        <span class="hljs-keyword">const</span> $el = $(treeviewContainer);
-        _addA11y($el);
+        <span class="hljs-keyword">const</span> $el = $(treeviewContainer)
+        _addA11y($el)
         <span class="hljs-keyword">let</span> treeview = {
           $el: $el,
           $items: $el.find(<span class="hljs-string">'li'</span>),
           $parents: $el.find(<span class="hljs-string">'.'</span> + classParent),
           $visibleItems: <span class="hljs-literal">null</span>,
           $activeItem: <span class="hljs-literal">null</span>
-        };
-        _collapseAll(treeview);
-        _bindEvents(treeview);
-      });
+        }
+        _collapseAll(treeview)
+        _bindEvents(treeview)
+      })
     }
   }
 
-  init();
+  init()
 
   <span class="hljs-comment">// REVEAL API</span>
   <span class="hljs-keyword">return</span> {
@@ -772,9 +772,9 @@
 
 }
 
-<span class="hljs-keyword">new</span> Frtreeview();
+<span class="hljs-keyword">new</span> Frtreeview()
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Frtreeview;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> { Frtreeview }
 </pre>
                         </code>
                     </div>
