@@ -544,11 +544,11 @@
                     
                     <div class="Browser-fileContent" data-role="code" id="code-index-js">
                         <code class="Code Code--lang-javascript">
-                            <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>;
-<span class="hljs-keyword">import</span> Megamenu <span class="hljs-keyword">from</span> <span class="hljs-string">'accessible-mega-menu'</span>;
+                            <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>
+<span class="hljs-keyword">import</span> Megamenu <span class="hljs-keyword">from</span> <span class="hljs-string">'accessible-mega-menu'</span>
 
 <span class="hljs-comment">// ASAP hide megamenu panels</span>
-$(<span class="hljs-string">'.js-megamenu'</span>).addClass(<span class="hljs-string">'is-ready'</span>);
+$(<span class="hljs-string">'.js-megamenu'</span>).addClass(<span class="hljs-string">'is-ready'</span>)
 
 <span class="hljs-keyword">const</span> opts = {
   <span class="hljs-comment">/* prefix for generated unique id attributes, which are required
@@ -577,13 +577,13 @@ $(<span class="hljs-string">'.js-megamenu'</span>).addClass(<span class="hljs-st
 
   <span class="hljs-comment">/* css class for the open state */</span>
   openClass: <span class="hljs-string">'is-open'</span>
-};
+}
 
 <span class="hljs-comment">/*
  *	Take a Treeview and make it work with Megamenu
  */</span>
 <span class="hljs-keyword">const</span> listToMegaMenu = ($ul, _opts) =&gt; {
-  <span class="hljs-keyword">const</span> attrs = <span class="hljs-string">'class aria-expanded aria-hidden role tabindex'</span>;
+  <span class="hljs-keyword">const</span> attrs = <span class="hljs-string">'class aria-expanded aria-hidden role tabindex'</span>
   <span class="hljs-keyword">return</span> $ul
     .clone()
     .removeAttr(attrs)
@@ -606,22 +606,22 @@ $(<span class="hljs-string">'.js-megamenu'</span>).addClass(<span class="hljs-st
         .find(<span class="hljs-string">'&gt; ul'</span>)
         .wrapAll(<span class="hljs-string">`&lt;div class="<span class="hljs-subst">${_opts.panelClass}</span>" /&gt;`</span>)
     })
-    .end();
+    .end()
 }
 
 $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   $(<span class="hljs-string">'.js-megamenu'</span>).each((i, el) =&gt; {
-    <span class="hljs-keyword">const</span> $el = $(el);
-    <span class="hljs-keyword">const</span> rel = $(el).data(<span class="hljs-string">'rel'</span>);
+    <span class="hljs-keyword">const</span> $el = $(el)
+    <span class="hljs-keyword">const</span> rel = $(el).data(<span class="hljs-string">'rel'</span>)
     <span class="hljs-keyword">if</span> ($el.find(<span class="hljs-string">'ul'</span>).length === <span class="hljs-number">0</span> &amp;&amp; rel &amp;&amp; $(rel).length &gt; <span class="hljs-number">0</span>) {
-      <span class="hljs-keyword">let</span> $menu = listToMegaMenu($(rel), opts);
-      $el.append($menu);
+      <span class="hljs-keyword">let</span> $menu = listToMegaMenu($(rel), opts)
+      $el.append($menu)
     }
-    $el.accessibleMegaMenu(opts);
-  });
-});
+    $el.accessibleMegaMenu(opts)
+  })
+})
 
-<span class="hljs-built_in">module</span>.exports = { opts, listToMegaMenu, Megamenu };
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> { opts, listToMegaMenu, Megamenu }
 </pre>
                         </code>
                     </div>

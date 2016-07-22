@@ -261,13 +261,13 @@
                     
                     <div class="Browser-fileContent" data-role="code" id="code-index-js">
                         <code class="Code Code--lang-javascript">
-                            <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>;
+                            <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>
 
-<span class="hljs-keyword">import</span> Froffcanvas <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-offcanvas'</span>;
+<span class="hljs-keyword">import</span> Froffcanvas <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-offcanvas'</span>
 
 <span class="hljs-comment">/* eslint-disable no-unused-vars */</span>
 
-<span class="hljs-keyword">import</span> stylesheet <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-offcanvas/offcanvas.css'</span>;
+<span class="hljs-keyword">import</span> stylesheet <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-offcanvas/offcanvas.css'</span>
 
 <span class="hljs-comment">/* eslint-enable */</span>
 
@@ -283,7 +283,7 @@
 
   <span class="hljs-comment">// String - Class name that will be added to the selector when the panel is visible</span>
   activeClass: <span class="hljs-string">'is-active'</span>
-});
+})
 
 <span class="hljs-comment">/*
  *	<span class="hljs-doctag">FIXME:</span> hack to show / hide the background panel
@@ -292,13 +292,14 @@
   <span class="hljs-keyword">if</span> (e &amp;&amp; $(<span class="hljs-string">'.Offcanvas'</span>).hasClass(<span class="hljs-string">'is-active'</span>) &amp;&amp;
     !$(e.target).hasClass(<span class="hljs-string">'Offcanvas-content'</span>))
 	{
-    $(<span class="hljs-string">'.js-fr-offcanvas-close'</span>).click();
+    $(<span class="hljs-string">'.js-fr-offcanvas-close'</span>).click()
   }
-  $(<span class="hljs-string">'.Offcanvas--modal'</span>).one(<span class="hljs-string">'click'</span>, _handleModal);
-};
-_handleModal();
+  $(<span class="hljs-string">'.Offcanvas--modal'</span>).one(<span class="hljs-string">'click'</span>, _handleModal)
+}
 
-<span class="hljs-built_in">module</span>.exports = offcanvas;
+_handleModal()
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> { Froffcanvas, offcanvas }
 </pre>
                         </code>
                     </div>

@@ -499,8 +499,8 @@
                     
                     <div class="Browser-fileContent" data-role="code" id="code-index-js">
                         <code class="Code Code--lang-javascript">
-                            <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>;
-<span class="hljs-keyword">import</span> debounce <span class="hljs-keyword">from</span> <span class="hljs-string">'throttle-debounce/throttle'</span>;
+                            <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>
+<span class="hljs-keyword">import</span> debounce <span class="hljs-keyword">from</span> <span class="hljs-string">'throttle-debounce/throttle'</span>
 
 <span class="hljs-keyword">const</span> defaultOpts = {
   responsiveTableSelector: <span class="hljs-string">'.js-tableFlip'</span>,
@@ -522,9 +522,9 @@
   })
 }
 
-initResponsiveTables(defaultOpts);
+initResponsiveTables(defaultOpts)
 
-<span class="hljs-built_in">module</span>.exports = { defaultOpts, initResponsiveTables }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> { defaultOpts, initResponsiveTables }
 </pre>
                         </code>
                     </div>
