@@ -5232,7 +5232,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// Polyfill matches as per https://github.com/jonathantneal/closest
 	
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 	Element.prototype.matches = Element.prototype.matches || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.oMatchesSelector || Element.prototype.webkitMatchesSelector;
 	
@@ -5240,210 +5240,212 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @param {object} options Object containing configuration overrides
 	 */
 	var Froffcanvas = function Froffcanvas() {
-		var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	  var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 	
-		var _ref$selector = _ref.selector;
-		var selector = _ref$selector === undefined ? '.js-fr-offcanvas' : _ref$selector;
-		var _ref$openSelector = _ref.openSelector;
-		var openSelector = _ref$openSelector === undefined ? '.js-fr-offcanvas-open' : _ref$openSelector;
-		var _ref$closeSelector = _ref.closeSelector;
-		var closeSelector = _ref$closeSelector === undefined ? '.js-fr-offcanvas-close' : _ref$closeSelector;
-		var _ref$readyClass = _ref.readyClass;
-		var readyClass = _ref$readyClass === undefined ? 'fr-offcanvas--is-ready' : _ref$readyClass;
-		var _ref$activeClass = _ref.activeClass;
-		var activeClass = _ref$activeClass === undefined ? 'fr-offcanvas--is-active' : _ref$activeClass;
+	  var _ref$selector = _ref.selector;
+	  var selector = _ref$selector === undefined ? '.js-fr-offcanvas' : _ref$selector;
+	  var _ref$openSelector = _ref.openSelector;
+	  var openSelector = _ref$openSelector === undefined ? '.js-fr-offcanvas-open' : _ref$openSelector;
+	  var _ref$closeSelector = _ref.closeSelector;
+	  var closeSelector = _ref$closeSelector === undefined ? '.js-fr-offcanvas-close' : _ref$closeSelector;
+	  var _ref$readyClass = _ref.readyClass;
+	  var readyClass = _ref$readyClass === undefined ? 'fr-offcanvas--is-ready' : _ref$readyClass;
+	  var _ref$activeClass = _ref.activeClass;
+	  var activeClass = _ref$activeClass === undefined ? 'fr-offcanvas--is-active' : _ref$activeClass;
 	
 	
-		//	CONSTANTS
-		var doc = document;
-		var docEl = doc.documentElement;
-		var _q = function _q(el) {
-			var ctx = arguments.length <= 1 || arguments[1] === undefined ? doc : arguments[1];
-			return [].slice.call(ctx.querySelectorAll(el));
-		};
+	  //  CONSTANTS
+	  var doc = document;
+	  var docEl = doc.documentElement;
+	  var _q = function _q(el) {
+	    var ctx = arguments.length <= 1 || arguments[1] === undefined ? doc : arguments[1];
+	    return [].slice.call(ctx.querySelectorAll(el));
+	  };
 	
-		//	SUPPORTS
-		if (!('querySelector' in doc) || !('addEventListener' in window) || !docEl.classList) return;
+	  //  SUPPORTS
+	  if (!('querySelector' in doc) || !('addEventListener' in window) || !docEl.classList) return;
 	
-		//	SETUP
-		// set offcanvas element NodeLists
-		var panels = _q(selector);
+	  //  SETUP
+	  // set offcanvas element NodeLists
+	  var panels = _q(selector);
 	
-		//	TEMP
-		var currButtonOpen = null;
-		var currPanel = null;
+	  //  TEMP
+	  var currButtonOpen = null;
+	  var currPanel = null;
 	
-		//	UTILS
-		function _defer(fn) {
-			//	wrapped in setTimeout to delay binding until previous rendering has completed
-			if (typeof fn === 'function') setTimeout(fn, 0);
-		}
-		function _closest(el, selector) {
-			while (el) {
-				if (el.matches(selector)) break;
-				el = el.parentElement;
-			}
-			return el;
-		}
-		function _getPanelId(panel) {
-			return panel.getAttribute('id');
-		}
+	  //  UTILS
+	  function _defer(fn) {
+	    //  wrapped in setTimeout to delay binding until previous rendering has completed
+	    if (typeof fn === 'function') setTimeout(fn, 0);
+	  }
+	  function _closest(el, selector) {
+	    while (el) {
+	      if (el.matches(selector)) break;
+	      el = el.parentElement;
+	    }
+	    return el;
+	  }
+	  function _getPanelId(panel) {
+	    return panel.getAttribute('id');
+	  }
 	
-		//	A11Y
-		function _addA11y(panel) {
-			//	add aria-hidden attribute
-			panel.setAttribute('aria-hidden', true);
-		}
-		function _removeA11y(panel) {
-			//	remove aria-hidden attribute
-			panel.removeAttribute('aria-hidden');
-		}
+	  //  A11Y
+	  function _addA11y(panel) {
+	    //  add aria-hidden attribute
+	    panel.setAttribute('aria-hidden', true);
+	  }
+	  function _removeA11y(panel) {
+	    //  remove aria-hidden attribute
+	    panel.removeAttribute('aria-hidden');
+	  }
 	
-		//	ACTIONS
-		function _showPanel(panel) {
-			//	set visibility to override any previous set style
-			panel.style.visibility = 'visible';
-			//	remove aria-hidden, add focus
-			panel.setAttribute('aria-hidden', false);
-			panel.setAttribute('tabindex', -1);
-			panel.focus();
-			//	sort out events
-			_defer(_unbindOpenPointer);
-			_defer(_bindDocKey);
-			_defer(_bindDocClick);
-			_defer(_bindClosePointer);
-			//	reset scroll position
-			panel.scrollTop = 0;
-			//	add active class
-			panel.classList.add(activeClass);
-		}
-		function _hidePanel() {
-			var panel = arguments.length <= 0 || arguments[0] === undefined ? currPanel : arguments[0];
-			var returnfocus = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
+	  //  ACTIONS
+	  function _showPanel(panel) {
+	    //  set visibility to override any previous set style
+	    panel.style.visibility = 'visible';
+	    //  remove aria-hidden, add focus
+	    panel.setAttribute('aria-hidden', false);
+	    panel.setAttribute('tabindex', -1);
+	    panel.focus();
+	    //  sort out events
+	    _defer(_unbindOpenPointer);
+	    _defer(_bindDocKey);
+	    _defer(_bindDocClick);
+	    _defer(_bindClosePointer);
+	    //  reset scroll position
+	    panel.scrollTop = 0;
+	    //  add active class
+	    panel.classList.add(activeClass);
+	  }
+	  function _hidePanel() {
+	    var panel = arguments.length <= 0 || arguments[0] === undefined ? currPanel : arguments[0];
+	    var returnfocus = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
 	
-			//	add aria-hidden, remove focus
-			panel.setAttribute('aria-hidden', true);
-			panel.removeAttribute('tabindex');
-			panel.blur();
-			//	set visibility to override any previous set style
-			panel.style.visibility = 'hidden';
-			//	sort out events
-			_unbindClosePointer(panel);
-			_unbindDocKey();
-			_unbindDocClick();
-			_bindOpenPointer(panel);
-			//	remove active class
-			panel.classList.remove(activeClass);
-			//	return focus to button that opened the panel and reset the reference
-			if (returnfocus) {
-				currButtonOpen.focus();
-				currButtonOpen = null;
-			}
-		}
-		function destroy() {
-			panels.forEach(function (panel) {
-				//	remove attributes
-				_removeA11y(panel);
-				//	unbind local events
-				_unbindOpenPointer(panel);
-				_unbindClosePointer();
-				//	remove class
-				panel.classList.remove(readyClass);
-			});
-			//	unbind global events
-			_unbindDocClick();
-			_unbindDocKey();
-			//	reset temp references
-			currButtonOpen = null;
-			currPanel = null;
-		}
+	    //  add aria-hidden, remove focus
+	    panel.setAttribute('aria-hidden', true);
+	    panel.removeAttribute('tabindex');
+	    panel.blur();
+	    //  set visibility to override any previous set style
+	    panel.style.visibility = 'hidden';
+	    //  sort out events
+	    _unbindClosePointer(panel);
+	    _unbindDocKey();
+	    _unbindDocClick();
+	    _bindOpenPointer(panel);
+	    //  remove active class
+	    panel.classList.remove(activeClass);
+	    //  return focus to button that opened the panel and reset the reference
+	    if (returnfocus) {
+	      currButtonOpen.focus();
+	      currButtonOpen = null;
+	    }
+	  }
+	  function destroy() {
+	    panels.forEach(function (panel) {
+	      //  remove attributes
+	      _removeA11y(panel);
+	      //  unbind local events
+	      _unbindOpenPointer(panel);
+	      _unbindClosePointer(panel);
+	      //  remove class
+	      panel.classList.remove(readyClass);
+	      panel.classList.remove(activeClass);
+	      panel.style.visibility = '';
+	    });
+	    //  unbind global events
+	    _unbindDocClick();
+	    _unbindDocKey();
+	    //  reset temp references
+	    currButtonOpen = null;
+	    currPanel = null;
+	  }
 	
-		//	EVENTS
-		function _eventOpenPointer(e) {
-			//	get panel
-			var panelId = e.currentTarget.getAttribute('aria-controls');
-			var panel = doc.getElementById(panelId);
-			//	hide any open panels
-			if (currPanel) _hidePanel(currPanel, false);
-			//	save temp panel/button
-			currButtonOpen = e.currentTarget;
-			currPanel = panel;
-			//	show
-			_showPanel(panel);
-		}
-		function _eventClosePointer() {
-			_hidePanel();
-		}
-		function _eventDocClick(e) {
-			//	check if target is panel or child of
-			var isPanel = e.target === currPanel;
-			var isPanelChild = _closest(e.target, selector);
-			if (!isPanel && !isPanelChild) _hidePanel();
-		}
-		function _eventDocKey(e) {
-			//	esc key
-			if (e.keyCode === 27) _hidePanel();
-		}
+	  //  EVENTS
+	  function _eventOpenPointer(e) {
+	    //  get panel
+	    var panelId = e.currentTarget.getAttribute('aria-controls');
+	    var panel = doc.getElementById(panelId);
+	    //  hide any open panels
+	    if (currPanel) _hidePanel(currPanel, false);
+	    //  save temp panel/button
+	    currButtonOpen = e.currentTarget;
+	    currPanel = panel;
+	    //  show
+	    _showPanel(panel);
+	  }
+	  function _eventClosePointer() {
+	    _hidePanel();
+	  }
+	  function _eventDocClick(e) {
+	    //  check if target is panel or child of
+	    var isPanel = e.target === currPanel;
+	    var isPanelChild = _closest(e.target, selector);
+	    if (!isPanel && !isPanelChild) _hidePanel();
+	  }
+	  function _eventDocKey(e) {
+	    //  esc key
+	    if (e.keyCode === 27) _hidePanel();
+	  }
 	
-		//	BIND EVENTS
-		function _bindOpenPointer(panel) {
-			var openButtons = _q(openSelector + '[aria-controls="' + _getPanelId(panel) + '"]'); // is this selector totally crazy?
-			openButtons.forEach(function (button) {
-				return button.addEventListener('click', _eventOpenPointer);
-			});
-		}
-		function _bindClosePointer() {
-			var panel = arguments.length <= 0 || arguments[0] === undefined ? currPanel : arguments[0];
+	  //  BIND EVENTS
+	  function _bindOpenPointer(panel) {
+	    var openButtons = _q(openSelector + '[aria-controls="' + _getPanelId(panel) + '"]'); // is this selector totally crazy?
+	    openButtons.forEach(function (button) {
+	      return button.addEventListener('click', _eventOpenPointer);
+	    });
+	  }
+	  function _bindClosePointer() {
+	    var panel = arguments.length <= 0 || arguments[0] === undefined ? currPanel : arguments[0];
 	
-			var closeButton = _q(closeSelector, panel)[0];
-			closeButton.addEventListener('click', _eventClosePointer);
-		}
-		function _bindDocClick() {
-			doc.addEventListener('click', _eventDocClick);
-		}
-		function _bindDocKey() {
-			doc.addEventListener('keydown', _eventDocKey);
-		}
+	    var closeButton = _q(closeSelector, panel)[0];
+	    closeButton.addEventListener('click', _eventClosePointer);
+	  }
+	  function _bindDocClick() {
+	    doc.addEventListener('click', _eventDocClick);
+	  }
+	  function _bindDocKey() {
+	    doc.addEventListener('keydown', _eventDocKey);
+	  }
 	
-		//	UNBIND EVENTS
-		function _unbindOpenPointer() {
-			var panel = arguments.length <= 0 || arguments[0] === undefined ? currPanel : arguments[0];
+	  //  UNBIND EVENTS
+	  function _unbindOpenPointer() {
+	    var panel = arguments.length <= 0 || arguments[0] === undefined ? currPanel : arguments[0];
 	
-			var openButtons = _q(openSelector + '[aria-controls="' + _getPanelId(panel) + '"]'); // yep its totally crazy
-			openButtons.forEach(function (button) {
-				return button.removeEventListener('click', _eventOpenPointer);
-			});
-		}
-		function _unbindClosePointer() {
-			var panel = arguments.length <= 0 || arguments[0] === undefined ? currPanel : arguments[0];
+	    var openButtons = _q(openSelector + '[aria-controls="' + _getPanelId(panel) + '"]'); // yep its totally crazy
+	    openButtons.forEach(function (button) {
+	      return button.removeEventListener('click', _eventOpenPointer);
+	    });
+	  }
+	  function _unbindClosePointer() {
+	    var panel = arguments.length <= 0 || arguments[0] === undefined ? currPanel : arguments[0];
 	
-			var closeButton = _q(closeSelector, panel)[0];
-			closeButton.removeEventListener('click', _eventClosePointer);
-		}
-		function _unbindDocClick() {
-			doc.removeEventListener('click', _eventDocClick);
-		}
-		function _unbindDocKey() {
-			doc.removeEventListener('keydown', _eventDocKey);
-		}
+	    var closeButton = _q(closeSelector, panel)[0];
+	    closeButton.removeEventListener('click', _eventClosePointer);
+	  }
+	  function _unbindDocClick() {
+	    doc.removeEventListener('click', _eventDocClick);
+	  }
+	  function _unbindDocKey() {
+	    doc.removeEventListener('keydown', _eventDocKey);
+	  }
 	
-		//	INIT
-		function init() {
-			if (!panels) return;
-			//	loop through each offcanvas element
-			panels.forEach(function (panel) {
-				_addA11y(panel);
-				_bindOpenPointer(panel);
-				panel.classList.add(readyClass);
-			});
-		}
-		init();
+	  //  INIT
+	  function init() {
+	    if (!panels) return;
+	    //  loop through each offcanvas element
+	    panels.forEach(function (panel) {
+	      _addA11y(panel);
+	      _bindOpenPointer(panel);
+	      panel.classList.add(readyClass);
+	    });
+	  }
+	  init();
 	
-		// REVEAL API
-		return {
-			init: init,
-			destroy: destroy
-		};
+	  // REVEAL API
+	  return {
+	    init: init,
+	    destroy: destroy
+	  };
 	};
 	
 	// module exports
@@ -5500,9 +5502,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
+	var _jquery = __webpack_require__(2);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
 	var _headroom = __webpack_require__(35);
 	
 	var _headroom2 = _interopRequireDefault(_headroom);
+	
+	var _throttle = __webpack_require__(3);
+	
+	var _throttle2 = _interopRequireDefault(_throttle);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -5558,7 +5568,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	  headroom.init();
 	}
 	
-	exports.default = { Headroom: _headroom2.default, headroom: headroom };
+	/*
+	 *	Make space when using fixed header.
+	 */
+	var headroomFixed = '.Headroom--fixed';
+	
+	if ((0, _jquery2.default)('.' + opts.classes.initial).is(headroomFixed)) {
+	  var _onResize = function _onResize() {
+	    var paddingTop = (0, _jquery2.default)(headroomFixed).height() + Math.min(32, Math.floor((0, _jquery2.default)(window).width() / 50));
+	    (0, _jquery2.default)('body').css({
+	      paddingTop: paddingTop + 'px'
+	    });
+	  };
+	  (0, _jquery2.default)(headroomFixed).css({
+	    position: 'fixed',
+	    top: 0
+	  });
+	  (0, _jquery2.default)(window).resize((0, _throttle2.default)(250, _onResize));
+	  (0, _jquery2.default)(document).ready(_onResize);
+	}
+	
+	exports.default = {
+	  Headroom: _headroom2.default,
+	  headroom: headroom
+	};
 	module.exports = exports['default'];
 
 /***/ },
