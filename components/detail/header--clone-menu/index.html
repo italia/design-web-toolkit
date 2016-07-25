@@ -71,6 +71,7 @@
                     srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html class=&quot;no-js&quot;&gt;
 &lt;head&gt;
+  &lt;script&gt;document.getElementsByTagName(&#39;html&#39;)[0].className=&#39;&#39;&lt;/script&gt;
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
@@ -89,7 +90,7 @@
 
 &lt;header class=&quot;Header Headroom--fixed&quot;&gt;
 
-  &lt;div class=&quot;Header-banner&quot;&gt;
+  &lt;div class=&quot;Header-banner Headroom-hideme&quot;&gt;
     &lt;div class=&quot;Header-serviceLink&quot;&gt;
       &lt;a href=&quot;&quot;&gt;&lt;span&gt;Accedi ai &lt;/span&gt; servizi&lt;/a&gt;
     &lt;/div&gt;
@@ -126,7 +127,7 @@
     &lt;/div&gt;
 
     &lt;div class=&quot;Header-utils&quot; id=&quot;header-utils&quot;&gt;
-      &lt;div class=&quot;Header-social&quot;&gt;
+      &lt;div class=&quot;Header-social Headroom-hideme&quot;&gt;
         &lt;p&gt;Seguici su:&lt;/p&gt;
         &lt;ul class=&quot;Header-socialIcons&quot;&gt;
           &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-facebook&quot;&gt;&lt;/span&gt;&lt;span class=&quot;u-hiddenVisually&quot;&gt;Facebook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -143,7 +144,7 @@
     &lt;/div&gt;
 &lt;/form&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;Header-languages&quot;&gt;
+      &lt;div class=&quot;Header-languages Headroom-hideme&quot;&gt;
         &lt;a class=&quot;Header-language is-active&quot; href=&quot;&quot;&gt;ITA&lt;/a&gt;
         &lt;a class=&quot;Header-language&quot; href=&quot;&quot;&gt;ENG&lt;/a&gt;
       &lt;/div&gt;
@@ -298,7 +299,7 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header Headroom--fixed"</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-banner"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-banner Headroom-hideme"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-serviceLink"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Accedi ai <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> servizi<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -334,7 +335,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-utils"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-utils"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-social"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-social Headroom-hideme"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Seguici su:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-socialIcons"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-facebook"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Facebook<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -351,7 +352,7 @@
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-languages"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-languages Headroom-hideme"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>ITA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>ENG<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -438,7 +439,7 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header Headroom--fixed"</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-banner"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-banner Headroom-hideme"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-serviceLink"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Accedi ai <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> servizi<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -475,7 +476,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-utils"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-utils"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-social"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-social Headroom-hideme"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Seguici su:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-socialIcons"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-facebook"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Facebook<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -486,7 +487,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-search"</span>&gt;</span>
         </span><span class="hljs-template-tag">{% <span class="hljs-name">render</span> '<a href="/components/detail/form--search">@form--search</a>' %}</span><span class="xml">
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-languages"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-languages Headroom-hideme"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>ITA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>ENG<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -649,15 +650,19 @@
   }
 
   @media (--lg-viewport) {
-    @extend .u-padding-top-l;
-    @extend .u-padding-bottom-l;
-    @extend .u-padding-right-xl;
+    @extend .u-padding-top-m;
+    @extend .u-padding-bottom-m;
+    @extend .u-padding-right-xxl;
   }
 }
 
+/*
+ *	1. Align content to header for wide screen
+ */
 .Header-toggle {
   @extend .u-block;
   @extend .u-size2of12;
+  @extend .u-lg-size1of8; /* 1 */
   @extend .u-padding-left-xs;
 
   @extend .u-color-white;
@@ -670,6 +675,9 @@
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-padding-left-xxl;
+  }
+  @media (--lg-viewport) {
+    @extend .u-margin-left-l;
   }
 }
 
@@ -895,9 +903,10 @@
  * =============================
  */
 .Headroom {
-  transition: transform 250ms linear;
+  max-height: 100em;
+  transition: all 250ms ease;
   width: 100%;
-  will-change: transform;
+  will-change: all;
 }
 
 .Headroom--fixed,
@@ -905,37 +914,26 @@
   transform: translateY(0%);
 }
 
-.Headroom .Header-social,
-.Headroom .Header-languages,
-.Headroom .Header-banner {
-  transition: all 350ms linear;
+/*
+ *	1. Allow transition on element heights
+ */
+.Headroom-hideme {
+  max-height: 5em; /* 1 */
+  transition: all 250ms ease;
 }
 
-.Headroom--fixed.Headroom--not-top .Header-social,
-.Headroom--fixed.Headroom--not-top .Header-languages,
-.Headroom--fixed.Headroom--not-top .Header-banner,
-.Headroom--pinned.Headroom--not-top .Header-social,
-.Headroom--pinned.Headroom--not-top .Header-languages,
-.Headroom--pinned.Headroom--not-top .Header-banner {
+.Headroom--fixed.Headroom--not-top .Headroom-hideme,
+.Headroom--pinned.Headroom--not-top .Headroom-hideme {
   margin: 0 !important;
   max-height: 0;
   overflow-y: hidden;
   padding: 0 !important;
 }
 
-.Headroom .Header-navbar {
-  transition: all 200ms linear;
-}
-
-.Headroom--fixed.Headroom--not-top .Headroom-hideme,
-.Headroom--pinned.Headroom--not-top .Headroom-hideme {
-  @extend .u-hidden;
-}
-
 .Headroom--fixed.Headroom--not-top,
 .Headroom--pinned.Headroom--not-top {
-  max-height: 100em;
   position: fixed;
+  top: 0;
 }
 
 .Headroom--fixed.Headroom--not-top .Header-titleLink,
@@ -985,7 +983,9 @@
                     
                     <div class="Browser-fileContent" data-role="code" id="code-index-js">
                         <code class="Code Code--lang-javascript">
-                            <pre><span class="hljs-keyword">import</span> Headroom <span class="hljs-keyword">from</span> <span class="hljs-string">'headroom.js'</span>
+                            <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>
+<span class="hljs-keyword">import</span> Headroom <span class="hljs-keyword">from</span> <span class="hljs-string">'headroom.js'</span>
+<span class="hljs-keyword">import</span> debounce <span class="hljs-keyword">from</span> <span class="hljs-string">'throttle-debounce/throttle'</span>
 
 <span class="hljs-comment">// Headroom for fixed sticky header</span>
 
@@ -1039,7 +1039,30 @@
   headroom.init()
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> { Headroom, headroom }
+<span class="hljs-comment">/*
+ *	Make space when using fixed header.
+ */</span>
+<span class="hljs-keyword">const</span> headroomFixed = <span class="hljs-string">'.Headroom--fixed'</span>
+
+<span class="hljs-keyword">if</span> ($(<span class="hljs-string">'.'</span> + opts.classes.initial).is(headroomFixed)) {
+  <span class="hljs-keyword">const</span> _onResize = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> paddingTop = $(headroomFixed).height() + ( <span class="hljs-built_in">Math</span>.min(<span class="hljs-number">32</span>, <span class="hljs-built_in">Math</span>.floor($(<span class="hljs-built_in">window</span>).width() / <span class="hljs-number">50</span>)) )
+    $(<span class="hljs-string">'body'</span>).css({
+      paddingTop: paddingTop + <span class="hljs-string">'px'</span>
+    })
+  }
+  $(headroomFixed).css({
+    position: <span class="hljs-string">'fixed'</span>,
+    top: <span class="hljs-number">0</span>
+  })
+  $(<span class="hljs-built_in">window</span>).resize(debounce(<span class="hljs-number">250</span>, _onResize))
+  $(<span class="hljs-built_in">document</span>).ready(_onResize)
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  Headroom,
+  headroom
+}
 </pre>
                         </code>
                     </div>
@@ -2351,6 +2374,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="/components/detail/prose" data-pjax>
                 <span>Prose</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/scrolltop" data-pjax>
+                <span>Scrolltop</span>
                 
 
 <div class="Status Status--unlabelled">
