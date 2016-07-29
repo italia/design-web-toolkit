@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html class="no-js">
+<!--[if lte IE 9 ]>  <html class="no-js legacy"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-  <script>document.getElementsByTagName('html')[0].className=''</script>
+  <script>
+    (function() {
+      document.getElementsByTagName('html')[0].className =
+        document.getElementsByTagName('html')[0].className.replace('no-js', 'js-enabled')
+    })()
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,24 +16,29 @@
   <link media="all" rel="stylesheet" href="/examples.css">
   <title>Preview Layout</title>
 </head>
-
 <body class="Pac">
 
-  <form class="Form Form--spaced">
+  <form class="Form Form--spaced u-padding-all-xl">
 
-    <div class="Form-field is-invalid">
-      <div class=" Alert Alert--error">
-        <label class="Form-label" for="cognome">Cognome</label>
-        <input class="Form-input" id="cognome">
-        <p>Errore durante la compilazione</p>
-      </div>
+  <div class="Prose">
+    <p aria-live="assertive" class="Alert--error is-full u-padding-all-xl">
+      È necessario correggere alcuni errori prima di poter inviare il form
+    </p>
+  </div>
+
+  <div class="Form-field is-invalid">
+    <div class=" Alert Alert--error" role="alert">
+      <label class="Form-label" for="cognome">Cognome</label>
+      <input class="Form-input" id="cognome" aria-invalid="true">
+      <p id="err-1">Errore durante la compilazione</p>
     </div>
+  </div>
 
   <div class="Form-field is-warning">
     <div class=" Alert Alert--warning">
       <label class="Form-label" for="citta">Città</label>
-      <input class="Form-input" id="citta">
-      <p>Messaggio di allerta</p>
+      <input class="Form-input" id="citta" aria-invalid="true">
+      <p id="err-1">Messaggio di allerta</p>
     </div>
   </div>
 
@@ -35,10 +46,13 @@
 </form>
 
 
+  <!--[if (lte IE 9)]>
+  <script src="https://cdn.rawgit.com/inexorabletash/polyfill/master/polyfill.min.js"></script>
+  <![endif]-->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="/build/IWT.js"></script>
 
 </body>
-
 </html>
 
