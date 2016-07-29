@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html class="no-js">
+<!--[if lte IE 9 ]>  <html class="no-js legacy"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-  <script>document.getElementsByTagName('html')[0].className=''</script>
+  <script>
+    (function() {
+      document.getElementsByTagName('html')[0].className =
+        document.getElementsByTagName('html')[0].className.replace('no-js', 'js-enabled')
+    })()
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,39 +16,41 @@
   <link media="all" rel="stylesheet" href="/examples.css">
   <title>Preview Layout</title>
 </head>
-
 <body class="Pac">
 
   <div class="Accordion fr-accordion js-fr-accordion" id="accordion-1">
 
 	<h2 class="Accordion-header js-fr-accordion__header fr-accordion__header" id="accordion-header-1" >
-		<span class="Accordion-link">Open 1</span>
+		<span class="Accordion-link u-text-r-s">Open 1</span>
 	</h2>
 	<div id="accordion-panel-1" class="Accordion-panel fr-accordion__panel js-fr-accordion__panel">
-    <p class="Prose u-padding-all-s">2. Ipsum non esse nisi eiusmod labore ea occaecat magna ipsum.</p>
+    <p class="u-color-grey-90 u-text-r-xs u-padding-all-s">2. Ipsum non esse nisi eiusmod labore ea occaecat magna ipsum.</p>
 	</div>
 
 	<h2 class="Accordion-header js-fr-accordion__header fr-accordion__header" id="accordion-header-2">
-		<span class="Accordion-link">Open 2</span>
+		<span class="Accordion-link u-text-r-s">Open 2</span>
 	</h2>
 	<div id="accordion-panel-2" class="Accordion-panel fr-accordion__panel js-fr-accordion__panel">
-    <p class="Prose u-padding-all-s">2. Ipsum non esse nisi eiusmod labore ea occaecat magna ipsum.</p>
+    <p class="u-color-grey-90 u-text-r-xs u-padding-all-s">2. Ipsum non esse nisi eiusmod labore ea occaecat magna ipsum.</p>
 	</div>
 
 	<h2 class="Accordion-header js-fr-accordion__header fr-accordion__header" id="accordion-header-3">
-		<span class="Accordion-link">Open 3</span>
+		<span class="Accordion-link u-text-r-s">Open 3</span>
 	</h2>
 	<div id="accordion-panel-3" class="Accordion-panel fr-accordion__panel js-fr-accordion__panel">
-    <p class="Prose u-padding-all-s">3. Ipsum non esse nisi eiusmod labore ea occaecat magna ipsum.</p>
+    <p class="u-color-grey-90 u-text-r-xs u-padding-all-s">3. Ipsum non esse nisi eiusmod labore ea occaecat magna ipsum.</p>
 	</div>
 
 </div>
 
 
+  <!--[if (lte IE 9)]>
+  <script src="https://cdn.rawgit.com/inexorabletash/polyfill/master/polyfill.min.js"></script>
+  <![endif]-->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="/build/IWT.js"></script>
 
 </body>
-
 </html>
 

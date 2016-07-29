@@ -69,9 +69,15 @@
                     src="/components/preview/formtpl"
                     sandbox="allow-same-origin allow-scripts"
                     srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html class=&quot;no-js&quot;&gt;
+&lt;!--[if lte IE 9 ]&gt;  &lt;html class=&quot;no-js legacy&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot;&gt; &lt;!--&lt;![endif]--&gt;
 &lt;head&gt;
-  &lt;script&gt;document.getElementsByTagName(&#39;html&#39;)[0].className=&#39;&#39;&lt;/script&gt;
+  &lt;script&gt;
+    (function() {
+      document.getElementsByTagName(&#39;html&#39;)[0].className =
+        document.getElementsByTagName(&#39;html&#39;)[0].className.replace(&#39;no-js&#39;, &#39;js-enabled&#39;)
+    })()
+  &lt;/script&gt;
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
@@ -80,36 +86,39 @@
   &lt;link media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;/examples.css&quot;&gt;
   &lt;title&gt;Preview Layout&lt;/title&gt;
 &lt;/head&gt;
-
 &lt;body class=&quot;Pac&quot;&gt;
 
-  &lt;form class=&quot;Form Form--spaced u-layout-centerContent u-padding-all-xl u-background-grey-10&quot;&gt;
+  &lt;form class=&quot;Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs&quot;&gt;
+  &lt;div class=&quot;Prose Alert Alert--info&quot;&gt;
+    &lt;p&gt;Tutti i campi sono richiesti salvo dove espressamente indicato&lt;/p&gt;
+  &lt;/div&gt;
   &lt;div class=&quot;Grid Grid--withGutter u-layout-medium&quot;&gt;
   &lt;div class=&quot;Form-field Grid-cell&quot;&gt;
     &lt;label class=&quot;Form-label is-required&quot; for=&quot;nome&quot;&gt;Nome&lt;/label&gt;
-    &lt;p class=&quot;u-textSecondary&quot;&gt;scrivi il tuo nome&lt;/p&gt;
-    &lt;input class=&quot;Form-input&quot; id=&quot;nome&quot;&gt;
+    &lt;p id=&quot;info-nome&quot; class=&quot;u-textSecondary&quot;&gt;scrivi il tuo nome&lt;/p&gt;
+    &lt;input class=&quot;Form-input&quot; id=&quot;nome&quot; aria-required=&quot;true&quot; required aria-describedby=&quot;info-nome&quot;&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;Form-field Grid-cell&quot;&gt;
     &lt;label class=&quot;Form-label is-required&quot; for=&quot;cognome&quot;&gt;Cognome&lt;/label&gt;
-    &lt;p class=&quot;u-textSecondary&quot;&gt;scrivi il tuo cognome&lt;/p&gt;
-    &lt;input class=&quot;Form-input&quot; id=&quot;cognome&quot;&gt;
+    &lt;p id=&quot;info-cognome&quot; class=&quot;u-textSecondary&quot;&gt;scrivi il tuo cognome&lt;/p&gt;
+    &lt;input class=&quot;Form-input&quot; id=&quot;cognome&quot; aria-required=&quot;true&quot; required aria-describedby=&quot;info-nome&quot;&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;Form-field Grid-cell&quot;&gt;
-    &lt;label class=&quot;Form-label&quot; for=&quot;indirizzo&quot;&gt;Indirizzo&lt;/label&gt;
-    &lt;input type=&quot;email&quot; class=&quot;Form-input&quot; id=&quot;indirizzo&quot;&gt;
+    &lt;label class=&quot;Form-label&quot; for=&quot;indirizzo&quot;&gt;Indirizzo &lt;small&gt;(opzionale)&lt;/small&gt;&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;Form-input&quot; id=&quot;indirizzo&quot; aria-describedby=&quot;info-indirizzo&quot;&gt;
+    &lt;div role=&quot;tooltip&quot; id=&quot;info-indirizzo&quot;&gt;L&#39;indirizzo completo del tuo domicilio&lt;/div&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;Form-field Grid-cell u-md-size10of12 u-lg-size10of12&quot;&gt;
-    &lt;label class=&quot;Form-label&quot; for=&quot;citta&quot;&gt;Città&lt;/label&gt;
-    &lt;input class=&quot;Form-input&quot; id=&quot;citta&quot;&gt;
+    &lt;label class=&quot;Form-label is-required&quot; for=&quot;citta&quot;&gt;Città&lt;/label&gt;
+    &lt;input class=&quot;Form-input&quot; id=&quot;citta&quot; aria-required=&quot;true&quot; required&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;Form-field Grid-cell u-md-size2of12 u-lg-size2of12&quot;&gt;
-    &lt;label class=&quot;Form-label&quot; for=&quot;provin6ia&quot;&gt;Provincia&lt;/label&gt;
-    &lt;select class=&quot;Form-input&quot; id=&quot;provincia&quot; required&gt;
+    &lt;label class=&quot;Form-label is-required&quot; for=&quot;provin6ia&quot;&gt;Provincia&lt;/label&gt;
+    &lt;select class=&quot;Form-input&quot; id=&quot;provincia&quot; aria-required=&quot;true&quot; required&gt;
       &lt;option disabled selected&gt;seleziona&lt;/option&gt;
       &lt;option&gt;provincia&lt;/option&gt;
       &lt;option&gt;provincia&lt;/option&gt;
@@ -119,41 +128,41 @@
   &lt;/div&gt;
 
   &lt;div class=&quot;Form-field Grid-cell u-md-size10of12 u-lg-size10of12&quot;&gt;
-    &lt;label class=&quot;Form-label&quot; for=&quot;via&quot;&gt;Via&lt;/label&gt;
+    &lt;label class=&quot;Form-label is-required&quot; for=&quot;via&quot;&gt;Via&lt;/label&gt;
     &lt;input class=&quot;Form-input is-disabled&quot; disabled id=&quot;via&quot;&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;Form-field Grid-cell u-md-size2of12 u-lg-size2of12&quot;&gt;
-    &lt;label class=&quot;Form-label&quot; for=&quot;cap&quot;&gt;CAP&lt;/label&gt;
-    &lt;input class=&quot;Form-input&quot; id=&quot;cap&quot;&gt;
+    &lt;label class=&quot;Form-label is-required&quot; for=&quot;cap&quot;&gt;CAP&lt;/label&gt;
+    &lt;input class=&quot;Form-input&quot; id=&quot;cap&quot; aria-required=&quot;true&quot; required&gt;
   &lt;/div&gt;
 
   &lt;fieldset class=&quot;Form-field Form-field--choose Grid-cell&quot;&gt;
-    &lt;legend class=&quot;Form-legend&quot; for=&quot;sex1&quot;&gt;Sesso&lt;/legend&gt;
+    &lt;legend class=&quot;Form-legend is-required&quot; for=&quot;sex1&quot;&gt;Sesso&lt;/legend&gt;
     &lt;label class=&quot;Form-label Form-label--block&quot;&gt;
-      &lt;input type=&quot;radio&quot; class=&quot;Form-input&quot; name=&quot;sex&quot;&gt;
+      &lt;input type=&quot;radio&quot; class=&quot;Form-input&quot; name=&quot;sex&quot; aria-required=&quot;true&quot; required&gt;
       M
     &lt;/label&gt;
     &lt;label class=&quot;Form-label Form-label--block&quot;&gt;
-      &lt;input type=&quot;radio&quot; class=&quot;Form-input&quot; name=&quot;sex&quot;&gt;
+      &lt;input type=&quot;radio&quot; class=&quot;Form-input&quot; name=&quot;sex&quot; aria-required=&quot;true&quot; required&gt;
       F
     &lt;/label&gt;
   &lt;/fieldset&gt;
 
   &lt;fieldset class=&quot;Form-field Form-field--choose Grid-cell&quot;&gt;
-    &lt;legend class=&quot;Form-legend&quot; &gt;Privacy&lt;/legend&gt;
+    &lt;legend class=&quot;Form-legend is-required&quot; &gt;Privacy&lt;/legend&gt;
     &lt;label class=&quot;Form-label Form-label--block&quot; for=&quot;privacy1&quot;&gt;
-      &lt;input type=&quot;checkbox&quot; class=&quot;Form-input&quot; id=&quot;privacy1&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; class=&quot;Form-input&quot; id=&quot;privacy1&quot; aria-required=&quot;true&quot; required&gt;
       Acconsento...
     &lt;/label&gt;
-    &lt;label class=&quot;Form-label Form-label--block&quot; for=&quot;privacy2&quot;&gt;
-      &lt;input type=&quot;checkbox&quot; class=&quot;Form-input&quot; id=&quot;privacy2&quot;&gt;
+    &lt;label class=&quot;Form-label is-required Form-label--block&quot; for=&quot;privacy2&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; class=&quot;Form-input&quot; id=&quot;privacy2&quot; aria-required=&quot;true&quot; required&gt;
       Acconsento ulteriormente...
     &lt;/label&gt;
   &lt;/fieldset&gt;
 
   &lt;div class=&quot;Form-field Grid-cell u-size4of4&quot;&gt;
-    &lt;label class=&quot;Form-label&quot; for=&quot;cap&quot;&gt;Varie ed eventuali&lt;/label&gt;
+    &lt;label class=&quot;Form-label&quot; for=&quot;cap&quot;&gt;Varie ed eventuali &lt;small&gt;(opzionale)&lt;/small&gt;&lt;/label&gt;
     &lt;textarea class=&quot;Form-input&quot;&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 
@@ -165,11 +174,14 @@
 &lt;/form&gt;
 
 
+  &lt;!--[if (lte IE 9)]&gt;
+  &lt;script src=&quot;https://cdn.rawgit.com/inexorabletash/polyfill/master/polyfill.min.js&quot;&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;
+
   &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&quot;&gt;&lt;/script&gt;
   &lt;script src=&quot;/build/IWT.js&quot;&gt;&lt;/script&gt;
 
 &lt;/body&gt;
-
 &lt;/html&gt;
 "
                      style=""
@@ -224,33 +236,37 @@
                 <div class="Browser-files">
                     <div class="Browser-fileContent is-active" data-role="code" id="code-html">
                         <code class="Code Code--lang-html">
-                            <pre><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form Form--spaced u-layout-centerContent u-padding-all-xl u-background-grey-10"</span>&gt;</span>
+                            <pre><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Prose Alert Alert--info"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Tutti i campi sono richiesti salvo dove espressamente indicato<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter u-layout-medium"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Grid-cell"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"nome"</span>&gt;</span>Nome<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-textSecondary"</span>&gt;</span>scrivi il tuo nome<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nome"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"info-nome"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-textSecondary"</span>&gt;</span>scrivi il tuo nome<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nome"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"info-nome"</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Grid-cell"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cognome"</span>&gt;</span>Cognome<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-textSecondary"</span>&gt;</span>scrivi il tuo cognome<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cognome"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"info-cognome"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-textSecondary"</span>&gt;</span>scrivi il tuo cognome<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cognome"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"info-nome"</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Grid-cell"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"indirizzo"</span>&gt;</span>Indirizzo<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"indirizzo"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"indirizzo"</span>&gt;</span>Indirizzo <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>(opzionale)<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"indirizzo"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"info-indirizzo"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tooltip"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"info-indirizzo"</span>&gt;</span>L'indirizzo completo del tuo domicilio<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Grid-cell u-md-size10of12 u-lg-size10of12"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"citta"</span>&gt;</span>Città<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"citta"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"citta"</span>&gt;</span>Città<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"citta"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Grid-cell u-md-size2of12 u-lg-size2of12"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"provin6ia"</span>&gt;</span>Provincia<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"provincia"</span> <span class="hljs-attr">required</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"provin6ia"</span>&gt;</span>Provincia<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"provincia"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">selected</span>&gt;</span>seleziona<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>provincia<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>provincia<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
@@ -260,41 +276,41 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Grid-cell u-md-size10of12 u-lg-size10of12"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"via"</span>&gt;</span>Via<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"via"</span>&gt;</span>Via<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input is-disabled"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"via"</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Grid-cell u-md-size2of12 u-lg-size2of12"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cap"</span>&gt;</span>CAP<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cap"</span>&gt;</span>CAP<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cap"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Form-field--choose Grid-cell"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-legend"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sex1"</span>&gt;</span>Sesso<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-legend is-required"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sex1"</span>&gt;</span>Sesso<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label Form-label--block"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sex"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sex"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span>&gt;</span>
       M
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label Form-label--block"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sex"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sex"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span>&gt;</span>
       F
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Form-field--choose Grid-cell"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-legend"</span>&gt;</span>Privacy<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-legend is-required"</span>&gt;</span>Privacy<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label Form-label--block"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"privacy1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"privacy1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"privacy1"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span>&gt;</span>
       Acconsento...
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label Form-label--block"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"privacy2"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"privacy2"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label is-required Form-label--block"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"privacy2"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"privacy2"</span> <span class="hljs-attr">aria-required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">required</span>&gt;</span>
       Acconsento ulteriormente...
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Grid-cell u-size4of4"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cap"</span>&gt;</span>Varie ed eventuali<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cap"</span>&gt;</span>Varie ed eventuali <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>(opzionale)<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -308,33 +324,37 @@
                     </div>
                     <div class="Browser-fileContent" data-role="code" id="code-view">
                         <code class="Code Code--lang-">
-                            <pre>&lt;form <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form Form--spaced u-layout-centerContent u-padding-all-xl u-background-grey-10"</span>&gt;
+                            <pre>&lt;form <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs"</span>&gt;
+  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Prose Alert Alert--info"</span>&gt;
+    &lt;p&gt;<span class="hljs-type">Tutti</span> i campi sono richiesti salvo dove espressamente indicato&lt;/p&gt;
+  &lt;/div&gt;
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Grid Grid--withGutter u-layout-medium"</span>&gt;
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Grid-cell"</span>&gt;
     &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"nome"</span>&gt;<span class="hljs-type">Nome</span>&lt;/label&gt;
-    &lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"u-textSecondary"</span>&gt;scrivi il tuo nome&lt;/p&gt;
-    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"nome"</span>&gt;
+    &lt;p id=<span class="hljs-string">"info-nome"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"u-textSecondary"</span>&gt;scrivi il tuo nome&lt;/p&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"nome"</span> aria-required=<span class="hljs-string">"true"</span> required aria-describedby=<span class="hljs-string">"info-nome"</span>&gt;
   &lt;/div&gt;
 
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Grid-cell"</span>&gt;
     &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"cognome"</span>&gt;<span class="hljs-type">Cognome</span>&lt;/label&gt;
-    &lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"u-textSecondary"</span>&gt;scrivi il tuo cognome&lt;/p&gt;
-    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"cognome"</span>&gt;
+    &lt;p id=<span class="hljs-string">"info-cognome"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"u-textSecondary"</span>&gt;scrivi il tuo cognome&lt;/p&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"cognome"</span> aria-required=<span class="hljs-string">"true"</span> required aria-describedby=<span class="hljs-string">"info-nome"</span>&gt;
   &lt;/div&gt;
 
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Grid-cell"</span>&gt;
-    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"indirizzo"</span>&gt;<span class="hljs-type">Indirizzo</span>&lt;/label&gt;
-    &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"email"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"indirizzo"</span>&gt;
+    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"indirizzo"</span>&gt;<span class="hljs-type">Indirizzo</span> &lt;small&gt;(opzionale)&lt;/small&gt;&lt;/label&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"email"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"indirizzo"</span> aria-describedby=<span class="hljs-string">"info-indirizzo"</span>&gt;
+    &lt;div role=<span class="hljs-string">"tooltip"</span> id=<span class="hljs-string">"info-indirizzo"</span>&gt;<span class="hljs-type">L</span><span class="hljs-symbol">'indirizzo</span> completo del tuo domicilio&lt;/div&gt;
   &lt;/div&gt;
 
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Grid-cell u-md-size10of12 u-lg-size10of12"</span>&gt;
-    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"citta"</span>&gt;<span class="hljs-type">Citt</span>à&lt;/label&gt;
-    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"citta"</span>&gt;
+    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"citta"</span>&gt;<span class="hljs-type">Citt</span>à&lt;/label&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"citta"</span> aria-required=<span class="hljs-string">"true"</span> required&gt;
   &lt;/div&gt;
 
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Grid-cell u-md-size2of12 u-lg-size2of12"</span>&gt;
-    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"provin6ia"</span>&gt;<span class="hljs-type">Provincia</span>&lt;/label&gt;
-    &lt;select <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"provincia"</span> required&gt;
+    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"provin6ia"</span>&gt;<span class="hljs-type">Provincia</span>&lt;/label&gt;
+    &lt;select <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"provincia"</span> aria-required=<span class="hljs-string">"true"</span> required&gt;
       &lt;option disabled selected&gt;seleziona&lt;/option&gt;
       &lt;option&gt;provincia&lt;/option&gt;
       &lt;option&gt;provincia&lt;/option&gt;
@@ -344,41 +364,41 @@
   &lt;/div&gt;
 
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Grid-cell u-md-size10of12 u-lg-size10of12"</span>&gt;
-    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"via"</span>&gt;<span class="hljs-type">Via</span>&lt;/label&gt;
+    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"via"</span>&gt;<span class="hljs-type">Via</span>&lt;/label&gt;
     &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input is-disabled"</span> disabled id=<span class="hljs-string">"via"</span>&gt;
   &lt;/div&gt;
 
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Grid-cell u-md-size2of12 u-lg-size2of12"</span>&gt;
-    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"cap"</span>&gt;<span class="hljs-type">CAP</span>&lt;/label&gt;
-    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"cap"</span>&gt;
+    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label is-required"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"cap"</span>&gt;<span class="hljs-type">CAP</span>&lt;/label&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"cap"</span> aria-required=<span class="hljs-string">"true"</span> required&gt;
   &lt;/div&gt;
 
   &lt;fieldset <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Form-field--choose Grid-cell"</span>&gt;
-    &lt;legend <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-legend"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"sex1"</span>&gt;<span class="hljs-type">Sesso</span>&lt;/legend&gt;
+    &lt;legend <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-legend is-required"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"sex1"</span>&gt;<span class="hljs-type">Sesso</span>&lt;/legend&gt;
     &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label Form-label--block"</span>&gt;
-      &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"radio"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> name=<span class="hljs-string">"sex"</span>&gt;
+      &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"radio"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> name=<span class="hljs-string">"sex"</span> aria-required=<span class="hljs-string">"true"</span> required&gt;
       <span class="hljs-type">M</span>
     &lt;/label&gt;
     &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label Form-label--block"</span>&gt;
-      &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"radio"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> name=<span class="hljs-string">"sex"</span>&gt;
+      &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"radio"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> name=<span class="hljs-string">"sex"</span> aria-required=<span class="hljs-string">"true"</span> required&gt;
       <span class="hljs-type">F</span>
     &lt;/label&gt;
   &lt;/fieldset&gt;
 
   &lt;fieldset <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Form-field--choose Grid-cell"</span>&gt;
-    &lt;legend <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-legend"</span> &gt;<span class="hljs-type">Privacy</span>&lt;/legend&gt;
+    &lt;legend <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-legend is-required"</span> &gt;<span class="hljs-type">Privacy</span>&lt;/legend&gt;
     &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label Form-label--block"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"privacy1"</span>&gt;
-      &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"privacy1"</span>&gt;
+      &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"privacy1"</span> aria-required=<span class="hljs-string">"true"</span> required&gt;
       <span class="hljs-type">Acconsento</span>...
     &lt;/label&gt;
-    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label Form-label--block"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"privacy2"</span>&gt;
-      &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"privacy2"</span>&gt;
+    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label is-required Form-label--block"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"privacy2"</span>&gt;
+      &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span> id=<span class="hljs-string">"privacy2"</span> aria-required=<span class="hljs-string">"true"</span> required&gt;
       <span class="hljs-type">Acconsento</span> ulteriormente...
     &lt;/label&gt;
   &lt;/fieldset&gt;
 
   &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-field Grid-cell u-size4of4"</span>&gt;
-    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"cap"</span>&gt;<span class="hljs-type">Varie</span> ed eventuali&lt;/label&gt;
+    &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"cap"</span>&gt;<span class="hljs-type">Varie</span> ed eventuali &lt;small&gt;(opzionale)&lt;/small&gt;&lt;/label&gt;
     &lt;textarea <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"Form-input"</span>&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 
@@ -1319,6 +1339,30 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/bullets" data-pjax>
+                <span>Bullets</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-card">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Card</span>
@@ -1425,8 +1469,80 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/card--gallery" data-pjax>
+                <span>Gallery</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/carousel" data-pjax>
+                <span>Carousel</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/cookiebar" data-pjax>
+                <span>Cookiebar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -1607,10 +1723,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-linklist">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Linklist</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="/components/detail/linklist" data-pjax>
-                <span>Linklist</span>
+            <a class="Tree-entityLink" href="/components/detail/linklist--default" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1627,6 +1754,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/linklist--padded" data-pjax>
+                <span>Padded</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -1731,6 +1887,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="/components/detail/scrolltop" data-pjax>
                 <span>Scrolltop</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/share" data-pjax>
+                <span>Share</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1921,6 +2101,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/formtpl--filters" data-pjax>
+                <span>Filters</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -1988,8 +2192,56 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/layout--gallery" data-pjax>
+                <span>Gallery</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="/components/detail/layout--grid" data-pjax>
                 <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/layout--landing" data-pjax>
+                <span>Landing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2074,10 +2326,138 @@
             
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-page">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Page</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="/components/detail/page" data-pjax>
-                <span>Page</span>
+            <a class="Tree-entityLink" href="/components/detail/page--default" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/page--section" data-pjax>
+                <span>Section</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/section" data-pjax>
+                <span>Section</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-tile">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Tile</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/tile--default" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="/components/detail/tile--gallery" data-pjax>
+                <span>Gallery</span>
                 
 
 <div class="Status Status--unlabelled">

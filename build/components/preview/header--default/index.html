@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html class="no-js">
+<!--[if lte IE 9 ]>  <html class="no-js legacy"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-  <script>document.getElementsByTagName('html')[0].className=''</script>
+  <script>
+    (function() {
+      document.getElementsByTagName('html')[0].className =
+        document.getElementsByTagName('html')[0].className.replace('no-js', 'js-enabled')
+    })()
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +16,6 @@
   <link media="all" rel="stylesheet" href="/examples.css">
   <title>Preview Layout</title>
 </head>
-
 <body class="Pac">
 
   <ul class="Skiplinks js-fr-bypasslinks">
@@ -32,7 +37,7 @@
   <div class="Header-navbar Grid Grid--alignMiddle">
 
     <a class="Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open"
-      aria-controls="menu" aria-label="accedi al menu" title="navigazione" href="#">
+      aria-controls="menu" aria-label="accedi al menu" title="navigazione" href="#menu">
       <span class="Hamburger-toggle"></span>
       <p class="Header-toggleText">Menu</p>
     </a>
@@ -88,14 +93,14 @@
     <ul class="Megamenu-list">
         <li class="Megamenu-item">
             <a href="#">Movies</a>
-            <div class="Megamenu-subnav">
+            <div class="Megamenu-subnav u-jsDisplayNone">
                 <ul class="Megamenu-subnavGroup">
-                    <li><a href="">Action &amp; Adventure</a>
+                    <li><a href="/">Action &amp; Adventure</a>
                         <ul>
-                            <li><a href="">Musicals</a></li>
-                            <li><a href="">Romance</a></li>
-                            <li><a href="">Musicals</a></li>
-                            <li><a href="">Romance</a></li>
+                            <li><a href="/1">Musicals</a></li>
+                            <li><a href="/2">Romance</a></li>
+                            <li><a href="/3">Musicals</a></li>
+                            <li><a href="/4">Romance</a></li>
                         </ul>
                     </li>
                     <li><a href="">Children &amp; Family</a></li>
@@ -103,10 +108,10 @@
                 <ul class="Megamenu-subnavGroup">
                     <li><a href="">Dramas</a>
                         <ul>
-                            <li><a href="">Musicals</a></li>
-                            <li><a href="">Romance</a></li>
-                            <li><a href="">Musicals</a></li>
-                            <li><a href="">Romance</a></li>
+                            <li><a href="/1">Musicals</a></li>
+                            <li><a href="/2">Romance</a></li>
+                            <li><a href="/3">Musicals</a></li>
+                            <li><a href="/4">Romance</a></li>
                         </ul>
                     </li>
                     <li><a href="">Foreign</a></li>
@@ -114,10 +119,10 @@
                 <ul class="Megamenu-subnavGroup">
                     <li><a href="">Musicals</a>
                         <ul>
-                            <li><a href="">Musicals</a></li>
-                            <li><a href="">Romance</a></li>
-                            <li><a href="">Musicals</a></li>
-                            <li><a href="">Romance</a></li>
+                            <li><a href="/1">Musicals</a></li>
+                            <li><a href="/2">Romance</a></li>
+                            <li><a href="/3">Musicals</a></li>
+                            <li><a href="/4">Romance</a></li>
                         </ul>
                     </li>
                     <li><a href="">Romance</a></li>
@@ -126,35 +131,35 @@
         </li>
         <li class="Megamenu-item">
             <a href="#">TV Shows</a>
-            <div class="Megamenu-subnav">
+            <div class="Megamenu-subnav u-jsDisplayNone">
                 <ul class="Megamenu-subnavGroup">
-                    <li><a href="">Classic TV</a></li>
-                    <li><a href="">Crime TV</a></li>
+                    <li><a href="/1">Classic TV</a></li>
+                    <li><a href="/2">Crime TV</a></li>
                 </ul>
                 <ul class="Megamenu-subnavGroup">
-                    <li><a href="">Reality TV</a></li>
-                    <li><a href="">TV Action</a></li>
+                    <li><a href="/1">Reality TV</a></li>
+                    <li><a href="/2">TV Action</a></li>
                 </ul>
                 <ul class="Megamenu-subnavGroup">
-                    <li><a href="">TV Dramas</a></li>
-                    <li><a href="">TV Horror</a></li>
+                    <li><a href="/1">TV Dramas</a></li>
+                    <li><a href="/2">TV Horror</a></li>
                 </ul>
             </div>
         </li>
         <li class="Megamenu-item">
             <a href="#">Series</a>
-            <div class="Megamenu-subnav">
+            <div class="Megamenu-subnav u-jsDisplayNone">
                 <ul class="Megamenu-subnavGroup">
-                    <li><a href="">Horror</a></li>
-                    <li><a href="">Thriller</a></li>
+                    <li><a href="/1">Horror</a></li>
+                    <li><a href="/2">Thriller</a></li>
                 </ul>
                 <ul class="Megamenu-subnavGroup">
-                    <li><a href="">Comic</a></li>
-                    <li><a href="">Action</a></li>
+                    <li><a href="/1">Comic</a></li>
+                    <li><a href="/2">Action</a></li>
                 </ul>
                 <ul class="Megamenu-subnavGroup">
-                    <li><a href="">Dramas</a></li>
-                    <li><a href="">Romantic</a></li>
+                    <li><a href="/1">Dramas</a></li>
+                    <li><a href="/2">Romantic</a></li>
                 </ul>
             </div>
         </li>
@@ -165,7 +170,7 @@
 
 </header>
 
-<div class="Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas" id="menu">
+<div class="Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden" id="menu">
   <div class="Offcanvas-content u-background-white">
     <div class="Offcanvas-toggleContainer u-padding-bottom-l u-background-70">
       <button class="Hamburger-toggleContainer u-block u-color-white u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close"
@@ -175,7 +180,7 @@
       </button>
     </div>
     <nav>
-      <ul class="Linklist Treeview js-fr-treeview u-layout-prose u-text-r-xs">
+      <ul class="Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs">
     <li tabindex="0"><a>Fruits</a>
         <ul>
             <li><a>Oranges</a></li>
@@ -230,10 +235,13 @@
 </div>
 
 
+  <!--[if (lte IE 9)]>
+  <script src="https://cdn.rawgit.com/inexorabletash/polyfill/master/polyfill.min.js"></script>
+  <![endif]-->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="/build/IWT.js"></script>
 
 </body>
-
 </html>
 
