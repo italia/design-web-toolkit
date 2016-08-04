@@ -1,0 +1,59 @@
+/** @define Treeview; weak; */
+
+:root {
+  --Treeview-link-padding: 0.5em;
+  --Treeview-link-arrow-width: 1.5em;
+  --Treeview-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
+  --Treeview-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
+}
+
+.Treeview [aria-expanded] > a {
+  background-image: var(--Treeview-link-arrow-down);
+  background-position: right var(--Treeview-link-padding) center;
+  background-repeat: no-repeat;
+  background-size: var(--Treeview-link-arrow-width);
+  padding-right:
+    calc(
+      var(--Treeview-link-arrow-width) + (2 * var(--Treeview-link-padding))
+    );
+}
+
+.Treeview [aria-expanded="true"] > a {
+  background-image: var(--Treeview-link-arrow-up);
+}
+
+.Treeview [aria-hidden="true"] {
+  display: none;
+}
+
+.Treeview ul li {
+  border-color: white !important;
+}
+
+/* FIXME: overrides focus unset */
+.Treeview li[tabindex]:focus {
+  outline: 3px solid #ff8c00 !important;
+}
+
+.Treeview li[aria-expanded=true] > a,
+.Treeview li[aria-expanded=true] > a:hover {
+  @extend .u-background-grey-20;
+}
+
+.Treeview ul ul ul a,
+.Treeview ul ul ul a:hover {
+  @extend .u-color-white;
+  @extend .u-background-90;
+}
+
+.Treeview ul ul a,
+.Treeview ul ul a:hover {
+  @extend .u-color-95;
+  @extend .u-background-10;
+}
+
+.Treeview ul a,
+.Treeview ul a:hover {
+  @extend .u-color-90;
+  @extend .u-background-5;
+}

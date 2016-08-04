@@ -1,0 +1,61 @@
+/** @define Accordion */
+
+:root {
+  --Accordion-border-color: #d8d8d8;
+  --Accordion-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
+  --Accordion-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
+  --Accordion-link-padding: 0.5em;
+  --Accordion-link-arrow-width: 1.5em;
+}
+
+.Accordion {
+  @extend .u-color-grey-30;
+  @extend .u-border-top-xxs;
+  @extend .u-border-bottom-xxs;
+}
+
+.Accordion-panel {
+  transition: height 250ms ease-out, visibility 250ms;
+}
+
+.Accordion-header {
+  @extend .u-color-grey-30;
+  @extend .u-border-top-xxs;
+  @extend .u-block;
+  @extend .u-text-r-m;
+  @extend .u-textWeight-400;
+  @extend .u-nbfc;
+}
+
+.Accordion-header:hover {
+  @extend .u-background-5;
+}
+
+.Accordion-link {
+  @extend .u-block;
+  @extend .u-textClean;
+  @extend .u-padding-all-s;
+}
+
+.Accordion-link {
+  @extend .u-color-50;
+}
+
+.Accordion-link--leaf {
+  @extend .u-padding-left-xl;
+}
+
+.Accordion-header {
+  background-image: var(--Accordion-link-arrow-down);
+  background-position: right var(--Accordion-link-padding) center;
+  background-repeat: no-repeat;
+  background-size: var(--Accordion-link-arrow-width);
+  padding-right:
+    calc(
+      var(--Accordion-link-arrow-width) + (2 * var(--Accordion-link-padding))
+    );
+}
+
+.Accordion-header[aria-expanded="true"] {
+  background-image: var(--Accordion-link-arrow-up);
+}

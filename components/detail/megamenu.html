@@ -1,0 +1,4098 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../_theme/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../_theme/css/default.css?cachebust=1.0.4" type="text/css">
+
+
+<title>Megamenu | Italia.it Web Toolkit Styleguide</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Italia.it Web Toolkit Styleguide</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+
+    
+    
+
+<div class="Pen" data-behaviour="pen" id="pen-8e0eb5d50e02cf4a8e6f92aac4daa22c">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/megamenu.html" title="Component preview">
+            Megamenu
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #FF9233; border-color: #FF9233;">WIP</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-8e0eb5d50e02cf4a8e6f92aac4daa22c">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/megamenu.html"
+                sandbox="allow-same-origin allow-scripts"
+                srcdoc="&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt;&lt;html class=&quot;no-js ie89 ie8&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
+&lt;!--[if IE 9]&gt;&lt;html class=&quot;no-js ie89 ie9&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
+&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;
+&lt;html class=&quot;no-js&quot; lang=&quot;it&quot;&gt;
+&lt;!--&lt;![endif]--&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;!--
+    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
+      &lt;link href=&#39;//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39; /&gt;
+    o dal repository locale (src/fonts)
+  --&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    WebFontConfig = {
+      google: {
+        families: [&#39;Titillium+Web:400,700,400italic:latin&#39;]
+      }
+    };
+    (function() {
+      var wf = document.createElement(&#39;script&#39;);
+      wf.src = &#39;https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;;
+      wf.type = &#39;text/javascript&#39;;
+      wf.async = &#39;true&#39;;
+      var s = document.getElementsByTagName(&#39;script&#39;)[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  &lt;/script&gt;
+
+  &lt;!-- include html5shim per Explorer 8 --&gt;
+  &lt;script src=&quot;/build/vendor/modernizr.js&quot;&gt;&lt;/script&gt;
+
+  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/vendor.css&quot;&gt;
+  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/build.css&quot;&gt;
+
+  &lt;title&gt;Preview Layout&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;Pac&quot;&gt;
+
+  &lt;nav class=&quot;Megamenu Megamenu--styled js-megamenu&quot;&gt;
+  &lt;ul class=&quot;Megamenu-list&quot;&gt;
+    &lt;li class=&quot;Megamenu-item&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Movies&lt;/a&gt;
+      &lt;div class=&quot;Megamenu-subnav u-jsDisplayNone&quot;&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Action &amp;amp; Adventure&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Musicals&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/3&quot;&gt;Musicals&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/4&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Children &amp;amp; Family&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Dramas&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Musicals&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/3&quot;&gt;Musicals&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/4&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Foreign&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Musicals&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Musicals&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/3&quot;&gt;Musicals&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;/4&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Romance&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;Megamenu-item&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;TV Shows&lt;/a&gt;
+      &lt;div class=&quot;Megamenu-subnav u-jsDisplayNone&quot;&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Classic TV&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;Crime TV&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Reality TV&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;TV Action&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;TV Dramas&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;TV Horror&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;Megamenu-item&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Series&lt;/a&gt;
+      &lt;div class=&quot;Megamenu-subnav u-jsDisplayNone&quot;&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Horror&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;Thriller&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Comic&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;Megamenu-subnavGroup&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Dramas&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/2&quot;&gt;Romantic&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+
+  &lt;script src=&quot;/build/vendor/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;!--[if IE 8]&gt;
+  &lt;script src=&quot;/build/vendor/respond.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/build/vendor/rem.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/build/vendor/selectivizr.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/build/vendor/slice.js&quot;&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;
+
+  &lt;!--[if lte IE 9]&gt;
+  &lt;script src=&quot;/build/vendor/polyfill.min.js&quot;&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;
+
+  &lt;!-- In produzione utilizzare &lt;script src=&quot;/build/IWT.min.js&quot;&gt;&lt;/script&gt; --&gt;
+  &lt;script src=&quot;/build/IWT.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-8e0eb5d50e02cf4a8e6f92aac4daa22c">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-html">
+                
+
+<svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+</svg>
+
+
+                <span>HTML</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-view">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+</svg>
+
+
+                <span>View</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--context" data-role="tab">
+            <a href="#browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-context">
+                
+
+<svg fill="#000000" height="19" viewBox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0 0h24v24H0z" id="a"/>
+    </defs>
+    <clipPath id="b">
+        <use overflow="visible" xlink:href="#a"/>
+    </clipPath>
+    <path clip-path="url(#b)" d="M11 5.08V2c-5 .5-9 4.81-9 10s4 9.5 9 10v-3.08c-3-.48-6-3.4-6-6.92s3-6.44 6-6.92zM18.97 11H22c-.47-5-4-8.53-9-9v3.08C16 5.51 18.54 8 18.97 11zM13 18.92V22c5-.47 8.53-4 9-9h-3.03c-.43 3-2.97 5.49-5.97 5.92z"/>
+</svg>
+
+
+                <span>Context</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-assets">
+                
+
+<svg fill="#000000" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+</svg>
+
+
+                <span>Assets</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-info">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/>
+</svg>
+
+
+                <span>Info</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-notes">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+
+                <span>Notes</span>
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-html">
+    <code class="Code Code--lang-html">
+        
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu Megamenu--styled js-megamenu"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-list"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnav u-jsDisplayNone"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>Action &amp;amp; Adventure<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/3"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/4"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Children &amp;amp; Family<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Dramas<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/3"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/4"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Foreign<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/3"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/4"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>TV Shows<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnav u-jsDisplayNone"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Classic TV<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Crime TV<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Reality TV<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>TV Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>TV Dramas<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>TV Horror<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Series<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnav u-jsDisplayNone"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Horror<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Thriller<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Comic<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Dramas<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Romantic<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-view">
+    <code class="Code Code--lang-">
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu Megamenu--styled js-megamenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-list"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Movies<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnav u-jsDisplayNone"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>Action &amp;amp; Adventure<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/3"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/4"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Children &amp;amp; Family<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Dramas<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/3"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/4"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Foreign<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/3"</span>&gt;</span>Musicals<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/4"</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Romance<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>TV Shows<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnav u-jsDisplayNone"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Classic TV<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Crime TV<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Reality TV<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>TV Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>TV Dramas<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>TV Horror<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Series<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnav u-jsDisplayNone"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Horror<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Thriller<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Comic<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Megamenu-subnavGroup"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/1"</span>&gt;</span>Dramas<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/2"</span>&gt;</span>Romantic<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</pre>
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-context">
+    
+    
+    <code class="Code Code--lang-js">
+        <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+    </code>
+    
+</div>
+
+    
+    
+
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-6ccc67242f5d6fa8df53344c135c861c">index.css</option>
+                
+                <option value="file-1cbfa42a1bb590d5b930a91f621679a3">index.js</option>
+                
+                <option value="file-9c12816415713798aececd54a6d0d69d">megamenu.js</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-6ccc67242f5d6fa8df53344c135c861c" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-CSS FileBrowser-code">
+                                <pre>/** @define Megamenu; weak; */
+
+:root {
+  --Megamenu-border-color: #dedede;
+  --Megamenu-arrow-width: 0.5em;
+}
+
+.Megamenu-list {
+  @extend .u-block;
+  @extend .u-posRelative;
+  @extend .u-zindex-40;
+}
+
+/* a top level navigation item in the mega menu */
+.Megamenu-item {
+  @extend .u-inlineBlock;
+}
+
+/* first descendant link within a top level navigation item */
+.Megamenu-item &gt; a {
+  @extend .u-block;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-padding-right-xxl;
+  @extend .u-padding-left-xxl;
+}
+
+/* focus/open states of first descendant link within a top level
+      navigation item
+      .Megamenu-subnavGroup &gt; li &gt; ul &gt; li &gt; a.is-focus {
+    }
+*/
+
+/* open state of first descendant link within a top level
+      navigation item */
+.Megamenu-item &gt; a.is-open {
+  @extend .u-zindex-min;
+}
+
+/* sub-navigation panel */
+.Megamenu.is-ready .Megamenu-subnav {
+  @extend .u-hidden;
+  @extend .u-posAbsolute;
+  @extend .u-zindex-max;
+  left: 0;
+  width: 100%;
+}
+
+/* sub-navigation panel open state */
+.Megamenu.is-ready .Megamenu-subnav.is-open {
+  @extend .u-block;
+}
+
+/* list of items within sub-navigation panel */
+.Megamenu-subnavGroup {
+  @extend .u-inlineBlock;
+  @extend .u-alignTop;
+}
+
+/* list item within sub-navigation panel */
+.Megamenu-subnavGroup &gt; li {
+  @extend .u-block;
+}
+
+/* Some custom style */
+
+.Megamenu--styled .Megamenu-list {
+  @extend .u-nbfcAlt;
+  @extend .u-background-grey-20;
+  @extend .u-color-white;
+  @extend .u-border-top-xxs;
+}
+
+.Megamenu--styled .Megamenu-item &gt; a,
+.Megamenu--styled .Megamenu-subnavGroup &gt; li &gt; a {
+  @extend .u-textClean;
+  @extend .u-color-grey-10;
+  @extend .u-text-r-s;
+  @extend .u-posRelative;
+}
+
+.Megamenu--styled .Megamenu-item &gt; a {
+  @extend .u-color-grey-80;
+}
+
+.Megamenu--styled .Megamenu-list &gt; li &gt; a[aria-expanded=false]::after {
+  border-left: var(--Megamenu-arrow-width) solid transparent;
+  border-right: var(--Megamenu-arrow-width) solid transparent;
+  border-top: var(--Megamenu-arrow-width) solid #fff;
+  bottom: 40%;
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  right: var(--Megamenu-arrow-width);
+  width: 0;
+}
+
+.Megamenu--styled .Megamenu-list &gt; li &gt; a[aria-expanded=true]::after {
+  border-bottom: var(--Megamenu-arrow-width) solid var(--Color-grey-80);
+  border-left: var(--Megamenu-arrow-width) solid transparent;
+  border-right: var(--Megamenu-arrow-width) solid transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 0;
+  left: calc(50% - var(--Megamenu-arrow-width));
+  position: absolute;
+  width: 0;
+}
+
+.Megamenu--styled .Megamenu-subnav {
+  @extend .u-background-grey-80;
+  @extend .u-padding-all-l;
+  @extend .u-border-shadow-m;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup &gt; li {
+  @extend .u-color-grey-50;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-margin-right-xxl;
+  @extend .u-border-bottom-xxs;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup &gt; li:last-child {
+  border-bottom: none !important;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup {
+  @extend .u-textLeft;
+  min-width: 19%;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup &gt; li &gt; ul {
+  @extend .u-padding-top-xs;
+  @extend .u-margin-top-s;
+  @extend .u-padding-bottom-xs;
+  @extend .u-border-top-xxs;
+}
+
+/*
+ *	Max depth = 3 levels
+ */
+.Megamenu--styled .Megamenu-subnavGroup &gt; li &gt; ul li {
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xxs;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup &gt; li &gt; ul &gt; li a {
+  @extend .u-text-r-xs;
+  @extend .u-color-grey-10;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup &gt; li &gt; ul &gt; li &gt; ul &gt; li &gt; a {
+  @extend .u-text-r-xxs;
+  @extend .u-color-grey-10;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup &gt; li &gt; ul &gt; li &gt; ul {
+  @extend .u-margin-top-xs;
+  @extend .u-margin-bottom-xs;
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/megamenu/index.css"><span>/components/raw/megamenu/index.css</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/modules/megamenu/index.css</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">3.8 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-1cbfa42a1bb590d5b930a91f621679a3" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>
+<span class="hljs-keyword">import</span> Megamenu <span class="hljs-keyword">from</span> <span class="hljs-string">'./megamenu'</span>
+
+<span class="hljs-comment">// ASAP hide megamenu panels</span>
+$(<span class="hljs-string">'.js-megamenu'</span>).addClass(<span class="hljs-string">'is-ready'</span>)
+
+<span class="hljs-keyword">const</span> opts = {
+  <span class="hljs-comment">/* if false open menu on hover */</span>
+  openOnClick: <span class="hljs-literal">true</span>,
+
+  <span class="hljs-comment">/* prefix for generated unique id attributes, which are required
+     to indicate aria-owns, aria-controls and aria-labelledby */</span>
+  uuidPrefix: <span class="hljs-string">'megamenu'</span>,
+
+  <span class="hljs-comment">/* css class used to define the megamenu styling */</span>
+  menuClass: <span class="hljs-string">'Megamenu'</span>,
+
+  menuListClass: <span class="hljs-string">'Megamenu-list'</span>,
+
+  <span class="hljs-comment">/* css class for a top-level navigation item in the megamenu */</span>
+  topNavItemClass: <span class="hljs-string">'Megamenu-item'</span>,
+
+  <span class="hljs-comment">/* css class for a megamenu panel */</span>
+  panelClass: <span class="hljs-string">'Megamenu-subnav'</span>,
+
+  <span class="hljs-comment">/* css class for a group of items within a megamenu panel */</span>
+  panelGroupClass: <span class="hljs-string">'Megamenu-subnavGroup'</span>,
+
+  <span class="hljs-comment">/* css class for the hover state */</span>
+  hoverClass: <span class="hljs-string">'is-hover'</span>,
+
+  <span class="hljs-comment">/* css class for the focus state */</span>
+  focusClass: <span class="hljs-string">'is-focus'</span>,
+
+  <span class="hljs-comment">/* css class for the open state */</span>
+  openClass: <span class="hljs-string">'is-open'</span>
+}
+
+<span class="hljs-comment">/*
+ *	Take a Treeview and make it work with Megamenu
+ */</span>
+<span class="hljs-keyword">const</span> listToMegaMenu = ($ul, _opts) =&gt; {
+  <span class="hljs-keyword">const</span> attrs = <span class="hljs-string">'class aria-expanded aria-hidden role tabindex'</span>
+  <span class="hljs-keyword">return</span> $ul
+    .clone()
+    .removeAttr(attrs)
+    .addClass(_opts.menuListClass)
+    .find(<span class="hljs-string">'*'</span>)
+      .removeAttr(attrs)
+      .end()
+    .find(<span class="hljs-string">'&gt; li'</span>)
+    .each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">i, li</span>) </span>{
+      $(li)
+        .addClass(_opts.topNavItemClass)
+        .find(<span class="hljs-string">'a'</span>)
+          <span class="hljs-comment">// make item tabbable, this is required !</span>
+          .attr(<span class="hljs-string">'href'</span>, <span class="hljs-string">'#'</span>)
+        .end()
+        .find(<span class="hljs-string">'&gt; ul &gt; li'</span>)
+          .unwrap()
+          .wrap(<span class="hljs-string">`&lt;ul class="<span class="hljs-subst">${_opts.panelGroupClass}</span>" /&gt;`</span>)
+        .end()
+        .find(<span class="hljs-string">'&gt; ul'</span>)
+        .wrapAll(<span class="hljs-string">`&lt;div class="<span class="hljs-subst">${_opts.panelClass}</span>" /&gt;`</span>)
+    })
+    .end()
+}
+
+$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'.js-megamenu'</span>).each((i, el) =&gt; {
+    <span class="hljs-keyword">const</span> $el = $(el)
+    <span class="hljs-keyword">const</span> rel = $(el).data(<span class="hljs-string">'rel'</span>)
+    <span class="hljs-keyword">if</span> ($el.find(<span class="hljs-string">'ul'</span>).length === <span class="hljs-number">0</span> &amp;&amp; rel &amp;&amp; $(rel).length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">let</span> $menu = listToMegaMenu($(rel), opts)
+      $el.append($menu)
+    }
+    $el.accessibleMegaMenu(opts)
+  })
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> { opts, listToMegaMenu, Megamenu }
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/megamenu/index.js"><span>/components/raw/megamenu/index.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/modules/megamenu/index.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">2 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-9c12816415713798aececd54a6d0d69d" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-comment">/*
+Copyright © 2013 Adobe Systems Incorporated.
+
+Licensed under the Apache License, Version 2.0 (the “License”)
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/</span>
+
+<span class="hljs-comment">/**
+ * @fileOverview accessibleMegaMenu plugin
+ *
+ *&lt;p&gt;Licensed under the Apache License, Version 2.0 (the “License”)
+ *&lt;br /&gt;Copyright © 2013 Adobe Systems Incorporated.
+ *&lt;br /&gt;Project page &lt;a href='https://github.com/adobe-accessibility/Accessible-Mega-Menu'&gt;https://github.com/adobe-accessibility/Accessible-Mega-Menu&lt;/a&gt;
+ * @version 0.1
+ * @author Michael Jordan
+ * @requires jquery
+ */</span>
+
+<span class="hljs-comment">/*jslint browser: true, devel: true, plusplus: true, nomen: true */</span>
+<span class="hljs-comment">/*global jQuery */</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$, window, document</span>) </span>{
+  <span class="hljs-keyword">var</span> pluginName = <span class="hljs-string">'accessibleMegaMenu'</span>,
+    defaults = {
+      openOnClick: <span class="hljs-literal">false</span>,
+      uuidPrefix: <span class="hljs-string">'accessible-megamenu'</span>, <span class="hljs-comment">// unique ID's are required to indicate aria-owns, aria-controls and aria-labelledby</span>
+      menuClass: <span class="hljs-string">'accessible-megamenu'</span>, <span class="hljs-comment">// default css class used to define the megamenu styling</span>
+      topNavItemClass: <span class="hljs-string">'accessible-megamenu-top-nav-item'</span>, <span class="hljs-comment">// default css class for a top-level navigation item in the megamenu</span>
+      panelClass: <span class="hljs-string">'accessible-megamenu-panel'</span>, <span class="hljs-comment">// default css class for a megamenu panel</span>
+      panelGroupClass: <span class="hljs-string">'accessible-megamenu-panel-group'</span>, <span class="hljs-comment">// default css class for a group of items within a megamenu panel</span>
+      hoverClass: <span class="hljs-string">'hover'</span>, <span class="hljs-comment">// default css class for the hover state</span>
+      focusClass: <span class="hljs-string">'focus'</span>, <span class="hljs-comment">// default css class for the focus state</span>
+      openClass: <span class="hljs-string">'open'</span> <span class="hljs-comment">// default css class for the open state</span>
+    },
+    Keyboard = {
+      BACKSPACE: <span class="hljs-number">8</span>,
+      COMMA: <span class="hljs-number">188</span>,
+      DELETE: <span class="hljs-number">46</span>,
+      DOWN: <span class="hljs-number">40</span>,
+      END: <span class="hljs-number">35</span>,
+      ENTER: <span class="hljs-number">13</span>,
+      ESCAPE: <span class="hljs-number">27</span>,
+      HOME: <span class="hljs-number">36</span>,
+      LEFT: <span class="hljs-number">37</span>,
+      PAGE_DOWN: <span class="hljs-number">34</span>,
+      PAGE_UP: <span class="hljs-number">33</span>,
+      PERIOD: <span class="hljs-number">190</span>,
+      RIGHT: <span class="hljs-number">39</span>,
+      SPACE: <span class="hljs-number">32</span>,
+      TAB: <span class="hljs-number">9</span>,
+      UP: <span class="hljs-number">38</span>,
+      keyMap: {
+        <span class="hljs-number">48</span>: <span class="hljs-string">'0'</span>,
+        <span class="hljs-number">49</span>: <span class="hljs-string">'1'</span>,
+        <span class="hljs-number">50</span>: <span class="hljs-string">'2'</span>,
+        <span class="hljs-number">51</span>: <span class="hljs-string">'3'</span>,
+        <span class="hljs-number">52</span>: <span class="hljs-string">'4'</span>,
+        <span class="hljs-number">53</span>: <span class="hljs-string">'5'</span>,
+        <span class="hljs-number">54</span>: <span class="hljs-string">'6'</span>,
+        <span class="hljs-number">55</span>: <span class="hljs-string">'7'</span>,
+        <span class="hljs-number">56</span>: <span class="hljs-string">'8'</span>,
+        <span class="hljs-number">57</span>: <span class="hljs-string">'9'</span>,
+        <span class="hljs-number">59</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-number">65</span>: <span class="hljs-string">'a'</span>,
+        <span class="hljs-number">66</span>: <span class="hljs-string">'b'</span>,
+        <span class="hljs-number">67</span>: <span class="hljs-string">'c'</span>,
+        <span class="hljs-number">68</span>: <span class="hljs-string">'d'</span>,
+        <span class="hljs-number">69</span>: <span class="hljs-string">'e'</span>,
+        <span class="hljs-number">70</span>: <span class="hljs-string">'f'</span>,
+        <span class="hljs-number">71</span>: <span class="hljs-string">'g'</span>,
+        <span class="hljs-number">72</span>: <span class="hljs-string">'h'</span>,
+        <span class="hljs-number">73</span>: <span class="hljs-string">'i'</span>,
+        <span class="hljs-number">74</span>: <span class="hljs-string">'j'</span>,
+        <span class="hljs-number">75</span>: <span class="hljs-string">'k'</span>,
+        <span class="hljs-number">76</span>: <span class="hljs-string">'l'</span>,
+        <span class="hljs-number">77</span>: <span class="hljs-string">'m'</span>,
+        <span class="hljs-number">78</span>: <span class="hljs-string">'n'</span>,
+        <span class="hljs-number">79</span>: <span class="hljs-string">'o'</span>,
+        <span class="hljs-number">80</span>: <span class="hljs-string">'p'</span>,
+        <span class="hljs-number">81</span>: <span class="hljs-string">'q'</span>,
+        <span class="hljs-number">82</span>: <span class="hljs-string">'r'</span>,
+        <span class="hljs-number">83</span>: <span class="hljs-string">'s'</span>,
+        <span class="hljs-number">84</span>: <span class="hljs-string">'t'</span>,
+        <span class="hljs-number">85</span>: <span class="hljs-string">'u'</span>,
+        <span class="hljs-number">86</span>: <span class="hljs-string">'v'</span>,
+        <span class="hljs-number">87</span>: <span class="hljs-string">'w'</span>,
+        <span class="hljs-number">88</span>: <span class="hljs-string">'x'</span>,
+        <span class="hljs-number">89</span>: <span class="hljs-string">'y'</span>,
+        <span class="hljs-number">90</span>: <span class="hljs-string">'z'</span>,
+        <span class="hljs-number">96</span>: <span class="hljs-string">'0'</span>,
+        <span class="hljs-number">97</span>: <span class="hljs-string">'1'</span>,
+        <span class="hljs-number">98</span>: <span class="hljs-string">'2'</span>,
+        <span class="hljs-number">99</span>: <span class="hljs-string">'3'</span>,
+        <span class="hljs-number">100</span>: <span class="hljs-string">'4'</span>,
+        <span class="hljs-number">101</span>: <span class="hljs-string">'5'</span>,
+        <span class="hljs-number">102</span>: <span class="hljs-string">'6'</span>,
+        <span class="hljs-number">103</span>: <span class="hljs-string">'7'</span>,
+        <span class="hljs-number">104</span>: <span class="hljs-string">'8'</span>,
+        <span class="hljs-number">105</span>: <span class="hljs-string">'9'</span>,
+        <span class="hljs-number">190</span>: <span class="hljs-string">'.'</span>
+      }
+    }
+    <span class="hljs-comment">/**
+     * @desc Creates a new accessible mega menu instance.
+     * @param {jquery} element
+     * @param {object} [options] Mega Menu options
+     * @param {string} [options.uuidPrefix=accessible-megamenu] - Prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby
+     * @param {string} [options.menuClass=accessible-megamenu] - CSS class used to define the megamenu styling
+     * @param {string} [options.topNavItemClass=accessible-megamenu-top-nav-item] - CSS class for a top-level navigation item in the megamenu
+     * @param {string} [options.panelClass=accessible-megamenu-panel] - CSS class for a megamenu panel
+     * @param {string} [options.panelGroupClass=accessible-megamenu-panel-group] - CSS class for a group of items within a megamenu panel
+     * @param {string} [options.hoverClass=hover] - CSS class for the hover state
+     * @param {string} [options.focusClass=focus] - CSS class for the focus state
+     * @param {string} [options.openClass=open] - CSS class for the open state
+     * @constructor
+     */</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">AccessibleMegaMenu</span>(<span class="hljs-params">element, options</span>) </span>{
+    <span class="hljs-keyword">this</span>.element = element
+
+    <span class="hljs-comment">// merge optional settings and defaults into settings</span>
+    <span class="hljs-keyword">this</span>.settings = $.extend({}, defaults, options)
+
+    <span class="hljs-keyword">this</span>._defaults = defaults
+    <span class="hljs-keyword">this</span>._name = pluginName
+
+    <span class="hljs-keyword">this</span>.mouseTimeoutID = <span class="hljs-literal">null</span>
+    <span class="hljs-keyword">this</span>.focusTimeoutID = <span class="hljs-literal">null</span>
+    <span class="hljs-keyword">this</span>.mouseFocused = <span class="hljs-literal">false</span>
+    <span class="hljs-keyword">this</span>.justFocused = <span class="hljs-literal">false</span>
+
+    <span class="hljs-keyword">this</span>.init()
+  }
+
+  AccessibleMegaMenu.prototype = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-comment">/* private attributes and methods ------------------------ */</span>
+    <span class="hljs-keyword">var</span> uuid = <span class="hljs-number">0</span>,
+      keydownTimeoutDuration = <span class="hljs-number">1000</span>,
+      keydownSearchString = <span class="hljs-string">''</span>,
+      isTouch = <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span>.hasOwnProperty === <span class="hljs-string">'function'</span> &amp;&amp; !!<span class="hljs-built_in">window</span>.hasOwnProperty(<span class="hljs-string">'ontouchstart'</span>),
+      _getPlugin,
+      _addUniqueId,
+      _togglePanel,
+      _clickHandler,
+      _clickOutsideHandler,
+      _DOMAttrModifiedHandler,
+      _focusInHandler,
+      _focusOutHandler,
+      _keyDownHandler,
+      _mouseDownHandler,
+      _mouseOverHandler,
+      _mouseOutHandler,
+      _toggleExpandedEventHandlers
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_getPlugin
+     * @desc Returns the parent accessibleMegaMenu instance for a given element
+     * @param {jQuery} element
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _getPlugin = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element</span>) </span>{
+      <span class="hljs-keyword">return</span> $(element).closest(<span class="hljs-string">':data(plugin_'</span> + pluginName + <span class="hljs-string">')'</span>).data(<span class="hljs-string">'plugin_'</span> + pluginName)
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_addUniqueId
+     * @desc Adds a unique id and element.
+     * The id string starts with the
+     * string defined in settings.uuidPrefix.
+     * @param {jQuery} element
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _addUniqueId = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element</span>) </span>{
+      element = $(element)
+      <span class="hljs-keyword">var</span> settings = <span class="hljs-keyword">this</span>.settings
+      <span class="hljs-keyword">if</span> (!element.attr(<span class="hljs-string">'id'</span>)) {
+        element.attr(<span class="hljs-string">'id'</span>, settings.uuidPrefix + <span class="hljs-string">'-'</span> + <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime() + <span class="hljs-string">'-'</span> + (++uuid))
+      }
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_togglePanel
+     * @desc Toggle the display of mega menu panels in response to an event.
+     * The optional boolean value 'hide' forces all panels to hide.
+     * @param {event} event
+     * @param {Boolean} [hide] Hide all mega menu panels when true
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _togglePanel = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, hide</span>) </span>{
+      <span class="hljs-keyword">var</span> target = $(event.target),
+        that = <span class="hljs-keyword">this</span>,
+        settings = <span class="hljs-keyword">this</span>.settings,
+        menu = <span class="hljs-keyword">this</span>.menu,
+        topli = target.closest(<span class="hljs-string">'.'</span> + settings.topNavItemClass),
+        panel = target.hasClass(settings.panelClass) ? target : target.closest(<span class="hljs-string">'.'</span> + settings.panelClass),
+        newfocus
+
+      _toggleExpandedEventHandlers.call(<span class="hljs-keyword">this</span>, <span class="hljs-literal">true</span>)
+
+      <span class="hljs-keyword">if</span> (hide) {
+        topli = menu.find(<span class="hljs-string">'.'</span> + settings.topNavItemClass + <span class="hljs-string">' .'</span> + settings.openClass + <span class="hljs-string">':first'</span>).closest(<span class="hljs-string">'.'</span> + settings.topNavItemClass)
+        <span class="hljs-keyword">if</span> (!(topli.is(event.relatedTarget) || topli.has(event.relatedTarget).length &gt; <span class="hljs-number">0</span>)) {
+          <span class="hljs-keyword">if</span> ((event.type === <span class="hljs-string">'mouseout'</span> || event.type === <span class="hljs-string">'focusout'</span>) &amp;&amp; topli.has(<span class="hljs-built_in">document</span>.activeElement).length &gt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span>
+          }
+          topli.find(<span class="hljs-string">'[aria-expanded]'</span>)
+            .attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>)
+            .removeClass(settings.openClass)
+            .filter(<span class="hljs-string">'.'</span> + settings.panelClass)
+            .attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>)
+          <span class="hljs-keyword">if</span> ((event.type === <span class="hljs-string">'keydown'</span> &amp;&amp; event.keyCode === Keyboard.ESCAPE) || event.type === <span class="hljs-string">'DOMAttrModified'</span>) {
+            newfocus = topli.find(<span class="hljs-string">':tabbable:first'</span>)
+            setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+              menu.find(<span class="hljs-string">'[aria-expanded].'</span> + that.settings.panelClass).off(<span class="hljs-string">'DOMAttrModified.accessible-megamenu'</span>)
+              newfocus.focus()
+              that.justFocused = <span class="hljs-literal">false</span>
+            }, <span class="hljs-number">99</span>)
+          }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (topli.length === <span class="hljs-number">0</span>) {
+          menu.find(<span class="hljs-string">'[aria-expanded=true]'</span>)
+            .attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>)
+            .removeClass(settings.openClass)
+            .filter(<span class="hljs-string">'.'</span> + settings.panelClass)
+            .attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>)
+        }
+      } <span class="hljs-keyword">else</span> {
+        clearTimeout(that.focusTimeoutID)
+        topli.siblings()
+          .find(<span class="hljs-string">'[aria-expanded]'</span>)
+          .attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>)
+          .removeClass(settings.openClass)
+          .filter(<span class="hljs-string">'.'</span> + settings.panelClass)
+          .attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>)
+        topli.find(<span class="hljs-string">'[aria-expanded]'</span>)
+          .attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'true'</span>)
+          .addClass(settings.openClass)
+          .filter(<span class="hljs-string">'.'</span> + settings.panelClass)
+          .attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'false'</span>)
+        <span class="hljs-keyword">if</span> (event.type === <span class="hljs-string">'mouseover'</span> &amp;&amp; target.is(<span class="hljs-string">':tabbable'</span>) &amp;&amp; topli.length === <span class="hljs-number">1</span> &amp;&amp; panel.length === <span class="hljs-number">0</span> &amp;&amp; menu.has(<span class="hljs-built_in">document</span>.activeElement).length &gt; <span class="hljs-number">0</span>) {
+          target.focus()
+          that.justFocused = <span class="hljs-literal">false</span>
+        }
+
+        _toggleExpandedEventHandlers.call(that)
+      }
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_clickHandler
+     * @desc Handle click event on mega menu item
+     * @param {event} Event object
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _clickHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-keyword">var</span> target = $(event.currentTarget),
+        topli = target.closest(<span class="hljs-string">'.'</span> + <span class="hljs-keyword">this</span>.settings.topNavItemClass),
+        panel = target.closest(<span class="hljs-string">'.'</span> + <span class="hljs-keyword">this</span>.settings.panelClass)
+      <span class="hljs-keyword">if</span> (topli.length === <span class="hljs-number">1</span> &amp;&amp;
+        panel.length === <span class="hljs-number">0</span> &amp;&amp;
+        topli.find(<span class="hljs-string">'.'</span> + <span class="hljs-keyword">this</span>.settings.panelClass).length === <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">if</span> (!target.hasClass(<span class="hljs-keyword">this</span>.settings.openClass)) {
+          event.preventDefault()
+          event.stopPropagation()
+          _togglePanel.call(<span class="hljs-keyword">this</span>, event)
+          <span class="hljs-keyword">this</span>.justFocused = <span class="hljs-literal">false</span>
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.justFocused) {
+            event.preventDefault()
+            event.stopPropagation()
+            <span class="hljs-keyword">this</span>.justFocused = <span class="hljs-literal">false</span>
+          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isTouch) {
+            event.preventDefault()
+            event.stopPropagation()
+            _togglePanel.call(<span class="hljs-keyword">this</span>, event, target.hasClass(<span class="hljs-keyword">this</span>.settings.openClass))
+          }
+        }
+      }
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_clickOutsideHandler
+     * @desc Handle click event outside of a the megamenu
+     * @param {event} Event object
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _clickOutsideHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-keyword">if</span> ($(event.target).closest(<span class="hljs-keyword">this</span>.menu).length === <span class="hljs-number">0</span>) {
+        event.preventDefault()
+        event.stopPropagation()
+        _togglePanel.call(<span class="hljs-keyword">this</span>, event, <span class="hljs-literal">true</span>)
+      }
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_DOMAttrModifiedHandler
+     * @desc Handle DOMAttrModified event on panel to respond to Windows 8 Narrator ExpandCollapse pattern
+     * @param {event} Event object
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _DOMAttrModifiedHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-keyword">if</span> (event.originalEvent.attrName === <span class="hljs-string">'aria-expanded'</span> &amp;&amp;
+        event.originalEvent.newValue === <span class="hljs-string">'false'</span> &amp;&amp;
+        $(event.target).hasClass(<span class="hljs-keyword">this</span>.settings.openClass)) {
+        event.preventDefault()
+        event.stopPropagation()
+        _togglePanel.call(<span class="hljs-keyword">this</span>, event, <span class="hljs-literal">true</span>)
+      }
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_focusInHandler
+     * @desc Handle focusin event on mega menu item.
+     * @param {event} Event object
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _focusInHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      clearTimeout(<span class="hljs-keyword">this</span>.focusTimeoutID)
+      <span class="hljs-keyword">var</span> target = $(event.target),
+        panel = target.closest(<span class="hljs-string">'.'</span> + <span class="hljs-keyword">this</span>.settings.panelClass)
+      target
+        .addClass(<span class="hljs-keyword">this</span>.settings.focusClass)
+        .on(<span class="hljs-string">'click.accessible-megamenu'</span>, $.proxy(_clickHandler, <span class="hljs-keyword">this</span>))
+      <span class="hljs-keyword">this</span>.justFocused = !<span class="hljs-keyword">this</span>.mouseFocused
+      <span class="hljs-keyword">this</span>.mouseFocused = <span class="hljs-literal">false</span>
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.panels.not(panel).filter(<span class="hljs-string">'.'</span> + <span class="hljs-keyword">this</span>.settings.openClass).length) {
+        _togglePanel.call(<span class="hljs-keyword">this</span>, event)
+      }
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_focusOutHandler
+     * @desc Handle focusout event on mega menu item.
+     * @param {event} Event object
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _focusOutHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-keyword">this</span>.justFocused = <span class="hljs-literal">false</span>
+      <span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>,
+        target = $(event.target),
+        topli = target.closest(<span class="hljs-string">'.'</span> + <span class="hljs-keyword">this</span>.settings.topNavItemClass)
+
+      target
+      <span class="hljs-comment">// .removeClass(this.settings.focusClass)</span>
+        .off(<span class="hljs-string">'click.accessible-megamenu'</span>)
+
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>.cvox) {
+        <span class="hljs-comment">// If ChromeVox is running...</span>
+        that.focusTimeoutID = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-built_in">window</span>.cvox.Api.getCurrentNode(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">node</span>) </span>{
+            <span class="hljs-keyword">if</span> (topli.has(node).length) {
+              <span class="hljs-comment">// and the current node being voiced is in</span>
+              <span class="hljs-comment">// the mega menu, clearTimeout,</span>
+              <span class="hljs-comment">// so the panel stays open.</span>
+              clearTimeout(that.focusTimeoutID)
+            } <span class="hljs-keyword">else</span> {
+              that.focusTimeoutID = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">scope, _event, hide</span>) </span>{
+                _togglePanel.call(scope, _event, hide)
+              }, <span class="hljs-number">275</span>, that, event, <span class="hljs-literal">true</span>)
+            }
+          })
+        }, <span class="hljs-number">25</span>)
+      } <span class="hljs-keyword">else</span> {
+        that.focusTimeoutID = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+          _togglePanel.call(that, event, <span class="hljs-literal">true</span>)
+        }, <span class="hljs-number">300</span>)
+      }
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_keyDownHandler
+     * @desc Handle keydown event on mega menu.
+     * @param {event} Event object
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _keyDownHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-keyword">var</span> that = (<span class="hljs-keyword">this</span>.constructor === AccessibleMegaMenu) ? <span class="hljs-keyword">this</span> : _getPlugin(<span class="hljs-keyword">this</span>), <span class="hljs-comment">// determine the AccessibleMegaMenu plugin instance</span>
+        settings = that.settings,
+        target = $($(<span class="hljs-keyword">this</span>).is(<span class="hljs-string">'.'</span> + settings.hoverClass + <span class="hljs-string">':tabbable'</span>) ? <span class="hljs-keyword">this</span> : event.target), <span class="hljs-comment">// if the element is hovered the target is this, otherwise, its the focused element</span>
+        menu = that.menu,
+        topnavitems = that.topnavitems,
+        topli = target.closest(<span class="hljs-string">'.'</span> + settings.topNavItemClass),
+        tabbables = menu.find(<span class="hljs-string">':tabbable'</span>),
+        panel = target.hasClass(settings.panelClass) ? target : target.closest(<span class="hljs-string">'.'</span> + settings.panelClass),
+        panelGroups = panel.find(<span class="hljs-string">'.'</span> + settings.panelGroupClass),
+        currentPanelGroup = target.closest(<span class="hljs-string">'.'</span> + settings.panelGroupClass),
+        next,
+        keycode = event.keyCode || event.which,
+        start,
+        i,
+        o,
+        label,
+        found = <span class="hljs-literal">false</span>,
+        newString = Keyboard.keyMap[event.keyCode] || <span class="hljs-string">''</span>,
+        regex,
+        isTopNavItem = (topli.length === <span class="hljs-number">1</span> &amp;&amp; panel.length === <span class="hljs-number">0</span>)
+
+      <span class="hljs-keyword">if</span> (target.is(<span class="hljs-string">'input:focus, select:focus, textarea:focus, button:focus'</span>)) {
+        <span class="hljs-comment">// if the event target is a form element we should handle keydown normally</span>
+        <span class="hljs-keyword">return</span>
+      }
+
+      <span class="hljs-keyword">if</span> (target.is(<span class="hljs-string">'.'</span> + settings.hoverClass + <span class="hljs-string">':tabbable'</span>)) {
+        $(<span class="hljs-string">'html'</span>).off(<span class="hljs-string">'keydown.accessible-megamenu'</span>)
+      }
+
+      <span class="hljs-keyword">switch</span> (keycode) {
+        <span class="hljs-keyword">case</span> Keyboard.ESCAPE:
+          _togglePanel.call(that, event, <span class="hljs-literal">true</span>)
+          <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">case</span> Keyboard.DOWN:
+          event.preventDefault()
+          <span class="hljs-keyword">if</span> (isTopNavItem) {
+            _togglePanel.call(that, event)
+            found = (topli.find(<span class="hljs-string">'.'</span> + settings.panelClass + <span class="hljs-string">' :tabbable:first'</span>).focus().length === <span class="hljs-number">1</span>)
+          } <span class="hljs-keyword">else</span> {
+            found = (tabbables.filter(<span class="hljs-string">':gt('</span> + tabbables.index(target) + <span class="hljs-string">'):first'</span>).focus().length === <span class="hljs-number">1</span>)
+          }
+
+          <span class="hljs-keyword">if</span> (!found &amp;&amp; <span class="hljs-built_in">window</span>.opera &amp;&amp; opera.toString() === <span class="hljs-string">'[object Opera]'</span> &amp;&amp; (event.ctrlKey || event.metaKey)) {
+            tabbables = $(<span class="hljs-string">':tabbable'</span>)
+            i = tabbables.index(target)
+            found = ($(<span class="hljs-string">':tabbable:gt('</span> + $(<span class="hljs-string">':tabbable'</span>).index(target) + <span class="hljs-string">'):first'</span>).focus().length === <span class="hljs-number">1</span>)
+          }
+          <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">case</span> Keyboard.UP:
+          event.preventDefault()
+          <span class="hljs-keyword">if</span> (isTopNavItem &amp;&amp; target.hasClass(settings.openClass)) {
+            _togglePanel.call(that, event, <span class="hljs-literal">true</span>)
+            next = topnavitems.filter(<span class="hljs-string">':lt('</span> + topnavitems.index(topli) + <span class="hljs-string">'):last'</span>)
+            <span class="hljs-keyword">if</span> (next.children(<span class="hljs-string">'.'</span> + settings.panelClass).length) {
+              found = (next.children()
+                .attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'true'</span>)
+                .addClass(settings.openClass)
+                .filter(<span class="hljs-string">'.'</span> + settings.panelClass)
+                .attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'false'</span>)
+                .find(<span class="hljs-string">':tabbable:last'</span>)
+                .focus() === <span class="hljs-number">1</span>)
+            }
+          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!isTopNavItem) {
+            found = (tabbables.filter(<span class="hljs-string">':lt('</span> + tabbables.index(target) + <span class="hljs-string">'):last'</span>).focus().length === <span class="hljs-number">1</span>)
+          }
+
+          <span class="hljs-keyword">if</span> (!found &amp;&amp; <span class="hljs-built_in">window</span>.opera &amp;&amp; opera.toString() === <span class="hljs-string">'[object Opera]'</span> &amp;&amp; (event.ctrlKey || event.metaKey)) {
+            tabbables = $(<span class="hljs-string">':tabbable'</span>)
+            i = tabbables.index(target)
+            found = ($(<span class="hljs-string">':tabbable:lt('</span> + $(<span class="hljs-string">':tabbable'</span>).index(target) + <span class="hljs-string">'):first'</span>).focus().length === <span class="hljs-number">1</span>)
+          }
+          <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">case</span> Keyboard.RIGHT:
+          event.preventDefault()
+          <span class="hljs-keyword">if</span> (isTopNavItem) {
+            found = (topnavitems.filter(<span class="hljs-string">':gt('</span> + topnavitems.index(topli) + <span class="hljs-string">'):first'</span>).find(<span class="hljs-string">':tabbable:first'</span>).focus().length === <span class="hljs-number">1</span>)
+          } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">if</span> (panelGroups.length &amp;&amp; currentPanelGroup.length) {
+              <span class="hljs-comment">// if the current panel contains panel groups, and we are able to focus the first tabbable element of the next panel group</span>
+              found = (panelGroups.filter(<span class="hljs-string">':gt('</span> + panelGroups.index(currentPanelGroup) + <span class="hljs-string">'):first'</span>).find(<span class="hljs-string">':tabbable:first'</span>).focus().length === <span class="hljs-number">1</span>)
+            }
+
+            <span class="hljs-keyword">if</span> (!found) {
+              found = (topli.find(<span class="hljs-string">':tabbable:first'</span>).focus().length === <span class="hljs-number">1</span>)
+            }
+          }
+          <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">case</span> Keyboard.LEFT:
+          event.preventDefault()
+          <span class="hljs-keyword">if</span> (isTopNavItem) {
+            found = (topnavitems.filter(<span class="hljs-string">':lt('</span> + topnavitems.index(topli) + <span class="hljs-string">'):last'</span>).find(<span class="hljs-string">':tabbable:first'</span>).focus().length === <span class="hljs-number">1</span>)
+          } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">if</span> (panelGroups.length &amp;&amp; currentPanelGroup.length) {
+              <span class="hljs-comment">// if the current panel contains panel groups, and we are able to focus the first tabbable element of the previous panel group</span>
+              found = (panelGroups.filter(<span class="hljs-string">':lt('</span> + panelGroups.index(currentPanelGroup) + <span class="hljs-string">'):last'</span>).find(<span class="hljs-string">':tabbable:first'</span>).focus().length === <span class="hljs-number">1</span>)
+            }
+
+            <span class="hljs-keyword">if</span> (!found) {
+              found = (topli.find(<span class="hljs-string">':tabbable:first'</span>).focus().length === <span class="hljs-number">1</span>)
+            }
+          }
+          <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">case</span> Keyboard.TAB:
+          i = tabbables.index(target)
+          <span class="hljs-keyword">if</span> (event.shiftKey &amp;&amp; isTopNavItem &amp;&amp; target.hasClass(settings.openClass)) {
+            _togglePanel.call(that, event, <span class="hljs-literal">true</span>)
+            next = topnavitems.filter(<span class="hljs-string">':lt('</span> + topnavitems.index(topli) + <span class="hljs-string">'):last'</span>)
+            <span class="hljs-keyword">if</span> (next.children(<span class="hljs-string">'.'</span> + settings.panelClass).length) {
+              found = next.children()
+                .attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'true'</span>)
+                .addClass(settings.openClass)
+                .filter(<span class="hljs-string">'.'</span> + settings.panelClass)
+                .attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'false'</span>)
+                .find(<span class="hljs-string">':tabbable:last'</span>)
+                .focus()
+            }
+          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.shiftKey &amp;&amp; i &gt; <span class="hljs-number">0</span>) {
+            found = (tabbables.filter(<span class="hljs-string">':lt('</span> + i + <span class="hljs-string">'):last'</span>).focus().length === <span class="hljs-number">1</span>)
+          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!event.shiftKey &amp;&amp; i &lt; tabbables.length - <span class="hljs-number">1</span>) {
+            found = (tabbables.filter(<span class="hljs-string">':gt('</span> + i + <span class="hljs-string">'):first'</span>).focus().length === <span class="hljs-number">1</span>)
+          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>.opera &amp;&amp; opera.toString() === <span class="hljs-string">'[object Opera]'</span>) {
+            tabbables = $(<span class="hljs-string">':tabbable'</span>)
+            i = tabbables.index(target)
+            <span class="hljs-keyword">if</span> (event.shiftKey) {
+              found = ($(<span class="hljs-string">':tabbable:lt('</span> + $(<span class="hljs-string">':tabbable'</span>).index(target) + <span class="hljs-string">'):last'</span>).focus().length === <span class="hljs-number">1</span>)
+            } <span class="hljs-keyword">else</span> {
+              found = ($(<span class="hljs-string">':tabbable:gt('</span> + $(<span class="hljs-string">':tabbable'</span>).index(target) + <span class="hljs-string">'):first'</span>).focus().length === <span class="hljs-number">1</span>)
+            }
+          }
+
+          <span class="hljs-keyword">if</span> (found) {
+            event.preventDefault()
+          }
+          <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">case</span> Keyboard.SPACE:
+          <span class="hljs-keyword">if</span> (isTopNavItem) {
+            event.preventDefault()
+            _clickHandler.call(that, event)
+          } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span>
+          }
+          <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">case</span> Keyboard.ENTER:
+          <span class="hljs-keyword">return</span>
+          <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">default</span>:
+          <span class="hljs-comment">// alphanumeric filter</span>
+          clearTimeout(<span class="hljs-keyword">this</span>.keydownTimeoutID)
+
+          keydownSearchString += newString !== keydownSearchString ? newString : <span class="hljs-string">''</span>
+
+          <span class="hljs-keyword">if</span> (keydownSearchString.length === <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span>
+          }
+
+          <span class="hljs-keyword">this</span>.keydownTimeoutID = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            keydownSearchString = <span class="hljs-string">''</span>
+          }, keydownTimeoutDuration)
+
+          <span class="hljs-keyword">if</span> (isTopNavItem &amp;&amp; !target.hasClass(settings.openClass)) {
+            tabbables = tabbables.filter(<span class="hljs-string">':not(.'</span> + settings.panelClass + <span class="hljs-string">' :tabbable)'</span>)
+          } <span class="hljs-keyword">else</span> {
+            tabbables = topli.find(<span class="hljs-string">':tabbable'</span>)
+          }
+
+          <span class="hljs-keyword">if</span> (event.shiftKey) {
+            tabbables = $(tabbables.get()
+              .reverse())
+          }
+
+          <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; tabbables.length; i++) {
+            o = tabbables.eq(i)
+            <span class="hljs-keyword">if</span> (o.is(target)) {
+              start = (keydownSearchString.length === <span class="hljs-number">1</span>) ? i + <span class="hljs-number">1</span> : i
+              <span class="hljs-keyword">break</span>
+            }
+          }
+
+          regex = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'^'</span> + keydownSearchString.replace(<span class="hljs-regexp">/[\-\[\]{}()*+?.,\\\^$|#\s]/g</span>, <span class="hljs-string">'\\$&amp;'</span>), <span class="hljs-string">'i'</span>)
+
+          <span class="hljs-keyword">for</span> (i = start; i &lt; tabbables.length; i++) {
+            o = tabbables.eq(i)
+            label = $.trim(o.text())
+            <span class="hljs-keyword">if</span> (regex.test(label)) {
+              found = <span class="hljs-literal">true</span>
+              o.focus()
+              <span class="hljs-keyword">break</span>
+            }
+          }
+          <span class="hljs-keyword">if</span> (!found) {
+            <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; start; i++) {
+              o = tabbables.eq(i)
+              label = $.trim(o.text())
+              <span class="hljs-keyword">if</span> (regex.test(label)) {
+                o.focus()
+                <span class="hljs-keyword">break</span>
+              }
+            }
+          }
+          <span class="hljs-keyword">break</span>
+      }
+      that.justFocused = <span class="hljs-literal">false</span>
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_mouseDownHandler
+     * @desc Handle mousedown event on mega menu.
+     * @param {event} Event object
+     * @memberof accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _mouseDownHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-keyword">if</span> ($(event.target).is(<span class="hljs-keyword">this</span>.settings.panelClass) || $(event.target).closest(<span class="hljs-string">':focusable'</span>).length) {
+        <span class="hljs-keyword">this</span>.mouseFocused = <span class="hljs-literal">true</span>
+      }
+      <span class="hljs-keyword">this</span>.mouseTimeoutID = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        clearTimeout(<span class="hljs-keyword">this</span>.focusTimeoutID)
+      }, <span class="hljs-number">1</span>)
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_mouseOverHandler
+     * @desc Handle mouseover event on mega menu.
+     * @param {event} Event object
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _mouseOverHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      clearTimeout(<span class="hljs-keyword">this</span>.mouseTimeoutID)
+      $(event.target)
+        .addClass(<span class="hljs-keyword">this</span>.settings.hoverClass)
+      _togglePanel.call(<span class="hljs-keyword">this</span>, event)
+      <span class="hljs-keyword">if</span> ($(event.target).is(<span class="hljs-string">':tabbable'</span>)) {
+        $(<span class="hljs-string">'html'</span>).on(<span class="hljs-string">'keydown.accessible-megamenu'</span>, $.proxy(_keyDownHandler, event.target))
+      }
+    }
+
+    <span class="hljs-comment">/**
+     * @name jQuery.fn.accessibleMegaMenu~_mouseOutHandler
+     * @desc Handle mouseout event on mega menu.
+     * @param {event} Event object
+     * @memberof jQuery.fn.accessibleMegaMenu
+     * @inner
+     * @private
+     */</span>
+    _mouseOutHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>
+      $(event.target)
+        .removeClass(that.settings.hoverClass)
+
+      that.mouseTimeoutID = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        _togglePanel.call(that, event, <span class="hljs-literal">true</span>)
+      }, <span class="hljs-number">250</span>)
+      <span class="hljs-keyword">if</span> ($(event.target).is(<span class="hljs-string">':tabbable'</span>)) {
+        $(<span class="hljs-string">'html'</span>).off(<span class="hljs-string">'keydown.accessible-megamenu'</span>)
+      }
+    }
+
+    _toggleExpandedEventHandlers = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">hide</span>) </span>{
+      <span class="hljs-keyword">var</span> menu = <span class="hljs-keyword">this</span>.menu
+      <span class="hljs-keyword">if</span> (hide) {
+        $(<span class="hljs-string">'html'</span>).off(<span class="hljs-string">'mouseup.outside-accessible-megamenu, touchend.outside-accessible-megamenu, mspointerup.outside-accessible-megamenu,  pointerup.outside-accessible-megamenu'</span>)
+
+        menu.find(<span class="hljs-string">'[aria-expanded].'</span> + <span class="hljs-keyword">this</span>.settings.panelClass).off(<span class="hljs-string">'DOMAttrModified.accessible-megamenu'</span>)
+      } <span class="hljs-keyword">else</span> {
+        $(<span class="hljs-string">'html'</span>).on(<span class="hljs-string">'mouseup.outside-accessible-megamenu, touchend.outside-accessible-megamenu, mspointerup.outside-accessible-megamenu,  pointerup.outside-accessible-megamenu'</span>, $.proxy(_clickOutsideHandler, <span class="hljs-keyword">this</span>))
+
+        <span class="hljs-comment">/* Narrator in Windows 8 automatically toggles the aria-expanded property on double tap or click.
+           To respond to the change to collapse the panel, we must add a listener for a DOMAttrModified event. */</span>
+        menu.find(<span class="hljs-string">'[aria-expanded=true].'</span> + <span class="hljs-keyword">this</span>.settings.panelClass).on(<span class="hljs-string">'DOMAttrModified.accessible-megamenu'</span>, $.proxy(_DOMAttrModifiedHandler, <span class="hljs-keyword">this</span>))
+      }
+    }
+
+    <span class="hljs-comment">/* public attributes and methods ------------------------- */</span>
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-keyword">constructor</span>: AccessibleMegaMenu,
+
+      /**
+       * @lends jQuery.fn.accessibleMegaMenu
+       * @desc Initializes an instance of the accessibleMegaMenu plugins
+       * @memberof jQuery.fn.accessibleMegaMenu
+       * @instance
+       */
+      init: function() {
+        <span class="hljs-keyword">var</span> settings = <span class="hljs-keyword">this</span>.settings,
+          nav = $(<span class="hljs-keyword">this</span>.element),
+          menu = nav.children().first(),
+          <span class="hljs-comment">// Only filter to those items with the selector class</span>
+          topnavitems = <span class="hljs-keyword">this</span>.settings.topNavItems ?
+          menu.children(<span class="hljs-keyword">this</span>.settings.topNavItems) :
+          menu.children()
+        <span class="hljs-keyword">this</span>.start(settings, nav, menu, topnavitems)
+      },
+
+      start: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">settings, nav, menu, topnavitems</span>) </span>{
+        <span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>
+        <span class="hljs-keyword">this</span>.settings = settings
+        <span class="hljs-keyword">this</span>.menu = menu
+        <span class="hljs-keyword">this</span>.topnavitems = topnavitems
+
+        nav.attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'navigation'</span>)
+        menu.addClass(settings.menuClass)
+        topnavitems.each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">i, topnavitem</span>) </span>{
+          <span class="hljs-keyword">var</span> topnavitemlink, topnavitempanel
+          topnavitem = $(topnavitem)
+          topnavitem.addClass(settings.topNavItemClass)
+          topnavitemlink = topnavitem.find(<span class="hljs-string">':tabbable:first'</span>)
+          topnavitempanel = topnavitem.children(<span class="hljs-string">':not(:tabbable):last'</span>)
+          _addUniqueId.call(that, topnavitemlink)
+          <span class="hljs-keyword">if</span> (topnavitempanel.length) {
+            _addUniqueId.call(that, topnavitempanel)
+            topnavitemlink.attr({
+              <span class="hljs-string">'aria-haspopup'</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">'aria-controls'</span>: topnavitempanel.attr(<span class="hljs-string">'id'</span>),
+              <span class="hljs-string">'aria-expanded'</span>: <span class="hljs-literal">false</span>
+            })
+
+            topnavitempanel.attr({
+                <span class="hljs-string">'role'</span>: <span class="hljs-string">'group'</span>,
+                <span class="hljs-string">'aria-expanded'</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-string">'aria-hidden'</span>: <span class="hljs-literal">true</span>
+              })
+              .addClass(settings.panelClass)
+              .not(<span class="hljs-string">'[aria-labelledby]'</span>)
+              .attr(<span class="hljs-string">'aria-labelledby'</span>, topnavitemlink.attr(<span class="hljs-string">'id'</span>))
+          }
+        })
+
+        <span class="hljs-keyword">this</span>.panels = menu.find(<span class="hljs-string">'.'</span> + settings.panelClass)
+
+        menu.on(<span class="hljs-string">'focusin.accessible-megamenu'</span>, <span class="hljs-string">':focusable, .'</span> + settings.panelClass, $.proxy(_focusInHandler, <span class="hljs-keyword">this</span>))
+          .on(<span class="hljs-string">'focusout.accessible-megamenu'</span>, <span class="hljs-string">':focusable, .'</span> + settings.panelClass, $.proxy(_focusOutHandler, <span class="hljs-keyword">this</span>))
+          .on(<span class="hljs-string">'keydown.accessible-megamenu'</span>, $.proxy(_keyDownHandler, <span class="hljs-keyword">this</span>))
+          .on(<span class="hljs-string">'mousedown.accessible-megamenu'</span>, $.proxy(_mouseDownHandler, <span class="hljs-keyword">this</span>))
+
+        <span class="hljs-keyword">if</span> (!settings.openOnClick) {
+          menu.on(<span class="hljs-string">'mouseover.accessible-megamenu'</span>, $.proxy(_mouseOverHandler, <span class="hljs-keyword">this</span>))
+            .on(<span class="hljs-string">'mouseout.accessible-megamenu'</span>, $.proxy(_mouseOutHandler, <span class="hljs-keyword">this</span>))
+        }
+        <span class="hljs-keyword">else</span> {
+          menu.on(<span class="hljs-string">'click.accessible-megamenu'</span>, $.proxy(_mouseOverHandler, <span class="hljs-keyword">this</span>))
+        }
+
+        <span class="hljs-keyword">if</span> (isTouch) {
+          menu.on(<span class="hljs-string">'touchstart.accessible-megamenu'</span>, $.proxy(_clickHandler, <span class="hljs-keyword">this</span>))
+        }
+
+        menu.find(<span class="hljs-string">'hr'</span>).attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'separator'</span>)
+
+        <span class="hljs-keyword">if</span> ($(<span class="hljs-built_in">document</span>.activeElement).closest(menu).length) {
+          $(<span class="hljs-built_in">document</span>.activeElement).trigger(<span class="hljs-string">'focusin.accessible-megamenu'</span>)
+        }
+      },
+
+      <span class="hljs-comment">/**
+       * @desc Get default values
+       * @example $(selector).accessibleMegaMenu('getDefaults')
+       * @return {object}
+       * @memberof jQuery.fn.accessibleMegaMenu
+       * @instance
+       */</span>
+      getDefaults: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._defaults
+      },
+
+      <span class="hljs-comment">/**
+       * @desc Get any option set to plugin using its name (as string)
+       * @example $(selector).accessibleMegaMenu('getOption', some_option)
+       * @param {string} opt
+       * @return {string}
+       * @memberof jQuery.fn.accessibleMegaMenu
+       * @instance
+       */</span>
+      getOption: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">opt</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.settings[opt]
+      },
+
+      <span class="hljs-comment">/**
+       * @desc Get all options
+       * @example $(selector).accessibleMegaMenu('getAllOptions')
+       * @return {object}
+       * @memberof jQuery.fn.accessibleMegaMenu
+       * @instance
+       */</span>
+      getAllOptions: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.settings
+      },
+
+      <span class="hljs-comment">/**
+       * @desc Set option
+       * @example $(selector).accessibleMegaMenu('setOption', 'option_name',  'option_value',  reinitialize)
+       * @param {string} opt - Option name
+       * @param {string} val - Option value
+       * @param {boolean} [reinitialize] - boolean to re-initialize the menu.
+       * @memberof jQuery.fn.accessibleMegaMenu
+       * @instance
+       */</span>
+      setOption: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">opt, value, reinitialize</span>) </span>{
+        <span class="hljs-keyword">this</span>.settings[opt] = value
+        <span class="hljs-keyword">if</span> (reinitialize) {
+          <span class="hljs-keyword">this</span>.init()
+        }
+      }
+    }
+  }())
+
+  <span class="hljs-comment">/*
+   * @param {object} [options] Mega Menu options
+   * @param {string} [options.uuidPrefix=accessible-megamenu] - Prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby
+   * @param {string} [options.menuClass=accessible-megamenu] - CSS class used to define the megamenu styling
+   * @param {string} [options.topNavItemClass=accessible-megamenu-top-nav-item] - CSS class for a top-level navigation item in the megamenu
+   * @param {string} [options.panelClass=accessible-megamenu-panel] - CSS class for a megamenu panel
+   * @param {string} [options.panelGroupClass=accessible-megamenu-panel-group] - CSS class for a group of items within a megamenu panel
+   * @param {string} [options.hoverClass=hover] - CSS class for the hover state
+   * @param {string} [options.focusClass=focus] - CSS class for the focus state
+   * @param {string} [options.openClass=open] - CSS class for the open state
+   */</span>
+  $.fn[pluginName] = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">if</span> (!$.data(<span class="hljs-keyword">this</span>, <span class="hljs-string">'plugin_'</span> + pluginName)) {
+        $.data(<span class="hljs-keyword">this</span>, <span class="hljs-string">'plugin_'</span> + pluginName, <span class="hljs-keyword">new</span> $.fn[pluginName].AccessibleMegaMenu(<span class="hljs-keyword">this</span>, options))
+      }
+    })
+  }
+
+  $.fn[pluginName].AccessibleMegaMenu = AccessibleMegaMenu
+
+  <span class="hljs-comment">/* :focusable and :tabbable selectors from
+     https://raw.github.com/jquery/jquery-ui/master/ui/jquery.ui.core.js */</span>
+
+  <span class="hljs-comment">/**
+   * @private
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">visible</span>(<span class="hljs-params">element</span>) </span>{
+    <span class="hljs-keyword">return</span> $.expr.filters.visible(element) &amp;&amp; !$(element).parents().addBack().filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> $.css(<span class="hljs-keyword">this</span>, <span class="hljs-string">'visibility'</span>) === <span class="hljs-string">'hidden'</span>
+    }).length
+  }
+
+  <span class="hljs-comment">/**
+   * @private
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">focusable</span>(<span class="hljs-params">element, isTabIndexNotNaN</span>) </span>{
+    <span class="hljs-keyword">var</span> map, mapName, img,
+      nodeName = element.nodeName.toLowerCase()
+    <span class="hljs-keyword">if</span> (<span class="hljs-string">'area'</span> === nodeName) {
+      map = element.parentNode
+      mapName = map.name
+      <span class="hljs-keyword">if</span> (!element.href || !mapName || map.nodeName.toLowerCase() !== <span class="hljs-string">'map'</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+      }
+      img = $(<span class="hljs-string">'img[usemap=#'</span> + mapName + <span class="hljs-string">']'</span>)[<span class="hljs-number">0</span>]
+      <span class="hljs-keyword">return</span> !!img &amp;&amp; visible(img)
+    }
+    <span class="hljs-keyword">return</span> (<span class="hljs-regexp">/input|select|textarea|button|object/</span>.test(nodeName) ? !element.disabled :
+        <span class="hljs-string">'a'</span> === nodeName ?
+        element.href || isTabIndexNotNaN :
+        isTabIndexNotNaN) &amp;&amp;
+      <span class="hljs-comment">// the element and all of its ancestors must be visible</span>
+      visible(element)
+  }
+
+  $.extend($.expr[<span class="hljs-string">':'</span>], {
+    data: $.expr.createPseudo ? $.expr.createPseudo(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">dataName</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">elem</span>) </span>{
+          <span class="hljs-keyword">return</span> !!$.data(elem, dataName)
+        }
+      }) : <span class="hljs-comment">// support: jQuery &lt;1.8</span>
+      <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">elem, i, match</span>) </span>{
+        <span class="hljs-keyword">return</span> !!$.data(elem, match[<span class="hljs-number">3</span>])
+      },
+
+    focusable: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element</span>) </span>{
+      <span class="hljs-keyword">return</span> focusable(element, !<span class="hljs-built_in">isNaN</span>($.attr(element, <span class="hljs-string">'tabindex'</span>)))
+    },
+
+    tabbable: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element</span>) </span>{
+      <span class="hljs-keyword">var</span> tabIndex = $.attr(element, <span class="hljs-string">'tabindex'</span>),
+        isTabIndexNaN = <span class="hljs-built_in">isNaN</span>(tabIndex)
+      <span class="hljs-keyword">return</span> (isTabIndexNaN || tabIndex &gt;= <span class="hljs-number">0</span>) &amp;&amp; focusable(element, !isTabIndexNaN)
+    }
+  })
+}(jQuery, <span class="hljs-built_in">window</span>, <span class="hljs-built_in">document</span>))
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/megamenu/megamenu.js"><span>/components/raw/megamenu/megamenu.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/modules/megamenu/megamenu.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">32.2 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@megamenu</span>
+        </li>
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/megamenu.html"><svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+ <span>With layout</span></a><br></li>
+                    <li><a data-no-pjax href="../render/megamenu.html"><svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+ <span>Component only</span></a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/modules/megamenu/megamenu.tmpl</span>
+        </li>
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="header.html">@<span>header</span></a>, 
+            
+                <a href="header--clone-menu.html">@<span>header--clone-menu</span></a>
+            
+            </span>
+        </li>
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-8e0eb5d50e02cf4a8e6f92aac4daa22c-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">Components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-components">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Components</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-alert">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Alert</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alert--error.html" data-pjax>
+                <span>Error</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alert--warning.html" data-pjax>
+                <span>Warning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alert--success.html" data-pjax>
+                <span>Success</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alert--info.html" data-pjax>
+                <span>Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-button">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Button</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--info.html" data-pjax>
+                <span>Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--danger.html" data-pjax>
+                <span>Danger</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-callout">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Callout</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="callout--must.html" data-pjax>
+                <span>Must</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="callout--should.html" data-pjax>
+                <span>Should</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="callout--could.html" data-pjax>
+                <span>Could</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="callout--example.html" data-pjax>
+                <span>Example</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-form">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Form</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="form--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="form--search.html" data-pjax>
+                <span>Search</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-grid">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Grid</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="grid--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="grid--responsive.html" data-pjax>
+                <span>Responsive</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="grid--responsive-alt.html" data-pjax>
+                <span>Responsive Alt</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-heading">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Heading</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--h1.html" data-pjax>
+                <span>H 1</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--h2.html" data-pjax>
+                <span>H 2</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--h3.html" data-pjax>
+                <span>H 3</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--h4.html" data-pjax>
+                <span>H 4</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--h5.html" data-pjax>
+                <span>H 5</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--h6.html" data-pjax>
+                <span>H 6</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-table">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Table</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--compact.html" data-pjax>
+                <span>Compact</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--complex.html" data-pjax>
+                <span>Complex</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--flip.html" data-pjax>
+                <span>Flip</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--flippable.html" data-pjax>
+                <span>Flippable</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--responsive.html" data-pjax>
+                <span>Responsive</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-modules">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Modules</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion.html" data-pjax>
+                <span>Accordion</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="breadcrumb.html" data-pjax>
+                <span>Breadcrumb</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="bullets.html" data-pjax>
+                <span>Bullets</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-card">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Card</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--shadow.html" data-pjax>
+                <span>Shadow</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--round.html" data-pjax>
+                <span>Round</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--all.html" data-pjax>
+                <span>All</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--gallery.html" data-pjax>
+                <span>Gallery</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="carousel.html" data-pjax>
+                <span>Carousel</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="cookiebar.html" data-pjax>
+                <span>Cookiebar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="dialog.html" data-pjax>
+                <span>Dialog</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-entrypoint">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Entrypoint</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="entrypoint--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="entrypoint--responsive.html" data-pjax>
+                <span>Responsive</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="footer.html" data-pjax>
+                <span>Footer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-header">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Header</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="header--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="header--clone-menu.html" data-pjax>
+                <span>Clone Menu</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-linklist">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Linklist</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="linklist--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="linklist--padded.html" data-pjax>
+                <span>Padded</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Megamenu</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="navscroll.html" data-pjax>
+                <span>Navscroll</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="offcanvas.html" data-pjax>
+                <span>Offcanvas</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="prose.html" data-pjax>
+                <span>Prose</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scrolltop.html" data-pjax>
+                <span>Scrolltop</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="share.html" data-pjax>
+                <span>Share</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skiplinks.html" data-pjax>
+                <span>Skiplinks</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tooltip.html" data-pjax>
+                <span>Tooltip</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="treeview.html" data-pjax>
+                <span>Treeview</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="utilities.html" data-pjax>
+                <span>Utilities</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-formtpl">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Formtpl</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="formtpl--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="formtpl--errors.html" data-pjax>
+                <span>Errors</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="formtpl--filters.html" data-pjax>
+                <span>Filters</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-layout">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Layout</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="layout--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="layout--alt.html" data-pjax>
+                <span>Alt</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="layout--gallery.html" data-pjax>
+                <span>Gallery</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="layout--grid.html" data-pjax>
+                <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="layout--landing.html" data-pjax>
+                <span>Landing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="layout--masonry.html" data-pjax>
+                <span>Masonry</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="layout--twitter.html" data-pjax>
+                <span>Twitter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="news.html" data-pjax>
+                <span>News</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-pages">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Pages</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-page">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Page</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page--megamenu.html" data-pjax>
+                <span>Megamenu</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page--menu.html" data-pjax>
+                <span>Menu</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page--section.html" data-pjax>
+                <span>Section</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="page--simple.html" data-pjax>
+                <span>Simple</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="section.html" data-pjax>
+                <span>Section</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-tile">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Tile</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tile--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tile--gallery.html" data-pjax>
+                <span>Gallery</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tile--twitter.html" data-pjax>
+                <span>Twitter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-utils">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Utils</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-colors">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Colors</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="palette.html" data-pjax>
+                <span>Palette</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+
+
+    
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.4"></script>
+
+
+
+</body>
+</html>

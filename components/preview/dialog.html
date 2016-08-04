@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
+<!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="it">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
+      <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
+    o dal repository locale (src/fonts)
+  -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: {
+        families: ['Titillium+Web:400,700,400italic:latin']
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- include html5shim per Explorer 8 -->
+  <script src="/build/vendor/modernizr.js"></script>
+
+  <link media="screen" rel="stylesheet" href="/build/vendor.css">
+  <link media="screen" rel="stylesheet" href="/build/build.css">
+
+  <title>Preview Layout</title>
+</head>
+
+<body class="Pac">
+
+  
+<button class="Button Button--default js-fr-dialogmodal-open" aria-controls="modal">
+  Apri
+</button>
+
+<div class="Dialog js-fr-dialogmodal" id="modal">
+  <div class="
+      Dialog-content
+      Dialog-content--centered
+      u-background-white
+      u-layout-prose
+      u-margin-all-xl
+      u-padding-all-xl
+      js-fr-dialogmodal-modal
+    "
+    aria-labelledby="modal-title">
+    <div role="document" class="Prose">
+      <button class="Button Button--danger js-fr-dialogmodal-close u-floatRight">Chiudi</button>
+      <h2 class="u-cf u-text-h2" id="modal-title">Quis incididunt irure nostrud officia anim occaecat occaecat consectetur qui in nisi tempor enim consectetur et.</h2>
+      <p>
+        Qui quis dolore nisi incididunt enim nostrud magna ipsum anim fugiat proident mollit consequat. Sunt voluptate proident laborum excepteur excepteur reprehenderit enim velit ipsum. Consequat labore amet aliqua ex ullamco magna esse ex eiusmod veniam. Do tempor id deserunt non culpa commodo excepteur minim non incididunt est aute et. Ea esse cupidatat fugiat id nulla ex incididunt Lorem mollit non cillum ea eiusmod. Laborum ullamco irure deserunt reprehenderit enim occaecat culpa exercitation cillum cillum fugiat id ut quis do cupidatat nisi. Excepteur deserunt voluptate mollit incididunt fugiat reprehenderit mollit non consequat fugiat non laboris nulla.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/build/vendor/jquery.min.js"></script>
+
+  <!--[if IE 8]>
+  <script src="/build/vendor/respond.min.js"></script>
+  <script src="/build/vendor/rem.min.js"></script>
+  <script src="/build/vendor/selectivizr.js"></script>
+  <script src="/build/vendor/slice.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <script src="/build/vendor/polyfill.min.js"></script>
+  <![endif]-->
+
+  <!-- In produzione utilizzare <script src="/build/IWT.min.js"></script> -->
+  <script src="/build/IWT.js"></script>
+
+</body>
+</html>
+

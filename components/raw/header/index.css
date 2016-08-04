@@ -1,0 +1,451 @@
+/* @define Header; weak */
+
+:root {
+  --Header-logo-width: 10rem;
+  --Header-smaller-pad: 1rem;
+  --Header-search-icon-size: 4.8rem;
+}
+
+.Header {
+  @extend .u-layout-centerContent;
+}
+
+.Header a:focus {
+  background: transparent;
+}
+
+.Header-banner {
+  @extend .u-background-95;
+  @extend .u-posRelative;
+  @extend .u-color-60;
+  @extend .u-border-bottom-xxs;
+  @extend .u-padding-top-xs;
+  @extend .u-padding-bottom-xs;
+
+  /**
+   * 1. Must be the same as Header-title
+   */
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-padding-left-s; /* 1 */
+    @extend .u-padding-top-s;
+    @extend .u-padding-bottom-s;
+  }
+
+}
+
+/*
+ *	1. Fixed for every theme.
+ */
+.Header-serviceLink {
+  @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
+  @extend .u-flexJustifyCenter;
+  @extend .u-padding-left-xl;
+  @extend .u-padding-right-xl;
+  @extend .u-posAbsolute;
+  background: #06c; /* 1 */
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.Header-serviceLink a {
+  @extend .u-color-white;
+  @extend .u-text-r-xxs;
+  @extend .u-textWeight-700;
+  @extend .u-textClean;
+  text-transform: uppercase;
+}
+
+.Header-serviceLink span {
+  @extend .u-hidden;
+  @extend .u-md-inline;
+  @extend .u-lg-inline;
+}
+
+.Header-owner {
+  @extend .u-padding-left-s;
+
+  white-space: nowrap;
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  @media (--lg-viewport) {
+    @extend .u-padding-left-l;
+  }
+}
+
+.Header-owner a {
+  @extend .u-sm-before2of12;
+  @extend .u-md-before2of12;
+  @extend .u-lg-before1of8;
+  @extend .u-text-xxs;
+  @extend .u-text-sm-xs;
+  @extend .u-text-md-s;
+  @extend .u-text-lg-s;
+  @extend .u-textWeight-700;
+  @extend .u-color-white;
+  @extend .u-textClean;
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    padding-left: var(--Header-logo-width);
+  }
+}
+
+/* ========================================== */
+
+.Header-navbar {
+  @extend .u-background-50;
+
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-padding-right-xs;
+  @extend .u-padding-left-xs;
+
+  @media (--sm-viewport) {
+    @extend .u-padding-top-s;
+    @extend .u-padding-bottom-s;
+    @extend .u-padding-right-xs;
+  }
+
+  @media (--md-viewport) {
+    @extend .u-padding-top-m;
+    @extend .u-padding-bottom-m;
+    @extend .u-padding-right-l;
+  }
+
+  @media (--lg-viewport) {
+    @extend .u-padding-top-m;
+    @extend .u-padding-bottom-m;
+    @extend .u-padding-right-xxl;
+  }
+}
+
+/*
+ *	1. Align content to header for wide screen
+ */
+.Header-toggle {
+  @extend .u-block;
+  @extend .u-size2of12;
+  @extend .u-lg-size1of8; /* 1 */
+  @extend .u-padding-left-xs;
+
+  @extend .u-color-white;
+  @extend .u-text-r-xxs;
+  @extend .u-textWeight-700;
+  @extend .u-textClean;
+
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase;
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-padding-left-xxl;
+  }
+  @media (--lg-viewport) {
+    @extend .u-margin-left-l;
+  }
+}
+
+.Header-toggleText {
+  @extend .u-hidden;
+  @extend .u-sm-block;
+  @extend .u-md-block;
+  @extend .u-lg-block;
+  margin-bottom: -calc(1rem + var(--Hamburger-height));
+  margin-top: calc(1rem + var(--Hamburger-height));
+}
+
+.Header-logo {
+  @extend .u-floatLeft;
+  min-width: calc(var(--Header-logo-width) * 0.6);
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    min-width: var(--Header-logo-width);
+  }
+}
+
+.Header-logo img {
+  width: 4.5rem;
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    width: 7.5rem;
+  }
+}
+
+.Header-title {
+  @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
+
+  @extend .u-lineHeight-xxs;
+
+  @extend .u-padding-left-xs;
+  @extend .u-padding-right-xxs;
+
+  @extend .u-size10of12;
+  @extend .u-sm-size6of12;
+  @extend .u-md-size6of12;
+  @extend .u-lg-size6of12;
+
+  @media (--md-viewport), (--lg-viewport) {
+    @extend .u-lineHeight-m;
+  }
+}
+
+/*
+ * 	1. Make room for searchTrigger
+ */
+.Header-titleLink {
+  @extend .u-size10of12; /* 1 */
+  @extend .u-sm-sizeFull;
+  @extend .u-md-sizeFull;
+  @extend .u-lg-sizeFull;
+}
+
+.Header-titleLink a {
+  @extend .u-text-xs;
+  @extend .u-text-sm-m;
+  @extend .u-text-md-l;
+  @extend .u-text-lg-l;
+  @extend .u-lineHeight-m;
+  @extend .u-textWeight-700;
+  @extend .u-color-white;
+  @extend .u-textClean;
+}
+
+.Header-titleLink small {
+  @extend .u-text-xxs;
+  @extend .u-text-sm-xs;
+  @extend .u-text-md-m;
+  @extend .u-text-lg-m;
+  @extend .u-textWeight-400;
+  @extend .u-color-white;
+  @extend .u-textClean;
+}
+
+/* ========================================== */
+
+.Header-searchTrigger {
+  @extend .u-sm-hidden;
+  @extend .u-md-hidden;
+  @extend .u-lg-hidden;
+  @extend .u-sizeFill;
+  @extend .u-padding-left-xxs;
+  @extend .u-padding-bottom-xs;
+  @extend .u-padding-top-xs;
+}
+
+.Header-searchTrigger a {
+  @extend .u-floatRight;
+  @extend .u-linkClean;
+  @extend .u-background-40;
+  @extend .u-color-white;
+  @extend .u-padding-all-s;
+  @extend .u-text-r-xxs;
+}
+
+.Header-searchTrigger a span {
+  @extend .u-hiddenVisually;
+}
+
+/* ========================================== */
+
+.Header-utils {
+  @extend .u-block;
+  @extend .u-margin-top-xxs;
+  @extend .u-textRight;
+
+  @extend .u-sizeFull;
+  @extend .u-sm-size4of12;
+  @extend .u-md-size4of12;
+  @extend .u-lg-size4of12;
+
+  @extend .u-background-40;
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-background-50;
+  }
+
+  @media (--sm-viewport) {
+    @extend .u-padding-right-s;
+    @extend .u-margin-top-xs;
+    @extend .u-margin-bottom-xs;
+  }
+
+  @media (--md-viewport) {
+    @extend .u-padding-right-m;
+  }
+
+  @media (--lg-viewport) {
+    @extend .u-padding-right-xxl;
+  }
+}
+
+.Header-utils > *,
+.Header-search button {
+  @extend .u-hidden;
+  @extend .u-sm-block;
+  @extend .u-md-block;
+  @extend .u-lg-block;
+}
+
+.Header-search input {
+  @extend .u-sizeFill;
+}
+
+.Header-search {
+  @extend .u-padding-all-xxs;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-margin-bottom-m;
+    @extend .u-padding-left-m;
+    @extend .u-floatRight;
+    max-width: 24em;
+    padding-right: 0 !important;
+  }
+}
+
+.Header-utils:target > .Header-search {
+  @extend .u-sizeFull;
+}
+
+/* ========================================== */
+
+.Header-utils > div {
+  @extend .u-floatRight;
+  @extend .u-cf;
+  width: 100%;
+}
+
+.Header-language {
+  @extend .u-color-white;
+  @extend .u-text-r-xs;
+  @extend .u-textWeight-700;
+  @extend .u-padding-left-s;
+  @extend .u-padding-right-s;
+  @extend .u-textClean;
+  @extend .u-margin-left-xs;
+  border: 2px solid white;
+  opacity: 0.5;
+}
+
+.Header-language.is-active {
+  opacity: 1;
+}
+
+.Header-social {
+  @extend .u-text-r-xs;
+  @extend .u-color-white;
+  @extend .u-margin-left-s;
+  @extend .u-margin-bottom-m;
+}
+
+.Header-social > * {
+  @extend .u-hidden;
+  @extend .u-md-inlineBlock;
+  @extend .u-lg-inlineBlock;
+}
+
+.Header-socialIcons {
+  @extend .u-padding-left-xxs;
+  @extend .u-text-r-xs;
+}
+
+.Header-socialIcons > li {
+  @extend .u-inlineBlock;
+}
+
+.Header-socialIcons [class^="icon-"],
+.Header-socialIcons [class*=" icon-"] {
+  @extend .u-inlineBlock;
+  @extend .u-background-white;
+  @extend .u-color-50;
+  @extend .u-padding-all-xs;
+  @extend .u-borderRadius-circle;
+  @extend .u-margin-left-xs;
+}
+
+/*
+ * Headroom.js for sticky header
+ * =============================
+ */
+.Headroom {
+  max-height: 100em;
+  width: 100%;
+}
+
+.Headroom--fixed,
+.Headroom--pinned {
+  transform: translateY(0%);
+}
+
+/*
+ *	1. Allow transition on element heights
+ */
+.Headroom-hideme {
+  max-height: 5em; /* 1 */
+  transition: all 250ms ease;
+  will-change: all;
+}
+
+.Headroom--fixed.Headroom--not-top .Headroom-hideme,
+.Headroom--pinned.Headroom--not-top .Headroom-hideme {
+  margin: 0 !important;
+  max-height: 0;
+  overflow-y: hidden;
+  padding: 0 !important;
+}
+
+.Headroom--fixed,
+.Headroom--pinned.Headroom--not-top {
+  @extend .u-zindex-40;
+  position: fixed;
+  top: 0;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-titleLink,
+.Headroom--pinned.Headroom--not-top .Header-titleLink {
+  @extend .u-flexAlignSelfCenter;
+  @extend .u-flex;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-titleLink a,
+.Headroom--pinned.Headroom--not-top .Header-titleLink a {
+  @extend .u-text-xxs;
+  @extend .u-text-sm-xs;
+  @extend .u-text-md-s;
+  @extend .u-text-lg-m;
+  @extend .u-textWeight-400;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-toggleText,
+.Headroom--fixed.Headroom--not-top .Header-titleLink small,
+.Headroom--pinned.Headroom--not-top .Header-titleLink small {
+  @extend .u-hidden;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-navbar,
+.Headroom--pinned.Headroom--not-top .Header-navbar {
+  @extend .u-padding-top-none;
+  @extend .u-padding-bottom-none;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-padding-top-xxs;
+    @extend .u-padding-bottom-xxs;
+  }
+}
+
+.Headroom--fixed.Headroom--not-top .Header-logo img,
+.Headroom--pinned.Headroom--not-top .Header-logo img {
+  max-width: 3em;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-search,
+.Headroom--pinned.Headroom--not-top .Header-search {
+  @extend .u-margin-bottom-xxs;
+  @extend .u-padding-bottom-xxs;
+}
+
+.Headroom--unpinned {
+  /* transform: translateY(-100%); */
+}
