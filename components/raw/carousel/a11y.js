@@ -116,10 +116,11 @@
    * Assign attributes to the root element.
    */
   Owl2A11y.prototype.setupRoot = function() {
-    this.$element.attr({
-      role: 'listbox',
-      tabindex: '0'
-    })
+    // @FIXME
+    // this.$element.attr({
+    //   role: 'listbox',
+    //   tabindex: '0'
+    // })
   }
 
   /**

@@ -1,0 +1,17 @@
+/** @define utilities; */
+
+.u-borderShadow-xxs {
+  box-shadow: 0 1px 2px 0 rgba(50, 50, 50, 0.35) !important;
+}
+
+.u-borderShadow-xs {
+  box-shadow: 1px 1px 2px #aaa !important;
+}
+
+.u-borderShadow-m {
+  box-shadow: 0 8px 24px 0 rgba(50, 50, 50, 0.3) !important;
+}
+
+.u-borderShadow-xxl {
+  box-shadow: 1px 1px 80px 1px rgba(0, 0, 0, 0.35) !important;
+}

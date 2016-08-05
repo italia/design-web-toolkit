@@ -87,7 +87,6 @@
   @extend .u-text-sm-xs;
   @extend .u-text-md-s;
   @extend .u-text-lg-s;
-  @extend .u-textWeight-700;
   @extend .u-color-white;
   @extend .u-textClean;
 
@@ -333,11 +332,11 @@
   @extend .u-margin-left-xs;
 
   border: 2px solid white;
-  opacity: 0.5;
 }
 
 .Header-language.is-active {
-  opacity: 1;
+  @extend .u-background-white;
+  @extend .u-color-50;
 }
 
 .Header-social {

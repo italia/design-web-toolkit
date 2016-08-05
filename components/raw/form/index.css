@@ -118,7 +118,6 @@ option:hover {
   @extend .u-layoutCenterVertically;
 
   left: 1em;
-  opacity: 0.5;
 }
 
 .Form-field--withPlaceholder :focus + .Form-label,
