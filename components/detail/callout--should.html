@@ -128,7 +128,8 @@
 
   &lt;div class=&quot;Callout Callout--should u-text-r-xs&quot;&gt;
   &lt;mark class=&quot;u-text-r-l&quot;&gt;should&lt;/mark&gt;
-  &lt;p class=&quot;Prose&quot;&gt;Et labore ad do ut quis nostrud consectetur cillum dolor Lorem in tempor adipisicing.Dolor dolore consectetur eiusmod qui adipisicing dolore velit et ut esse adipisicing aliqua. Consequat do ipsum officia proident ut cillum esse ipsum do sint do qui ipsum nisi qui aliquip cupidatat. Culpa ut excepteur duis enim ullamco cupidatat nisi anim officia anim consectetur incididunt esse do. Ullamco nulla voluptate laboris reprehenderit ut qui consectetur nostrud consequat magna sint laboris laborum esse id reprehenderit sint.&lt;/p&gt;
+  &lt;p class=&quot;u-layout-prose u-color-grey-90 u-text-p u-padding-r-all&quot;&gt;Nisi voluptatum unde molestiae qui voluptatibus velit dolor sequi. Voluptatem quisquam ducimus cum facere ipsam magni omnis qui voluptas. Et repudiandae repudiandae asperiores adipisci. Quibusdam tempora nam iure cum inventore. Accusantium dolorem ipsam quibusdam sit sunt odit est magni.&lt;/p&gt;
+
 &lt;/div&gt;
 
 
@@ -287,9 +288,9 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Callout Callout--should u-text-r-xs"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-l"</span>&gt;</span>should<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Prose"</span>&gt;</span>Et labore ad do ut quis nostrud consectetur cillum dolor Lorem in tempor adipisicing.Dolor dolore consectetur eiusmod qui adipisicing dolore velit et ut esse adipisicing aliqua. Consequat do ipsum officia proident ut cillum esse ipsum do sint do qui
-        ipsum nisi qui aliquip cupidatat. Culpa ut excepteur duis enim ullamco cupidatat nisi anim officia anim consectetur incididunt esse do. Ullamco nulla voluptate laboris reprehenderit ut qui consectetur nostrud consequat magna sint laboris laborum
-        esse id reprehenderit sint.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Nisi voluptatum unde molestiae qui voluptatibus velit dolor sequi. Voluptatem quisquam ducimus cum facere ipsam magni omnis qui voluptas. Et repudiandae repudiandae asperiores adipisci. Quibusdam tempora nam iure cum inventore. Accusantium dolorem
+        ipsam quibusdam sit sunt odit est magni.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -298,11 +299,11 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-35d6cfc65efb042111d84bf5e1bc5903-panel-view">
     <code class="Code Code--lang-">
-        <pre>&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"Callout Callout--{{ modifier }} u-text-r-xs"</span>&gt;
-  &lt;<span class="hljs-keyword">mark</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"u-text-r-l"</span>&gt;{{ modifier }}&lt;/<span class="hljs-keyword">mark</span>&gt;
-  &lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"Prose"</span>&gt;Et labore ad <span class="hljs-keyword">do</span> ut quis nostrud consectetur cillum dolor Lorem <span class="hljs-keyword">in</span> tempor adipisicing.Dolor dolore consectetur eiusmod <span class="hljs-keyword">qui</span> adipisicing dolore velit et ut esse adipisicing aliqua. Consequat <span class="hljs-keyword">do</span> ipsum officia proident ut cillum esse ipsum <span class="hljs-keyword">do</span> sint <span class="hljs-keyword">do</span> <span class="hljs-keyword">qui</span> ipsum nisi <span class="hljs-keyword">qui</span> aliquip cupidatat. Culpa ut excepteur duis enim ullamco cupidatat nisi anim officia anim consectetur incididunt esse <span class="hljs-keyword">do</span>. Ullamco nulla voluptate laboris reprehenderit ut <span class="hljs-keyword">qui</span> consectetur nostrud consequat magna sint laboris laborum esse id reprehenderit sint.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Callout Callout--</span></span></span><span class="hljs-template-variable">{{ modifier }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> u-text-r-xs"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-l"</span>&gt;</span></span><span class="hljs-template-variable">{{ modifier }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name">render</span> '<a href="prose--paragraph.html">@prose--paragraph</a>' %}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></pre>
     </code>
 </div>
 
@@ -477,6 +478,15 @@
             <strong class="Meta-key">Filesystem Path:</strong>
             <span class="Meta-value">src/components/callout/callout.tmpl</span>
         </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="prose--paragraph.html">@<span>prose--paragraph</span></a>
+            
+            </span>
+        </li class="Meta-item">
         
         
     </ul>
@@ -1923,10 +1933,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-prose">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Prose</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="prose.html" data-pjax>
-                <span>Prose</span>
+            <a class="Tree-entityLink" href="prose--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1943,6 +1964,83 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="prose--blockquote.html" data-pjax>
+                <span>Blockquote</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="prose--code.html" data-pjax>
+                <span>Code</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="prose--paragraph.html" data-pjax>
+                <span>Paragraph</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     

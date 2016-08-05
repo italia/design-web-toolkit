@@ -42,6 +42,7 @@
   @extend .u-hidden;
   @extend .u-posAbsolute;
   @extend .u-zindex-max;
+
   left: 0;
   width: 100%;
 }
@@ -112,7 +113,7 @@
 .Megamenu--styled .Megamenu-subnav {
   @extend .u-background-grey-80;
   @extend .u-padding-all-l;
-  @extend .u-border-shadow-m;
+  @extend .u-borderShadow-m;
 }
 
 .Megamenu--styled .Megamenu-subnavGroup > li {
@@ -129,6 +130,7 @@
 
 .Megamenu--styled .Megamenu-subnavGroup {
   @extend .u-textLeft;
+
   min-width: 19%;
 }
 

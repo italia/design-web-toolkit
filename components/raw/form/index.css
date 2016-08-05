@@ -8,20 +8,15 @@
 :root {
   --Form-input-border-color: #ccc;
   --Form-input-border-radius: 0;
-
   --Form-state-invalid-border-color: #b50000;
   --Form-state-invalid-label-color: #b50000;
   --Form-state-invalid-message-color: #b50000;
-
   --Form-state-warning-border-color: #e5ce23;
   --Form-state-warning-label-color: #e5ce23;
   --Form-state-warning-message-color: #e5ce23;
-
   --Form-label-checked-background: #c6f3f5;
-
   --Form-border-width: 0.4rem;
   --Form-choose-height: 1em;
-
   --Form-select-arrow: inline("icons/ita/svg/icon-bottom.svg");
   --Form-select-arrow-width: 2rem;
 }
@@ -121,6 +116,7 @@ option:hover {
   @extend .u-textWeight-400;
   @extend .u-posAbsolute;
   @extend .u-layoutCenterVertically;
+
   left: 1em;
   opacity: 0.5;
 }
@@ -144,9 +140,10 @@ option:hover {
   @extend .u-color-white;
   @extend .u-borderRadius-m;
   @extend .u-background-grey-80;
-  @extend .u-border-shadow-xs;
+  @extend .u-borderShadow-xs;
   @extend .u-padding-r-all;
   @extend .u-posAbsolute;
   @extend .u-margin-top-xxs;
+
   outline: none !important;
 }

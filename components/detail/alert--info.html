@@ -127,8 +127,9 @@
 &lt;body class=&quot;Pac&quot;&gt;
 
   &lt;div class=&quot;Prose Alert Alert--info&quot; role=&quot;alert&quot;&gt;
-  &lt;h2 class=&quot;u-text-h2&quot;&gt;Ulteriori informazioni&lt;/h2&gt;
-  &lt;p&gt;Et labore ad do ut quis nostrud consectetur cillum dolor Lorem in tempor adipisicing.Dolor dolore consectetur eiusmod qui adipisicing dolore velit et ut esse adipisicing aliqua. Consequat do ipsum officia proident ut cillum esse ipsum do sint do qui ipsum nisi qui aliquip cupidatat. Culpa ut excepteur duis enim ullamco cupidatat nisi anim officia anim consectetur incididunt esse do. Ullamco nulla voluptate laboris reprehenderit ut qui consectetur nostrud consequat magna sint laboris laborum esse id reprehenderit sint.&lt;/p&gt;
+  &lt;h2 class=&quot;u-text-r-l&quot;&gt;Ulteriori informazioni&lt;/h2&gt;
+  &lt;p class=&quot;u-layout-prose u-color-grey-90 u-text-p u-padding-r-all&quot;&gt;Nisi voluptatum unde molestiae qui voluptatibus velit dolor sequi. Voluptatem quisquam ducimus cum facere ipsam magni omnis qui voluptas. Et repudiandae repudiandae asperiores adipisci. Quibusdam tempora nam iure cum inventore. Accusantium dolorem ipsam quibusdam sit sunt odit est magni.&lt;/p&gt;
+
 &lt;/div&gt;
 
 
@@ -286,10 +287,10 @@
         
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Prose Alert Alert--info"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h2"</span>&gt;</span>Ulteriori informazioni<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Et labore ad do ut quis nostrud consectetur cillum dolor Lorem in tempor adipisicing.Dolor dolore consectetur eiusmod qui adipisicing dolore velit et ut esse adipisicing aliqua. Consequat do ipsum officia proident ut cillum esse ipsum do sint do qui
-        ipsum nisi qui aliquip cupidatat. Culpa ut excepteur duis enim ullamco cupidatat nisi anim officia anim consectetur incididunt esse do. Ullamco nulla voluptate laboris reprehenderit ut qui consectetur nostrud consequat magna sint laboris laborum
-        esse id reprehenderit sint.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-l"</span>&gt;</span>Ulteriori informazioni<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Nisi voluptatum unde molestiae qui voluptatibus velit dolor sequi. Voluptatem quisquam ducimus cum facere ipsam magni omnis qui voluptas. Et repudiandae repudiandae asperiores adipisci. Quibusdam tempora nam iure cum inventore. Accusantium dolorem
+        ipsam quibusdam sit sunt odit est magni.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -298,11 +299,11 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-498fc4c583d5ce622639d9beeb486282-panel-view">
     <code class="Code Code--lang-">
-        <pre>&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"Prose Alert Alert--{{ modifier }}"</span> role=<span class="hljs-string">"alert"</span>&gt;
-  &lt;h2 <span class="hljs-keyword">class</span>=<span class="hljs-string">"u-text-h2"</span>&gt;{{ text }}&lt;/h2&gt;
-  &lt;p&gt;Et labore ad <span class="hljs-keyword">do</span> ut quis nostrud consectetur cillum dolor Lorem <span class="hljs-keyword">in</span> tempor adipisicing.Dolor dolore consectetur eiusmod <span class="hljs-keyword">qui</span> adipisicing dolore velit et ut esse adipisicing aliqua. Consequat <span class="hljs-keyword">do</span> ipsum officia proident ut cillum esse ipsum <span class="hljs-keyword">do</span> sint <span class="hljs-keyword">do</span> <span class="hljs-keyword">qui</span> ipsum nisi <span class="hljs-keyword">qui</span> aliquip cupidatat. Culpa ut excepteur duis enim ullamco cupidatat nisi anim officia anim consectetur incididunt esse <span class="hljs-keyword">do</span>. Ullamco nulla voluptate laboris reprehenderit ut <span class="hljs-keyword">qui</span> consectetur nostrud consequat magna sint laboris laborum esse id reprehenderit sint.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Prose Alert Alert--</span></span></span><span class="hljs-template-variable">{{ modifier }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-l"</span>&gt;</span></span><span class="hljs-template-variable">{{ text | d(__SHORT_TEXTS__[0]) }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name">render</span> '<a href="prose--paragraph.html">@prose--paragraph</a>', {text: __TEXTS__[0]} %}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></pre>
     </code>
 </div>
 
@@ -350,15 +351,12 @@
   <span class="hljs-attribute">--Alert-error-bg</span>: <span class="hljs-number">#ffcbcb</span>;
   <span class="hljs-attribute">--Alert-error-color</span>: <span class="hljs-number">#1e1212</span>;
   <span class="hljs-attribute">--Alert-error-border</span>: <span class="hljs-number">#b50000</span>;
-
   <span class="hljs-attribute">--Alert-warning-bg</span>: <span class="hljs-number">#ffef9f</span>;
   <span class="hljs-attribute">--Alert-warning-color</span>: <span class="hljs-number">#685815</span>;
   <span class="hljs-attribute">--Alert-warning-border</span>: <span class="hljs-number">#1e1212</span>;
-
   <span class="hljs-attribute">--Alert-success-bg</span>: <span class="hljs-number">#dff0d8</span>;
   <span class="hljs-attribute">--Alert-success-color</span>: <span class="hljs-number">#3c763d</span>;
   <span class="hljs-attribute">--Alert-success-border</span>: <span class="hljs-number">#d6e9c6</span>;
-
   <span class="hljs-attribute">--Alert-info-bg</span>: <span class="hljs-number">#c6f3f5</span>;
   <span class="hljs-attribute">--Alert-info-color</span>: <span class="hljs-number">#006366</span>;
   <span class="hljs-attribute">--Alert-info-border</span>: <span class="hljs-number">#1e1212</span>;
@@ -480,6 +478,15 @@
             <strong class="Meta-key">Filesystem Path:</strong>
             <span class="Meta-value">src/components/alert/alert.tmpl</span>
         </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="prose--paragraph.html">@<span>prose--paragraph</span></a>
+            
+            </span>
+        </li class="Meta-item">
         
         
     </ul>
@@ -1926,10 +1933,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-prose">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Prose</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="prose.html" data-pjax>
-                <span>Prose</span>
+            <a class="Tree-entityLink" href="prose--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1946,6 +1964,83 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="prose--blockquote.html" data-pjax>
+                <span>Blockquote</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="prose--code.html" data-pjax>
+                <span>Code</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="prose--paragraph.html" data-pjax>
+                <span>Paragraph</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     

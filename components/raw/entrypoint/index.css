@@ -4,7 +4,7 @@
   @extend .u-sizeFill;
   @extend .u-borderRadius-m;
   @extend .u-margin-bottom-xs;
-  @extend .u-border-shadow-xxs;
+  @extend .u-borderShadow-xxs;
   @extend .u-text-r-l;
   @extend .u-padding-r-all;
 }

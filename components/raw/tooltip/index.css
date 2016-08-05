@@ -7,8 +7,9 @@
 .Tooltip--styled .Tooltip-tooltip {
   @extend .u-padding-all-s;
   @extend .u-zindex-max;
-  @extend .u-border-shadow-xxl;
+  @extend .u-borderShadow-xxl;
   @extend .u-background-white;
+
   border: 3px solid var(--Tooltip-color);
   left: 50%;
   max-width: 40em;

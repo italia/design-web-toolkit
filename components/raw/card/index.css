@@ -9,7 +9,7 @@
 }
 
 .Card--shadow {
-  @extend .u-border-shadow-xxs;
+  @extend .u-borderShadow-xxs;
   @extend .u-border-none;
 }
 

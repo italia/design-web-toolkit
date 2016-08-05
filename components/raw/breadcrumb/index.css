@@ -13,6 +13,7 @@
 
 .Breadcrumb-item::after {
   @extend .u-margin-right-xs;
+
   content: " › ";
 }
 

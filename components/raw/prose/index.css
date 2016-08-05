@@ -4,7 +4,6 @@
   --Prose-color-text-primary: #1c2024;
   --Prose-color-text-secondary: #5a6772;
   --Prose-color-text-highlighted: #b2ebed;
-
   --Prose-color-link: #06c;
   --Prose-color-link-hover: #036;
   --Prose-color-link-visited: #06c;
@@ -21,6 +20,7 @@
 .Prose > ol > li {
   @extend .u-text-r-xs;
   @extend .u-lineHeight-xl;
+
   color: var(--Prose-color-text-primary);
 }
 
@@ -64,6 +64,7 @@
 .Prose > ol {
   @extend .u-margin-bottom-xl;
   @extend .u-margin-left-xl;
+
   list-style-position: outside;
 }
 

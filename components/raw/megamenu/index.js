@@ -37,7 +37,7 @@ const opts = {
 }
 
 /*
- *	Take a Treeview and make it work with Megamenu
+ *	Takes a Treeview and makes it work with Megamenu
  */
 const listToMegaMenu = ($ul, _opts) => {
   const attrs = 'class aria-expanded aria-hidden role tabindex'
@@ -46,19 +46,19 @@ const listToMegaMenu = ($ul, _opts) => {
     .removeAttr(attrs)
     .addClass(_opts.menuListClass)
     .find('*')
-      .removeAttr(attrs)
-      .end()
+    .removeAttr(attrs)
+    .end()
     .find('> li')
     .each(function(i, li) {
       $(li)
         .addClass(_opts.topNavItemClass)
         .find('a')
-          // make item tabbable, this is required !
-          .attr('href', '#')
+        // make item tabbable, this is required !
+        .attr('href', '#')
         .end()
         .find('> ul > li')
-          .unwrap()
-          .wrap(`<ul class="${_opts.panelGroupClass}" />`)
+        .unwrap()
+        .wrap(`<ul class="${_opts.panelGroupClass}" />`)
         .end()
         .find('> ul')
         .wrapAll(`<div class="${_opts.panelClass}" />`)
@@ -73,9 +73,19 @@ $(document).ready(function() {
     if ($el.find('ul').length === 0 && rel && $(rel).length > 0) {
       let $menu = listToMegaMenu($(rel), opts)
       $el.append($menu)
+        // @FIXME: make space for javascript rendered megamenu
+      if ($('header').css('position') === 'fixed') {
+        $('body').css({
+          paddingTop: '+=' + $el.height() + 'px'
+        })
+      }
     }
     $el.accessibleMegaMenu(opts)
   })
 })
 
-export default { opts, listToMegaMenu, Megamenu }
+export default {
+  opts,
+  listToMegaMenu,
+  Megamenu
+}

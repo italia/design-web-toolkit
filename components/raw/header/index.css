@@ -30,7 +30,6 @@
     @extend .u-padding-top-s;
     @extend .u-padding-bottom-s;
   }
-
 }
 
 /*
@@ -43,6 +42,7 @@
   @extend .u-padding-left-xl;
   @extend .u-padding-right-xl;
   @extend .u-posAbsolute;
+
   background: #06c; /* 1 */
   height: 100%;
   right: 0;
@@ -54,6 +54,7 @@
   @extend .u-text-r-xxs;
   @extend .u-textWeight-700;
   @extend .u-textClean;
+
   text-transform: uppercase;
 }
 
@@ -154,12 +155,14 @@
   @extend .u-sm-block;
   @extend .u-md-block;
   @extend .u-lg-block;
+
   margin-bottom: -calc(1rem + var(--Hamburger-height));
   margin-top: calc(1rem + var(--Hamburger-height));
 }
 
 .Header-logo {
   @extend .u-floatLeft;
+
   min-width: calc(var(--Header-logo-width) * 0.6);
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
@@ -301,6 +304,7 @@
     @extend .u-margin-bottom-m;
     @extend .u-padding-left-m;
     @extend .u-floatRight;
+
     max-width: 24em;
     padding-right: 0 !important;
   }
@@ -315,6 +319,7 @@
 .Header-utils > div {
   @extend .u-floatRight;
   @extend .u-cf;
+
   width: 100%;
 }
 
@@ -326,6 +331,7 @@
   @extend .u-padding-right-s;
   @extend .u-textClean;
   @extend .u-margin-left-xs;
+
   border: 2px solid white;
   opacity: 0.5;
 }
@@ -400,6 +406,7 @@
 .Headroom--fixed,
 .Headroom--pinned.Headroom--not-top {
   @extend .u-zindex-40;
+
   position: fixed;
   top: 0;
 }

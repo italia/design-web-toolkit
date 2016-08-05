@@ -17,6 +17,7 @@
 
 .Offcanvas.is-ready .Offcanvas-content {
   @extend .u-zindex-max;
+
   height: 100%;
   overflow: auto;
   position: fixed;
@@ -24,7 +25,7 @@
   transform: translateX(0);
   transition: transform 200ms ease-out;
   will-change: translateX;
-  @extend .u-border-shadow-m;
+  @extend .u-borderShadow-m;
 }
 
 .Offcanvas--right.is-ready .Offcanvas-content {
@@ -52,6 +53,7 @@
 
 .Offcanvas--modal.is-active::after {
   @extend .u-zindex-50;
+
   background: black;
   content: " ";
   display: block;

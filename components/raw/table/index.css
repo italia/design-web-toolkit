@@ -123,7 +123,6 @@
   */
   border-collapse: collapse;
   border-spacing: 0;
-
   display: inline-block;
   max-width: 100%;
   overflow-x: auto;
@@ -148,9 +147,8 @@
       right,
       ellipse,
       rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0) 75%
+      rgba(0, 0, 0, 0) 75%
     ) 100% center;
-
   background-attachment: scroll, scroll;
   background-repeat: no-repeat;
   background-size: 10px 100%, 10px 100%;

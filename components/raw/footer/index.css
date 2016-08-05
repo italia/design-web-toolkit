@@ -91,3 +91,19 @@
 .Footer-links a {
   @extend .u-text-r-xxs;
 }
+
+.Footer-socialIcons > li {
+  @extend .u-inlineBlock;
+  @extend .u-margin-right-s;
+  @extend .u-border-none;
+}
+
+.Footer-socialIcons [class^="icon-"],
+.Footer-socialIcons [class*=" icon-"] {
+  @extend .u-inlineBlock;
+  @extend .u-background-teal-50;
+  @extend .u-color-grey-80;
+  @extend .u-padding-all-xs;
+  @extend .u-borderRadius-circle;
+  @extend .u-text-r-m;
+}
