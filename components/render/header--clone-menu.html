@@ -19,32 +19,39 @@
 
   <div class="Header-navbar Grid Grid--alignMiddle">
 
-    <a class="Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open"
-      aria-controls="menu" aria-label="accedi al menu" title="navigazione" href="#menu">
-      <span class="Hamburger-toggle" aria-hidden="true"></span>
-      <span class="Header-toggleText">Menu</span>
-    </a>
+    <div class="Header-toggle Grid-cell">
+      <button class="Hamburger-toggleContainer js-fr-offcanvas-open"
+        aria-controls="menu" aria-label="mostra / nascondi il menu" title="mostra / nascondi il menu">
+        <span class="Hamburger-toggle" role="presentation"></span>
+        <span class="Header-toggleText" role="presentation">Menu</span>
+      </button>
+    </div>
 
-    <div class="Header-title">
-      <div class="Header-logo" aria-hidden="true">
-        <a href="/" tabindex="-1">
-          <img src="http://placehold.it/75x80" alt="">
-        </a>
-      </div>
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="/" tabindex="-1">
+        <img src="http://placehold.it/75x80" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
       <h1 class="Header-titleLink">
         <a accesskey="1" href="/">
           Nome della Pubblica Amministrazione<br>
           <small>eventuale sottotitolo</small>
         </a>
       </h1>
-      <div class="Header-searchTrigger js-searchTrigger">
-        <a href="#header-utils" class="icon-magnifier">
-          <span class="u-visuallyHidden">vai alla ricerca</span>
-        </a>
-      </div>
     </div>
 
-    <div class="Header-utils" id="header-utils">
+    <div class="Header-searchTrigger Grid-cell">
+      <button aria-controls="#header-search" class="js-Header-search-trigger icon-magnifier"
+        title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
+      </button>
+      <button aria-controls="#header-search" class="js-Header-search-trigger icon-close u-hiddenVisually"
+        title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="Header-utils Grid-cell">
       <div class="Header-social Headroom-hideme">
         <p>Seguici su:</p>
         <ul class="Header-socialIcons">
@@ -53,12 +60,12 @@
           <li><a href=""><span class="icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
         </ul>
       </div>
-      <div class="Header-search">
+      <div class="Header-search" id="header-search">
         <form class="Form">
-  <div class="Form-field Form-field--withPlaceholder">
-    <input class="Form-input u-text-r-s" required id="cerca">
+  <div class="Form-field Form-field--withPlaceholder Grid">
+    <input class="Form-input Grid-cell u-sizeFill u-text-r-s" required id="cerca">
     <label class="Form-label" for="cerca">Cerca...</label>
-    <button class="icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"
+    <button class="Grid-cell u-sizeFit icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"
       title="Avvia la ricerca" aria-label="Avvia la ricerca">
     </button>
   </div>
@@ -66,8 +73,8 @@
 
       </div>
       <div class="Header-languages Headroom-hideme">
-        <a class="Header-language is-active" href="">ITA</a>
-        <a class="Header-language" href="">ENG</a>
+        <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
+        <a class="Header-language" href="" title="sito in inglese">ENG</a>
       </div>
     </div>
 
@@ -96,50 +103,50 @@
     </div>
     <nav>
       <ul class="Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs">
-  <li><a>Ad corporis officiis</a>
+  <li><a>Ut adipisci delectus</a>
     <ul>
-      <li><a>Aut ducimus fuga</a></li>
-      <li><a>Omnis sint itaque</a></li>
-      <li><a>Molestias architecto ipsam</a>
+      <li><a>Et sed dicta</a></li>
+      <li><a>Perspiciatis quam et</a></li>
+      <li><a>Eligendi dignissimos odit</a>
         <ul>
-          <li><a>Et voluptas nemo</a></li>
-          <li><a>Sed facilis suscipit</a>
+          <li><a>Veritatis esse cum</a></li>
+          <li><a>Iusto ut minus</a>
             <ul>
-              <li><a>Sed facilis suscipit</a></li>
-              <li><a>Nihil architecto id</a></li>
-              <li><a>Eius perspiciatis rerum</a></li>
+              <li><a>Iusto ut minus</a></li>
+              <li><a>Id quaerat quae</a></li>
+              <li><a>Ullam doloribus occaecati</a></li>
             </ul>
           </li>
-          <li><a>Sequi et ratione</a></li>
+          <li><a>Deserunt dolores odit</a></li>
         </ul>
       </li>
-      <li><a>Labore quas omnis</a></li>
-      <li><a>Ad corporis officiis</a></li>
+      <li><a>Sequi nihil incidunt</a></li>
+      <li><a>Ut adipisci delectus</a></li>
     </ul>
   </li>
-  <li><a>Sequi et ratione</a>
+  <li><a>Deserunt dolores odit</a>
     <ul>
-      <li><a>Molestias architecto ipsam</a></li>
-      <li><a>Omnis sint itaque</a></li>
-      <li><a>Aut ducimus fuga</a>
+      <li><a>Eligendi dignissimos odit</a></li>
+      <li><a>Perspiciatis quam et</a></li>
+      <li><a>Et sed dicta</a>
         <ul>
-          <li><a>Nihil architecto id</a></li>
-          <li><a>Sed facilis suscipit</a></li>
-          <li><a>Et voluptas nemo</a></li>
+          <li><a>Id quaerat quae</a></li>
+          <li><a>Iusto ut minus</a></li>
+          <li><a>Veritatis esse cum</a></li>
         </ul>
       </li>
-      <li><a>Eius perspiciatis rerum</a></li>
-      <li><a>Sequi et ratione</a>
+      <li><a>Ullam doloribus occaecati</a></li>
+      <li><a>Deserunt dolores odit</a>
         <ul>
-          <li><a>Labore quas omnis</a></li>
-          <li><a>Aut ducimus fuga</a></li>
-          <li><a>Omnis sint itaque</a></li>
-          <li><a>Molestias architecto ipsam</a></li>
-          <li><a>Et voluptas nemo</a></li>
-          <li><a>Sed facilis suscipit</a></li>
-          <li><a>Nihil architecto id</a></li>
-          <li><a>Eius perspiciatis rerum</a></li>
-          <li><a>Sequi et ratione</a></li>
+          <li><a>Sequi nihil incidunt</a></li>
+          <li><a>Et sed dicta</a></li>
+          <li><a>Perspiciatis quam et</a></li>
+          <li><a>Eligendi dignissimos odit</a></li>
+          <li><a>Veritatis esse cum</a></li>
+          <li><a>Iusto ut minus</a></li>
+          <li><a>Id quaerat quae</a></li>
+          <li><a>Ullam doloribus occaecati</a></li>
+          <li><a>Deserunt dolores odit</a></li>
         </ul>
       </li>
     </ul>

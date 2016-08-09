@@ -62,32 +62,39 @@
 
   <div class="Header-navbar Grid Grid--alignMiddle">
 
-    <a class="Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open"
-      aria-controls="menu" aria-label="accedi al menu" title="navigazione" href="#menu">
-      <span class="Hamburger-toggle" aria-hidden="true"></span>
-      <span class="Header-toggleText">Menu</span>
-    </a>
+    <div class="Header-toggle Grid-cell">
+      <button class="Hamburger-toggleContainer js-fr-offcanvas-open"
+        aria-controls="menu" aria-label="mostra / nascondi il menu" title="mostra / nascondi il menu">
+        <span class="Hamburger-toggle" role="presentation"></span>
+        <span class="Header-toggleText" role="presentation">Menu</span>
+      </button>
+    </div>
 
-    <div class="Header-title">
-      <div class="Header-logo" aria-hidden="true">
-        <a href="/" tabindex="-1">
-          <img src="http://placehold.it/75x80" alt="">
-        </a>
-      </div>
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="/" tabindex="-1">
+        <img src="http://placehold.it/75x80" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
       <h1 class="Header-titleLink">
         <a accesskey="1" href="/">
           Nome della Pubblica Amministrazione<br>
           <small>eventuale sottotitolo</small>
         </a>
       </h1>
-      <div class="Header-searchTrigger js-searchTrigger">
-        <a href="#header-utils" class="icon-magnifier">
-          <span class="u-visuallyHidden">vai alla ricerca</span>
-        </a>
-      </div>
     </div>
 
-    <div class="Header-utils" id="header-utils">
+    <div class="Header-searchTrigger Grid-cell">
+      <button aria-controls="#header-search" class="js-Header-search-trigger icon-magnifier"
+        title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
+      </button>
+      <button aria-controls="#header-search" class="js-Header-search-trigger icon-close u-hiddenVisually"
+        title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="Header-utils Grid-cell">
       <div class="Header-social Headroom-hideme">
         <p>Seguici su:</p>
         <ul class="Header-socialIcons">
@@ -96,12 +103,12 @@
           <li><a href=""><span class="icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
         </ul>
       </div>
-      <div class="Header-search">
+      <div class="Header-search" id="header-search">
         <form class="Form">
-  <div class="Form-field Form-field--withPlaceholder">
-    <input class="Form-input u-text-r-s" required id="cerca">
+  <div class="Form-field Form-field--withPlaceholder Grid">
+    <input class="Form-input Grid-cell u-sizeFill u-text-r-s" required id="cerca">
     <label class="Form-label" for="cerca">Cerca...</label>
-    <button class="icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"
+    <button class="Grid-cell u-sizeFit icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"
       title="Avvia la ricerca" aria-label="Avvia la ricerca">
     </button>
   </div>
@@ -109,8 +116,8 @@
 
       </div>
       <div class="Header-languages Headroom-hideme">
-        <a class="Header-language is-active" href="">ITA</a>
-        <a class="Header-language" href="">ENG</a>
+        <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
+        <a class="Header-language" href="" title="sito in inglese">ENG</a>
       </div>
     </div>
 
@@ -121,9 +128,9 @@
     
       <nav class="Megamenu Megamenu--styled">
         <ul class="Megamenu-list">
-          <li class="Megamenu-item"><a href="">Aut ducimus fuga</a></li>
-          <li class="Megamenu-item"><a href="">Omnis sint itaque</a></li>
-          <li class="Megamenu-item"><a href="">Molestias architecto ipsam</a></li>
+          <li class="Megamenu-item"><a href="">Et sed dicta</a></li>
+          <li class="Megamenu-item"><a href="">Perspiciatis quam et</a></li>
+          <li class="Megamenu-item"><a href="">Eligendi dignissimos odit</a></li>
         </ul>
       </nav>
     
@@ -145,50 +152,50 @@
     </div>
     <nav>
       <ul class="Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs">
-  <li><a>Ad corporis officiis</a>
+  <li><a>Ut adipisci delectus</a>
     <ul>
-      <li><a>Aut ducimus fuga</a></li>
-      <li><a>Omnis sint itaque</a></li>
-      <li><a>Molestias architecto ipsam</a>
+      <li><a>Et sed dicta</a></li>
+      <li><a>Perspiciatis quam et</a></li>
+      <li><a>Eligendi dignissimos odit</a>
         <ul>
-          <li><a>Et voluptas nemo</a></li>
-          <li><a>Sed facilis suscipit</a>
+          <li><a>Veritatis esse cum</a></li>
+          <li><a>Iusto ut minus</a>
             <ul>
-              <li><a>Sed facilis suscipit</a></li>
-              <li><a>Nihil architecto id</a></li>
-              <li><a>Eius perspiciatis rerum</a></li>
+              <li><a>Iusto ut minus</a></li>
+              <li><a>Id quaerat quae</a></li>
+              <li><a>Ullam doloribus occaecati</a></li>
             </ul>
           </li>
-          <li><a>Sequi et ratione</a></li>
+          <li><a>Deserunt dolores odit</a></li>
         </ul>
       </li>
-      <li><a>Labore quas omnis</a></li>
-      <li><a>Ad corporis officiis</a></li>
+      <li><a>Sequi nihil incidunt</a></li>
+      <li><a>Ut adipisci delectus</a></li>
     </ul>
   </li>
-  <li><a>Sequi et ratione</a>
+  <li><a>Deserunt dolores odit</a>
     <ul>
-      <li><a>Molestias architecto ipsam</a></li>
-      <li><a>Omnis sint itaque</a></li>
-      <li><a>Aut ducimus fuga</a>
+      <li><a>Eligendi dignissimos odit</a></li>
+      <li><a>Perspiciatis quam et</a></li>
+      <li><a>Et sed dicta</a>
         <ul>
-          <li><a>Nihil architecto id</a></li>
-          <li><a>Sed facilis suscipit</a></li>
-          <li><a>Et voluptas nemo</a></li>
+          <li><a>Id quaerat quae</a></li>
+          <li><a>Iusto ut minus</a></li>
+          <li><a>Veritatis esse cum</a></li>
         </ul>
       </li>
-      <li><a>Eius perspiciatis rerum</a></li>
-      <li><a>Sequi et ratione</a>
+      <li><a>Ullam doloribus occaecati</a></li>
+      <li><a>Deserunt dolores odit</a>
         <ul>
-          <li><a>Labore quas omnis</a></li>
-          <li><a>Aut ducimus fuga</a></li>
-          <li><a>Omnis sint itaque</a></li>
-          <li><a>Molestias architecto ipsam</a></li>
-          <li><a>Et voluptas nemo</a></li>
-          <li><a>Sed facilis suscipit</a></li>
-          <li><a>Nihil architecto id</a></li>
-          <li><a>Eius perspiciatis rerum</a></li>
-          <li><a>Sequi et ratione</a></li>
+          <li><a>Sequi nihil incidunt</a></li>
+          <li><a>Et sed dicta</a></li>
+          <li><a>Perspiciatis quam et</a></li>
+          <li><a>Eligendi dignissimos odit</a></li>
+          <li><a>Veritatis esse cum</a></li>
+          <li><a>Iusto ut minus</a></li>
+          <li><a>Id quaerat quae</a></li>
+          <li><a>Ullam doloribus occaecati</a></li>
+          <li><a>Deserunt dolores odit</a></li>
         </ul>
       </li>
     </ul>
@@ -216,12 +223,12 @@
       </p>
     </div>
     <div class="u-text-r-l u-layout-prose">
-      <h2 class="u-text-h2 u-margin-r-bottom">Aut ducimus fuga</h2>
+      <h2 class="u-text-h2 u-margin-r-bottom">Et sed dicta</h2>
       <p class="u-textSecondary u-lineHeight-l">
-        Culpa sapiente repellat ut.
-        Aut quis aperiam vero sed sint veritatis suscipit.
-        Maiores voluptatem alias incidunt corrupti.
-        Sunt quia occaecati sunt qui nobis minima minus officia qui.
+        Velit vero quia modi est earum aut.
+        Et dolorem laboriosam beatae voluptas commodi quia.
+        Facilis libero et.
+        Itaque quia voluptatem vel accusamus excepturi nisi est neque.
       </p>
     </div>
   </div>
@@ -265,7 +272,7 @@
 
     <div class="Grid Grid--withGutter u-text-r-l u-padding-r-bottom">
       <div class="Grid-cell u-layout-centerLeft">
-        <h2 class="u-text-r-l">Aut ducimus fuga</h2>
+        <h2 class="u-text-r-l">Et sed dicta</h2>
       </div>
       <div class="Grid-cell u-layout-centerRight">
         <h2 class="u-text-r-m"><a class="u-color-50" href="">Vedi tutto</a></h2>
@@ -288,11 +295,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Culpa sapiente repellat ut.
+    Velit vero quia modi est earum aut.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Ut voluptatem corrupti est fuga amet asperiores omnis corrupti est. Quis eum dolores cumque dolorum laudantium nostrum et rerum voluptatem. Dolor est vel qui eaque et.
+    Perspiciatis a id eos nesciunt hic voluptates. Aut magnam eum voluptatibus qui doloribus sint qui. Ut iste dolor provident et iure explicabo exercitationem quis modi. Aut voluptatem aut perferendis accusantium optio mollitia. Optio ullam doloremque sint nemo nesciunt aut recusandae quasi velit.
   </p>
 </div>
 
@@ -308,11 +315,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Veniam consequatur fugit quos dicta velit quia libero.
+    Ab eos doloribus.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Sit voluptas sit aspernatur quia ut ut. Ab voluptatem corrupti debitis optio velit. Maxime ea corrupti accusamus fuga rem consequuntur minima. Nemo inventore fuga mollitia doloribus porro perspiciatis consequuntur et. Labore minima itaque dolorem ipsam amet aut tempora vitae minima. Cupiditate vel eum illum quas.
+    Qui veritatis excepturi et quidem dolores fugit blanditiis beatae. Odio quae aspernatur quaerat. Quam autem et aut sunt ut beatae harum quia aut. Quisquam odit quia id non accusantium velit dolore. Reprehenderit dolorem at fugiat. Incidunt repellat non quia est eaque accusantium ut maxime.
   </p>
 </div>
 
@@ -327,11 +334,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Veniam consequatur fugit quos dicta velit quia libero.
+    Ab eos doloribus.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Non aut excepturi alias soluta sit inventore. Velit magni repudiandae rerum voluptatem soluta. Autem aliquid quisquam. Distinctio voluptate dolores inventore architecto totam dicta. Sed cumque ratione quibusdam sed quod explicabo. Quia laboriosam et cum cumque omnis tempora fuga.
+    Sit veritatis illo. Eos officiis dolorum dolore adipisci dolor a sed modi. Eius et dolores officia necessitatibus veniam aut quia dolores ratione. Qui eos dolore.
   </p>
 </div>
 
@@ -345,11 +352,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Veniam consequatur fugit quos dicta velit quia libero.
+    Ab eos doloribus.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Dolores natus sed nihil ea illo occaecati. Qui quia illum delectus magni rem earum qui. Aspernatur aspernatur officiis aut est necessitatibus.
+    Earum dolores temporibus molestiae voluptatibus quam nobis laboriosam. Sint ratione cum vero. Qui cumque est facilis aut alias recusandae quas commodi repellat. Porro autem illo modi nemo eos ea exercitationem neque.
   </p>
 </div>
 
@@ -363,11 +370,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Veniam consequatur fugit quos dicta velit quia libero.
+    Ab eos doloribus.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Labore ad numquam et beatae alias libero. Iste et sint eius sed nesciunt eaque quos omnis rerum. Sint ea hic accusantium explicabo aperiam quod praesentium aut et. Veniam corrupti sunt aut.
+    Perspiciatis sit accusantium adipisci iure animi. Quia molestiae nobis dolorum aperiam nesciunt nobis at omnis dignissimos. Voluptatem mollitia ipsam non maiores nihil animi deserunt ut aliquam. Ut et voluptas sed. Voluptas nesciunt repellendus voluptatem.
   </p>
 </div>
 
@@ -381,11 +388,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Veniam consequatur fugit quos dicta velit quia libero.
+    Ab eos doloribus.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Eos iure quae cum quia quia id. Et consectetur possimus id. Modi porro voluptate totam. Dolor provident sed quam quidem temporibus quis corrupti. Consequatur blanditiis animi.
+    Incidunt quia odit atque. Debitis velit et voluptatem. Optio voluptatem pariatur deserunt quaerat quas quibusdam ex. Quos possimus natus quia ut id ut.
   </p>
 </div>
 
@@ -400,11 +407,11 @@
   </div>
 
   <div class="u-background-70 u-padding-r-top u-padding-r-bottom">
-    <div class="u-layout-centerContent u-background-70 u-padding-all-xxl">
+    <div class="u-layout-centerContent u-background-70 u-padding-r-all">
   <section class="u-layout-medium">
     <div class="Grid">
       <div class="Grid-cell u-layout-centerLeft">
-        <h2 class="u-text-r-l"><a class="u-color-white" href="">@amministrazione</a></h2>
+        <h2 class="u-text-r-l"><a class="u-color-white" href="">Twitter @amministrazione</a></h2>
       </div>
       <p class="Grid-cell u-layout-centerRight">
         <a title="vai all'account twitter" class="u-color-white u-textClean u-text-xxl" href="">
@@ -413,15 +420,18 @@
         </a>
       </p>
     </div>
-    <div class="Grid Grid--withGutter u-padding-r-top u-text-r-xxl">
-      
-      <div class="Grid-cell usizefull u-md-size1of3 u-lg-size1of3 u-text-r-m u-margin-r-bottom u-layout-matchHeight">
-        <div class="Card Card--round u-color-grey-30 u-background-white">
+    <div class="u-text-r-xxl u-padding-r-top">
+      <div class="Grid Grid--withGutter">
+        
+        <div class="Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-margin-r-bottom u-layout-matchHeight">
+          <div class="Card Card--round u-color-grey-30 u-background-white">
   <div class="Card-content u-padding-r-all">
-    <p class="Card-extra"><a class="Card-extraLink u-color-50" href="">@amministrazione</a></p>
-    <p class="Card-text u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
+    <section class="Card-text">
+      <h3 class="u-color-50 u-text-r-s">ut adipisci delectus</h3>
+      <p class="u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
+    </section>
     <h3 class="Card-title">
-      <a class="Card-titleLink" href="">Saepe recusandae sunt vel nemo. Quis ullam quo excepturi consequatur deleniti. Dolor optio est. Fuga accusamus beatae. Est eligendi provident.</a>
+      <a class="Card-titleLink" href="">Dolor architecto qui. Necessitatibus vero repellat odit hic sunt. Odio ut hic et praesentium voluptate molestiae et voluptatem deleniti. Rem at sunt id aliquid at et distinctio eos. Nisi et ab aut aspernatur unde sit maiores voluptates. Blanditiis suscipifalse</a>
     </h3>
     <p>
       <a title="visualizza su twitter" class="u-color-50 u-textClean u-text-xl" href="">
@@ -432,15 +442,17 @@
   </div>
 </div>
 
-      </div>
-      
-      <div class="Grid-cell usizefull u-md-size1of3 u-lg-size1of3 u-text-r-m u-margin-r-bottom u-layout-matchHeight">
-        <div class="Card Card--round u-color-grey-30 u-background-white">
+        </div>
+        
+        <div class="Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-margin-r-bottom u-layout-matchHeight">
+          <div class="Card Card--round u-color-grey-30 u-background-white">
   <div class="Card-content u-padding-r-all">
-    <p class="Card-extra"><a class="Card-extraLink u-color-50" href="">@amministrazione</a></p>
-    <p class="Card-text u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
+    <section class="Card-text">
+      <h3 class="u-color-50 u-text-r-s">ut adipisci delectus</h3>
+      <p class="u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
+    </section>
     <h3 class="Card-title">
-      <a class="Card-titleLink" href="">Sit voluptas sit aspernatur quia ut ut. Ab voluptatem corrupti debitis optio velit. Maxime ea corrupti accusamus fuga rem consequuntur minima. Nemo inventore fuga mollitia doloribus porro perspiciatis consequuntur et. Labore minima itaque dolorem ipsam amfalse</a>
+      <a class="Card-titleLink" href="">Qui veritatis excepturi et quidem dolores fugit blanditiis beatae. Odio quae aspernatur quaerat. Quam autem et aut sunt ut beatae harum quia aut. Quisquam odit quia id non accusantium velit dolore. Reprehenderit dolorem at fugiat. Incidunt repellat non qufalse</a>
     </h3>
     <p>
       <a title="visualizza su twitter" class="u-color-50 u-textClean u-text-xl" href="">
@@ -451,15 +463,17 @@
   </div>
 </div>
 
-      </div>
-      
-      <div class="Grid-cell usizefull u-md-size1of3 u-lg-size1of3 u-text-r-m u-margin-r-bottom u-layout-matchHeight">
-        <div class="Card Card--round u-color-grey-30 u-background-white">
+        </div>
+        
+        <div class="Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-margin-r-bottom u-layout-matchHeight">
+          <div class="Card Card--round u-color-grey-30 u-background-white">
   <div class="Card-content u-padding-r-all">
-    <p class="Card-extra"><a class="Card-extraLink u-color-50" href="">@amministrazione</a></p>
-    <p class="Card-text u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
+    <section class="Card-text">
+      <h3 class="u-color-50 u-text-r-s">ut adipisci delectus</h3>
+      <p class="u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
+    </section>
     <h3 class="Card-title">
-      <a class="Card-titleLink" href="">Non aut excepturi alias soluta sit inventore. Velit magni repudiandae rerum voluptatem soluta. Autem aliquid quisquam. Distinctio voluptate dolores inventore architecto totam dicta. Sed cumque ratione quibusdam sed quod explicabo. Quia laboriosam et cum cfalse</a>
+      <a class="Card-titleLink" href="">Sit veritatis illo. Eos officiis dolorum dolore adipisci dolor a sed modi. Eius et dolores officia necessitatibus veniam aut quia dolores ratione. Qui eos dolore.</a>
     </h3>
     <p>
       <a title="visualizza su twitter" class="u-color-50 u-textClean u-text-xl" href="">
@@ -470,8 +484,9 @@
   </div>
 </div>
 
+        </div>
+        
       </div>
-      
     </div>
   </section>
 </div>
@@ -479,7 +494,7 @@
   </div>
 
   <div class="u-background-grey-60 u-padding-r-top u-padding-r-bottom u-text-r-xxl">
-    <section class=" u-background-grey-60 u-padding-r-all">
+    <section class="u-background-grey-60 u-padding-r-all">
   <div class="u-layout-medium u-layoutCenter">
 
     <div class="Grid">
@@ -514,7 +529,7 @@
       <div class="Grid">
         <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-1" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Culpa sapiente repellat ut.
+          Velit vero quia modi est earum aut.
         </h3>
       </div>
     </figcaption>
@@ -534,7 +549,7 @@
       <div class="Grid">
         <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-2" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Aut quis aperiam vero sed sint veritatis suscipit.
+          Et dolorem laboriosam beatae voluptas commodi quia.
         </h3>
       </div>
     </figcaption>
@@ -554,7 +569,7 @@
       <div class="Grid">
         <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-3" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Maiores voluptatem alias incidunt corrupti.
+          Facilis libero et.
         </h3>
       </div>
     </figcaption>
@@ -574,7 +589,7 @@
       <div class="Grid">
         <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-4" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Sunt quia occaecati sunt qui nobis minima minus officia qui.
+          Itaque quia voluptatem vel accusamus excepturi nisi est neque.
         </h3>
       </div>
     </figcaption>
@@ -594,7 +609,7 @@
       <div class="Grid">
         <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-5" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Quam nostrum ipsum deserunt.
+          Possimus fugiat laboriosam consectetur dolores error.
         </h3>
       </div>
     </figcaption>
@@ -614,7 +629,7 @@
       <div class="Grid">
         <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-6" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Quis quaerat ratione dignissimos.
+          Sed voluptatem sed.
         </h3>
       </div>
     </figcaption>
@@ -634,7 +649,7 @@
       <div class="Grid">
         <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-7" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Placeat dolor consequatur.
+          Dolorum eveniet sint architecto qui aliquid ut vel incidunt.
         </h3>
       </div>
     </figcaption>

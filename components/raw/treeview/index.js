@@ -57,7 +57,7 @@ const Frtreeview = function({
 
   function _expandGroup(treeview, $item) {
     let $group = $item.children('ul')
-		$group.slideDown(() => {
+		$group.slideDown(250, () => {
       $group.attr('aria-hidden', 'false')
       $item.attr('aria-expanded', 'true')
       treeview.$visibleItems = treeview.$el.find('li:visible')
@@ -66,7 +66,7 @@ const Frtreeview = function({
 
   function _collapseGroup(treeview, $item) {
     let $group = $item.children('ul')
-		$group.slideUp(() => {
+		$group.slideUp(250, () => {
       $group.attr('aria-hidden', 'true')
       $item.attr('aria-expanded', 'false')
       treeview.$visibleItems = treeview.$el.find('li:visible')

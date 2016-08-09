@@ -145,32 +145,39 @@
 
   &lt;div class=&quot;Header-navbar Grid Grid--alignMiddle&quot;&gt;
 
-    &lt;a class=&quot;Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open&quot;
-      aria-controls=&quot;menu&quot; aria-label=&quot;accedi al menu&quot; title=&quot;navigazione&quot; href=&quot;#menu&quot;&gt;
-      &lt;span class=&quot;Hamburger-toggle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-      &lt;span class=&quot;Header-toggleText&quot;&gt;Menu&lt;/span&gt;
-    &lt;/a&gt;
+    &lt;div class=&quot;Header-toggle Grid-cell&quot;&gt;
+      &lt;button class=&quot;Hamburger-toggleContainer js-fr-offcanvas-open&quot;
+        aria-controls=&quot;menu&quot; aria-label=&quot;mostra / nascondi il menu&quot; title=&quot;mostra / nascondi il menu&quot;&gt;
+        &lt;span class=&quot;Hamburger-toggle&quot; role=&quot;presentation&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;Header-toggleText&quot; role=&quot;presentation&quot;&gt;Menu&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
 
-    &lt;div class=&quot;Header-title&quot;&gt;
-      &lt;div class=&quot;Header-logo&quot; aria-hidden=&quot;true&quot;&gt;
-        &lt;a href=&quot;/&quot; tabindex=&quot;-1&quot;&gt;
-          &lt;img src=&quot;http://placehold.it/75x80&quot; alt=&quot;&quot;&gt;
-        &lt;/a&gt;
-      &lt;/div&gt;
+    &lt;div class=&quot;Header-logo Grid-cell&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;a href=&quot;/&quot; tabindex=&quot;-1&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/75x80&quot; alt=&quot;&quot;&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;Header-title Grid-cell&quot;&gt;
       &lt;h1 class=&quot;Header-titleLink&quot;&gt;
         &lt;a accesskey=&quot;1&quot; href=&quot;/&quot;&gt;
           Nome della Pubblica Amministrazione&lt;br&gt;
           &lt;small&gt;eventuale sottotitolo&lt;/small&gt;
         &lt;/a&gt;
       &lt;/h1&gt;
-      &lt;div class=&quot;Header-searchTrigger js-searchTrigger&quot;&gt;
-        &lt;a href=&quot;#header-utils&quot; class=&quot;icon-magnifier&quot;&gt;
-          &lt;span class=&quot;u-visuallyHidden&quot;&gt;vai alla ricerca&lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;Header-utils&quot; id=&quot;header-utils&quot;&gt;
+    &lt;div class=&quot;Header-searchTrigger Grid-cell&quot;&gt;
+      &lt;button aria-controls=&quot;#header-search&quot; class=&quot;js-Header-search-trigger icon-magnifier&quot;
+        title=&quot;attiva il form di ricerca&quot; aria-label=&quot;attiva il form di ricerca&quot; aria-hidden=&quot;false&quot;&gt;
+      &lt;/button&gt;
+      &lt;button aria-controls=&quot;#header-search&quot; class=&quot;js-Header-search-trigger icon-close u-hiddenVisually&quot;
+        title=&quot;disattiva il form di ricerca&quot; aria-label=&quot;disattiva il form di ricerca&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;Header-utils Grid-cell&quot;&gt;
       &lt;div class=&quot;Header-social Headroom-hideme&quot;&gt;
         &lt;p&gt;Seguici su:&lt;/p&gt;
         &lt;ul class=&quot;Header-socialIcons&quot;&gt;
@@ -179,12 +186,12 @@
           &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-youtube&quot;&gt;&lt;/span&gt;&lt;span class=&quot;u-hiddenVisually&quot;&gt;Youtube&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;Header-search&quot;&gt;
+      &lt;div class=&quot;Header-search&quot; id=&quot;header-search&quot;&gt;
         &lt;form class=&quot;Form&quot;&gt;
-  &lt;div class=&quot;Form-field Form-field--withPlaceholder&quot;&gt;
-    &lt;input class=&quot;Form-input u-text-r-s&quot; required id=&quot;cerca&quot;&gt;
+  &lt;div class=&quot;Form-field Form-field--withPlaceholder Grid&quot;&gt;
+    &lt;input class=&quot;Form-input Grid-cell u-sizeFill u-text-r-s&quot; required id=&quot;cerca&quot;&gt;
     &lt;label class=&quot;Form-label&quot; for=&quot;cerca&quot;&gt;Cerca...&lt;/label&gt;
-    &lt;button class=&quot;icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s&quot;
+    &lt;button class=&quot;Grid-cell u-sizeFit icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s&quot;
       title=&quot;Avvia la ricerca&quot; aria-label=&quot;Avvia la ricerca&quot;&gt;
     &lt;/button&gt;
   &lt;/div&gt;
@@ -192,8 +199,8 @@
 
       &lt;/div&gt;
       &lt;div class=&quot;Header-languages Headroom-hideme&quot;&gt;
-        &lt;a class=&quot;Header-language is-active&quot; href=&quot;&quot;&gt;ITA&lt;/a&gt;
-        &lt;a class=&quot;Header-language&quot; href=&quot;&quot;&gt;ENG&lt;/a&gt;
+        &lt;a class=&quot;Header-language is-active&quot; href=&quot;&quot; title=&quot;sito in italiano&quot;&gt;ITA&lt;/a&gt;
+        &lt;a class=&quot;Header-language&quot; href=&quot;&quot; title=&quot;sito in inglese&quot;&gt;ENG&lt;/a&gt;
       &lt;/div&gt;
     &lt;/div&gt;
 
@@ -216,50 +223,50 @@
     &lt;/div&gt;
     &lt;nav&gt;
       &lt;ul class=&quot;Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs&quot;&gt;
-  &lt;li&gt;&lt;a&gt;Ad corporis officiis&lt;/a&gt;
+  &lt;li&gt;&lt;a&gt;Ut adipisci delectus&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a&gt;Aut ducimus fuga&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Omnis sint itaque&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Molestias architecto ipsam&lt;/a&gt;
+      &lt;li&gt;&lt;a&gt;Et sed dicta&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;Perspiciatis quam et&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;Eligendi dignissimos odit&lt;/a&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a&gt;Et voluptas nemo&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Sed facilis suscipit&lt;/a&gt;
+          &lt;li&gt;&lt;a&gt;Veritatis esse cum&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Iusto ut minus&lt;/a&gt;
             &lt;ul&gt;
-              &lt;li&gt;&lt;a&gt;Sed facilis suscipit&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a&gt;Nihil architecto id&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a&gt;Eius perspiciatis rerum&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a&gt;Iusto ut minus&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a&gt;Id quaerat quae&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a&gt;Ullam doloribus occaecati&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Sequi et ratione&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Deserunt dolores odit&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Labore quas omnis&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Ad corporis officiis&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;Sequi nihil incidunt&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;Ut adipisci delectus&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a&gt;Sequi et ratione&lt;/a&gt;
+  &lt;li&gt;&lt;a&gt;Deserunt dolores odit&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a&gt;Molestias architecto ipsam&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Omnis sint itaque&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Aut ducimus fuga&lt;/a&gt;
+      &lt;li&gt;&lt;a&gt;Eligendi dignissimos odit&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;Perspiciatis quam et&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;Et sed dicta&lt;/a&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a&gt;Nihil architecto id&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Sed facilis suscipit&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Et voluptas nemo&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Id quaerat quae&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Iusto ut minus&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Veritatis esse cum&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Eius perspiciatis rerum&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Sequi et ratione&lt;/a&gt;
+      &lt;li&gt;&lt;a&gt;Ullam doloribus occaecati&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;Deserunt dolores odit&lt;/a&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a&gt;Labore quas omnis&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Aut ducimus fuga&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Omnis sint itaque&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Molestias architecto ipsam&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Et voluptas nemo&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Sed facilis suscipit&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Nihil architecto id&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Eius perspiciatis rerum&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Sequi et ratione&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Sequi nihil incidunt&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Et sed dicta&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Perspiciatis quam et&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Eligendi dignissimos odit&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Veritatis esse cum&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Iusto ut minus&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Id quaerat quae&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Ullam doloribus occaecati&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a&gt;Deserunt dolores odit&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -443,31 +450,36 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-navbar Grid Grid--alignMiddle"</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"menu"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"accedi al menu"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"navigazione"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#menu"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggle"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-toggleText"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-toggle Grid-cell"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggleContainer js-fr-offcanvas-open"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"menu"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"mostra / nascondi il menu"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"mostra / nascondi il menu"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggle"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-toggleText"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-title"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-logo"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://placehold.it/75x80"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-logo Grid-cell"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://placehold.it/75x80"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-title Grid-cell"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-titleLink"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">accesskey</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
           Nome della Pubblica Amministrazione<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>eventuale sottotitolo<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-searchTrigger js-searchTrigger"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#header-utils"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-magnifier"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-visuallyHidden"</span>&gt;</span>vai alla ricerca<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-utils"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-utils"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-searchTrigger Grid-cell"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"#header-search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-Header-search-trigger icon-magnifier"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"attiva il form di ricerca"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"attiva il form di ricerca"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"false"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"#header-search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-Header-search-trigger icon-close u-hiddenVisually"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"disattiva il form di ricerca"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"disattiva il form di ricerca"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-utils Grid-cell"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-social Headroom-hideme"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Seguici su:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-socialIcons"</span>&gt;</span>
@@ -476,20 +488,20 @@
                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-youtube"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Youtube<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-search"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-search"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-search"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Form-field--withPlaceholder"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input u-text-r-s"</span> <span class="hljs-attr">required</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cerca"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-field Form-field--withPlaceholder Grid"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-input Grid-cell u-sizeFill u-text-r-s"</span> <span class="hljs-attr">required</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"cerca"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"cerca"</span>&gt;</span>Cerca...<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Avvia la ricerca"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Avvia la ricerca"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Avvia la ricerca"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Avvia la ricerca"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-languages Headroom-hideme"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>ITA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>ENG<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"sito in italiano"</span>&gt;</span>ITA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"sito in inglese"</span>&gt;</span>ENG<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -508,50 +520,50 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ad corporis officiis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ut adipisci delectus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Aut ducimus fuga<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Omnis sint itaque<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Molestias architecto ipsam<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Et sed dicta<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Perspiciatis quam et<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Eligendi dignissimos odit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Et voluptas nemo<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sed facilis suscipit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Veritatis esse cum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Iusto ut minus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sed facilis suscipit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Nihil architecto id<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Eius perspiciatis rerum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Iusto ut minus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Id quaerat quae<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ullam doloribus occaecati<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sequi et ratione<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Deserunt dolores odit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Labore quas omnis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ad corporis officiis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sequi nihil incidunt<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ut adipisci delectus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sequi et ratione<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Deserunt dolores odit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Molestias architecto ipsam<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Omnis sint itaque<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Aut ducimus fuga<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Eligendi dignissimos odit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Perspiciatis quam et<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Et sed dicta<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Nihil architecto id<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sed facilis suscipit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Et voluptas nemo<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Id quaerat quae<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Iusto ut minus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Veritatis esse cum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Eius perspiciatis rerum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sequi et ratione<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ullam doloribus occaecati<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Deserunt dolores odit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Labore quas omnis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Aut ducimus fuga<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Omnis sint itaque<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Molestias architecto ipsam<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Et voluptas nemo<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sed facilis suscipit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Nihil architecto id<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Eius perspiciatis rerum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sequi et ratione<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sequi nihil incidunt<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Et sed dicta<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Perspiciatis quam et<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Eligendi dignissimos odit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Veritatis esse cum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Iusto ut minus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Id quaerat quae<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ullam doloribus occaecati<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Deserunt dolores odit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
@@ -583,32 +595,39 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-navbar Grid Grid--alignMiddle"</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open"</span>
-      <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"menu"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"accedi al menu"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"navigazione"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#menu"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggle"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-toggleText"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-toggle Grid-cell"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggleContainer js-fr-offcanvas-open"</span>
+        <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"menu"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"mostra / nascondi il menu"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"mostra / nascondi il menu"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggle"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-toggleText"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-title"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-logo"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://placehold.it/75x80"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-logo Grid-cell"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://placehold.it/75x80"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-title Grid-cell"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-titleLink"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">accesskey</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
           </span><span class="hljs-template-variable">{{ site.name }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>eventuale sottotitolo<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-searchTrigger js-searchTrigger"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#header-utils"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-magnifier"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-visuallyHidden"</span>&gt;</span>vai alla ricerca<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-utils"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-utils"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-searchTrigger Grid-cell"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"#header-search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-Header-search-trigger icon-magnifier"</span>
+        <span class="hljs-attr">title</span>=<span class="hljs-string">"attiva il form di ricerca"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"attiva il form di ricerca"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"false"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"#header-search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-Header-search-trigger icon-close u-hiddenVisually"</span>
+        <span class="hljs-attr">title</span>=<span class="hljs-string">"disattiva il form di ricerca"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"disattiva il form di ricerca"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-utils Grid-cell"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-social Headroom-hideme"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Seguici su:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-socialIcons"</span>&gt;</span>
@@ -617,12 +636,12 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-youtube"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Youtube<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-search"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-search"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-search"</span>&gt;</span>
         </span><span class="hljs-template-tag">{% <span class="hljs-name">render</span> '<a href="form--search.html">@form--search</a>' %}</span><span class="xml">
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-languages Headroom-hideme"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>ITA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>ENG<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"sito in italiano"</span>&gt;</span>ITA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Header-language"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"sito in inglese"</span>&gt;</span>ENG<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -697,12 +716,6 @@
                             <code class="Code Code--lang-CSS FileBrowser-code">
                                 <pre>/* @define Header; weak */
 
-:root {
-  --Header-logo-width: 10rem;
-  --Header-smaller-pad: 1rem;
-  --Header-search-icon-size: 4.8rem;
-}
-
 .Header {
   @extend .u-layout-centerContent;
 }
@@ -711,6 +724,9 @@
   background: transparent;
 }
 
+/*
+ *  1. See .Header-titleLink
+ */
 .Header-banner {
   @extend .u-background-95;
   @extend .u-posRelative;
@@ -718,14 +734,19 @@
   @extend .u-border-bottom-xxs;
   @extend .u-padding-top-xs;
   @extend .u-padding-bottom-xs;
-
-  /**
-   * 1. Must be the same as Header-title
-   */
+  @extend .u-padding-left-s;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-padding-left-s; /* 1 */
     @extend .u-padding-top-s;
     @extend .u-padding-bottom-s;
+  }
+  @media (--sm-viewport) {
+    @extend .u-padding-left-none;
+  }
+  @media (--md-viewport) {
+    @extend .u-padding-left-s; /* 1 */
+  }
+  @media (--lg-viewport) {
+    padding-left: calc((1 / 8 + 1 / 12) * 100%) !important;
   }
 }
 
@@ -761,35 +782,15 @@
   @extend .u-lg-inline;
 }
 
-.Header-owner {
-  @extend .u-padding-left-s;
-
-  white-space: nowrap;
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    max-width: 100% !important;
-    padding-left: 0 !important;
-  }
-
-  @media (--lg-viewport) {
-    @extend .u-padding-left-l;
-  }
-}
-
 .Header-owner a {
-  @extend .u-sm-before2of12;
-  @extend .u-md-before2of12;
-  @extend .u-lg-before1of8;
+  @extend .u-sm-before4of12;
+  @extend .u-md-before3of12;
   @extend .u-text-xxs;
   @extend .u-text-sm-xs;
   @extend .u-text-md-s;
   @extend .u-text-lg-s;
   @extend .u-color-white;
   @extend .u-textClean;
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    padding-left: var(--Header-logo-width);
-  }
 }
 
 /* ========================================== */
@@ -821,29 +822,13 @@
   }
 }
 
-/*
- *	1. Align content to header for wide screen
- */
+/* Burger button
+  ========================================== */
+
 .Header-toggle {
-  @extend .u-block;
   @extend .u-size2of12;
-  @extend .u-lg-size1of8; /* 1 */
-  @extend .u-padding-left-xs;
-
-  @extend .u-color-white;
-  @extend .u-text-r-xxs;
-  @extend .u-textWeight-700;
-  @extend .u-textClean;
-
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase;
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-padding-left-xxl;
-  }
-  @media (--lg-viewport) {
-    @extend .u-margin-left-l;
-  }
+  @extend .u-lg-size1of8;
+  @extend .u-textCenter;
 }
 
 .Header-toggleText {
@@ -852,21 +837,31 @@
   @extend .u-md-block;
   @extend .u-lg-block;
 
+  @extend .u-color-white;
+  @extend .u-text-r-xxs;
+  @extend .u-textWeight-700;
+  @extend .u-textClean;
+
+  letter-spacing: 0.1em !important;
   margin-bottom: -calc(1rem + var(--Hamburger-height));
   margin-top: calc(1rem + var(--Hamburger-height));
+  text-transform: uppercase;
 }
 
+/* Logo image
+  ========================================== */
+
 .Header-logo {
-  @extend .u-floatLeft;
-
-  min-width: calc(var(--Header-logo-width) * 0.6);
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    min-width: var(--Header-logo-width);
-  }
+  @extend .u-size2of12;
+  @extend .u-sm-size2of12;
+  @extend .u-md-size1of12;
+  @extend .u-lg-size1of12;
+  @extend .u-textCenter;
 }
 
 .Header-logo img {
+  @extend .u-alignMiddle;
+
   width: 4.5rem;
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
@@ -874,36 +869,33 @@
   }
 }
 
+/* Title link
+  ========================================== */
+
 .Header-title {
   @extend .u-flex;
   @extend .u-flexAlignItemsCenter;
 
   @extend .u-lineHeight-xxs;
 
-  @extend .u-padding-left-xs;
-  @extend .u-padding-right-xxs;
-
-  @extend .u-size10of12;
-  @extend .u-sm-size6of12;
-  @extend .u-md-size6of12;
-  @extend .u-lg-size6of12;
+  @extend .u-size6of12;
+  @extend .u-sm-size4of12;
+  @extend .u-md-size5of12;
+  @extend .u-lg-size5of12;
 
   @media (--md-viewport), (--lg-viewport) {
     @extend .u-lineHeight-m;
   }
 }
 
-/*
- * 	1. Make room for searchTrigger
- */
 .Header-titleLink {
-  @extend .u-size10of12; /* 1 */
-  @extend .u-sm-sizeFull;
-  @extend .u-md-sizeFull;
-  @extend .u-lg-sizeFull;
+  @media (--md-viewport) {
+    @extend .u-padding-left-s;
+  }
 }
 
 .Header-titleLink a {
+  @extend .u-inlineBlock;
   @extend .u-text-xs;
   @extend .u-text-sm-m;
   @extend .u-text-md-l;
@@ -912,6 +904,8 @@
   @extend .u-textWeight-700;
   @extend .u-color-white;
   @extend .u-textClean;
+  @extend .u-padding-left-xxs;
+  @extend .u-padding-right-xxs;
 }
 
 .Header-titleLink small {
@@ -924,20 +918,19 @@
   @extend .u-textClean;
 }
 
-/* ========================================== */
+/* Search button for small screens
+  ========================================== */
 
 .Header-searchTrigger {
+  @extend .u-sizeFill;
   @extend .u-sm-hidden;
   @extend .u-md-hidden;
   @extend .u-lg-hidden;
-  @extend .u-sizeFill;
-  @extend .u-padding-left-xxs;
-  @extend .u-padding-bottom-xs;
-  @extend .u-padding-top-xs;
+  @extend .u-textRight;
 }
 
-.Header-searchTrigger a {
-  @extend .u-floatRight;
+.Header-searchTrigger button {
+  @extend .u-inlineBlock;
   @extend .u-linkClean;
   @extend .u-background-40;
   @extend .u-color-white;
@@ -945,11 +938,8 @@
   @extend .u-text-r-xxs;
 }
 
-.Header-searchTrigger a span {
-  @extend .u-hiddenVisually;
-}
-
-/* ========================================== */
+/* Utils block (social + languages + search form)
+  ================================================ */
 
 .Header-utils {
   @extend .u-block;
@@ -961,63 +951,50 @@
   @extend .u-md-size4of12;
   @extend .u-lg-size4of12;
 
-  @extend .u-background-40;
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-background-50;
-  }
-
   @media (--sm-viewport) {
-    @extend .u-padding-right-s;
     @extend .u-margin-top-xs;
     @extend .u-margin-bottom-xs;
   }
-
-  @media (--md-viewport) {
-    @extend .u-padding-right-m;
-  }
-
-  @media (--lg-viewport) {
-    @extend .u-padding-right-xxl;
-  }
 }
 
-.Header-utils &gt; *,
-.Header-search button {
+/*
+ *  Hide utils on small screens
+ */
+.Header-utils &gt; * {
   @extend .u-hidden;
   @extend .u-sm-block;
   @extend .u-md-block;
   @extend .u-lg-block;
+  @extend .u-floatRight;
+  @extend .u-cf;
+
+  width: 100%;
 }
 
-.Header-search input {
-  @extend .u-sizeFill;
-}
+/* Search form
+  ================================================ */
 
 .Header-search {
   @extend .u-padding-all-xxs;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-margin-bottom-m;
     @extend .u-padding-left-m;
+    @extend .u-padding-right-none;
     @extend .u-floatRight;
 
     max-width: 24em;
-    padding-right: 0 !important;
   }
 }
 
-.Header-utils:target &gt; .Header-search {
-  @extend .u-sizeFull;
+.Header-search.is-active {
+  @extend .u-block;
+  @extend .u-background-40;
+  @extend .u-margin-top-xs;
+  @extend .u-padding-all-xxs;
 }
 
-/* ========================================== */
-
-.Header-utils &gt; div {
-  @extend .u-floatRight;
-  @extend .u-cf;
-
-  width: 100%;
-}
+/* Lanaguage bar
+  ================================================ */
 
 .Header-language {
   @extend .u-color-white;
@@ -1035,6 +1012,9 @@
   @extend .u-background-white;
   @extend .u-color-50;
 }
+
+/* Social icons / link
+  ================================================ */
 
 .Header-social {
   @extend .u-text-r-xs;
@@ -1096,7 +1076,8 @@
   margin: 0 !important;
   max-height: 0;
   overflow-y: hidden;
-  padding: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 .Headroom--fixed,
@@ -1130,7 +1111,7 @@
 
 .Headroom--fixed.Headroom--not-top .Header-navbar,
 .Headroom--pinned.Headroom--not-top .Header-navbar {
-  @extend .u-padding-top-none;
+  @extend .u-padding-top-xxs;
   @extend .u-padding-bottom-none;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-padding-top-xxs;
@@ -1168,7 +1149,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">9.1 KB</span>
+                    <span class="Meta-value">8.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -1285,6 +1266,24 @@
 
 }
 
+<span class="hljs-comment">/*
+ *  Toggle search-form visibility for mobile
+ */</span>
+$(<span class="hljs-string">'.js-Header-search-trigger'</span>).click((e) =&gt; {
+  $(<span class="hljs-string">'.js-Header-search-trigger'</span>).each((i, el) =&gt; {
+    <span class="hljs-keyword">const</span> $el = $(el)
+    <span class="hljs-keyword">if</span> (<span class="hljs-string">'true'</span> === $el.attr(<span class="hljs-string">'aria-hidden'</span>)) {
+      $el.attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'false'</span>)
+      $el.removeClass(<span class="hljs-string">'u-hiddenVisually'</span>)
+    }
+    <span class="hljs-keyword">else</span> {
+      $el.attr(<span class="hljs-string">'aria-hidden'</span>, <span class="hljs-string">'true'</span>)
+      $el.addClass(<span class="hljs-string">'u-hiddenVisually'</span>)
+    }
+  })
+  $($(e.target).attr(<span class="hljs-string">'aria-controls'</span>)).toggleClass(<span class="hljs-string">'is-active'</span>)
+})
+
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   Headroom,
   headroom
@@ -1305,7 +1304,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.8 KB</span>
+                    <span class="Meta-value">3.3 KB</span>
                 </li>
             </ul>
         </div>

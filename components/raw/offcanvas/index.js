@@ -37,35 +37,42 @@ const opts = {
 const offcanvas = Froffcanvas(opts)
 
 /*
+ *  Prevent scroll on body when offcanvas is visible
+ *  (the touchmove handler targets iOS devices)
+ */
+const _handleModalScroll = () => {
+  $(opts.contentSelector).on('transitionend', function() {
+    if (!$(opts.panelSelector).hasClass(opts.activeClass)) {
+      $('body, html').css({
+        'overflow-y': 'visible'
+      })
+      $(document).off('touchmove.offcanvas')
+    } else {
+      const scrollTop = $('body').scrollTop()
+      $('body, html').css({
+        'overflow-y': 'hidden'
+      })
+      $(document).on('touchmove.offcanvas', function() {
+        $('body').scrollTop(scrollTop)
+      })
+    }
+  })
+}
+
+/*
  *	FIXME: hack to show / hide the background panel
  */
-const _handleModal = function(e) {
-  if (e && $(opts.panelSelector).hasClass('is-active') &&
+const _handleModal = (e) => {
+  if (e && $(opts.panelSelector).hasClass(opts.activeClass) &&
     !$(e.target).is(opts.contentSelector)) {
     $(opts.closeSelector).click()
   }
   $(opts.modalSelector).one('click', _handleModal)
 }
 
-/*
- *	Prevent scroll on body when offcanvas is visible
- */
-const _handleOverflow = () => {
-  if ('false' === $(opts.panelSelector).attr('aria-hidden')) {
-    $('body').css('overflow-y', 'hidden')
-  } else {
-    $('body').css('overflow-y', 'visible')
-  }
-}
-
 $(document).ready(() => {
   _handleModal()
-
-  $(opts.openSelector).click(() => false)
-
-  $(opts.jsSelector)
-    .focus(_handleOverflow)
-    .blur(_handleOverflow)
+  _handleModalScroll()
 })
 
 export default {

@@ -19,32 +19,39 @@
 
   <div class="Header-navbar Grid Grid--alignMiddle">
 
-    <a class="Hamburger-toggleContainer Header-toggle Grid-cell js-fr-offcanvas-open"
-      aria-controls="menu" aria-label="accedi al menu" title="navigazione" href="#menu">
-      <span class="Hamburger-toggle" aria-hidden="true"></span>
-      <span class="Header-toggleText">Menu</span>
-    </a>
+    <div class="Header-toggle Grid-cell">
+      <button class="Hamburger-toggleContainer js-fr-offcanvas-open"
+        aria-controls="menu" aria-label="mostra / nascondi il menu" title="mostra / nascondi il menu">
+        <span class="Hamburger-toggle" role="presentation"></span>
+        <span class="Header-toggleText" role="presentation">Menu</span>
+      </button>
+    </div>
 
-    <div class="Header-title">
-      <div class="Header-logo" aria-hidden="true">
-        <a href="/" tabindex="-1">
-          <img src="http://placehold.it/75x80" alt="">
-        </a>
-      </div>
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="/" tabindex="-1">
+        <img src="http://placehold.it/75x80" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
       <h1 class="Header-titleLink">
         <a accesskey="1" href="/">
           Nome della Pubblica Amministrazione<br>
           <small>eventuale sottotitolo</small>
         </a>
       </h1>
-      <div class="Header-searchTrigger js-searchTrigger">
-        <a href="#header-utils" class="icon-magnifier">
-          <span class="u-visuallyHidden">vai alla ricerca</span>
-        </a>
-      </div>
     </div>
 
-    <div class="Header-utils" id="header-utils">
+    <div class="Header-searchTrigger Grid-cell">
+      <button aria-controls="#header-search" class="js-Header-search-trigger icon-magnifier"
+        title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
+      </button>
+      <button aria-controls="#header-search" class="js-Header-search-trigger icon-close u-hiddenVisually"
+        title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="Header-utils Grid-cell">
       <div class="Header-social Headroom-hideme">
         <p>Seguici su:</p>
         <ul class="Header-socialIcons">
@@ -53,12 +60,12 @@
           <li><a href=""><span class="icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
         </ul>
       </div>
-      <div class="Header-search">
+      <div class="Header-search" id="header-search">
         <form class="Form">
-  <div class="Form-field Form-field--withPlaceholder">
-    <input class="Form-input u-text-r-s" required id="cerca">
+  <div class="Form-field Form-field--withPlaceholder Grid">
+    <input class="Form-input Grid-cell u-sizeFill u-text-r-s" required id="cerca">
     <label class="Form-label" for="cerca">Cerca...</label>
-    <button class="icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"
+    <button class="Grid-cell u-sizeFit icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"
       title="Avvia la ricerca" aria-label="Avvia la ricerca">
     </button>
   </div>
@@ -66,8 +73,8 @@
 
       </div>
       <div class="Header-languages Headroom-hideme">
-        <a class="Header-language is-active" href="">ITA</a>
-        <a class="Header-language" href="">ENG</a>
+        <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
+        <a class="Header-language" href="" title="sito in inglese">ENG</a>
       </div>
     </div>
 
@@ -90,50 +97,50 @@
     </div>
     <nav>
       <ul class="Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs">
-  <li><a>Ad corporis officiis</a>
+  <li><a>Ut adipisci delectus</a>
     <ul>
-      <li><a>Aut ducimus fuga</a></li>
-      <li><a>Omnis sint itaque</a></li>
-      <li><a>Molestias architecto ipsam</a>
+      <li><a>Et sed dicta</a></li>
+      <li><a>Perspiciatis quam et</a></li>
+      <li><a>Eligendi dignissimos odit</a>
         <ul>
-          <li><a>Et voluptas nemo</a></li>
-          <li><a>Sed facilis suscipit</a>
+          <li><a>Veritatis esse cum</a></li>
+          <li><a>Iusto ut minus</a>
             <ul>
-              <li><a>Sed facilis suscipit</a></li>
-              <li><a>Nihil architecto id</a></li>
-              <li><a>Eius perspiciatis rerum</a></li>
+              <li><a>Iusto ut minus</a></li>
+              <li><a>Id quaerat quae</a></li>
+              <li><a>Ullam doloribus occaecati</a></li>
             </ul>
           </li>
-          <li><a>Sequi et ratione</a></li>
+          <li><a>Deserunt dolores odit</a></li>
         </ul>
       </li>
-      <li><a>Labore quas omnis</a></li>
-      <li><a>Ad corporis officiis</a></li>
+      <li><a>Sequi nihil incidunt</a></li>
+      <li><a>Ut adipisci delectus</a></li>
     </ul>
   </li>
-  <li><a>Sequi et ratione</a>
+  <li><a>Deserunt dolores odit</a>
     <ul>
-      <li><a>Molestias architecto ipsam</a></li>
-      <li><a>Omnis sint itaque</a></li>
-      <li><a>Aut ducimus fuga</a>
+      <li><a>Eligendi dignissimos odit</a></li>
+      <li><a>Perspiciatis quam et</a></li>
+      <li><a>Et sed dicta</a>
         <ul>
-          <li><a>Nihil architecto id</a></li>
-          <li><a>Sed facilis suscipit</a></li>
-          <li><a>Et voluptas nemo</a></li>
+          <li><a>Id quaerat quae</a></li>
+          <li><a>Iusto ut minus</a></li>
+          <li><a>Veritatis esse cum</a></li>
         </ul>
       </li>
-      <li><a>Eius perspiciatis rerum</a></li>
-      <li><a>Sequi et ratione</a>
+      <li><a>Ullam doloribus occaecati</a></li>
+      <li><a>Deserunt dolores odit</a>
         <ul>
-          <li><a>Labore quas omnis</a></li>
-          <li><a>Aut ducimus fuga</a></li>
-          <li><a>Omnis sint itaque</a></li>
-          <li><a>Molestias architecto ipsam</a></li>
-          <li><a>Et voluptas nemo</a></li>
-          <li><a>Sed facilis suscipit</a></li>
-          <li><a>Nihil architecto id</a></li>
-          <li><a>Eius perspiciatis rerum</a></li>
-          <li><a>Sequi et ratione</a></li>
+          <li><a>Sequi nihil incidunt</a></li>
+          <li><a>Et sed dicta</a></li>
+          <li><a>Perspiciatis quam et</a></li>
+          <li><a>Eligendi dignissimos odit</a></li>
+          <li><a>Veritatis esse cum</a></li>
+          <li><a>Iusto ut minus</a></li>
+          <li><a>Id quaerat quae</a></li>
+          <li><a>Ullam doloribus occaecati</a></li>
+          <li><a>Deserunt dolores odit</a></li>
         </ul>
       </li>
     </ul>
@@ -161,19 +168,19 @@
       <div class="Grid-cell u-md-size6of12 u-lg-size6of12">
         <article class="Prose u-layout-prose">
           <p>
-            Deserunt dolorem dignissimos aut praesentium ducimus aut. Id id qui ad mollitia aliquam quaerat nulla. Consequatur beatae iste recusandae aut veritatis. Et eum consectetur ab quaerat tempora. Earum dolor sed autem quos officia.
- Temporibus occaecati soluta quis. Sunt eum ullam consequuntur. Occaecati consequatur sit et.
- Amet quas quia quod temporibus fugiat eos ea sit. Quasi eos aut ipsam ab qui quia. Et et perspiciatis rerum et omnis at.
+            Deleniti eveniet earum. Unde et occaecati eaque iure voluptatem repudiandae facilis. Eum illo animi nihil magnam nisi laudantium aspernatur non aliquam.
+ Accusantium sequi alias ut. Laudantium omnis error atque hic. Omnis soluta dolor corrupti omnis. Voluptatem maiores non mollitia quas ut.
+ Quisquam et perspiciatis maiores. Voluptate dolore et non nobis magnam perspiciatis. Et est similique vero. Repudiandae accusantium est expedita rerum reiciendis eligendi. Cupiditate aperiam sed ut ea quam sed beatae.
           </p>
           <p>
-            Molestias aut velit. Nemo temporibus hic excepturi eaque ratione. Ea velit architecto corporis esse autem sed necessitatibus vitae.
- Id eligendi iure quia nam eius rerum. Dolorum neque iste magni doloribus recusandae. Voluptatibus eum commodi.
- Qui beatae molestiae voluptatem debitis. Est atque commodi et facere. Unde quasi corrupti aspernatur tenetur necessitatibus tempore est quis consequatur.
+            Dolorem dolorem voluptate magni earum ullam. Iusto impedit tempora sit. Odit laboriosam corrupti fugiat atque est.
+ Autem esse mollitia delectus doloribus quia itaque est libero commodi. Quos iure porro fuga aliquam et a earum. Pariatur sint maiores est voluptatem alias harum. Cumque qui est ipsam in iste voluptatum quis. Iusto vero voluptatem a minima libero vitae maiores libero. Sint ut enim ut assumenda unde dolores.
+ Nihil voluptatem laudantium ut animi inventore accusantium inventore eum pariatur. Sit sed eum aut velit incidunt voluptatem. Voluptatibus ducimus ab amet et incidunt eos eligendi non odio. Harum rerum hic veniam quod.
           </p>
           <p>
-            Itaque earum quis doloribus nam. Alias voluptas illo doloremque. Ut tenetur nihil. Unde nesciunt ullam iure sit quisquam laudantium. Voluptatum reprehenderit quam ad soluta quam veniam quia ex ipsa.
- Eaque eveniet a blanditiis totam mollitia magnam. Et autem accusamus cupiditate voluptatum. Aut ullam temporibus ut vel in. Dignissimos similique at est sed necessitatibus sit.
- Ipsa non illo repudiandae non blanditiis omnis. Velit voluptas repellat omnis sit ipsum. Odio quo eos iure explicabo. Consequatur et culpa reprehenderit quis. Eius et voluptatem quos sint.
+            Error quas voluptas earum. Sed facere iure aspernatur et placeat. Odit vitae recusandae laboriosam ex occaecati. Ut dolor aliquam. Aperiam ipsum sit qui inventore pariatur libero nostrum quod.
+ Beatae adipisci dolor dolor minus et id illo deleniti ea. Aperiam ipsam ut. Officiis culpa velit in est aliquam exercitationem quidem. Dolorem reprehenderit dolores. Consequatur neque hic aut alias nisi sit doloribus autem sit.
+ Dolor fugit inventore reprehenderit accusamus. Libero voluptates nisi hic reprehenderit qui officiis cum vel impedit. Voluptatum provident consequatur non voluptas eaque. Perspiciatis quia molestias et similique. Dolorem corrupti modi ullam sint omnis ratione in reprehenderit.
           </p>
         </article>
       </div>
@@ -199,20 +206,20 @@
         <div class="u-size11of12" id="subnav">
           <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
   <li>
-    <a class="Linklist-link Linklist-link--lev1" href="">Veniam consequatur fugit quos dicta velit quia libero.</a>
+    <a class="Linklist-link Linklist-link--lev1" href="">Ab eos doloribus.</a>
   </li>
-  <li><a class="Linklist-link Linklist-link--lev2 is-expanded" href="">Culpa sapiente repellat ut.</a>
+  <li><a class="Linklist-link Linklist-link--lev2 is-expanded" href="">Velit vero quia modi est earum aut.</a>
     <ul>
-      <li><a href="" class="Linklist-link Linklist-link--lev3">Aut quis aperiam vero sed sint veritatis suscipit.</a></li>
-      <li><a href="">Maiores voluptatem alias incidunt corrupti.</a></li>
-      <li><a href="">Sunt quia occaecati sunt qui nobis minima minus officia qui.</a></li>
-      <li><a href="">Quam nostrum ipsum deserunt.</a></li>
+      <li><a href="" class="Linklist-link Linklist-link--lev3">Et dolorem laboriosam beatae voluptas commodi quia.</a></li>
+      <li><a href="">Facilis libero et.</a></li>
+      <li><a href="">Itaque quia voluptatem vel accusamus excepturi nisi est neque.</a></li>
+      <li><a href="">Possimus fugiat laboriosam consectetur dolores error.</a></li>
     </ul>
   </li>
-  <li><a href="">Quis quaerat ratione dignissimos.</a></li>
-  <li><a href="">Placeat dolor consequatur.</a></li>
-  <li><a href="" class="Linklist-link is-collapsed">Accusamus tempora repellat.</a></li>
-  <li><a href="">Voluptas et fugiat libero explicabo numquam quo ut optio iure.</a></li>
+  <li><a href="">Sed voluptatem sed.</a></li>
+  <li><a href="">Dolorum eveniet sint architecto qui aliquid ut vel incidunt.</a></li>
+  <li><a href="" class="Linklist-link is-collapsed">Iusto molestiae quos cum dolorum.</a></li>
+  <li><a href="">Nesciunt alias ex.</a></li>
 </ul>
 
         </div>

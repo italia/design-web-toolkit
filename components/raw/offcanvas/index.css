@@ -1,7 +1,7 @@
 /** @define Offcanvas; */
 
 :root {
-  --Offcanvas-width: 24em;
+  --Offcanvas-width: 22em;
   --Offcanvas-max-width: 80%;
 }
 
@@ -17,15 +17,16 @@
 
 .Offcanvas.is-ready .Offcanvas-content {
   @extend .u-zindex-max;
+  @extend .u-borderShadow-m;
 
   height: 100%;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   position: fixed;
   top: 0;
   transform: translateX(0);
   transition: transform 200ms ease-out;
   will-change: translateX;
-  @extend .u-borderShadow-m;
 }
 
 .Offcanvas--right.is-ready .Offcanvas-content {

@@ -2,7 +2,7 @@
 
 :root {
   --Treeview-link-padding: 0.5em;
-  --Treeview-link-arrow-width: 1.5em;
+  --Treeview-link-arrow-width: 1.2em;
   --Treeview-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
   --Treeview-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
 }
@@ -37,7 +37,7 @@
 
 .Treeview li[aria-expanded=true] > a,
 .Treeview li[aria-expanded=true] > a:hover {
-  @extend .u-background-grey-20;
+  @extend .u-background-grey-10;
 }
 
 .Treeview ul ul ul a,

@@ -102,6 +102,24 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
 
 }
 
+/*
+ *  Toggle search-form visibility for mobile
+ */
+$('.js-Header-search-trigger').click((e) => {
+  $('.js-Header-search-trigger').each((i, el) => {
+    const $el = $(el)
+    if ('true' === $el.attr('aria-hidden')) {
+      $el.attr('aria-hidden', 'false')
+      $el.removeClass('u-hiddenVisually')
+    }
+    else {
+      $el.attr('aria-hidden', 'true')
+      $el.addClass('u-hiddenVisually')
+    }
+  })
+  $($(e.target).attr('aria-controls')).toggleClass('is-active')
+})
+
 export default {
   Headroom,
   headroom
