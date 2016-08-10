@@ -78,14 +78,14 @@ sovrascrivere le variabili utilizzate all’interno del toolkit:</p>
   <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--Pac-font-family-sans);
 }</pre></code><p>Similmente è possibile sovrascrivere qualsiasi variabile contenuta nei moduli CSS,
 modificando ad esempio i colori che caratterizzano l’aspetto grafico dei vari elementi.</p>
-<p>Per applicare font e colori personalizzati:</p>
+<p>Per applicare font e colori personalizzati bisogna:</p>
 <ol>
-<li>modifica il file del tema <code>src/themes/index.css</code> sovrascrivendo le variabili CSS</li>
-<li>effettua una nuova <em>build</em> del toolkit tramite <code>npm run build</code> (vedi <a href="/docs/sviluppare">“Utilizzare l’ambiente di sviluppo”</a>)</li>
-<li>incorpora i CSS generati nei tuoi template HTML</li>
+<li>modificare il file del tema <code>src/themes/index.css</code> sovrascrivendo le variabili CSS</li>
+<li>effettuare una nuova <em>build</em> del toolkit tramite <code>npm run build</code> (vedi <a href="/docs/sviluppare">“Utilizzare l’ambiente di sviluppo”</a>)</li>
+<li>incorporare i CSS generati nei template HTML</li>
 </ol>
 <p>La palette di colori è costruita automaticamente (<code>src/utils/colors/index.css</code> @TODO)
-applicando tinte e tonalità secondo quanto descritto nel relativo paragrafo delle Linee Guida @TODO;
+applicando tinte e tonalità secondo quanto descritto nel <a href="http://design.italia.it/linee-guida/colori/">relativo paragrafo delle Linee Guida</a>;
 in questo modo è sufficiente sovrascrivere la variabile <code>--Color-primary</code> per ottenere l’intera <em>palette</em>.</p>
 <p>Tutte le modifiche che riguardano uno specifico tema vanno applicate assegnando al tag <code>body</code>
 la <strong>classe</strong> utilizzata in <code>src/themes/index.css</code> (nel caso specifico <code>Pac</code>, ma può esser scelta arbitrariamente).</p>

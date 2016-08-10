@@ -71,16 +71,27 @@
 <li>uno (o più) snippet HTML di esempio (file *.tmpl)</li>
 </ol>
 <p>All’interno della directory di ogni modulo deve esser presente almeno una tra queste tre componenti.</p>
+<p>Il codice CSS deve esser collocato in un file <code>src/modules/&lt;nome-modulo&gt;/index.css</code>
+e <mark>importato nell’<code>index.css</code> globale contenuto nella directory radice del toolkit</mark>.</p>
+<p>Il codice Javascript deve esser collocato in un file <code>src/modules/&lt;nome-modulo&gt;/index.js</code>
+e <mark>importato nell’<code>index.js</code> globale contenuto nella directory radice del toolkit</mark>.</p>
+<p>Ulteriori <strong>assets</strong> (CSS / JS / immagini) contenuti nella directory del modulo
+possono essere importati nei rispettivi file index.</p>
+<p>Il nome dei file con gli snippet HTML <em>deve</em> iniziare con quello del modulo, ad esempio:</p>
+<ul>
+<li><code>src/modules/&lt;nome-modulo&gt;/&lt;nome-modulo&gt;.tmpl</code></li>
+<li><code>src/modules/&lt;nome-modulo&gt;/&lt;nome-modulo&gt;--2.tmpl</code></li>
+</ul>
 <p>Negli snippet HTML è possibile utilizzare i costrutti del
 <a href="https://mozilla.github.io/nunjucks/">linguaggio di templating nunjucks</a>.</p>
-<p>I CSS vengono processati tramite PostCSS (e plugin, vedi la sezione “<a href="/docs/tecnologie">Tecnologie</a>“).</p>
+<p>I CSS vengono processati tramite PostCSS (e i relativi plugin presentati nella sezione <a href="/docs/tecnologie">Tecnologie</a>).</p>
 <p>Nei file Javascript è possibile utilizzare la sintassi <a href="https://babeljs.io/docs/learn-es2015/">ECMAScript 2015</a>.</p>
 <h3 id="regole-generali-nello-sviluppo-di-nuovi-moduli">Regole generali nello sviluppo di nuovi moduli</h3>
 <ul>
 <li>i moduli devono essere quanto più possibile indipendenti tra loro</li>
-<li>i CSS possono utilizzare le classi di utilità (quelle con prefisso <code>u-*</code>), ma <strong>mai</strong> incorporare selettori di altri moduli</li>
+<li>nei CSS si possono utilizzare le classi di utilità (quelle con prefisso <code>u-*</code>), ma <strong>non</strong> incorporare selettori di altri moduli</li>
 <li><a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">le regole di nomenclatura sono quelle di SUIT CSS</a></li>
-<li>i Javascript devono dichiarare tutte le loro dipendenze (es. tramite il costrutto <code>import</code>)</li>
+<li>i componenti Javascript devono dichiarare tutte le loro dipendenze nell’<code>index.js</code> (es. tramite il costrutto <code>import</code>)</li>
 <li>è incoraggiato l’utilizzo del costrutto PostCSS <code>@extend</code>, ma <strong>esclusivamente</strong> per estendere le classi di utilità (<code>u-*</code>)</li>
 </ul>
 <p><a href="/docs/struttura">Struttura del filesystem</a></p>
