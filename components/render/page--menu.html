@@ -20,11 +20,11 @@
   <div class="Header-navbar Grid Grid--alignMiddle">
 
     <div class="Header-toggle Grid-cell">
-      <button class="Hamburger-toggleContainer js-fr-offcanvas-open"
-        aria-controls="menu" aria-label="mostra / nascondi il menu" title="mostra / nascondi il menu">
+      <a class="Hamburger-toggleContainer js-fr-offcanvas-open" href="#menu"
+        aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
         <span class="Hamburger-toggle" role="presentation"></span>
         <span class="Header-toggleText" role="presentation">Menu</span>
-      </button>
+      </a>
     </div>
 
     <div class="Header-logo Grid-cell" aria-hidden="true">
@@ -43,10 +43,10 @@
     </div>
 
     <div class="Header-searchTrigger Grid-cell">
-      <button aria-controls="#header-search" class="js-Header-search-trigger icon-magnifier"
+      <button aria-controls="#header-search" class="js-Header-search-trigger Icon Icon-search"
         title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
       </button>
-      <button aria-controls="#header-search" class="js-Header-search-trigger icon-close u-hiddenVisually"
+      <button aria-controls="#header-search" class="js-Header-search-trigger Icon Icon-close u-hiddenVisually"
         title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
       </button>
     </div>
@@ -55,9 +55,9 @@
       <div class="Header-social Headroom-hideme">
         <p>Seguici su:</p>
         <ul class="Header-socialIcons">
-          <li><a href=""><span class="icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
-          <li><a href=""><span class="icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
-          <li><a href=""><span class="icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+          <li><a href=""><span class="Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+          <li><a href=""><span class="Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+          <li><a href=""><span class="Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
         </ul>
       </div>
       <div class="Header-search" id="header-search">
@@ -65,7 +65,7 @@
   <div class="Form-field Form-field--withPlaceholder Grid">
     <input class="Form-input Grid-cell u-sizeFill u-text-r-s" required id="cerca">
     <label class="Form-label" for="cerca">Cerca...</label>
-    <button class="Grid-cell u-sizeFit icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"
+    <button class="Grid-cell u-sizeFit Icon-search u-background-60 u-color-white u-padding-all-s u-textWeight-700"
       title="Avvia la ricerca" aria-label="Avvia la ricerca">
     </button>
   </div>
@@ -85,9 +85,9 @@
     
       <nav class="Megamenu Megamenu--styled">
         <ul class="Megamenu-list">
-          <li class="Megamenu-item"><a href="">Fuga sit nobis</a></li>
-          <li class="Megamenu-item"><a href="">Quod ullam et</a></li>
-          <li class="Megamenu-item"><a href="">Dolorum velit quis</a></li>
+          <li class="Megamenu-item"><a href="">Alias deserunt dignissimos</a></li>
+          <li class="Megamenu-item"><a href="">Sed et autem</a></li>
+          <li class="Megamenu-item"><a href="">At ipsum sunt</a></li>
         </ul>
       </nav>
     
@@ -98,62 +98,61 @@
 
 
 
-<section class="Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden" id="menu">
+<section class="Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden u-nojsDisplayNone" id="menu">
 	<h2 class="u-hiddenVisually">Menu di navigazione</h2>
   <div class="Offcanvas-content u-background-white">
-    <div class="Offcanvas-toggleContainer u-padding-bottom-l u-background-70">
-      <button class="Hamburger-toggleContainer u-block u-color-white u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close"
-        aria-controls="menu" aria-label="chiudi il menu" title="esci dalla navigazione">
-        <span class="Hamburger-toggle is-active">
-        </span>
-      </button>
+    <div class="Offcanvas-toggleContainer u-background-70 u-jsHidden">
+      <a class="Hamburger-toggleContainer u-block u-color-white u-padding-bottom-xxl u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close"
+        aria-controls="menu" aria-label="esci dalla navigazione" title="esci dalla navigazione" href="#">
+        <span class="Hamburger-toggle is-active" aria-hidden="true"></span>
+      </a>
     </div>
     <nav>
       <ul class="Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs">
-  <li><a>Deleniti aut sed</a>
+  <li><a>Quis aliquid minima</a>
     <ul>
-      <li><a>Fuga sit nobis</a></li>
-      <li><a>Quod ullam et</a></li>
-      <li><a>Dolorum velit quis</a>
+      <li><a>Alias deserunt dignissimos</a></li>
+      <li><a>Sed et autem</a></li>
+      <li><a>At ipsum sunt</a>
         <ul>
-          <li><a>Ex eum ratione</a></li>
-          <li><a>Reiciendis vitae quidem</a>
+          <li><a>Reprehenderit rerum rem</a></li>
+          <li><a>Unde vero placeat</a>
             <ul>
-              <li><a>Reiciendis vitae quidem</a></li>
-              <li><a>Ab aut minus</a></li>
-              <li><a>Voluptatem dolores consequatur</a></li>
+              <li><a>Unde vero placeat</a></li>
+              <li><a>Molestias quidem pariatur</a></li>
+              <li><a>Non ducimus aut</a></li>
             </ul>
           </li>
-          <li><a>Aliquam magni non</a></li>
+          <li><a>Nobis consequatur tempore</a></li>
         </ul>
       </li>
-      <li><a>Sit odio voluptatem</a></li>
-      <li><a>Deleniti aut sed</a></li>
+      <li><a>Eius dolorum a</a></li>
+      <li><a>Quis aliquid minima</a></li>
     </ul>
   </li>
-  <li><a>Aliquam magni non</a>
+  <li><a>Nobis consequatur tempore</a>
     <ul>
-      <li><a>Dolorum velit quis</a></li>
-      <li><a>Quod ullam et</a></li>
-      <li><a>Fuga sit nobis</a>
+      <li><a>At ipsum sunt</a></li>
+      <li><a>Sed et autem</a></li>
+      <li><a>Alias deserunt dignissimos</a>
         <ul>
-          <li><a>Ab aut minus</a></li>
-          <li><a>Reiciendis vitae quidem</a></li>
-          <li><a>Ex eum ratione</a></li>
+          <li><a>Molestias quidem pariatur</a></li>
+          <li><a>Unde vero placeat</a></li>
+          <li><a>Reprehenderit rerum rem</a></li>
         </ul>
       </li>
-      <li><a>Voluptatem dolores consequatur</a></li>
-      <li><a>Aliquam magni non</a>
+      <li><a>Non ducimus aut</a></li>
+      <li><a>Nobis consequatur tempore</a>
         <ul>
-          <li><a>Sit odio voluptatem</a></li>
-          <li><a>Fuga sit nobis</a></li>
-          <li><a>Quod ullam et</a></li>
-          <li><a>Dolorum velit quis</a></li>
-          <li><a>Ex eum ratione</a></li>
-          <li><a>Reiciendis vitae quidem</a></li>
-          <li><a>Ab aut minus</a></li>
-          <li><a>Voluptatem dolores consequatur</a></li>
-          <li><a>Aliquam magni non</a></li>
+          <li><a>Eius dolorum a</a></li>
+          <li><a>Alias deserunt dignissimos</a></li>
+          <li><a>Sed et autem</a></li>
+          <li><a>At ipsum sunt</a></li>
+          <li><a>Reprehenderit rerum rem</a></li>
+          <li><a>Unde vero placeat</a></li>
+          <li><a>Molestias quidem pariatur</a></li>
+          <li><a>Non ducimus aut</a></li>
+          <li><a>Nobis consequatur tempore</a></li>
         </ul>
       </li>
     </ul>
@@ -181,12 +180,12 @@
       </p>
     </div>
     <div class="u-text-r-l u-layout-prose">
-      <h2 class="u-text-h2 u-margin-r-bottom">Fuga sit nobis</h2>
+      <h2 class="u-text-h2 u-margin-r-bottom">Alias deserunt dignissimos</h2>
       <p class="u-textSecondary u-lineHeight-l">
-        Debitis atque qui nihil voluptas amet.
-        Omnis tempore est adipisci sed dolores.
-        Temporibus quia dolorem.
-        Laudantium sed ex quibusdam.
+        Reiciendis nihil et quo ullam magnam occaecati expedita quibusdam sapiente.
+        Dolor voluptatem est perspiciatis.
+        Mollitia dolores officiis occaecati ut vitae id ad libero corporis.
+        Tempora porro ea quia deleniti hic quia enim reiciendis minima.
       </p>
     </div>
   </div>
@@ -230,7 +229,7 @@
 
     <div class="Grid Grid--withGutter u-text-r-l u-padding-r-bottom">
       <div class="Grid-cell u-layout-centerLeft">
-        <h2 class="u-text-r-l">Fuga sit nobis</h2>
+        <h2 class="u-text-r-l">Alias deserunt dignissimos</h2>
       </div>
       <div class="Grid-cell u-layout-centerRight">
         <h2 class="u-text-r-m"><a class="u-color-50" href="">Vedi tutto</a></h2>
@@ -253,11 +252,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Debitis atque qui nihil voluptas amet.
+    Reiciendis nihil et quo ullam magnam occaecati expedita quibusdam sapiente.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    In ad enim atque est et ab sit itaque enim. Harum omnis porro maiores dignissimos et nostrum quia tenetur impedit. Vitae delectus vel autem est voluptas assumenda. Voluptates vel corrupti rerum suscipit occaecati sit. Natus accusamus ut. Molestias illo debitis amet non necessitatibus.
+    Provident consequatur at recusandae vel consequatur non dolorem libero. Unde delectus dolor iusto. Animi officiis rem temporibus voluptatem. Vel enim hic et qui sit id ullam. Ea in omnis modi est. Voluptatibus voluptatum possimus sapiente.
   </p>
 </div>
 
@@ -273,11 +272,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Adipisci quas exercitationem delectus est quis modi. Doloribus modi officia. Rerum laboriosam sunt sequi quis libero vero deserunt. Nobis tempora est sapiente. Aspernatur est ut vero asperiores veniam facere aut. Omnis tempore qui saepe cupiditate.
+    Culpa sunt explicabo rem molestiae neque. Quidem delectus veritatis repellendus et vero. Dicta rem tempore dolor facilis voluptatem. Pariatur enim sint maiores deserunt vitae.
   </p>
 </div>
 
@@ -292,11 +291,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Id enim consequatur voluptas impedit quisquam quo atque. Animi distinctio suscipit aut quia deleniti voluptas aspernatur vel ullam. Enim quas et esse occaecati consequatur. Culpa in optio nam.
+    In dicta labore sed vel autem et eveniet similique corporis. Quod officia et magnam assumenda ut modi saepe quia quisquam. Impedit laborum est quia consequatur repellendus quam. Velit consequatur aspernatur accusantium. Magni minima odit ut.
   </p>
 </div>
 
@@ -310,11 +309,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Minus vero quasi ea dicta incidunt. Ipsa numquam occaecati consequuntur. Nihil ipsa eveniet voluptatem rem aut sapiente et soluta reiciendis. Perspiciatis eveniet veniam nam laborum dignissimos sint possimus exercitationem omnis.
+    Eum id ipsa consequatur sapiente hic quo voluptatum possimus. Et voluptatem mollitia perspiciatis. Harum illum dolorem dolore eos aspernatur. Corporis quia rerum fugit qui quaerat error consequatur totam sequi.
   </p>
 </div>
 
@@ -328,11 +327,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Sed officia dolor beatae. Totam vel dolores qui voluptas beatae nulla quam ex. Doloribus ut maxime rem est vel porro optio. Accusamus ex ex quis necessitatibus quod impedit dolor. Molestias suscipit inventore. Hic cum officia aspernatur.
+    Ut facere dicta. Ipsa qui exercitationem. Eum doloribus consequuntur quo sit. Ut voluptates sint autem earum iste aut. Quia enim quas sed odit hic esse sit nesciunt.
   </p>
 </div>
 
@@ -346,11 +345,11 @@
     <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">12 Maggio 2016</span>
   </p>
   <p class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     </a>
   </p>
   <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-    Reiciendis est fugit et molestias cumque aliquid cupiditate distinctio consequatur. Non et porro at autem ratione eos tempore. Ea ut nobis aut illo dolores.
+    Sunt minima sint. Voluptatibus non odit nesciunt ipsa beatae blanditiis id. Nulla vel omnis. Maiores consequatur laboriosam. Rerum recusandae omnis sed sint corporis amet.
   </p>
 </div>
 
@@ -385,15 +384,15 @@
           <div class="Card Card--round u-color-grey-30 u-background-white">
   <div class="Card-content u-padding-r-all">
     <section class="Card-text">
-      <h3 class="u-color-50 u-text-r-s">deleniti aut sed</h3>
+      <h3 class="u-color-50 u-text-r-s">quis aliquid minima</h3>
       <p class="u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
     </section>
     <h3 class="Card-title">
-      <a class="Card-titleLink" href="">Illum ratione et minima quis explicabo incidunt sit. A nostrum sit qui voluptatem aut. Voluptatem libero consequatur maiores beatae rerum totam voluptatem ut tempore.</a>
+      <a class="Card-titleLink" href="">Quia qui maxime magni harum similique et amet. Eaque molestiae voluptatem suscipit deleniti et. Natus nesciunt ab dolore ducimus qui quia non tempore dolor. Nam excepturi sit voluptas accusantium in quod nihil sint. Vel qui reprehenderit voluptatibus ut efalse</a>
     </h3>
     <p>
       <a title="visualizza su twitter" class="u-color-50 u-textClean u-text-xl" href="">
-        <span class="icon icon-twitter" aria-hidden="true"></span>
+        <span class="Icon-twitter" aria-hidden="true"></span>
         <span class="u-hiddenVisually">visualizza su twitter</span>
       </a>
     </p>
@@ -406,15 +405,15 @@
           <div class="Card Card--round u-color-grey-30 u-background-white">
   <div class="Card-content u-padding-r-all">
     <section class="Card-text">
-      <h3 class="u-color-50 u-text-r-s">deleniti aut sed</h3>
+      <h3 class="u-color-50 u-text-r-s">quis aliquid minima</h3>
       <p class="u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
     </section>
     <h3 class="Card-title">
-      <a class="Card-titleLink" href="">Adipisci quas exercitationem delectus est quis modi. Doloribus modi officia. Rerum laboriosam sunt sequi quis libero vero deserunt. Nobis tempora est sapiente. Aspernatur est ut vero asperiores veniam facere aut. Omnis tempore qui saepe cupiditate.</a>
+      <a class="Card-titleLink" href="">Culpa sunt explicabo rem molestiae neque. Quidem delectus veritatis repellendus et vero. Dicta rem tempore dolor facilis voluptatem. Pariatur enim sint maiores deserunt vitae.</a>
     </h3>
     <p>
       <a title="visualizza su twitter" class="u-color-50 u-textClean u-text-xl" href="">
-        <span class="icon icon-twitter" aria-hidden="true"></span>
+        <span class="Icon-twitter" aria-hidden="true"></span>
         <span class="u-hiddenVisually">visualizza su twitter</span>
       </a>
     </p>
@@ -427,15 +426,15 @@
           <div class="Card Card--round u-color-grey-30 u-background-white">
   <div class="Card-content u-padding-r-all">
     <section class="Card-text">
-      <h3 class="u-color-50 u-text-r-s">deleniti aut sed</h3>
+      <h3 class="u-color-50 u-text-r-s">quis aliquid minima</h3>
       <p class="u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
     </section>
     <h3 class="Card-title">
-      <a class="Card-titleLink" href="">Id enim consequatur voluptas impedit quisquam quo atque. Animi distinctio suscipit aut quia deleniti voluptas aspernatur vel ullam. Enim quas et esse occaecati consequatur. Culpa in optio nam.</a>
+      <a class="Card-titleLink" href="">In dicta labore sed vel autem et eveniet similique corporis. Quod officia et magnam assumenda ut modi saepe quia quisquam. Impedit laborum est quia consequatur repellendus quam. Velit consequatur aspernatur accusantium. Magni minima odit ut.</a>
     </h3>
     <p>
       <a title="visualizza su twitter" class="u-color-50 u-textClean u-text-xl" href="">
-        <span class="icon icon-twitter" aria-hidden="true"></span>
+        <span class="Icon-twitter" aria-hidden="true"></span>
         <span class="u-hiddenVisually">visualizza su twitter</span>
       </a>
     </p>
@@ -462,11 +461,11 @@
       <div class="Grid-cell u-layout-centerRight">
         <button class="owl-prev u-padding-bottom-xl u-padding-right-xxl u-text-r-xl u-color-teal-50" title="Slide precedente"
           aria-controls="carousel-1" aria-label="Vai alla slide precedente">
-            <span class="u-alignMiddle icon icon-arrow-left"></span>
+            <span class="u-alignMiddle Icon Icon-arrow-left"></span>
         </button>
         <button class="owl-next u-padding-bottom-xl u-padding-left u-text-r-xl u-color-teal-50" title="Slide successiva"
           aria-controls="carousel-1" aria-label="Vai alla slide successiva">
-          <span class="u-alignMiddle icon icon-arrow-right"></span>
+          <span class="u-alignMiddle Icon Icon-arrow-right"></span>
         </button>
         <p class="u-hiddenVisually">È possibile navigare le slide utilizzando i tasti freccia</p>
       </div>
@@ -485,9 +484,9 @@
     <figcaption class="u-padding-r-top">
       <p class="u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s">Foto</p>
       <div class="Grid">
-        <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
+        <span class="Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-1" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Debitis atque qui nihil voluptas amet.
+          Reiciendis nihil et quo ullam magnam occaecati expedita quibusdam sapiente.
         </h3>
       </div>
     </figcaption>
@@ -505,9 +504,9 @@
     <figcaption class="u-padding-r-top">
       <p class="u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s">Foto</p>
       <div class="Grid">
-        <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
+        <span class="Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-2" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Omnis tempore est adipisci sed dolores.
+          Dolor voluptatem est perspiciatis.
         </h3>
       </div>
     </figcaption>
@@ -525,9 +524,9 @@
     <figcaption class="u-padding-r-top">
       <p class="u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s">Foto</p>
       <div class="Grid">
-        <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
+        <span class="Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-3" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Temporibus quia dolorem.
+          Mollitia dolores officiis occaecati ut vitae id ad libero corporis.
         </h3>
       </div>
     </figcaption>
@@ -545,9 +544,9 @@
     <figcaption class="u-padding-r-top">
       <p class="u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s">Foto</p>
       <div class="Grid">
-        <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
+        <span class="Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-4" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Laudantium sed ex quibusdam.
+          Tempora porro ea quia deleniti hic quia enim reiciendis minima.
         </h3>
       </div>
     </figcaption>
@@ -565,9 +564,9 @@
     <figcaption class="u-padding-r-top">
       <p class="u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s">Foto</p>
       <div class="Grid">
-        <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
+        <span class="Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-5" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Et consequatur aut delectus incidunt quos consequatur sint voluptatem quia.
+          Quaerat impedit expedita accusamus voluptas perspiciatis.
         </h3>
       </div>
     </figcaption>
@@ -585,9 +584,9 @@
     <figcaption class="u-padding-r-top">
       <p class="u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s">Foto</p>
       <div class="Grid">
-        <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
+        <span class="Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-6" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Earum optio non et fugit architecto veniam.
+          Aut ut natus et exercitationem blanditiis impedit.
         </h3>
       </div>
     </figcaption>
@@ -605,9 +604,9 @@
     <figcaption class="u-padding-r-top">
       <p class="u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s">Foto</p>
       <div class="Grid">
-        <span class="Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
+        <span class="Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l" aria-hidden="true"></span>
         <h3 id="desc-7" class="Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700">
-          Explicabo ut sint sed fugit eligendi distinctio.
+          Laborum est molestiae eius.
         </h3>
       </div>
     </figcaption>
@@ -740,9 +739,9 @@
       <h2 class="Footer-blockTitle">Seguici su</h2>
       <div class="Footer-subBlock">
         <ul class="Footer-socialIcons">
-          <li><a href=""><span class="icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
-          <li><a href=""><span class="icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
-          <li><a href=""><span class="icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+          <li><a href=""><span class="Icon Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+          <li><a href=""><span class="Icon Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+          <li><a href=""><span class="Icon Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
         </ul>
       </div>
     </div>
@@ -761,7 +760,7 @@
   </div>
 
   <a href="#" title="torna all'inizio del contenuto" class="ScrollTop js-scrollTop js-scrollTo">
-  <i class="ScrollTop-icon icon-top" aria-hidden="true"></i>
+  <i class="ScrollTop-icon Icon-arrow-up" aria-hidden="true"></i>
   <span class="u-hiddenVisually">torna all'inizio del contenuto</span>
 </a>
 

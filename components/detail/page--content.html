@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../_theme/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.4" type="text/css">
+<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.7" type="text/css">
 
 
 <title>Page: Content | Italia.it Web Toolkit Styleguide</title>
@@ -83,682 +88,6 @@
                 data-role="window"
                 src="../preview/page--content.html"
                 sandbox="allow-same-origin allow-scripts"
-                srcdoc="&lt;!DOCTYPE html&gt;
-&lt;!--[if IE 8]&gt;&lt;html class=&quot;no-js ie89 ie8&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if IE 9]&gt;&lt;html class=&quot;no-js ie89 ie9&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;
-&lt;html class=&quot;no-js&quot; lang=&quot;it&quot;&gt;
-&lt;!--&lt;![endif]--&gt;
-
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-  &lt;!--
-    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
-      &lt;link href=&#39;//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39; /&gt;
-    o dal repository locale (src/fonts)
-  --&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    WebFontConfig = {
-      google: {
-        families: [&#39;Titillium+Web:400,700,400italic:latin&#39;]
-      }
-    };
-    (function() {
-      var wf = document.createElement(&#39;script&#39;);
-      wf.src = &#39;https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;;
-      wf.type = &#39;text/javascript&#39;;
-      wf.async = &#39;true&#39;;
-      var s = document.getElementsByTagName(&#39;script&#39;)[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  &lt;/script&gt;
-
-  &lt;!-- include html5shim per Explorer 8 --&gt;
-  &lt;script src=&quot;/build/vendor/modernizr.js&quot;&gt;&lt;/script&gt;
-
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/vendor.css&quot;&gt;
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/build.css&quot;&gt;
-
-  &lt;title&gt;Preview Layout&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body class=&quot;Pac&quot;&gt;
-
-  &lt;div id=&quot;main&quot;&gt;
-
-  &lt;div class=&quot;u-layout-wide u-layoutCenter u-text-r-l u-padding-r-top u-margin-r-bottom u-layout-r-withGutter&quot;&gt;
-    &lt;section class=&quot;Grid&quot;&gt;
-
-  &lt;div class=&quot;Grid-cell u-sizeFull u-md-size1of2 u-lg-size1of2 u-text-r-s u-padding-r-all&quot;&gt;
-    &lt;div class=&quot;Grid Grid--fit u-margin-r-bottom&quot;&gt;
-      &lt;p class=&quot;Grid-cell&quot;&gt;
-        &lt;span class=&quot;Dot u-background-50&quot;&gt;&lt;/span&gt;
-        &lt;strong&gt;&lt;a class=&quot;u-textClean u-text-r-xs&quot; href=&quot;&quot;&gt;La categoria&lt;/a&gt;&lt;/strong&gt;
-      &lt;/p&gt;
-      &lt;p class=&quot;Grid-cell u-textSecondary&quot;&gt;
-        12 Dicembre 2012
-      &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;u-text-r-l u-layout-prose&quot;&gt;
-      &lt;h2 class=&quot;u-text-h2 u-margin-r-bottom&quot;&gt;Fuga sit nobis&lt;/h2&gt;
-      &lt;p class=&quot;u-textSecondary u-lineHeight-l&quot;&gt;
-        Debitis atque qui nihil voluptas amet.
-        Omnis tempore est adipisci sed dolores.
-        Temporibus quia dolorem.
-        Laudantium sed ex quibusdam.
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;Grid-cell u-sizeFull u-md-size1of2 u-lg-size1of2 u-text-r-s u-padding-r-all&quot;&gt;
-    &lt;img src=&quot;http://placehold.it/680x480?text=placeholder&quot; class=&quot;u-sizeFull&quot; alt=&quot;...&quot; /&gt;
-  &lt;/div&gt;
-
-&lt;/section&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;u-layout-wide u-layoutCenter u-padding-r-bottom u-margin-r-bottom u-layout-r-withGutter&quot;&gt;
-    &lt;div class=&quot;Grid Grid--withGutter&quot;&gt;
-  &lt;div class=&quot;Grid-cell u-md-size1of3 u-lg-size1of3&quot;&gt;
-    &lt;div class=&quot;Entrypoint-item u-background-50&quot;&gt;
-      &lt;p&gt;&lt;a class=&quot;u-textClean u-text-h3 u-color-white&quot; href=&quot;&quot;&gt;Link in evidenza 1&lt;/a&gt;&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;Entrypoint-item u-background-50&quot;&gt;
-      &lt;p&gt;&lt;a class=&quot;u-textClean u-text-h4 u-color-white&quot; href=&quot;&quot;&gt;Link in evidenza 2&lt;/a&gt;&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;Grid-cell u-md-size1of3 u-lg-size1of3 u-flex&quot;&gt;
-    &lt;div class=&quot;Entrypoint-item u-sizeFill u-background-50&quot;&gt;
-      &lt;p&gt;&lt;a class=&quot;u-textClean u-text-h3 u-color-white&quot; href=&quot;&quot;&gt;Link in evidenza 3&lt;/a&gt;&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;Grid-cell u-md-size1of3 u-lg-size1of3 u-flex&quot;&gt;
-    &lt;div class=&quot;Entrypoint-item u-sizeFill u-background-50&quot;&gt;
-      &lt;p&gt;&lt;a class=&quot;u-textClean u-text-h3 u-color-white&quot; href=&quot;&quot;&gt;Link in evidenza 4&lt;/a&gt;&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;u-background-grey-20 u-text-r-xxl u-padding-r-top u-padding-r-bottom&quot;&gt;
-    &lt;div class=&quot;u-layout-wide u-layoutCenter u-layout-r-withGutter&quot;&gt;
-      &lt;div class=&quot;u-layout-centerContent u-background-grey-20&quot;&gt;
-  &lt;section class=&quot;u-layout-wide&quot;&gt;
-
-    &lt;div class=&quot;Grid Grid--withGutter u-text-r-l u-padding-r-bottom&quot;&gt;
-      &lt;div class=&quot;Grid-cell u-layout-centerLeft&quot;&gt;
-        &lt;h2 class=&quot;u-text-r-l&quot;&gt;Fuga sit nobis&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;Grid-cell u-layout-centerRight&quot;&gt;
-        &lt;h2 class=&quot;u-text-r-m&quot;&gt;&lt;a class=&quot;u-color-50&quot; href=&quot;&quot;&gt;Vedi tutto&lt;/a&gt;&lt;/h2&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;Grid Grid--withGutter&quot;&gt;
-
-      &lt;div class=&quot;Grid-cell Card u-md-size3of4 u-lg-size3of4&quot;&gt;
-
-        &lt;div class=&quot;Grid u-layout-centerContent&quot;&gt;
-          &lt;div class=&quot;Grid-cell u-sizeFit&quot;&gt;
-            &lt;img src=&quot;http://placehold.it/330x330?text=placeholder&quot; class=&quot;u-sizeFit&quot; alt=&quot;...&quot; /&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;Grid-cell u-md-sizeFill u-lg-sizeFill u-padding-r-left&quot;&gt;
-            &lt;div class=&quot;u-color-grey-30 u-border-top-xxs u-padding-right-xxl u-padding-r-all&quot;&gt;
-  &lt;p class=&quot;u-padding-r-bottom&quot;&gt;
-    &lt;span class=&quot;Dot u-background-70&quot;&gt;&lt;/span&gt;
-    &lt;a class=&quot;u-textClean u-textWeight-700 u-text-r-xs u-color-50&quot; href=&quot;#&quot;&gt;categoria&lt;/a&gt;
-    &lt;span class=&quot;u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf&quot;&gt;12 Maggio 2016&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-padding-r-top u-padding-r-bottom&quot;&gt;&lt;a class=&quot;u-text-h4 u-textClean u-color-black&quot; href=&quot;&quot;&gt;
-    Debitis atque qui nihil voluptas amet.
-    &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right&quot;&gt;
-    In ad enim atque est et ab sit itaque enim. Harum omnis porro maiores dignissimos et nostrum quia tenetur impedit. Vitae delectus vel autem est voluptas assumenda. Voluptates vel corrupti rerum suscipit occaecati sit. Natus accusamus ut. Molestias illo debitis amet non necessitatibus.
-  &lt;/p&gt;
-&lt;/div&gt;
-
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30 u-border-top-xxs u-padding-right-xxl u-padding-r-all&quot;&gt;
-  &lt;p class=&quot;u-padding-r-bottom&quot;&gt;
-    &lt;span class=&quot;Dot u-background-70&quot;&gt;&lt;/span&gt;
-    &lt;a class=&quot;u-textClean u-textWeight-700 u-text-r-xs u-color-50&quot; href=&quot;#&quot;&gt;categoria&lt;/a&gt;
-    &lt;span class=&quot;u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf&quot;&gt;12 Maggio 2016&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-padding-r-top u-padding-r-bottom&quot;&gt;&lt;a class=&quot;u-text-h4 u-textClean u-color-black&quot; href=&quot;&quot;&gt;
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
-    &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right&quot;&gt;
-    Adipisci quas exercitationem delectus est quis modi. Doloribus modi officia. Rerum laboriosam sunt sequi quis libero vero deserunt. Nobis tempora est sapiente. Aspernatur est ut vero asperiores veniam facere aut. Omnis tempore qui saepe cupiditate.
-  &lt;/p&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-
-      
-      &lt;div class=&quot;Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30 u-border-top-xxs u-padding-right-xxl u-padding-r-all&quot;&gt;
-  &lt;p class=&quot;u-padding-r-bottom&quot;&gt;
-    &lt;span class=&quot;Dot u-background-70&quot;&gt;&lt;/span&gt;
-    &lt;a class=&quot;u-textClean u-textWeight-700 u-text-r-xs u-color-50&quot; href=&quot;#&quot;&gt;categoria&lt;/a&gt;
-    &lt;span class=&quot;u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf&quot;&gt;12 Maggio 2016&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-padding-r-top u-padding-r-bottom&quot;&gt;&lt;a class=&quot;u-text-h4 u-textClean u-color-black&quot; href=&quot;&quot;&gt;
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
-    &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right&quot;&gt;
-    Id enim consequatur voluptas impedit quisquam quo atque. Animi distinctio suscipit aut quia deleniti voluptas aspernatur vel ullam. Enim quas et esse occaecati consequatur. Culpa in optio nam.
-  &lt;/p&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30 u-border-top-xxs u-padding-right-xxl u-padding-r-all&quot;&gt;
-  &lt;p class=&quot;u-padding-r-bottom&quot;&gt;
-    &lt;span class=&quot;Dot u-background-70&quot;&gt;&lt;/span&gt;
-    &lt;a class=&quot;u-textClean u-textWeight-700 u-text-r-xs u-color-50&quot; href=&quot;#&quot;&gt;categoria&lt;/a&gt;
-    &lt;span class=&quot;u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf&quot;&gt;12 Maggio 2016&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-padding-r-top u-padding-r-bottom&quot;&gt;&lt;a class=&quot;u-text-h4 u-textClean u-color-black&quot; href=&quot;&quot;&gt;
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
-    &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right&quot;&gt;
-    Minus vero quasi ea dicta incidunt. Ipsa numquam occaecati consequuntur. Nihil ipsa eveniet voluptatem rem aut sapiente et soluta reiciendis. Perspiciatis eveniet veniam nam laborum dignissimos sint possimus exercitationem omnis.
-  &lt;/p&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30 u-border-top-xxs u-padding-right-xxl u-padding-r-all&quot;&gt;
-  &lt;p class=&quot;u-padding-r-bottom&quot;&gt;
-    &lt;span class=&quot;Dot u-background-70&quot;&gt;&lt;/span&gt;
-    &lt;a class=&quot;u-textClean u-textWeight-700 u-text-r-xs u-color-50&quot; href=&quot;#&quot;&gt;categoria&lt;/a&gt;
-    &lt;span class=&quot;u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf&quot;&gt;12 Maggio 2016&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-padding-r-top u-padding-r-bottom&quot;&gt;&lt;a class=&quot;u-text-h4 u-textClean u-color-black&quot; href=&quot;&quot;&gt;
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
-    &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right&quot;&gt;
-    Sed officia dolor beatae. Totam vel dolores qui voluptas beatae nulla quam ex. Doloribus ut maxime rem est vel porro optio. Accusamus ex ex quis necessitatibus quod impedit dolor. Molestias suscipit inventore. Hic cum officia aspernatur.
-  &lt;/p&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30 u-border-top-xxs u-padding-right-xxl u-padding-r-all&quot;&gt;
-  &lt;p class=&quot;u-padding-r-bottom&quot;&gt;
-    &lt;span class=&quot;Dot u-background-70&quot;&gt;&lt;/span&gt;
-    &lt;a class=&quot;u-textClean u-textWeight-700 u-text-r-xs u-color-50&quot; href=&quot;#&quot;&gt;categoria&lt;/a&gt;
-    &lt;span class=&quot;u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf&quot;&gt;12 Maggio 2016&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-padding-r-top u-padding-r-bottom&quot;&gt;&lt;a class=&quot;u-text-h4 u-textClean u-color-black&quot; href=&quot;&quot;&gt;
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
-    &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right&quot;&gt;
-    Reiciendis est fugit et molestias cumque aliquid cupiditate distinctio consequatur. Non et porro at autem ratione eos tempore. Ea ut nobis aut illo dolores.
-  &lt;/p&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-    &lt;/div&gt;
-
-  &lt;/section&gt;
-&lt;/div&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;u-background-70 u-padding-r-top u-padding-r-bottom&quot;&gt;
-    &lt;div class=&quot;u-layout-centerContent u-background-70 u-padding-r-all&quot;&gt;
-  &lt;section class=&quot;u-layout-medium&quot;&gt;
-    &lt;div class=&quot;Grid&quot;&gt;
-      &lt;div class=&quot;Grid-cell u-layout-centerLeft&quot;&gt;
-        &lt;h2 class=&quot;u-text-r-l&quot;&gt;&lt;a class=&quot;u-color-white&quot; href=&quot;&quot;&gt;Twitter @amministrazione&lt;/a&gt;&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;p class=&quot;Grid-cell u-layout-centerRight&quot;&gt;
-        &lt;a title=&quot;vai all&#39;account twitter&quot; class=&quot;u-color-white u-textClean u-text-xxl&quot; href=&quot;&quot;&gt;
-          &lt;span class=&quot;icon icon-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-          &lt;span class=&quot;u-hiddenVisually&quot;&gt;vai all&#39;account twitter&lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;u-text-r-xxl u-padding-r-top&quot;&gt;
-      &lt;div class=&quot;Grid Grid--withGutter&quot;&gt;
-        
-        &lt;div class=&quot;Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-margin-r-bottom u-layout-matchHeight u-padding-r-all&quot;&gt;
-          &lt;div class=&quot;Card Card--round u-color-grey-30 u-background-white&quot;&gt;
-  &lt;div class=&quot;Card-content u-padding-r-all&quot;&gt;
-    &lt;section class=&quot;Card-text&quot;&gt;
-      &lt;h3 class=&quot;u-color-50 u-text-r-s&quot;&gt;deleniti aut sed&lt;/h3&gt;
-      &lt;p class=&quot;u-textSecondary u-text-r-xxs&quot;&gt;10 Luglio 2016&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;h3 class=&quot;Card-title&quot;&gt;
-      &lt;a class=&quot;Card-titleLink&quot; href=&quot;&quot;&gt;Illum ratione et minima quis explicabo incidunt sit. A nostrum sit qui voluptatem aut. Voluptatem libero consequatur maiores beatae rerum totam voluptatem ut tempore.&lt;/a&gt;
-    &lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a title=&quot;visualizza su twitter&quot; class=&quot;u-color-50 u-textClean u-text-xl&quot; href=&quot;&quot;&gt;
-        &lt;span class=&quot;icon icon-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;span class=&quot;u-hiddenVisually&quot;&gt;visualizza su twitter&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-        &lt;/div&gt;
-        
-        &lt;div class=&quot;Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-margin-r-bottom u-layout-matchHeight u-padding-r-all&quot;&gt;
-          &lt;div class=&quot;Card Card--round u-color-grey-30 u-background-white&quot;&gt;
-  &lt;div class=&quot;Card-content u-padding-r-all&quot;&gt;
-    &lt;section class=&quot;Card-text&quot;&gt;
-      &lt;h3 class=&quot;u-color-50 u-text-r-s&quot;&gt;deleniti aut sed&lt;/h3&gt;
-      &lt;p class=&quot;u-textSecondary u-text-r-xxs&quot;&gt;10 Luglio 2016&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;h3 class=&quot;Card-title&quot;&gt;
-      &lt;a class=&quot;Card-titleLink&quot; href=&quot;&quot;&gt;Adipisci quas exercitationem delectus est quis modi. Doloribus modi officia. Rerum laboriosam sunt sequi quis libero vero deserunt. Nobis tempora est sapiente. Aspernatur est ut vero asperiores veniam facere aut. Omnis tempore qui saepe cupiditate.&lt;/a&gt;
-    &lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a title=&quot;visualizza su twitter&quot; class=&quot;u-color-50 u-textClean u-text-xl&quot; href=&quot;&quot;&gt;
-        &lt;span class=&quot;icon icon-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;span class=&quot;u-hiddenVisually&quot;&gt;visualizza su twitter&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-        &lt;/div&gt;
-        
-        &lt;div class=&quot;Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-margin-r-bottom u-layout-matchHeight u-padding-r-all&quot;&gt;
-          &lt;div class=&quot;Card Card--round u-color-grey-30 u-background-white&quot;&gt;
-  &lt;div class=&quot;Card-content u-padding-r-all&quot;&gt;
-    &lt;section class=&quot;Card-text&quot;&gt;
-      &lt;h3 class=&quot;u-color-50 u-text-r-s&quot;&gt;deleniti aut sed&lt;/h3&gt;
-      &lt;p class=&quot;u-textSecondary u-text-r-xxs&quot;&gt;10 Luglio 2016&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;h3 class=&quot;Card-title&quot;&gt;
-      &lt;a class=&quot;Card-titleLink&quot; href=&quot;&quot;&gt;Id enim consequatur voluptas impedit quisquam quo atque. Animi distinctio suscipit aut quia deleniti voluptas aspernatur vel ullam. Enim quas et esse occaecati consequatur. Culpa in optio nam.&lt;/a&gt;
-    &lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a title=&quot;visualizza su twitter&quot; class=&quot;u-color-50 u-textClean u-text-xl&quot; href=&quot;&quot;&gt;
-        &lt;span class=&quot;icon icon-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;span class=&quot;u-hiddenVisually&quot;&gt;visualizza su twitter&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-        &lt;/div&gt;
-        
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-&lt;/div&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;u-background-grey-60 u-padding-r-top u-padding-r-bottom u-text-r-xxl&quot;&gt;
-    &lt;section class=&quot;u-background-grey-60 u-padding-r-all&quot;&gt;
-  &lt;div class=&quot;u-layout-medium u-layoutCenter&quot;&gt;
-
-    &lt;div class=&quot;Grid&quot;&gt;
-      &lt;h2 id=&quot;carousel-heading&quot; class=&quot;Grid-cell u-text-h2 u-color-white u-layout-centerLeft&quot;&gt;Gallerie&lt;/h2&gt;
-
-      &lt;!-- &lt;next / prev buttons&gt; --&gt;
-      &lt;div class=&quot;Grid-cell u-layout-centerRight&quot;&gt;
-        &lt;button class=&quot;owl-prev u-padding-bottom-xl u-padding-right-xxl u-text-r-xl u-color-teal-50&quot; title=&quot;Slide precedente&quot;
-          aria-controls=&quot;carousel-1&quot; aria-label=&quot;Vai alla slide precedente&quot;&gt;
-            &lt;span class=&quot;u-alignMiddle icon icon-arrow-left&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;button class=&quot;owl-next u-padding-bottom-xl u-padding-left u-text-r-xl u-color-teal-50&quot; title=&quot;Slide successiva&quot;
-          aria-controls=&quot;carousel-1&quot; aria-label=&quot;Vai alla slide successiva&quot;&gt;
-          &lt;span class=&quot;u-alignMiddle icon icon-arrow-right&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;p class=&quot;u-hiddenVisually&quot;&gt;È possibile navigare le slide utilizzando i tasti freccia&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;!-- &lt;/next / prev buttons&gt; --&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;owl-carousel owl-theme&quot;
-      role=&quot;region&quot; id=&quot;carousel-1&quot;&gt;
-      
-      &lt;div class=&quot;Carousel-item&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30&quot;&gt;
-  &lt;figure&gt;
-    &lt;a href=&quot;#img-1&quot; aria-labelledby=&quot;desc-1&quot; class=&quot;u-block u-padding-all-xxs&quot;&gt;
-      &lt;img src=&quot;http://placehold.it/370x205?text=1&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;figcaption class=&quot;u-padding-r-top&quot;&gt;
-      &lt;p class=&quot;u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s&quot;&gt;Foto&lt;/p&gt;
-      &lt;div class=&quot;Grid&quot;&gt;
-        &lt;span class=&quot;Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;h3 id=&quot;desc-1&quot; class=&quot;Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700&quot;&gt;
-          Debitis atque qui nihil voluptas amet.
-        &lt;/h3&gt;
-      &lt;/div&gt;
-    &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Carousel-item&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30&quot;&gt;
-  &lt;figure&gt;
-    &lt;a href=&quot;#img-2&quot; aria-labelledby=&quot;desc-2&quot; class=&quot;u-block u-padding-all-xxs&quot;&gt;
-      &lt;img src=&quot;http://placehold.it/370x205?text=2&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;figcaption class=&quot;u-padding-r-top&quot;&gt;
-      &lt;p class=&quot;u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s&quot;&gt;Foto&lt;/p&gt;
-      &lt;div class=&quot;Grid&quot;&gt;
-        &lt;span class=&quot;Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;h3 id=&quot;desc-2&quot; class=&quot;Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700&quot;&gt;
-          Omnis tempore est adipisci sed dolores.
-        &lt;/h3&gt;
-      &lt;/div&gt;
-    &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Carousel-item&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30&quot;&gt;
-  &lt;figure&gt;
-    &lt;a href=&quot;#img-3&quot; aria-labelledby=&quot;desc-3&quot; class=&quot;u-block u-padding-all-xxs&quot;&gt;
-      &lt;img src=&quot;http://placehold.it/370x205?text=3&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;figcaption class=&quot;u-padding-r-top&quot;&gt;
-      &lt;p class=&quot;u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s&quot;&gt;Foto&lt;/p&gt;
-      &lt;div class=&quot;Grid&quot;&gt;
-        &lt;span class=&quot;Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;h3 id=&quot;desc-3&quot; class=&quot;Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700&quot;&gt;
-          Temporibus quia dolorem.
-        &lt;/h3&gt;
-      &lt;/div&gt;
-    &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Carousel-item&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30&quot;&gt;
-  &lt;figure&gt;
-    &lt;a href=&quot;#img-4&quot; aria-labelledby=&quot;desc-4&quot; class=&quot;u-block u-padding-all-xxs&quot;&gt;
-      &lt;img src=&quot;http://placehold.it/370x205?text=4&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;figcaption class=&quot;u-padding-r-top&quot;&gt;
-      &lt;p class=&quot;u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s&quot;&gt;Foto&lt;/p&gt;
-      &lt;div class=&quot;Grid&quot;&gt;
-        &lt;span class=&quot;Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;h3 id=&quot;desc-4&quot; class=&quot;Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700&quot;&gt;
-          Laudantium sed ex quibusdam.
-        &lt;/h3&gt;
-      &lt;/div&gt;
-    &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Carousel-item&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30&quot;&gt;
-  &lt;figure&gt;
-    &lt;a href=&quot;#img-5&quot; aria-labelledby=&quot;desc-5&quot; class=&quot;u-block u-padding-all-xxs&quot;&gt;
-      &lt;img src=&quot;http://placehold.it/370x205?text=5&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;figcaption class=&quot;u-padding-r-top&quot;&gt;
-      &lt;p class=&quot;u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s&quot;&gt;Foto&lt;/p&gt;
-      &lt;div class=&quot;Grid&quot;&gt;
-        &lt;span class=&quot;Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;h3 id=&quot;desc-5&quot; class=&quot;Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700&quot;&gt;
-          Et consequatur aut delectus incidunt quos consequatur sint voluptatem quia.
-        &lt;/h3&gt;
-      &lt;/div&gt;
-    &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Carousel-item&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30&quot;&gt;
-  &lt;figure&gt;
-    &lt;a href=&quot;#img-6&quot; aria-labelledby=&quot;desc-6&quot; class=&quot;u-block u-padding-all-xxs&quot;&gt;
-      &lt;img src=&quot;http://placehold.it/370x205?text=6&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;figcaption class=&quot;u-padding-r-top&quot;&gt;
-      &lt;p class=&quot;u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s&quot;&gt;Foto&lt;/p&gt;
-      &lt;div class=&quot;Grid&quot;&gt;
-        &lt;span class=&quot;Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;h3 id=&quot;desc-6&quot; class=&quot;Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700&quot;&gt;
-          Earum optio non et fugit architecto veniam.
-        &lt;/h3&gt;
-      &lt;/div&gt;
-    &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-      &lt;div class=&quot;Carousel-item&quot;&gt;
-        &lt;div class=&quot;u-color-grey-30&quot;&gt;
-  &lt;figure&gt;
-    &lt;a href=&quot;#img-7&quot; aria-labelledby=&quot;desc-7&quot; class=&quot;u-block u-padding-all-xxs&quot;&gt;
-      &lt;img src=&quot;http://placehold.it/370x205?text=7&quot; class=&quot;u-sizeFull&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;figcaption class=&quot;u-padding-r-top&quot;&gt;
-      &lt;p class=&quot;u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s&quot;&gt;Foto&lt;/p&gt;
-      &lt;div class=&quot;Grid&quot;&gt;
-        &lt;span class=&quot;Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-        &lt;h3 id=&quot;desc-7&quot; class=&quot;Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700&quot;&gt;
-          Explicabo ut sint sed fugit eligendi distinctio.
-        &lt;/h3&gt;
-      &lt;/div&gt;
-    &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-      &lt;/div&gt;
-      
-    &lt;/div&gt;
-    &lt;p class=&quot;u-padding-r-top u-text-r-xl&quot;&gt;
-      &lt;a href=&quot;&quot; class=&quot;u-layout-centerLeft u-padding-r-top u-text-h4 u-textWeight-700 u-color-teal-50&quot;&gt;Vedi tutte le gallerie&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;u-background-grey-20 u-background-grey-20 u-color-black u-text-xxl u-padding-r-top u-padding-r-bottom&quot;&gt;
-    &lt;div class=&quot;u-layout-wide u-layoutCenter u-layout-r-withGutter&quot;&gt;
-      &lt;section class=&quot;Leads&quot;&gt;
-  &lt;h2 class=&quot;Leads-title u-layout-centerLeft&quot;&gt;Utilità&lt;/h2&gt;
-  &lt;ul class=&quot;Grid Grid--withGutter&quot;&gt;
-    &lt;li class=&quot;Leads-item Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;a class=&quot;Leads-link u-color-black&quot; href=&quot;&quot;&gt;Amministrazione trasparente&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;Leads-item Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;a class=&quot;Leads-link u-color-black&quot; href=&quot;&quot;&gt;Albo pretorio&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;Leads-item Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;a class=&quot;Leads-link u-color-black&quot; href=&quot;&quot;&gt;Bandi e concorsi&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;Leads-item Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;a class=&quot;Leads-link u-color-black&quot; href=&quot;&quot;&gt;Accesso civico&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;u-background-grey-80&quot;&gt;
-    &lt;div class=&quot;u-layout-wide u-layoutCenter u-layout-r-withGutter&quot;&gt;
-    &lt;footer class=&quot;Footer u-padding-all-s&quot;&gt;
-
-  &lt;div class=&quot;u-cf&quot;&gt;
-    &lt;img class=&quot;Footer-logo&quot; src=&quot;http://placehold.it/75x80?text=placeholder&quot; alt=&quot;&quot;&gt;
-    &lt;p class=&quot;Footer-siteName&quot;&gt;
-      Comune di Civitella Roveto
-    &lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;Grid Grid--withGutter&quot;&gt;
-    
-    &lt;div class=&quot;Footer-block Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;h2 class=&quot;Footer-blockTitle&quot;&gt;Trasparenza&lt;/h2&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Amministrazione trasparente&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Accesso civico&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Albo pretorio&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Bandi di gara e contratti&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;Footer-block Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;h2 class=&quot;Footer-blockTitle&quot;&gt;Trasparenza&lt;/h2&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Amministrazione trasparente&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Accesso civico&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Albo pretorio&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Bandi di gara e contratti&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;Footer-block Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;h2 class=&quot;Footer-blockTitle&quot;&gt;Trasparenza&lt;/h2&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Amministrazione trasparente&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Accesso civico&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Albo pretorio&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Bandi di gara e contratti&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;Footer-block Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;h2 class=&quot;Footer-blockTitle&quot;&gt;Trasparenza&lt;/h2&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Amministrazione trasparente&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Accesso civico&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Albo pretorio&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Bandi di gara e contratti&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-
-    
-    &lt;div class=&quot;Footer-block Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;h2 class=&quot;Footer-blockTitle&quot;&gt;Contatti&lt;/h2&gt;
-      &lt;div class=&quot;Footer-subBlock&quot;&gt;
-        &lt;h3 class=&quot;Footer-subTitle&quot;&gt;Recapiti&lt;/h3&gt;
-        &lt;address&gt;
-          Via Cherso 8&lt;br&gt;
-          00177 Roma&lt;br&gt;
-          Tel. (+39) 00.1310.1980
-        &lt;/address&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;Footer-block Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;h2 class=&quot;Footer-blockTitle&quot;&gt;Contatti&lt;/h2&gt;
-      &lt;div class=&quot;Footer-subBlock&quot;&gt;
-        &lt;h3 class=&quot;Footer-subTitle&quot;&gt;Recapiti&lt;/h3&gt;
-        &lt;address&gt;
-          Via Cherso 8&lt;br&gt;
-          00177 Roma&lt;br&gt;
-          Tel. (+39) 00.1310.1980
-        &lt;/address&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    
-
-    &lt;div class=&quot;Footer-block Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;h2 class=&quot;Footer-blockTitle&quot;&gt;Contatti&lt;/h2&gt;
-      &lt;div class=&quot;Footer-subBlock&quot;&gt;
-        &lt;h3 class=&quot;Footer-subTitle&quot;&gt;Indirizzo PEC&lt;/h3&gt;
-        &lt;p&gt;&lt;a href=&quot;&quot;&gt;indirizzo.pec@gov.it&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;Footer-block Grid-cell u-md-size1of4 u-lg-size1of4&quot;&gt;
-      &lt;h2 class=&quot;Footer-blockTitle&quot;&gt;Seguici su&lt;/h2&gt;
-      &lt;div class=&quot;Footer-subBlock&quot;&gt;
-        &lt;ul class=&quot;Footer-socialIcons&quot;&gt;
-          &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-facebook&quot;&gt;&lt;/span&gt;&lt;span class=&quot;u-hiddenVisually&quot;&gt;Facebook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-twitter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;u-hiddenVisually&quot;&gt;Twitter&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-youtube&quot;&gt;&lt;/span&gt;&lt;span class=&quot;u-hiddenVisually&quot;&gt;Youtube&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-  &lt;/div&gt;
-
-  &lt;ul class=&quot;Footer-links u-cf&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot; title=&quot;Privacy policy&quot;&gt;Privacy&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot; title=&quot;Note legali&quot;&gt;Note legali&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot; title=&quot;Dati monitoraggio sito&quot;&gt;Contatti&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-
-&lt;/footer&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;a href=&quot;#&quot; title=&quot;torna all&#39;inizio del contenuto&quot; class=&quot;ScrollTop js-scrollTop js-scrollTo&quot;&gt;
-  &lt;i class=&quot;ScrollTop-icon icon-top&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-  &lt;span class=&quot;u-hiddenVisually&quot;&gt;torna all&#39;inizio del contenuto&lt;/span&gt;
-&lt;/a&gt;
-
-  &lt;div id=&quot;cookie-bar&quot; class=&quot;CookieBar js-CookieBar u-background-95 u-padding-r-all&quot;&gt;
-  &lt;p class=&quot;u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom&quot;&gt;Questo sito utilizza cookie tecnici, analytics e di terze parti.
-    &lt;br&gt;Proseguendo nella navigazione accetti l’utilizzo dei cookie.&lt;br&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;button class=&quot;Button Button--default u-text-r-xxs js-cookieBarAccept u-inlineBlock u-margin-r-all&quot;&gt;Accetto&lt;/button&gt;
-    &lt;a href=&quot;&quot; class=&quot;u-text-r-xs u-color-teal-50&quot;&gt;Privacy policy&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;/div&gt;
-
-
-  &lt;script src=&quot;/build/vendor/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-  &lt;!--[if IE 8]&gt;
-  &lt;script src=&quot;/build/vendor/respond.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/rem.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/selectivizr.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/slice.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!--[if lte IE 9]&gt;
-  &lt;script src=&quot;/build/vendor/polyfill.min.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!-- In produzione utilizzare &lt;script src=&quot;/build/IWT.min.js&quot;&gt;&lt;/script&gt; --&gt;
-  &lt;script src=&quot;/build/IWT.js&quot;&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -856,9 +185,9 @@
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-l u-layout-prose"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h2 u-margin-r-bottom"</span>&gt;</span>Fuga sit nobis<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h2 u-margin-r-bottom"</span>&gt;</span>Alias deserunt dignissimos<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-textSecondary u-lineHeight-l"</span>&gt;</span>
-                        Debitis atque qui nihil voluptas amet. Omnis tempore est adipisci sed dolores. Temporibus quia dolorem. Laudantium sed ex quibusdam.
+                        Reiciendis nihil et quo ullam magnam occaecati expedita quibusdam sapiente. Dolor voluptatem est perspiciatis. Mollitia dolores officiis occaecati ut vitae id ad libero corporis. Tempora porro ea quia deleniti hic quia enim reiciendis minima.
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -902,7 +231,7 @@
 
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter u-text-r-l u-padding-r-bottom"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-layout-centerLeft"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-l"</span>&gt;</span>Fuga sit nobis<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-l"</span>&gt;</span>Alias deserunt dignissimos<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-layout-centerRight"</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-m"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Vedi tutto<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -925,12 +254,11 @@
                                             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf"</span>&gt;</span>12 Maggio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top u-padding-r-bottom"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h4 u-textClean u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-    Debitis atque qui nihil voluptas amet.
+    Reiciendis nihil et quo ullam magnam occaecati expedita quibusdam sapiente.
     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                         <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right"</span>&gt;</span>
-                                            In ad enim atque est et ab sit itaque enim. Harum omnis porro maiores dignissimos et nostrum quia tenetur impedit. Vitae delectus vel autem est voluptas assumenda. Voluptates vel corrupti rerum suscipit occaecati sit. Natus accusamus ut. Molestias illo
-                                            debitis amet non necessitatibus.
+                                            Provident consequatur at recusandae vel consequatur non dolorem libero. Unde delectus dolor iusto. Animi officiis rem temporibus voluptatem. Vel enim hic et qui sit id ullam. Ea in omnis modi est. Voluptatibus voluptatum possimus sapiente.
                                         <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -946,11 +274,11 @@
                                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf"</span>&gt;</span>12 Maggio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top u-padding-r-bottom"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h4 u-textClean u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right"</span>&gt;</span>
-                                    Adipisci quas exercitationem delectus est quis modi. Doloribus modi officia. Rerum laboriosam sunt sequi quis libero vero deserunt. Nobis tempora est sapiente. Aspernatur est ut vero asperiores veniam facere aut. Omnis tempore qui saepe cupiditate.
+                                    Culpa sunt explicabo rem molestiae neque. Quidem delectus veritatis repellendus et vero. Dicta rem tempore dolor facilis voluptatem. Pariatur enim sint maiores deserunt vitae.
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -964,11 +292,11 @@
                                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf"</span>&gt;</span>12 Maggio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top u-padding-r-bottom"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h4 u-textClean u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right"</span>&gt;</span>
-                                    Id enim consequatur voluptas impedit quisquam quo atque. Animi distinctio suscipit aut quia deleniti voluptas aspernatur vel ullam. Enim quas et esse occaecati consequatur. Culpa in optio nam.
+                                    In dicta labore sed vel autem et eveniet similique corporis. Quod officia et magnam assumenda ut modi saepe quia quisquam. Impedit laborum est quia consequatur repellendus quam. Velit consequatur aspernatur accusantium. Magni minima odit ut.
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -982,11 +310,11 @@
                                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf"</span>&gt;</span>12 Maggio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top u-padding-r-bottom"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h4 u-textClean u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right"</span>&gt;</span>
-                                    Minus vero quasi ea dicta incidunt. Ipsa numquam occaecati consequuntur. Nihil ipsa eveniet voluptatem rem aut sapiente et soluta reiciendis. Perspiciatis eveniet veniam nam laborum dignissimos sint possimus exercitationem omnis.
+                                    Eum id ipsa consequatur sapiente hic quo voluptatum possimus. Et voluptatem mollitia perspiciatis. Harum illum dolorem dolore eos aspernatur. Corporis quia rerum fugit qui quaerat error consequatur totam sequi.
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -1000,11 +328,11 @@
                                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf"</span>&gt;</span>12 Maggio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top u-padding-r-bottom"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h4 u-textClean u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right"</span>&gt;</span>
-                                    Sed officia dolor beatae. Totam vel dolores qui voluptas beatae nulla quam ex. Doloribus ut maxime rem est vel porro optio. Accusamus ex ex quis necessitatibus quod impedit dolor. Molestias suscipit inventore. Hic cum officia aspernatur.
+                                    Ut facere dicta. Ipsa qui exercitationem. Eum doloribus consequuntur quo sit. Ut voluptates sint autem earum iste aut. Quia enim quas sed odit hic esse sit nesciunt.
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -1018,11 +346,11 @@
                                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf"</span>&gt;</span>12 Maggio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top u-padding-r-bottom"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h4 u-textClean u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-    Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.
+    Veritatis quia dolorem deserunt et et ea.
     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right"</span>&gt;</span>
-                                    Reiciendis est fugit et molestias cumque aliquid cupiditate distinctio consequatur. Non et porro at autem ratione eos tempore. Ea ut nobis aut illo dolores.
+                                    Sunt minima sint. Voluptatibus non odit nesciunt ipsa beatae blanditiis id. Nulla vel omnis. Maiores consequatur laboriosam. Rerum recusandae omnis sed sint corporis amet.
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -1057,15 +385,15 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card Card--round u-color-grey-30 u-background-white"</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-content u-padding-r-all"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-text"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-text-r-s"</span>&gt;</span>deleniti aut sed<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-text-r-s"</span>&gt;</span>quis aliquid minima<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-textSecondary u-text-r-xxs"</span>&gt;</span>10 Luglio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-title"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-titleLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Illum ratione et minima quis explicabo incidunt sit. A nostrum sit qui voluptatem aut. Voluptatem libero consequatur maiores beatae rerum totam voluptatem ut tempore.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-titleLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Quia qui maxime magni harum similique et amet. Eaque molestiae voluptatem suscipit deleniti et. Natus nesciunt ab dolore ducimus qui quia non tempore dolor. Nam excepturi sit voluptas accusantium in quod nihil sint. Vel qui reprehenderit voluptatibus ut efalse<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"visualizza su twitter"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-textClean u-text-xl"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-                                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-twitter"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Icon-twitter"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>visualizza su twitter<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -1078,15 +406,15 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card Card--round u-color-grey-30 u-background-white"</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-content u-padding-r-all"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-text"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-text-r-s"</span>&gt;</span>deleniti aut sed<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-text-r-s"</span>&gt;</span>quis aliquid minima<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-textSecondary u-text-r-xxs"</span>&gt;</span>10 Luglio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-title"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-titleLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Adipisci quas exercitationem delectus est quis modi. Doloribus modi officia. Rerum laboriosam sunt sequi quis libero vero deserunt. Nobis tempora est sapiente. Aspernatur est ut vero asperiores veniam facere aut. Omnis tempore qui saepe cupiditate.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-titleLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Culpa sunt explicabo rem molestiae neque. Quidem delectus veritatis repellendus et vero. Dicta rem tempore dolor facilis voluptatem. Pariatur enim sint maiores deserunt vitae.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"visualizza su twitter"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-textClean u-text-xl"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-                                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-twitter"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Icon-twitter"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>visualizza su twitter<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -1099,15 +427,15 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card Card--round u-color-grey-30 u-background-white"</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-content u-padding-r-all"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-text"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-text-r-s"</span>&gt;</span>deleniti aut sed<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-text-r-s"</span>&gt;</span>quis aliquid minima<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-textSecondary u-text-r-xxs"</span>&gt;</span>10 Luglio 2016<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-title"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-titleLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Id enim consequatur voluptas impedit quisquam quo atque. Animi distinctio suscipit aut quia deleniti voluptas aspernatur vel ullam. Enim quas et esse occaecati consequatur. Culpa in optio nam.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Card-titleLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>In dicta labore sed vel autem et eveniet similique corporis. Quod officia et magnam assumenda ut modi saepe quia quisquam. Impedit laborum est quia consequatur repellendus quam. Velit consequatur aspernatur accusantium. Magni minima odit ut.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"visualizza su twitter"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-50 u-textClean u-text-xl"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
-                                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-twitter"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Icon-twitter"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>visualizza su twitter<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -1133,10 +461,10 @@
                     <span class="hljs-comment">&lt;!-- &lt;next / prev buttons&gt; --&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-layout-centerRight"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"owl-prev u-padding-bottom-xl u-padding-right-xxl u-text-r-xl u-color-teal-50"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Slide precedente"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"carousel-1"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Vai alla slide precedente"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-alignMiddle icon icon-arrow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-alignMiddle Icon Icon-arrow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"owl-next u-padding-bottom-xl u-padding-left u-text-r-xl u-color-teal-50"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Slide successiva"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"carousel-1"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Vai alla slide successiva"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-alignMiddle icon icon-arrow-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-alignMiddle Icon Icon-arrow-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>È possibile navigare le slide utilizzando i tasti freccia<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1154,10 +482,10 @@
                                 <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s"</span>&gt;</span>Foto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"desc-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700"</span>&gt;</span>
-          Debitis atque qui nihil voluptas amet.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                            Reiciendis nihil et quo ullam magnam occaecati expedita quibusdam sapiente.
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
@@ -1174,10 +502,10 @@
                                 <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s"</span>&gt;</span>Foto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"desc-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700"</span>&gt;</span>
-          Omnis tempore est adipisci sed dolores.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                            Dolor voluptatem est perspiciatis.
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
@@ -1194,10 +522,10 @@
                                 <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s"</span>&gt;</span>Foto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"desc-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700"</span>&gt;</span>
-          Temporibus quia dolorem.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                            Mollitia dolores officiis occaecati ut vitae id ad libero corporis.
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
@@ -1214,10 +542,10 @@
                                 <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s"</span>&gt;</span>Foto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"desc-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700"</span>&gt;</span>
-          Laudantium sed ex quibusdam.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                            Tempora porro ea quia deleniti hic quia enim reiciendis minima.
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
@@ -1234,10 +562,10 @@
                                 <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s"</span>&gt;</span>Foto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"desc-5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700"</span>&gt;</span>
-          Et consequatur aut delectus incidunt quos consequatur sint voluptatem quia.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                            Quaerat impedit expedita accusamus voluptas perspiciatis.
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
@@ -1254,10 +582,10 @@
                                 <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s"</span>&gt;</span>Foto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"desc-6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700"</span>&gt;</span>
-          Earum optio non et fugit architecto veniam.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                            Aut ut natus et exercitationem blanditiis impedit.
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
@@ -1274,10 +602,10 @@
                                 <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top"</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-color-teal-50 u-text-r-xxs u-textWeight-700 u-padding-bottom-s"</span>&gt;</span>Foto<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit icon icon-pic u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFit Icon-camera u-color-white u-floatLeft u-text-r-l"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                                         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"desc-7"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFill u-padding-left-s u-lineHeight-l u-color-white u-text-r-xs u-textWeight-700"</span>&gt;</span>
-          Explicabo ut sint sed fugit eligendi distinctio.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                                            Laborum est molestiae eius.
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
@@ -1406,9 +734,9 @@
                         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Footer-blockTitle"</span>&gt;</span>Seguici su<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Footer-subBlock"</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Footer-socialIcons"</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-facebook"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Facebook<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-twitter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Twitter<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-youtube"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Youtube<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Icon Icon-facebook"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Facebook<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Icon Icon-twitter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Twitter<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Icon Icon-youtube"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Youtube<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1427,7 +755,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"torna all'inizio del contenuto"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ScrollTop js-scrollTop js-scrollTo"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ScrollTop-icon icon-top"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ScrollTop-icon Icon-arrow-up"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>torna all'inizio del contenuto<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
@@ -4038,7 +3366,7 @@
 
 
 
-<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.4"></script>
+<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.7"></script>
 
 
 

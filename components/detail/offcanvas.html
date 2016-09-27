@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../_theme/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.4" type="text/css">
+<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.7" type="text/css">
 
 
 <title>Offcanvas | Italia.it Web Toolkit Styleguide</title>
@@ -83,141 +88,6 @@
                 data-role="window"
                 src="../preview/offcanvas.html"
                 sandbox="allow-same-origin allow-scripts"
-                srcdoc="&lt;!DOCTYPE html&gt;
-&lt;!--[if IE 8]&gt;&lt;html class=&quot;no-js ie89 ie8&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if IE 9]&gt;&lt;html class=&quot;no-js ie89 ie9&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;
-&lt;html class=&quot;no-js&quot; lang=&quot;it&quot;&gt;
-&lt;!--&lt;![endif]--&gt;
-
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-  &lt;!--
-    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
-      &lt;link href=&#39;//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39; /&gt;
-    o dal repository locale (src/fonts)
-  --&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    WebFontConfig = {
-      google: {
-        families: [&#39;Titillium+Web:400,700,400italic:latin&#39;]
-      }
-    };
-    (function() {
-      var wf = document.createElement(&#39;script&#39;);
-      wf.src = &#39;https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;;
-      wf.type = &#39;text/javascript&#39;;
-      wf.async = &#39;true&#39;;
-      var s = document.getElementsByTagName(&#39;script&#39;)[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  &lt;/script&gt;
-
-  &lt;!-- include html5shim per Explorer 8 --&gt;
-  &lt;script src=&quot;/build/vendor/modernizr.js&quot;&gt;&lt;/script&gt;
-
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/vendor.css&quot;&gt;
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/build.css&quot;&gt;
-
-  &lt;title&gt;Preview Layout&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body class=&quot;Pac&quot;&gt;
-
-  
-	&lt;button type=&quot;button&quot; class=&quot;Button Button--default js-fr-offcanvas-open&quot; aria-controls=&quot;menu&quot;&gt;
-		Apri
-	&lt;/button&gt;
-
-
-&lt;section class=&quot;Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden&quot; id=&quot;menu&quot;&gt;
-	&lt;h2 class=&quot;u-hiddenVisually&quot;&gt;Menu di navigazione&lt;/h2&gt;
-  &lt;div class=&quot;Offcanvas-content u-background-white&quot;&gt;
-    &lt;div class=&quot;Offcanvas-toggleContainer u-padding-bottom-l u-background-70&quot;&gt;
-      &lt;button class=&quot;Hamburger-toggleContainer u-block u-color-white u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close&quot;
-        aria-controls=&quot;menu&quot; aria-label=&quot;chiudi il menu&quot; title=&quot;esci dalla navigazione&quot;&gt;
-        &lt;span class=&quot;Hamburger-toggle is-active&quot;&gt;
-        &lt;/span&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-    &lt;nav&gt;
-      &lt;ul class=&quot;Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs&quot;&gt;
-  &lt;li&gt;&lt;a&gt;Deleniti aut sed&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a&gt;Fuga sit nobis&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Quod ullam et&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Dolorum velit quis&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a&gt;Ex eum ratione&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Reiciendis vitae quidem&lt;/a&gt;
-            &lt;ul&gt;
-              &lt;li&gt;&lt;a&gt;Reiciendis vitae quidem&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a&gt;Ab aut minus&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a&gt;Voluptatem dolores consequatur&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Aliquam magni non&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Sit odio voluptatem&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Deleniti aut sed&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a&gt;Aliquam magni non&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a&gt;Dolorum velit quis&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Quod ullam et&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Fuga sit nobis&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a&gt;Ab aut minus&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Reiciendis vitae quidem&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Ex eum ratione&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Voluptatem dolores consequatur&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a&gt;Aliquam magni non&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a&gt;Sit odio voluptatem&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Fuga sit nobis&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Quod ullam et&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Dolorum velit quis&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Ex eum ratione&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Reiciendis vitae quidem&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Ab aut minus&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Voluptatem dolores consequatur&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Aliquam magni non&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/nav&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-
-
-  &lt;script src=&quot;/build/vendor/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-  &lt;!--[if IE 8]&gt;
-  &lt;script src=&quot;/build/vendor/respond.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/rem.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/selectivizr.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/slice.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!--[if lte IE 9]&gt;
-  &lt;script src=&quot;/build/vendor/polyfill.min.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!-- In produzione utilizzare &lt;script src=&quot;/build/IWT.min.js&quot;&gt;&lt;/script&gt; --&gt;
-  &lt;script src=&quot;/build/IWT.js&quot;&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -319,61 +189,60 @@
 		Apri
 	<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden u-nojsDisplayNone"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-hiddenVisually"</span>&gt;</span>Menu di navigazione<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Offcanvas-content u-background-white"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Offcanvas-toggleContainer u-padding-bottom-l u-background-70"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggleContainer u-block u-color-white u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"menu"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"chiudi il menu"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"esci dalla navigazione"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggle is-active"</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Offcanvas-toggleContainer u-background-70 u-jsHidden"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggleContainer u-block u-color-white u-padding-bottom-xxl u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"menu"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"esci dalla navigazione"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"esci dalla navigazione"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-toggle is-active"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Deleniti aut sed<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Quis aliquid minima<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Fuga sit nobis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Quod ullam et<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Dolorum velit quis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Alias deserunt dignissimos<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sed et autem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>At ipsum sunt<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ex eum ratione<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Reiciendis vitae quidem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Reprehenderit rerum rem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Unde vero placeat<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Reiciendis vitae quidem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ab aut minus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Voluptatem dolores consequatur<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Unde vero placeat<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Molestias quidem pariatur<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Non ducimus aut<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                                     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Aliquam magni non<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Nobis consequatur tempore<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sit odio voluptatem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Deleniti aut sed<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Eius dolorum a<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Quis aliquid minima<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Aliquam magni non<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Nobis consequatur tempore<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Dolorum velit quis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Quod ullam et<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Fuga sit nobis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>At ipsum sunt<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sed et autem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Alias deserunt dignissimos<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ab aut minus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Reiciendis vitae quidem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ex eum ratione<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Molestias quidem pariatur<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Unde vero placeat<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Reprehenderit rerum rem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Voluptatem dolores consequatur<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Aliquam magni non<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Non ducimus aut<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Nobis consequatur tempore<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sit odio voluptatem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Fuga sit nobis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Quod ullam et<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Dolorum velit quis<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ex eum ratione<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Reiciendis vitae quidem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Ab aut minus<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Voluptatem dolores consequatur<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Aliquam magni non<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Eius dolorum a<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Alias deserunt dignissimos<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Sed et autem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>At ipsum sunt<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Reprehenderit rerum rem<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Unde vero placeat<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Molestias quidem pariatur<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Non ducimus aut<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Nobis consequatur tempore<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
@@ -421,16 +290,22 @@
   --Offcanvas-max-width: 80%;
 }
 
+/* postcss-bem-linter: ignore */
 .Offcanvas,
 .Offcanvas-content {
   max-width: var(--Offcanvas-max-width);
   width: var(--Offcanvas-width);
 }
 
+.no-js .Offcanvas:target {
+  @extend .u-block;
+}
+
 .Offcanvas-toggleContainer {
   cursor: pointer;
 }
 
+.Offcanvas:target .Offcanvas-content,
 .Offcanvas.is-ready .Offcanvas-content {
   @extend .u-zindex-max;
   @extend .u-borderShadow-m;
@@ -445,29 +320,35 @@
   will-change: translateX;
 }
 
+.Offcanvas--right:target .Offcanvas-content,
 .Offcanvas--right.is-ready .Offcanvas-content {
   left: 100%;
 }
 
+.Offcanvas--left:target .Offcanvas-content,
 .Offcanvas--left.is-ready .Offcanvas-content {
   right: 100%;
 }
 
 /* postcss-bem-linter: ignore */
+.Offcanvas:not(:target) .Offcanvas-content,
 .Offcanvas.is-ready[aria-hidden="true"] .Offcanvas-content {
   transition: transform 200ms ease-out, visibility 200ms;
 }
 
 /* postcss-bem-linter: ignore */
+.Offcanvas--right:target .Offcanvas-content,
 .Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
   transform: translateX(-100%);
 }
 
 /* postcss-bem-linter: ignore */
+.Offcanvas--left:target .Offcanvas-content,
 .Offcanvas--left.is-ready[aria-hidden="false"] .Offcanvas-content {
   transform: translateX(100%);
 }
 
+.Offcanvas--modal:target::after,
 .Offcanvas--modal.is-active::after {
   @extend .u-zindex-50;
 
@@ -497,7 +378,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.3 KB</span>
+                    <span class="Meta-value">1.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -512,7 +393,7 @@
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>
 
-<span class="hljs-keyword">import</span> Froffcanvas <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-offcanvas'</span>
+<span class="hljs-keyword">import</span> Froffcanvas <span class="hljs-keyword">from</span> <span class="hljs-string">'fr-offcanvas/offcanvas'</span>
 
 <span class="hljs-comment">/* eslint-disable no-unused-vars */</span>
 
@@ -546,8 +427,6 @@
   activeClass: <span class="hljs-string">'is-active'</span>
 }
 
-<span class="hljs-keyword">const</span> offcanvas = Froffcanvas(opts)
-
 <span class="hljs-comment">/*
  *  Prevent scroll on body when offcanvas is visible
  *  (the touchmove handler targets iOS devices)
@@ -555,18 +434,12 @@
 <span class="hljs-keyword">const</span> _handleModalScroll = () =&gt; {
   $(opts.contentSelector).on(<span class="hljs-string">'transitionend'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">if</span> (!$(opts.panelSelector).hasClass(opts.activeClass)) {
-      $(<span class="hljs-string">'body, html'</span>).css({
-        <span class="hljs-string">'overflow-y'</span>: <span class="hljs-string">'visible'</span>
-      })
+      $(<span class="hljs-built_in">window</span>).off(<span class="hljs-string">'scroll.offcanvas'</span>)
       $(<span class="hljs-built_in">document</span>).off(<span class="hljs-string">'touchmove.offcanvas'</span>)
     } <span class="hljs-keyword">else</span> {
-      <span class="hljs-keyword">const</span> scrollTop = $(<span class="hljs-string">'body'</span>).scrollTop()
-      $(<span class="hljs-string">'body, html'</span>).css({
-        <span class="hljs-string">'overflow-y'</span>: <span class="hljs-string">'hidden'</span>
-      })
-      $(<span class="hljs-built_in">document</span>).on(<span class="hljs-string">'touchmove.offcanvas'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        $(<span class="hljs-string">'body'</span>).scrollTop(scrollTop)
-      })
+      <span class="hljs-keyword">const</span> _scrollTop = $(<span class="hljs-built_in">window</span>).scrollTop()
+      $(<span class="hljs-built_in">window</span>).on(<span class="hljs-string">'scroll.offcanvas'</span>, () =&gt; $(<span class="hljs-built_in">window</span>).scrollTop(_scrollTop))
+      $(<span class="hljs-built_in">document</span>).on(<span class="hljs-string">'touchmove.offcanvas'</span>, () =&gt; $(<span class="hljs-built_in">window</span>).scrollTop(_scrollTop))
     }
   })
 }
@@ -577,21 +450,42 @@
 <span class="hljs-keyword">const</span> _handleModal = (e) =&gt; {
   <span class="hljs-keyword">if</span> (e &amp;&amp; $(opts.panelSelector).hasClass(opts.activeClass) &amp;&amp;
     !$(e.target).is(opts.contentSelector)) {
-    $(opts.closeSelector).click()
+    <span class="hljs-comment">// for some odd reason plain jquery click() does not work here</span>
+    <span class="hljs-comment">// // so we add that get(0) call</span>
+    $(opts.closeSelector).get(<span class="hljs-number">0</span>).click()
   }
+  <span class="hljs-comment">// we're using "one" here instead of "bind" because</span>
+  <span class="hljs-comment">// otherwise $(opts.closeSelector).click() would trigger</span>
+  <span class="hljs-comment">// a click on modal again looping forever</span>
   $(opts.modalSelector).one(<span class="hljs-string">'click'</span>, _handleModal)
 }
 
-$(<span class="hljs-built_in">document</span>).ready(() =&gt; {
-  _handleModal()
-  _handleModalScroll()
-})
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+<span class="hljs-keyword">let</span> _exports = {
   Froffcanvas,
-  offcanvas,
   opts
 }
+
+$(<span class="hljs-built_in">document</span>).ready(() =&gt; {
+  <span class="hljs-keyword">let</span> _scrollTop = $(<span class="hljs-built_in">window</span>).scrollTop()
+
+  $(opts.openSelector)
+    .add($(opts.closeSelector))
+    .click((e) =&gt; {
+      _scrollTop = $(<span class="hljs-built_in">window</span>).scrollTop()
+      e.preventDefault()
+    })
+
+  $(opts.panelSelector).on(<span class="hljs-string">'focus'</span>, () =&gt; {
+    $(<span class="hljs-built_in">window</span>).scrollTop(_scrollTop)
+  })
+
+  _handleModal()
+  _handleModalScroll()
+
+  _exports.offcanvas = Froffcanvas(opts)
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> _exports
 </pre>
                             </code>
                             
@@ -608,7 +502,7 @@ $(<span class="hljs-built_in">document</span>).ready(() =&gt; {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.9 KB</span>
+                    <span class="Meta-value">2.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -3169,7 +3063,7 @@ $(<span class="hljs-built_in">document</span>).ready(() =&gt; {
 
 
 
-<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.4"></script>
+<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.7"></script>
 
 
 

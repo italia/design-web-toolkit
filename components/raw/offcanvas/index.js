@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-import Froffcanvas from 'fr-offcanvas'
+import Froffcanvas from 'fr-offcanvas/offcanvas'
 
 /* eslint-disable no-unused-vars */
 
@@ -34,8 +34,6 @@ const opts = {
   activeClass: 'is-active'
 }
 
-const offcanvas = Froffcanvas(opts)
-
 /*
  *  Prevent scroll on body when offcanvas is visible
  *  (the touchmove handler targets iOS devices)
@@ -43,18 +41,12 @@ const offcanvas = Froffcanvas(opts)
 const _handleModalScroll = () => {
   $(opts.contentSelector).on('transitionend', function() {
     if (!$(opts.panelSelector).hasClass(opts.activeClass)) {
-      $('body, html').css({
-        'overflow-y': 'visible'
-      })
+      $(window).off('scroll.offcanvas')
       $(document).off('touchmove.offcanvas')
     } else {
-      const scrollTop = $('body').scrollTop()
-      $('body, html').css({
-        'overflow-y': 'hidden'
-      })
-      $(document).on('touchmove.offcanvas', function() {
-        $('body').scrollTop(scrollTop)
-      })
+      const _scrollTop = $(window).scrollTop()
+      $(window).on('scroll.offcanvas', () => $(window).scrollTop(_scrollTop))
+      $(document).on('touchmove.offcanvas', () => $(window).scrollTop(_scrollTop))
     }
   })
 }
@@ -65,18 +57,39 @@ const _handleModalScroll = () => {
 const _handleModal = (e) => {
   if (e && $(opts.panelSelector).hasClass(opts.activeClass) &&
     !$(e.target).is(opts.contentSelector)) {
-    $(opts.closeSelector).click()
+    // for some odd reason plain jquery click() does not work here
+    // // so we add that get(0) call
+    $(opts.closeSelector).get(0).click()
   }
+  // we're using "one" here instead of "bind" because
+  // otherwise $(opts.closeSelector).click() would trigger
+  // a click on modal again looping forever
   $(opts.modalSelector).one('click', _handleModal)
 }
 
-$(document).ready(() => {
-  _handleModal()
-  _handleModalScroll()
-})
-
-export default {
+let _exports = {
   Froffcanvas,
-  offcanvas,
   opts
 }
+
+$(document).ready(() => {
+  let _scrollTop = $(window).scrollTop()
+
+  $(opts.openSelector)
+    .add($(opts.closeSelector))
+    .click((e) => {
+      _scrollTop = $(window).scrollTop()
+      e.preventDefault()
+    })
+
+  $(opts.panelSelector).on('focus', () => {
+    $(window).scrollTop(_scrollTop)
+  })
+
+  _handleModal()
+  _handleModalScroll()
+
+  _exports.offcanvas = Froffcanvas(opts)
+})
+
+export default _exports

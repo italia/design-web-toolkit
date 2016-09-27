@@ -4532,11 +4532,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 22 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 	
-	/* global jQuery */
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	
+	/* global jQuery, define */
 	
 	/*
 	 *	Fork of
@@ -4545,11 +4547,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *	The MIT License (MIT)
 	 *	Copyright (c) 2016 Carl Woodhouse
 	 *
+	 *
 	 */
-	(function ($) {
+	(function (factory) {
+	  if (true) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') {
+	    // CommonJS
+	    factory(require('jquery'));
+	  } else {
+	    // Browser globals
+	    factory(jQuery);
+	  }
+	})(function ($) {
 	
 	  $.fn.cookieBar = function (options) {
-	
 	    var settings = $.extend({
 	      'acceptButton': '.js-cookieBarAccept',
 	      'secure': false,
@@ -4565,16 +4578,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	        domain: settings.domain,
 	        expires: 30
 	      });
+	      $(document).trigger('accept.cookiebar');
+	    };
+	
+	    $.cookieBar = $.cookieBar || {};
+	
+	    $.cookieBar.isAccepted = function () {
+	      return $.cookie('cookiebar') === 'hide';
 	    };
 	
 	    return this.each(function () {
 	      var $cookiebar = $(this);
 	
-	      if ($.cookie('cookiebar') !== 'hide') {
+	      if (!$.cookieBar.isAccepted()) {
 	        if (settings.threshold > 0) {
 	          $(window).on('scroll.cookiebar', function () {
 	            if ($(window).scrollTop() > settings.threshold) {
-	              $(window).unbind('.cookiebar');
+	              $(window).unbind('scroll.cookiebar');
 	              _accept();
 	              $cookiebar.hide();
 	            }
@@ -4590,7 +4610,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    });
 	  };
-	})(jQuery);
+	});
 
 /***/ },
 /* 23 */
@@ -8740,13 +8760,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _frOffcanvas = __webpack_require__(44);
-	
-	var _frOffcanvas2 = _interopRequireDefault(_frOffcanvas);
-	
-	var _offcanvas = __webpack_require__(45);
+	var _offcanvas = __webpack_require__(44);
 	
 	var _offcanvas2 = _interopRequireDefault(_offcanvas);
+	
+	var _offcanvas3 = __webpack_require__(45);
+	
+	var _offcanvas4 = _interopRequireDefault(_offcanvas3);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -8778,29 +8798,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	  activeClass: 'is-active'
 	};
 	
-	/* eslint-disable no-unused-vars */
-	
-	var offcanvas = (0, _frOffcanvas2['default'])(opts);
-	
 	/*
 	 *  Prevent scroll on body when offcanvas is visible
 	 *  (the touchmove handler targets iOS devices)
 	 */
+	
+	
+	/* eslint-disable no-unused-vars */
+	
 	var _handleModalScroll = function _handleModalScroll() {
 	  (0, _jquery2['default'])(opts.contentSelector).on('transitionend', function () {
 	    if (!(0, _jquery2['default'])(opts.panelSelector).hasClass(opts.activeClass)) {
-	      (0, _jquery2['default'])('body, html').css({
-	        'overflow-y': 'visible'
-	      });
+	      (0, _jquery2['default'])(window).off('scroll.offcanvas');
 	      (0, _jquery2['default'])(document).off('touchmove.offcanvas');
 	    } else {
 	      (function () {
-	        var scrollTop = (0, _jquery2['default'])('body').scrollTop();
-	        (0, _jquery2['default'])('body, html').css({
-	          'overflow-y': 'hidden'
+	        var _scrollTop = (0, _jquery2['default'])(window).scrollTop();
+	        (0, _jquery2['default'])(window).on('scroll.offcanvas', function () {
+	          return (0, _jquery2['default'])(window).scrollTop(_scrollTop);
 	        });
 	        (0, _jquery2['default'])(document).on('touchmove.offcanvas', function () {
-	          (0, _jquery2['default'])('body').scrollTop(scrollTop);
+	          return (0, _jquery2['default'])(window).scrollTop(_scrollTop);
 	        });
 	      })();
 	    }
@@ -8812,21 +8830,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	var _handleModal = function _handleModal(e) {
 	  if (e && (0, _jquery2['default'])(opts.panelSelector).hasClass(opts.activeClass) && !(0, _jquery2['default'])(e.target).is(opts.contentSelector)) {
-	    (0, _jquery2['default'])(opts.closeSelector).click();
+	    // for some odd reason plain jquery click() does not work here
+	    // // so we add that get(0) call
+	    (0, _jquery2['default'])(opts.closeSelector).get(0).click();
 	  }
+	  // we're using "one" here instead of "bind" because
+	  // otherwise $(opts.closeSelector).click() would trigger
+	  // a click on modal again looping forever
 	  (0, _jquery2['default'])(opts.modalSelector).one('click', _handleModal);
 	};
 	
-	(0, _jquery2['default'])(document).ready(function () {
-	  _handleModal();
-	  _handleModalScroll();
-	});
-	
-	exports['default'] = {
-	  Froffcanvas: _frOffcanvas2['default'],
-	  offcanvas: offcanvas,
+	var _exports = {
+	  Froffcanvas: _offcanvas2['default'],
 	  opts: opts
 	};
+	
+	(0, _jquery2['default'])(document).ready(function () {
+	  var _scrollTop = (0, _jquery2['default'])(window).scrollTop();
+	
+	  (0, _jquery2['default'])(opts.openSelector).add((0, _jquery2['default'])(opts.closeSelector)).click(function (e) {
+	    _scrollTop = (0, _jquery2['default'])(window).scrollTop();
+	    e.preventDefault();
+	  });
+	
+	  (0, _jquery2['default'])(opts.panelSelector).on('focus', function () {
+	    (0, _jquery2['default'])(window).scrollTop(_scrollTop);
+	  });
+	
+	  _handleModal();
+	  _handleModalScroll();
+	
+	  _exports.offcanvas = (0, _offcanvas2['default'])(opts);
+	});
+	
+	exports['default'] = _exports;
 	module.exports = exports['default'];
 
 /***/ },
@@ -9152,6 +9189,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	if ((0, _jquery2['default'])('.' + opts.classes.initial).is(headroomFixed)) {
 	  (function () {
+	    var INTERVAL = 250;
+	
+	    var windowWidth = (0, _jquery2['default'])(window).width();
+	
 	    // Needs to be here due to CSS transition (see on Safari)
 	    var headerHeight = (0, _jquery2['default'])(headroomFixed).height();
 	
@@ -9173,16 +9214,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	
 	    // Make padding respond to window resize
-	    (0, _jquery2['default'])(window).resize((0, _throttle2['default'])(250, function () {
-	      headerHeight = (0, _jquery2['default'])(headroomFixed).height();
-	      setTimeout(_adjustPadding, 250);
+	    (0, _jquery2['default'])(window).resize((0, _throttle2['default'])(INTERVAL, function () {
+	      var newWindowWidth = (0, _jquery2['default'])(window).width();
+	      var height = (0, _jquery2['default'])(headroomFixed).height();
+	      // Android browser triggers a resize event on scroll to top
+	      // so we check for changes in window width
+	      if (newWindowWidth !== windowWidth) {
+	        windowWidth = newWindowWidth;
+	        headerHeight = height;
+	        setTimeout(_adjustPadding, INTERVAL);
+	      }
 	    }));
 	
-	    // This happens *only* after a resize
-	    // when scrolling to top
-	    (0, _jquery2['default'])(headroomFixed).on('transitionend', (0, _throttle2['default'])(250, function () {
+	    (0, _jquery2['default'])(headroomFixed).on('transitionend', (0, _throttle2['default'])(INTERVAL, function () {
 	      var height = (0, _jquery2['default'])(this).height();
 	      if (headerHeight < height) {
+	        // This happens *only* after a resize
+	        // _and_ when scrolling to top
 	        headerHeight = height;
 	        _adjustPadding();
 	      }

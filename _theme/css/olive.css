@@ -629,19 +629,16 @@ h6 {
 
 h1 {
   font: bold 1.75rem/1.14286 "Open Sans", Helvetica, Arial, sans-serif;
-  -webkit-font-feature-settings: "dlig" 1;
-          font-feature-settings: "dlig" 1;
+  font-feature-settings: "dlig" 1;
   letter-spacing: -0.025em; }
 
 h2 {
   font: bold 1.3125rem/1.14286 "Open Sans", Helvetica, Arial, sans-serif;
-  -webkit-font-feature-settings: "dlig" 1;
-          font-feature-settings: "dlig" 1; }
+  font-feature-settings: "dlig" 1; }
 
 h3 {
   font: bold 1.125rem/1.33333 "Open Sans", Helvetica, Arial, sans-serif;
-  -webkit-font-feature-settings: "dlig" 1;
-          font-feature-settings: "dlig" 1; }
+  font-feature-settings: "dlig" 1; }
 
 h4,
 h5,
@@ -1387,8 +1384,7 @@ h6 {
 
 .Document-title {
   font: bold 1.75rem/1.14286 "Open Sans", Helvetica, Arial, sans-serif;
-  -webkit-font-feature-settings: "dlig" 1;
-          font-feature-settings: "dlig" 1;
+  font-feature-settings: "dlig" 1;
   letter-spacing: -0.025em; }
 
 .Error-stack {
@@ -1793,8 +1789,7 @@ span.select2-selection.select2-selection--single {
 
 .Pen-title {
   font: bold 1.125rem/1.33333 "Open Sans", Helvetica, Arial, sans-serif;
-  -webkit-font-feature-settings: "dlig" 1;
-          font-feature-settings: "dlig" 1;
+  font-feature-settings: "dlig" 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -1993,8 +1988,7 @@ span.select2-selection.select2-selection--single {
 .Prose {
   font: normal 1rem/1.5 "Open Sans", Helvetica, Arial, sans-serif;
   max-width: 44em;
-  -webkit-font-feature-settings: "liga", "dlig", "kern", "onum";
-          font-feature-settings: "liga", "dlig", "kern", "onum";
+  font-feature-settings: "liga", "dlig", "kern", "onum";
   hanging-punctuation: first; }
   .Prose > * {
     margin-bottom: 0.75em; }
@@ -2019,21 +2013,18 @@ span.select2-selection.select2-selection--single {
     list-style-type: decimal; }
   .Prose h1 {
     font: bold 1.75rem/1.14286 "Open Sans", Helvetica, Arial, sans-serif;
-    -webkit-font-feature-settings: "dlig" 1;
-            font-feature-settings: "dlig" 1;
+    font-feature-settings: "dlig" 1;
     letter-spacing: -0.025em; }
   .Prose h2 {
     font: bold 1.3125rem/1.14286 "Open Sans", Helvetica, Arial, sans-serif;
-    -webkit-font-feature-settings: "dlig" 1;
-            font-feature-settings: "dlig" 1;
+    font-feature-settings: "dlig" 1;
     margin-bottom: 1em;
     color: #444; }
   .Prose *:not(hr) + h2 {
     margin-top: 2em; }
   .Prose h3 {
     font: bold 1.125rem/1.33333 "Open Sans", Helvetica, Arial, sans-serif;
-    -webkit-font-feature-settings: "dlig" 1;
-            font-feature-settings: "dlig" 1;
+    font-feature-settings: "dlig" 1;
     margin-bottom: 0.75em;
     opacity: 0.8; }
   .Prose * + h3 {
@@ -2044,8 +2035,7 @@ span.select2-selection.select2-selection--single {
     border-top: 0.125rem solid rgba(83, 83, 99, 0.25);
     margin: 2em 0; }
   .Prose abbr {
-    -webkit-font-feature-settings: "c2sc";
-            font-feature-settings: "c2sc"; }
+    font-feature-settings: "c2sc"; }
   .Prose blockquote {
     -webkit-border-start: solid rgba(83, 83, 99, 0.25);
        -moz-border-start: solid rgba(83, 83, 99, 0.25);
@@ -2077,8 +2067,7 @@ span.select2-selection.select2-selection--single {
     margin: 1rem -0.5rem;
     border-collapse: collapse;
     font-size: 0.875rem;
-    -webkit-font-feature-settings: "lnum" 1, "tnum" 1;
-            font-feature-settings: "lnum" 1, "tnum" 1; }
+    font-feature-settings: "lnum" 1, "tnum" 1; }
   .Prose caption {
     font: normal 0.8125rem/1.53846 "Open Sans", Helvetica, Arial, sans-serif;
     padding: 0 0.5rem;

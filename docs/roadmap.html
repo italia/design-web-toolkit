@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../_theme/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../_theme/css/blue.css?cachebust=1.0.4" type="text/css">
+<link rel="stylesheet" href="../_theme/css/blue.css?cachebust=1.0.7" type="text/css">
 
 
 <title>Roadmap | Italia.it Web Toolkit Styleguide</title>
@@ -64,49 +69,71 @@
 
     
     
-    <h2 id="v0-1-0-beta">v0.1.0-beta</h2>
+    <h2 id="v0-1-0">v0.1.0</h2>
 <ul>
 <li><p><strong>test cross browser</strong></p>
 </li>
 <li><p><strong>verifica accessibilità per i componenti js e i template</strong></p>
 </li>
-<li><p>integrazione nuovo set di icone AgID</p>
-<ul>
-<li>icone per alert</li>
-<li>icone per checkbox e radio button</li>
-</ul>
-</li>
-</ul>
-<h2 id="v0-1-0">v0.1.0</h2>
-<ul>
-<li><p>profiling (es. dimensioni degli assets, profiling javascript e transizioni CSS)</p>
-</li>
-<li><p>refactoring di alcuni componenti</p>
-</li>
-<li><p>stylesheet per media print</p>
-</li>
-<li><p>refactoring margini e padding responsive</p>
-</li>
-<li><p>più attenzione per IE8/9 (legacy.css)</p>
-</li>
 </ul>
 <h2 id="v1-0-0">v1.0.0</h2>
 <ul>
-<li>form spid</li>
-<li><p>carrello pagopa</p>
+<li><p>security audit (javascript compilato)</p>
 </li>
-<li><p>componente pager</p>
+<li><p>refactoring di alcuni componenti</p>
 </li>
-<li>componente lightbox</li>
-<li>componente agenda</li>
-<li><p>componente mappa (openstreetmap)</p>
+<li><p>refactoring margini e padding responsive</p>
 </li>
-<li><p>service design pattern (es. entry page servizio / form con progresso)</p>
+<li><p>stylesheet per media print</p>
+</li>
+<li><p>migliorare (o cassare del tutto) il supporto per IE8/9 (legacy.css)</p>
+<ul>
+<li>considerare se introdurre un fallback per immagini svg</li>
+<li>considerare se utilizzare per i browser obsoleti il foglio di stile per la stampa</li>
+</ul>
 </li>
 </ul>
 <h2 id="v2-0-0">v2.0.0</h2>
 <ul>
-<li>sistema per <em>custom build</em> (personalizzazione colori, esclusione di moduli, …)</li>
+<li><p>profiling</p>
+<ul>
+<li>dimensione degli assets</li>
+<li>profiling javascript e transizioni CSS</li>
+</ul>
+</li>
+<li><p>nuovi componenti</p>
+<ul>
+<li>dropdown</li>
+<li>pager</li>
+<li>lightbox</li>
+<li>agenda</li>
+<li>mappa (openstreetmap)</li>
+</ul>
+</li>
+<li><p>design pattern</p>
+<ul>
+<li>form spid</li>
+<li>entry page servizi</li>
+<li>form multistep</li>
+<li>carrello pagopa</li>
+</ul>
+</li>
+</ul>
+<h2 id="v3-0-0">v3.0.0</h2>
+<ul>
+<li><p>sistema per <em>custom build</em></p>
+<ul>
+<li>personalizzazione automatica dei colori</li>
+<li>possibilità di selezionare i singoli moduli</li>
+</ul>
+</li>
+<li><p>progressive web app</p>
+<ul>
+<li>manifest.json</li>
+<li>service worker</li>
+<li>push notification</li>
+</ul>
+</li>
 </ul>
 
     
@@ -2594,7 +2621,7 @@
 
 
 
-<script src="../_theme/js/mandelbrot.js?cachebust=1.0.4"></script>
+<script src="../_theme/js/mandelbrot.js?cachebust=1.0.7"></script>
 
 
 

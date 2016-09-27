@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../_theme/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.4" type="text/css">
+<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.7" type="text/css">
 
 
 <title>Accordion | Italia.it Web Toolkit Styleguide</title>
@@ -83,115 +88,6 @@
                 data-role="window"
                 src="../preview/accordion.html"
                 sandbox="allow-same-origin allow-scripts"
-                srcdoc="&lt;!DOCTYPE html&gt;
-&lt;!--[if IE 8]&gt;&lt;html class=&quot;no-js ie89 ie8&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if IE 9]&gt;&lt;html class=&quot;no-js ie89 ie9&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;
-&lt;html class=&quot;no-js&quot; lang=&quot;it&quot;&gt;
-&lt;!--&lt;![endif]--&gt;
-
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-  &lt;!--
-    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
-      &lt;link href=&#39;//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39; /&gt;
-    o dal repository locale (src/fonts)
-  --&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    WebFontConfig = {
-      google: {
-        families: [&#39;Titillium+Web:400,700,400italic:latin&#39;]
-      }
-    };
-    (function() {
-      var wf = document.createElement(&#39;script&#39;);
-      wf.src = &#39;https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;;
-      wf.type = &#39;text/javascript&#39;;
-      wf.async = &#39;true&#39;;
-      var s = document.getElementsByTagName(&#39;script&#39;)[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  &lt;/script&gt;
-
-  &lt;!-- include html5shim per Explorer 8 --&gt;
-  &lt;script src=&quot;/build/vendor/modernizr.js&quot;&gt;&lt;/script&gt;
-
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/vendor.css&quot;&gt;
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/build.css&quot;&gt;
-
-  &lt;title&gt;Preview Layout&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body class=&quot;Pac&quot;&gt;
-
-  &lt;div class=&quot;Accordion fr-accordion js-fr-accordion&quot; id=&quot;accordion-1&quot;&gt;
-
-	
-	&lt;h2 class=&quot;Accordion-header js-fr-accordion__header fr-accordion__header&quot; id=&quot;accordion-header-0&quot; &gt;
-		&lt;span class=&quot;Accordion-link u-text-r-s&quot;&gt;Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.&lt;/span&gt;
-	&lt;/h2&gt;
-	&lt;div id=&quot;accordion-panel-0&quot; class=&quot;Accordion-panel fr-accordion__panel js-fr-accordion__panel&quot;&gt;
-    &lt;p class=&quot;u-layout-prose u-color-grey-90 u-text-p u-padding-r-all&quot;&gt;In ad enim atque est et ab sit itaque enim. Harum omnis porro maiores dignissimos et nostrum quia tenetur impedit. Vitae delectus vel autem est voluptas assumenda. Voluptates vel corrupti rerum suscipit occaecati sit. Natus accusamus ut. Molestias illo debitis amet non necessitatibus.&lt;/p&gt;
-
-	&lt;/div&gt;
-	
-	&lt;h2 class=&quot;Accordion-header js-fr-accordion__header fr-accordion__header&quot; id=&quot;accordion-header-1&quot; &gt;
-		&lt;span class=&quot;Accordion-link u-text-r-s&quot;&gt;Debitis atque qui nihil voluptas amet.&lt;/span&gt;
-	&lt;/h2&gt;
-	&lt;div id=&quot;accordion-panel-1&quot; class=&quot;Accordion-panel fr-accordion__panel js-fr-accordion__panel&quot;&gt;
-    &lt;p class=&quot;u-layout-prose u-color-grey-90 u-text-p u-padding-r-all&quot;&gt;Illum ratione et minima quis explicabo incidunt sit. A nostrum sit qui voluptatem aut. Voluptatem libero consequatur maiores beatae rerum totam voluptatem ut tempore.&lt;/p&gt;
-
-	&lt;/div&gt;
-	
-	&lt;h2 class=&quot;Accordion-header js-fr-accordion__header fr-accordion__header&quot; id=&quot;accordion-header-2&quot; &gt;
-		&lt;span class=&quot;Accordion-link u-text-r-s&quot;&gt;Omnis tempore est adipisci sed dolores.&lt;/span&gt;
-	&lt;/h2&gt;
-	&lt;div id=&quot;accordion-panel-2&quot; class=&quot;Accordion-panel fr-accordion__panel js-fr-accordion__panel&quot;&gt;
-    &lt;p class=&quot;u-layout-prose u-color-grey-90 u-text-p u-padding-r-all&quot;&gt;Adipisci quas exercitationem delectus est quis modi. Doloribus modi officia. Rerum laboriosam sunt sequi quis libero vero deserunt. Nobis tempora est sapiente. Aspernatur est ut vero asperiores veniam facere aut. Omnis tempore qui saepe cupiditate.&lt;/p&gt;
-
-	&lt;/div&gt;
-	
-	&lt;h2 class=&quot;Accordion-header js-fr-accordion__header fr-accordion__header&quot; id=&quot;accordion-header-3&quot; &gt;
-		&lt;span class=&quot;Accordion-link u-text-r-s&quot;&gt;Temporibus quia dolorem.&lt;/span&gt;
-	&lt;/h2&gt;
-	&lt;div id=&quot;accordion-panel-3&quot; class=&quot;Accordion-panel fr-accordion__panel js-fr-accordion__panel&quot;&gt;
-    &lt;p class=&quot;u-layout-prose u-color-grey-90 u-text-p u-padding-r-all&quot;&gt;Id enim consequatur voluptas impedit quisquam quo atque. Animi distinctio suscipit aut quia deleniti voluptas aspernatur vel ullam. Enim quas et esse occaecati consequatur. Culpa in optio nam.&lt;/p&gt;
-
-	&lt;/div&gt;
-	
-	&lt;h2 class=&quot;Accordion-header js-fr-accordion__header fr-accordion__header&quot; id=&quot;accordion-header-4&quot; &gt;
-		&lt;span class=&quot;Accordion-link u-text-r-s&quot;&gt;Laudantium sed ex quibusdam.&lt;/span&gt;
-	&lt;/h2&gt;
-	&lt;div id=&quot;accordion-panel-4&quot; class=&quot;Accordion-panel fr-accordion__panel js-fr-accordion__panel&quot;&gt;
-    &lt;p class=&quot;u-layout-prose u-color-grey-90 u-text-p u-padding-r-all&quot;&gt;Minus vero quasi ea dicta incidunt. Ipsa numquam occaecati consequuntur. Nihil ipsa eveniet voluptatem rem aut sapiente et soluta reiciendis. Perspiciatis eveniet veniam nam laborum dignissimos sint possimus exercitationem omnis.&lt;/p&gt;
-
-	&lt;/div&gt;
-	
-
-&lt;/div&gt;
-
-
-  &lt;script src=&quot;/build/vendor/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-  &lt;!--[if IE 8]&gt;
-  &lt;script src=&quot;/build/vendor/respond.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/rem.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/selectivizr.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/slice.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!--[if lte IE 9]&gt;
-  &lt;script src=&quot;/build/vendor/polyfill.min.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!-- In produzione utilizzare &lt;script src=&quot;/build/IWT.min.js&quot;&gt;&lt;/script&gt; --&gt;
-  &lt;script src=&quot;/build/IWT.js&quot;&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -292,43 +188,43 @@
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion fr-accordion js-fr-accordion"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-1"</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-header js-fr-accordion__header fr-accordion__header"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-header-0"</span>&gt;</span>
-		<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-	<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Veritatis quia dolorem deserunt et et ea.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-panel-0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-panel fr-accordion__panel js-fr-accordion__panel"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>In ad enim atque est et ab sit itaque enim. Harum omnis porro maiores dignissimos et nostrum quia tenetur impedit. Vitae delectus vel autem est voluptas assumenda. Voluptates vel corrupti rerum suscipit occaecati sit. Natus accusamus ut. Molestias
-            illo debitis amet non necessitatibus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Provident consequatur at recusandae vel consequatur non dolorem libero. Unde delectus dolor iusto. Animi officiis rem temporibus voluptatem. Vel enim hic et qui sit id ullam. Ea in omnis modi est. Voluptatibus voluptatum possimus sapiente.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-header js-fr-accordion__header fr-accordion__header"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-header-1"</span>&gt;</span>
-		<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Debitis atque qui nihil voluptas amet.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-	<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Reiciendis nihil et quo ullam magnam occaecati expedita quibusdam sapiente.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-panel-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-panel fr-accordion__panel js-fr-accordion__panel"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Illum ratione et minima quis explicabo incidunt sit. A nostrum sit qui voluptatem aut. Voluptatem libero consequatur maiores beatae rerum totam voluptatem ut tempore.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Quia qui maxime magni harum similique et amet. Eaque molestiae voluptatem suscipit deleniti et. Natus nesciunt ab dolore ducimus qui quia non tempore dolor. Nam excepturi sit voluptas accusantium in quod nihil sint. Vel qui reprehenderit voluptatibus
+            ut eveniet ut ab odio necessitatibus. Et praesentium mollitia quae.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-header js-fr-accordion__header fr-accordion__header"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-header-2"</span>&gt;</span>
-		<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Omnis tempore est adipisci sed dolores.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-	<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Dolor voluptatem est perspiciatis.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-panel-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-panel fr-accordion__panel js-fr-accordion__panel"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Adipisci quas exercitationem delectus est quis modi. Doloribus modi officia. Rerum laboriosam sunt sequi quis libero vero deserunt. Nobis tempora est sapiente. Aspernatur est ut vero asperiores veniam facere aut. Omnis tempore qui saepe cupiditate.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Culpa sunt explicabo rem molestiae neque. Quidem delectus veritatis repellendus et vero. Dicta rem tempore dolor facilis voluptatem. Pariatur enim sint maiores deserunt vitae.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-header js-fr-accordion__header fr-accordion__header"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-header-3"</span>&gt;</span>
-		<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Temporibus quia dolorem.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-	<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Mollitia dolores officiis occaecati ut vitae id ad libero corporis.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-panel-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-panel fr-accordion__panel js-fr-accordion__panel"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Id enim consequatur voluptas impedit quisquam quo atque. Animi distinctio suscipit aut quia deleniti voluptas aspernatur vel ullam. Enim quas et esse occaecati consequatur. Culpa in optio nam.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>In dicta labore sed vel autem et eveniet similique corporis. Quod officia et magnam assumenda ut modi saepe quia quisquam. Impedit laborum est quia consequatur repellendus quam. Velit consequatur aspernatur accusantium. Magni minima odit ut.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-header js-fr-accordion__header fr-accordion__header"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-header-4"</span>&gt;</span>
-		<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Laudantium sed ex quibusdam.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-	<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-link u-text-r-s"</span>&gt;</span>Tempora porro ea quia deleniti hic quia enim reiciendis minima.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-panel-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Accordion-panel fr-accordion__panel js-fr-accordion__panel"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Minus vero quasi ea dicta incidunt. Ipsa numquam occaecati consequuntur. Nihil ipsa eveniet voluptatem rem aut sapiente et soluta reiciendis. Perspiciatis eveniet veniam nam laborum dignissimos sint possimus exercitationem omnis.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-layout-prose u-color-grey-90 u-text-p u-padding-r-all"</span>&gt;</span>Eum id ipsa consequatur sapiente hic quo voluptatum possimus. Et voluptatem mollitia perspiciatis. Harum illum dolorem dolore eos aspernatur. Corporis quia rerum fugit qui quaerat error consequatur totam sequi.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -368,10 +264,10 @@
 
 :root {
   --Accordion-border-color: #d8d8d8;
-  --Accordion-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
-  --Accordion-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
+  --Accordion-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
+  --Accordion-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
   --Accordion-link-padding: 0.5em;
-  --Accordion-link-arrow-width: 1.5em;
+  --Accordion-link-arrow-width: 0.8em;
 }
 
 .Accordion {
@@ -3042,7 +2938,7 @@
 
 
 
-<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.4"></script>
+<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.7"></script>
 
 
 

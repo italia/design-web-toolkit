@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../_theme/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.4" type="text/css">
+<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.7" type="text/css">
 
 
 <title>Button: Danger | Italia.it Web Toolkit Styleguide</title>
@@ -83,93 +88,6 @@
                 data-role="window"
                 src="../preview/button--danger.html"
                 sandbox="allow-same-origin allow-scripts"
-                srcdoc="&lt;!DOCTYPE html&gt;
-&lt;!--[if IE 8]&gt;&lt;html class=&quot;no-js ie89 ie8&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if IE 9]&gt;&lt;html class=&quot;no-js ie89 ie9&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;
-&lt;html class=&quot;no-js&quot; lang=&quot;it&quot;&gt;
-&lt;!--&lt;![endif]--&gt;
-
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-  &lt;!--
-    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
-      &lt;link href=&#39;//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39; /&gt;
-    o dal repository locale (src/fonts)
-  --&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    WebFontConfig = {
-      google: {
-        families: [&#39;Titillium+Web:400,700,400italic:latin&#39;]
-      }
-    };
-    (function() {
-      var wf = document.createElement(&#39;script&#39;);
-      wf.src = &#39;https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;;
-      wf.type = &#39;text/javascript&#39;;
-      wf.async = &#39;true&#39;;
-      var s = document.getElementsByTagName(&#39;script&#39;)[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  &lt;/script&gt;
-
-  &lt;!-- include html5shim per Explorer 8 --&gt;
-  &lt;script src=&quot;/build/vendor/modernizr.js&quot;&gt;&lt;/script&gt;
-
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/vendor.css&quot;&gt;
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/build.css&quot;&gt;
-
-  &lt;title&gt;Preview Layout&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body class=&quot;Pac&quot;&gt;
-
-  &lt;ul&gt;
-  &lt;li class=&quot;u-padding-all-s&quot;&gt;
-    &lt;button type=&quot;button&quot; class=&quot;Button Button--danger u-text-r-xs&quot;&gt;Button danger&lt;/button&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;u-padding-all-s&quot;&gt;
-    &lt;button type=&quot;button&quot; class=&quot;Button Button--danger u-text-r-xs is-pressed&quot;&gt;Button danger pressed&lt;/button&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;u-padding-all-s&quot;&gt;
-    &lt;button type=&quot;button&quot; class=&quot;Button Button--danger u-text-r-xs is-disabled&quot;&gt;Button danger disabled&lt;/button&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;u-padding-all-s&quot;&gt;
-    &lt;button type=&quot;button&quot; class=&quot;Button Button--danger Button--shadow u-text-r-xs&quot;&gt;Button danger shadow&lt;/button&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;u-padding-all-s&quot;&gt;
-    &lt;button type=&quot;button&quot; class=&quot;Button Button--danger Button--round u-text-r-xs&quot;&gt;Button danger round&lt;/button&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;u-padding-all-s&quot;&gt;
-    &lt;button type=&quot;button&quot; class=&quot;Button Button--danger Button--shadow Button--round u-text-r-xs&quot;&gt;Button danger round shadow&lt;/button&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;u-padding-all-s&quot;&gt;
-    &lt;a role=&quot;button&quot; class=&quot;Button Button--danger Button--shadow Button--round u-text-r-xs&quot;&gt;Link button danger round shadow&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-
-  &lt;script src=&quot;/build/vendor/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-  &lt;!--[if IE 8]&gt;
-  &lt;script src=&quot;/build/vendor/respond.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/rem.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/selectivizr.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/slice.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!--[if lte IE 9]&gt;
-  &lt;script src=&quot;/build/vendor/polyfill.min.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!-- In produzione utilizzare &lt;script src=&quot;/build/IWT.min.js&quot;&gt;&lt;/script&gt; --&gt;
-  &lt;script src=&quot;/build/IWT.js&quot;&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -3014,7 +2932,7 @@
 
 
 
-<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.4"></script>
+<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.7"></script>
 
 
 

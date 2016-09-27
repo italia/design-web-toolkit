@@ -115,6 +115,11 @@
   @extend .u-textCenter;
 }
 
+.Header-toggle > * {
+  @extend .u-inlineBlock;
+  @extend .u-linkClean;
+}
+
 .Header-toggleText {
   @extend .u-hidden;
   @extend .u-sm-block;
@@ -146,9 +151,11 @@
 .Header-logo img {
   @extend .u-alignMiddle;
 
+  height: 4.5rem;
   width: 4.5rem;
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    height: 7.5rem;
     width: 7.5rem;
   }
 }
@@ -322,8 +329,8 @@
   @extend .u-inlineBlock;
 }
 
-.Header-socialIcons [class^="icon-"],
-.Header-socialIcons [class*=" icon-"] {
+.Header-socialIcons [class^="Icon-"],
+.Header-socialIcons [class*=" Icon-"] {
   @extend .u-inlineBlock;
   @extend .u-background-white;
   @extend .u-color-50;
@@ -364,10 +371,11 @@
   padding-top: 0 !important;
 }
 
-.Headroom--fixed,
+.js .Headroom--fixed,
 .Headroom--pinned.Headroom--not-top {
   @extend .u-zindex-40;
 
+  min-width: 30rem;
   position: fixed;
   top: 0;
 }
@@ -405,6 +413,7 @@
 
 .Headroom--fixed.Headroom--not-top .Header-logo img,
 .Headroom--pinned.Headroom--not-top .Header-logo img {
+  max-height: 3em;
   max-width: 3em;
 }
 

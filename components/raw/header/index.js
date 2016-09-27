@@ -64,6 +64,10 @@ if (myElement) {
 const headroomFixed = '.Headroom--fixed'
 
 if ($('.' + opts.classes.initial).is(headroomFixed)) {
+  const INTERVAL = 250
+
+  let windowWidth = $(window).width()
+
   // Needs to be here due to CSS transition (see on Safari)
   let headerHeight = $(headroomFixed).height()
 
@@ -85,16 +89,23 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
   })
 
   // Make padding respond to window resize
-  $(window).resize(debounce(250, function() {
-    headerHeight = $(headroomFixed).height()
-    setTimeout(_adjustPadding, 250)
+  $(window).resize(debounce(INTERVAL, function() {
+    const newWindowWidth = $(window).width()
+    const height = $(headroomFixed).height()
+    // Android browser triggers a resize event on scroll to top
+    // so we check for changes in window width
+    if (newWindowWidth !== windowWidth) {
+      windowWidth = newWindowWidth
+      headerHeight = height
+      setTimeout(_adjustPadding, INTERVAL)
+    }
   }))
 
-  // This happens *only* after a resize
-  // when scrolling to top
-  $(headroomFixed).on('transitionend', debounce(250, function() {
+  $(headroomFixed).on('transitionend', debounce(INTERVAL, function() {
     const height = $(this).height()
     if (headerHeight < height) {
+      // This happens *only* after a resize
+      // _and_ when scrolling to top
       headerHeight = height
       _adjustPadding()
     }
@@ -111,8 +122,7 @@ $('.js-Header-search-trigger').click((e) => {
     if ('true' === $el.attr('aria-hidden')) {
       $el.attr('aria-hidden', 'false')
       $el.removeClass('u-hiddenVisually')
-    }
-    else {
+    } else {
       $el.attr('aria-hidden', 'true')
       $el.addClass('u-hiddenVisually')
     }

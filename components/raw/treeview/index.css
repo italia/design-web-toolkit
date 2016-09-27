@@ -2,9 +2,9 @@
 
 :root {
   --Treeview-link-padding: 0.5em;
-  --Treeview-link-arrow-width: 1.2em;
-  --Treeview-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
-  --Treeview-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
+  --Treeview-link-arrow-width: 0.8em;
+  --Treeview-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
+  --Treeview-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
 }
 
 .Treeview [aria-expanded] > a {
@@ -49,11 +49,11 @@
 .Treeview ul ul a,
 .Treeview ul ul a:hover {
   @extend .u-color-95;
-  @extend .u-background-10;
+  @extend .u-background-20;
 }
 
 .Treeview ul a,
 .Treeview ul a:hover {
   @extend .u-color-90;
-  @extend .u-background-5;
+  @extend .u-background-10;
 }

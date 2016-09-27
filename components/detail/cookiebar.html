@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../_theme/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.4" type="text/css">
+<link rel="stylesheet" href="../../_theme/css/blue.css?cachebust=1.0.7" type="text/css">
 
 
 <title>Cookiebar | Italia.it Web Toolkit Styleguide</title>
@@ -83,79 +88,6 @@
                 data-role="window"
                 src="../preview/cookiebar.html"
                 sandbox="allow-same-origin allow-scripts"
-                srcdoc="&lt;!DOCTYPE html&gt;
-&lt;!--[if IE 8]&gt;&lt;html class=&quot;no-js ie89 ie8&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if IE 9]&gt;&lt;html class=&quot;no-js ie89 ie9&quot; lang=&quot;it&quot;&gt;&lt;![endif]--&gt;
-&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;
-&lt;html class=&quot;no-js&quot; lang=&quot;it&quot;&gt;
-&lt;!--&lt;![endif]--&gt;
-
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-  &lt;!--
-    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
-      &lt;link href=&#39;//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39; /&gt;
-    o dal repository locale (src/fonts)
-  --&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    WebFontConfig = {
-      google: {
-        families: [&#39;Titillium+Web:400,700,400italic:latin&#39;]
-      }
-    };
-    (function() {
-      var wf = document.createElement(&#39;script&#39;);
-      wf.src = &#39;https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js&#39;;
-      wf.type = &#39;text/javascript&#39;;
-      wf.async = &#39;true&#39;;
-      var s = document.getElementsByTagName(&#39;script&#39;)[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  &lt;/script&gt;
-
-  &lt;!-- include html5shim per Explorer 8 --&gt;
-  &lt;script src=&quot;/build/vendor/modernizr.js&quot;&gt;&lt;/script&gt;
-
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/vendor.css&quot;&gt;
-  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;/build/build.css&quot;&gt;
-
-  &lt;title&gt;Preview Layout&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body class=&quot;Pac&quot;&gt;
-
-  &lt;div id=&quot;cookie-bar&quot; class=&quot;CookieBar js-CookieBar u-background-95 u-padding-r-all&quot;&gt;
-  &lt;p class=&quot;u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom&quot;&gt;Questo sito utilizza cookie tecnici, analytics e di terze parti.
-    &lt;br&gt;Proseguendo nella navigazione accetti l’utilizzo dei cookie.&lt;br&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;button class=&quot;Button Button--default u-text-r-xxs js-cookieBarAccept u-inlineBlock u-margin-r-all&quot;&gt;Accetto&lt;/button&gt;
-    &lt;a href=&quot;&quot; class=&quot;u-text-r-xs u-color-teal-50&quot;&gt;Privacy policy&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
-
-
-  &lt;script src=&quot;/build/vendor/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-  &lt;!--[if IE 8]&gt;
-  &lt;script src=&quot;/build/vendor/respond.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/rem.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/selectivizr.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;/build/vendor/slice.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!--[if lte IE 9]&gt;
-  &lt;script src=&quot;/build/vendor/polyfill.min.js&quot;&gt;&lt;/script&gt;
-  &lt;![endif]--&gt;
-
-  &lt;!-- In produzione utilizzare &lt;script src=&quot;/build/IWT.min.js&quot;&gt;&lt;/script&gt; --&gt;
-  &lt;script src=&quot;/build/IWT.js&quot;&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -295,7 +227,7 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
-                                <pre><span class="hljs-comment">/* global jQuery */</span>
+                                <pre><span class="hljs-comment">/* global jQuery, define */</span>
 
 <span class="hljs-comment">/*
  *	Fork of
@@ -304,11 +236,22 @@
  *	The MIT License (MIT)
  *	Copyright (c) 2016 Carl Woodhouse
  *
+ *
  */</span>
-(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$</span>) </span>{
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">factory</span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define === <span class="hljs-string">'function'</span> &amp;&amp; define.amd) {
+    <span class="hljs-comment">// AMD</span>
+    define([<span class="hljs-string">'jquery'</span>], factory)
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> exports === <span class="hljs-string">'object'</span>) {
+    <span class="hljs-comment">// CommonJS</span>
+    factory(<span class="hljs-built_in">require</span>(<span class="hljs-string">'jquery'</span>))
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// Browser globals</span>
+    factory(jQuery)
+  }
+}(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$</span>) </span>{
 
   $.fn.cookieBar = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
-
     <span class="hljs-keyword">var</span> settings = $.extend({
       <span class="hljs-string">'acceptButton'</span>: <span class="hljs-string">'.js-cookieBarAccept'</span>,
       <span class="hljs-string">'secure'</span>: <span class="hljs-literal">false</span>,
@@ -324,16 +267,23 @@
         domain: settings.domain,
         expires: <span class="hljs-number">30</span>
       })
+      $(<span class="hljs-built_in">document</span>).trigger(<span class="hljs-string">'accept.cookiebar'</span>)
+    }
+
+    $.cookieBar = $.cookieBar || {}
+
+    $.cookieBar.isAccepted = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> $.cookie(<span class="hljs-string">'cookiebar'</span>) === <span class="hljs-string">'hide'</span>
     }
 
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">var</span> $cookiebar = $(<span class="hljs-keyword">this</span>)
 
-      <span class="hljs-keyword">if</span> ($.cookie(<span class="hljs-string">'cookiebar'</span>) !== <span class="hljs-string">'hide'</span>) {
+      <span class="hljs-keyword">if</span> (!$.cookieBar.isAccepted()) {
         <span class="hljs-keyword">if</span> (settings.threshold &gt; <span class="hljs-number">0</span>) {
           $(<span class="hljs-built_in">window</span>).on(<span class="hljs-string">'scroll.cookiebar'</span>, (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
             <span class="hljs-keyword">if</span> ($(<span class="hljs-built_in">window</span>).scrollTop() &gt; settings.threshold) {
-              $(<span class="hljs-built_in">window</span>).unbind(<span class="hljs-string">'.cookiebar'</span>)
+              $(<span class="hljs-built_in">window</span>).unbind(<span class="hljs-string">'scroll.cookiebar'</span>)
               _accept()
               $cookiebar.hide()
             }
@@ -351,7 +301,7 @@
 
   }
 
-})(jQuery)
+}))
 </pre>
                             </code>
                             
@@ -368,7 +318,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.2 KB</span>
+                    <span class="Meta-value">1.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -3013,7 +2963,7 @@ $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"
 
 
 
-<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.4"></script>
+<script src="../../_theme/js/mandelbrot.js?cachebust=1.0.7"></script>
 
 
 

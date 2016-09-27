@@ -2,10 +2,10 @@
 
 :root {
   --Accordion-border-color: #d8d8d8;
-  --Accordion-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
-  --Accordion-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
+  --Accordion-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
+  --Accordion-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
   --Accordion-link-padding: 0.5em;
-  --Accordion-link-arrow-width: 1.5em;
+  --Accordion-link-arrow-width: 0.8em;
 }
 
 .Accordion {
