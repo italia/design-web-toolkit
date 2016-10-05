@@ -15,3 +15,12 @@
 .u-borderShadow-xxl {
   box-shadow: 1px 1px 80px 1px rgba(0, 0, 0, 0.35) !important;
 }
+
+.u-hasScrollHint::after {
+  background: linear-gradient(to left, currentColor, rgba(0, 0, 0, 0));
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+  width: 1em;
+}
