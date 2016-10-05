@@ -1,0 +1,54 @@
+/** @define Card; */
+
+.Card {
+  overflow: hidden;
+}
+
+.Card--withBorder {
+  @extend .u-border-all-xxs;
+}
+
+.Card--shadow {
+  @extend .u-borderShadow-xxs;
+  @extend .u-border-none;
+}
+
+.Card--round {
+  @extend .u-borderRadius-m;
+}
+
+.Card-extra {
+  @extend .u-text-h6;
+  @extend .u-margin-bottom-l;
+  @extend .u-textClean;
+}
+
+.Card-extraLink {
+  @extend .u-textClean;
+}
+
+.Card-content {
+  @extend .u-text-r-l;
+  @extend .u-padding-r-all;
+}
+
+.Card-title {
+  @extend .u-text-h4;
+  @extend .u-margin-r-bottom;
+  @extend .u-layout-prose;
+}
+
+.Card-titleLink {
+  @extend .u-text-m;
+  @extend .u-color-black;
+  @extend .u-textWeight-400;
+  @extend .u-textClean;
+}
+
+.Card-text {
+  @extend .u-text-r-xs;
+  @extend .u-layout-prose;
+  @extend .u-lineHeight-xl;
+  @extend .u-textSecondary;
+  @extend .u-margin-bottom-l;
+}

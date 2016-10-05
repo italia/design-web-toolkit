@@ -1,0 +1,17 @@
+/** @define utilities; */
+
+.u-borderRadius-s {
+  border-radius: 2px !important;
+}
+
+.u-borderRadius-m {
+  border-radius: 4px !important;
+}
+
+.u-borderRadius-l {
+  border-radius: 8px !important;
+}
+
+.u-borderRadius-circle {
+  border-radius: 50% !important;
+}

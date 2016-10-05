@@ -1,0 +1,112 @@
+@import "suitcss";
+@import "suitcss-components-form";
+
+@import "src/utils/borders";
+@import "src/utils/colors";
+@import "src/utils/corners";
+@import "src/utils/display";
+@import "src/utils/layout";
+@import "src/utils/shadows";
+@import "src/utils/space";
+@import "src/utils/text";
+@import "src/utils/zindex";
+
+@import "src/components/button";
+@import "src/components/form";
+@import "src/components/prose";
+@import "src/components/table";
+
+@import "src/modules/accordion";
+@import "src/modules/alert";
+@import "src/modules/breadcrumb";
+@import "src/modules/bullets";
+@import "src/modules/callout";
+@import "src/modules/card";
+@import "src/modules/carousel";
+@import "src/modules/cookiebar";
+@import "src/modules/dialog";
+@import "src/modules/dot";
+@import "src/modules/entrypoint";
+@import "src/modules/footer";
+@import "src/modules/hamburger";
+@import "src/modules/header";
+@import "src/modules/leads";
+@import "src/modules/linklist";
+@import "src/modules/megamenu";
+@import "src/modules/masonry";
+@import "src/modules/navscroll";
+@import "src/modules/offcanvas";
+@import "src/modules/scrolltop";
+@import "src/modules/share";
+@import "src/modules/skiplinks";
+@import "src/modules/tooltip";
+@import "src/modules/treeview";
+
+/*
+ * WebFontLoaded: _import "src/fonts/titillium"
+ * see src/_preview.html
+ */
+@import "src/icons/ita";
+
+@import "src/themes/pac";
+
+@import "src/legacy";
+
+@custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 992px);
+@custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1440px);
+@custom-media --lg-viewport screen and (min-width: 1440px);
+
+:root {
+  --it-Base-font-size-ratio: 1.8;
+  --it-Base-font-size: calc(1rem * var(--it-Base-font-size-ratio));
+  --it-Base-text-color: #1c2024;
+}
+
+:root {
+  --Grid-gutter-size: 1.6rem;
+}
+
+/*  stylelint-disable */
+/**
+ * 1. 62.5% = 10px on browsers with base size = 16px
+ * 		so we got 10px = 1rem
+ * 2. See http://stackoverflow.com/questions/7968795/is-it-safe-to-use-the-css-rule-text-rendering-optimizelegibility-on-all-text
+ */
+ /*  stylelint-enable */
+html {
+  font-size: 62.5%; /* 1 */
+  font-variant-ligatures: common-ligatures; /* 2 */
+
+  /* text-rendering: optimizeLegibility; */
+}
+
+/**
+ * 1. Trying to avoid collapsing content
+ */
+body {
+  color: var(--it-Base-text-color);
+  font-size: var(--it-Base-font-size);
+  min-width: 30rem; /* 1 */
+}
+
+:focus {
+  outline: #ff8c00 solid 3px;
+  text-decoration: none;
+}
+
+a:focus {
+  background: #ff8c00;
+  outline: #ff8c00 solid 3px;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 3em;
+  margin: -3em 0 0;
+}

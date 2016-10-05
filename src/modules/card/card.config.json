@@ -1,0 +1,29 @@
+{
+    "title": "Card",
+    "variants": [
+        {
+            "name": "default",
+            "context": {
+              "modifier": "Card--withBorder"
+            }
+        },
+        {
+            "name": "shadow",
+            "context": {
+              "modifier": "Card--shadow"
+            }
+        },
+        {
+            "name": "round",
+            "context": {
+              "modifier": "Card--withBorder Card--round"
+            }
+        },
+        {
+            "name": "all",
+            "context": {
+              "modifier": "Card--shadow Card--round"
+            }
+        }
+    ]
+}

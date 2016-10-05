@@ -1,0 +1,22 @@
+/*
+ *	Only apply to body
+ *		class="it-Pac"
+ */
+.Pac {
+  font-family: var(--Pac-font-family-sans);
+}
+
+/**
+ * 	Fonts
+ */
+:root {
+  --Pac-font-family-sans: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+}
+
+/**
+ * 	Brand color
+ */
+:root {
+  --Color-primary: #0066cc;
+}
+

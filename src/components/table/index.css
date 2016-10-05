@@ -1,0 +1,216 @@
+/** @define Table; */
+
+/*
+ *	Fork of suitcss-component-table:
+ *
+ * 		https://github.com/trunkclub/suitcss-components-table
+ * 		Copyright (c) 2014 Trunk Club
+ *
+ *  alas, not included in npm registry.
+ *
+ */
+
+/** @define Table; weak; */
+
+:root {
+  --Table-border-color: #d6dce3;
+  --Table-cell-pad-h: 0.5em;
+  --Table-cell-pad-v: 1em;
+  --Table-hover-color: #e5f1fa;
+  --Table-stripe-color: #f6f7f9;
+}
+
+.Table {
+  background-color: transparent;
+  border: 0;
+  border-collapse: collapse;
+  max-width: 100%;
+  width: 100%;
+}
+
+.Table td,
+.Table th {
+  padding: var(--Table-cell-pad-v) var(--Table-cell-pad-h);
+}
+
+.Table th:first-child,
+.Table td:first-child {
+  padding-left: var(--Table-cell-pad-v);
+}
+
+.Table th:last-child,
+.Table td:last-child {
+  padding-right: var(--Table-cell-pad-v);
+}
+
+/* Table layout modifier
+   ========================================================================== */
+
+/**
+ * Fixed
+ */
+.Table--fixed {
+  table-layout: fixed;
+}
+
+/* Hover row modifiers
+   ========================================================================== */
+
+.Table--hover tbody tr:hover th,
+.Table--hover tbody tr:hover td {
+  background-color: var(--Table-hover-color);
+}
+
+/* Striped row modifiers
+   ========================================================================== */
+
+/**
+ * Remove top borders on all cells.
+ */
+.Table--striped th,
+.Table--striped td {
+  border-top: 0;
+}
+
+.Table--striped tbody tr:nth-child(odd) {
+  background-color: var(--Table-stripe-color);
+}
+
+/* Border modifiers
+   ========================================================================== */
+
+/**
+ * Add border around table
+ */
+.Table--withBorder tr {
+  border-bottom: 1px var(--Table-border-color) solid;
+}
+
+.Table--withBorder th {
+  border-bottom: 2px var(--Table-border-color) solid;
+}
+
+.Table--withBorder th,
+.Table--withBorder td {
+  border-top: 1px var(--Table-border-color) solid;
+}
+
+.Table--withBorder thead tr:first-child th,
+.Table--withBorder thead tr:first-child td {
+  border-top: 0;
+}
+
+/* Compact layout modifier
+   ========================================================================== */
+
+/**
+ * Reduce vertical padding to match horizontal
+ */
+.Table--compact td,
+.Table--compact th {
+  padding: var(--Table-cell-pad-h);
+}
+
+/* Responsive layout modifier
+ * 	http://dbushell.com/2016/03/04/css-only-responsive-tables/
+   ========================================================================== */
+
+.Table--responsive {
+  /*
+   * IE needs inline-block to position scrolling shadows otherwise use:
+   * display: block;
+   * max-width: min-content;
+  */
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+
+  /* optional - looks better for small cell values */
+  white-space: nowrap;
+  width: auto;
+}
+
+.Table--responsive,
+.Table--flip tbody {
+  /* scrolling shadows */
+  background:
+    radial-gradient(
+      left,
+      ellipse,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0) 75%
+    ) 0 center,
+    radial-gradient(
+      right,
+      ellipse,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0) 75%
+    ) 100% center;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+  background-size: 10px 100%, 10px 100%;
+
+  /* optional - enable iOS momentum scrolling */
+  -webkit-overflow-scrolling: touch;
+}
+
+.Table--responsive td:first-child,
+.Table--flip tbody tr:first-child {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+}
+
+.Table--responsive td:last-child,
+.Table--flip tbody tr:last-child {
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+}
+
+.Table--flip {
+  background: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.Table--flip > thead {
+  display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+}
+
+.Table--flip > tbody {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.Table--flip > tbody > tr {
+  border-right: 1px solid var(--Table-border-color);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-width: min-content;
+}
+
+.Table--flip td,
+.Table--flip th {
+  display: block;
+}
+
+.Table--flip td {
+  background-image: none !important;
+}
+
+/* @FIXME */
+.Table--flip th {
+  border-bottom: 0 !important;
+  border-right: 2px solid var(--Table-border-color) !important;
+  border-top: 1px solid var(--Table-border-color) !important;
+}

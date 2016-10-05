@@ -1,0 +1,4 @@
+{
+  "presets": ["es2015"],
+  "plugins": ["add-module-exports", "transform-es3-member-expression-literals", "transform-es3-property-literals"]
+}

@@ -1,0 +1,33 @@
+<article class="Prose u-layout-prose">
+
+  {% render '@heading--h1', {text: 'Titolo H1'} %}
+  {% render '@heading--h2', {text: 'Titolo H2'} %}
+  {% render '@heading--h3', {text: 'Titolo H3'} %}
+  {% render '@heading--h4', {text: 'Titolo H4'} %}
+  {% render '@heading--h5', {text: 'Titolo H5'} %}
+  {% render '@heading--h6', {text: 'Titolo H6'} %}
+
+  {% render '@heading--h2', { text: 'Paragafo' } %}
+  {% render '@prose--paragraph' %}
+
+  {% render '@heading--h2', { text: 'Testo preformattato' } %}
+  {% render '@prose--code' %}
+
+  {% render '@heading--h2', { text: 'Citazione' } %}
+  {% render '@prose--blockquote', { text: __SHORT_TEXTS__[0] } %}
+
+  {% render '@heading--h2', { text: 'Liste' } %}
+
+  <ul>
+    {% for i in range(0, 9) %}
+    <li>{{ __SHORT_TEXTS__[i] }}</li>
+    {% endfor %}
+  </ul>
+
+  <ol>
+    {% for i in range(0, 9) %}
+    <li>{{ __SHORT_TEXTS__[i] }}</li>
+    {% endfor %}
+  </ol>
+
+</article>

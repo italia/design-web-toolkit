@@ -1,0 +1,58 @@
+/** @define Alert */
+
+:root {
+  --Alert-error-bg: #ffcbcb;
+  --Alert-error-color: #1e1212;
+  --Alert-error-border: #b50000;
+  --Alert-warning-bg: #ffef9f;
+  --Alert-warning-color: #685815;
+  --Alert-warning-border: #1e1212;
+  --Alert-success-bg: #dff0d8;
+  --Alert-success-color: #3c763d;
+  --Alert-success-border: #d6e9c6;
+  --Alert-info-bg: #c6f3f5;
+  --Alert-info-color: #006366;
+  --Alert-info-border: #1e1212;
+}
+
+.Alert {
+  border-left-style: solid;
+  border-left-width: 0.5em;
+  padding-left: 1em;
+}
+
+.Alert--error {
+  border-left-color: color(var(--Alert-error-bg) l(-40%));
+  color: var(--Alert-error-color);
+}
+
+.Alert--error.is-full {
+  background: var(--Alert-error-bg);
+}
+
+.Alert--warning {
+  border-left-color: color(var(--Alert-warning-bg) l(-40%));
+  color: var(--Alert-warning-color);
+}
+
+.Alert--warning.is-full {
+  background: var(--Alert-warning-bg);
+}
+
+.Alert--success {
+  border-left-color: color(var(--Alert-success-bg) l(-40%));
+  color: var(--Alert-success-color);
+}
+
+.Alert--success.is-full {
+  background: var(--Alert-success-bg);
+}
+
+.Alert--info {
+  border-left-color: color(var(--Alert-info-bg) l(-40%));
+  color: var(--Alert-info-color);
+}
+
+.Alert--info.is-full {
+  background: var(--Alert-info-bg);
+}

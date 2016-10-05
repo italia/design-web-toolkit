@@ -1,0 +1,165 @@
+/** @define Megamenu; weak; */
+
+:root {
+  --Megamenu-border-color: #dedede;
+  --Megamenu-arrow-width: 0.5em;
+}
+
+.Megamenu-list {
+  @extend .u-block;
+  @extend .u-posRelative;
+  @extend .u-zindex-40;
+}
+
+/* a top level navigation item in the mega menu */
+.Megamenu-item {
+  @extend .u-inlineBlock;
+}
+
+/* first descendant link within a top level navigation item */
+.Megamenu-item > a {
+  @extend .u-block;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-padding-right-xxl;
+  @extend .u-padding-left-xxl;
+}
+
+/* focus/open states of first descendant link within a top level
+      navigation item
+      .Megamenu-subnavGroup > li > ul > li > a.is-focus {
+    }
+*/
+
+/* open state of first descendant link within a top level
+      navigation item */
+.Megamenu-item > a.is-open {
+  @extend .u-zindex-min;
+}
+
+/* sub-navigation panel */
+.Megamenu.is-ready .Megamenu-subnav {
+  @extend .u-hidden;
+  @extend .u-posAbsolute;
+  @extend .u-zindex-max;
+
+  left: 0;
+  width: 100%;
+}
+
+/* sub-navigation panel open state */
+.Megamenu.is-ready .Megamenu-subnav.is-open {
+  @extend .u-block;
+}
+
+/* list of items within sub-navigation panel */
+.Megamenu-subnavGroup {
+  @extend .u-inlineBlock;
+  @extend .u-alignTop;
+}
+
+/* list item within sub-navigation panel */
+.Megamenu-subnavGroup > li {
+  @extend .u-block;
+}
+
+/* Some custom style */
+
+.Megamenu--styled .Megamenu-list {
+  @extend .u-nbfcAlt;
+  @extend .u-background-grey-20;
+  @extend .u-color-white;
+  @extend .u-border-top-xxs;
+}
+
+.Megamenu--styled .Megamenu-item > a,
+.Megamenu--styled .Megamenu-subnavGroup > li > a {
+  @extend .u-textClean;
+  @extend .u-color-grey-10;
+  @extend .u-text-r-s;
+  @extend .u-posRelative;
+}
+
+.Megamenu--styled .Megamenu-item > a {
+  @extend .u-color-grey-80;
+}
+
+.Megamenu--styled .Megamenu-list > li > a[aria-expanded=false]::after {
+  border-left: var(--Megamenu-arrow-width) solid transparent;
+  border-right: var(--Megamenu-arrow-width) solid transparent;
+  border-top: var(--Megamenu-arrow-width) solid #fff;
+  bottom: 40%;
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  right: var(--Megamenu-arrow-width);
+  width: 0;
+}
+
+.Megamenu--styled .Megamenu-list > li > a[aria-expanded=true]::after {
+  border-bottom: var(--Megamenu-arrow-width) solid var(--Color-grey-80);
+  border-left: var(--Megamenu-arrow-width) solid transparent;
+  border-right: var(--Megamenu-arrow-width) solid transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 0;
+  left: calc(50% - var(--Megamenu-arrow-width));
+  position: absolute;
+  width: 0;
+}
+
+.Megamenu--styled .Megamenu-subnav {
+  @extend .u-background-grey-80;
+  @extend .u-padding-all-l;
+  @extend .u-borderShadow-m;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup > li {
+  @extend .u-color-grey-50;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-margin-right-xxl;
+  @extend .u-border-bottom-xxs;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup > li:last-child {
+  border-bottom: none !important;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup {
+  @extend .u-textLeft;
+
+  min-width: 19%;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup > li > ul {
+  @extend .u-padding-top-xs;
+  @extend .u-margin-top-s;
+  @extend .u-padding-bottom-xs;
+  @extend .u-border-top-xxs;
+}
+
+/*
+ *	Max depth = 3 levels
+ */
+.Megamenu--styled .Megamenu-subnavGroup > li > ul li {
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xxs;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup > li > ul > li a {
+  @extend .u-text-r-xs;
+  @extend .u-color-grey-10;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup > li > ul > li > ul > li > a {
+  @extend .u-text-r-xxs;
+  @extend .u-color-grey-10;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup > li > ul > li > ul {
+  @extend .u-margin-top-xs;
+  @extend .u-margin-bottom-xs;
+}

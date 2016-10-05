@@ -1,0 +1,20 @@
+{
+  "title": "Header",
+  "context": {
+    "site": {
+      "name": "Nome della Pubblica Amministrazione"
+    }
+  },
+  "variants": [{
+    "name": "default",
+    "context": {
+      "clone": false
+    }
+  }, {
+    "name": "clone menu",
+    "context": {
+      "menu": true,
+      "clone": true
+    }
+  }]
+}

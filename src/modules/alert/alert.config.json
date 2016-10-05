@@ -1,0 +1,37 @@
+{
+    "title": "Alert",
+    "variants": [
+        {
+            "name": "default",
+            "hidden": true
+        },
+        {
+            "name": "error",
+            "context": {
+              "modifier": "error",
+              "text": "Si è verificato un errore !"
+            }
+        },
+        {
+            "name": "warning",
+            "context": {
+              "modifier": "warning",
+              "text": "Attenzione !"
+            }
+        },
+        {
+            "name": "success",
+            "context": {
+              "modifier": "success",
+              "text": "Operazione eseguita con successo"
+            }
+        },
+        {
+            "name": "info",
+            "context": {
+              "modifier": "info",
+              "text": "Ulteriori informazioni"
+            }
+        }
+    ]
+}

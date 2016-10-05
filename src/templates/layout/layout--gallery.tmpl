@@ -1,0 +1,14 @@
+<div class="u-layout-centerContent u-background-grey-20 u-padding-bottom-xxl u-padding-top-xxl">
+  <section class="u-layout-medium">
+    <div class="u-layout-centerLeft">
+      <h2 class="u-text-r-l">Gallerie</h2>
+    </div>
+    <div class="Grid Grid--withGutter u-padding-r-top u-text-r-xxl">
+      {% for i in [1, 2, 3, 4, 5, 6, 7, 8, 9] %}
+      <div class="Grid-cell usizefull u-md-size1of3 u-lg-size1of3 u-text-r-m u-margin-r-bottom u-layout-matchHeight">
+        {% render '@card--gallery', { text: __SHORT_TEXTS__[i] } %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>

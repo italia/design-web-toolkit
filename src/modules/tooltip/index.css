@@ -1,0 +1,56 @@
+/** @define Tooltip */
+
+:root {
+  --Tooltip-color: #b4efef;
+}
+
+.Tooltip--styled .Tooltip-tooltip {
+  @extend .u-padding-all-s;
+  @extend .u-zindex-max;
+  @extend .u-borderShadow-xxl;
+  @extend .u-background-white;
+
+  border: 3px solid var(--Tooltip-color);
+  left: 50%;
+  max-width: 40em;
+  min-height: 60%;
+  overflow: auto;
+  position: fixed !important;
+  top: 50%;
+  transform: translateX(-50%) translateY(-40%);
+  width: 60%;
+}
+
+.Tooltip--styled .Tooltip-toggle {
+  background: var(--Tooltip-color);
+  cursor: help;
+}
+
+/* .Tooltip--styled .Tooltip-tooltip::after {
+  border: solid transparent;
+  border-color: transparent;
+  border-top-color: var(--Tooltip-color);
+  border-width: 1em;
+  bottom: -2em;
+  content: "";
+  height: 0;
+  left: 50%;
+  margin-left: -1em;
+  position: absolute;
+  width: 0;
+} */
+
+/* .Tooltip--styled .Tooltip-tooltip::before {
+  border: solid transparent;
+  border-color: transparent;
+  border-top-color: white;
+  border-width: 0.5em;
+  bottom: -1em;
+  content: "";
+  height: 0;
+  left: 50%;
+  margin-left: -0.5em;
+  position: absolute;
+  width: 0;
+  z-index: 9999;
+} */

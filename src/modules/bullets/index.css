@@ -1,0 +1,29 @@
+/** @define Bullets; weak; */
+
+.Bullets {
+  counter-reset: Bullets;
+}
+
+.Bullets > li {
+  @extend .u-flex;
+
+  counter-increment: Bullets;
+}
+
+.Bullets > li::before {
+  @extend .u-background-50;
+  @extend .u-color-white;
+  @extend .u-borderRadius-circle;
+  @extend .u-inlineBlock;
+  @extend .u-textCenter;
+  @extend .u-textWeight-700;
+  @extend .u-sizeFit;
+  @extend .u-text-r-s;
+
+  content: counter(Bullets);
+  height: 2em;
+  line-height: 200%;
+  margin-right: 0.5em;
+  min-width: 2em;
+  width: 2em;
+}

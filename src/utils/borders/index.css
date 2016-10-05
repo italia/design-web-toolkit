@@ -1,0 +1,41 @@
+/** @define utilities; */
+
+:root {
+  --Border-size-unit: 0.1rem;
+}
+
+.u-border-top-xxs { border-top: var(--Border-size-unit) solid currentColor !important; }
+.u-border-right-xxs { border-right: var(--Border-size-unit) solid currentColor !important; }
+.u-border-bottom-xxs { border-bottom: var(--Border-size-unit) solid currentColor !important; }
+.u-border-left-xxs { border-left: var(--Border-size-unit) solid currentColor !important; }
+.u-border-all-xxs { border: var(--Border-size-unit) solid currentColor !important; }
+
+.u-border-top-m { border-top: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-right-m { border-right: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-bottom-m { border-bottom: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-left-m { border-left: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-all-m { border: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+
+.u-border-top-l { border-top: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-right-l { border-right: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-bottom-l { border-bottom: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-left-l { border-left: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-all-l { border: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+
+/*
+ *	Border for responsive cell
+ *	see http://codepen.io/Hawkun/pen/rsIEp
+ */
+.u-borderAlt {
+  box-shadow:
+    0.1em 0 0 0 currentColor,
+    0 0.1em 0 0 currentColor,
+    0.1em 0.1em 0 0 currentColor,
+    0.1em 0 0 0 currentColor inset,
+    0 0.1em 0 0 currentColor inset;
+  padding: 0.1em;
+}
+
+.u-border-none {
+  border: none !important;
+}
