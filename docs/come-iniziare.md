@@ -18,8 +18,8 @@ utilizzati i fogli di stile (CSS) e gli script (JS) necessari: è possibile scar
 i file CSS / JS già compilati e incorporarli in un template HTML
 come mostrato nel codice di esempio:
 
-* CSS / Javascript già compilati @TODO
-* `index.html` con layout di pagina di esempio @TODO
+* [CSS / Javascript già compilati](https://github.com/italia-it/ita-web-toolkit/tree/gh-pages/build)
+* [`index.html` con layout di pagina di esempio](https://github.com/italia-it/ita-web-toolkit/blob/gh-pages/components/preview/preview.html)
 
 Se vuoi personalizzare gli elementi grafici (es. colori),
 seguendo questa modalità sarai obbligato a sovrascrivere

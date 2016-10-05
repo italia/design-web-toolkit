@@ -30,7 +30,7 @@ Per applicare font e colori personalizzati bisogna:
 2. effettuare una nuova *build* del toolkit tramite `npm run build` (vedi ["Utilizzare l'ambiente di sviluppo"](/docs/sviluppare))
 3. incorporare i CSS generati nei template HTML
 
-La palette di colori è costruita automaticamente (`src/utils/colors/index.css` @TODO)
+La palette di colori è costruita automaticamente ([`src/utils/colors/index.css`](https://github.com/italia-it/ita-web-toolkit/blob/master/src/utils/colors/index.css))
 applicando tinte e tonalità secondo quanto descritto nel [relativo paragrafo delle Linee Guida](http://design.italia.it/linee-guida/colori/);
 in questo modo è sufficiente sovrascrivere la variabile `--Color-primary` per ottenere l'intera *palette*.
 
