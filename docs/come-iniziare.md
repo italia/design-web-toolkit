@@ -26,8 +26,8 @@ seguendo questa modalità sarai obbligato a sovrascrivere
 le classi del CSS tramite un ulteriore foglio di stile *ad-hoc*;
 questa metodologia non è ottimale laddove le personalizzazioni
 risultano essere complesse: in questo caso è consigliato
-seguire la procedura descritta in "[Utilizzare l'ambiente di sviluppo](/docs/sviluppare)"
+seguire la procedura descritta in "[Utilizzare l'ambiente di sviluppo](sviluppare)"
 agendo direttamente sul codice sorgente dei fogli di stile del toolkit
 per realizzare una *build* personalizzata, prima di integrare il CSS nel layout.
 
-[Tecnologie utilizzate](/docs/tecnologie)
+[Tecnologie utilizzate](tecnologie)

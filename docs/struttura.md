@@ -26,8 +26,7 @@ La directory `src` contiene le sotto-directory:
     │   ├── form
     │   ├── grid
     │   ├── heading
-    │   ├── prose
-    │   └── table
+    │   └── ...
     ├── fonts
     │   └── titillium
     │       └── font
@@ -39,49 +38,19 @@ La directory `src` contiene le sotto-directory:
     ├── legacy
     ├── modules
     │   ├── accordion
-    │   ├── alert
-    │   ├── breadcrumb
-    │   ├── bullets
-    │   ├── callout
-    │   ├── card
-    │   ├── carousel
-    │   ├── cookiebar
-    │   ├── dialog
-    │   ├── dot
-    │   ├── entrypoint
-    │   ├── footer
-    │   ├── hamburger
-    │   ├── header
-    │   ├── leads
-    │   ├── linklist
-    │   ├── megamenu
-    │   ├── navscroll
-    │   ├── offcanvas
-    │   ├── packery
-    │   ├── scrolltop
-    │   ├── share
-    │   ├── skiplinks
-    │   ├── tooltip
-    │   └── treeview
+    │   └── ...
     ├── scripts
     ├── templates
-    │   ├── formtpl
     │   ├── layout
     │   ├── pages
-    │   └── tile
+    │   └── ...
     ├── themes
     │   └── pac
     ├── utils
     │   ├── borders
     │   ├── colors
-    │   ├── corners
-    │   ├── display
-    │   ├── layout
-    │   ├── shadows
-    │   ├── space
-    │   ├── text
-    │   └── zindex
+    │   └── ...
     └── vendor
 ```
 
-[Realizzare un tema](/docs/tema)
+[Realizzare un tema](tema)

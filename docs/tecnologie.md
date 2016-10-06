@@ -76,11 +76,11 @@ vengono utlizzati i due tool:
 ## Generazione della styleguide e dei moduli CSS / JS
 
 Questi due tool sono attivati dagli *script npm* secondo le modalità descritte
-nel capitolo successivo: ["Utilizzare l'ambiente di sviluppo"](/docs/sviluppare):
+nel capitolo successivo: ["Utilizzare l'ambiente di sviluppo"](sviluppare):
 
 - [fractal](http://fractal.build) è utilizzato per generare la *styleguide* (l'elenco navigabile dei componenti grafici)
 - [webpack](https://webpack.github.io) organizza i moduli CSS / Javascript in modo da poter esser utilizzati in produzione
 
 Non è necessario conoscere il funzionamento di questi software che vengono qui citati per completezza.
 
-[Utilizzare l'ambiente di sviluppo](/docs/sviluppare)
+[Utilizzare l'ambiente di sviluppo](sviluppare)

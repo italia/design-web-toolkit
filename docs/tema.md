@@ -27,7 +27,7 @@ modificando ad esempio i colori che caratterizzano l'aspetto grafico dei vari el
 Per applicare font e colori personalizzati bisogna:
 
 1. modificare il file del tema `src/themes/index.css` sovrascrivendo le variabili CSS
-2. effettuare una nuova *build* del toolkit tramite `npm run build` (vedi ["Utilizzare l'ambiente di sviluppo"](/docs/sviluppare))
+2. effettuare una nuova *build* del toolkit tramite `npm run build` (vedi ["Utilizzare l'ambiente di sviluppo"](sviluppare))
 3. incorporare i CSS generati nei template HTML
 
 La palette di colori è costruita automaticamente ([`src/utils/colors/index.css`](https://github.com/italia-it/ita-web-toolkit/blob/master/src/utils/colors/index.css))

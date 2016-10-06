@@ -29,7 +29,7 @@ Il nome dei file con gli snippet HTML *deve* iniziare con quello del modulo, ad 
 Negli snippet HTML è possibile utilizzare i costrutti del
 [linguaggio di templating nunjucks](https://mozilla.github.io/nunjucks/).
 
-I CSS vengono processati tramite PostCSS (e i relativi plugin presentati nella sezione [Tecnologie](/docs/tecnologie)).
+I CSS vengono processati tramite PostCSS (e i relativi plugin presentati nella sezione [Tecnologie](tecnologie)).
 
 Nei file Javascript è possibile utilizzare la sintassi [ECMAScript 2015](https://babeljs.io/docs/learn-es2015/).
 
@@ -41,4 +41,4 @@ Nei file Javascript è possibile utilizzare la sintassi [ECMAScript 2015](https:
 - i componenti Javascript devono dichiarare tutte le loro dipendenze nell'`index.js` (es. tramite il costrutto `import`)
 - è incoraggiato l'utilizzo del costrutto PostCSS `@extend`, ma **esclusivamente** per estendere le classi di utilità (`u-*`)
 
-[Struttura del filesystem](/docs/struttura)
+[Struttura del filesystem](struttura)

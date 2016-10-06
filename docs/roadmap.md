@@ -12,7 +12,9 @@ label: Roadmap
 
 ## v1.0.0
 
-- security audit (javascript compilato)
+- versioni definitive di header (menu) e footer
+
+- security audit (es. del javascript compilato)
 
 - refactoring di alcuni componenti
 
@@ -24,6 +26,8 @@ label: Roadmap
   - considerare se introdurre un fallback per immagini svg
 
 ## v2.0.0
+
+- scelta definitiva dei widget javascript
 
 - nuovi componenti
   - dropdown

@@ -6,6 +6,9 @@ label: Introduzione
 
 ## Implementazione CSS/HTML di riferimento
 
+**Il progetto è in fase sperimentale (alpha), se ne sconsiglia l'utilizzo in produzione
+fino alla release di una versione stabile (1.0)**
+
 L'implementazione di riferimento (toolkit) delle "Linee guida di design"
 fornisce componenti grafici e interattivi da incorporare
 nei siti web delle Pubbliche Amministrazioni (PA):
@@ -22,4 +25,4 @@ L'obiettivo è convogliare l'effort su un insieme di elementi condivisi
 che possano esser utilizzati nella realizzazione di un sito
 o servizio usabile, accessibile e conforme a quanto indicato nelle Linee Guida.
 
-[Come iniziare](/docs/come-iniziare)
+[Come iniziare](docs/come-iniziare)

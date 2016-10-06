@@ -68,4 +68,4 @@ A questo punto è possibile modificare i sorgenti: qualsiasi modifica effettuata
 Javascript e/o template HTML mentre `npm run watch` rimane in esecuzione risulterà immediatamente visibile
 nel browser **senza dover ricaricare manualmente la pagina o lanciare il comando di build**.
 
-[Creare o modificare un modulo](/docs/moduli)
+[Creare o modificare un modulo](moduli)
