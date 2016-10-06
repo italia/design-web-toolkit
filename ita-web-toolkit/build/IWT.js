@@ -132,7 +132,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		IwtCarousel: _carousel2['default'],
 		IwtCookiebar: _cookiebar2['default'],
 		IwtDialog: _dialog2['default'],
-		IwtPackery: _masonry2['default'],
+		IwtMasonry: _masonry2['default'],
 		IwtTreeview: _treeview2['default'],
 		IwtSkiplinks: _skiplinks2['default'],
 		IwtOffcanvas: _offcanvas2['default'],
@@ -4917,8 +4917,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _salvattore2 = _interopRequireDefault(_salvattore);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	console.log(_salvattore2['default']);
 	
 	exports['default'] = {
 	  Salvattore: _salvattore2['default']
