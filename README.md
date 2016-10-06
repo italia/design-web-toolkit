@@ -2,4 +2,4 @@
 
 Implementazione di riferimento delle linee guida di service design PA.
 
-[documentazione](docs)
+[documentazione](https://italia-it.github.io/ita-web-toolkit/)
