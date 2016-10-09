@@ -6,28 +6,31 @@ label: Roadmap
 
 ## v0.1.0
 
-- **test cross browser**
+- test cross browser
 
-- **verifica accessibilità per i componenti js e i template**
+- verifica accessibilità per componenti javascript e template
 
 ## v1.0.0
 
 - versioni definitive di header (menu) e footer
 
-- security audit (es. del javascript compilato)
+- scelta definitiva dei widget javascript
 
 - refactoring di alcuni componenti
+
+- security audit (es. del javascript compilato)
 
 - refactoring margini e padding responsive
 
 - stylesheet per media print
 
 - migliorare (o cassare del tutto) il supporto per IE8/9 (legacy.css)
-  - considerare se introdurre un fallback per immagini svg
+  considerare se introdurre un fallback per immagini svg
 
-## v2.0.0
+- possibilità di escludere il CSS globale dalla build
+  (suitcss-base / normalize.css)
 
-- scelta definitiva dei widget javascript
+## vX.X.X
 
 - nuovi componenti
   - dropdown
@@ -45,19 +48,18 @@ label: Roadmap
   - carrello pagopa
 
 - possibilità di utilizzare il progetto come dipendenza npm
-  - possibilità di escludere il CSS globale dalla build (suitcss-base / normalize.css)
 
-## v3.0.0
+## vX.X.X
 
-- profiling
-  - dimensione degli assets
-  - profiling javascript e transizioni CSS
+- profiling (javascript e transizioni CSS)
+
+- verifica e ottimizzazione dimensione degli assets
 
 - sistema per *custom build*
   - personalizzazione automatica dei colori
-  - possibilità di selezionare i singoli moduli
+  - possibilità di selezionare i singoli moduli tramite interfaccia
 
-## v4.0.0
+## vX.X.X
 
 - progressive web app
   - manifest.json
