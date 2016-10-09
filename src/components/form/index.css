@@ -165,6 +165,10 @@ option:hover {
   width: 100%;
 }
 
+.Form-field--choose :focus + span {
+  outline: 3px solid var(--Color-focus);
+}
+
 .Form-field--choose .Form-input {
   display: inline-block;
   margin-right: calc(var(--Form-choose-height) / 2);
