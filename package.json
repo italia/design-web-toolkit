@@ -4,6 +4,7 @@
   "description": "Implementazione di riferimento per le linee guida di design della PA",
   "main": "index.js",
   "dependencies": {
+    "@frctl/mandelbrot": "^1.0.7",
     "fr-accordion": "^1.0.5",
     "fr-bypasslinks": "^1.0.5",
     "fr-dialogmodal": "^1.0.2",
@@ -37,6 +38,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "faker": "^3.1.0",
     "file-loader": "^0.9.0",
+    "lodash": "^4.16.4",
     "npm-run-all": "^3.1.0",
     "postcss-assets": "^4.1.0",
     "postcss-color-function": "^2.0.1",
