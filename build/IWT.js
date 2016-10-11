@@ -4911,15 +4911,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	var Masonry = null;
 	
-	var _salvattore = __webpack_require__(25);
-	
-	var _salvattore2 = _interopRequireDefault(_salvattore);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	try {
+	  Masonry = __webpack_require__(25);
+	} catch (e) {
+	  /* HEY, I'm IE8 */
+	}
 	
 	exports['default'] = {
-	  Salvattore: _salvattore2['default']
+	  Masonry: Masonry
 	};
 	module.exports = exports['default'];
 
