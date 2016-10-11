@@ -4,7 +4,6 @@
   "description": "Implementazione di riferimento per le linee guida di design della PA",
   "main": "index.js",
   "dependencies": {
-    "@frctl/mandelbrot": "^1.0.7",
     "fr-accordion": "^1.0.5",
     "fr-bypasslinks": "^1.0.5",
     "fr-dialogmodal": "^1.0.2",
@@ -21,6 +20,7 @@
   },
   "devDependencies": {
     "@frctl/fractal": "^1.0.8",
+    "@frctl/mandelbrot": "^1.0.7",
     "@frctl/nunjucks": "^1.0.1",
     "babel": "^6.5.2",
     "babel-core": "^6.9.1",
