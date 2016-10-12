@@ -26,6 +26,10 @@
   display: none;
 }
 
+.Treeview li {
+  cursor: pointer;
+}
+
 .Treeview ul li {
   border-color: white !important;
 }
