@@ -12,10 +12,7 @@
   background-position: right var(--Treeview-link-padding) center;
   background-repeat: no-repeat;
   background-size: var(--Treeview-link-arrow-width);
-  padding-right:
-    calc(
-      var(--Treeview-link-arrow-width) + (2 * var(--Treeview-link-padding))
-    );
+  padding-right: calc(var(--Treeview-link-arrow-width) + (2 * var(--Treeview-link-padding)));
 }
 
 .Treeview [aria-expanded="true"] > a {
@@ -30,22 +27,26 @@
   cursor: pointer;
 }
 
-.Treeview ul li {
-  border-color: white !important;
-}
-
 /* FIXME: overrides focus unset */
 .Treeview li[tabindex]:focus {
   outline: 3px solid #ff8c00 !important;
 }
 
-.Treeview li[aria-expanded=true] > a,
-.Treeview li[aria-expanded=true] > a:hover {
+/*
+ * Treeview default style
+ * -----------------------
+ */
+.Treeview--default ul li {
+  border-color: white !important;
+}
+
+.Treeview--default li[aria-expanded=true] > a,
+.Treeview--default li[aria-expanded=true] > a:hover {
   @extend .u-background-grey-10;
 }
 
-.Treeview ul a,
-.Treeview ul a:hover {
-  @extend .u-color-80;
+.Treeview--default ul a,
+.Treeview--default ul a:hover {
+  @extend .u-color-90;
   @extend .u-background-5;
 }
