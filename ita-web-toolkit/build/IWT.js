@@ -4941,7 +4941,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _dropdown = __webpack_require__(48);
+	var _dropdown = __webpack_require__(26);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -4974,7 +4974,276 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 26 */,
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _jquery = __webpack_require__(4);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	/*
+	 * Fork of
+	 *
+	 * ! Menu - v0.1.3 - 2016-02-17
+	 * https://github.com/filamentgroup/menu
+	 * Copyright (c) 2016 Scott Jehl Licensed MIT
+	 */
+	var at = {
+	  ariaHidden: 'aria-hidden'
+	};
+	var selectClass = 'is-selected';
+	var focusables = 'a,input,[tabindex]';
+	
+	var Menu = function () {
+	  function Menu(element) {
+	    _classCallCheck(this, Menu);
+	
+	    if (!element) {
+	      throw new Error('Element required to initialize object');
+	    }
+	    this.element = element;
+	    this.$element = (0, _jquery2['default'])(element);
+	    this.opened = true;
+	    this.componentName = 'Menu';
+	
+	    this.keycodes = {
+	      38: function _(e) {
+	        this.moveSelected('prev');
+	        e.preventDefault();
+	      },
+	
+	      40: function _(e) {
+	        this.moveSelected('next');
+	        e.preventDefault();
+	      },
+	
+	      13: function _() {
+	        // return the selected value
+	        return this.selectActive();
+	      },
+	
+	      9: function _(e) {
+	        this.moveSelected(e.shiftKey ? 'prev' : 'next');
+	        e.preventDefault();
+	      },
+	
+	      27: function _() {
+	        this.close();
+	      }
+	    };
+	  }
+	
+	  _createClass(Menu, [{
+	    key: 'moveSelected',
+	    value: function moveSelected(placement, focus) {
+	      var $items = this.$element.find('li'),
+	          $selected = $items.filter('.' + selectClass),
+	          $nextSelected;
+	
+	      if (!$selected.length || placement === 'start') {
+	        $nextSelected = $items.eq(0);
+	      } else if (placement === 'next') {
+	        $nextSelected = $selected.next();
+	        if (!$nextSelected.length) {
+	          $nextSelected = $items.eq(0);
+	        }
+	      } else {
+	        $nextSelected = $selected.prev();
+	        if (!$nextSelected.length) {
+	          $nextSelected = $items.eq($items.length - 1);
+	        }
+	      }
+	      $selected.removeClass(selectClass);
+	      $nextSelected.addClass(selectClass);
+	
+	      if (focus || (0, _jquery2['default'])(window.document.activeElement).closest($selected).length) {
+	        if ($nextSelected.is(focusables)) {
+	          $nextSelected[0].focus();
+	        } else {
+	          var $focusChild = $nextSelected.find(focusables);
+	          if ($focusChild.length) {
+	            $focusChild[0].focus();
+	          }
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'getSelectedElement',
+	    value: function getSelectedElement() {
+	      return this.$element.find('li.' + selectClass);
+	    }
+	  }, {
+	    key: 'selectActive',
+	    value: function selectActive() {
+	      var trigger = this.$element.data(this.componentName + '-trigger');
+	      var $selected = this.getSelectedElement();
+	
+	      if (trigger && (0, _jquery2['default'])(trigger).is('input')) {
+	        trigger.value = $selected.text();
+	      }
+	      $selected.trigger(this.componentName + ':select');
+	      this.close();
+	      return $selected.text();
+	    }
+	  }, {
+	    key: 'keyDown',
+	    value: function keyDown(e) {
+	      var fn = this.keycodes[e.keyCode] || function () {};
+	      return fn.call(this, e);
+	    }
+	  }, {
+	    key: '_bindKeyHandling',
+	    value: function _bindKeyHandling() {
+	      var self = this;
+	      this.$element.bind('keydown', function (e) {
+	        self.keyDown(e);
+	      }).bind('mouseover', function (e) {
+	        self.$element.find('.' + selectClass).removeClass(selectClass);
+	        (0, _jquery2['default'])(e.target).closest('li').addClass(selectClass);
+	      }).bind('mouseleave', function (e) {
+	        (0, _jquery2['default'])(e.target).closest('li').removeClass(selectClass);
+	      }).bind('click', function () {
+	        self.selectActive();
+	      });
+	    }
+	  }, {
+	    key: 'open',
+	    value: function open(trigger, sendFocus) {
+	      if (this.opened) {
+	        return;
+	      }
+	      this.$element.attr(at.ariaHidden, false);
+	      this.$element.data(this.componentName + '-trigger', trigger);
+	      this.opened = true;
+	      this.moveSelected('start', sendFocus);
+	      this.$element.trigger(this.componentName + ':open');
+	    }
+	  }, {
+	    key: 'close',
+	    value: function close() {
+	      if (!this.opened) {
+	        return;
+	      }
+	      this.$element.attr(at.ariaHidden, true);
+	      this.opened = false;
+	      var $trigger = this.$element.data(this.componentName + '-trigger');
+	      if ($trigger) {
+	        $trigger.focus();
+	      }
+	      this.$element.trigger(this.componentName + ':close');
+	    }
+	  }, {
+	    key: 'toggle',
+	    value: function toggle(trigger, sendFocus) {
+	      this[this.opened ? 'close' : 'open'](trigger, sendFocus);
+	    }
+	  }, {
+	    key: 'init',
+	    value: function init() {
+	      // prevent re-init
+	      if (this.$element.data(this.componentName)) {
+	        return;
+	      }
+	      this.$element.data(this.componentName, this);
+	
+	      this.$element.attr('role', 'menu');
+	      this.close();
+	      var self = this;
+	
+	      // close on any click, even on the menu
+	      (0, _jquery2['default'])(document).bind('mouseup', function () {
+	        self.close();
+	      });
+	
+	      this._bindKeyHandling();
+	
+	      this.$element.trigger(this.componentName + ':init');
+	    }
+	  }]);
+	
+	  return Menu;
+	}();
+	
+	var Menutrigger = function () {
+	  function Menutrigger(element) {
+	    _classCallCheck(this, Menutrigger);
+	
+	    if (!element) {
+	      throw new Error('Element required to initialize object');
+	    }
+	    this.element = element;
+	    this.$element = (0, _jquery2['default'])(element);
+	    this.$menu = (0, _jquery2['default'])('#' + this.$element.attr('data-menu-trigger'));
+	    this.menu = this.$menu.data('Menu');
+	    this.componentName = 'Menutrigger';
+	  }
+	
+	  _createClass(Menutrigger, [{
+	    key: '_bindbehavior',
+	    value: function _bindbehavior() {
+	      var self = this;
+	
+	      if (this.$element.is('a')) {
+	        this.$element.attr('role', 'button').bind('click', function (e) {
+	          e.preventDefault();
+	          self.menu.toggle(this, true);
+	        });
+	      } else if (this.$element.is('input')) {
+	        this.$element.bind('input keyup', function () {
+	          if (this.value === '') {
+	            self.menu.close();
+	          } else {
+	            self.menu.open(this, false);
+	          }
+	        }).bind('input keydown', function (e) {
+	          self.menu.keyDown(e);
+	        }).bind('focus click', function () {
+	          if (this.value !== '') {
+	            self.menu.open();
+	          }
+	        }).bind('blur', function () {
+	          self.menu.close();
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'init',
+	    value: function init() {
+	      // prevent re-init
+	      if (this.$element.data(this.componentName)) {
+	        return;
+	      }
+	      this.$element.data(this.componentName, this);
+	
+	      // add attrs
+	      this.$element.attr('aria-controls', this.$menu.attr('id'));
+	      this.$element.attr('aria-haspopup', 'true');
+	
+	      this._bindbehavior();
+	
+	      this.$element.trigger(this.componentName + ':init');
+	    }
+	  }]);
+	
+	  return Menutrigger;
+	}();
+	
+	exports['default'] = { Menu: Menu, Menutrigger: Menutrigger };
+	module.exports = exports['default'];
+
+/***/ },
 /* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8382,277 +8651,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 47 */,
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _jquery = __webpack_require__(4);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	/*
-	 * Fork of
-	 *
-	 * ! Menu - v0.1.3 - 2016-02-17
-	 * https://github.com/filamentgroup/menu
-	 * Copyright (c) 2016 Scott Jehl Licensed MIT
-	 */
-	var at = {
-	  ariaHidden: 'aria-hidden'
-	};
-	var selectClass = 'is-selected';
-	var focusables = 'a,input,[tabindex]';
-	
-	var Menu = function () {
-	  function Menu(element) {
-	    _classCallCheck(this, Menu);
-	
-	    if (!element) {
-	      throw new Error('Element required to initialize object');
-	    }
-	    this.element = element;
-	    this.$element = (0, _jquery2['default'])(element);
-	    this.opened = true;
-	    this.componentName = 'Menu';
-	
-	    this.keycodes = {
-	      38: function _(e) {
-	        this.moveSelected('prev');
-	        e.preventDefault();
-	      },
-	
-	      40: function _(e) {
-	        this.moveSelected('next');
-	        e.preventDefault();
-	      },
-	
-	      13: function _() {
-	        // return the selected value
-	        return this.selectActive();
-	      },
-	
-	      9: function _(e) {
-	        this.moveSelected(e.shiftKey ? 'prev' : 'next');
-	        e.preventDefault();
-	      },
-	
-	      27: function _() {
-	        this.close();
-	      }
-	    };
-	  }
-	
-	  _createClass(Menu, [{
-	    key: 'moveSelected',
-	    value: function moveSelected(placement, focus) {
-	      var $items = this.$element.find('li'),
-	          $selected = $items.filter('.' + selectClass),
-	          $nextSelected;
-	
-	      if (!$selected.length || placement === 'start') {
-	        $nextSelected = $items.eq(0);
-	      } else if (placement === 'next') {
-	        $nextSelected = $selected.next();
-	        if (!$nextSelected.length) {
-	          $nextSelected = $items.eq(0);
-	        }
-	      } else {
-	        $nextSelected = $selected.prev();
-	        if (!$nextSelected.length) {
-	          $nextSelected = $items.eq($items.length - 1);
-	        }
-	      }
-	      $selected.removeClass(selectClass);
-	      $nextSelected.addClass(selectClass);
-	
-	      if (focus || (0, _jquery2['default'])(window.document.activeElement).closest($selected).length) {
-	        if ($nextSelected.is(focusables)) {
-	          $nextSelected[0].focus();
-	        } else {
-	          var $focusChild = $nextSelected.find(focusables);
-	          if ($focusChild.length) {
-	            $focusChild[0].focus();
-	          }
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'getSelectedElement',
-	    value: function getSelectedElement() {
-	      return this.$element.find('li.' + selectClass);
-	    }
-	  }, {
-	    key: 'selectActive',
-	    value: function selectActive() {
-	      var trigger = this.$element.data(this.componentName + '-trigger');
-	      var $selected = this.getSelectedElement();
-	
-	      if (trigger && (0, _jquery2['default'])(trigger).is('input')) {
-	        trigger.value = $selected.text();
-	      }
-	      $selected.trigger(this.componentName + ':select');
-	      this.close();
-	      return $selected.text();
-	    }
-	  }, {
-	    key: 'keyDown',
-	    value: function keyDown(e) {
-	      var fn = this.keycodes[e.keyCode] || function () {};
-	      return fn.call(this, e);
-	    }
-	  }, {
-	    key: '_bindKeyHandling',
-	    value: function _bindKeyHandling() {
-	      var self = this;
-	      this.$element.bind('keydown', function (e) {
-	        self.keyDown(e);
-	      }).bind('mouseover', function (e) {
-	        self.$element.find('.' + selectClass).removeClass(selectClass);
-	        (0, _jquery2['default'])(e.target).closest('li').addClass(selectClass);
-	      }).bind('mouseleave', function (e) {
-	        (0, _jquery2['default'])(e.target).closest('li').removeClass(selectClass);
-	      }).bind('click', function () {
-	        self.selectActive();
-	      });
-	    }
-	  }, {
-	    key: 'open',
-	    value: function open(trigger, sendFocus) {
-	      if (this.opened) {
-	        return;
-	      }
-	      this.$element.attr(at.ariaHidden, false);
-	      this.$element.data(this.componentName + '-trigger', trigger);
-	      this.opened = true;
-	      this.moveSelected('start', sendFocus);
-	      this.$element.trigger(this.componentName + ':open');
-	    }
-	  }, {
-	    key: 'close',
-	    value: function close() {
-	      if (!this.opened) {
-	        return;
-	      }
-	      this.$element.attr(at.ariaHidden, true);
-	      this.opened = false;
-	      var $trigger = this.$element.data(this.componentName + '-trigger');
-	      if ($trigger) {
-	        $trigger.focus();
-	      }
-	      this.$element.trigger(this.componentName + ':close');
-	    }
-	  }, {
-	    key: 'toggle',
-	    value: function toggle(trigger, sendFocus) {
-	      this[this.opened ? 'close' : 'open'](trigger, sendFocus);
-	    }
-	  }, {
-	    key: 'init',
-	    value: function init() {
-	      // prevent re-init
-	      if (this.$element.data(this.componentName)) {
-	        return;
-	      }
-	      this.$element.data(this.componentName, this);
-	
-	      this.$element.attr('role', 'menu');
-	      this.close();
-	      var self = this;
-	
-	      // close on any click, even on the menu
-	      (0, _jquery2['default'])(document).bind('mouseup', function () {
-	        self.close();
-	      });
-	
-	      this._bindKeyHandling();
-	
-	      this.$element.trigger(this.componentName + ':init');
-	    }
-	  }]);
-	
-	  return Menu;
-	}();
-	
-	var Menutrigger = function () {
-	  function Menutrigger(element) {
-	    _classCallCheck(this, Menutrigger);
-	
-	    if (!element) {
-	      throw new Error('Element required to initialize object');
-	    }
-	    this.element = element;
-	    this.$element = (0, _jquery2['default'])(element);
-	    this.$menu = (0, _jquery2['default'])('#' + this.$element.attr('data-menu-trigger'));
-	    this.menu = this.$menu.data('Menu');
-	    this.componentName = 'Menutrigger';
-	  }
-	
-	  _createClass(Menutrigger, [{
-	    key: '_bindbehavior',
-	    value: function _bindbehavior() {
-	      var self = this;
-	
-	      if (this.$element.is('a')) {
-	        this.$element.attr('role', 'button').bind('click', function (e) {
-	          e.preventDefault();
-	          self.menu.toggle(this, true);
-	        });
-	      } else if (this.$element.is('input')) {
-	        this.$element.bind('input keyup', function () {
-	          if (this.value === '') {
-	            self.menu.close();
-	          } else {
-	            self.menu.open(this, false);
-	          }
-	        }).bind('input keydown', function (e) {
-	          self.menu.keyDown(e);
-	        }).bind('focus click', function () {
-	          if (this.value !== '') {
-	            self.menu.open();
-	          }
-	        }).bind('blur', function () {
-	          self.menu.close();
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'init',
-	    value: function init() {
-	      // prevent re-init
-	      if (this.$element.data(this.componentName)) {
-	        return;
-	      }
-	      this.$element.data(this.componentName, this);
-	
-	      // add attrs
-	      this.$element.attr('aria-controls', this.$menu.attr('id'));
-	      this.$element.attr('aria-haspopup', 'true');
-	
-	      this._bindbehavior();
-	
-	      this.$element.trigger(this.componentName + ':init');
-	    }
-	  }]);
-	
-	  return Menutrigger;
-	}();
-	
-	exports['default'] = { Menu: Menu, Menutrigger: Menutrigger };
-	module.exports = exports['default'];
 
 /***/ }
 /******/ ])
