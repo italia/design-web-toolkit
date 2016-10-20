@@ -7,6 +7,7 @@ import IwtAccordion from './src/modules/accordion'
 import IwtCarousel from './src/modules/carousel'
 import IwtCookiebar from './src/modules/cookiebar'
 import IwtDialog from './src/modules/dialog'
+import IwtDropdown from './src/modules/dropdown'
 import IwtMasonry from './src/modules/masonry'
 import IwtSkiplinks from './src/modules/skiplinks'
 import IwtTreeview from './src/modules/treeview'
@@ -23,6 +24,7 @@ const __exports = {
 	IwtCarousel,
 	IwtCookiebar,
 	IwtDialog,
+	IwtDropdown,
 	IwtMasonry,
 	IwtTreeview,
 	IwtSkiplinks,

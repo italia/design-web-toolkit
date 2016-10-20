@@ -26,6 +26,7 @@
 @import "src/modules/cookiebar";
 @import "src/modules/dialog";
 @import "src/modules/dot";
+@import "src/modules/dropdown";
 @import "src/modules/entrypoint";
 @import "src/modules/footer";
 @import "src/modules/hamburger";
