@@ -38,10 +38,11 @@
 @import "src/modules/navscroll";
 @import "src/modules/offcanvas";
 @import "src/modules/scrolltop";
-@import "src/modules/share";
 @import "src/modules/skiplinks";
 @import "src/modules/tooltip";
 @import "src/modules/treeview";
+
+@import "src/extra/share";
 
 /*
  * WebFontLoaded: _import "src/fonts/titillium"
@@ -118,7 +119,7 @@ body {
 }
 
 a:focus {
-  background: #ff8c00;
+  /* background: #ff8c00; */
   outline: #ff8c00 solid 3px;
   text-decoration: underline;
 }

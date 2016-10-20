@@ -14,7 +14,6 @@ import IwtTreeview from './src/modules/treeview'
 import IwtOffcanvas from './src/modules/offcanvas'
 import IwtHeadroom from './src/modules/header'
 import IwtMegamenu from './src/modules/megamenu'
-import IwtShare from './src/modules/share'
 import IwtTooltip from './src/modules/scrolltop'
 import IwtScrolltop from './src/modules/tooltip'
 
@@ -34,7 +33,6 @@ const __exports = {
 	IwtTooltip,
 	IwtScripts,
 	IwtScrolltop,
-	IwtShare,
 	IwtForm
 }
 

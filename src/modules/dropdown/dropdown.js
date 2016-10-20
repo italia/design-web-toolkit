@@ -7,8 +7,8 @@ import $ from 'jquery'
  * Copyright (c) 2016 Scott Jehl Licensed MIT
  */
 const at = {
-    ariaHidden: 'aria-hidden'
-  }
+  ariaHidden: 'aria-hidden'
+}
 const selectClass = 'is-selected'
 const focusables = 'a,input,[tabindex]'
 
@@ -21,33 +21,44 @@ class Menu {
     this.element = element
     this.$element = $(element)
     this.opened = true
-		this.componentName = 'Menu'
+    this.componentName = 'Menu'
 
-		this.keycodes = {
-	    38: function(e) {
-	      this.moveSelected('prev')
-	      e.preventDefault()
-	    },
+    this.keycodes = {
+      38: function(e) {
+        this.moveSelected('prev')
+        e.preventDefault()
+      },
 
-	    40: function(e) {
-	      this.moveSelected('next')
-	      e.preventDefault()
-	    },
+      40: function(e) {
+        this.moveSelected('next')
+        e.preventDefault()
+      },
 
-	    13: function() {
-	      // return the selected value
-	      return this.selectActive()
-	    },
+      // add right / left key navigation
+      37: function(e) {
+        this.moveSelected('prev')
+        e.preventDefault()
+      },
 
-	    9: function(e) {
-	      this.moveSelected(e.shiftKey ? 'prev' : 'next')
-	      e.preventDefault()
-	    },
+      39: function(e) {
+        this.moveSelected('next')
+        e.preventDefault()
+      },
 
-	    27: function() {
-	      this.close()
-	    }
-	  }
+      13: function() {
+        // return the selected value
+        return this.selectActive()
+      },
+
+      9: function(e) {
+        this.moveSelected(e.shiftKey ? 'prev' : 'next')
+        e.preventDefault()
+      },
+
+      27: function() {
+        this.close()
+      }
+    }
   }
 
   moveSelected(placement, focus) {
@@ -184,7 +195,7 @@ class Menutrigger {
     this.$element = $(element)
     this.$menu = $('#' + this.$element.attr('data-menu-trigger'))
     this.menu = this.$menu.data('Menu')
-		this.componentName = 'Menutrigger'
+    this.componentName = 'Menutrigger'
   }
 
   _bindbehavior() {
@@ -239,4 +250,7 @@ class Menutrigger {
 
 }
 
-export default { Menu, Menutrigger }
+export default {
+  Menu,
+  Menutrigger
+}
