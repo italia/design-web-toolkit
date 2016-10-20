@@ -19,18 +19,6 @@ const Frtreeview = function({
     // readyClass: readyClass = 'fr-accordion--is-ready',
 } = {}) {
 
-  // CONSTANTS
-  const doc = document
-  const docEl = doc.documentElement
-  const _q = (el, ctx = doc) => [].slice.call(ctx.querySelectorAll(el))
-
-  // SUPPORTS
-  if (!('querySelector' in doc) || !('addEventListener' in window) || !docEl.classList) return null
-
-  // SETUP
-  // set treeview element NodeLists
-  let treeviewContainers = _q(selector)
-
   const keys = {
     tab: 9,
     enter: 13,
@@ -57,7 +45,7 @@ const Frtreeview = function({
 
   function _expandGroup(treeview, $item) {
     let $group = $item.children('ul')
-		$group.slideDown(250, () => {
+    $group.slideDown(250, () => {
       $group.attr('aria-hidden', 'false')
       $item.attr('aria-expanded', 'true')
       treeview.$visibleItems = treeview.$el.find('li:visible')
@@ -66,7 +54,7 @@ const Frtreeview = function({
 
   function _collapseGroup(treeview, $item) {
     let $group = $item.children('ul')
-		$group.slideUp(250, () => {
+    $group.slideUp(250, () => {
       $group.attr('aria-hidden', 'true')
       $item.attr('aria-expanded', 'false')
       treeview.$visibleItems = treeview.$el.find('li:visible')
@@ -103,6 +91,10 @@ const Frtreeview = function({
 
     if ((e.altKey || e.ctrlKey) ||
       (e.shiftKey && e.keyCode != keys.tab)) {
+      return true
+    }
+
+    if (!$(e.target).is('[role=treeitem]')) {
       return true
     }
 
@@ -282,6 +274,11 @@ const Frtreeview = function({
       // do nothing
       return true
     }
+
+    if (!$(e.target).parent().is('[aria-expanded]')) {
+      return true
+    }
+
     treeview.$activeItem = $item
     _updateStyling(treeview, $item)
     _toggleGroup(treeview, $item)
@@ -294,6 +291,11 @@ const Frtreeview = function({
       // do nothing
       return true
     }
+
+    if (!$(e.target).parent().is('[aria-expanded]')) {
+      return true
+    }
+
     treeview.$activeItem = treeview.$el
     _updateStyling(treeview, $item)
     e.stopPropagation()
@@ -343,37 +345,37 @@ const Frtreeview = function({
     // Put tabindex="-1" on every LI (if it's not the first one)
     // Put class=<classParent> on every LI that contains an UL
     $el.find('li').each(function(i, li) {
-      const $li = $(li)
-      $li
-        .attr('role', 'treeitem')
-        .attr('tabindex', (0 === i) ? '0' : '-1')
-      if ($li.find('ul').length !== 0) {
-        if (!li.hasAttribute('aria-expanded')) {
-          $li.attr('aria-expanded', 'false')
+        const $li = $(li)
+        $li
+          .attr('role', 'treeitem')
+          .attr('tabindex', (0 === i) ? '0' : '-1')
+          //  .find('a[href]').not('[href^=#]').attr('tabindex', 0)
+          //  .parent().attr('aria-label', function() { return $(this).text() })
+        if ($li.find('ul').length !== 0) {
+          if (!li.hasAttribute('aria-expanded')) {
+            $li.attr('aria-expanded', 'false')
+          }
+          $li.addClass(classParent)
         }
-        $li.addClass(classParent)
-      }
-    })
-    // Put role="group" on every contained UL
+      })
+      // Put role="group" on every contained UL
     $el.find('ul').attr('role', 'group')
   }
 
   function init() {
-    if (treeviewContainers.length) {
-      treeviewContainers.forEach((treeviewContainer) => {
-        const $el = $(treeviewContainer)
-        _addA11y($el)
-        let treeview = {
-          $el: $el,
-          $items: $el.find('li'),
-          $parents: $el.find('.' + classParent),
-          $visibleItems: null,
-          $activeItem: null
-        }
-        _collapseAll(treeview)
-        _bindEvents(treeview)
-      })
-    }
+    $(selector).each((_, treeviewContainer) => {
+      const $el = $(treeviewContainer)
+      _addA11y($el)
+      let treeview = {
+        $el: $el,
+        $items: $el.find('li'),
+        $parents: $el.find('.' + classParent),
+        $visibleItems: null,
+        $activeItem: null
+      }
+      _collapseAll(treeview)
+      _bindEvents(treeview)
+    })
   }
 
   init()
@@ -388,4 +390,6 @@ const Frtreeview = function({
 
 new Frtreeview()
 
-export default { Frtreeview }
+export default {
+  Frtreeview
+}
