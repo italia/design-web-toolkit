@@ -1,11 +1,3 @@
-/*
- *	Only apply to body
- *		class="it-Pac"
- */
-.Pac {
-  font-family: var(--Pac-font-family-sans);
-}
-
 /**
  * 	Fonts
  */
@@ -17,6 +9,13 @@
  * 	Brand color
  */
 :root {
-  --Color-primary: #0066cc;
+  --Color-primary: #06c;
 }
 
+/*
+ *	Only apply to body
+ *		class="it-Pac"
+ */
+.Pac {
+  font-family: var(--Pac-font-family-sans);
+}

@@ -57,10 +57,31 @@
 @custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1440px);
 @custom-media --lg-viewport screen and (min-width: 1440px);
 
+/*
+ *  1. System font stack see https://github.com/twbs/bootstrap/pull/19098/files
+ */
 :root {
   --it-Base-font-size-ratio: 1.8;
   --it-Base-font-size: calc(1rem * var(--it-Base-font-size-ratio));
   --it-Base-text-color: #1c2024;
+  --it-Base-font-family:
+    /* 1 */
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    HelveticaNeue-Light,
+    Helvetica Neue Light,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    Lucida Grande,
+    sans-serif;
 }
 
 :root {
@@ -75,6 +96,7 @@
  */
  /*  stylelint-enable */
 html {
+  font-family: var(--it-Base-font-family);
   font-size: 62.5%; /* 1 */
   font-variant-ligatures: common-ligatures; /* 2 */
 
