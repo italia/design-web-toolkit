@@ -116,15 +116,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _megamenu2 = _interopRequireDefault(_megamenu);
 	
-	var _share = __webpack_require__(42);
-	
-	var _share2 = _interopRequireDefault(_share);
-	
-	var _scrolltop = __webpack_require__(43);
+	var _scrolltop = __webpack_require__(42);
 	
 	var _scrolltop2 = _interopRequireDefault(_scrolltop);
 	
-	var _tooltip = __webpack_require__(44);
+	var _tooltip = __webpack_require__(43);
 	
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 	
@@ -146,7 +142,6 @@ return /******/ (function(modules) { // webpackBootstrap
 		IwtTooltip: _scrolltop2['default'],
 		IwtScripts: _scripts2['default'],
 		IwtScrolltop: _tooltip2['default'],
-		IwtShare: _share2['default'],
 		IwtForm: _form2['default']
 	};
 	
@@ -5029,6 +5024,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	        e.preventDefault();
 	      },
 	
+	      // add right / left key navigation
+	      37: function _(e) {
+	        this.moveSelected('prev');
+	        e.preventDefault();
+	      },
+	
+	      39: function _(e) {
+	        this.moveSelected('next');
+	        e.preventDefault();
+	      },
+	
 	      13: function _() {
 	        // return the selected value
 	        return this.selectActive();
@@ -5240,7 +5246,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return Menutrigger;
 	}();
 	
-	exports['default'] = { Menu: Menu, Menutrigger: Menutrigger };
+	exports['default'] = {
+	  Menu: Menu,
+	  Menutrigger: Menutrigger
+	};
 	module.exports = exports['default'];
 
 /***/ },
@@ -5252,13 +5261,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _jquery = __webpack_require__(4);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
 	var Masonry = null;
 	
-	try {
-	  Masonry = __webpack_require__(28);
-	} catch (e) {
-	  /* HEY, I'm IE8 */
-	}
+	(0, _jquery2['default'])(function () {
+	  if ((0, _jquery2['default'])('.js-Masonry-container').length > 0) {
+	    try {
+	      Masonry = __webpack_require__(28);
+	    } catch (e) {
+	      /* HEY, I'm IE8 */
+	    }
+	  }
+	});
 	
 	exports['default'] = {
 	  Masonry: Masonry
@@ -8333,32 +8353,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _jquery = __webpack_require__(4);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var hideClass = 'u-jsHiddenVisually';
-	
-	(0, _jquery2['default'])('.js-Share').click(function (e) {
-	  var $el = (0, _jquery2['default'])(e.currentTarget);
-	  var $share = $el.closest('.Share');
-	  var $buttons = $share.find('ul');
-	
-	  $buttons.toggleClass(hideClass);
-	
-	  $share.find('.Share-revealText').toggleClass(hideClass);
-	
-	  $share.find('.Share-revealIcon').toggleClass('is-open');
-	});
-
-/***/ },
-/* 43 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -8388,7 +8382,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8397,11 +8391,11 @@ return /******/ (function(modules) { // webpackBootstrap
 		value: true
 	});
 	
-	var _frTooltip = __webpack_require__(45);
+	var _frTooltip = __webpack_require__(44);
 	
 	var _frTooltip2 = _interopRequireDefault(_frTooltip);
 	
-	var _tooltip = __webpack_require__(46);
+	var _tooltip = __webpack_require__(45);
 	
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 	
@@ -8432,7 +8426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8647,7 +8641,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
