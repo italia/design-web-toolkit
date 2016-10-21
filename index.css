@@ -43,6 +43,7 @@
 @import "src/modules/treeview";
 
 @import "src/extra/share";
+@import "src/extra/spid";
 
 /*
  * WebFontLoaded: _import "src/fonts/titillium"

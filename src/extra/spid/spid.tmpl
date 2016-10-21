@@ -1,0 +1,63 @@
+{% for size in ['xxs', 'xs', 's', 'm' ] %}
+<div class="Spid">
+  <a href="#spid-button-get-{{ size }}" data-menu-trigger="spid-button-get-{{ size }}" class="Button Spid-button u-text-r-{{ size }}">
+    <img src="/components/raw/spid/spid-ico-circle-bb.svg" alt="" />
+    <span>Entra con SPID</span>
+  </a>
+  <div id="spid-button-get-{{ size }}" data-menu class="Spid-menu Dropdown-menu">
+    <ul class="Linklist js-randomize">
+      {% for i in IDP %}
+      <li>
+        <a href="#" class="Spid-idp">
+          <img src="/components/raw/spid/spid-idp-{{ i.img }}.svg" alt="Prosegui con {{ i.idp }}" class="u-text-r-{{ size }}" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<br>
+{% endfor %}
+
+<ul class="Prose u-margin-bottom-xxl">
+  <li>
+    <a href="http://www.spid.gov.it" class="u-color-50">Maggiori informazioni</a>
+  </li>
+  <li>
+    <a href="http://www.spid.gov.it/richiedi-spid" class="u-color-50">Non hai SPID ?</a>
+  </li>
+</ul>
+
+<h3 class="u-text-h3">Versione POST</h3>
+
+<form name="spid_idp_access" action="#" method="post">
+  <input type="hidden" name="param_001" value="" />
+  <input type="hidden" name="param_002" value="" />
+  <input type="hidden" name="param_003" value="" />
+
+  <a href="#spid-button-get" data-menu-trigger="spid-button-get" class="Button Spid-button u-text-r-{{ size }}">
+    <img src="/components/raw/spid/spid-ico-circle-bb.svg" alt="" />
+    <span>Entra con SPID</span>
+  </a>
+  <div id="spid-button-get" data-menu class="Spid-menu Dropdown-menu">
+    <ul class="Linklist js-randomize">
+      {% for i in IDP %}
+      <li>
+        <a href="#" class="Spid-idp">
+          <img src="/components/raw/spid/spid-idp-{{ i.img }}.svg" alt="Prosegui con {{ i.idp }}" class="u-text-r-{{ size }}" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</form>
+
+<ul class="Prose">
+  <li>
+    <a href="http://www.spid.gov.it" class="u-color-50">Maggiori informazioni</a>
+  </li>
+  <li>
+    <a href="http://www.spid.gov.it/richiedi-spid" class="u-color-50">Non hai SPID ?</a>
+  </li>
+</ul>
