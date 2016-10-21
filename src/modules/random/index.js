@@ -1,15 +1,14 @@
 import $ from 'jquery'
 
-
+/*
+ *  Randomize order of children in container (.js-randomize)
+ */
 $(() => {
   const CONTAINER_SELECTOR = '.js-randomize'
   const EXCLUDE_SELECTOR = '.js-randomize-exclude'
 
-  let cache = []
-
   function shuffle(o) {
-    for (let j, x, i = o.length; i; j = typeof cache[i] !== 'undefined' ?
-      cache[i] : (cache[i] = parseInt(Math.random() * i)),
+    for (let j, x, i = o.length; i; j = parseInt(Math.random() * i),
       x = o[--i], o[i] = o[j], o[j] = x);
     return o
   }

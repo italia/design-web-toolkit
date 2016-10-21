@@ -1,3 +1,9 @@
+/** @define Spid; weak */
+
+:root {
+  --Spid-font-ratio: 1.2em;
+}
+
 .Spid {
   @extend .u-inline;
   @extend .u-posRelative;
@@ -9,9 +15,9 @@
   @extend .u-alignMiddle;
   @extend .u-linkClean;
   @extend .u-borderRadius-s;
+  @extend .u-padding-bottom-xxs;
+  @extend .u-padding-top-xxs;
 
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
   text-transform: none !important;
 }
 
@@ -21,6 +27,8 @@
 
 .Spid-button > span {
   @extend .u-alignMiddle;
+
+  font-size: var(--Spid-font-ratio);
 }
 
 .Spid-button > img {
@@ -46,6 +54,11 @@
   @extend .u-padding-r-all;
 
   width: 100%;
+}
+
+.Spid-idp:hover,
+.Spid-idp:focus {
+  @extend .u-background-5;
 }
 
 .Spid-idp > img {
