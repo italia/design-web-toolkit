@@ -1,6 +1,13 @@
-@import "suitcss";
+@import "suitcss-base";
+@import "suitcss-components";
+@import "suitcss-utils";
+
 @import "suitcss-components-form";
 
+/*
+ *  @FIXME: replace with glob patterns when this gets merged:
+ *    https://github.com/TrySound/postcss-easy-import/pull/7
+ */
 @import "src/utils/borders";
 @import "src/utils/colors";
 @import "src/utils/corners";

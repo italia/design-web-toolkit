@@ -16,7 +16,7 @@ Il codice CSS deve esser collocato in un file `src/modules/<nome-modulo>/index.c
 e <mark>importato nell'`index.css` globale contenuto nella directory radice del toolkit</mark>.
 
 Il codice Javascript deve esser collocato in un file `src/modules/<nome-modulo>/index.js`
-e <mark>importato nell'`index.js` globale contenuto nella directory radice del toolkit</mark>.
+e verrà automaticamente incluso nella build.
 
 Ulteriori **assets** (CSS / JS / immagini) contenuti nella directory del modulo
 possono essere importati nei rispettivi file index.

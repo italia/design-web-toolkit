@@ -13,7 +13,6 @@
     "jquery.cookie": "^1.4.1",
     "owl.carousel": "^2.1.4",
     "salvattore": "^1.0.9",
-    "suitcss": "^2.0.0",
     "suitcss-components-form": "^1.0.0",
     "suitcss-preprocessor": "^2.0.0",
     "throttle-debounce": "^1.0.1"
