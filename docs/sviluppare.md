@@ -34,6 +34,11 @@ vedi anche:
 
 Per poter compilare i sorgenti (CSS / JS) è richiesta l'installazione di [Node.js / npm](https://nodejs.org).
 
+Potrebbe succedere che il sistema operativo in uso fallisca indicando che è impossibile installare per carenza
+di privilegi in scrittura. Questo avviene perché il sistema richiede l'installazione per mezzo di credenziali
+da amministratore di sistema. In questo caso occorre ripetere la procedura di installazione anteponendo
+il commando `sudo ...` . 
+
 Terminata l'installazione, la seguente sequenza di comandi eseguiti all'interno della directory del toolkit
 completerà il download delle librerie richieste per lo sviluppo:
 
@@ -41,6 +46,7 @@ completerà il download delle librerie richieste per lo sviluppo:
 npm i -g @frctl/fractal
 npm install
 ```
+Anche per inviare questi comandi potrebbe essere necessario autenticarsi come superutente.
 
 #### Compilare i sorgenti
 
