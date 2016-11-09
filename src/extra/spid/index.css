@@ -1,0 +1,66 @@
+/** @define Spid; weak */
+
+:root {
+  --Spid-font-ratio: 1.2em;
+}
+
+.Spid {
+  @extend .u-inline;
+  @extend .u-posRelative;
+}
+
+.Spid-button {
+  @extend .u-background-50;
+  @extend .u-color-white;
+  @extend .u-alignMiddle;
+  @extend .u-linkClean;
+  @extend .u-borderRadius-s;
+  @extend .u-padding-bottom-xxs;
+  @extend .u-padding-top-xxs;
+
+  text-transform: none !important;
+}
+
+.Spid-button:hover {
+  @extend .u-background-80;
+}
+
+.Spid-button > span {
+  @extend .u-alignMiddle;
+
+  font-size: var(--Spid-font-ratio);
+}
+
+.Spid-button > img {
+  @extend .u-alignMiddle;
+  @extend .u-margin-r-right;
+  @extend .u-padding-r-right;
+  @extend .u-border-right-xxs;
+  @extend .u-color-40;
+
+  height: 3em;
+  width: 3em;
+}
+
+.Spid-menu {
+  @extend .u-background-white;
+  @extend .u-borderShadow-m;
+  @extend .u-zindex-50;
+
+  width: 100%;
+}
+
+.Spid-idp {
+  @extend .u-padding-r-all;
+
+  width: 100%;
+}
+
+.Spid-idp:hover,
+.Spid-idp:focus {
+  @extend .u-background-5;
+}
+
+.Spid-idp > img {
+  height: 2em;
+}

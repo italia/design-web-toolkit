@@ -50,6 +50,7 @@
 @import "src/modules/treeview";
 
 @import "src/extra/share";
+@import "src/extra/spid";
 
 /*
  * WebFontLoaded: _import "src/fonts/titillium"
@@ -72,6 +73,7 @@
   --it-Base-font-size-ratio: 1.8;
   --it-Base-font-size: calc(1rem * var(--it-Base-font-size-ratio));
   --it-Base-text-color: #1c2024;
+  --it-Base-focus-color: #ff8c00;
   --it-Base-font-family:
     /* 1 */
     -apple-system,
@@ -121,13 +123,13 @@ body {
 }
 
 :focus {
-  outline: #ff8c00 solid 3px;
+  outline: var(--it-Base-focus-color) solid 3px;
   text-decoration: none;
 }
 
 a:focus {
-  /* background: #ff8c00; */
-  outline: #ff8c00 solid 3px;
+  background: var(--it-Base-focus-color);
+  outline: var(--it-Base-focus-color) solid 3px;
   text-decoration: underline;
 }
 

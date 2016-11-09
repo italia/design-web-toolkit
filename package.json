@@ -71,5 +71,8 @@
     "deploy:force": "git push origin `git subtree split --prefix styleguide master`:gh-pages --force"
   },
   "author": "AgID",
-  "license": "CC0-1.0"
+  "license": "CC0-1.0",
+  "optionalDependencies": {
+    "spid-graphics": "git+https://github.com/italia-it/spid-graphics.git"
+  }
 }
