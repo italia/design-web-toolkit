@@ -72,6 +72,10 @@
   },
   "author": "AgID",
   "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/italia-it/ita-web-toolkit.git"
+  },
   "optionalDependencies": {
     "spid-graphics": "git+https://github.com/italia-it/spid-graphics.git"
   }

@@ -38,7 +38,6 @@ Terminata l'installazione, la seguente sequenza di comandi eseguiti all'interno 
 completerà il download delle librerie richieste per lo sviluppo:
 
 ```
-npm i -g @frctl/fractal
 npm install
 ```
 
