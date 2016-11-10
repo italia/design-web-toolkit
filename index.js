@@ -31,10 +31,10 @@ function requireAll(requireContext) {
         })))
 
     if (include) {
-      console.log('including: %s', dirname)
+      // console.log('including: %s', dirname)
       keys.push(filename)
     } else {
-      console.log('excluding: %s', dirname)
+      // console.log('excluding: %s', dirname)
     }
   })
   return keys.map(requireContext)
