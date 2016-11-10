@@ -51,8 +51,17 @@ const listToMegaMenu = ($ul, _opts) => {
     .find('> li')
     .each(function(i, li) {
       $(li)
-        .addClass(_opts.topNavItemClass)
+        .addClass(function() {
+          if (!$(this).data('megamenu-class')) {
+            return _opts.topNavItemClass
+          }
+          return null
+        })
+        .addClass($(li).data('megamenu-class'))
         .find('a')
+        .addClass(function() {
+          return $(this).data('megamenu-class')
+        })
         // make item tabbable, this is required !
         .attr('href', '#')
         .end()

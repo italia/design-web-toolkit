@@ -33,6 +33,7 @@
  * 	1. antialiasing firefox per mac
  * 	2. antialiasing chrome, safari per mac
  */
+
 .u-textSmooth {
   -moz-osx-font-smoothing: grayscale !important; /* 1 */
   -webkit-font-smoothing: antialiased !important; /* 2 */
@@ -74,6 +75,18 @@
   font-style: italic !important;
 }
 
+.u-textLowercase {
+  text-transform: lowercase;
+}
+
+.u-textUppercase {
+  text-transform: uppercase;
+}
+
+.u-textSmallCaps {
+  font-variant: small-caps;
+}
+
 .u-textPreformatted {
   font-family: var(--Text-preFormatted-font) !important;
   max-height: 32em;
@@ -90,6 +103,7 @@
  *	Responsive font sizing
  * 	====================================
  */
+
 .u-text-r-xxl {
   @extend .u-text-xxl;
   @extend .u-text-sm-xxl;

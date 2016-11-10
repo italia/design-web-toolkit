@@ -127,7 +127,7 @@ $('.js-Header-search-trigger').click((e) => {
       $el.addClass('u-hiddenVisually')
     }
   })
-  $($(e.target).attr('aria-controls')).toggleClass('is-active')
+  $('#' + $(e.target).attr('aria-controls')).toggleClass('is-active')
 })
 
 export default {

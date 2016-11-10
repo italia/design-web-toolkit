@@ -22,6 +22,7 @@
 .Hamburger-toggle::before,
 .Hamburger-toggle::after {
   background: white;
+  border-radius: 4px;
   content: " ";
   display: block;
   height: calc(var(--Hamburger-height) / 3);
@@ -32,6 +33,7 @@
 /*
  *	1. Make the whole <a> area clickable
  */
+
 .Hamburger-toggleContainer {
   cursor: pointer;
   padding-bottom: calc(var(--Hamburger-height) + var(--Hamburger-pad));
@@ -39,6 +41,7 @@
 }
 
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
   .Hamburger-toggle,
   .Hamburger-toggle::before,
   .Hamburger-toggle::after {
@@ -55,6 +58,7 @@
 }
 
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
   .Hamburger-toggle::before {
     top: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
   }

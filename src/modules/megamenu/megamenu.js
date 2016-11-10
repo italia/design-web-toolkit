@@ -707,7 +707,8 @@ limitations under the License.
         topnavitems.each(function(i, topnavitem) {
           var topnavitemlink, topnavitempanel
           topnavitem = $(topnavitem)
-          topnavitem.addClass(settings.topNavItemClass)
+          // @FIXME: Add classed manually !!!
+          // topnavitem.addClass(settings.topNavItemClass)
           topnavitemlink = topnavitem.find(':tabbable:first')
           topnavitempanel = topnavitem.children(':not(:tabbable):last')
           _addUniqueId.call(that, topnavitemlink)

@@ -11,17 +11,18 @@
 /*
  *  1. See .Header-titleLink
  */
+
 .Header-banner {
   @extend .u-background-95;
   @extend .u-posRelative;
   @extend .u-color-60;
   @extend .u-border-bottom-xxs;
-  @extend .u-padding-top-xs;
-  @extend .u-padding-bottom-xs;
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xxs;
   @extend .u-padding-left-s;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-padding-top-s;
-    @extend .u-padding-bottom-s;
+    @extend .u-padding-top-xs;
+    @extend .u-padding-bottom-xs;
   }
   @media (--sm-viewport) {
     @extend .u-padding-left-none;
@@ -34,45 +35,13 @@
   }
 }
 
-/*
- *	1. Fixed for every theme.
- */
-.Header-serviceLink {
-  @extend .u-flex;
-  @extend .u-flexAlignItemsCenter;
-  @extend .u-flexJustifyCenter;
-  @extend .u-padding-left-xl;
-  @extend .u-padding-right-xl;
-  @extend .u-posAbsolute;
-
-  background: #06c; /* 1 */
-  height: 100%;
-  right: 0;
-  top: 0;
-}
-
-.Header-serviceLink a {
-  @extend .u-color-white;
-  @extend .u-text-r-xxs;
-  @extend .u-textWeight-700;
-  @extend .u-textClean;
-
-  text-transform: uppercase;
-}
-
-.Header-serviceLink span {
-  @extend .u-hidden;
-  @extend .u-md-inline;
-  @extend .u-lg-inline;
-}
-
-.Header-owner a {
+.Header-owner > a {
   @extend .u-sm-before4of12;
   @extend .u-md-before3of12;
   @extend .u-text-xxs;
-  @extend .u-text-sm-xs;
-  @extend .u-text-md-s;
-  @extend .u-text-lg-s;
+  @extend .u-text-sm-xxs;
+  @extend .u-text-md-xs;
+  @extend .u-text-lg-xs;
   @extend .u-color-white;
   @extend .u-textClean;
 }
@@ -83,7 +52,7 @@
   @extend .u-background-50;
 
   @extend .u-padding-top-s;
-  @extend .u-padding-bottom-s;
+  @extend .u-padding-bottom-xxs;
   @extend .u-padding-right-xs;
   @extend .u-padding-left-xs;
 
@@ -94,15 +63,15 @@
   }
 
   @media (--md-viewport) {
-    @extend .u-padding-top-m;
-    @extend .u-padding-bottom-m;
+    @extend .u-padding-top-s;
     @extend .u-padding-right-l;
+    @extend .u-padding-bottom-s;
   }
 
   @media (--lg-viewport) {
-    @extend .u-padding-top-m;
-    @extend .u-padding-bottom-m;
+    @extend .u-padding-top-s;
     @extend .u-padding-right-xxl;
+    @extend .u-padding-bottom-s;
   }
 }
 
@@ -251,6 +220,7 @@
 /*
  *  Hide utils on small screens
  */
+
 .Header-utils > * {
   @extend .u-hidden;
   @extend .u-sm-block;
@@ -287,21 +257,34 @@
 /* Lanaguage bar
   ================================================ */
 
+.Header-languages {
+  @extend .u-posAbsolute;
+
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
 .Header-language {
+  @extend .u-alignMiddle;
+  @extend .u-inlineBlock;
   @extend .u-color-white;
   @extend .u-text-r-xs;
-  @extend .u-textWeight-700;
+  @extend .u-textWeight-600;
   @extend .u-padding-left-s;
   @extend .u-padding-right-s;
   @extend .u-textClean;
-  @extend .u-margin-left-xs;
 
-  border: 2px solid white;
+  height: 100%;
+  line-height: 2em;
+}
+
+.Header-language:hover {
+  cursor: pointer;
 }
 
 .Header-language.is-active {
-  @extend .u-background-white;
-  @extend .u-color-50;
+  @extend .u-background-80;
 }
 
 /* Social icons / link
@@ -311,7 +294,7 @@
   @extend .u-text-r-xs;
   @extend .u-color-white;
   @extend .u-margin-left-s;
-  @extend .u-margin-bottom-m;
+  @extend .u-margin-bottom-s;
 }
 
 .Header-social > * {
@@ -334,7 +317,7 @@
   @extend .u-inlineBlock;
   @extend .u-background-white;
   @extend .u-color-50;
-  @extend .u-padding-all-xs;
+  @extend .u-padding-all-xxs;
   @extend .u-borderRadius-circle;
   @extend .u-margin-left-xs;
 }
@@ -343,6 +326,7 @@
  * Headroom.js for sticky header
  * =============================
  */
+
 .Headroom {
   max-height: 100em;
   width: 100%;
@@ -356,6 +340,7 @@
 /*
  *	1. Allow transition on element heights
  */
+
 .Headroom-hideme {
   max-height: 5em; /* 1 */
   transition: all 250ms ease;
@@ -424,5 +409,6 @@
 }
 
 .Headroom--unpinned {
+
   /* transform: translateY(-100%); */
 }
