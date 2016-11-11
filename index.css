@@ -22,6 +22,7 @@
 
 @import "src/components/button";
 @import "src/components/form";
+@import "src/components/forward";
 @import "src/components/prose";
 @import "src/components/table";
 
@@ -131,9 +132,13 @@ body {
 }
 
 a:focus {
-  background: var(--it-Base-focus-color);
+  background-color: var(--it-Base-focus-color);
   outline: var(--it-Base-focus-color) solid 3px;
   text-decoration: underline;
+}
+
+.is-clean:focus {
+  background-color: transparent !important;
 }
 
 a:hover {
