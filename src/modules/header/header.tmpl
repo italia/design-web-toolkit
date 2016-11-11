@@ -4,7 +4,7 @@
 
   <div class="Header-banner Headroom-hideme">
     <p class="Header-owner">
-      <a href="">Nome amministrazione afferente</a>
+      <a href="">{{ site.owner }}</a>
     </p>
     <div class="Header-languages Headroom-hideme">
       <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
@@ -15,7 +15,7 @@
   <div class="Header-navbar Grid Grid--alignMiddle">
 
     <div class="Header-toggle Grid-cell">
-      <a class="Hamburger-toggleContainer js-fr-offcanvas-open" href="#menu"
+      <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-lg-hidden u-md-hidden" href="#menu"
         aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
         <span class="Hamburger-toggle" role="presentation"></span>
         <span class="Header-toggleText" role="presentation">Menu</span>
@@ -32,7 +32,7 @@
       <h1 class="Header-titleLink">
         <a accesskey="1" href="/">
           {{ site.name }}<br>
-          <small>eventuale sottotitolo</small>
+          <small>{{ site.subtitle }}</small>
         </a>
       </h1>
     </div>
@@ -63,7 +63,7 @@
   </div><!-- Header-navbar -->
 
   {% if menu %}
-  <div class="Headroom-hideme u-textCenter u-hidden u-sm-block u-md-block u-lg-block">
+  <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
     {% if clone %}
       <nav class="Megamenu Megamenu--default js-megamenu" data-rel=".Offcanvas .Treeview"></nav>
     {% elif megamenu %}
@@ -82,4 +82,4 @@
 
 </header>
 
-{% render '@offcanvas', { showOpenButton: false } %}
+{% render '@offcanvas', { type: "comuni", showOpenButton: false } %}

@@ -1,6 +1,6 @@
 {% if showOpenButton %}
 	<button type="button" class="Button Button--default js-fr-offcanvas-open" aria-controls="menu">
-		Apri
+		Apri {{type}}
 	</button>
 {% endif %}
 
@@ -14,7 +14,12 @@
       </a>
     </div>
     <nav>
-      {% render '@treeview' %}
+			{% if type == 'default' %}
+      	{% render '@treeview' %}
+			{% endif %}
+			{% if type == 'comuni' %}
+				{% render '@treeview--comuni' %}
+			{% endif %}
     </nav>
   </div>
 </section>

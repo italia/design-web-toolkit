@@ -2,7 +2,9 @@
   "title": "Header",
   "context": {
     "site": {
-      "name": "Nome della Pubblica Amministrazione"
+      "name": "Nome della Pubblica Amministrazione",
+      "subtitle": "eventuale sottotitolo",
+      "owner": "Nome amministrazione afferente"
     }
   },
   "variants": [{
