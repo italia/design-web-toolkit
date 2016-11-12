@@ -101,7 +101,7 @@
 .Footer-socialIcons [class^="Icon-"],
 .Footer-socialIcons [class*=" Icon-"] {
   @extend .u-inlineBlock;
-  @extend .u-background-accent;
+  @extend .u-background-compl;
   @extend .u-color-grey-80;
   @extend .u-padding-all-xs;
   @extend .u-borderRadius-circle;

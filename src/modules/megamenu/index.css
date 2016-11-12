@@ -35,8 +35,8 @@
   @extend .u-flexAlignSelfStretch;
   @extend .u-padding-top-s;
   @extend .u-padding-bottom-s;
-  @extend .u-padding-right-xxl;
-  @extend .u-padding-left-xxl;
+  @extend .u-padding-right-xl;
+  @extend .u-padding-left-xl;
 }
 
 .Megamenu-item > a:focus {
@@ -105,13 +105,13 @@
 
 .Megamenu--default .Megamenu-item > a,
 .Megamenu--default .Megamenu-subnavGroup > li > a {
-  @extend .u-linkClean;
+  @extend .u-textClean;
   @extend .u-posRelative;
   @extend .u-textWeight-600;
 }
 
 .Megamenu--default .Megamenu-subnavGroup > li > a {
-  @extend .u-color-80;
+  @extend .u-color-95;
   @extend .u-text-r-s;
   @extend .u-textUppercase;
   @extend .u-textWeight-700;
@@ -135,9 +135,9 @@
   @extend .u-posAbsolute;
   @extend .Icon;
 
-  bottom: 40%;
+  bottom: 35%;
   content: "\23f6";
-  right: 1em;
+  right: 0.5em;
 }
 
 .Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after {
@@ -201,13 +201,13 @@
 .Megamenu--default .Megamenu-subnavGroup > li > ul > li a {
   @extend .u-text-r-xs;
   @extend .u-color-grey-80;
-  @extend .u-linkClean;
+  @extend .u-textClean;
 }
 
 .Megamenu--default .Megamenu-subnavGroup > li > ul > li > ul > li > a {
   @extend .u-text-r-xxs;
   @extend .u-color-grey-80;
-  @extend .u-linkClean;
+  @extend .u-textClean;
 }
 
 .Megamenu--default .Megamenu-subnavGroup > li > ul > li > ul {

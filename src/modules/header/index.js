@@ -4,7 +4,7 @@ import debounce from 'throttle-debounce/throttle'
 
 // Headroom for fixed sticky header
 
-const myElement = document.querySelector('header')
+const myElement = document.querySelector('.js-Headroom')
 
 const opts = {
   // vertical offset in px before element is first unpinned

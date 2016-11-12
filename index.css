@@ -65,8 +65,8 @@
 @import "src/legacy";
 
 @custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 992px);
-@custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1440px);
-@custom-media --lg-viewport screen and (min-width: 1440px);
+@custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1366px);
+@custom-media --lg-viewport screen and (min-width: 1366px);
 
 /*
  *  System font stack see https://github.com/twbs/bootstrap/pull/19098/files

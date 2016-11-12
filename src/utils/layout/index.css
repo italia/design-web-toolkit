@@ -122,3 +122,25 @@
   @extend .u-flex;
   @extend .u-flexAlignSelfStretch;
 }
+
+.u-columns-2 {
+  columns: 2 !important;
+}
+
+.u-sm-columns-2 {
+  @media (--sm-viewport) {
+    columns: 2 !important;
+  }
+}
+
+.u-md-columns-2 {
+  @media (--md-viewport) {
+    columns: 2 !important;
+  }
+}
+
+.u-lg-columns-2 {
+  @media (--lg-viewport) {
+    columns: 2 !important;
+  }
+}

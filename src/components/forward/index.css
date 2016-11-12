@@ -9,6 +9,8 @@
   @extend .u-linkClean;
   @extend .u-text-r-xxl;
   @extend .u-textCenter;
+
+  color: var(--Forward-color);
 }
 
 .Forward--floating {
@@ -26,7 +28,6 @@
 }
 
 .Forward span {
-  color: var(--Forward-color);
-  opacity: 0.8;
+  opacity: 0.9;
   width: var(--Forward-width: 3em);
 }

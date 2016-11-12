@@ -2,6 +2,8 @@
 
 .Header {
   @extend .u-layout-centerContent;
+
+  width: 100%;
 }
 
 .Header a:focus {
@@ -17,8 +19,8 @@
   @extend .u-posRelative;
   @extend .u-color-60;
   @extend .u-border-bottom-xxs;
-  @extend .u-padding-top-xxs;
-  @extend .u-padding-bottom-xxs;
+  @extend .u-padding-top-xs;
+  @extend .u-padding-bottom-xs;
   @extend .u-padding-left-s;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-padding-top-xs;
@@ -52,7 +54,7 @@
   @extend .u-background-50;
 
   @extend .u-padding-top-s;
-  @extend .u-padding-bottom-xxs;
+  @extend .u-padding-bottom-s;
   @extend .u-padding-right-xs;
   @extend .u-padding-left-xs;
 
@@ -258,6 +260,8 @@
   ================================================ */
 
 .Header-languages {
+  @extend .u-flex;
+  @extend .u-flexAlignItemsStretch;
   @extend .u-posAbsolute;
 
   height: 100%;
@@ -266,17 +270,21 @@
 }
 
 .Header-language {
+  @extend .u-flex;
+  @extend .u-flexCol;
+  @extend .u-flexJustifyCenter;
+  @extend .u-flexAlignSelfStretch;
+  @extend .u-floatLeft;
   @extend .u-alignMiddle;
-  @extend .u-inlineBlock;
   @extend .u-color-white;
   @extend .u-text-r-xs;
   @extend .u-textWeight-600;
   @extend .u-padding-left-s;
   @extend .u-padding-right-s;
   @extend .u-textClean;
+  @extend .u-lineHeight-l;
 
   height: 100%;
-  line-height: 2em;
 }
 
 .Header-language:hover {
@@ -326,11 +334,6 @@
  * Headroom.js for sticky header
  * =============================
  */
-
-.Headroom {
-  max-height: 100em;
-  width: 100%;
-}
 
 .Headroom--fixed,
 .Headroom--pinned {
