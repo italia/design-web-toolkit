@@ -11,8 +11,8 @@
         <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
         <a class="Header-language" href="" title="sito in inglese">ENG</a>
 
-        <a href="#other-languages" data-menu-trigger="other-languages" class="Header-language">...</a>
-        <div id="other-languages" data-menu class="Dropdown-menu u-zindex-max u-background-grey-10 u-margin-top-xl u-borderShadow-xxl">
+        <button data-menu-trigger="other-languages" class="Header-language Button u-border-none u-zindex-max">...</button>
+        <div id="other-languages" data-menu class="Dropdown-menu Header-language-other u-jsDisplayNone u-nojsDisplayNone">
           <ul class="Linklist">
             <li><a href="#1" class="u-padding-r-all">Arabic عربي</a></li>
             <li><a href="#2" class="u-padding-r-all">Chinese 中文网</a></li>
@@ -60,7 +60,7 @@
       <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search"
         title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
       </button>
-      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hiddenVisually"
+      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden"
         title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
       </button>
     </div>

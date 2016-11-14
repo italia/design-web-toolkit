@@ -144,10 +144,3 @@ a:focus {
 a:hover {
   text-decoration: underline !important;
 }
-
-:target::before {
-  content: "";
-  display: block;
-  height: 3em;
-  margin: -3em 0 0;
-}

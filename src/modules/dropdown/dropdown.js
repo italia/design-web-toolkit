@@ -208,7 +208,13 @@ class Menutrigger {
           e.preventDefault()
           self.menu.toggle(this, true)
         })
-    } else if (this.$element.is('input')) {
+    } else if (this.$element.is('button')) {
+      this.$element
+        .bind('click', function(e) {
+          e.preventDefault()
+          self.menu.toggle(this, true)
+        })
+    } else if (this.$element.is('input')) {      
       this.$element
         .bind('input keyup', function() {
           if (this.value === '') {

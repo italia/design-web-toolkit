@@ -7,7 +7,7 @@
 
 .Megamenu-list {
   @extend .u-flex;
-  @extend .u-flexJustifyCenter;
+  @extend .u-flexJustifyStart;
   @extend .u-flexAlignContentCenter;
   @extend .u-posRelative;
   @extend .u-zindex-40;
@@ -215,12 +215,19 @@
   @extend .u-margin-bottom-xs;
 }
 
+/*
+ *  1. does not work in IE(11)
+ */
+
 .Megamenu--default .Megamenu-area {
   @extend .u-flex;
   @extend .u-padding-r-right;
   @extend .u-padding-r-left;
 
-  margin-left: auto;
+  /* [1] margin-left: auto; */
+
+  position: absolute;
+  right: 0;
 }
 
 .Megamenu--default .Megamenu-area > * {
@@ -229,4 +236,14 @@
   @extend .u-margin-top-xs;
   @extend .u-margin-bottom-xs;
   @extend .u-flexJustifyCenter;
+}
+
+.Megamenu--default .Megamenu-close {
+  @extend .u-posAbsolute;
+  @extend .u-text-r-m;
+
+  cursor: pointer;
+  opacity: 0.7;
+  right: 2em;
+  top: 2em;
 }

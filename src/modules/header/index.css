@@ -188,11 +188,10 @@
   @extend .u-sm-hidden;
   @extend .u-md-hidden;
   @extend .u-lg-hidden;
-  @extend .u-textRight;
+  @extend .u-textCenter;
 }
 
 .Header-searchTrigger button {
-  @extend .u-inlineBlock;
   @extend .u-linkClean;
   @extend .u-background-40;
   @extend .u-color-white;
@@ -293,6 +292,16 @@
 
 .Header-language.is-active {
   @extend .u-background-80;
+}
+
+.Header-language-other {
+  @extend .u-zindex-max;
+  @extend .u-background-grey-10;
+  @extend .u-margin-top-xl;
+  @extend .u-borderShadow-xxl;
+
+  right: 0;
+  width: 150%;
 }
 
 /* Social icons / link

@@ -121,10 +121,10 @@ $('.js-Header-search-trigger').click((e) => {
     const $el = $(el)
     if ('true' === $el.attr('aria-hidden')) {
       $el.attr('aria-hidden', 'false')
-      $el.removeClass('u-hiddenVisually')
+      $el.removeClass('u-hidden')
     } else {
       $el.attr('aria-hidden', 'true')
-      $el.addClass('u-hiddenVisually')
+      $el.addClass('u-hidden')
     }
   })
   $('#' + $(e.target).attr('aria-controls')).toggleClass('is-active')

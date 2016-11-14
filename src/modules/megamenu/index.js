@@ -5,6 +5,12 @@ import Megamenu from './megamenu'
 $('.js-megamenu').addClass('is-ready')
 
 const opts = {
+  /* add a close button to every subnav */
+  addCloseButton: true,
+
+  closeButtonTemplate: `<button title="chiudi il menu" class="Megamenu-close">
+    <span class="Icon Icon-close"></span><span class="u-hiddenVisually">chiudi</span></button>`,
+
   /* if false open menu on hover */
   openOnClick: true,
 
@@ -80,8 +86,19 @@ $(document).ready(function() {
     const rel = $(el).data('rel')
     if ($el.find('ul').length === 0 && rel && $(rel).length > 0) {
       let $menu = listToMegaMenu($(rel), opts)
+
+      if (opts.addCloseButton) {
+        $(opts.closeButtonTemplate)
+          .appendTo($menu.find('.' + opts.panelClass))
+          .on('click', () => {
+            /* @FIXME: handle menu hiding */
+            $('input').focus()
+          })
+      }
+
       $el.append($menu)
-        // @FIXME: make space for javascript rendered megamenu
+
+      // @FIXME: make space for javascript rendered megamenu
       if ($('header').css('position') === 'fixed') {
         $('body').css({
           paddingTop: '+=' + $el.height() + 'px'
