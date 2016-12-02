@@ -4,7 +4,8 @@
     "site": {
       "name": "Nome della Pubblica Amministrazione",
       "subtitle": "eventuale sottotitolo",
-      "owner": "Nome amministrazione afferente"
+      "owner": "Nome amministrazione afferente",
+      "logo": "//placehold.it/75x80"
     }
   },
   "variants": [{

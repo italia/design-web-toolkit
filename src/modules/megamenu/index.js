@@ -68,7 +68,7 @@ const listToMegaMenu = ($ul, _opts) => {
         .end()
         .find('a')
         // make item tabbable, this is required !
-        .attr('href', '#')
+        // .attr('href', '#')
         .end()
         .find('> ul > li')
         .unwrap()
