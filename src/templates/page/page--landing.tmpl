@@ -1,7 +1,8 @@
-{% render '@header' %}
+{% render '@header', { menu: true, megamenu: false, isFixed: true }, true %}
+{% render '@offcanvas', { showOpenButton: false }, true %}
 
 <div id="main">
-  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-top-s">
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-r-top">
       {% render '@breadcrumb' %}
   </div>
 

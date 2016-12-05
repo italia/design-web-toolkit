@@ -2,6 +2,6 @@
   "title": "Offcanvas",
   "context": {
     "showOpenButton": true,
-    "treeview": "modules/treeview/treeview.tmpl"
+    "treeview": "treeview"
   }
 }

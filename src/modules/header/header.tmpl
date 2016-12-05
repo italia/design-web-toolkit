@@ -1,6 +1,6 @@
 {% render '@skiplinks' %}
 
-<header class="Header Headroom--fixed_ js-Headroom_">
+<header class="Header {% if isFixed %}Headroom--fixed js-Headroom{% endif %}">
 
   <div class="Header-banner Headroom-hideme">
     <p class="Header-owner">
@@ -11,7 +11,9 @@
         <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
         <a class="Header-language" href="" title="sito in inglese">ENG</a>
 
-        <button data-menu-trigger="other-languages" class="Header-language Button u-border-none u-zindex-max">...</button>
+        <button data-menu-trigger="other-languages" class="Header-language Button u-border-none u-zindex-max">
+          <span class="u-hiddenVisually">altre lingue</span>...
+        </button>
         <div id="other-languages" data-menu class="Dropdown-menu Header-language-other u-jsDisplayNone u-nojsDisplayNone">
           <ul class="Linklist">
             <li><a href="#1" class="u-padding-r-all">Arabic عربي</a></li>
@@ -34,7 +36,7 @@
   <div class="Header-navbar Grid Grid--alignMiddle">
 
     <div class="Header-toggle Grid-cell">
-      <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-lg-hidden u-md-hidden" href="#menu"
+      <a class="Hamburger-toggleContainer js-fr-offcanvas-open  {% if hideOnDesktop %}u-lg-hidden u-md-hidden{% endif %}" href="#menu"
         aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
         <span class="Hamburger-toggle" role="presentation"></span>
         <span class="Header-toggleText" role="presentation">Menu</span>
@@ -100,5 +102,3 @@
   {% endif %}
 
 </header>
-
-{% render '@offcanvas', { type: "comuni", showOpenButton: false } %}

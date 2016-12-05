@@ -1,4 +1,5 @@
-{% render '@header' %}
+{% render '@header', {isFixed: true}, true %}
+{% render '@offcanvas', { showOpenButton: false }, true %}
 
 <div id="main">
   {% render '@layout--section' %}

@@ -1,5 +1,9 @@
 {% render '@cookiebar' %}
-{% render '@header', { menu: true, megamenu: true, clone: true, site: {logo: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRrzMrVKqtCMZtaiHO0g43UzWSqa_PjLchmfB9N26HOs59xihV0XQ', name: 'Comune di Riomaggiore', subtitle: '', owner: 'Regione Liguria'} }, true %}
+
+{% render '@header', { hideOnDesktop: true, menu: true, megamenu: true, clone: true, site:
+  {name: 'Nome del comune', subtitle: '', owner: 'Nome Regione'} }, true %}
+
+{% render '@offcanvas', { treeview: 'treeview--comuni', showOpenButton: false }, true %}
 
 <div id="main">
 

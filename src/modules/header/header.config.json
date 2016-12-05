@@ -8,6 +8,8 @@
       "logo": "//placehold.it/75x80"
     }
   },
+  "isFixed": true,
+  "hideOnDesktop": false,
   "variants": [{
     "name": "default",
     "context": {
