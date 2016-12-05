@@ -5,20 +5,32 @@
   --Megamenu-arrow-width: 0.5em;
 }
 
+/*
+ *  1. IE hack
+ */
+
 .Megamenu-list {
+  @extend .u-block; /* 1 */
   @extend .u-flex;
   @extend .u-flexJustifyStart;
   @extend .u-flexAlignContentCenter;
   @extend .u-posRelative;
   @extend .u-zindex-40;
   @extend .u-alignMiddle;
+  @extend .u-textLeft;
 }
 
 /* a top level navigation item in the mega menu */
 
+/*
+ *  1. IE hack
+ */
+
 .Megamenu-item {
+  @extend .u-inlineBlock; /* 1 */
   @extend .u-flex;
   @extend .u-sizeFit;
+  @extend .u-alignBottom;
 }
 
 .Megamenu-item > a:hover,
@@ -29,6 +41,8 @@
 /* first descendant link within a top level navigation item */
 
 .Megamenu-item > a {
+  @extend .u-alignBottom;
+  @extend .u-inlineBlock;
   @extend .u-flex;
   @extend .u-flexCol;
   @extend .u-flexJustifyCenter;
@@ -177,6 +191,7 @@
 .Megamenu--default .Megamenu-subnavGroup {
   @extend .u-textLeft;
   @extend .u-color-grey-40;
+  @extend .u-floatLeft;
 }
 
 .Megamenu--default .Megamenu-subnavGroup:last-child {
@@ -223,11 +238,12 @@
   @extend .u-flex;
   @extend .u-padding-r-right;
   @extend .u-padding-r-left;
+  @extend .u-posAbsolute;
 
   /* [1] margin-left: auto; */
 
-  position: absolute;
   right: 0;
+  top: 0;
 }
 
 .Megamenu--default .Megamenu-area > * {
