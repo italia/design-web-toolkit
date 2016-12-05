@@ -2,13 +2,11 @@
 
 /*
  *  1.About 3 x Header size
- *    --Hero-background-img: url("http://gotravelaz.com/wp-content/uploads/images/Riomaggiore_25181.jpg");
  */
 
 :root {
   --Hero-height: 30em; /* 1 */
-  --xHero-background-img: url("//placehold.it/2000x500?text=placeholder");
-  --Hero-background-img: url("http://gotravelaz.com/wp-content/uploads/images/Riomaggiore_25181.jpg");
+  --Hero-background-img: url("//placehold.it/2000x500?text=placeholder");
 }
 
 .Hero {
