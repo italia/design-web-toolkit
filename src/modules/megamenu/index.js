@@ -8,7 +8,9 @@ const opts = {
   /* add a close button to every subnav */
   addCloseButton: true,
 
-  closeButtonTemplate: `<button title="chiudi il menu" class="Megamenu-close">
+  closeButtonClass: 'js-Megamenu-close',
+
+  closeButtonTemplate: `<button title="chiudi il menu" class="Megamenu-close js-Megamenu-close">
     <span class="Icon Icon-close"></span><span class="u-hiddenVisually">chiudi</span></button>`,
 
   /* if false open menu on hover */
@@ -84,20 +86,10 @@ $(document).ready(function() {
   $('.js-megamenu').each((i, el) => {
     const $el = $(el)
     const rel = $(el).data('rel')
+
     if ($el.find('ul').length === 0 && rel && $(rel).length > 0) {
       let $menu = listToMegaMenu($(rel), opts)
-
-      if (opts.addCloseButton) {
-        $(opts.closeButtonTemplate)
-          .appendTo($menu.find('.' + opts.panelClass))
-          .on('click', () => {
-            /* @FIXME: handle menu hiding */
-            $('input').focus()
-          })
-      }
-
       $el.append($menu)
-
       // @FIXME: make space for javascript rendered megamenu
       if ($('header').css('position') === 'fixed') {
         $('body').css({
@@ -105,7 +97,18 @@ $(document).ready(function() {
         })
       }
     }
+
     $el.accessibleMegaMenu(opts)
+
+    if (opts.addCloseButton) {
+      $(opts.closeButtonTemplate).appendTo($('.' + opts.panelClass))
+    }
+
+    $('.' + opts.closeButtonClass).on('click', function() {
+      $('input').focus()
+      setTimeout( () => $('input').blur(), 0)
+    })    
+
   })
 })
 

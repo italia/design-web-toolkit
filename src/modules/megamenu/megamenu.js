@@ -209,6 +209,8 @@ limitations under the License.
         panel = target.hasClass(settings.panelClass) ? target : target.closest('.' + settings.panelClass),
         newfocus
 
+        console.log(event, target, hide, event.keyCode)
+
       _toggleExpandedEventHandlers.call(this, true)
 
       if (hide) {
