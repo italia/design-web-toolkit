@@ -10,27 +10,14 @@
   background: transparent;
 }
 
-/*
- *  1. See .Header-titleLink
- */
-
 .Header-banner {
+  @extend .u-cf;
+  @extend .u-sizeFull;
   @extend .u-background-95;
-  @extend .u-posRelative;
   @extend .u-color-60;
-  @extend .u-border-bottom-xxs;
-  @extend .u-padding-top-xs;
-  @extend .u-padding-bottom-xs;
   @extend .u-padding-left-s;
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-padding-top-xs;
-    @extend .u-padding-bottom-xs;
-  }
   @media (--sm-viewport) {
     @extend .u-padding-left-none;
-  }
-  @media (--md-viewport) {
-    @extend .u-padding-left-s; /* 1 */
   }
   @media (--lg-viewport) {
     padding-left: calc((1 / 8 + 1 / 12) * 100%) !important;
@@ -38,14 +25,14 @@
 }
 
 .Header-owner > a {
+  @extend .u-floatLeft;
   @extend .u-sm-before4of12;
   @extend .u-md-before3of12;
-  @extend .u-text-xxs;
-  @extend .u-text-sm-xxs;
-  @extend .u-text-md-xs;
-  @extend .u-text-lg-xs;
+  @extend .u-text-r-xxs;
   @extend .u-color-white;
   @extend .u-textClean;
+  @extend .u-padding-r-top;
+  @extend .u-padding-r-bottom;
 }
 
 /* ========================================== */
@@ -250,40 +237,26 @@
 
 .Header-search.is-active {
   @extend .u-block;
-  @extend .u-background-40;
   @extend .u-margin-top-xs;
-  @extend .u-padding-all-xxs;
 }
 
 /* Lanaguage bar
   ================================================ */
 
 .Header-languages {
-  @extend .u-flex;
-  @extend .u-flexAlignItemsStretch;
-  @extend .u-posAbsolute;
-
-  height: 100%;
-  right: 0;
-  top: 0;
+  @extend .u-background-95;
+  @extend .u-floatRight;
 }
 
 .Header-language {
-  @extend .u-flex;
-  @extend .u-flexCol;
-  @extend .u-flexJustifyCenter;
-  @extend .u-flexAlignSelfStretch;
-  @extend .u-floatLeft;
-  @extend .u-alignMiddle;
   @extend .u-color-white;
-  @extend .u-text-r-xs;
+  @extend .u-text-r-xxs;
   @extend .u-textWeight-600;
   @extend .u-padding-left-s;
   @extend .u-padding-right-s;
-  @extend .u-textClean;
-  @extend .u-lineHeight-l;
-
-  height: 100%;
+  @extend .u-padding-r-top;
+  @extend .u-padding-r-bottom;
+  @extend .u-linkClean;
 }
 
 .Header-language:hover {
@@ -297,11 +270,10 @@
 .Header-language-other {
   @extend .u-zindex-max;
   @extend .u-background-grey-10;
-  @extend .u-margin-top-xl;
   @extend .u-borderShadow-xxl;
 
   right: 0;
-  width: 150%;
+  top: 0;
 }
 
 /* Social icons / link

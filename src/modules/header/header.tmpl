@@ -3,32 +3,31 @@
 <header class="Header {% if isFixed %}Headroom--fixed js-Headroom{% endif %}">
 
   <div class="Header-banner Headroom-hideme">
-    <p class="Header-owner">
+    <div class="Header-owner">
       <a href="">{{ site.owner }}</a>
-    </p>
-    <div class="Header-languages Headroom-hideme">
-      <div>
-        <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
-        <a class="Header-language" href="" title="sito in inglese">ENG</a>
-
-        <button data-menu-trigger="other-languages" class="Header-language Button u-border-none u-zindex-max">
-          <span class="u-hiddenVisually">altre lingue</span>...
-        </button>
-        <div id="other-languages" data-menu class="Dropdown-menu Header-language-other u-jsDisplayNone u-nojsDisplayNone">
-          <ul class="Linklist">
-            <li><a href="#1" class="u-padding-r-all">Arabic عربي</a></li>
-            <li><a href="#2" class="u-padding-r-all">Chinese 中文网</a></li>
-            <li><a href="#3" class="u-padding-r-all">Deutsch</a></li>
-            <li><a href="#4" class="u-padding-r-all">French</a></li>
-            <li><a href="#5" class="u-padding-r-all">Japanese 日本語</a></li>
-            <li><a href="#6" class="u-padding-r-all">Portuguese</a></li>
-            <li><a href="#7" class="u-padding-r-all">Russian НА РУССКОМ</a></li>
-            <li><a href="#8" class="u-padding-r-all">Spanish</a></li>
-            <li><a href="#9" class="u-padding-r-all">Turkish TÜRKÇE</a></li>
-            <li><a href="#10" class="u-padding-r-all">Ukrainian УКРАЇНСЬКA</a></li>
-          </ul>
-        </div>
-
+      <div class="Header-languages Headroom-hideme">
+          <a class="Header-language is-active u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="sito in italiano">ITA</a>
+          <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="sito in inglese">ENG</a>
+          <button data-menu-trigger="other-languages" class="Header-language u-border-none u-zindex-max is-active">
+            <span class="u-hiddenVisually">lingua attiva:</span>
+            <span class="u-md-hidden u-lg-hidden">ITA</span>
+            <span class="Icon Icon-expand u-padding-left-xs u-md-hidden u-lg-hidden"></span>
+            <span class="Icon Icon-more-actions u-padding-left-xs u-hidden u-md-inlineBlock u-lg-inlineBlock"></span>
+          </button>
+          <div id="other-languages" data-menu class="Dropdown-menu Header-language-other u-jsDisplayNone u-nojsDisplayNone">
+            <ul class="Linklist">
+              <li><a href="#1" class="u-padding-r-all">Arabic عربي</a></li>
+              <li><a href="#2" class="u-padding-r-all">Chinese 中文网</a></li>
+              <li><a href="#3" class="u-padding-r-all">Deutsch</a></li>
+              <li><a href="#4" class="u-padding-r-all">French</a></li>
+              <li><a href="#5" class="u-padding-r-all">Japanese 日本語</a></li>
+              <li><a href="#6" class="u-padding-r-all">Portuguese</a></li>
+              <li><a href="#7" class="u-padding-r-all">Russian НА РУССКОМ</a></li>
+              <li><a href="#8" class="u-padding-r-all">Spanish</a></li>
+              <li><a href="#9" class="u-padding-r-all">Turkish TÜRKÇE</a></li>
+              <li><a href="#10" class="u-padding-r-all">Ukrainian УКРАЇНСЬКA</a></li>
+            </ul>
+          </div>
       </div>
     </div>
   </div>
