@@ -5,6 +5,14 @@ import Megamenu from './megamenu'
 $('.js-megamenu').addClass('is-ready')
 
 const opts = {
+  /* add a close button to every subnav */
+  addCloseButton: true,
+
+  closeButtonClass: 'js-Megamenu-close',
+
+  closeButtonTemplate: `<button title="chiudi il menu" class="Megamenu-close js-Megamenu-close">
+    <span class="Icon Icon-close"></span><span class="u-hiddenVisually">chiudi</span></button>`,
+
   /* if false open menu on hover */
   openOnClick: true,
 
@@ -51,10 +59,18 @@ const listToMegaMenu = ($ul, _opts) => {
     .find('> li')
     .each(function(i, li) {
       $(li)
-        .addClass(_opts.topNavItemClass)
+        .addClass(function() {
+          let className = $(this).data('megamenu-class')
+          return className ? className : _opts.topNavItemClass
+        })
+        .find('[data-megamenu-class]')
+        .addClass(function() {
+          return $(this).data('megamenu-class')
+        })
+        .end()
         .find('a')
         // make item tabbable, this is required !
-        .attr('href', '#')
+        // .attr('href', '#')
         .end()
         .find('> ul > li')
         .unwrap()
@@ -70,17 +86,29 @@ $(document).ready(function() {
   $('.js-megamenu').each((i, el) => {
     const $el = $(el)
     const rel = $(el).data('rel')
+
     if ($el.find('ul').length === 0 && rel && $(rel).length > 0) {
       let $menu = listToMegaMenu($(rel), opts)
       $el.append($menu)
-        // @FIXME: make space for javascript rendered megamenu
+      // @FIXME: make space for javascript rendered megamenu
       if ($('header').css('position') === 'fixed') {
         $('body').css({
           paddingTop: '+=' + $el.height() + 'px'
         })
       }
     }
+
     $el.accessibleMegaMenu(opts)
+
+    if (opts.addCloseButton) {
+      $(opts.closeButtonTemplate).appendTo($('.' + opts.panelClass))
+    }
+
+    $('.' + opts.closeButtonClass).on('click', function() {
+      $('input').focus()
+      setTimeout( () => $('input').blur(), 0)
+    })    
+
   })
 })
 

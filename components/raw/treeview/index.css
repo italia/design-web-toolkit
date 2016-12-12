@@ -47,6 +47,6 @@
 
 .Treeview--default ul a,
 .Treeview--default ul a:hover {
-  @extend .u-color-90;
+  @extend .u-color-95;
   @extend .u-background-5;
 }

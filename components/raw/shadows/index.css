@@ -16,6 +16,10 @@
   box-shadow: 1px 1px 80px 1px rgba(0, 0, 0, 0.35) !important;
 }
 
+.u-bottomShadow-xxl {
+  box-shadow: 1px 80px 80px -80px rgba(0, 0, 0, 0.85) !important;
+}
+
 .u-hasScrollHint::after {
   background: linear-gradient(to left, currentColor, rgba(0, 0, 0, 0));
   position: absolute;

@@ -5,3 +5,7 @@
 .Dropdown-menu[aria-hidden=true] {
   display: none;
 }
+
+.Dropdown-menu[aria-hidden=false] {
+  display: block;
+}

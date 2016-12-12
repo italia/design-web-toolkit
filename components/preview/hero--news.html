@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
+<!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="it">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
+      <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
+    o dal repository locale (src/fonts)
+  -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: {
+        families: ['Titillium+Web:400,600,700,400italic:latin']
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- include html5shim per Explorer 8 -->
+  <script src="../../build/vendor/modernizr.js"></script>
+
+  <link media="screen" rel="stylesheet" href="../../build/vendor.css">
+  <link media="screen" rel="stylesheet" href="../../build/build.css">
+
+  <script src="../../build/vendor/jquery.min.js"></script>
+
+  <title>Preview Layout</title>
+</head>
+
+<body class="t-Pac">
+
+  <section>
+  <div class="Hero">
+    <div class="Hero-content">
+      <p class="u-padding-r-bottom u-padding-r-top u-text-r-xs">
+        <a href="#" class="u-textClean u-color-60 u-text-h4"><span class="Dot u-background-60"></span>news</a>
+      </p>
+      <h2 class="u-text-h2"><a href="#" class="u-color-95 u-textClean">eveniet corrupti dicta</a></h2>
+      <p class="u-padding-r-bottom u-padding-r-top u-text-p u-margin-r-bottom">Quos et sapiente sit eos earum optio in doloremque. Ad aut unde iusto nihil illo. Saepe mollitia amet omnis et qui. Veritatis quasi asperiores nihil.</p>
+      <a href="#news" class="js-scrollTo u-linkClean Button Button--info u-text-r-xs">notizie ed eventi
+        <span class="u-padding-r-left Icon Icon-expand"></span></a>
+    </div>
+    <a href="#servizi" class="Forward Forward--absolute js-scrollTo is-clean" aria-hidden="true">
+      <span class="Icon Icon-expand"></span>
+    </a>
+  </div>
+</section>
+
+
+  <!--[if IE 8]>
+  <script src="../../build/vendor/respond.min.js"></script>
+  <script src="../../build/vendor/rem.min.js"></script>
+  <script src="../../build/vendor/selectivizr.js"></script>
+  <script src="../../build/vendor/slice.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <script src="../../build/vendor/polyfill.min.js"></script>
+  <![endif]-->
+
+  <!-- In produzione utilizzare <script src="/build/IWT.min.js"></script> -->
+  <script src="../../build/IWT.js"></script>
+
+</body>
+</html>
+
