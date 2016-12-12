@@ -2,10 +2,10 @@
 
 <header class="Header {% if isFixed %}Headroom--fixed js-Headroom{% endif %}">
 
-  <div class="Header-banner Headroom-hideme">
-    <div class="Header-owner">
+  <div class="Header-banner">
+    <div class="Header-owner Headroom-hideme">
       <a href="">{{ site.owner }}</a>
-      <div class="Header-languages Headroom-hideme">
+      <div class="Header-languages">
           <a class="Header-language is-active u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="sito in italiano">ITA</a>
           <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="sito in inglese">ENG</a>
           <button data-menu-trigger="other-languages" class="Header-language u-border-none u-zindex-max is-active">
@@ -91,9 +91,15 @@
     {% else %}
       <nav class="Megamenu Megamenu--default">
         <ul class="Megamenu-list">
-          <li class="Megamenu-item"><a href="">{{ __WORDS__[1] | capitalize }}</a></li>
-          <li class="Megamenu-item"><a href="">{{ __WORDS__[2] | capitalize  }}</a></li>
-          <li class="Megamenu-item"><a href="">{{ __WORDS__[3] | capitalize  }}</a></li>
+          {% if menuItems %}
+            {% for item in menuItems %}
+              <li class="Megamenu-item"><a href="">{{ item }}</a></li>
+            {% endfor %}
+          {% else %}
+            <li class="Megamenu-item"><a href="">{{ __WORDS__[1] | capitalize }}</a></li>
+            <li class="Megamenu-item"><a href="">{{ __WORDS__[2] | capitalize  }}</a></li>
+            <li class="Megamenu-item"><a href="">{{ __WORDS__[3] | capitalize  }}</a></li>
+          {% endif %}
         </ul>
       </nav>
     {% endif %}

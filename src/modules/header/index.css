@@ -29,6 +29,7 @@
   @extend .u-sm-before4of12;
   @extend .u-md-before3of12;
   @extend .u-text-r-xxs;
+  @extend .u-textWeight-600;
   @extend .u-color-white;
   @extend .u-textClean;
   @extend .u-padding-r-top;
@@ -62,6 +63,8 @@
     @extend .u-padding-right-xxl;
     @extend .u-padding-bottom-s;
   }
+
+  width: 100%;
 }
 
 /* Burger button
