@@ -7989,14 +7989,26 @@ option:hover {
 
 /** @define Spid; weak */
 
+/*
+ * 1. mandatory font-family
+ */
+
+:root { /* [1] */
+}
+
 .Spid-button {
 
   background-color: #06c;
+  font-family: "Titillium Web";
   text-transform: none !important;
 }
 
 .Spid-button:hover {
   background-color: rgb(0, 64, 128);
+}
+
+.Spid-button:focus {
+  background-color: #06c;
 }
 
 .Spid-button > span {
@@ -8009,6 +8021,10 @@ option:hover {
   color: rgb(18, 122, 226);
   height: 2.5em;
   width: 3em;
+}
+
+.Spid-button:hover > img {
+  color: rgb(12, 82, 151);
 }
 
 .Spid-menu {
