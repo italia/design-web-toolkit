@@ -19,7 +19,7 @@
     "throttle-debounce": "^1.0.1"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.0.8",
+    "@frctl/fractal": "^1.0.11",
     "@frctl/mandelbrot": "^1.0.7",
     "@frctl/nunjucks": "^1.0.1",
     "babel": "^6.5.2",
