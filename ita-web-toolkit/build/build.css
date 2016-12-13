@@ -5014,7 +5014,7 @@ ol, ul {
   color: rgb(51, 51, 51) !important;
 }
 
-.u-background-90, .Linklist-link.Linklist-link--lev1, .Linklist-link.Linklist-link--lev1:hover {
+.u-background-90, .Header-banner, .Linklist-link.Linklist-link--lev1, .Linklist-link.Linklist-link--lev1:hover {
   background-color: rgb(51, 51, 51) !important;
 }
 
@@ -5022,7 +5022,7 @@ ol, ul {
   color: rgb(38, 38, 38) !important;
 }
 
-.u-background-95, .Header-banner, .Header-languages, .ScrollTop {
+.u-background-95, .Header-languages, .ScrollTop {
   background-color: rgb(38, 38, 38) !important;
 }
 
@@ -7319,21 +7319,15 @@ option:hover {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-
-  .Header-navbar { 	padding-top: 1.6rem !important; 	padding-bottom: 1.6rem !important; 	padding-right: 0.8rem !important;
-  }
-  }
-
 @media screen and (min-width: 992px) and (max-width: 1366px) {
 
-  .Header-navbar { 	padding-top: 1.6rem !important; 	padding-right: 2.4rem !important; 	padding-bottom: 1.6rem !important;
+  .Header-navbar { 	padding-right: 2.4rem !important;
   }
   }
 
 @media screen and (min-width: 1366px) {
 
-  .Header-navbar { 	padding-top: 1.6rem !important; 	padding-right: 4rem !important; 	padding-bottom: 1.6rem !important;
+  .Header-navbar { 	padding-right: 4rem !important;
   }
   }
 
