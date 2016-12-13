@@ -13,7 +13,7 @@
 .Header-banner {
   @extend .u-cf;
   @extend .u-sizeFull;
-  @extend .u-background-95;
+  @extend .u-background-90;
   @extend .u-color-60;
   @extend .u-padding-left-s;
   @media (--sm-viewport) {
@@ -46,22 +46,12 @@
   @extend .u-padding-right-xs;
   @extend .u-padding-left-xs;
 
-  @media (--sm-viewport) {
-    @extend .u-padding-top-s;
-    @extend .u-padding-bottom-s;
-    @extend .u-padding-right-xs;
-  }
-
   @media (--md-viewport) {
-    @extend .u-padding-top-s;
     @extend .u-padding-right-l;
-    @extend .u-padding-bottom-s;
   }
 
   @media (--lg-viewport) {
-    @extend .u-padding-top-s;
     @extend .u-padding-right-xxl;
-    @extend .u-padding-bottom-s;
   }
 
   width: 100%;
