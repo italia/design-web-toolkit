@@ -4642,246 +4642,118 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 20 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;"use strict";
 	
-	/**
-	 * @param {object} options Object containing configuration overrides
-	 */
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
+	!function (e) {
+	  if ("object" == ( false ? "undefined" : _typeof(exports)) && "undefined" != typeof module) module.exports = e();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (e), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {
+	    var t;t = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : this, t.Frdialogmodal = e();
+	  }
+	}(function () {
+	  return function e(t, n, i) {
+	    function o(a, l) {
+	      if (!n[a]) {
+	        if (!t[a]) {
+	          var d = "function" == typeof require && require;if (!l && d) return require(a, !0);if (r) return r(a, !0);var u = new Error("Cannot find module '" + a + "'");throw u.code = "MODULE_NOT_FOUND", u;
+	        }var c = n[a] = { exports: {} };t[a][0].call(c.exports, function (e) {
+	          var n = t[a][1][e];return o(n ? n : e);
+	        }, c, c.exports, e, t, n, i);
+	      }return n[a].exports;
+	    }for (var r = "function" == typeof require && require, a = 0; a < i.length; a++) {
+	      o(i[a]);
+	    }return o;
+	  }({ 1: [function (e, t, n) {
+	      "use strict";
+	      Object.defineProperty(n, "__esModule", { value: !0 });var i = function i() {
+	        function e(e) {
+	          "function" == typeof e && setTimeout(e, 0);
+	        }function t(e) {
+	          var t = N(k, e)[0],
+	              n = O ? "alertdialog" : "dialog";e.setAttribute("aria-hidden", !0), t.setAttribute("role", n);
+	        }function n(e) {
+	          var t = N(k, e)[0];e.removeAttribute("aria-hidden"), t.removeAttribute("role");
+	        }function i(t, n) {
+	          t.setAttribute("aria-hidden", !1), n.setAttribute("tabindex", -1), z = N(B.join(), n), z.length ? z[0].focus() : n.focus(), e(v), e(f), O || e(s), n.scrollTop = 0, t.classList.add(F);
+	        }function o(e) {
+	          var t = arguments.length <= 1 || void 0 === arguments[1] ? !0 : arguments[1],
+	              n = e.parentElement;n.setAttribute("aria-hidden", !0), e.removeAttribute("tabindex"), p(), b(), O || g(), n.classList.remove(F), t && (I.focus(), I = null);
+	        }function r(e) {
+	          var t = z.indexOf(K.activeElement);!e.shiftKey || 0 !== t && -1 !== t ? e.shiftKey || t !== z.length - 1 || (z[0].focus(), e.preventDefault()) : (z[z.length - 1].focus(), e.preventDefault());
+	        }function a(e) {
+	          var t = e.target,
+	              n = K.getElementById(t.getAttribute("aria-controls")),
+	              o = N(k, n)[0];I = t, P = o, i(n, o);
+	        }function l() {
+	          o(P);
+	        }function d(e) {
+	          var t = P.parentElement;e.target === t && o(P);
+	        }function u(e) {
+	          27 === e.keyCode && o(P), 9 === e.keyCode && r(e);
+	        }function c(e) {
+	          var t = e.getAttribute("id"),
+	              n = N(j + '[aria-controls="' + t + '"]');n.forEach(function (e) {
+	            return e.addEventListener("click", a);
+	          });
+	        }function f() {
+	          var e = arguments.length <= 0 || void 0 === arguments[0] ? P : arguments[0],
+	              t = N(S, e)[0];t.addEventListener("click", l);
+	        }function s() {
+	          var e = arguments.length <= 0 || void 0 === arguments[0] ? P : arguments[0],
+	              t = e.parentElement;t.addEventListener("click", d);
+	        }function v() {
+	          K.addEventListener("keydown", u);
+	        }function m(e) {
+	          var t = e.getAttribute("id"),
+	              n = K.querySelectorAll(j + '[aria-controls="' + t + '"]');n.forEach(function (e) {
+	            return e.removeEventListener("click", a);
+	          });
+	        }function b() {
+	          var e = arguments.length <= 0 || void 0 === arguments[0] ? P : arguments[0],
+	              t = N(S, e)[0];t.removeEventListener("click", l);
+	        }function g() {
+	          var e = P.parentElement;e.removeEventListener("click", d);
+	        }function p() {
+	          K.removeEventListener("keydown", u);
+	        }function h() {
+	          U.forEach(function (e) {
+	            var t = N(k, e)[0];t.removeAttribute("tabindex"), n(e), m(e), b(t), g(t), e.classList.remove(_, F);
+	          }), p();
+	        }function y() {
+	          U.length && U.forEach(function (e) {
+	            t(e), c(e), e.classList.add(_);
+	          });
+	        }var E = arguments.length <= 0 || void 0 === arguments[0] ? {} : arguments[0],
+	            A = E.selector,
+	            L = void 0 === A ? ".js-fr-dialogmodal" : A,
+	            x = E.modalSelector,
+	            k = void 0 === x ? ".js-fr-dialogmodal-modal" : x,
+	            w = E.openSelector,
+	            j = void 0 === w ? ".js-fr-dialogmodal-open" : w,
+	            q = E.closeSelector,
+	            S = void 0 === q ? ".js-fr-dialogmodal-close" : q,
+	            C = E.isAlert,
+	            O = void 0 === C ? !1 : C,
+	            D = E.readyClass,
+	            _ = void 0 === D ? "fr-dialogmodal--is-ready" : D,
+	            T = E.activeClass,
+	            F = void 0 === T ? "fr-dialogmodal--is-active" : T,
+	            K = document,
+	            M = K.documentElement,
+	            N = function N(e) {
+	          var t = arguments.length <= 1 || void 0 === arguments[1] ? K : arguments[1];return [].slice.call(t.querySelectorAll(e));
+	        };if ("querySelector" in K && "addEventListener" in window && M.classList) {
+	          var U = N(L),
+	              B = ["a[href]", "area[href]", "input:not([disabled])", "select:not([disabled])", "textarea:not([disabled])", "button:not([disabled])", "iframe", "object", "embed", "[contenteditable]", '[tabindex]:not([tabindex^="-"])'],
+	              I = null,
+	              P = null,
+	              z = null;return y(), { init: y, destroy: h };
+	        }
+	      };n["default"] = i, t.exports = n["default"];
+	    }, {}] }, {}, [1])(1);
 	});
-	var Frdialogmodal = function Frdialogmodal() {
-		var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-		    _ref$selector = _ref.selector,
-		    selector = _ref$selector === undefined ? '.js-fr-dialogmodal' : _ref$selector,
-		    _ref$modalSelector = _ref.modalSelector,
-		    modalSelector = _ref$modalSelector === undefined ? '.js-fr-dialogmodal-modal' : _ref$modalSelector,
-		    _ref$openSelector = _ref.openSelector,
-		    openSelector = _ref$openSelector === undefined ? '.js-fr-dialogmodal-open' : _ref$openSelector,
-		    _ref$closeSelector = _ref.closeSelector,
-		    closeSelector = _ref$closeSelector === undefined ? '.js-fr-dialogmodal-close' : _ref$closeSelector,
-		    _ref$isAlert = _ref.isAlert,
-		    isAlert = _ref$isAlert === undefined ? false : _ref$isAlert,
-		    _ref$readyClass = _ref.readyClass,
-		    readyClass = _ref$readyClass === undefined ? 'fr-dialogmodal--is-ready' : _ref$readyClass,
-		    _ref$activeClass = _ref.activeClass,
-		    activeClass = _ref$activeClass === undefined ? 'fr-dialogmodal--is-active' : _ref$activeClass;
-	
-		// CONSTANTS
-		var doc = document;
-		var docEl = doc.documentElement;
-		var _q = function _q(el) {
-			var ctx = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : doc;
-			return [].slice.call(ctx.querySelectorAll(el));
-		};
-	
-		// SUPPORTS
-		if (!('querySelector' in doc) || !('addEventListener' in window) || !docEl.classList) return;
-	
-		// SETUP
-		// set accordion element NodeLists
-		var containers = _q(selector);
-		var focusableSelectors = ['a[href]', 'area[href]', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])', 'button:not([disabled])', 'iframe', 'object', 'embed', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
-		//	TEMP
-		var currButtonOpen = null;
-		var currModal = null;
-		//	elements within tab
-		var focusableElements = null;
-	
-		//	UTILS
-		function _defer(fn) {
-			//	wrapped in setTimeout to delay binding until previous rendering has completed
-			if (typeof fn === 'function') setTimeout(fn, 0);
-		}
-	
-		//	A11Y
-		function _addA11y(container) {
-			var modal = _q(modalSelector, container)[0];
-			var role = isAlert ? 'alertdialog' : 'dialog';
-			//	add relevant roles and properties
-			container.setAttribute('aria-hidden', true);
-			modal.setAttribute('role', role);
-		}
-		function _removeA11y(container) {
-			var modal = _q(modalSelector, container)[0];
-			//	add relevant roles and properties
-			container.removeAttribute('aria-hidden');
-			modal.removeAttribute('role');
-		}
-	
-		//	ACTIONS
-		function _showModal(container, modal) {
-			//	show container and focus the modal
-			container.setAttribute('aria-hidden', false);
-			modal.setAttribute('tabindex', -1);
-			//	set first/last focusable elements
-			focusableElements = _q(focusableSelectors.join(), modal);
-			//	focus first element if exists, otherwise focus modal element
-			if (focusableElements.length) focusableElements[0].focus();else modal.focus();
-			//	update bound events
-			_defer(_bindDocKey);
-			_defer(_bindClosePointer);
-			//	if contents are not interactive, bind click off
-			if (!isAlert) _defer(_bindContainerPointer);
-			//	reset scroll
-			modal.scrollTop = 0;
-			//	update style hook
-			container.classList.add(activeClass);
-		}
-		function _hideModal(modal) {
-			var returnfocus = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-	
-			//	get container element
-			var container = modal.parentElement;
-			//	show container and focus the modal
-			container.setAttribute('aria-hidden', true);
-			modal.removeAttribute('tabindex');
-			//	update bound events
-			_unbindDocKey();
-			_unbindClosePointer();
-			//	if contents are not interactive, unbind click off
-			if (!isAlert) _unbindContainerPointer();
-			//	update style hook
-			container.classList.remove(activeClass);
-			//	return focus to button that opened the modal and reset the reference
-			if (returnfocus) {
-				currButtonOpen.focus();
-				currButtonOpen = null;
-			}
-		}
-		function _handleTabEvent(e) {
-			//	get the index of the current active element within the modal
-			var focusedIndex = focusableElements.indexOf(doc.activeElement);
-			//	handle TAB event if need to skip
-			//	if first element is focused and shiftkey is in use
-			if (e.shiftKey && (focusedIndex === 0 || focusedIndex === -1)) {
-				//	focus last item within modal
-				focusableElements[focusableElements.length - 1].focus();
-				e.preventDefault();
-				//	if last element is focused and shiftkey is not in use
-			} else if (!e.shiftKey && focusedIndex === focusableElements.length - 1) {
-				//	focus first item within modal
-				focusableElements[0].focus();
-				e.preventDefault();
-			}
-		}
-	
-		//	EVENTS
-		function _eventOpenPointer(e) {
-			//	get related elements
-			var button = e.target;
-			var container = doc.getElementById(button.getAttribute('aria-controls'));
-			var modal = _q(modalSelector, container)[0];
-			//	save element references
-			currButtonOpen = button;
-			currModal = modal;
-			//	show modal
-			_showModal(container, modal);
-		}
-		function _eventClosePointer() {
-			_hideModal(currModal);
-		}
-		function _eventContainerPointer(e) {
-			var container = currModal.parentElement;
-			//	check if target is modal container (but not modal)
-			if (e.target === container) _hideModal(currModal);
-		}
-		function _eventDocKey(e) {
-			//	ESC key
-			if (e.keyCode === 27) _hideModal(currModal);
-			//	TAB key
-			if (e.keyCode === 9) _handleTabEvent(e);
-		}
-	
-		//	BIND EVENTS
-		function _bindOpenPointers(container) {
-			var id = container.getAttribute('id');
-			var buttons = _q(openSelector + '[aria-controls="' + id + '"]');
-			buttons.forEach(function (button) {
-				return button.addEventListener('click', _eventOpenPointer);
-			});
-		}
-		function _bindClosePointer() {
-			var modal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : currModal;
-	
-			var button = _q(closeSelector, modal)[0];
-			button.addEventListener('click', _eventClosePointer);
-		}
-		function _bindContainerPointer() {
-			var modal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : currModal;
-	
-			var container = modal.parentElement;
-			container.addEventListener('click', _eventContainerPointer);
-		}
-		function _bindDocKey() {
-			doc.addEventListener('keydown', _eventDocKey);
-		}
-	
-		//	UNBIND EVENTS
-		function _unbindOpenPointers(container) {
-			var id = container.getAttribute('id');
-			var buttons = doc.querySelectorAll(openSelector + '[aria-controls="' + id + '"]');
-			buttons.forEach(function (button) {
-				return button.removeEventListener('click', _eventOpenPointer);
-			});
-		}
-		function _unbindClosePointer() {
-			var modal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : currModal;
-	
-			var button = _q(closeSelector, modal)[0];
-			button.removeEventListener('click', _eventClosePointer);
-		}
-		function _unbindContainerPointer() {
-			var container = currModal.parentElement;
-			container.removeEventListener('click', _eventContainerPointer);
-		}
-		function _unbindDocKey() {
-			doc.removeEventListener('keydown', _eventDocKey);
-		}
-	
-		//	DESTROY
-		function destroy() {
-			//	loop through available modals
-			containers.forEach(function (container) {
-				var modal = _q(modalSelector, container)[0];
-				modal.removeAttribute('tabindex');
-				_removeA11y(container);
-				_unbindOpenPointers(container);
-				_unbindClosePointer(modal);
-				_unbindContainerPointer(modal);
-				//	remove ready, active style hooks
-				container.classList.remove(readyClass, activeClass);
-			});
-			_unbindDocKey();
-		}
-	
-		//	INIT
-		function init() {
-			//	cancel if no modals found
-			if (!containers.length) return;
-			//	loop through available modals
-			containers.forEach(function (container) {
-				_addA11y(container);
-				_bindOpenPointers(container);
-				// set ready style hook
-				container.classList.add(readyClass);
-			});
-		}
-		init();
-	
-		// REVEAL API
-		return {
-			init: init,
-			destroy: destroy
-		};
-	};
-	
-	// module exports
-	exports['default'] = Frdialogmodal;
-	module.exports = exports['default'];
 
 /***/ },
 /* 21 */
