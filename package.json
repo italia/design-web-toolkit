@@ -1,6 +1,6 @@
 {
   "name": "ita-web-toolkit",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha2",
   "description": "Implementazione di riferimento per le linee guida di design della PA",
   "main": "index.js",
   "dependencies": {
@@ -19,7 +19,7 @@
     "throttle-debounce": "^1.0.1"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.0.8",
+    "@frctl/fractal": "^1.0.11",
     "@frctl/mandelbrot": "^1.0.7",
     "@frctl/nunjucks": "^1.0.1",
     "babel": "^6.5.2",
@@ -75,5 +75,12 @@
     "deploy:force": "git push origin `git subtree split --prefix styleguide master`:gh-pages --force"
   },
   "author": "AgID",
-  "license": "CC0-1.0"
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/italia-it/ita-web-toolkit.git"
+  },
+  "optionalDependencies": {
+    "spid-graphics": "git+https://github.com/italia-it/spid-graphics.git"
+  }
 }

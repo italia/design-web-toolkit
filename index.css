@@ -1,6 +1,13 @@
-@import "suitcss";
+@import "suitcss-base";
+@import "suitcss-components";
+@import "suitcss-utils";
+
 @import "suitcss-components-form";
 
+/*
+ *  @FIXME: replace with glob patterns when this gets merged:
+ *    https://github.com/TrySound/postcss-easy-import/pull/7
+ */
 @import "src/utils/borders";
 @import "src/utils/colors";
 @import "src/utils/corners";
@@ -11,8 +18,11 @@
 @import "src/utils/text";
 @import "src/utils/zindex";
 
+@import "src/icons/ita";
+
 @import "src/components/button";
 @import "src/components/form";
+@import "src/components/forward";
 @import "src/components/prose";
 @import "src/components/table";
 
@@ -26,10 +36,12 @@
 @import "src/modules/cookiebar";
 @import "src/modules/dialog";
 @import "src/modules/dot";
+@import "src/modules/dropdown";
 @import "src/modules/entrypoint";
 @import "src/modules/footer";
 @import "src/modules/hamburger";
 @import "src/modules/header";
+@import "src/modules/hero";
 @import "src/modules/leads";
 @import "src/modules/linklist";
 @import "src/modules/megamenu";
@@ -37,29 +49,51 @@
 @import "src/modules/navscroll";
 @import "src/modules/offcanvas";
 @import "src/modules/scrolltop";
-@import "src/modules/share";
 @import "src/modules/skiplinks";
 @import "src/modules/tooltip";
 @import "src/modules/treeview";
+
+@import "src/extra/share";
+@import "src/extra/spid";
 
 /*
  * WebFontLoaded: _import "src/fonts/titillium"
  * see src/_preview.html
  */
-@import "src/icons/ita";
-
 @import "src/themes/pac";
 
 @import "src/legacy";
 
 @custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 992px);
-@custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1440px);
-@custom-media --lg-viewport screen and (min-width: 1440px);
+@custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1366px);
+@custom-media --lg-viewport screen and (min-width: 1366px);
+
+/*
+ *  System font stack see https://github.com/twbs/bootstrap/pull/19098/files
+ */
 
 :root {
   --it-Base-font-size-ratio: 1.8;
   --it-Base-font-size: calc(1rem * var(--it-Base-font-size-ratio));
   --it-Base-text-color: #1c2024;
+  --it-Base-focus-color: #ff8c00;
+  --it-Base-font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    HelveticaNeue-Light,
+    Helvetica Neue Light,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    Lucida Grande,
+    sans-serif;
 }
 
 :root {
@@ -73,7 +107,9 @@
  * 2. See http://stackoverflow.com/questions/7968795/is-it-safe-to-use-the-css-rule-text-rendering-optimizelegibility-on-all-text
  */
  /*  stylelint-enable */
+
 html {
+  font-family: var(--it-Base-font-family);
   font-size: 62.5%; /* 1 */
   font-variant-ligatures: common-ligatures; /* 2 */
 
@@ -81,32 +117,30 @@ html {
 }
 
 /**
- * 1. Trying to avoid collapsing content
+ * 1. Avoid collapsing content
  */
+
 body {
   color: var(--it-Base-text-color);
   font-size: var(--it-Base-font-size);
-  min-width: 30rem; /* 1 */
+  min-width: 300px; /* 1 */
 }
 
 :focus {
-  outline: #ff8c00 solid 3px;
+  outline: var(--it-Base-focus-color) solid 3px;
   text-decoration: none;
 }
 
 a:focus {
-  background: #ff8c00;
-  outline: #ff8c00 solid 3px;
+  background-color: var(--it-Base-focus-color);
+  outline: var(--it-Base-focus-color) solid 3px;
   text-decoration: underline;
+}
+
+.is-clean:focus {
+  background-color: transparent !important;
 }
 
 a:hover {
   text-decoration: underline !important;
-}
-
-:target::before {
-  content: "";
-  display: block;
-  height: 3em;
-  margin: -3em 0 0;
 }

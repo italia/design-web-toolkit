@@ -41,6 +41,7 @@
 /*
  *	Header is static
  */
+
 .ie89 body {
   padding: 0 !important;
 }
@@ -122,6 +123,7 @@
 /*
  * 	CSS transform does not work in IE8
  */
+
 .ie8 .Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
   left: auto !important;
 }

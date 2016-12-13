@@ -2,8 +2,8 @@
   "title": "Footer",
   "context": {
     "site": {
-      "name": "Comune di Civitella Roveto",
-      "url": "www.comune.civitellaroveto.aq.it"
+      "name": "Nome della pubblica amministrazione",
+      "url": "www.sito-pubblica-amministrazione.gov.it"
     }
   }
 }

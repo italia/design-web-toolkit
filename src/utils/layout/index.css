@@ -15,6 +15,7 @@
 }
 
 @media (--sm-viewport) {
+
   .u-layout-sm-withGutter {
     padding-left: calc(2 * var(--Layout-gutter)) !important;
     padding-right: calc(2 * var(--Layout-gutter)) !important;
@@ -22,6 +23,7 @@
 }
 
 @media (--md-viewport) {
+
   .u-layout-md-withGutter {
     padding-left: calc(2.5 * var(--Layout-gutter)) !important;
     padding-right: calc(2.5 * var(--Layout-gutter)) !important;
@@ -29,6 +31,7 @@
 }
 
 @media (--lg-viewport) {
+
   .u-layout-lg-withGutter {
     padding-left: calc(3 * var(--Layout-gutter)) !important;
     padding-right: calc(3 * var(--Layout-gutter)) !important;
@@ -65,9 +68,12 @@
 .u-layoutCenterVertically {
   top: 50% !important;
   transform: translateY(-50%) !important;
+
+  /*  transform: perspective(1px) translateY(-50%) !important; */
 }
 
 /* postcss-bem-linter: ignore */
+
 .u-layout-centerContent > * {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -102,6 +108,7 @@
 /*
  *	https://css-tricks.com/full-width-containers-limited-width-parents/
  */
+
 .u-layout-releaseFull {
   left: 50%;
   margin-left: -50vw;
@@ -114,4 +121,26 @@
 .u-layout-matchHeight {
   @extend .u-flex;
   @extend .u-flexAlignSelfStretch;
+}
+
+.u-columns-2 {
+  columns: 2 !important;
+}
+
+.u-sm-columns-2 {
+  @media (--sm-viewport) {
+    columns: 2 !important;
+  }
+}
+
+.u-md-columns-2 {
+  @media (--md-viewport) {
+    columns: 2 !important;
+  }
+}
+
+.u-lg-columns-2 {
+  @media (--lg-viewport) {
+    columns: 2 !important;
+  }
 }

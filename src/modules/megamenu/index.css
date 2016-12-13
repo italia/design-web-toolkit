@@ -5,24 +5,56 @@
   --Megamenu-arrow-width: 0.5em;
 }
 
+/*
+ *  1. IE hack
+ */
+
 .Megamenu-list {
-  @extend .u-block;
+  @extend .u-block; /* 1 */
+  @extend .u-flex;
+  @extend .u-flexJustifyStart;
+  @extend .u-flexAlignContentCenter;
   @extend .u-posRelative;
   @extend .u-zindex-40;
+  @extend .u-alignMiddle;
+  @extend .u-textLeft;
 }
 
 /* a top level navigation item in the mega menu */
+
+/*
+ *  1. IE hack
+ */
+
 .Megamenu-item {
-  @extend .u-inlineBlock;
+  @extend .u-inlineBlock; /* 1 */
+  @extend .u-flex;
+  @extend .u-sizeFit;
+  @extend .u-alignBottom;
+}
+
+.Megamenu-item > a:hover,
+.Megamenu-item:hover {
+  cursor: pointer !important;
 }
 
 /* first descendant link within a top level navigation item */
+
 .Megamenu-item > a {
-  @extend .u-block;
+  @extend .u-alignBottom;
+  @extend .u-inlineBlock;
+  @extend .u-flex;
+  @extend .u-flexCol;
+  @extend .u-flexJustifyCenter;
+  @extend .u-flexAlignSelfStretch;
   @extend .u-padding-top-s;
   @extend .u-padding-bottom-s;
-  @extend .u-padding-right-xxl;
-  @extend .u-padding-left-xxl;
+  @extend .u-padding-right-xl;
+  @extend .u-padding-left-xl;
+}
+
+.Megamenu-item > a:focus {
+  @extend .u-backround-none;
 }
 
 /* focus/open states of first descendant link within a top level
@@ -33,133 +65,201 @@
 
 /* open state of first descendant link within a top level
       navigation item */
+
 .Megamenu-item > a.is-open {
   @extend .u-zindex-min;
 }
 
 /* sub-navigation panel */
+
 .Megamenu.is-ready .Megamenu-subnav {
   @extend .u-hidden;
   @extend .u-posAbsolute;
   @extend .u-zindex-max;
 
   left: 0;
+  top: 100%;
   width: 100%;
 }
 
 /* sub-navigation panel open state */
+
 .Megamenu.is-ready .Megamenu-subnav.is-open {
-  @extend .u-block;
+  @extend .u-flex;
+  @extend .u-sizeFull;
+  @extend .u-md-flexWrap;
+  @extend .u-lg-flexWrap;
+  @extend .u-bottomShadow-xxl;
 }
 
 /* list of items within sub-navigation panel */
+
 .Megamenu-subnavGroup {
-  @extend .u-inlineBlock;
-  @extend .u-alignTop;
+  @extend .u-sizeFull;
+  @extend .u-lg-size1of4;
+  @extend .u-md-size1of4;
 }
 
 /* list item within sub-navigation panel */
+
 .Megamenu-subnavGroup > li {
   @extend .u-block;
 }
 
 /* Some custom style */
 
-.Megamenu--styled .Megamenu-list {
-  @extend .u-nbfcAlt;
-  @extend .u-background-grey-20;
-  @extend .u-color-white;
-  @extend .u-border-top-xxs;
+.Megamenu--default {
+  @extend .u-background-40;
 }
 
-.Megamenu--styled .Megamenu-item > a,
-.Megamenu--styled .Megamenu-subnavGroup > li > a {
+.Megamenu--default .Megamenu-item:first-child {
+  @extend .u-md-before2of12;
+  @extend .u-lg-before1of8;
+}
+
+.Megamenu--default .Megamenu-item > a,
+.Megamenu--default .Megamenu-subnavGroup > li > a {
   @extend .u-textClean;
-  @extend .u-color-grey-10;
-  @extend .u-text-r-s;
   @extend .u-posRelative;
+  @extend .u-textWeight-600;
 }
 
-.Megamenu--styled .Megamenu-item > a {
-  @extend .u-color-grey-80;
+.Megamenu--default .Megamenu-subnavGroup > li > a {
+  @extend .u-color-95;
+  @extend .u-text-r-s;
+  @extend .u-textUppercase;
+  @extend .u-textWeight-700;
 }
 
-.Megamenu--styled .Megamenu-list > li > a[aria-expanded=false]::after {
-  border-left: var(--Megamenu-arrow-width) solid transparent;
-  border-right: var(--Megamenu-arrow-width) solid transparent;
-  border-top: var(--Megamenu-arrow-width) solid #fff;
-  bottom: 40%;
-  content: "";
-  display: block;
-  height: 0;
-  position: absolute;
-  right: var(--Megamenu-arrow-width);
-  width: 0;
+.Megamenu--default .Megamenu-item > a {
+  @extend .u-color-white;
+  @extend .u-text-r-xs;
 }
 
-.Megamenu--styled .Megamenu-list > li > a[aria-expanded=true]::after {
-  border-bottom: var(--Megamenu-arrow-width) solid var(--Color-grey-80);
-  border-left: var(--Megamenu-arrow-width) solid transparent;
-  border-right: var(--Megamenu-arrow-width) solid transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 0;
-  left: calc(50% - var(--Megamenu-arrow-width));
-  position: absolute;
-  width: 0;
+/*
+ *  @FIXME: hack to insert expand icon
+ *
+ *  1. Cannot use padding-r-* because of pseudoselector.
+ */
+
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after,
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=false]::after {
+  @extend .u-padding-left-xs; /* 1 */
+  @extend .u-text-r-xxs;
+  @extend .u-posAbsolute;
+  @extend .Icon;
+
+  bottom: 35%;
+  content: "\23f6";
+  right: 0.5em;
 }
 
-.Megamenu--styled .Megamenu-subnav {
-  @extend .u-background-grey-80;
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after {
+  visibility: hidden;
+}
+
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=true] {
+  @extend .u-background-grey-20;
+  @extend .u-color-80;
+}
+
+.Megamenu--default .Megamenu-subnav {
+  @extend .u-background-grey-20;
   @extend .u-padding-all-l;
-  @extend .u-borderShadow-m;
 }
 
-.Megamenu--styled .Megamenu-subnavGroup > li {
+.Megamenu--default .Megamenu-subnavGroup:nth-child(3n+1) {
+  @extend .u-md-before2of12;
+  @extend .u-lg-before1of8;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li {
   @extend .u-color-grey-50;
   @extend .u-padding-top-s;
   @extend .u-padding-bottom-s;
-  @extend .u-margin-right-xxl;
-  @extend .u-border-bottom-xxs;
+  @extend .u-margin-r-right;
 }
 
-.Megamenu--styled .Megamenu-subnavGroup > li:last-child {
+.Megamenu--default .Megamenu-subnavGroup > li:last-child {
   border-bottom: none !important;
 }
 
-.Megamenu--styled .Megamenu-subnavGroup {
-  @extend .u-textLeft;
+/*
+ *  Do not put padding and margin here.
+ */
 
-  min-width: 19%;
+.Megamenu--default .Megamenu-subnavGroup {
+  @extend .u-textLeft;
+  @extend .u-color-grey-40;
+  @extend .u-floatLeft;
 }
 
-.Megamenu--styled .Megamenu-subnavGroup > li > ul {
+.Megamenu--default .Megamenu-subnavGroup:last-child {
+  border-right: none !important;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul {
   @extend .u-padding-top-xs;
   @extend .u-margin-top-s;
-  @extend .u-padding-bottom-xs;
-  @extend .u-border-top-xxs;
+  @extend .u-padding-bottom-xxs;
 }
 
 /*
  *	Max depth = 3 levels
  */
-.Megamenu--styled .Megamenu-subnavGroup > li > ul li {
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul li {
   @extend .u-padding-top-xxs;
-  @extend .u-padding-bottom-xxs;
+  @extend .u-padding-bottom-xs;
 }
 
-.Megamenu--styled .Megamenu-subnavGroup > li > ul > li a {
+.Megamenu--default .Megamenu-subnavGroup > li > ul > li a {
   @extend .u-text-r-xs;
-  @extend .u-color-grey-10;
+  @extend .u-color-grey-80;
+  @extend .u-textClean;
 }
 
-.Megamenu--styled .Megamenu-subnavGroup > li > ul > li > ul > li > a {
+.Megamenu--default .Megamenu-subnavGroup > li > ul > li > ul > li > a {
   @extend .u-text-r-xxs;
-  @extend .u-color-grey-10;
+  @extend .u-color-grey-80;
+  @extend .u-textClean;
 }
 
-.Megamenu--styled .Megamenu-subnavGroup > li > ul > li > ul {
+.Megamenu--default .Megamenu-subnavGroup > li > ul > li > ul {
   @extend .u-margin-top-xs;
   @extend .u-margin-bottom-xs;
+}
+
+/*
+ *  1. does not work in IE(11)
+ */
+
+.Megamenu--default .Megamenu-area {
+  @extend .u-flex;
+  @extend .u-padding-r-right;
+  @extend .u-padding-r-left;
+  @extend .u-posAbsolute;
+
+  /* [1] margin-left: auto; */
+
+  right: 0;
+  top: 0;
+}
+
+.Megamenu--default .Megamenu-area > * {
+  @extend .u-flex;
+  @extend .u-flexCol;
+  @extend .u-margin-top-xs;
+  @extend .u-margin-bottom-xs;
+  @extend .u-flexJustifyCenter;
+}
+
+.Megamenu--default .Megamenu-close {
+  @extend .u-posAbsolute;
+  @extend .u-text-r-m;
+
+  cursor: pointer;
+  opacity: 0.7;
+  right: 2em;
+  top: 2em;
 }

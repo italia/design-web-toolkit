@@ -1,39 +1,43 @@
-import IwtScripts from './src/scripts'
+const Config = require('./config')
 
-import IwtForm from './src/components/form'
-import IwtTable from './src/components/table'
+function _findIndex(ar, predicate) {
+  for (let index = 0; index < ar.length; index++) {
+    if (predicate(ar[index])) {
+      return index
+    }
+  }
+  return -1
+}
+/*
+ *	Every index.js found in src/** directory will be required.
+ *
+ * 	Too exclude components or modules
+ * 	@see config.js
+ */
+function requireAll(requireContext) {
+  let keys = []
 
-import IwtAccordion from './src/modules/accordion'
-import IwtCarousel from './src/modules/carousel'
-import IwtCookiebar from './src/modules/cookiebar'
-import IwtDialog from './src/modules/dialog'
-import IwtMasonry from './src/modules/masonry'
-import IwtSkiplinks from './src/modules/skiplinks'
-import IwtTreeview from './src/modules/treeview'
-import IwtOffcanvas from './src/modules/offcanvas'
-import IwtHeadroom from './src/modules/header'
-import IwtMegamenu from './src/modules/megamenu'
-import IwtShare from './src/modules/share'
-import IwtTooltip from './src/modules/scrolltop'
-import IwtScrolltop from './src/modules/tooltip'
+  requireContext.keys().forEach((filename) => {
+    const dirname = filename.replace(/\\/g, '/').replace(/\/[^\/]*$/, '')
 
-const __exports = {
-	IwtTable,
-	IwtAccordion,
-	IwtCarousel,
-	IwtCookiebar,
-	IwtDialog,
-	IwtMasonry,
-	IwtTreeview,
-	IwtSkiplinks,
-	IwtOffcanvas,
-	IwtHeadroom,
-	IwtMegamenu,
-	IwtTooltip,
-	IwtScripts,
-	IwtScrolltop,
-	IwtShare,
-	IwtForm
+    const exclude = -1 !== _findIndex(Config.excludes, function(v) {
+      return dirname.match(new RegExp(v)) !== null
+    })
+
+    const include = !exclude &&
+      (Config.includes.length === 0 ||
+        (-1 !== _findIndex(Config.includes, function(v) {
+          return dirname.match(new RegExp(v)) !== null
+        })))
+
+    if (include) {
+      // console.log('including: %s', dirname)
+      keys.push(filename)
+    } else {
+      // console.log('excluding: %s', dirname)
+    }
+  })
+  return keys.map(requireContext)
 }
 
-export default __exports
+export default requireAll(require.context('./src', true, /(.*)index\.js$/))

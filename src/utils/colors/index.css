@@ -20,6 +20,7 @@
 /*
  *	To be overridden by themes
  */
+
 :root {
   --Color-primary: #111;
 }
@@ -218,4 +219,40 @@
 
 .u-background-95 {
   background-color: color(var(--Color-primary) l(-25%)) !important;
+}
+
+.u-backround-none {
+  background-color: transparent !important;
+}
+
+.u-color-compl {
+  color: color(var(--Color-primary) h(+180) s(+50%) l(70%)) !important;
+}
+
+.u-background-compl {
+  background-color: color(var(--Color-primary) h(+180) s(100%) l(70%)) !important;
+}
+
+.u-background-compl-5 {
+  background-color: color(var(--Color-primary) h(+180) s(20%) l(95%)) !important;
+}
+
+.u-color-compl-5 {
+  color: color(var(--Color-primary) h(+180) s(20%) l(95%)) !important;
+}
+
+.u-color-compl-10 {
+  color: color(var(--Color-primary) h(+180) s(30%) l(90%)) !important;
+}
+
+.u-background-compl-10 {
+  background-color: color(var(--Color-primary) h(+180) s(30%) l(90%)) !important;
+}
+
+.u-color-compl-80 {
+  color: color(var(--Color-primary) h(+180)) !important;
+}
+
+.u-background-compl-80 {
+  background-color: color(var(--Color-primary) h(+180)) !important;
 }

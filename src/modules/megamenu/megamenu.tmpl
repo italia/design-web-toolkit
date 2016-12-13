@@ -1,7 +1,9 @@
-<nav class="Megamenu Megamenu--styled js-megamenu">
+<nav class="Megamenu Megamenu--default js-megamenu">
   <ul class="Megamenu-list">
     <li class="Megamenu-item">
-      <a href="#">{{ __WORDS__[0] | capitalize  }}</a>
+      <a href="#">
+        {{ __WORDS__[0] | capitalize  }}<br>{{ __WORDS__[1] | capitalize }}
+      </a>
       <div class="Megamenu-subnav u-jsDisplayNone">
         <ul class="Megamenu-subnavGroup">
           <li><a href="/">{{ __WORDS__[1] | capitalize }}</a>
@@ -72,5 +74,9 @@
         </ul>
       </div>
     </li>
+    <li class="Megamenu-area">
+      <a class="Button Button--default u-color-95" href="#">Area riservata</a>
+    </li>
   </ul>
+  <button class="js-Megamenu-close Megamenu-close">chiudi</button>
 </nav>

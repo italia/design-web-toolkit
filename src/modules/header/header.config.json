@@ -2,9 +2,14 @@
   "title": "Header",
   "context": {
     "site": {
-      "name": "Nome della Pubblica Amministrazione"
+      "name": "Nome della Pubblica Amministrazione",
+      "subtitle": "eventuale sottotitolo",
+      "owner": "Nome amministrazione afferente",
+      "logo": "//placehold.it/75x80"
     }
   },
+  "isFixed": true,
+  "hideOnDesktop": false,
   "variants": [{
     "name": "default",
     "context": {

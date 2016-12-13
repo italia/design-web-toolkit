@@ -1,11 +1,8 @@
-{% render '@header' %}
+{% render '@header', {isFixed: true}, true %}
+{% render '@offcanvas', { showOpenButton: false }, true %}
 
 <div id="main">
-  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-top-s">
-      {% render '@breadcrumb' %}
-  </div>
-
-  {% render '@layout--landing' %}
+  {% render '@layout--section' %}
 
   <div class="u-background-grey-80">
     <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">

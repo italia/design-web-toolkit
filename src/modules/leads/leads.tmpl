@@ -1,17 +1,10 @@
 <section class="Leads">
-  <h2 class="Leads-title u-layout-centerLeft">Utilità</h2>
+  <h2 class="Leads-title u-layout-centerLeft">{{ title }}</h2>
   <ul class="Grid Grid--withGutter">
-    <li class="Leads-item Grid-cell u-md-size1of4 u-lg-size1of4">
-      <a class="Leads-link u-color-black" href="">Amministrazione trasparente</a>
-    </li>
-    <li class="Leads-item Grid-cell u-md-size1of4 u-lg-size1of4">
-      <a class="Leads-link u-color-black" href="">Albo pretorio</a>
-    </li>
-    <li class="Leads-item Grid-cell u-md-size1of4 u-lg-size1of4">
-      <a class="Leads-link u-color-black" href="">Bandi e concorsi</a>
-    </li>
-    <li class="Leads-item Grid-cell u-md-size1of4 u-lg-size1of4">
-      <a class="Leads-link u-color-black" href="">Accesso civico</a>
-    </li>
+    {% for lead in leads %}
+      <li class="Leads-item Grid-cell u-md-size1of4 u-lg-size1of4">
+        <a class="Leads-link u-color-black" href="">{{ lead }}</a>
+      </li>
+    {% endfor %}
   </ul>
 </section>

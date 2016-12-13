@@ -7,6 +7,7 @@
   @extend .u-color-white;
   @extend .u-border-right-xxs;
   @extend .u-text-r-l;
+
   height: 1.5em;
   width: 1.8em;
 }
@@ -25,6 +26,7 @@
   @extend .u-floatLeft;
   @extend .u-background-grey-20;
   @extend .u-text-r-l;
+
   cursor: pointer;
   height: 1.5em;
   line-height: 1.5em;
@@ -35,6 +37,7 @@
   @extend .u-floatLeft;
   @extend .u-background-50;
   @extend .u-textCenter;
+
   height: 100%;
   line-height: 1.5em !important;
   width: 1.8em;
@@ -49,6 +52,8 @@
   @extend .u-color-grey-50;
   @extend .u-text-r-l;
   @extend .u-textWeight-400;
+  @extend .u-textClean;
+
   padding-left: 1em;
   padding-right: 1em;
 }

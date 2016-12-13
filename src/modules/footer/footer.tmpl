@@ -10,12 +10,12 @@
   <div class="Grid Grid--withGutter">
     {% for i in [1, 2, 3, 4] %}
     <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
-      <h2 class="Footer-blockTitle">Trasparenza</h2>
+      <h2 class="Footer-blockTitle">Argomento {{ i }}</h2>
       <ul>
-        <li><a href="">Amministrazione trasparente</a></li>
-        <li><a href="">Accesso civico</a></li>
-        <li><a href="">Albo pretorio</a></li>
-        <li><a href="">Bandi di gara e contratti</a></li>
+        <li><a href="">{{ __WORDS__[2] }}</a></li>
+        <li><a href="">{{ __WORDS__[3] }}</a></li>
+        <li><a href="">{{ __WORDS__[4] }}</a></li>
+        <li><a href="">{{ __WORDS__[5] }}</a></li>
       </ul>
     </div>
     {% endfor %}
@@ -26,9 +26,9 @@
       <div class="Footer-subBlock">
         <h3 class="Footer-subTitle">Recapiti</h3>
         <address>
-          Via Cherso 8<br>
-          00177 Roma<br>
-          Tel. (+39) 00.1310.1980
+          Via {{ __WORDS__[i] }}<br>
+          {{ __WORDS__[i] }}<br>
+          Tel. (+00) 00.0000.0000
         </address>
       </div>
     </div>

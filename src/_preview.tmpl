@@ -17,7 +17,7 @@
   <script type="text/javascript">
     WebFontConfig = {
       google: {
-        families: ['Titillium+Web:400,700,400italic:latin']
+        families: ['Titillium+Web:400,600,700,400italic:latin']
       }
     };
     (function() {
@@ -36,14 +36,14 @@
   <link media="screen" rel="stylesheet" href="{{ '/build/vendor.css' | path }}">
   <link media="screen" rel="stylesheet" href="{{ '/build/build.css' | path }}">
 
+  <script src="{{ '/build/vendor/jquery.min.js' | path }}"></script>
+
   <title>Preview Layout</title>
 </head>
 
-<body class="Pac">
+<body class="t-Pac">
 
   {{ yield|safe }}
-
-  <script src="{{ '/build/vendor/jquery.min.js' | path }}"></script>
 
   <!--[if IE 8]>
   <script src="{{ '/build/vendor/respond.min.js' | path }}"></script>

@@ -1,6 +1,7 @@
 {
   "title": "Offcanvas",
   "context": {
-    "showOpenButton": true
+    "showOpenButton": true,
+    "treeview": "treeview"
   }
 }
