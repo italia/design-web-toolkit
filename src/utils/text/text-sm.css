@@ -1,6 +1,7 @@
 /** @define utilities; */
 
 @media (--sm-viewport) {
+
   .u-text-sm-xxl {
     font-size: 3.2rem !important;
   }
@@ -32,4 +33,15 @@
     font-size: 1.5rem !important;
   }
 
+  .u-text-sm-center {
+    text-align: center !important;
+  }
+
+  .u-text-sm-left {
+    text-align: left !important;
+  }
+
+  .u-text-sm-right {
+    text-align: right !important;
+  }
 }

@@ -5,15 +5,16 @@
  *		https://github.com/giuseppeg/suitcss-components-form
  *		Copyright (c) Giuseppe Gurgone
  */
+
 :root {
   --Form-input-border-color: #ccc;
   --Form-input-border-radius: 0;
   --Form-state-invalid-border-color: #b50000;
-  --Form-state-invalid-label-color: #b50000;
-  --Form-state-invalid-message-color: #b50000;
+  --Form-state-invalid-label-color: #1c2024;
+  --Form-state-invalid-message-color: #1c2024;
   --Form-state-warning-border-color: #e5ce23;
-  --Form-state-warning-label-color: #e5ce23;
-  --Form-state-warning-message-color: #e5ce23;
+  --Form-state-warning-label-color: #1c2024;
+  --Form-state-warning-message-color: #1c2024;
   --Form-label-checked-background: #c6f3f5;
   --Form-border-width: 0.4rem;
   --Form-choose-height: 1em;
@@ -61,11 +62,13 @@
 }
 
 /* postcss-bem-linter: ignore */
+
 select.Form-input {
   background-color: currentColor;
 }
 
 /* postcss-bem-linter: ignore */
+
 option:hover {
   box-shadow: 0 0 10px 100px #1882a8 inset;
 }
@@ -97,6 +100,7 @@ option:hover {
  *	Custom components: label block
  *	==============================
  */
+
 .Form-label--block {
   background-color: white;
   border: 1px solid var(--Form-input-border-color);
@@ -114,6 +118,7 @@ option:hover {
  *	Custom components: label as placeholder
  *	=======================================
  */
+
 .Form-field--withPlaceholder {
   @extend .u-flex;
   @extend .u-posRelative;
@@ -136,11 +141,13 @@ option:hover {
  *	Accessibile tooltip: http://heydonworks.com/practical_aria_examples/
  *	=======================================
  */
+
 .Form-input + [role="tooltip"] {
   @extend .u-hidden;
 }
 
 /* postcss-bem-linter: ignore */
+
 .Form-input.Form-input:focus + [role="tooltip"] {
   @extend .u-block;
   @extend .u-color-white;
@@ -234,21 +241,25 @@ option:hover {
 }
 
 /* postcss-bem-linter: ignore */
+
 .Form-field--choose [type=checkbox] ~ .Form-fieldIcon {
   background-image: var(--Form-checkbox);
 }
 
 /* postcss-bem-linter: ignore */
+
 .Form-field--choose [type=checkbox]:checked ~ .Form-fieldIcon {
   background-image: var(--Form-checkbox-checked);
 }
 
 /* postcss-bem-linter: ignore */
+
 .Form-field--choose [type=radio] ~ .Form-fieldIcon {
   background-image: var(--Form-radio);
 }
 
 /* postcss-bem-linter: ignore */
+
 .Form-field--choose [type=radio]:checked ~ .Form-fieldIcon {
   background-image: var(--Form-radio-checked);
 }
@@ -259,6 +270,7 @@ option:hover {
 */
 
 /* postcss-bem-linter: ignore */
+
 .Form-fieldset > legend {
   @extend .u-inlineBlock;
   @extend .u-sizeFull;
@@ -274,6 +286,7 @@ option:hover {
 *	Custom components: width
 *	===================================
 */
+
 .Form-input--xs {
   max-width: 2em !important;
 }

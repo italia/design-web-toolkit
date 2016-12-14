@@ -1,14 +1,6 @@
-<div class="u-layout-centerContent u-background-grey-20">
+<div class="u-layout-centerContent u-background-grey-20 u-padding-r-bottom">
   <section class="u-layout-wide">
-
-    <div class="Grid Grid--withGutter u-text-r-l u-padding-r-bottom">
-      <div class="Grid-cell u-layout-centerLeft">
-        <h2 class="u-text-r-l">{{ __WORDS__[1] | capitalize }}</h2>
-      </div>
-      <div class="Grid-cell u-layout-centerRight">
-        <h2 class="u-text-r-m"><a class="u-color-50" href="">Vedi tutto</a></h2>
-      </div>
-    </div>
+    <h2 class="u-padding-r-bottom u-padding-r-top u-text-r-l">{{ __WORDS__[1] | capitalize }}</h2>
 
     <div class="Grid Grid--withGutter">
 
@@ -34,6 +26,11 @@
       </div>
       {% endfor %}
     </div>
+
+    <p class="u-textCenter u-text-md-right u-text-lg-right u-padding-r-top">
+      <a href="#" class="u-color-50 u-textClean u-text-h4">
+          tutti i contenuti <span class="Icon Icon-chevron-right"></a>
+    </p>
 
   </section>
 </div>

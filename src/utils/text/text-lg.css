@@ -1,6 +1,7 @@
 /** @define utilities; */
 
 @media (--lg-viewport) {
+
   .u-text-lg-xxl {
     font-size: 5.4rem !important;
   }
@@ -30,5 +31,17 @@
 
   .u-text-lg-xxs {
     font-size: 1.5rem !important;
+  }
+
+  .u-text-lg-center {
+    text-align: center !important;
+  }
+
+  .u-text-lg-left {
+    text-align: left !important;
+  }
+
+  .u-text-lg-right {
+    text-align: right !important;
   }
 }
