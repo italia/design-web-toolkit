@@ -1,3 +1,7 @@
+### 0.1.0-alpha4
+
+* Aggiunti script per generare screenshot (pdf e svg) dei componenti
+
 ### 0.1.0-alpha3
 
 * Aggiunto template di esempio con menu per Comuni (modulo 'hero')

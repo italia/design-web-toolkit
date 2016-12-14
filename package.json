@@ -1,6 +1,6 @@
 {
   "name": "ita-web-toolkit",
-  "version": "0.1.0-alpha2",
+  "version": "0.1.0-alpha4",
   "description": "Implementazione di riferimento per le linee guida di design della PA",
   "main": "index.js",
   "dependencies": {
@@ -58,8 +58,7 @@
     "stylelint-config-suitcss": "^8.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.1",
-    "wkhtmltoimage": "^0.1.4"
+    "webpack": "^1.13.1"
   },
   "scripts": {
     "build:resources": "shx mkdir -p build/src && shx cp -r src/vendor build/ && shx cp -r src/icons build/src/icons && shx cp src/_preview.tmpl build/index.html",
