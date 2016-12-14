@@ -1,10 +1,14 @@
 const async = require('async')
 const cheerio = require('cheerio')
 const fetch = require('node-fetch')
+const path = require('path')
+const os = require('os')
 
 const BASE_URL = 'http://localhost:1310'
-const CONCURRENCY = 4
-const OUTPUT_DIR = '/tmp/svg/'
+const OUTPUT_DIR = path.join(os.tmpdir(), 'svg-' + new Date().getTime())
+
+const BREAKPOINTS = [320, 768, 1366]
+const CONCURRENCY = BREAKPOINTS.length
 
 const phantomjs = require('phantomjs-prebuilt')
 
@@ -20,15 +24,20 @@ fetch(BASE_URL)
     async.eachLimit(links, CONCURRENCY, (l, done) => {
       const link = l.replace('detail', 'preview')
       const basename = link.split('/')[3]
+      const src = `${BASE_URL}${link}`
 
-      console.log(link, basename)
+      async.eachLimit(BREAKPOINTS, CONCURRENCY, (size, done_) => {
+        const dst = path.join(OUTPUT_DIR, `${basename}-${size}.pdf`)
 
-      const program = phantomjs.exec('rasterize.js', `${BASE_URL}${link}`, `${OUTPUT_DIR}${basename}.pdf`, '1440', '2000')
+        console.log(link, basename)
 
-      program.stdout.pipe(process.stdout)
-      program.stderr.pipe(process.stderr)
+        const program = phantomjs.exec(path.join(__dirname, 'rasterize.js'), src, dst, size, '2000')
 
-      program.on('exit', done)
+        program.stdout.pipe(process.stdout)
+        program.stderr.pipe(process.stderr)
+
+        program.on('exit', done_)
+      }, done)
     })
   })
   .catch((err) => {

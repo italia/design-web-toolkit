@@ -1,3 +1,7 @@
+/*
+ *  Requires `inkscape` and `phantomjs` installed globally
+ */
+
 /* global phantom */
 /* global jQuery */
 
@@ -26,15 +30,6 @@ page.viewportSize = {
   height: pageHeight
 }
 
-page.clipRect = {
-  top: 0,
-  left: 0,
-  width: pageWidth,
-  height: pageHeight
-}
-
-// console.log('page open', address)
-
 page.open(address, function(status) {
   if (status !== 'success') {
     console.error('err', address)
@@ -42,6 +37,19 @@ page.open(address, function(status) {
   } else {
     page.evaluate(function() {
       jQuery('[media]').attr('media', 'all')
+      setTimeout(function() {
+        for (var k in document.styleSheets) {
+          const styleSheet = document.styleSheets[k]
+          if (typeof styleSheet === 'object' && 'rules' in styleSheet && styleSheet.rules !== null) {
+            const rules = styleSheet.rules
+            for (var kr in rules) {
+              if (typeof rules[kr].media !== 'undefined') {
+                rules[kr].media.mediaText = rules[kr].media.mediaText.replace('screen', 'all')
+              }
+            }
+          }
+        }
+      }, 200)
     })
     window.setTimeout(function() {
       page.render(output)
