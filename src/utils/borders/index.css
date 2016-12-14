@@ -2,6 +2,7 @@
 
 :root {
   --Border-size-unit: 0.1rem;
+  --Border-focus-color: #ff8c00;
 }
 
 .u-border-top-xxs { border-top: var(--Border-size-unit) solid currentColor !important; }
@@ -9,6 +10,12 @@
 .u-border-bottom-xxs { border-bottom: var(--Border-size-unit) solid currentColor !important; }
 .u-border-left-xxs { border-left: var(--Border-size-unit) solid currentColor !important; }
 .u-border-all-xxs { border: var(--Border-size-unit) solid currentColor !important; }
+
+.u-border-top-xs { border-top: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-right-xs { border-right: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-bottom-xs { border-bottom: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-left-xs { border-left: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-all-xs { border: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
 
 .u-border-top-m { border-top: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
 .u-border-right-m { border-right: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
@@ -26,6 +33,7 @@
  *	Border for responsive cell
  *	see http://codepen.io/Hawkun/pen/rsIEp
  */
+
 .u-borderAlt {
   box-shadow:
     0.1em 0 0 0 currentColor,
@@ -38,4 +46,14 @@
 
 .u-border-none {
   border: none !important;
+}
+
+.u-borderFocus:focus {
+  background-color: transparent !important;
+  box-shadow: 0 0 0 3px var(--Border-focus-color) inset !important;
+}
+
+.u-borderFocusAlt:focus {
+  background-color: transparent !important;
+  box-shadow: 0 0 0 3px currentColor inset !important;
 }

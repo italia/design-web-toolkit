@@ -28,12 +28,12 @@
 }
 
 .Callout--must > .Callout-title {
-  color: color(var(--Callout-color-must) l(-40%));
+  color: color(var(--Callout-color-must) l(-70%));
 }
 
 .Callout--should {
   background: var(--Callout-color-should);
-  border-top-color: color(var(--Callout-color-should) l(-40%));
+  border-top-color: color(var(--Callout-color-should) l(-70%));
 }
 
 .Callout--should > .Callout-title {
@@ -42,7 +42,7 @@
 
 .Callout--could {
   background: var(--Callout-color-could);
-  border-top-color: color(var(--Callout-color-could) l(-40%));
+  border-top-color: color(var(--Callout-color-could) l(-70%));
 }
 
 .Callout--could > .Callout-title {
@@ -51,7 +51,7 @@
 
 .Callout--example {
   background: var(--Callout-color-example);
-  border-top-color: color(var(--Callout-color-example) l(-40%));
+  border-top-color: color(var(--Callout-color-example) l(-70%));
 }
 
 .Callout--example > .Callout-title {

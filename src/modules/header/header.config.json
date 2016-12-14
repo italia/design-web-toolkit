@@ -16,10 +16,16 @@
       "clone": false
     }
   }, {
-    "name": "clone menu",
+    "name": "menu",
+    "context": {
+      "menu": true
+    }
+  }, {
+    "name": "megamenu",
     "context": {
       "menu": true,
-      "clone": true
+      "megamenu": true,
+      "hideOnDesktop": true
     }
   }]
 }

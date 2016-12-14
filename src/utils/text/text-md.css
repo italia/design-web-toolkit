@@ -1,6 +1,7 @@
 /** @define utilities; */
 
 @media (--md-viewport) {
+
   .u-text-md-xxl {
     font-size: 4.4rem !important;
   }
@@ -30,5 +31,17 @@
 
   .u-text-md-xxs {
     font-size: 1.5rem !important;
+  }
+
+  .u-text-md-center {
+    text-align: center !important;
+  }
+
+  .u-text-md-left {
+    text-align: left !important;
+  }
+
+  .u-text-md-right {
+    text-align: right !important;
   }
 }

@@ -27,9 +27,15 @@
   width: 100%;
 }
 
+/*
+ *  [1] Don't extend utility class to make it overridable
+ */
+
 .Table td,
 .Table th {
   @extend .u-padding-r-all;
+
+  text-align: left; /* 1 */
 }
 
 .Table--fixed {
@@ -69,10 +75,6 @@
 
 .Table--withBorder tr {
   border-bottom: 1px var(--Table-border-color) solid;
-}
-
-.Table--withBorder th {
-  border-bottom: 2px var(--Table-border-color) solid;
 }
 
 .Table--withBorder th,
@@ -200,6 +202,5 @@
 
 .Table--flip th {
   border-bottom: 0 !important;
-  border-right: 2px solid var(--Table-border-color) !important;
   border-top: 1px solid var(--Table-border-color) !important;
 }

@@ -137,6 +137,10 @@ a:focus {
   text-decoration: underline;
 }
 
+button:focus {
+  box-shadow: 0 0 0 3px var(--it-Base-focus-color) inset !important;
+}
+
 .is-clean:focus {
   background-color: transparent !important;
 }

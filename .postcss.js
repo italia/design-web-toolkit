@@ -1,3 +1,5 @@
+'use strict'
+
 const readCache = require("read-cache")
 const Config = require('./config')
 const util = require('util')
