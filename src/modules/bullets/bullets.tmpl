@@ -1,10 +1,10 @@
 <ol class="Prose Bullets">
   {% for i in range(0, 9) %}
   <li class="u-margin-bottom-s">
-    <p class="Prose u-layout-prose">
-      <a class="u-textClean u-text-r-m" href="/">{{ __SHORT_TEXTS__[i] }}</a><br>
-      {{ __LONG_TEXTS__[i] }}
-    </p>
+    <div class="Prose u-layout-prose">
+      <h2>{{ __SHORT_TEXTS__[i] }}</h2>
+      <p>{{ __LONG_TEXTS__[i] }}</p>
+    </div>
   </li>
   {% endfor %}
 </ol>
