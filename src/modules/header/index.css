@@ -252,6 +252,10 @@
   @extend .u-linkClean;
 }
 
+.Header-language abbr {
+  text-decoration: none;
+}
+
 .Header-language:hover {
   cursor: pointer;
 }

@@ -33,6 +33,10 @@
   @extend .u-padding-r-top;
 }
 
+.Linklist :focus {
+  @extend .u-borderFocus;
+}
+
 .Linklist--padded > li > .Linklist-link,
 .Linklist--padded > li > a {
   @extend .u-padding-left-s;

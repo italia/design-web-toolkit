@@ -127,22 +127,7 @@ body {
 }
 
 :focus {
-  outline: var(--it-Base-focus-color) solid 3px;
-  text-decoration: none;
-}
-
-a:focus {
-  background-color: var(--it-Base-focus-color);
-  outline: var(--it-Base-focus-color) solid 3px;
-  text-decoration: underline;
-}
-
-button:focus {
-  box-shadow: 0 0 0 3px var(--it-Base-focus-color) inset !important;
-}
-
-.is-clean:focus {
-  background-color: transparent !important;
+  outline: 3px solid var(--it-Base-focus-color);
 }
 
 a:hover {

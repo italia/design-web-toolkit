@@ -49,11 +49,6 @@
 }
 
 .u-borderFocus:focus {
-  background-color: transparent !important;
-  box-shadow: 0 0 0 3px var(--Border-focus-color) inset !important;
-}
-
-.u-borderFocusAlt:focus {
-  background-color: transparent !important;
-  box-shadow: 0 0 0 3px currentColor inset !important;
+  box-shadow: 0 0 0 3px var(--it-Base-focus-color) inset !important;
+  outline: none;
 }

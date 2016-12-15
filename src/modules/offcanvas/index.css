@@ -6,6 +6,7 @@
 }
 
 /* postcss-bem-linter: ignore */
+
 .Offcanvas,
 .Offcanvas-content {
   max-width: var(--Offcanvas-max-width);
@@ -46,18 +47,21 @@
 }
 
 /* postcss-bem-linter: ignore */
+
 .Offcanvas:not(:target) .Offcanvas-content,
 .Offcanvas.is-ready[aria-hidden="true"] .Offcanvas-content {
   transition: transform 200ms ease-out, visibility 200ms;
 }
 
 /* postcss-bem-linter: ignore */
+
 .Offcanvas--right:target .Offcanvas-content,
 .Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
   transform: translateX(-100%);
 }
 
 /* postcss-bem-linter: ignore */
+
 .Offcanvas--left:target .Offcanvas-content,
 .Offcanvas--left.is-ready[aria-hidden="false"] .Offcanvas-content {
   transform: translateX(100%);

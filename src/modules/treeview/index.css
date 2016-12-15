@@ -28,6 +28,7 @@
 }
 
 /* FIXME: overrides focus unset */
+
 .Treeview li[tabindex]:focus {
   outline: 3px solid #ff8c00 !important;
 }
@@ -36,6 +37,7 @@
  * Treeview default style
  * -----------------------
  */
+
 .Treeview--default ul li {
   border-color: white !important;
 }
