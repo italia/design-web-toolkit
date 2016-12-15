@@ -1,6 +1,7 @@
 /** @define utilities; */
 
 @media (--lg-viewport) {
+
   .u-lg-block {
     display: block !important;
   }

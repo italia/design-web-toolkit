@@ -30,6 +30,14 @@
   display: none;
 }
 
+.no-js .u-nojsDisplayBlock {
+  display: block !important;
+}
+
+.no-js .u-nojsDisplayInlineBlock {
+  display: inline-block !important;
+}
+
 @media print {
 
   .u-hiddenPrint {
