@@ -18,7 +18,7 @@ l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli svi
 
 #### È inoltre possibile consultare la roadmap
 
-- [roadmap](https://italia-it.github.io/ita-web-toolkit/docs/roadmap.html)
+- [roadmap](https://github.com/italia-it/ita-web-toolkit/milestone/1)
 
 #### I componenti dell'interfaccia sono presentati nella styleguide
 

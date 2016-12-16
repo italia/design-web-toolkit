@@ -20,7 +20,7 @@ o [pagine complete]({{ '/components/detail/page--menu' | path }})) nella forma d
 
 Nel settembre 2016 è rilasciata la versione iniziale (0.1.0).
 
-La prima release ritenuta adatta all'utilizzo in produzione sarà la 1.0 secondo quanto stabilito nella [roadmap](https://italia-it.github.io/ita-web-toolkit/docs/roadmap.html).
+La prima release ritenuta adatta all'utilizzo in produzione sarà la 1.0 secondo quanto stabilito nella [roadmap](https://github.com/italia-it/ita-web-toolkit/milestone/1).
 
 #### [Repository GitHub del progetto](https://github.com/italia-it/ita-web-toolkit)
 
