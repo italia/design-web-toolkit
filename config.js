@@ -1,6 +1,4 @@
-'use strict'
-
-let CONFIG = {}
+const CONFIG = {}
 
 /*
  *  Whitelist: use this array of RegEx to include ONLY specific components
