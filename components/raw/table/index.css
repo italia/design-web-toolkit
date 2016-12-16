@@ -21,34 +21,23 @@
 }
 
 .Table {
-  background-color: transparent;
   border: 0;
   border-collapse: collapse;
   max-width: 100%;
   width: 100%;
 }
 
+/*
+ *  [1] Don't extend utility class to make it overridable
+ */
+
 .Table td,
 .Table th {
-  padding: var(--Table-cell-pad-v) var(--Table-cell-pad-h);
+  @extend .u-padding-r-all;
+
+  text-align: left; /* 1 */
 }
 
-.Table th:first-child,
-.Table td:first-child {
-  padding-left: var(--Table-cell-pad-v);
-}
-
-.Table th:last-child,
-.Table td:last-child {
-  padding-right: var(--Table-cell-pad-v);
-}
-
-/* Table layout modifier
-   ========================================================================== */
-
-/**
- * Fixed
- */
 .Table--fixed {
   table-layout: fixed;
 }
@@ -56,8 +45,8 @@
 /* Hover row modifiers
    ========================================================================== */
 
-.Table--hover tbody tr:hover th,
-.Table--hover tbody tr:hover td {
+.Table--hover > tbody > tr:hover > th,
+.Table--hover > tbody > tr:hover > td {
   background-color: var(--Table-hover-color);
 }
 
@@ -67,6 +56,7 @@
 /**
  * Remove top borders on all cells.
  */
+
 .Table--striped th,
 .Table--striped td {
   border-top: 0;
@@ -82,12 +72,9 @@
 /**
  * Add border around table
  */
+
 .Table--withBorder tr {
   border-bottom: 1px var(--Table-border-color) solid;
-}
-
-.Table--withBorder th {
-  border-bottom: 2px var(--Table-border-color) solid;
 }
 
 .Table--withBorder th,
@@ -106,6 +93,7 @@
 /**
  * Reduce vertical padding to match horizontal
  */
+
 .Table--compact td,
 .Table--compact th {
   padding: var(--Table-cell-pad-h);
@@ -116,6 +104,7 @@
    ========================================================================== */
 
 .Table--responsive {
+
   /*
    * IE needs inline-block to position scrolling shadows otherwise use:
    * display: block;
@@ -135,6 +124,7 @@
 
 .Table--responsive,
 .Table--flip tbody {
+
   /* scrolling shadows */
   background:
     radial-gradient(
@@ -209,8 +199,8 @@
 }
 
 /* @FIXME */
+
 .Table--flip th {
   border-bottom: 0 !important;
-  border-right: 2px solid var(--Table-border-color) !important;
   border-top: 1px solid var(--Table-border-color) !important;
 }

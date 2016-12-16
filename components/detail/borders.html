@@ -337,6 +337,7 @@
 
 <span class="hljs-selector-pseudo">:root</span> {
   <span class="hljs-attribute">--Border-size-unit</span>: <span class="hljs-number">0.1rem</span>;
+  <span class="hljs-attribute">--Border-focus-color</span>: <span class="hljs-number">#ff8c00</span>;
 }
 
 <span class="hljs-selector-class">.u-border-top-xxs</span> { <span class="hljs-attribute">border-top</span>: <span class="hljs-built_in">var</span>(--Border-size-unit) solid currentColor <span class="hljs-meta">!important</span>; }
@@ -344,6 +345,12 @@
 <span class="hljs-selector-class">.u-border-bottom-xxs</span> { <span class="hljs-attribute">border-bottom</span>: <span class="hljs-built_in">var</span>(--Border-size-unit) solid currentColor <span class="hljs-meta">!important</span>; }
 <span class="hljs-selector-class">.u-border-left-xxs</span> { <span class="hljs-attribute">border-left</span>: <span class="hljs-built_in">var</span>(--Border-size-unit) solid currentColor <span class="hljs-meta">!important</span>; }
 <span class="hljs-selector-class">.u-border-all-xxs</span> { <span class="hljs-attribute">border</span>: <span class="hljs-built_in">var</span>(--Border-size-unit) solid currentColor <span class="hljs-meta">!important</span>; }
+
+<span class="hljs-selector-class">.u-border-top-xs</span> { <span class="hljs-attribute">border-top</span>: <span class="hljs-built_in">calc</span>(2 * var(--Border-size-unit)) solid currentColor <span class="hljs-meta">!important</span>; }
+<span class="hljs-selector-class">.u-border-right-xs</span> { <span class="hljs-attribute">border-right</span>: <span class="hljs-built_in">calc</span>(2 * var(--Border-size-unit)) solid currentColor <span class="hljs-meta">!important</span>; }
+<span class="hljs-selector-class">.u-border-bottom-xs</span> { <span class="hljs-attribute">border-bottom</span>: <span class="hljs-built_in">calc</span>(2 * var(--Border-size-unit)) solid currentColor <span class="hljs-meta">!important</span>; }
+<span class="hljs-selector-class">.u-border-left-xs</span> { <span class="hljs-attribute">border-left</span>: <span class="hljs-built_in">calc</span>(2 * var(--Border-size-unit)) solid currentColor <span class="hljs-meta">!important</span>; }
+<span class="hljs-selector-class">.u-border-all-xs</span> { <span class="hljs-attribute">border</span>: <span class="hljs-built_in">calc</span>(2 * var(--Border-size-unit)) solid currentColor <span class="hljs-meta">!important</span>; }
 
 <span class="hljs-selector-class">.u-border-top-m</span> { <span class="hljs-attribute">border-top</span>: <span class="hljs-built_in">calc</span>(10 * var(--Border-size-unit)) solid currentColor <span class="hljs-meta">!important</span>; }
 <span class="hljs-selector-class">.u-border-right-m</span> { <span class="hljs-attribute">border-right</span>: <span class="hljs-built_in">calc</span>(10 * var(--Border-size-unit)) solid currentColor <span class="hljs-meta">!important</span>; }
@@ -361,6 +368,7 @@
  *	Border for responsive cell
  *	see http://codepen.io/Hawkun/pen/rsIEp
  */</span>
+
 <span class="hljs-selector-class">.u-borderAlt</span> {
   <span class="hljs-attribute">box-shadow</span>:
     <span class="hljs-number">0.1em</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> currentColor,
@@ -373,6 +381,11 @@
 
 <span class="hljs-selector-class">.u-border-none</span> {
   <span class="hljs-attribute">border</span>: none <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.u-borderFocus</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-built_in">var</span>(--it-Base-focus-color) inset <span class="hljs-meta">!important</span>;
+  <span class="hljs-attribute">outline</span>: none;
 }
 </pre>
                             </code>
@@ -390,7 +403,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.9 KB</span>
+                    <span class="Meta-value">2.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -1198,8 +1211,56 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--irregular.html" data-pjax>
+                <span>Irregular</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="table--responsive.html" data-pjax>
                 <span>Responsive</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--twoheaders.html" data-pjax>
+                <span>Twoheaders</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1294,6 +1355,28 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-icons">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Icons</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-ita">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Ita</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="icons.html" data-pjax>
@@ -1314,6 +1397,16 @@
 
 
             </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -1958,8 +2051,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header--clone-menu.html" data-pjax>
-                <span>Clone Menu</span>
+            <a class="Tree-entityLink" href="header--menu.html" data-pjax>
+                <span>Menu</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="header--megamenu.html" data-pjax>
+                <span>Megamenu</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2189,54 +2306,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="offcanvas.html" data-pjax>
                 <span>Offcanvas</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="random.html" data-pjax>
-                <span>Random</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="scrolltop.html" data-pjax>
-                <span>Scrolltop</span>
                 
 
 <div class="Status Status--unlabelled">

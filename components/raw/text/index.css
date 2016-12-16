@@ -80,27 +80,23 @@
 }
 
 .u-textLowercase {
-  text-transform: lowercase;
+  text-transform: lowercase !important;
 }
 
 .u-textUppercase {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .u-textSmallCaps {
-  font-variant: small-caps;
+  font-variant: small-caps !important;
 }
 
 .u-textPreformatted {
   font-family: var(--Text-preFormatted-font) !important;
-  max-height: 32em;
-  overflow-x: auto !important;
 }
 
-.u-textPreformatted:hover,
-.u-textPreformatted:focus {
-  max-width: min-content;
-  width: min-content;
+.u-textOverflow {
+  overflow-x: auto !important;
 }
 
 /*

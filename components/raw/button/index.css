@@ -38,6 +38,7 @@
  * Modifier: default buttons
  * =========================
  */
+
 .Button--default,
 .Button--default:focus {
   background-color: var(--Button-default-bg);
@@ -68,6 +69,7 @@
  * Modifier: danger buttons
  * =========================
  */
+
 .Button--danger,
 .Button--danger:focus {
   background-color: var(--Button-danger-bg);
@@ -98,6 +100,7 @@
  * Modifier: info buttons
  * =========================
  */
+
 .Button--info,
 .Button--info:focus {
   background-color: var(--Button-info-bg);

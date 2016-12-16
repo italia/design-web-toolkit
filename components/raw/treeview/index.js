@@ -15,7 +15,7 @@ const Frtreeview = function({
   openOnClick: openOnClick = true,
   classFocused: classFocused = 'fr-tree-focus',
   classParent: classParent = 'fr-tree-parent',
-  multiselectable: multiselectable = false
+  multiselectable: multiselectable = true
     // readyClass: readyClass = 'fr-accordion--is-ready',
 } = {}) {
 

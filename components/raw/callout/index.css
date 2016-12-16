@@ -14,7 +14,7 @@
   padding: 1em;
 }
 
-.Callout mark {
+.Callout-title {
   background: transparent;
   display: block;
   font-weight: bold;
@@ -24,36 +24,36 @@
 
 .Callout--must {
   background: var(--Callout-color-must);
-  border-top-color: color(var(--Callout-color-must) l(-40%));
+  border-top-color: color(var(--Callout-color-must) l(-70%));
 }
 
-.Callout--must mark {
-  color: color(var(--Callout-color-must) l(-40%));
+.Callout--must > .Callout-title {
+  color: color(var(--Callout-color-must) l(-70%));
 }
 
 .Callout--should {
   background: var(--Callout-color-should);
-  border-top-color: color(var(--Callout-color-should) l(-40%));
+  border-top-color: color(var(--Callout-color-should) l(-70%));
 }
 
-.Callout--should mark {
-  color: color(var(--Callout-color-should) l(-40%));
+.Callout--should > .Callout-title {
+  color: color(var(--Callout-color-should) l(-70%));
 }
 
 .Callout--could {
   background: var(--Callout-color-could);
-  border-top-color: color(var(--Callout-color-could) l(-40%));
+  border-top-color: color(var(--Callout-color-could) l(-70%));
 }
 
-.Callout--could mark {
-  color: color(var(--Callout-color-could) l(-40%));
+.Callout--could > .Callout-title {
+  color: color(var(--Callout-color-could) l(-70%));
 }
 
 .Callout--example {
   background: var(--Callout-color-example);
-  border-top-color: color(var(--Callout-color-example) l(-40%));
+  border-top-color: color(var(--Callout-color-example) l(-70%));
 }
 
-.Callout--example mark {
-  color: color(var(--Callout-color-example) l(-40%));
+.Callout--example > .Callout-title {
+  color: color(var(--Callout-color-example) l(-70%));
 }

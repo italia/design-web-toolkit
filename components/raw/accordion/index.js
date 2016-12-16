@@ -14,7 +14,7 @@ const accordion = Fraccordion({
 	// Boolean - If set to false, all accordion panels will be closed on init()
 	firstPanelsOpenByDefault: false,
 	// Boolean - If set to false, each accordion instance will only allow a single panel to be open at a time
-	multiselectable: false,
+	multiselectable: true,
 	// String - Class name that will be added to the selector when the component has been initialised
 	readyClass: 'fr-accordion--is-ready'
 })

@@ -169,6 +169,12 @@ class Menu {
     this.$element.data(this.componentName, this)
 
     this.$element.attr('role', 'menu')
+    // @FIXME
+    // ita-web-toolkit mod:
+    // take care with the following as menuitem(s)
+    // got a special treatment by screen readers
+      .find('li').attr('role', 'menuitem')
+
     this.close()
     var self = this
 
@@ -214,7 +220,7 @@ class Menutrigger {
           e.preventDefault()
           self.menu.toggle(this, true)
         })
-    } else if (this.$element.is('input')) {      
+    } else if (this.$element.is('input')) {
       this.$element
         .bind('input keyup', function() {
           if (this.value === '') {

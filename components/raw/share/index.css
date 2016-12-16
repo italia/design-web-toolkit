@@ -61,3 +61,7 @@
 .Share-revealText:hover {
   text-decoration: underline;
 }
+
+.Share-revealText:focus {
+  background-color: transparent;
+}

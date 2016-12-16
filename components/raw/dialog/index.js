@@ -1,4 +1,4 @@
-import Frdialogmodal from 'fr-dialogmodal'
+import Frdialogmodal from 'fr-dialogmodal/dialogmodal.js'
 
 /* eslint-disable no-unused-vars */
 
