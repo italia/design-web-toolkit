@@ -1,7 +1,6 @@
 /** @define Megamenu; weak; */
 
 :root {
-  --Megamenu-border-color: #dedede;
   --Megamenu-arrow-width: 0.5em;
 }
 
@@ -109,7 +108,7 @@
 /* Some custom style */
 
 .Megamenu--default {
-  @extend .u-background-40;
+  background-color: color(var(--Color-primary) l(+5%) s(-15%)) !important;
 }
 
 .Megamenu--default .Megamenu-item:first-child {
