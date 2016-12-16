@@ -1,75 +1,70 @@
-/* global jQuery, define */
+import $ from 'jquery'
 
-/*
- *	Fork of
- *
- *	https://github.com/carlwoodhouse/jquery.cookieBar
- *	The MIT License (MIT)
- *	Copyright (c) 2016 Carl Woodhouse
- *
- *
- */
-(function(factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['jquery'], factory)
-  } else if (typeof exports === 'object') {
-    // CommonJS
-    factory(require('jquery'))
-  } else {
-    // Browser globals
-    factory(jQuery)
+$.fn.cookieBar = function(options) {
+  const settings = $.extend({
+    'acceptButton': '.js-cookieBarAccept',
+    'secure': false,
+    'path': '/',
+    'domain': '',
+    'threshold': 500
+  }, options)
+
+  const _hide = ($cookiebar) => {
+    $cookiebar
+      .attr('aria-hidden', 'true')
+      .attr('aria-live', 'off')
+      .hide()
   }
-}(function($) {
 
-  $.fn.cookieBar = function(options) {
-    var settings = $.extend({
-      'acceptButton': '.js-cookieBarAccept',
-      'secure': false,
-      'path': '/',
-      'domain': '',
-      'threshold': 500
-    }, options)
+  const _show = ($cookiebar) => {
+    $cookiebar
+      .attr('aria-hidden', 'false')
+      .attr('aria-live', 'polite')
+      .show()
+  }
 
-    var _accept = function() {
-      $.cookie('cookiebar', 'hide', {
-        path: settings.path,
-        secure: settings.secure,
-        domain: settings.domain,
-        expires: 30
-      })
-      $(document).trigger('accept.cookiebar')
-    }
+  const _accept = function($cookiebar) {
+    $.cookie('cookiebar', 'hide', {
+      path: settings.path,
+      secure: settings.secure,
+      domain: settings.domain,
+      expires: 30
+    })
+    $(document).trigger('accept.cookiebar', [$cookiebar])
+  }
 
-    $.cookieBar = $.cookieBar || {}
+  $(document).on('accept.cookiebar', (e, $cookiebar) => {
+    _hide($cookiebar)
+  })
 
-    $.cookieBar.isAccepted = function() {
-      return $.cookie('cookiebar') === 'hide'
-    }
+  $.cookieBar = $.cookieBar || {}
 
-    return this.each(function() {
-      var $cookiebar = $(this)
+  $.cookieBar.isAccepted = function() {
+    return $.cookie('cookiebar') === 'hide'
+  }
 
-      if (!$.cookieBar.isAccepted()) {
-        if (settings.threshold > 0) {
-          $(window).on('scroll.cookiebar', (function() {
-            if ($(window).scrollTop() > settings.threshold) {
-              $(window).unbind('scroll.cookiebar')
-              _accept()
-              $cookiebar.hide()
-            }
-          }))
-        }
-        $cookiebar.show()
+  return this.each(function() {
+    var $cookiebar = $(this)
+
+    if (!$.cookieBar.isAccepted()) {
+      if (settings.threshold > 0) {
+        $(window).on('scroll.cookiebar', (function() {
+          if ($(window).scrollTop() > settings.threshold) {
+            $(window).unbind('scroll.cookiebar')
+            _accept($cookiebar)
+          }
+        }))
       }
+      _show($cookiebar)
+    }
 
-      $cookiebar.find(settings.acceptButton).click(function() {
-        $cookiebar.hide()
-        _accept()
+    $cookiebar
+      .find(settings.acceptButton)
+      .click(function() {
+        _accept($cookiebar)
         return false
       })
-    })
 
-  }
+  })
 
-}))
+}

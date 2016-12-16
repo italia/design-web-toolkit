@@ -1,3 +1,8 @@
+### 0.1.0-alpha5
+
+* Fix processo di build su sistemi Windows
+* Fix accessibilità e HTML semantico
+
 ### 0.1.0-alpha4
 
 * Aggiunti script per generare screenshot (pdf e svg) dei componenti
