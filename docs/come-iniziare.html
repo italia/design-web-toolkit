@@ -86,11 +86,28 @@ come mostrato nel codice di esempio:</p>
 <li><a href="https://github.com/italia-it/ita-web-toolkit/tree/gh-pages/build">CSS / Javascript già compilati</a></li>
 <li><a href="https://github.com/italia-it/ita-web-toolkit/blob/master/src/_preview.tmpl"><code>index.html</code> con layout di pagina di esempio</a></li>
 </ul>
-<p>Se vuoi personalizzare gli elementi grafici (es. colori),
-seguendo questa modalità sarai obbligato a sovrascrivere
-le classi del CSS tramite un ulteriore foglio di stile <em>ad-hoc</em>;
-questa metodologia non è ottimale laddove le personalizzazioni
-risultano essere complesse: in questo caso è consigliato
+<p>In produzione è necessario includere i seguenti file:</p>
+<ul>
+<li><code>IWT.min.js</code> - il file Javascript minificato, per l’utilizzo degli elementi dinamici</li>
+<li><code>build.css</code> - il CSS con lo stile di base</li>
+<li><code>vendor.css</code> - il CSS degli elementi dinamici appartenenti a progetti esterni al toolkit</li>
+</ul>
+<p>La directory <code>vendor</code> contiene i polyfill che è necessario includere per garantire la compatibilità
+con i browser obsoleti (es. IE9).</p>
+<p>La directory <code>src/icons</code> contiene le icone personalizzate in formato SVG / PNG / icon font.</p>
+<p>In fase di debug / sviluppo è possibile utilizzare <code>IWT.js</code> al posto del corrispondente minificato <code>IWT.min.js</code>.</p>
+<p>I file con estensione *.map sono utili solo in fase di debug e possono essere omessi in produzione:</p>
+<ul>
+<li><code>IWT.js.map</code></li>
+<li><code>IWT.min.js.map</code></li>
+<li><code>vendor.css.map</code></li>
+</ul>
+<h2 id="personalizzare-lo-stile-css-">Personalizzare lo stile (CSS)</h2>
+<p>Per personalizzare gli elementi grafici (es. colori)
+utilizzando i file già compilati è necessario <strong>sovrascrivere</strong> le classi del CSS di base (<code>build.css</code>)
+includendo un ulteriore CSS contenente le direttive <em>custom</em>;
+questa metodologia non è ottimale se le personalizzazioni
+sono particolarmente complesse: in questo caso è consigliato
 seguire la procedura descritta in “<a href="sviluppare">Utilizzare l’ambiente di sviluppo</a>“
 agendo direttamente sul codice sorgente dei fogli di stile del toolkit
 per realizzare una <em>build</em> personalizzata, prima di integrare il CSS nel layout.</p>
