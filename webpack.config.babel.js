@@ -1,42 +1,29 @@
 var webpack = require('webpack')
 var path = require('path')
 var libraryName = 'IWT'
-var outputFile = libraryName + '.js'
+var outputFile = libraryName + '.min.js'
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
-var env = process.env.WEBPACK_ENV
+  // var env = process.env.WEBPACK_ENV
 
 var plugins = []
-var outputFile
-
 var loaders = []
 
-if (env === 'build') {
-  plugins.push(new UglifyJsPlugin({
-    minimize: true
-  }))
-  outputFile = libraryName + '.min.js'
-} else {
-  outputFile = libraryName + '.js'
-}
+plugins.push(new UglifyJsPlugin({
+  minimize: true
+}))
 
 loaders.push({
-  test: /\.png/, loader: 'url-loader?limit=100000&minetype=image/png'
+  test: /\.png/,
+  loader: 'url-loader?limit=100000&minetype=image/png'
 })
 
-// if (env === 'build') {
-  loaders.push({
-    test: /\.css$/,
-    loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-  })
-  plugins.push(new ExtractTextPlugin('vendor.css'))
-// } else {
-//   loaders.push({
-//     test: /\.css$/,
-//     loader: 'style-loader!css-loader'
-//   })
-// }
+loaders.push({
+  test: /\.css$/,
+  loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+})
+plugins.push(new ExtractTextPlugin('vendor.css'))
 
 var config = {
   entry: __dirname + '/index.js',
@@ -56,7 +43,7 @@ var config = {
     loaders: [...loaders, {
       test: /(\.jsx|\.js)$/,
       loader: 'babel-loader',
-//      exclude: /(node_modules|bower_components)/
+      //      exclude: /(node_modules|bower_components)/
     }, {
       test: /(\.jsx|\.js)$/,
       loader: 'eslint-loader',
