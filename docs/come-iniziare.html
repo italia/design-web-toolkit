@@ -92,16 +92,10 @@ come mostrato nel codice di esempio:</p>
 <li><code>build.css</code> - il CSS con lo stile di base</li>
 <li><code>vendor.css</code> - il CSS degli elementi dinamici appartenenti a progetti esterni al toolkit</li>
 </ul>
-<p>La directory <code>vendor</code> contiene i polyfill che è necessario includere per garantire la compatibilità
+<p>La directory <code>vendor</code> contiene i <em>polyfill</em> che è necessario includere per garantire la compatibilità
 con i browser obsoleti (es. IE9).</p>
 <p>La directory <code>src/icons</code> contiene le icone personalizzate in formato SVG / PNG / icon font.</p>
-<p>In fase di debug / sviluppo è possibile utilizzare <code>IWT.js</code> al posto del corrispondente minificato <code>IWT.min.js</code>.</p>
-<p>I file con estensione *.map sono utili solo in fase di debug e possono essere omessi in produzione:</p>
-<ul>
-<li><code>IWT.js.map</code></li>
-<li><code>IWT.min.js.map</code></li>
-<li><code>vendor.css.map</code></li>
-</ul>
+<p>I file con estensione *.map sono utili solo in fase di debug e possono essere omessi in produzione.</p>
 <h2 id="personalizzare-lo-stile-css-">Personalizzare lo stile (CSS)</h2>
 <p>Per personalizzare gli elementi grafici (es. colori)
 utilizzando i file già compilati è necessario <strong>sovrascrivere</strong> le classi del CSS di base (<code>build.css</code>)
