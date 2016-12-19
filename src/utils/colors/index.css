@@ -226,7 +226,7 @@
 }
 
 .u-color-compl {
-  color: color(var(--Color-primary) h(+180) s(+50%) l(70%)) !important;
+  color: color(var(--Color-primary) h(+180) s(100%) l(70%)) !important;
 }
 
 .u-background-compl {

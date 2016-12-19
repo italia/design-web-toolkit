@@ -245,14 +245,6 @@
   top: 0;
 }
 
-.Megamenu--default .Megamenu-area > * {
-  @extend .u-flex;
-  @extend .u-flexCol;
-  @extend .u-margin-top-xs;
-  @extend .u-margin-bottom-xs;
-  @extend .u-flexJustifyCenter;
-}
-
 .Megamenu--default .Megamenu-close {
   @extend .u-posAbsolute;
   @extend .u-text-r-m;

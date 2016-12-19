@@ -4,6 +4,7 @@
   --Layout-container-wide: 144rem;
   --Layout-container-wider: 168rem;
   --Layout-container-medium: 128rem;
+  --Layout-container-small: 96rem;
   --Layout-gutter: 0.8rem;
   --Layout-gutter-wide: 2.4rem;
   --Layout-prose-width: 32em;
@@ -59,6 +60,10 @@
 
 .u-layout-medium {
   max-width: var(--Layout-container-medium) !important;
+}
+
+.u-layout-small {
+  max-width: var(--Layout-container-small) !important;
 }
 
 .u-layoutCenter {
