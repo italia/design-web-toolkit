@@ -6,10 +6,6 @@
   width: 100%;
 }
 
-.Header a:focus {
-  background: transparent;
-}
-
 .Header-banner {
   @extend .u-cf;
   @extend .u-sizeFull;
