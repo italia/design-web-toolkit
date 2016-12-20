@@ -18,6 +18,7 @@ che hanno una propria licenza diversa da CC0.
 - [src/modules/cookiebar/cookiebar.js](https://github.com/carlwoodhouse/jquery.cookieBar) (c) 2016 Carl Woodhouse, licenza MIT
 - [src/components/form/index.css](https://github.com/giuseppeg/suitcss-components-form) (c) Giuseppe Gurgone, licenza MIT
 - [src/components/table/index.css](https://github.com/trunkclub/suitcss-components-table) (c) Trunk Club, licenza MIT
+- [src/print/index.css](https://github.com/h5bp/html5-boilerplate) (c) HTML5 Boilerplate, licenza MIT
 
 Tramite gli [archivi npm](https://www.npmjs.com/):
 
