@@ -75,6 +75,7 @@
 .Spid-idp:hover,
 .Spid-idp:focus {
   @extend .u-background-grey-20;
+  @extend .u-borderSoftFocus;
 }
 
 .Spid-idp > img {

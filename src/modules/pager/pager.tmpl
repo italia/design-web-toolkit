@@ -1,0 +1,28 @@
+<nav role="navigation" aria-label="Navigazione paginata" class="u-layout-prose">
+  <ul class="Grid Grid--fit Grid--alignMiddle u-text-r-xxs">
+    <li class="Grid-cell u-textCenter">
+      <a href="#" class="u-color-50 u-textClean u-block">
+        <span class="Icon-chevron-left u-text-r-m" role="presentation"></span>
+        <span class="u-hiddenVisually">Pagina precedente</span>
+      </a>
+    </li>
+    <li class="Grid-cell u-textCenter">
+      <span aria-label="Pagina 1" class="u-padding-r-all u-block u-background-50 u-color-white">
+        <span class="u-text-r-m">1</span>
+      </span>
+    </li>
+    {% for i in range(2, 6) %}
+    <li class="Grid-cell u-textCenter">
+      <a href="/page-{{ i }}" aria-label="Pagina {{ i }}" class="u-padding-r-all u-color-50 u-textClean u-block">
+        <span class="u-text-r-m">{{ i }}</span>
+      </a>
+    </li>
+    {% endfor %}
+    <li class="Grid-cell u-textCenter">
+      <a href="#" class="u-padding-r-all u-color-50 u-textClean u-block">
+        <span class="Icon-chevron-right u-text-r-m" role="presentation"></span>
+        <span class="u-hiddenVisually">Pagina successiva</span>
+      </a>
+    </li>
+  </ul>
+</nav>
