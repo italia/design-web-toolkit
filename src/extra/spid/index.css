@@ -31,12 +31,9 @@
   text-transform: none !important;
 }
 
+.Spid-button:focus,
 .Spid-button:hover {
   background-color: color(var(--Spid-background) l(-15%));
-}
-
-.Spid-button:focus {
-  background-color: var(--Spid-background);
 }
 
 .Spid-button > span {
@@ -56,6 +53,7 @@
   width: var(--Spid-img-width);
 }
 
+.Spid-button:focus > img,
 .Spid-button:hover > img {
   color: color(var(--Spid-background) l(-8%) s(-15%));
 }

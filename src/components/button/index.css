@@ -39,8 +39,7 @@
  * =========================
  */
 
-.Button--default,
-.Button--default:focus {
+.Button--default {
   background-color: var(--Button-default-bg);
   border-color: var(--Button-default-border);
   color: var(--Button-default-color);
@@ -53,6 +52,7 @@
   color: var(--Button-default-color) !important;
 }
 
+.Button--default:focus,
 .Button--default:hover {
   background-color: color(var(--Button-default-bg) l(-10%));
   border-color: color(var(--Button-default-border) l(-10%));
@@ -70,8 +70,7 @@
  * =========================
  */
 
-.Button--danger,
-.Button--danger:focus {
+.Button--danger {
   background-color: var(--Button-danger-bg);
   border-color: var(--Button-danger-border);
   color: var(--Button-danger-color);
@@ -84,6 +83,7 @@
   color: var(--Button-danger-color) !important;
 }
 
+.Button--danger:focus,
 .Button--danger:hover {
   background-color: color(var(--Button-danger-bg) l(-10%));
   border-color: color(var(--Button-danger-border) l(-10%));
@@ -101,8 +101,7 @@
  * =========================
  */
 
-.Button--info,
-.Button--info:focus {
+.Button--info {
   background-color: var(--Button-info-bg);
   border-color: var(--Button-info-border);
   color: var(--Button-info-color);
@@ -115,6 +114,7 @@
   color: var(--Button-info-color) !important;
 }
 
+.Button--info:focus,
 .Button--info:hover {
   background-color: color(var(--Button-info-bg) l(-10%));
   border-color: color(var(--Button-info-border) l(-10%));

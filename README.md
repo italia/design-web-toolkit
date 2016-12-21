@@ -1,5 +1,5 @@
 # ita-web-toolkit
-## Linee guida di design per i siti web della Pubblica Amministrazione
+## Linee guida di design per i servizi web della Pubblica Amministrazione
 ### Implementazione di riferimento
 
 L'implementazione di riferimento contiene fogli di stile CSS, componenti Javascript accessibili e snippet HTML
