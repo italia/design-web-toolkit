@@ -16,7 +16,7 @@ sovrascrivere le variabili utilizzate all'interno del toolkit:
                           Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
 }
 
-.Pac {
+.t-Pac {
   font-family: var(--Pac-font-family-sans);
 }
 ```
@@ -35,11 +35,11 @@ applicando tinte e tonalità secondo quanto descritto nel [relativo paragrafo de
 in questo modo è sufficiente sovrascrivere la variabile `--Color-primary` per ottenere l'intera *palette*.
 
 Tutte le modifiche che riguardano uno specifico tema vanno applicate assegnando al tag `body`
-la **classe** utilizzata in `src/themes/index.css` (nel caso specifico `Pac`, ma può esser scelta arbitrariamente).
+la **classe** utilizzata in `src/themes/index.css` (nel caso specifico `t-Pac`, ma può esser scelta arbitrariamente).
 
 ```
 <!-- nel template HTML -->
-<body class="Pac"> ...
+<body class="t-Pac"> ...
 ```
 
 Ciò significa che tale classe deve comparire **necessariamente** come prefisso nei selettori
@@ -49,7 +49,7 @@ modifica ai moduli effettuata sovrascrivendo le regole originali).
 Ad esempio, all'interno di `src/themes/index.css`, per applicare un `padding` alla classe `.Alert` utilizzerò:
 
 ```
-.Pac .Alert {
+.t-Pac .Alert {
   padding-right: 1em;
 }
 ```

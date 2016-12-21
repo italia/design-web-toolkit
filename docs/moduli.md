@@ -41,4 +41,4 @@ Nei file Javascript è possibile utilizzare la sintassi [ECMAScript 2015](https:
 - i componenti Javascript devono dichiarare tutte le loro dipendenze nell'`index.js` (es. tramite il costrutto `import`)
 - è incoraggiato l'utilizzo del costrutto PostCSS `@extend`, ma **esclusivamente** per estendere le classi di utilità (`u-*`)
 
-[Struttura del filesystem](struttura)
+[Compatibilita con altri framework](compatibilita)
