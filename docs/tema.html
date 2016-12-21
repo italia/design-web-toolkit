@@ -79,7 +79,7 @@ sovrascrivere le variabili utilizzate all’interno del toolkit:</p>
                           Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
 }
 
-<span class="hljs-selector-class">.Pac</span> {
+<span class="hljs-selector-class">.t-Pac</span> {
   <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--Pac-font-family-sans);
 }</pre></code><p>Similmente è possibile sovrascrivere qualsiasi variabile contenuta nei moduli CSS,
 modificando ad esempio i colori che caratterizzano l’aspetto grafico dei vari elementi.</p>
@@ -93,13 +93,13 @@ modificando ad esempio i colori che caratterizzano l’aspetto grafico dei vari 
 applicando tinte e tonalità secondo quanto descritto nel <a href="http://design.italia.it/linee-guida/colori/">relativo paragrafo delle Linee Guida</a>;
 in questo modo è sufficiente sovrascrivere la variabile <code>--Color-primary</code> per ottenere l’intera <em>palette</em>.</p>
 <p>Tutte le modifiche che riguardano uno specifico tema vanno applicate assegnando al tag <code>body</code>
-la <strong>classe</strong> utilizzata in <code>src/themes/index.css</code> (nel caso specifico <code>Pac</code>, ma può esser scelta arbitrariamente).</p>
+la <strong>classe</strong> utilizzata in <code>src/themes/index.css</code> (nel caso specifico <code>t-Pac</code>, ma può esser scelta arbitrariamente).</p>
 <code><pre><span class="hljs-comment">&lt;!-- nel template HTML --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Pac"</span>&gt;</span> ...</pre></code><p>Ciò significa che tale classe deve comparire <strong>necessariamente</strong> come prefisso nei selettori
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"t-Pac"</span>&gt;</span> ...</pre></code><p>Ciò significa che tale classe deve comparire <strong>necessariamente</strong> come prefisso nei selettori
 di ogni nuova regola CSS introdotta dal tema (e/o qualsiasi
 modifica ai moduli effettuata sovrascrivendo le regole originali).</p>
 <p>Ad esempio, all’interno di <code>src/themes/index.css</code>, per applicare un <code>padding</code> alla classe <code>.Alert</code> utilizzerò:</p>
-<code><pre><span class="hljs-selector-class">.Pac</span> <span class="hljs-selector-class">.Alert</span> {
+<code><pre><span class="hljs-selector-class">.t-Pac</span> <span class="hljs-selector-class">.Alert</span> {
   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;
 }</pre></code><p>e <strong>non</strong> quindi:</p>
 <code><pre><span class="hljs-comment">/* No !!! Mai senza prefisso ! */</span>
@@ -179,6 +179,16 @@ modifica ai moduli effettuata sovrascrivendo le regole originali).</p>
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="moduli.html" data-pjax>
                 <span>Creare o modificare un modulo</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="compatibilita.html" data-pjax>
+                <span>Compatibilità con altri framework</span>
                 
             </a>
         </li>
