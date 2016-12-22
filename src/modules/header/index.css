@@ -25,11 +25,23 @@
   @extend .u-sm-before4of12;
   @extend .u-md-before3of12;
   @extend .u-text-r-xxs;
-  @extend .u-textWeight-600;
   @extend .u-color-white;
   @extend .u-textClean;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
+
+  @media (--lg-viewport), (--md-viewport) {
+    @extend .u-textWeight-600;
+  }
+}
+
+.Header-owner > a > span {
+  @extend .u-text-xxs;
+  @extend .u-lineHeight-s;
+
+  @media (--lg-viewport), (--md-viewport) {
+    @extend .u-text-xs;
+  }
 }
 
 /* ========================================== */
@@ -154,6 +166,9 @@
   @extend .u-textWeight-400;
   @extend .u-color-white;
   @extend .u-textClean;
+  @extend .u-hidden;
+  @extend .u-md-inline;
+  @extend .u-lg-inline;
 }
 
 /* Search button for small screens
