@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
+<!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="it">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
+      <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
+    o dal repository locale (src/fonts)
+  -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: {
+        families: ['Titillium+Web:400,600,700,400italic:latin']
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- include html5shim per Explorer 8 -->
+  <script src="../../build/vendor/modernizr.js"></script>
+
+  <link media="all" rel="stylesheet" href="../../build/vendor.css">
+  <link media="all" rel="stylesheet" href="../../build/build.css">
+
+  <script src="../../build/vendor/jquery.min.js"></script>
+
+  <title>Preview Layout</title>
+</head>
+
+<body class="t-Pac">
+
+  <form class="Form Form--spaced u-padding-all-xl u-text-r-xs">
+  <fieldset class="Form-fieldset">
+    <legend class="Form-legend">Informazioni anagrafiche</legend>
+
+    <div class="Form-field">
+      <label class="Form-label is-required" for="nome">Nome</label>
+      <input class="Form-input u-text-r-s u-borderRadius-m" id="nome" aria-required="true" required>
+    </div>
+
+    <div class="Form-field">
+      <label class="Form-label is-required" for="cognome">Cognome</label>
+      <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
+    </div>
+
+    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
+      <legend class="Form-legend is-required" for="sex1">Sesso</legend>
+      <label class="Form-label Form-label--block">
+        <input type="radio" class="Form-input" name="sex" aria-required="true" required>
+        <span class="Form-fieldIcon" role="presentation"></span> M
+      </label>
+      <label class="Form-label Form-label--block">
+        <input type="radio" class="Form-input" name="sex" aria-required="true" required>
+        <span class="Form-fieldIcon" role="presentation"></span> F
+      </label>
+    </fieldset>
+
+    <div class="Form-field">
+      <label class="Form-label" for="ddn">Data di nascita <small>(opzionale)</small></label>
+      <input type="text" class="Form-input u-text-r-s u-borderRadius-m" id="ddn" aria-describedby="info-ddn">
+      <div role="tooltip" id="info-ddn">nel formato GG/MM/ANNO</div>
+    </div>
+
+  </fieldset>
+
+  <fieldset class="Form-fieldset">
+    <legend class="Form-legend">Indirizzo del domicilio</legend>
+
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+        <div class="Form-field">
+          <label class="Form-label is-required" for="citta">Città</label>
+          <input class="Form-input u-text-r-s u-borderRadius-m" id="citta" aria-required="true" required>
+        </div>
+      </div>
+
+      <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
+        <div class="Form-field">
+          <label class="Form-label is-required" for="provincia">Provincia</label>
+          <select class="Form-input u-text-r-s u-borderRadius-m" id="provincia" aria-required="true" required>
+            <option disabled selected>seleziona</option>
+            <option>MO</option>
+            <option>MI</option>
+            <option>ME</option>
+            <option>MB</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="Form-field Grid-cell u-md-size8of12 u-lg-size8of12">
+        <label class="Form-label is-required" for="via">Via</label>
+        <input class="Form-input is-disabled u-text-r-s u-borderRadius-m" disabled id="via">
+      </div>
+
+      <div class="Form-field Grid-cell u-md-size4of12 u-lg-size4of12">
+        <label class="Form-label is-required" for="cap">CAP</label>
+        <input class="Form-input u-text-r-s u-borderRadius-m" id="cap" aria-required="true" required>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="Form-fieldset">
+    <legend class="Form-legend">Altre informazioni</legend>
+
+    <fieldset class="Form-field Form-field--choose Grid-cell">
+      <legend class="Form-legend is-required">Voglio essere ricontattato</legend>
+      <label class="Form-label Form-label--block" for="contact1">
+        <input type="checkbox" class="Form-input" id="contact1" aria-required="true" required>
+        <span class="Form-fieldIcon" role="presentation"></span> Via mail
+      </label>
+      <label class="Form-label is-required Form-label--block" for="contact2">
+        <input type="checkbox" class="Form-input" id="contact2" aria-required="true" required>
+        <span class="Form-fieldIcon" role="presentation"></span> Per telefono
+      </label>
+    </fieldset>
+
+    <div class="Form-field Grid-cell u-size4of4">
+      <label class="Form-label" for="cap">Varie ed eventuali <small>(opzionale)</small></label>
+      <textarea class="Form-input Form-textarea u-borderRadius-m"></textarea>
+    </div>
+  </fieldset>
+
+  <div class="Form-field Grid-cell u-textRight">
+    <button type="button" class="Button Button--default Button--shadow u-text-m">Invia</button>
+  </div>
+
+  </div>
+</form>
+
+
+  <!--[if IE 8]>
+  <script src="../../build/vendor/respond.min.js"></script>
+  <script src="../../build/vendor/rem.min.js"></script>
+  <script src="../../build/vendor/selectivizr.js"></script>
+  <script src="../../build/vendor/slice.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <script src="../../build/vendor/polyfill.min.js"></script>
+  <![endif]-->
+
+  <script src="../../build/IWT.min.js"></script>
+
+</body>
+</html>
+
