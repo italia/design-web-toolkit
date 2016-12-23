@@ -1,9 +1,9 @@
-{% for class in [ 'u-textSmooth', 'u-textClean', 'u-textWeight-200', 'u-textWeight-300', 'u-textWeight-400', 'u-textWeight-600', 'u-textWeight-700', 'u-textWeight-900', 'u-textNormal', 'u-textItalic', 'u-textPreformatted', 'u-text-r-xxl', 'u-text-r-xl',
-'u-text-r-l', 'u-text-r-m', 'u-text-r-s', 'u-text-r-xs', 'u-text-r-xxs', 'u-text-p', 'u-text-h1', 'u-text-h2', 'u-text-h3', 'u-text-h4', 'u-text-h5', 'u-text-h6' ] %}
+{% for class in [ 'u-textSmooth', 'u-textClean', 'u-textWeight-400', 'u-textWeight-600', 'u-textWeight-700',  'u-textNormal',
+'u-textSecondary', 'u-textItalic', 'u-textPreformatted' ] %}
 
 <section class="u-layout-prose u-padding-bottom-xxl">
-  <h2>{{ class }}</h2>
-  <p class="{{ class }}">
+  <small class="u-text-r-xs u-textWeight-400">{{ class }}:</small>
+  <p class="{{ class }} u-margin-top-xs">
     {{ __TEXTS__[1] }}
   </p>
 </section>
