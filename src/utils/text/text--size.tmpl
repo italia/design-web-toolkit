@@ -1,0 +1,12 @@
+{% for class in [ 'u-text-r-xxl', 'u-text-r-xl',
+'u-text-r-l', 'u-text-r-m', 'u-text-r-s', 'u-text-r-xs', 'u-text-r-xxs', 'u-text-p', 'u-text-h1', 'u-text-h2', 'u-text-h3', 'u-text-h4', 'u-text-h5', 'u-text-h6' ] %}
+
+<section class="u-layout-prose u-padding-bottom-xxl">
+  <small class="u-text-r-xs u-textWeight-400">{{ class }}:</small>
+  <p class="{{ class }} u-margin-top-xs">
+  <p class="{{ class }}">
+    {{ __WORDS__[1] }}
+  </p>
+</section>
+
+{% endfor %}
