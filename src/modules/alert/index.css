@@ -8,7 +8,7 @@
   --Alert-warning-bg: #ffef9f;
   --Alert-warning-color: #4f4310;
   --Alert-warning-border: #1e1212;
-  --Alert-warning-background-image: inline("icons/ita/img/SVG/error.svg");
+  --Alert-warning-background-image: inline("icons/ita/img/SVG/warning.svg");
   --Alert-success-bg: #dff0d8;
   --Alert-success-color: #274d28;
   --Alert-success-border: #d6e9c6;
@@ -16,6 +16,7 @@
   --Alert-info-bg: #c6f3f5;
   --Alert-info-color: #004446;
   --Alert-info-border: #1e1212;
+  --Alert-info-background-image: inline("icons/ita/img/SVG/info.svg");
 }
 
 .Alert {
@@ -53,7 +54,7 @@
   background-color: var(--Alert-warning-bg);
 }
 
-.Alert--error.Alert--withIcon {
+.Alert--warning.Alert--withIcon {
   background: var(--Alert-warning-background-image) no-repeat 1em 0.5em;
 }
 
@@ -73,6 +74,10 @@
 .Alert--info {
   border-left-color: color(var(--Alert-info-bg) l(-40%));
   color: var(--Alert-info-color);
+}
+
+.Alert--info.Alert--withIcon {
+  background: var(--Alert-info-background-image) no-repeat 1em 0.5em;
 }
 
 .Alert--info.Alert--withBg {
