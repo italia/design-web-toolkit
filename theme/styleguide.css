@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+
+.Header-title,
+.Document-title,
+.Tree-entityLink,
+.Tree-collectionLabel,
+.Prose,
+.Prose > * {
+  font-family: Titillium web, sans-serif;
+  line-height: 1.55;
+}
+
+.Header-title {
+  background: url("/theme/logo-it.svg") no-repeat 1em 50%;
+  background-size: 30px 30px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding-left: 3em;
+}
+
+.Document-title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.Prose {
+  font-size: 18px;
+}
+
+.Document-header,
+.Document-content {
+  max-width: 40em;
+}
+
+.Prose a,
+.Prose a:visited {
+  color: #06c;
+}
+
+.Header {
+  background-color: #06c;
+  box-shadow: 0 3px 3px #aaa;
+}
+
+.Tree-entityLink,
+.Tree-collectionLabel {
+  border-bottom: 1px solid #e7e6e4;
+  font-size: 16px !important;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em;
+}
+
+.Tree-entityLink span,
+.Tree-collectionLabel span {
+  color: #003e54;
+}
+
+.Tree-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.Tree-entity.is-current a {
+  background: #06c;
+  font-weight: 700;
+}
+
+.Tree-entity.is-current span {
+  color: white !important;
+}
+
+.Frame-panel--sidebar {
+  background-color: white;
+}

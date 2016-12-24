@@ -1,6 +1,6 @@
 const fractal = module.exports = require('@frctl/fractal').create()
 
-fractal.set('project.title', 'Italia.it Web Toolkit Styleguide')
+fractal.set('project.title', 'Web Toolkit Styleguide')
 
 fractal.components.set('path', __dirname + '/src')
 
@@ -65,8 +65,14 @@ const myCustomisedTheme = mandelbrot({
   'nav': ['docs', 'components'],
   //  ["html", "view", "context", "resources", "info", "notes"]
   'panels': ['html', 'resources', 'info', 'notes'],
-  'lang': 'it'
+  'lang': 'it',
+  'styles': [
+    'default',
+    '/theme/styleguide.css'
+  ]
 })
+
+myCustomisedTheme.addStatic(__dirname + '/theme', '/theme')
 
 fractal.components.set('title', 'Componenti')
 fractal.docs.set('title', 'Documentazione')
