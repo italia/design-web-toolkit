@@ -68,11 +68,11 @@ const myCustomisedTheme = mandelbrot({
   'lang': 'it',
   'styles': [
     'default',
-    '/theme/styleguide.css'
+    '/ita-web-toolkit/theme/styleguide.css'
   ]
 })
 
-myCustomisedTheme.addStatic(__dirname + '/theme', '/theme')
+myCustomisedTheme.addStatic(__dirname + '/theme', '/ita-web-toolkit/theme')
 
 fractal.components.set('title', 'Componenti')
 fractal.docs.set('title', 'Documentazione')

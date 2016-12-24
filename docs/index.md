@@ -6,7 +6,7 @@ label: Introduzione
 
 ## Implementazione CSS/HTML di riferimento
 
-L'implementazione di riferimento (toolkit) delle "Linee guida di design"
+L'implementazione di riferimento (toolkit) delle "[Linee guida di design](http://design.italia.it)"
 fornisce componenti grafici e interattivi da incorporare
 nei siti web delle Pubbliche Amministrazioni (PA):
 
@@ -16,13 +16,12 @@ nei siti web delle Pubbliche Amministrazioni (PA):
 - snippet e template HTML (es. [parti di pagina]({{ '/components/detail/layout--gallery' | path }})
 o [pagine complete]({{ '/components/detail/page--menu' | path }})) nella forma di una styleguide navigabile
 
-### Stato del progetto
+### Contribuire al progetto
 
-Nel settembre 2016 è rilasciata la versione iniziale (0.1.0).
+È possibile [seguire i progressi](https://github.com/italia-it/ita-web-toolkit/issues)
+del toolkit e contribuire su GitHub:
 
-La prima release ritenuta adatta all'utilizzo in produzione sarà la 1.0 secondo quanto stabilito nella [roadmap](https://github.com/italia-it/ita-web-toolkit/milestone/1).
-
-#### [Repository GitHub del progetto](https://github.com/italia-it/ita-web-toolkit)
+#### [vai al repository GitHub del progetto](https://github.com/italia-it/ita-web-toolkit)
 
 ### Obiettivi
 

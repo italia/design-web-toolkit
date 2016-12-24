@@ -1,12 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700");
+
+html {
+  color: #000;
+  font-size: 18px;
+}
 
 .Header-title,
 .Document-title,
 .Tree-entityLink,
 .Tree-collectionLabel,
 .Prose,
+.Prose *,
 .Prose > * {
-  font-family: Titillium web, sans-serif;
+  font-family: Titillium web, sans-serif !important;
   line-height: 1.55;
 }
 
@@ -15,18 +21,38 @@
   background-size: 30px 30px;
   font-size: 24px;
   font-weight: 600;
-  letter-spacing: 0.05em;
   padding-left: 3em;
 }
 
 .Document-title {
+  color: #000;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0;
+  line-height: 1.2;
 }
 
-.Prose {
-  font-size: 18px;
+.Prose code,
+.Prose p,
+.Prose li,
+.Prose h2,
+.Prose h3,
+.Prose h4 {
+  color: #222;
+}
+
+.Prose h2 {
+  font-size: 32px;
+}
+
+.Prose h3 {
+  font-size: 23px;
+}
+
+.Prose code pre,
+.Prose code pre span {
+  font-family: Hack, Consolas, Monaco, "Andale Mono", monospace !important;
+  font-size: 15px;
 }
 
 .Document-header,
