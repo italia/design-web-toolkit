@@ -4,35 +4,71 @@ title: Come iniziare
 label: Come iniziare
 ---
 
-Puoi visualizzare i componenti grafici nella styleguide
-navigando dal menu "Componenti":
+## La styleguide
+
+I componenti grafici del toolkit sono presentati tramite una styleguide:
+è possibile visualizzarli navigando dal menu "Componenti":
 
 - **Components**: elementi base (form, tipografia, tabelle, griglia responsive, ...)  
-- **Modules**: elementi e "widget" complessi (carousel, accordion, menu, ...)
-- **Templates**: template HTML di pagine intere o porzioni rilevanti di queste
+- **Extra**: moduli personalizzati che dipendono da altri moduli (bottone spid, tasto per condivisione sui social, ...)
+- **Icons**: icone personalizzate in formato SVG, PNG e icon font
+- **Modules**: elementi grafici e interattivi autonomi (carousel, accordion, menu, ...)
+- **Templates**: template HTML di pagine intere o parti del layout
 - **Utils**: componenti di utilità (margini, padding, colori, tipografia, ...)
 
-Nella pagina che illustra ogni elemento è visibile il template HTML che lo realizza:
-il **codice HTML** a corredo produce l'output visualizzato se vengono contestualmente
-utilizzati i fogli di stile (CSS) e gli script (JS) necessari: è possibile scaricare
-i file CSS / JS già compilati e incorporarli in un template HTML
-come mostrato nel codice di esempio:
+Nella pagina che illustra ogni elemento è visibile il template HTML che lo realizza
+in modo da poter essere incorporato facilmente nel proprio sito web.
 
-* [CSS / Javascript già compilati](https://github.com/italia-it/ita-web-toolkit/tree/gh-pages/build)
-* [`index.html` con layout di pagina di esempio](https://github.com/italia-it/ita-web-toolkit/blob/master/src/_preview.tmpl)
+## Utilizzo del toolkit
 
-In produzione è necessario includere i seguenti file:
+Per utilizzare i componenti all'interno del proprio sito è necessario<br>
+includere, oltre l'HTML, i fogli di stile (CSS) e i Javascript (JS) necessari.
 
-- `IWT.min.js` - il file Javascript minificato, per l'utilizzo degli elementi dinamici
-- `build.css` - il CSS con lo stile di base
-- `vendor.css` - il CSS degli elementi dinamici appartenenti a progetti esterni al toolkit
+È possibile scaricare i file CSS / JS già compilati da incorporare in ogni pagina:<br>
+**[CSS / Javascript già compilati](https://github.com/italia-it/ita-web-toolkit/tree/gh-pages/build)**
 
-La directory `vendor` contiene i *polyfill* che è necessario includere per garantire la compatibilità
-con i browser obsoleti (es. IE9).
+In produzione vanno inclusi almeno i seguenti file:
 
-La directory `src/icons` contiene le icone personalizzate in formato SVG / PNG / icon font.
+```
+.
+├── build.css
+├── vendor.css
+├── vendor/modernizr.js
+├── vendor/jquery.min.js
+└── IWT.min.js
+```
+
+facendo riferimento al 
+**[template generico di esempio](https://raw.githubusercontent.com/italia-it/ita-web-toolkit/master/src/_preview.tmpl)**
+
+La directory `src/icons` contiene le icone personalizzate in formato SVG, PNG e *icon font*.
 
 I file con estensione \*.map sono utili solo in fase di debug e possono essere omessi in produzione.
+
+## Dipendenze esterne
+
+Nella directory `vendor` si trovano i *polyfill* che è consigliabile includere per garantire la compatibilità
+con i browser obsoleti (IE8/9):
+
+```
+.
+├── polyfill.min.js
+├── rem.min.js
+├── respond.min.js
+├── selectivizr.js
+└── slice.js
+```
+
+La directory `vendor` Contiene inoltre la [libreria jQuery](https://jquery.com/),
+una dipendenza necessaria per alcuni componenti del toolkit.
+
+Molti CMS o framework CSS includono già una loro distribuzione della libreria `jQuery`;
+in questo caso non è necessario utilizzare quella distribuita con il toolkit,
+a patto che venga inclusa prima del file `IWT.min.js`.
+
+I componenti del toolkit lavorano con versioni di jQuery >= 1.11.x, tuttavia
+se vuoi garantire la compatibilità con IE8 ricorda di utilizzare versioni
+di jQuery inferiori alla 2.x.
 
 ## Personalizzare lo stile (CSS)
 

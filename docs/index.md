@@ -4,32 +4,34 @@ title: Web Toolkit - Linee guida di design per i servizi web della PA
 label: Introduzione
 ---
 
-## Implementazione CSS/HTML di riferimento
+## Implementazione di riferimento
 
-L'implementazione di riferimento (toolkit) delle "[Linee guida di design](http://design.italia.it)"
-fornisce componenti grafici e interattivi da incorporare
-nei siti web delle Pubbliche Amministrazioni (PA):
+L'implementazione di riferimento (web toolkit) delle "[Linee guida di design](http://design.italia.it)"
+fornisce componenti *open source* da incorporare nei siti web delle Pubbliche Amministrazioni (PA)
+per costruire un'interfaccia grafica usabile, accessibile e consistente:
 
 - fogli di stile CSS
-- componenti Javascript (es. [carousel]({{ '/components/detail/carousel' | path }})
-, [offcanvas]({{ '/components/detail/offcanvas' | path }}))
-- snippet e template HTML (es. [parti di pagina]({{ '/components/detail/layout--gallery' | path }})
-o [pagine complete]({{ '/components/detail/page--menu' | path }})) nella forma di una styleguide navigabile
+- componenti interattivi (Javascript)
+- snippet e template HTML
 
 ### Contribuire al progetto
 
-È possibile [seguire i progressi](https://github.com/italia-it/ita-web-toolkit/issues)
-del toolkit e contribuire su GitHub:
+Se ha suggerimenti o vuoi contribuire direttamente allo sviluppo del toolkit
+puoi farlo utilizzando il repository GitHub:
 
-#### [vai al repository GitHub del progetto](https://github.com/italia-it/ita-web-toolkit)
+#### https://github.com/italia-it/ita-web-toolkit
+
+Se hai domande sull'utilizzo o bisogno di aiuto per l'installazione
+puoi [aprire una nuova richiesta](https://github.com/italia-it/ita-web-toolkit/issues/new).
 
 ### Obiettivi
 
-1. chiarire l’output atteso, ovvero quale aspetto deve avere il sito web per risultare conforme alle linee guida (limitatamente alle indicazioni sul visual design)
-2. presentare pattern e template in modo da poter essere discussi, condivisi e migliorati recependo i contributi della community e i risultati dei test di usabilità
-3. mostrare quali componenti dinamici (widget javascript) è possibile utilizzare per soddisfare i requisiti di accessibilità richiesti dalla normativa
-4. mettere a disposizione di fornitori e PA materiale riutilizzabile nell’implementazione del frontend del sito
-5. fornire un tool che faciliti una rapida prototipazione dei siti in modo da poter coinvolgere gli utenti fin dalle prime fasi di progettazione
-6. convogliare, in un unico framework di sviluppo, i contributi della community di design.italia.it, l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli sviluppatori
+- presentare pattern e template in modo da poter essere discussi, condivisi e migliorati recependo i contributi della community e i risultati dei test di usabilità
+- chiarire quale aspetto deve avere il sito web per risultare conforme alle
+[indicazioni sul visual design riportate nelle linee guida](http://design.italia.it/#visual-design)
+- fornire un tool che faciliti una rapida prototipazione dei siti in modo da poter coinvolgere gli utenti fin dalle prime fasi di progettazione
+- mettere a disposizione di fornitori e PA materiale riutilizzabile nell’implementazione del frontend del sito
+- suggerire un set di componenti dinamici (widget javascript) che è possibile utilizzare per soddisfare i requisiti di accessibilità richiesti dalla normativa
+- convogliare, in un unico framework di sviluppo, i contributi della community di design.italia.it, l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli sviluppatori
 
 [Come iniziare](docs/come-iniziare)

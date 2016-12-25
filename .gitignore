@@ -4,7 +4,6 @@ dist
 bower_components
 config.local.js
 .publish
-build
 npm-debug.log
 styleguide
 gh-pages

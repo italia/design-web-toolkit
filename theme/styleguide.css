@@ -43,6 +43,11 @@ html {
 
 .Prose h2 {
   font-size: 32px;
+  margin-bottom: 0.5em;
+}
+
+.Prose *:not(hr) + h2 {
+  margin-top: 1em;
 }
 
 .Prose h3 {

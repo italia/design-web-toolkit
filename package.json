@@ -63,6 +63,7 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
+    "prepublish": "npm run build",
     "build:resources": "shx mkdir -p build/src && shx cp -r src/vendor build/ && shx cp -r src/icons build/src/icons && shx cp src/_preview.tmpl build/index.html",
     "build:css": "suitcss -m -c .postcss.js index.css build/build.css",
     "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
