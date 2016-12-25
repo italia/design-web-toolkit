@@ -30,6 +30,7 @@
   @extend .u-flex;
   @extend .u-sizeFit;
   @extend .u-alignBottom;
+  @extend .u-borderHideFocus;
 }
 
 .Megamenu-item > a:hover,
@@ -235,12 +236,15 @@
 
 .Megamenu--default .Megamenu-area {
   @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
+  @extend .u-flexJustifyContentCenter;
   @extend .u-padding-r-right;
   @extend .u-padding-r-left;
   @extend .u-posAbsolute;
 
   /* [1] margin-left: auto; */
 
+  height: 100%;
   right: 0;
   top: 0;
 }

@@ -10,11 +10,11 @@ I componenti grafici del toolkit sono presentati tramite una styleguide:
 è possibile visualizzarli navigando dal menu "Componenti":
 
 - **Components**: elementi base (form, tipografia, tabelle, griglia responsive, ...)  
-- **Extra**: moduli personalizzati che dipendono da altri moduli (bottone spid, tasto per condivisione sui social, ...)
-- **Icons**: icone personalizzate in formato SVG, PNG e icon font
 - **Modules**: elementi grafici e interattivi autonomi (carousel, accordion, menu, ...)
+- **Extra**: moduli personalizzati che dipendono da altri moduli (bottone spid, tasto per condivisione sui social, ...)
 - **Templates**: template HTML di pagine intere o parti del layout
 - **Utils**: componenti di utilità (margini, padding, colori, tipografia, ...)
+- **Icons**: icone personalizzate in formato SVG, PNG e icon font
 
 Nella pagina che illustra ogni elemento è visibile il template HTML che lo realizza
 in modo da poter essere incorporato facilmente nel proprio sito web.
@@ -38,7 +38,7 @@ In produzione vanno inclusi almeno i seguenti file:
 └── IWT.min.js
 ```
 
-facendo riferimento al 
+facendo riferimento al
 **[template generico di esempio](https://raw.githubusercontent.com/italia-it/ita-web-toolkit/master/src/_preview.tmpl)**
 
 La directory `src/icons` contiene le icone personalizzate in formato SVG, PNG e *icon font*.

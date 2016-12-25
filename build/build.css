@@ -3152,7 +3152,7 @@ ol, ul {
           align-items: flex-end !important;
 }
 
-.u-flexAlignItemsCenter, .Header-title {
+.u-flexAlignItemsCenter, .Header-title, .Megamenu--default .Megamenu-area {
   -webkit-box-align: center !important;
   -webkit-align-items: center !important;
       -ms-flex-align: center !important;
@@ -4828,7 +4828,7 @@ ol, ul {
   outline: none;
 }
 
-.u-borderHideFocus:focus {
+.u-borderHideFocus:focus, .Megamenu-item:focus {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
   outline: none !important;
@@ -7733,6 +7733,7 @@ option:hover {
 
   /* [1] margin-left: auto; */
 
+  height: 100%;
   right: 0;
   top: 0;
 }
