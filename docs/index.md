@@ -6,6 +6,8 @@ label: Introduzione
 
 ## Implementazione di riferimento
 
+<!-- <img src="/ita-web-toolkit/theme/docs/hero-img.png" width="100%" /> -->
+
 L'implementazione di riferimento (web toolkit) delle "[Linee guida di design](http://design.italia.it)"
 fornisce componenti *open source* da incorporare nei siti web delle Pubbliche Amministrazioni (PA)
 per costruire un'interfaccia grafica usabile, accessibile e consistente:

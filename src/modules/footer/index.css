@@ -1,7 +1,7 @@
 /** @define Footer; weak */
 
 :root {
-  --Footer-color-link: color(var(--Color-primary) h(+180) s(100%) l(70%));
+  --Footer-color-link: var(--Color-teal-50);
 }
 
 .Footer {
@@ -101,9 +101,10 @@
 .Footer-socialIcons [class^="Icon-"],
 .Footer-socialIcons [class*=" Icon-"] {
   @extend .u-inlineBlock;
-  @extend .u-background-compl;
   @extend .u-color-grey-80;
   @extend .u-padding-all-xs;
   @extend .u-borderRadius-circle;
   @extend .u-text-r-m;
+
+  background-color: var(--Footer-color-link);
 }

@@ -16,7 +16,7 @@ che per i componenti Javascript integrati lato client (nel browser).
 
 La lista delle librerie utilizzate è visibile nel file [`package.json`](https://github.com/italia-it/ita-web-toolkit/blob/master/package.json).
 
-Prima di incorporare nuove dipendenze è bene verificare che siano presenti nel
+Prima di incorporare nuove dipendenze è buona pratica verificare se siano già presenti nel
 [registro npm](https://www.npmjs.com/) in modo da poterle integrare più agevolmente.
 
 ## SUIT CSS
