@@ -4955,91 +4955,91 @@ ol, ul {
 /* Color primary */
 
 .u-color-5 {
-  color: rgb(217, 230, 242) !important;
+  color: rgb(230, 230, 230) !important;
 }
 
 .u-background-5, .Accordion-header:hover, .Linklist a:hover, .Treeview--default ul a, .Treeview--default ul a:hover {
-  background-color: rgb(217, 230, 242) !important;
+  background-color: rgb(230, 230, 230) !important;
 }
 
 .u-color-10 {
-  color: rgb(173, 204, 235) !important;
+  color: rgb(204, 204, 204) !important;
 }
 
 .u-background-10, .Linklist-link.Linklist-link--lev3 {
-  background-color: rgb(173, 204, 235) !important;
+  background-color: rgb(204, 204, 204) !important;
 }
 
 .u-color-20 {
-  color: rgb(125, 178, 232) !important;
+  color: rgb(179, 179, 179) !important;
 }
 
 .u-background-20, .Linklist-link.Linklist-link--lev2, .Linklist-link.Linklist-link--lev2:hover {
-  background-color: rgb(125, 178, 232) !important;
+  background-color: rgb(179, 179, 179) !important;
 }
 
 .u-color-30 {
-  color: rgb(71, 153, 235) !important;
+  color: rgb(153, 153, 153) !important;
 }
 
 .u-background-30 {
-  background-color: rgb(71, 153, 235) !important;
+  background-color: rgb(153, 153, 153) !important;
 }
 
 .u-color-40 {
-  color: rgb(18, 122, 226) !important;
+  color: rgb(122, 122, 122) !important;
 }
 
 .u-background-40, .Header-searchTrigger button {
-  background-color: rgb(18, 122, 226) !important;
+  background-color: rgb(122, 122, 122) !important;
 }
 
 .u-color-50, .Accordion-link, .Header-socialIcons [class^="Icon-"], .Header-socialIcons [class*=" Icon-"], .Linklist-link, .Linklist a, .Skiplinks > li > a, .Share-revealIcon.is-open {
-  color: #06c !important;
+  color: #666 !important;
 }
 
 .u-background-50, .Bullets > li:before, .Header-navbar, .Share > ul > li, .Share-revealIcon {
-  background-color: #06c !important;
+  background-color: #666 !important;
 }
 
 .u-color-60, .Header-banner {
-  color: rgb(0, 89, 179) !important;
+  color: rgb(89, 89, 89) !important;
 }
 
 .u-background-60 {
-  background-color: rgb(0, 89, 179) !important;
+  background-color: rgb(89, 89, 89) !important;
 }
 
 .u-color-70 {
-  color: rgb(0, 76, 153) !important;
+  color: rgb(77, 77, 77) !important;
 }
 
 .u-background-70 {
-  background-color: rgb(0, 76, 153) !important;
+  background-color: rgb(77, 77, 77) !important;
 }
 
 .u-color-80, .Megamenu--default .Megamenu-list > li > a[aria-expanded=true] {
-  color: rgb(0, 64, 128) !important;
+  color: rgb(64, 64, 64) !important;
 }
 
 .u-background-80, .Header-language.is-active {
-  background-color: rgb(0, 64, 128) !important;
+  background-color: rgb(64, 64, 64) !important;
 }
 
 .u-color-90 {
-  color: rgb(0, 51, 102) !important;
+  color: rgb(51, 51, 51) !important;
 }
 
 .u-background-90, .Header-banner, .Linklist-link.Linklist-link--lev1, .Linklist-link.Linklist-link--lev1:hover {
-  background-color: rgb(0, 51, 102) !important;
+  background-color: rgb(51, 51, 51) !important;
 }
 
 .u-color-95, .Linklist a:hover, .Linklist-link.Linklist-link--lev2, .Linklist-link.Linklist-link--lev2:hover, .Linklist-link.Linklist-link--lev3, .Megamenu--default .Megamenu-subnavGroup > li > a, .Treeview--default ul a, .Treeview--default ul a:hover {
-  color: rgb(0, 38, 77) !important;
+  color: rgb(38, 38, 38) !important;
 }
 
 .u-background-95, .Header-languages, .ScrollTop {
-  background-color: rgb(0, 38, 77) !important;
+  background-color: rgb(38, 38, 38) !important;
 }
 
 .u-backround-none, .Megamenu-item > a:focus {
@@ -5047,35 +5047,35 @@ ol, ul {
 }
 
 .u-color-compl {
-  color: rgb(255, 179, 102) !important;
+  color: rgb(102, 255, 255) !important;
 }
 
 .u-background-compl {
-  background-color: rgb(255, 179, 102) !important;
+  background-color: rgb(102, 255, 255) !important;
 }
 
 .u-background-compl-5 {
-  background-color: rgb(245, 242, 240) !important;
+  background-color: rgb(240, 245, 245) !important;
 }
 
 .u-color-compl-5 {
-  color: rgb(245, 242, 240) !important;
+  color: rgb(240, 245, 245) !important;
 }
 
 .u-color-compl-10 {
-  color: rgb(237, 230, 222) !important;
+  color: rgb(222, 237, 237) !important;
 }
 
 .u-background-compl-10 {
-  background-color: rgb(237, 230, 222) !important;
+  background-color: rgb(222, 237, 237) !important;
 }
 
 .u-color-compl-80 {
-  color: rgb(204, 102, 0) !important;
+  color: rgb(102, 102, 102) !important;
 }
 
 .u-background-compl-80 {
-  background-color: rgb(204, 102, 0) !important;
+  background-color: rgb(102, 102, 102) !important;
 }
 
 /** @define utilities; */
@@ -7694,7 +7694,7 @@ option:hover {
 /* Some custom style */
 
 .Megamenu--default {
-  background-color: rgb(17, 115, 212) !important;
+  background-color: rgb(115, 115, 115) !important;
 }
 
 /*
@@ -8330,7 +8330,7 @@ option:hover {
 }
 
 .ie8 .Header-navbar {
-  background: #06c !important;
+  background: #666 !important;
   color: white !important;
 }
 
