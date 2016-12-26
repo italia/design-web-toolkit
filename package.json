@@ -1,6 +1,6 @@
 {
   "name": "ita-web-toolkit",
-  "version": "0.1.0-alpha7",
+  "version": "0.1.0",
   "description": "Implementazione di riferimento per le linee guida di design della PA",
   "main": "index.js",
   "dependencies": {
