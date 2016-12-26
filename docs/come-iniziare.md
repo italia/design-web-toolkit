@@ -61,9 +61,9 @@ con i browser obsoleti (IE8/9):
 La directory `vendor` Contiene inoltre la [libreria jQuery](https://jquery.com/),
 una dipendenza necessaria per alcuni componenti del toolkit.
 
-Molti CMS o framework CSS includono già una loro distribuzione della libreria `jQuery`;
-in questo caso non è necessario utilizzare quella distribuita con il toolkit,
-a patto che venga inclusa prima del file `IWT.min.js`.
+Molti CMS o framework CSS vengono già distribuiti con una loro versione della libreria `jQuery`;
+in questo caso non è necessario utilizzare quella del toolkit, a patto che venga inclusa
+nell'HTML prima del file `IWT.min.js`.
 
 I componenti del toolkit lavorano con versioni di jQuery >= 1.11.x, tuttavia
 se vuoi garantire la compatibilità con IE8 ricorda di utilizzare versioni

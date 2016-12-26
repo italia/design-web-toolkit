@@ -37,3 +37,5 @@ puoi [aprire una nuova richiesta](https://github.com/italia-it/ita-web-toolkit/i
 - convogliare, in un unico framework di sviluppo, i contributi della community di design.italia.it, l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli sviluppatori
 
 [Come iniziare](docs/come-iniziare)
+
+{% include 'footer.md' %}

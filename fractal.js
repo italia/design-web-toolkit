@@ -26,7 +26,7 @@ const faker = require('faker')
 const _ = require('lodash')
 
 const nunj = require('@frctl/nunjucks')({
-  paths: ['src'],
+  paths: ['src', 'docs'],
   globals: {
     __WORD__: _.range(10).map(function() {
       return faker.lorem.word()
