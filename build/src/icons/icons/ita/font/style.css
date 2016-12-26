@@ -245,3 +245,15 @@
 .Icon-radio-button-checked::before {
   content: "\2609";
 }
+
+.Icon-warning::before {
+  content: "\26a0";
+}
+
+.Icon-info::before {
+  content: "\1f6c8";
+}
+
+.Icon-print::before {
+  content: "\1f5b6";
+}
