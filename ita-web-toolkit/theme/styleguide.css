@@ -5,6 +5,14 @@ html {
   font-size: 18px;
 }
 
+.Frame-panel--sidebar {
+  background-color: #00264d !important;
+}
+
+.Frame-panel--main {
+  background-color: #f5f5f0 !important;
+}
+
 .Header-title,
 .Document-title,
 .Tree-entityLink,
@@ -43,6 +51,11 @@ html {
 
 .Prose h2 {
   font-size: 32px;
+  margin-bottom: 0.5em;
+}
+
+.Prose *:not(hr) + h2 {
+  margin-top: 1em;
 }
 
 .Prose h3 {
@@ -72,32 +85,78 @@ html {
 
 .Tree-entityLink,
 .Tree-collectionLabel {
-  border-bottom: 1px solid #e7e6e4;
-  font-size: 16px !important;
+  border-bottom: 1px solid #036;
+  font-size: 18px !important;
   padding-bottom: 0.8em;
   padding-top: 0.8em;
 }
 
 .Tree-entityLink span,
 .Tree-collectionLabel span {
-  color: #003e54;
+  color: white;
 }
 
+/*
+.Tree-entityLink:hover,
+.Tree-collectionLabel:hover {
+  color: #00264d;
+}
+.Tree-entityLink:hover,
+.Tree-collectionLabel:hover {
+  background-color: #8ebeed;
+}
+*/
+
 .Tree-title {
+  color: #8ebeed;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0;
 }
 
-.Tree-entity.is-current a {
-  background: #06c;
-  font-weight: 700;
+.Tree-collectionLabel span::before,
+[dir="ltr"] .Tree-collection.is-closed .Tree-collectionLabel span::before {
+  background: none;
 }
 
-.Tree-entity.is-current span {
+.Tree-collection.is-closed .Tree-collectionLabel span::after {
+  content: " + ";
+  float: right;
+  font-size: 30px;
+  margin-right: 1em;
+  margin-top: -0.4em;
+}
+
+.Tree-collectionLabel span::after {
+  content: " - ";
+  float: right;
+  font-size: 30px;
+  margin-right: 1em;
+  margin-top: -0.4em;
+}
+
+.Tree-collectionItems {
+  background: #004080;
+}
+
+.Tree-collectionItems .Tree-collectionItems {
+  background: #004d99;
+}
+
+.Tree-entity a {
+  width: 100%;
+}
+
+.Tree-entity.is-current {
+  background: #06c;
   color: white !important;
+  font-weight: 700;
 }
 
 .Frame-panel--sidebar {
   background-color: white;
+}
+
+.Code pre {
+  font-size: 14px;
 }

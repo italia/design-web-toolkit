@@ -6,7 +6,7 @@ $('.js-megamenu').addClass('is-ready')
 
 const opts = {
   /* add a close button to every subnav */
-  addCloseButton: true,
+  addCloseButton: false,
 
   closeButtonClass: 'js-Megamenu-close',
 
@@ -105,9 +105,11 @@ $(document).ready(function() {
     }
 
     $('.' + opts.closeButtonClass).on('click', function() {
-      $('input').focus()
-      setTimeout( () => $('input').blur(), 0)
-    })    
+      const e = $.Event('keydown')
+      e.which = 27
+      $('.' + opts.menuClass).trigger(e)
+      return false
+    })
 
   })
 })

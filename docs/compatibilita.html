@@ -71,17 +71,16 @@
 
     
     
-    <p>Per chi già utilizza un framework CSS all’interno del proprio progetto, ma ha intenzione di incorporare
-<em>anche</em> uno o più moduli del toolkit, è possibile creare una <em>build</em> personalizzata volta
+    <p>Se utilizzi già un framework CSS all’interno del tuo progetto, ma hai intenzione di incorporare
+<em>anche</em> uno o più moduli del toolkit, puoi creare una <em>build</em> personalizzata volta
 a risolvere eventuali incompatibilità che potrebbero incorrere includendo il CSS/JS <em>as-is</em>.</p>
 <p><strong>Scegliendo selettivamente i singoli moduli prima della fase di compilazione</strong>
-è possibile escludere dall’output il codice di quelli che non si vuol
-utilizzare nel proprio sito.</p>
+puoi escludere dall’output il codice di quelli che non vuoi utilizzare.</p>
 <p>In questo modo si evitano eventuali conflitti con i plugin Javascript e i nomi delle classi CSS
 e al contempo si riduce la dimensione dei file che il browser deve scaricare per visualizzare le pagine.</p>
 <h3 id="configurazione-dinamica-dei-moduli-da-includere-o-escludere">Configurazione dinamica dei moduli da includere o escludere</h3>
-<p>Per escludere (dall’output della build) alcuni moduli e/o includerne selettivamente altri
-è sufficiente editare il file <a href="https://github.com/italia-it/ita-web-toolkit/blob/master/config.js">config.js</a>
+<p>Per escludere dai CSS/JS generati alcuni moduli e/o includerne selettivamente altri
+edita il file <a href="https://github.com/italia-it/ita-web-toolkit/blob/master/config.js">config.js</a>
 contenuto nella directory radice del toolkit prima di effettuare una nuova <code>build</code>.</p>
 <p>Il file contiene due liste di <strong>espressioni regolari</strong>:</p>
 <ul>
@@ -90,19 +89,18 @@ contenuto nella directory radice del toolkit prima di effettuare una nuova <code
 </ul>
 <h4 id="esempi-di-utilizzo-di-blacklist-whitelist">Esempi di utilizzo di blacklist / whitelist</h4>
 <p>Per includere solo il modulo che realizza la visualizzazione ad albero (<em>treeview</em>)
-più uno stile di base per la lista dei link (<em>linklist</em>) declinata secondo il tema corrente
-si può utilizzare la seguente whitelist:</p>
+più uno stile di base per la lista dei link (<em>linklist</em>) utilizza la seguente whitelist:</p>
 <code><pre>CONFIG<span class="hljs-selector-class">.includes</span> = [
     <span class="hljs-string">'(.*)theme(.*)'</span>,
     <span class="hljs-string">'(.*)utils(.*)'</span>,
     <span class="hljs-string">'(.*)linklist(.*)'</span>,
     <span class="hljs-string">'(.*)treeview(.*)'</span>,
 ]</pre></code><p>Per escludere i moduli che non verrebbero utilizzati (es. carousel, spid),
-va invece utilizzata una blacklist:</p>
+puoi utilizzare una blacklist:</p>
 <code><pre>CONFIG<span class="hljs-selector-class">.excludes</span> = [
     <span class="hljs-string">'(.*)carousel(.*)'</span>,
     <span class="hljs-string">'(.*)spid(.*)'</span>,
-]</pre></code><p>Per escludere <code>normalize.css</code> (perché eventualmente già incluso dal proprio framework):</p>
+]</pre></code><p>Per escludere <code>normalize.css</code> (perché eventualmente già incluso dal tuo framework):</p>
 <code><pre>CONFIG<span class="hljs-selector-class">.excludes</span> = [
     <span class="hljs-string">'(.*)normalize(.*)'</span>,
 ]</pre></code><p>Dopo aver modificato il file <code>config.js</code>:</p>
@@ -110,7 +108,7 @@ va invece utilizzata una blacklist:</p>
 <li>eseguendo <code>npm run build:css</code> si ottiene in output il file <code>build/build.css</code></li>
 <li>eseguendo <code>npm run build:js</code> si ottiene in output il file <code>build/IWT.min.js</code></li>
 </ul>
-<p>L’output conterrà esclusivamente il CSS e il Javascript dei moduli configurati.</p>
+<p>L’output conterrà esclusivamente il CSS e il Javascript dei moduli che hai configurato.</p>
 <p><a href="struttura">Struttura del filesystem</a></p>
 
     
@@ -904,126 +902,6 @@ va invece utilizzata una blacklist:</p>
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../components/detail/table--twoheaders.html" data-pjax>
                 <span>Twoheaders</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-extra">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Extra</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/share.html" data-pjax>
-                <span>Share</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/spid.html" data-pjax>
-                <span>Spid</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-icons">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Icons</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-ita">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Ita</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/icons.html" data-pjax>
-                <span>Icons</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2150,6 +2028,70 @@ va invece utilizzata una blacklist:</p>
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-extra">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Extra</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/share.html" data-pjax>
+                <span>Share</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/spid.html" data-pjax>
+                <span>Spid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Templates</span>
@@ -3000,6 +2942,62 @@ va invece utilizzata una blacklist:</p>
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../components/detail/text--size.html" data-pjax>
                 <span>Size</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-icons">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Icons</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-ita">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Ita</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/icons.html" data-pjax>
+                <span>Icons</span>
                 
 
 <div class="Status Status--unlabelled">
