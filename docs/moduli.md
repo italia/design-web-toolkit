@@ -53,3 +53,5 @@ Nei file Javascript è possibile utilizzare la sintassi [ECMAScript 2015](https:
 - è incoraggiato l'utilizzo del costrutto PostCSS `@extend`, ma **esclusivamente** per estendere le classi di utilità (`u-*`)
 
 [Compatibilita con altri framework](compatibilita)
+
+{% include '_footer.md' %}

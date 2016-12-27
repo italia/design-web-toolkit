@@ -54,3 +54,5 @@ La directory `src` contiene le sotto-directory:
 ```
 
 [Realizzare un tema](tema)
+
+{% include '_footer.md' %}

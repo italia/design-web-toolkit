@@ -84,3 +84,5 @@ nel capitolo successivo: ["Utilizzare l'ambiente di sviluppo"](sviluppare):
 Non è necessario conoscere il funzionamento di questi software che vengono qui citati per completezza.
 
 [Utilizzare l'ambiente di sviluppo](sviluppare)
+
+{% include '_footer.md' %}

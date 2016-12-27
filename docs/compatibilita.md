@@ -65,3 +65,5 @@ Dopo aver modificato il file `config.js`:
 L'output conterrà esclusivamente il CSS e il Javascript dei moduli che hai configurato.
 
 [Struttura del filesystem](struttura)
+
+{% include '_footer.md' %}

@@ -133,3 +133,5 @@ e **non** quindi:
   padding-right: 1em;
 }
 ```
+
+{% include '_footer.md' %}

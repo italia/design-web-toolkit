@@ -81,3 +81,5 @@ agendo direttamente sul codice sorgente dei fogli di stile del toolkit
 per realizzare una *build* personalizzata, prima di integrare il CSS nel layout.
 
 [Tecnologie utilizzate](tecnologie)
+
+{% include '_footer.md' %}

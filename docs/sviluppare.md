@@ -66,3 +66,5 @@ Javascript e/o template HTML mentre `npm run watch` rimane in esecuzione risulte
 nel browser **senza dover ricaricare manualmente la pagina o lanciare il comando di build**.
 
 [Creare o modificare un modulo](moduli)
+
+{% include '_footer.md' %}
