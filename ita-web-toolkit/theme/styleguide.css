@@ -9,9 +9,11 @@ html {
   background-color: #00264d !important;
 }
 
+/*
 .Frame-panel--main {
   background-color: #f5f5f0 !important;
 }
+*/
 
 .Header-title,
 .Document-title,
@@ -159,4 +161,25 @@ html {
 
 .Code pre {
   font-size: 14px;
+}
+
+.Footer {
+  padding-top: 2em;
+  width: 100%;
+}
+
+.Prose ul.Footer-links {
+  border-top: 1px solid #008383;
+  padding-left: 0;
+  padding-top: 1em;
+}
+
+.Footer-links li {
+  display: inline;
+  margin-right: 2em;
+}
+
+.Footer-links a {
+  color: #008383 !important;
+  font-size: 15px;
 }
