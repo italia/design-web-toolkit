@@ -17,7 +17,7 @@ e al contempo si riduce la dimensione dei file che il browser deve scaricare per
 ### Configurazione dinamica dei moduli da includere o escludere
 
 Per escludere dai CSS/JS generati alcuni moduli e/o includerne selettivamente altri
-edita il file [config.js](https://github.com/italia-it/ita-web-toolkit/blob/master/config.js)
+edita il file [config.js](https://github.com/italia/ita-web-toolkit/blob/master/config.js)
 contenuto nella directory radice del toolkit prima di effettuare una nuova `build`.
 
 Il file contiene due liste di **espressioni regolari**:

@@ -80,12 +80,12 @@
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/italia-it/ita-web-toolkit.git"
+    "url": "https://github.com/italia/ita-web-toolkit.git"
   },
   "optionalDependencies": {
     "async": "^2.1.4",
     "cheerio": "^0.22.0",
     "node-fetch": "^1.6.3",
-    "spid-graphics": "git+https://github.com/italia-it/spid-graphics.git"
+    "spid-graphics": "git+https://github.com/italia/spid-graphics.git"
   }
 }

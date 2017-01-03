@@ -24,7 +24,7 @@ Per utilizzare i componenti all'interno del tuo sito è necessario<br>
 includere, oltre l'HTML, i fogli di stile (CSS) e i Javascript (JS) necessari.
 
 Puoi scaricare i file CSS / JS già compilati da incorporare in ogni pagina:<br>
-**[CSS / Javascript già compilati](https://github.com/italia-it/ita-web-toolkit/tree/gh-pages/build)**
+**[CSS / Javascript già compilati](https://github.com/italia/ita-web-toolkit/tree/gh-pages/build)**
 
 In produzione vanno inclusi almeno i file:
 
@@ -38,7 +38,7 @@ In produzione vanno inclusi almeno i file:
 ```
 
 facendo riferimento al
-**[template generico di esempio](https://raw.githubusercontent.com/italia-it/ita-web-toolkit/master/src/_preview.tmpl)**
+**[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/master/src/_preview.tmpl)**
 
 La directory `src/icons` contiene le icone personalizzate in formato SVG, PNG e *icon font*.
 

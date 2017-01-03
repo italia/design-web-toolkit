@@ -21,10 +21,10 @@ per costruire un'interfaccia grafica usabile, accessibile e consistente:
 Se ha suggerimenti o vuoi contribuire direttamente allo sviluppo del toolkit
 puoi farlo utilizzando il repository GitHub:
 
-#### https://github.com/italia-it/ita-web-toolkit
+#### https://github.com/italia/ita-web-toolkit
 
 Se hai domande sull'utilizzo o bisogno di aiuto per l'installazione
-puoi [aprire una nuova richiesta](https://github.com/italia-it/ita-web-toolkit/issues/new).
+puoi [aprire una nuova richiesta](https://github.com/italia/ita-web-toolkit/issues/new).
 
 ### Obiettivi
 

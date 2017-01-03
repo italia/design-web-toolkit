@@ -11,7 +11,7 @@ per realizzare quindi un "tema" grafico specifico.
 #### Ottenere i sorgenti
 
 Per ottenere i sorgenti puoi scaricare direttamente
-l'[archivio compresso](https://github.com/italia-it/ita-web-toolkit/releases/) da GitHub.
+l'[archivio compresso](https://github.com/italia/ita-web-toolkit/releases/) da GitHub.
 
 Un'alternativa migliore è il download dei sorgenti tramite
 il software di versionamento [Git](https://git-scm.com/);
@@ -19,7 +19,7 @@ dopo aver [installato Git](https://git-scm.com/book/it/v1/Per-Iniziare-Installar
 puoi effettuare una copia locale del repository digitando da linea di comando:
 
 ```
-git clone https://github.com/italia-it/ita-web-toolkit
+git clone https://github.com/italia/ita-web-toolkit
 ```
 
 L'utilizzo di Git permette di mantenere i sorgenti sincronizzati
