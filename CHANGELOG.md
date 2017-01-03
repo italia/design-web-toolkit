@@ -1,3 +1,15 @@
+### 0.1.0-alpha9
+
+* Fix nuovo percorso repository
+
+### 0.1.0-alpha8
+
+* Fix tema fractal / styleguide
+
+### 0.1.0-alpha7
+
+* Nuovo tema fractal / styleguide
+
 ### 0.1.0-alpha6
 
 * Fix #35 moduli mancant in package.json
