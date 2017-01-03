@@ -1,8 +1,8 @@
-<section class="Leads">
-  <h2 class="Leads-title u-layout-centerLeft">{{ title }}</h2>
+<section class="u-padding-r-top u-padding-r-bottom">
+  <h2 class="u-text-h3 u-layout-centerLeft">{{ title }}</h2>
   <ul class="Grid Grid--withGutter">
     {% for lead in leads %}
-      <li class="Leads-item Grid-cell u-md-size1of4 u-lg-size1of4">
+      <li class="Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4">
         <a class="Leads-link u-color-black" href="">{{ lead }}</a>
       </li>
     {% endfor %}
