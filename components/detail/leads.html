@@ -187,23 +187,23 @@
     <code class="Code Code--lang-html">
         
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-title u-layout-centerLeft"</span>&gt;</span>Utilità<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-r-top u-padding-r-bottom"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-text-h3 u-layout-centerLeft"</span>&gt;</span>Utilità<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-item Grid-cell u-md-size1of4 u-lg-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-link u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Amministrazione trasparente<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-item Grid-cell u-md-size1of4 u-lg-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-link u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Albo pretorio<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-item Grid-cell u-md-size1of4 u-lg-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-link u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Bandi e concorsi<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-item Grid-cell u-md-size1of4 u-lg-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Leads-link u-color-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Accesso civico<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
@@ -240,17 +240,8 @@
                             <code class="Code Code--lang-CSS FileBrowser-code">
                                 <pre>/** @define Utilities */
 
-.Leads {
-  @extend .u-padding-r-top;
-  @extend .u-padding-r-bottom;
-}
-
-.Leads-title {
-  @extend .u-text-h3;
-  @extend .u-margin-r-bottom;
-}
-
 .Leads-link {
+  @extend .u-block;
   @extend .u-text-r-m;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
@@ -260,6 +251,7 @@
 }
 
 /* postcss-bem-linter: ignore */
+
 .Leads-link::after {
   content: " › ";
   margin-left: 0.2em;
@@ -280,7 +272,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">440 Bytes</span>
+                    <span class="Meta-value">320 Bytes</span>
                 </li>
             </ul>
         </div>
