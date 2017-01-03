@@ -1759,9 +1759,9 @@
         "fontFamily": "ita",
         "majorVersion": 1,
         "minorVersion": 0,
-        "fontURL": "https://github.com/italia-it",
+        "fontURL": "https://github.com/italia",
         "copyright": "AgID",
-        "designer": "Daniela De Blasis",
+        "designer": "AgID",
         "license": "CC0",
         "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/"
       },
