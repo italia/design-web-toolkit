@@ -14,15 +14,15 @@ l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli svi
 
 #### La documentazione per chi vuole utilizze il toolkit o contribuire allo sviluppo è disponibile online
 
-- [documentazione](https://italia-it.github.io/ita-web-toolkit/)
+- [documentazione](https://italia.github.io/ita-web-toolkit/)
 
 #### È inoltre possibile consultare la roadmap
 
-- [roadmap](https://github.com/italia-it/ita-web-toolkit/milestone/1)
+- [roadmap](https://github.com/italia/ita-web-toolkit/milestone/1)
 
 #### I componenti dell'interfaccia sono presentati nella styleguide
 
-- https://italia-it.github.io/ita-web-toolkit/
+- https://italia.github.io/ita-web-toolkit/
 
 Per ogni componente è riportato lo stato di maturità in modo da poter decidere
 quali incorporare nel proprio sito web:
