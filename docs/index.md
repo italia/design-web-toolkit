@@ -18,7 +18,7 @@ per costruire un'interfaccia grafica usabile, accessibile e consistente:
 
 ### Contribuire al progetto
 
-Se ha suggerimenti o vuoi contribuire direttamente allo sviluppo del toolkit
+Se hai suggerimenti o vuoi contribuire direttamente allo sviluppo del toolkit
 puoi farlo utilizzando il repository GitHub:
 
 #### https://github.com/italia/ita-web-toolkit
