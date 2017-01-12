@@ -26,6 +26,14 @@ html {
   line-height: 1.55;
 }
 
+.Header-button {
+  min-width: 3em;
+}
+
+.Frame-inner {
+  min-width: 314px;
+}
+
 .Header-title {
   background: url("/ita-web-toolkit/theme/logo-it.svg") no-repeat 1em 50%;
   background-size: 30px 30px;
@@ -88,7 +96,7 @@ html {
 .Tree-entityLink,
 .Tree-collectionLabel {
   border-bottom: 1px solid #036;
-  font-size: 18px !important;
+  font-size: 16px !important;
   padding-bottom: 0.8em;
   padding-top: 0.8em;
 }
