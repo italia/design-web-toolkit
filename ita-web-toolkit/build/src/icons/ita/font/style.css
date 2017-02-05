@@ -2,12 +2,12 @@
   font-family: "ita";
   font-style: normal;
   font-weight: normal;
-  src: url("./fonts/ita.eot?5gkhyh");
+  src: url("./fonts/ita.eot?v1");
   src:
-    url("./fonts/ita.eot?5gkhyh#iefix") format("embedded-opentype"),
-    url("./fonts/ita.ttf?5gkhyh") format("truetype"),
-    url("./fonts/ita.woff?5gkhyh") format("woff"),
-    url("./fonts/ita.svg?5gkhyh#ita") format("svg");
+    url("./fonts/ita.eot?v1#iefix") format("embedded-opentype"),
+    url("./fonts/ita.ttf?v1") format("truetype"),
+    url("./fonts/ita.woff?v1") format("woff"),
+    url("./fonts/ita.svg?v1#ita") format("svg");
 }
 
 .Icon,
@@ -32,6 +32,10 @@
 
 .Icon--flipped {
   transform: scale(-1, 1);
+}
+
+.Icon-instagram::before {
+  content: "\49";
 }
 
 .Icon-slideshare::before {
