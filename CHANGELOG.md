@@ -1,3 +1,8 @@
+### 0.1.0-alpha10
+
+* Aggiunta icona instagram
+* Aggiunto nuovo IDP SPID
+
 ### 0.1.0-alpha9
 
 * Fix nuovo percorso repository
