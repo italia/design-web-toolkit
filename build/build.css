@@ -5963,12 +5963,12 @@ ol, ul {
   font-family: "ita";
   font-style: normal;
   font-weight: normal;
-  src: url("src/icons/ita/font/fonts/ita.eot?5gkhyh");
+  src: url("src/icons/ita/font/fonts/ita.eot?v1");
   src:
-    url("src/icons/ita/font/fonts/ita.eot?5gkhyh#iefix") format("embedded-opentype"),
-    url("src/icons/ita/font/fonts/ita.ttf?5gkhyh") format("truetype"),
-    url("src/icons/ita/font/fonts/ita.woff?5gkhyh") format("woff"),
-    url("src/icons/ita/font/fonts/ita.svg?5gkhyh#ita") format("svg");
+    url("src/icons/ita/font/fonts/ita.eot?v1#iefix") format("embedded-opentype"),
+    url("src/icons/ita/font/fonts/ita.ttf?v1") format("truetype"),
+    url("src/icons/ita/font/fonts/ita.woff?v1") format("woff"),
+    url("src/icons/ita/font/fonts/ita.svg?v1#ita") format("svg");
 }
 
 .Icon, [class^="Icon-"], [class*=" Icon-"], .Megamenu--default .Megamenu-list > li > a[aria-expanded=true]:after, .Megamenu--default .Megamenu-list > li > a[aria-expanded=false]:after {
@@ -5991,6 +5991,10 @@ ol, ul {
   -webkit-transform: scale(-1, 1);
       -ms-transform: scale(-1, 1);
           transform: scale(-1, 1);
+}
+
+.Icon-instagram:before {
+  content: "\49";
 }
 
 .Icon-slideshare:before {
