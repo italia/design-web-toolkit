@@ -15,8 +15,9 @@ const Frtreeview = function({
   openOnClick: openOnClick = true,
   classFocused: classFocused = 'fr-tree-focus',
   classParent: classParent = 'fr-tree-parent',
+  classMenuHandler: classMenuHandler = 'menu-handler',
   multiselectable: multiselectable = true
-    // readyClass: readyClass = 'fr-accordion--is-ready',
+  // readyClass: readyClass = 'fr-accordion--is-ready',
 } = {}) {
 
   const keys = {
@@ -47,18 +48,18 @@ const Frtreeview = function({
     let $group = $item.children('ul')
     $group.slideDown(250, () => {
       $group.attr('aria-hidden', 'false')
-      $item.attr('aria-expanded', 'true')
-      treeview.$visibleItems = treeview.$el.find('li:visible')
-    })
+    $item.attr('aria-expanded', 'true')
+    treeview.$visibleItems = treeview.$el.find('li:visible')
+  })
   }
 
   function _collapseGroup(treeview, $item) {
     let $group = $item.children('ul')
     $group.slideUp(250, () => {
       $group.attr('aria-hidden', 'true')
-      $item.attr('aria-expanded', 'false')
-      treeview.$visibleItems = treeview.$el.find('li:visible')
-    })
+    $item.attr('aria-expanded', 'false')
+    treeview.$visibleItems = treeview.$el.find('li:visible')
+  })
   }
 
   function _collapseSiblings(treeview, $item) {
@@ -66,8 +67,8 @@ const Frtreeview = function({
       .find('> .' + classParent)
       .not($item)
       .each((i, el) => {
-        _collapseGroup(treeview, $(el))
-      })
+      _collapseGroup(treeview, $(el))
+  })
   }
 
   function _toggleGroup(treeview, $item) {
@@ -100,98 +101,98 @@ const Frtreeview = function({
 
     switch (e.keyCode) {
       case keys.tab:
-        {
-          treeview.$activeItem = null
-          $item.removeClass(classFocused)
-          return true
-        }
+      {
+        treeview.$activeItem = null
+        $item.removeClass(classFocused)
+        return true
+      }
 
       case keys.home:
-        {
-          treeview.$activeItem = treeview.$parents.first()
-          treeview.$activeItem.focus()
-          e.stopPropagation()
-          return false
-        }
+      {
+        treeview.$activeItem = treeview.$parents.first()
+        treeview.$activeItem.focus()
+        e.stopPropagation()
+        return false
+      }
 
       case keys.end:
-        {
-          treeview.$activeItem = treeview.$visibleItems.last()
-          treeview.$activeItem.focus()
-          e.stopPropagation()
-          return false
-        }
+      {
+        treeview.$activeItem = treeview.$visibleItems.last()
+        treeview.$activeItem.focus()
+        e.stopPropagation()
+        return false
+      }
 
       case keys.enter:
       case keys.space:
-        {
-          if (!$item.is('.' + classParent)) {
-            // do nothing
-          } else {
-            _toggleGroup(treeview, $item)
-          }
-          e.stopPropagation()
-          return false
+      {
+        if (!$item.is('.' + classParent)) {
+          // do nothing
+        } else {
+          _toggleGroup(treeview, $item)
         }
+        e.stopPropagation()
+        return false
+      }
 
       case keys.left:
-        {
-          if ($item.is('.' + classParent) && $item.attr('aria-expanded') == 'true') {
-            _collapseGroup(treeview, $item)
-          } else {
-            let $itemUL = $item.parent()
-            let $itemParent = $itemUL.parent()
-            treeview.$activeItem = $itemParent
-            treeview.$activeItem.focus()
-          }
-          e.stopPropagation()
-          return false
+      {
+        if ($item.is('.' + classParent) && $item.attr('aria-expanded') == 'true') {
+          _collapseGroup(treeview, $item)
+        } else {
+          let $itemUL = $item.parent()
+          let $itemParent = $itemUL.parent()
+          treeview.$activeItem = $itemParent
+          treeview.$activeItem.focus()
         }
+        e.stopPropagation()
+        return false
+      }
 
       case keys.right:
-        {
-          if (!$item.is('.' + classParent)) {
-            // do nothing
-          } else if ($item.attr('aria-expanded') == 'false') {
-            _expandGroup(treeview, $item)
-          } else {
-            treeview.$activeItem = $item.children('ul').children('li').first()
-            treeview.$activeItem.focus()
-          }
-          e.stopPropagation()
-          return false
+      {
+        if (!$item.is('.' + classParent)) {
+          // do nothing
+        } else if ($item.attr('aria-expanded') == 'false') {
+          _expandGroup(treeview, $item)
+        } else {
+          treeview.$activeItem = $item.children('ul').children('li').first()
+          treeview.$activeItem.focus()
         }
+        e.stopPropagation()
+        return false
+      }
 
       case keys.up:
-        {
-          if (curNdx > 0) {
-            let $prev = treeview.$visibleItems.eq(curNdx - 1)
-            treeview.$activeItem = $prev
-            $prev.focus()
-          }
-          e.stopPropagation()
-          return false
+      {
+        if (curNdx > 0) {
+          let $prev = treeview.$visibleItems.eq(curNdx - 1)
+          treeview.$activeItem = $prev
+          $prev.focus()
         }
+        e.stopPropagation()
+        return false
+      }
 
       case keys.down:
-        {
-          if (curNdx < treeview.$visibleItems.length - 1) {
-            let $next = treeview.$visibleItems.eq(curNdx + 1)
-            treeview.$activeItem = $next
-            $next.focus()
-          }
-          e.stopPropagation()
-          return false
+      {
+        if (curNdx < treeview.$visibleItems.length - 1) {
+          let $next = treeview.$visibleItems.eq(curNdx + 1)
+          treeview.$activeItem = $next
+          $next.focus()
         }
+        e.stopPropagation()
+        return false
+      }
 
       case keys.asterisk:
-        {
-          treeview.$parents.each(function() {
-            _expandGroup(treeview, $(this))
-          })
-          e.stopPropagation()
-          return false
-        }
+      {
+        treeview.$parents.each(function() {
+          _expandGroup(treeview, $(this))
+        })
+        e.stopPropagation()
+        return false
+      }
 
     }
     return true
@@ -205,9 +206,9 @@ const Frtreeview = function({
 
     switch (e.keyCode) {
       case keys.tab:
-        {
-          return true
-        }
+      {
+        return true
+      }
       case keys.enter:
       case keys.home:
       case keys.end:
@@ -215,55 +216,55 @@ const Frtreeview = function({
       case keys.right:
       case keys.up:
       case keys.down:
-        {
-          e.stopPropagation()
-          return false
-        }
+      {
+        e.stopPropagation()
+        return false
+      }
       default:
-        {
-          let chr = String.fromCharCode(e.which)
-          let bMatch = false
-          let itemNdx = treeview.$visibleItems.index($item)
-          let itemCnt = treeview.$visibleItems.length
-          let curNdx = itemNdx + 1
+      {
+        let chr = String.fromCharCode(e.which)
+        let bMatch = false
+        let itemNdx = treeview.$visibleItems.index($item)
+        let itemCnt = treeview.$visibleItems.length
+        let curNdx = itemNdx + 1
 
-          // check if the active item was the last one on the list
+        // check if the active item was the last one on the list
+        if (curNdx == itemCnt) {
+          curNdx = 0
+        }
+
+        // Iterate through the menu items (starting from the current item and wrapping) until a match is found
+        // or the loop returns to the current menu item
+        while (curNdx != itemNdx) {
+
+          let $curItem = treeview.$visibleItems.eq(curNdx)
+          let titleChr = $curItem.text().charAt(0)
+
+          if ($curItem.is('.' + classParent)) {
+            titleChr = $curItem.find('span').text().charAt(0)
+          }
+
+          if (titleChr.toLowerCase() == chr) {
+            bMatch = true
+            break
+          }
+
+          curNdx = curNdx + 1
+
           if (curNdx == itemCnt) {
+            // reached the end of the list, start again at the beginning
             curNdx = 0
           }
-
-          // Iterate through the menu items (starting from the current item and wrapping) until a match is found
-          // or the loop returns to the current menu item
-          while (curNdx != itemNdx) {
-
-            let $curItem = treeview.$visibleItems.eq(curNdx)
-            let titleChr = $curItem.text().charAt(0)
-
-            if ($curItem.is('.' + classParent)) {
-              titleChr = $curItem.find('span').text().charAt(0)
-            }
-
-            if (titleChr.toLowerCase() == chr) {
-              bMatch = true
-              break
-            }
-
-            curNdx = curNdx + 1
-
-            if (curNdx == itemCnt) {
-              // reached the end of the list, start again at the beginning
-              curNdx = 0
-            }
-          }
-
-          if (bMatch == true) {
-            treeview.$activeItem = treeview.$visibleItems.eq(curNdx)
-            treeview.$activeItem.focus()
-          }
-
-          e.stopPropagation()
-          return false
         }
+
+        if (bMatch == true) {
+          treeview.$activeItem = treeview.$visibleItems.eq(curNdx)
+          treeview.$activeItem.focus()
+        }
+
+        e.stopPropagation()
+        return false
+      }
     }
 
     return true
@@ -279,10 +280,23 @@ const Frtreeview = function({
       return true
     }
 
-    treeview.$activeItem = $item
-    _updateStyling(treeview, $item)
-    _toggleGroup(treeview, $item)
+    return true
+
+    /*treeview.$activeItem = $item
+     _updateStyling(treeview, $item)
+     _toggleGroup(treeview, $item)
+     e.stopPropagation()
+     return false*/
+  }
+
+  function _handleClickMenuHandler(treeview, $item, e) {
     e.stopPropagation()
+    let $parent = $item.parent().parent()
+    console.log($parent)
+    treeview.$activeItem = $parent
+    _updateStyling(treeview, $parent)
+    _toggleGroup(treeview, $parent)
+
     return false
   }
 
@@ -306,6 +320,9 @@ const Frtreeview = function({
     if (openOnClick) {
       treeview.$parents.click(function(e) {
         return _handleDblClick(treeview, $(this), e)
+      })
+      treeview.$handlers.click(function(e) {
+        return _handleClickMenuHandler(treeview, $(this), e)
       })
     } else {
       treeview.$parents.click(function(e) {
@@ -345,20 +362,20 @@ const Frtreeview = function({
     // Put tabindex="-1" on every LI (if it's not the first one)
     // Put class=<classParent> on every LI that contains an UL
     $el.find('li').each(function(i, li) {
-        const $li = $(li)
-        $li
-          .attr('role', 'treeitem')
-          .attr('tabindex', (0 === i) ? '0' : '-1')
-          //  .find('a[href]').not('[href^=#]').attr('tabindex', 0)
-          //  .parent().attr('aria-label', function() { return $(this).text() })
-        if ($li.find('ul').length !== 0) {
-          if (!li.hasAttribute('aria-expanded')) {
-            $li.attr('aria-expanded', 'false')
-          }
-          $li.addClass(classParent)
+      const $li = $(li)
+      $li
+        .attr('role', 'treeitem')
+        .attr('tabindex', (0 === i) ? '0' : '-1')
+      //  .find('a[href]').not('[href^=#]').attr('tabindex', 0)
+      //  .parent().attr('aria-label', function() { return $(this).text() })
+      if ($li.find('ul').length !== 0) {
+        if (!li.hasAttribute('aria-expanded')) {
+          $li.attr('aria-expanded', 'false')
         }
-      })
-      // Put role="group" on every contained UL
+        $li.addClass(classParent)
+      }
+    })
+    // Put role="group" on every contained UL
     $el.find('ul').attr('role', 'group')
   }
 
@@ -370,12 +387,14 @@ const Frtreeview = function({
         $el: $el,
         $items: $el.find('li'),
         $parents: $el.find('.' + classParent),
+        $handlers: $el.find('.' + classMenuHandler),
         $visibleItems: null,
         $activeItem: null
       }
-      _collapseAll(treeview)
-      _bindEvents(treeview)
-    })
+      console.log(treeview)
+    _collapseAll(treeview)
+    _bindEvents(treeview)
+  })
   }
 
   init()
