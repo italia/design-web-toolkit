@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@frctl/fractal": "^1.0.11",
-    "@frctl/mandelbrot": "^1.0.7",
+    "@frctl/mandelbrot": "1.0.7",
     "@frctl/nunjucks": "^1.0.1",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
@@ -65,13 +65,14 @@
   "scripts": {
     "prepublish": "npm run build",
     "build:resources": "shx mkdir -p build/src && shx cp -r src/vendor build/ && shx cp -r src/icons build/src/icons && shx cp src/_preview.tmpl build/index.html",
+    "build:styleguidecss": "suitcss -m -c .postcss.js theme/index-styleguide.css build/build-styleguide.css",
     "build:css": "suitcss -m -c .postcss.js index.css build/build.css",
     "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
     "build:js": "cross-env WEBPACK_ENV=build webpack",
     "watch:js": "cross-env WEBPACK_ENV=dev webpack --display-modules --progress --colors --watch",
     "build:styleguide": "fractal build",
     "watch:styleguide": "fractal start --watch --sync --port 1310",
-    "watch": "npm-run-all --parallel build:resources watch:css watch:js watch:styleguide",
+    "watch": "npm-run-all --parallel build:resources build:styleguidecss watch:css watch:js watch:styleguide",
     "build": "npm-run-all build:resources build:css build:js build:styleguide",
     "deploy": "git subtree push --prefix styleguide origin gh-pages",
     "deploy:force": "git push origin `git subtree split --prefix styleguide master`:gh-pages --force"
