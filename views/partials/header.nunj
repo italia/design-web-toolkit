@@ -1,0 +1,30 @@
+<ul class="Skiplinks js-fr-bypasslinks u-hiddenPrint">
+  <li><a href="#main">Vai al Contenuto</a></li>
+  <li><a class="Skiplinks-to-menu" href="#menu"
+         aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">Vai alla navigazione del sito</a></li>
+</ul>
+
+<header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
+  <div class="Header-navbar Grid Grid--alignMiddle">
+    <div class="Header-toggle Grid-cell">
+      <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        {% include 'icons/close-nav.svg' %}
+        {% include 'icons/open-nav.svg' %}
+        <span class="Header-toggleText">Menu</span>
+      </button>
+    </div>
+
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="" tabindex="-1">
+        <img src="/ita-web-toolkit/theme/docs/logo-it.svg" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
+      <h1 class="Header-titleLink u-text-h1">
+        <a href="{{ path('/') }}" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
+      </h1>
+    </div>
+  </div>
+  <!-- Header-navbar -->
+</header>
