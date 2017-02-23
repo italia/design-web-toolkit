@@ -2,7 +2,6 @@ import $ from 'jquery'
 
 /*
  *	TODO:
- *		- arrow up
  *		- repack as a frend _component and CSS
  *		- refactor without jQuery
  */
@@ -10,13 +9,14 @@ import $ from 'jquery'
 /*
  * Porting of http://www.oaa-accessibility.org/examplep/treeview1/
  */
-const Frtreeview = function({
-  selector: selector = '.js-fr-treeview',
-  openOnClick: openOnClick = true,
-  classFocused: classFocused = 'fr-tree-focus',
-  classParent: classParent = 'fr-tree-parent',
-  multiselectable: multiselectable = true
-    // readyClass: readyClass = 'fr-accordion--is-ready',
+const Treeview = function({
+  selector: selector = '.js-Treeview',
+  classFocused: classFocused = 'hasFocus',
+  classParent: classParent = 'Treeview-parent',
+  classMenuHandler: classMenuHandler = 'Treeview-handler',
+  styleMenuHandler: styleMenuHandler = 'Treeview-handler--default',
+  multiselectable: multiselectable = true,
+  animationMs: animationMs = 150,
 } = {}) {
 
   const keys = {
@@ -45,7 +45,7 @@ const Frtreeview = function({
 
   function _expandGroup(treeview, $item) {
     let $group = $item.children('ul')
-    $group.slideDown(250, () => {
+    $group.slideDown(animationMs, () => {
       $group.attr('aria-hidden', 'false')
       $item.attr('aria-expanded', 'true')
       treeview.$visibleItems = treeview.$el.find('li:visible')
@@ -54,7 +54,7 @@ const Frtreeview = function({
 
   function _collapseGroup(treeview, $item) {
     let $group = $item.children('ul')
-    $group.slideUp(250, () => {
+    $group.slideUp(animationMs, () => {
       $group.attr('aria-hidden', 'true')
       $item.attr('aria-expanded', 'false')
       treeview.$visibleItems = treeview.$el.find('li:visible')
@@ -94,7 +94,7 @@ const Frtreeview = function({
       return true
     }
 
-    if (!$(e.target).is('[role=treeitem]')) {
+    if (!$(e.currentTarget).is('.' + classMenuHandler)) {
       return true
     }
 
@@ -269,59 +269,34 @@ const Frtreeview = function({
     return true
   }
 
-  function _handleDblClick(treeview, $item, e) {
-    if (e.altKey || e.ctrlKey || e.shiftKey) {
-      // do nothing
-      return true
-    }
-
-    if (!$(e.target).parent().is('[aria-expanded]')) {
-      return true
-    }
-
-    treeview.$activeItem = $item
-    _updateStyling(treeview, $item)
-    _toggleGroup(treeview, $item)
-    e.stopPropagation()
-    return false
-  }
-
   function _handleClick(treeview, $item, e) {
     if (e.altKey || e.ctrlKey || e.shiftKey) {
       // do nothing
       return true
     }
 
-    if (!$(e.target).parent().is('[aria-expanded]')) {
-      return true
-    }
+    // closest('li')
+    const $parent = $item.parent().parent()
 
-    treeview.$activeItem = treeview.$el
-    _updateStyling(treeview, $item)
+    treeview.$activeItem = $parent
+    _updateStyling(treeview, $parent)
+    _toggleGroup(treeview, $parent)
+
     e.stopPropagation()
     return false
   }
 
   function _bindEvents(treeview) {
-    if (openOnClick) {
-      treeview.$parents.click(function(e) {
-        return _handleDblClick(treeview, $(this), e)
-      })
-    } else {
-      treeview.$parents.click(function(e) {
-        return _handleDblClick(treeview, $(this), e)
-      })
-      treeview.$items.click(function(e) {
-        return _handleClick(treeview, $(this), e)
-      })
-    }
-
-    treeview.$items.keydown(function(e) {
-      return _handleKeyDown(treeview, $(this), e)
+    treeview.$handlers.click(function(e) {
+      return _handleClick(treeview, $(this), e)
     })
 
-    treeview.$items.keypress(function(e) {
-      return _handleKeyPress(treeview, $(this), e)
+    treeview.$handlers.keydown(function(e) {
+      return _handleKeyDown(treeview, $(this).parent().parent(), e)
+    })
+
+    treeview.$handlers.keypress(function(e) {
+      return _handleKeyPress(treeview, $(this).parent().parent(), e)
     })
 
     $(document).click(function() {
@@ -348,10 +323,14 @@ const Frtreeview = function({
         const $li = $(li)
         $li
           .attr('role', 'treeitem')
-          .attr('tabindex', (0 === i) ? '0' : '-1')
+          // .attr('tabindex', (0 === i) ? '0' : '-1')
           //  .find('a[href]').not('[href^=#]').attr('tabindex', 0)
           //  .parent().attr('aria-label', function() { return $(this).text() })
         if ($li.find('ul').length !== 0) {
+
+          $li.find('> a')
+            .append(`<span class="${classMenuHandler} ${styleMenuHandler}" aria-label="espandi la sezione" role="button" tabindex="0"></span>`)
+
           if (!li.hasAttribute('aria-expanded')) {
             $li.attr('aria-expanded', 'false')
           }
@@ -370,6 +349,7 @@ const Frtreeview = function({
         $el: $el,
         $items: $el.find('li'),
         $parents: $el.find('.' + classParent),
+        $handlers: $el.find('.' + classMenuHandler),
         $visibleItems: null,
         $activeItem: null
       }
@@ -388,8 +368,8 @@ const Frtreeview = function({
 
 }
 
-new Frtreeview()
+new Treeview()
 
 export default {
-  Frtreeview
+  Treeview
 }

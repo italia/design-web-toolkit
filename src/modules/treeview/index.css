@@ -1,21 +1,35 @@
 /** @define Treeview; weak; */
 
 :root {
-  --Treeview-link-padding: 0.5em;
-  --Treeview-link-arrow-width: 0.8em;
+  --Treeview-link-minWidth: 3.5em;
+  --Treeview-link-padding: 15%;
+  --Treeview-link-arrow-width: 1em;
   --Treeview-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
   --Treeview-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
 }
 
-.Treeview [aria-expanded] > a {
+.Treeview-handler {
+  @extend .u-zindex-30;
+  @extend .u-posAbsolute;
+  @extend .u-block;
+
   background-image: var(--Treeview-link-arrow-down);
-  background-position: right var(--Treeview-link-padding) center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: var(--Treeview-link-arrow-width);
-  padding-right: calc(var(--Treeview-link-arrow-width) + (2 * var(--Treeview-link-padding)));
+  content: " ";
+  height: 100%;
+  min-width: var(--Treeview-link-minWidth);
+  right: 0;
+  top: 0;
+  width: var(--Treeview-link-padding);
 }
 
-.Treeview [aria-expanded="true"] > a {
+.Treeview-handler--default {
+  @extend .u-background-grey-20;
+}
+
+.Treeview [aria-expanded="true"] > a > .Treeview-handler {
   background-image: var(--Treeview-link-arrow-up);
 }
 
@@ -27,10 +41,10 @@
   cursor: pointer;
 }
 
-/* FIXME: overrides focus unset */
+.Treeview-parent > a {
+  @extend .u-posRelative;
 
-.Treeview li[tabindex]:focus {
-  outline: 3px solid #ff8c00 !important;
+  padding-right: var(--Treeview-link-padding);
 }
 
 /*
