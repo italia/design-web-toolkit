@@ -8,3 +8,5 @@ npm-debug.log
 styleguide
 gh-pages
 .idea
+build/*
+

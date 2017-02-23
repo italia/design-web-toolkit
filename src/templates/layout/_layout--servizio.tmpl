@@ -1,0 +1,68 @@
+<section>
+  <p class="u-md-hidden u-lg-hidden u-padding-r-all u-text-m u-background-grey-20">
+    <span class="Icon-list u-text-r-xl u-alignMiddle u-padding-r-right" aria-hidden="true"></span>
+    <a href="#subnav" class="js-scrollTo u-text-r-s u-textClean u-color-grey-50 u-alignMiddle">
+      Esplora contenuti correlati
+    </a>
+  </p>
+
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-r-top">
+    {% render '@breadcrumb' %}
+  </div>
+
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
+
+    <h1 class="u-text-h2">
+      Nome del servizio
+    </h1>
+
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+        <article class="Prose u-layout-prose">
+          <p>
+            Una breve descrizione del servizio. {{ __TEXTS__[0] }}
+          </p>
+          <p>
+            Questo servizio serve per:
+          </p>
+          <ul>
+            <li>fare qualcosa</li>
+            <li>verificare lo stato della propria pratica</li>
+          </ul>
+          <h2 class="u-text-h3">A chi è rivolto</h2>
+          <p>
+            {{ __LONG_TEXTS__[1] }}
+          </p>
+          <h2 class="u-text-h3">Come funziona</h2>
+          <p>
+            {{ __LONG_TEXTS__[2] }}
+          </p>
+          <h2 class="u-text-h3">Prima di iniziare</h2>
+          <p>
+            Accertati di aver già...
+            <ul>
+              <li>azione 1</li>
+              <li>azione 2</li>
+              <li>azione 3</li>
+            </ul>
+          </p>
+          <p>
+            <button type="button" class="Button Button--default u-text-r-xs">Accedi al servizio</button>
+          </p>
+        </article>
+      </div>
+
+      <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
+        <div class="u-cf u-padding-bottom-xxl u-hidden u-md-block u-lg-block">
+          <button type="button" class="Button Button--default u-text-r-xs">Accedi al servizio</button>
+        </div>
+        <h3 class="u-text-h4">Altri servizi</h3>
+        <div class="u-sizeFull" id="subnav">
+          {% render '@linklist--padded' %}
+        </div>
+        <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
+      </aside>
+    </div>
+
+  </div>
+</section>
