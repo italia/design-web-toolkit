@@ -3,7 +3,7 @@
 {% macro tree(root, current, request) %}
 <div class="Tree" data-behaviour="tree" id="tree-{{ root.name }}">
     <h3 class="Tree-title u-text-h4">{{ root.title }}</h3>
-    <ul class="Linklist Linklist--padded Treeview Treeview--default js-fr-treeview u-text-r-xs">
+    <ul class="Linklist Linklist--padded Treeview Treeview--default js-fr-treeview u-text-r-xxs">
         {{ leaves(root.filter('isHidden', false).items(), root, current, 2, request) }}
     </ul>
 </div>

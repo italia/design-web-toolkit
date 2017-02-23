@@ -2,7 +2,7 @@
 
 html {
   color: #000;
-  font-size: 18px;
+  font-size: 100%;
 }
 
 /*
@@ -35,7 +35,7 @@ h4 {
 
 .Document-title {
   color: #000;
-  font-size: 40px;
+  font-size: 2.5em;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.2;
@@ -52,7 +52,7 @@ h4 {
 }
 
 .Prose h2 {
-  font-size: 32px;
+  font-size: 2em;
   margin-bottom: 0.5em;
 }
 
@@ -61,13 +61,13 @@ h4 {
 }
 
 .Prose h3 {
-  font-size: 23px;
+  font-size: 1.6em;
 }
 
 .Prose code pre,
 .Prose code pre span {
   font-family: Hack, Consolas, Monaco, "Andale Mono", monospace !important;
-  font-size: 15px;
+  font-size: 1em;
 }
 
 .Document-header,
@@ -79,9 +79,8 @@ h4 {
   padding: 1rem 1.5rem;
 }
 
-@media screen and (max-width: 991px)
-              and (min-width: 768px), screen and (max-width: 1365px)
-              and (min-width: 992px), screen and (min-width: 1366px) {
+@media screen and (max-width: 991px) and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
   .Document {
     padding: 2rem 4rem;
   }
@@ -97,9 +96,10 @@ h4 {
 }
 
 /* Header */
+
 .Header-button {
-  min-width: 3em;
   height: 5rem;
+  min-width: 3em;
   width: 5rem;
 }
 
@@ -112,60 +112,58 @@ h4 {
   width: auto;
 }
 
-@media screen and (min-width: 768px), screen and (max-width: 1365px)
-and (min-width: 992px), screen and (min-width: 1366px) {
+@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
   .t-Pac .Header-button {
-    margin-top: -.5rem;
+    margin-top: -0.5rem;
   }
 }
 
 .t-Pac .Header-button:focus {
-  -webkit-box-shadow: 0 0 0 3px #ff8c00 inset!important;
-  box-shadow: inset 0 0 0 3px #ff8c00!important;
+  box-shadow: inset 0 0 0 3px #ff8c00 !important;
   outline: none;
 }
 
 .t-Pac .Header-button:active,
 .t-Pac .Header-button:hover {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .t-Pac .Header .Header-navbar {
+  background-color: #06c !important;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   padding-bottom: 0 !important;
   padding-top: 0 !important;
-  background-color: #06c !important;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
 }
 
-@media screen and (max-width: 991px)
-and (min-width: 768px), screen and (max-width: 1365px)
-and (min-width: 992px), screen and (min-width: 1366px) {
+@media screen and (max-width: 991px) and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
   .t-Pac .Header-logo img {
     height: 5.5rem;
     width: 5.5rem;
   }
 }
 
-@media screen and (min-width: 768px), screen and (max-width: 1365px)
-and (min-width: 992px), screen and (min-width: 1366px) {
+@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
   .t-Pac .Header-button .Header-toggleText {
     margin-bottom: 0;
-    margin-top: -.6rem;
+    margin-top: -0.6rem;
   }
 }
 
 .t-Pac .Frame .Header-navToggleIcon--open,
 .t-Pac .Frame.is-closed .Header-navToggleIcon--closed {
-  width: 4rem;
   height: 4rem;
+  width: 4rem;
 }
 
-@media screen and (min-width: 768px), screen and (max-width: 1365px)
-and (min-width: 992px), screen and (min-width: 1366px) {
+@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
   .t-Pac .Frame .Header-navToggleIcon--open,
   .t-Pac .Frame.is-closed .Header-navToggleIcon--closed {
-    width: 6rem;
     height: 6rem;
+    width: 6rem;
   }
 }
 
@@ -174,13 +172,14 @@ and (min-width: 992px), screen and (min-width: 1366px) {
 }
 
 /* Tree */
+
 .Tree-title {
-  color: #1C2024;
-  padding-left: 1.6rem;
+  color: #1c2024;
   font-family: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-  font-size: 20px;
+  font-size: 1.2em;
   font-weight: 700;
   letter-spacing: 0;
+  padding-left: 1.6rem;
   text-transform: none;
 }
 
@@ -206,10 +205,11 @@ and (min-width: 992px), screen and (min-width: 1366px) {
 }
 
 .Code pre {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 /* Footer */
+
 .t-Pac .Document .Footer .Footer-links {
   border-top: 1px solid #008383;
   padding-left: 0;
@@ -223,32 +223,35 @@ and (min-width: 992px), screen and (min-width: 1366px) {
 }
 
 .t-Pac .Document .Footer-links a {
-  color: #008383 !important;
-  font-size: 15px;
+  font-size: 1em;
 }
 
 /* Browser */
+
 .Browser-tab {
   max-width: none;
 }
 
 /* Status */
+
 .Status-label {
   font-size: 1.3rem;
 }
 
 .Status-dot {
-  margin-left: .2em;
-  height: .9rem;
-  width: .9rem;
+  height: 0.9rem;
+  margin-left: 0.2em;
+  width: 0.9rem;
 }
 
 /* Browser */
+
 .Browser-tab a {
   font-size: 1.6rem;
 }
 
 /* Pen */
+
 .Pen .Pen-header {
   max-height: 8rem;
   padding-bottom: 1.5rem;
