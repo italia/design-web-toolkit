@@ -1,7 +1,8 @@
 /** @define Treeview; weak; */
 
 :root {
-  --Treeview-link-minWidth: 3.5em;
+  --Treeview-link-minWidth: 4em;
+  --Treeview-link-maxWidth: 6em;
   --Treeview-link-padding: 15%;
   --Treeview-link-arrow-width: 1em;
   --Treeview-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
@@ -19,6 +20,7 @@
   background-size: var(--Treeview-link-arrow-width);
   content: " ";
   height: 100%;
+  max-width: var(--Treeview-link-maxWidth);
   min-width: var(--Treeview-link-minWidth);
   right: 0;
   top: 0;
@@ -26,7 +28,7 @@
 }
 
 .Treeview-handler--default {
-  @extend .u-background-grey-20;
+  border-left: 1px solid var(--Color-grey-30);
 }
 
 .Treeview [aria-expanded="true"] > a > .Treeview-handler {

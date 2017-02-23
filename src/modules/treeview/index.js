@@ -15,6 +15,7 @@ const Treeview = function({
   classParent: classParent = 'Treeview-parent',
   classMenuHandler: classMenuHandler = 'Treeview-handler',
   styleMenuHandler: styleMenuHandler = 'Treeview-handler--default',
+  ariaLabelHandler: ariaLabelHandler = 'espandi la sezione',
   multiselectable: multiselectable = true,
   animationMs: animationMs = 150,
 } = {}) {
@@ -329,7 +330,8 @@ const Treeview = function({
         if ($li.find('ul').length !== 0) {
 
           $li.find('> a')
-            .append(`<span class="${classMenuHandler} ${styleMenuHandler}" aria-label="espandi la sezione" role="button" tabindex="0"></span>`)
+            .append(`<span class="${classMenuHandler} ${styleMenuHandler}"
+              aria-label="${ariaLabelHandler}" role="button" tabindex="0"></span>`)
 
           if (!li.hasAttribute('aria-expanded')) {
             $li.attr('aria-expanded', 'false')
