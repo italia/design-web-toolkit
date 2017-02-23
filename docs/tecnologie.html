@@ -15,38 +15,65 @@
 
 <link rel="stylesheet" href="../ita-web-toolkit/theme/styleguide.css?cachebust=1.0.7" type="text/css">
 
+<link rel="stylesheet" href="../build/build-styleguide.css?cachebust=1.0.7" type="text/css">
+
+<link rel="stylesheet" href="../build/vendor.css?cachebust=1.0.7" type="text/css">
+
 
 <title>Principali tecnologie utilizzate | Web Toolkit Styleguide</title>
 
 </head>
-<body>
+<body class="t-Pac">
 
 
 
 <div class="Frame" id="frame">
 
     <div class="Frame-header">
-        <div class="Header">
-    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
-        <svg class="Header-navToggleIcon Header-navToggleIcon--open" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        <ul class="Skiplinks js-fr-bypasslinks u-hiddenPrint">
+  <li><a href="#main">Vai al Contenuto</a></li>
+  <li><a class="Skiplinks-to-menu" href="#menu"
+         aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">Vai alla navigazione del sito</a></li>
+</ul>
+
+<header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
+  <div class="Header-navbar Grid Grid--alignMiddle">
+    <div class="Header-toggle Grid-cell">
+      <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
 </svg>
 
-        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
 </svg>
 
-    </button>
-    <a href="../index.html" class="Header-title" data-pjax>Web Toolkit Styleguide</a>
-</div>
+        <span class="Header-toggleText">Menu</span>
+      </button>
+    </div>
+
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="" tabindex="-1">
+        <img src="/ita-web-toolkit/theme/docs/logo-it.svg" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
+      <h1 class="Header-titleLink u-text-h1">
+        <a href="../index.html" data-pjax>Web Toolkit Styleguide</a>
+      </h1>
+    </div>
+  </div>
+  <!-- Header-navbar -->
+</header>
 
     </div>
 
     <div class="Frame-body" data-role="body">
 
-        <div class="Frame-panel Frame-panel--main" data-role="main">
+        <div id="main" class="Frame-panel Frame-panel--main" data-role="main">
             <div class="Frame-inner" id="pjax-container">
             
 
@@ -168,22 +195,22 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         </div>
 
         <div class="Frame-handle" data-role="frame-resize-handle"></div>
-        
-        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
-            <nav class="Navigation">
 
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation" id="menu">
+  
     
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-docs">
-    <h3 class="Tree-title">Documentazione</h3>
-    <ul class="Tree-items Tree-depth-1">
+    <h3 class="Tree-title u-text-h4">Documentazione</h3>
+    <ul class="Linklist Linklist--padded Treeview Treeview--default js-fr-treeview u-text-r-xxs">
         
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../index.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../index.html" data-pjax>
                 <span>Introduzione</span>
                 
             </a>
@@ -192,8 +219,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="come-iniziare.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="come-iniziare.html" data-pjax>
                 <span>Come iniziare</span>
                 
             </a>
@@ -202,8 +229,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+        <li class=" is-current" data-state="current" data-role="item">
+            <a href="" data-pjax>
                 <span>Tecnologie utilizzate</span>
                 
             </a>
@@ -212,8 +239,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="sviluppare.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="sviluppare.html" data-pjax>
                 <span>Utilizzare l'ambiente di sviluppo</span>
                 
             </a>
@@ -222,8 +249,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="moduli.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="moduli.html" data-pjax>
                 <span>Creare o modificare un modulo</span>
                 
             </a>
@@ -232,8 +259,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="compatibilita.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="compatibilita.html" data-pjax>
                 <span>Compatibilità con altri framework</span>
                 
             </a>
@@ -242,8 +269,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="struttura.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="struttura.html" data-pjax>
                 <span>Struttura del file system</span>
                 
             </a>
@@ -252,8 +279,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tema.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="tema.html" data-pjax>
                 <span>Realizzare un tema</span>
                 
             </a>
@@ -267,41 +294,41 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
 </div>
 
 
-
+  
     
 <div class="Navigation-group">
 
 <div class="Tree" data-behaviour="tree" id="tree-components">
-    <h3 class="Tree-title">Componenti</h3>
-    <ul class="Tree-items Tree-depth-1">
+    <h3 class="Tree-title u-text-h4">Componenti</h3>
+    <ul class="Linklist Linklist--padded Treeview Treeview--default js-fr-treeview u-text-r-xxs">
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-components">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Components</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-button">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Button</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Components
+            </a>
+            <ul>
             
             
             
             
     
         
+        <li>
+            <a href="#">
+                Button
+            </a>
+            <ul>
+            
+            
+            
+            
+    
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/button--default.html" data-pjax>
+        
+        <li class="" data-role="item">
+            <a href="../components/detail/button--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -324,8 +351,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/button--info.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/button--info.html" data-pjax>
                 <span>Info</span>
                 
 
@@ -348,8 +375,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/button--danger.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/button--danger.html" data-pjax>
                 <span>Danger</span>
                 
 
@@ -376,11 +403,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-grid">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Grid</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Grid
+            </a>
+            <ul>
             
             
             
@@ -388,8 +415,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/grid--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/grid--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -412,8 +439,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/grid--responsive.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/grid--responsive.html" data-pjax>
                 <span>Responsive</span>
                 
 
@@ -436,8 +463,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/grid--responsive-alt.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/grid--responsive-alt.html" data-pjax>
                 <span>Responsive Alt</span>
                 
 
@@ -464,11 +491,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-heading">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Heading</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Heading
+            </a>
+            <ul>
             
             
             
@@ -476,8 +503,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/heading--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/heading--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -500,8 +527,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/heading--h1.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/heading--h1.html" data-pjax>
                 <span>H 1</span>
                 
 
@@ -524,8 +551,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/heading--h2.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/heading--h2.html" data-pjax>
                 <span>H 2</span>
                 
 
@@ -548,8 +575,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/heading--h3.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/heading--h3.html" data-pjax>
                 <span>H 3</span>
                 
 
@@ -572,8 +599,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/heading--h4.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/heading--h4.html" data-pjax>
                 <span>H 4</span>
                 
 
@@ -596,8 +623,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/heading--h5.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/heading--h5.html" data-pjax>
                 <span>H 5</span>
                 
 
@@ -620,8 +647,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/heading--h6.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/heading--h6.html" data-pjax>
                 <span>H 6</span>
                 
 
@@ -648,11 +675,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-prose">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Prose</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Prose
+            </a>
+            <ul>
             
             
             
@@ -660,8 +687,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/prose--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/prose--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -684,8 +711,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/prose--blockquote.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/prose--blockquote.html" data-pjax>
                 <span>Blockquote</span>
                 
 
@@ -708,8 +735,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/prose--code.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/prose--code.html" data-pjax>
                 <span>Code</span>
                 
 
@@ -732,8 +759,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/prose--paragraph.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/prose--paragraph.html" data-pjax>
                 <span>Paragraph</span>
                 
 
@@ -760,11 +787,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-table">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Table</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Table
+            </a>
+            <ul>
             
             
             
@@ -772,8 +799,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/table--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/table--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -796,8 +823,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/table--compact.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/table--compact.html" data-pjax>
                 <span>Compact</span>
                 
 
@@ -820,8 +847,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/table--complex.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/table--complex.html" data-pjax>
                 <span>Complex</span>
                 
 
@@ -844,8 +871,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/table--flip.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/table--flip.html" data-pjax>
                 <span>Flip</span>
                 
 
@@ -868,8 +895,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/table--flippable.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/table--flippable.html" data-pjax>
                 <span>Flippable</span>
                 
 
@@ -892,8 +919,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/table--irregular.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/table--irregular.html" data-pjax>
                 <span>Irregular</span>
                 
 
@@ -916,8 +943,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/table--responsive.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/table--responsive.html" data-pjax>
                 <span>Responsive</span>
                 
 
@@ -940,8 +967,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/table--twoheaders.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/table--twoheaders.html" data-pjax>
                 <span>Twoheaders</span>
                 
 
@@ -973,11 +1000,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-modules">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Modules</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Modules
+            </a>
+            <ul>
             
             
             
@@ -985,8 +1012,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/accordion.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/accordion.html" data-pjax>
                 <span>Accordion</span>
                 
 
@@ -1008,11 +1035,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-alert">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Alert</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Alert
+            </a>
+            <ul>
             
             
             
@@ -1020,8 +1047,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/alert--error.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/alert--error.html" data-pjax>
                 <span>Error</span>
                 
 
@@ -1044,8 +1071,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/alert--warning.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/alert--warning.html" data-pjax>
                 <span>Warning</span>
                 
 
@@ -1068,8 +1095,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/alert--success.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/alert--success.html" data-pjax>
                 <span>Success</span>
                 
 
@@ -1092,8 +1119,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/alert--info.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/alert--info.html" data-pjax>
                 <span>Info</span>
                 
 
@@ -1121,8 +1148,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/breadcrumb.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/breadcrumb.html" data-pjax>
                 <span>Breadcrumb</span>
                 
 
@@ -1145,8 +1172,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/bullets.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/bullets.html" data-pjax>
                 <span>Bullets</span>
                 
 
@@ -1168,11 +1195,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-callout">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Callout</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Callout
+            </a>
+            <ul>
             
             
             
@@ -1180,8 +1207,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/callout--must.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/callout--must.html" data-pjax>
                 <span>Must</span>
                 
 
@@ -1204,8 +1231,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/callout--should.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/callout--should.html" data-pjax>
                 <span>Should</span>
                 
 
@@ -1228,8 +1255,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/callout--could.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/callout--could.html" data-pjax>
                 <span>Could</span>
                 
 
@@ -1252,8 +1279,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/callout--example.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/callout--example.html" data-pjax>
                 <span>Example</span>
                 
 
@@ -1280,11 +1307,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-card">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Card</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Card
+            </a>
+            <ul>
             
             
             
@@ -1292,8 +1319,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/card--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/card--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1316,8 +1343,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/card--shadow.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/card--shadow.html" data-pjax>
                 <span>Shadow</span>
                 
 
@@ -1340,8 +1367,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/card--round.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/card--round.html" data-pjax>
                 <span>Round</span>
                 
 
@@ -1364,8 +1391,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/card--all.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/card--all.html" data-pjax>
                 <span>All</span>
                 
 
@@ -1393,8 +1420,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/carousel.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/carousel.html" data-pjax>
                 <span>Carousel</span>
                 
 
@@ -1417,8 +1444,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/cookiebar.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/cookiebar.html" data-pjax>
                 <span>Cookiebar</span>
                 
 
@@ -1441,8 +1468,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/dialog.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/dialog.html" data-pjax>
                 <span>Dialog</span>
                 
 
@@ -1465,8 +1492,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/dropdown.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/dropdown.html" data-pjax>
                 <span>Dropdown</span>
                 
 
@@ -1488,11 +1515,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-entrypoint">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Entrypoint</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Entrypoint
+            </a>
+            <ul>
             
             
             
@@ -1500,8 +1527,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/entrypoint--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/entrypoint--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1524,8 +1551,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/entrypoint--responsive.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/entrypoint--responsive.html" data-pjax>
                 <span>Responsive</span>
                 
 
@@ -1553,8 +1580,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/footer.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/footer.html" data-pjax>
                 <span>Footer</span>
                 
 
@@ -1576,11 +1603,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-header">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Header</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Header
+            </a>
+            <ul>
             
             
             
@@ -1588,8 +1615,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/header--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/header--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1612,8 +1639,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/header--menu.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/header--menu.html" data-pjax>
                 <span>Menu</span>
                 
 
@@ -1636,8 +1663,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/header--megamenu.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/header--megamenu.html" data-pjax>
                 <span>Megamenu</span>
                 
 
@@ -1664,11 +1691,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-hero">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Hero</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Hero
+            </a>
+            <ul>
             
             
             
@@ -1676,8 +1703,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/hero--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/hero--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1700,8 +1727,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/hero--news.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/hero--news.html" data-pjax>
                 <span>News</span>
                 
 
@@ -1729,8 +1756,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/leads.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/leads.html" data-pjax>
                 <span>Leads</span>
                 
 
@@ -1752,11 +1779,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-linklist">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Linklist</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Linklist
+            </a>
+            <ul>
             
             
             
@@ -1764,8 +1791,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/linklist--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/linklist--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1788,8 +1815,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/linklist--padded.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/linklist--padded.html" data-pjax>
                 <span>Padded</span>
                 
 
@@ -1817,8 +1844,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/megamenu.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/megamenu.html" data-pjax>
                 <span>Megamenu</span>
                 
 
@@ -1841,8 +1868,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/navscroll.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/navscroll.html" data-pjax>
                 <span>Navscroll</span>
                 
 
@@ -1865,8 +1892,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/offcanvas.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/offcanvas.html" data-pjax>
                 <span>Offcanvas</span>
                 
 
@@ -1888,11 +1915,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-pager">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Pager</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Pager
+            </a>
+            <ul>
             
             
             
@@ -1900,8 +1927,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/pager--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/pager--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1924,8 +1951,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/pager--responsive.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/pager--responsive.html" data-pjax>
                 <span>Responsive</span>
                 
 
@@ -1953,8 +1980,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/skiplinks.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/skiplinks.html" data-pjax>
                 <span>Skiplinks</span>
                 
 
@@ -1977,8 +2004,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/tooltip.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/tooltip.html" data-pjax>
                 <span>Tooltip</span>
                 
 
@@ -2000,11 +2027,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-treeview">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Treeview</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Treeview
+            </a>
+            <ul>
             
             
             
@@ -2012,8 +2039,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/treeview--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/treeview--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2036,8 +2063,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/treeview--comuni.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/treeview--comuni.html" data-pjax>
                 <span>Comuni</span>
                 
 
@@ -2069,11 +2096,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-extra">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Extra</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Extra
+            </a>
+            <ul>
             
             
             
@@ -2081,8 +2108,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/share.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/share.html" data-pjax>
                 <span>Share</span>
                 
 
@@ -2105,8 +2132,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/spid.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/spid.html" data-pjax>
                 <span>Spid</span>
                 
 
@@ -2133,22 +2160,22 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Templates</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Templates
+            </a>
+            <ul>
             
             
             
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-comuni">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Comuni</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Comuni
+            </a>
+            <ul>
             
             
             
@@ -2156,8 +2183,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/comuni--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/comuni--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2180,8 +2207,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/comuni--megamenu.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/comuni--megamenu.html" data-pjax>
                 <span>Megamenu</span>
                 
 
@@ -2208,11 +2235,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-formtpl">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Formtpl</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Formtpl
+            </a>
+            <ul>
             
             
             
@@ -2220,8 +2247,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/formtpl--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/formtpl--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2244,8 +2271,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/formtpl--errors.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/formtpl--errors.html" data-pjax>
                 <span>Errors</span>
                 
 
@@ -2268,8 +2295,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/formtpl--example.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/formtpl--example.html" data-pjax>
                 <span>Example</span>
                 
 
@@ -2292,8 +2319,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/formtpl--filters.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/formtpl--filters.html" data-pjax>
                 <span>Filters</span>
                 
 
@@ -2320,11 +2347,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-layout">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Layout</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Layout
+            </a>
+            <ul>
             
             
             
@@ -2332,8 +2359,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/layout--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/layout--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2356,8 +2383,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/layout--focus.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/layout--focus.html" data-pjax>
                 <span>Focus</span>
                 
 
@@ -2380,8 +2407,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/layout--gallery.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/layout--gallery.html" data-pjax>
                 <span>Gallery</span>
                 
 
@@ -2404,8 +2431,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/layout--grid.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/layout--grid.html" data-pjax>
                 <span>Grid</span>
                 
 
@@ -2428,8 +2455,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/layout--masonry.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/layout--masonry.html" data-pjax>
                 <span>Masonry</span>
                 
 
@@ -2452,8 +2479,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/layout--news.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/layout--news.html" data-pjax>
                 <span>News</span>
                 
 
@@ -2476,8 +2503,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/layout--twitter.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/layout--twitter.html" data-pjax>
                 <span>Twitter</span>
                 
 
@@ -2504,11 +2531,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-page">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Page</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Page
+            </a>
+            <ul>
             
             
             
@@ -2516,8 +2543,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/page--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/page--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2540,8 +2567,56 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/page--landing.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/page--error_403.html" data-pjax>
+                <span>Error 403</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="" data-role="item">
+            <a href="../components/detail/page--error_404.html" data-pjax>
+                <span>Error 404</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="" data-role="item">
+            <a href="../components/detail/page--landing.html" data-pjax>
                 <span>Landing</span>
                 
 
@@ -2564,8 +2639,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/page--megamenu.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/page--megamenu.html" data-pjax>
                 <span>Megamenu</span>
                 
 
@@ -2588,8 +2663,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/page--menu.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/page--menu.html" data-pjax>
                 <span>Menu</span>
                 
 
@@ -2612,9 +2687,33 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/page--section.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/page--section.html" data-pjax>
                 <span>Section</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="" data-role="item">
+            <a href="../components/detail/page--servizio.html" data-pjax>
+                <span>Servizio</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2640,11 +2739,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-tile">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tile</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Tile
+            </a>
+            <ul>
             
             
             
@@ -2652,8 +2751,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/tile--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/tile--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2676,8 +2775,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/tile--gallery.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/tile--gallery.html" data-pjax>
                 <span>Gallery</span>
                 
 
@@ -2700,8 +2799,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/tile--twitter.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/tile--twitter.html" data-pjax>
                 <span>Twitter</span>
                 
 
@@ -2733,22 +2832,22 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-utils">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Utils</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Utils
+            </a>
+            <ul>
             
             
             
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-borders">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Borders</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Borders
+            </a>
+            <ul>
             
             
             
@@ -2756,8 +2855,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/borders--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/borders--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2780,8 +2879,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/borders--alt.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/borders--alt.html" data-pjax>
                 <span>Alt</span>
                 
 
@@ -2809,8 +2908,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/colors.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/colors.html" data-pjax>
                 <span>Colors</span>
                 
 
@@ -2833,8 +2932,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/corners.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/corners.html" data-pjax>
                 <span>Corners</span>
                 
 
@@ -2857,8 +2956,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/shadows.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/shadows.html" data-pjax>
                 <span>Shadows</span>
                 
 
@@ -2880,11 +2979,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-space">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Space</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Space
+            </a>
+            <ul>
             
             
             
@@ -2892,8 +2991,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/space--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/space--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2916,8 +3015,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/space--responsive.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/space--responsive.html" data-pjax>
                 <span>Responsive</span>
                 
 
@@ -2944,11 +3043,11 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-text">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Text</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Text
+            </a>
+            <ul>
             
             
             
@@ -2956,8 +3055,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/text--default.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/text--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -2980,8 +3079,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/text--size.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/text--size.html" data-pjax>
                 <span>Size</span>
                 
 
@@ -3013,22 +3112,22 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-icons">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Icons</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Icons
+            </a>
+            <ul>
             
             
             
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-ita">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Ita</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
+        <li>
+            <a href="#">
+                Ita
+            </a>
+            <ul>
             
             
             
@@ -3036,8 +3135,8 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/icons.html" data-pjax>
+        <li class="" data-role="item">
+            <a href="../components/detail/icons.html" data-pjax>
                 <span>Icons</span>
                 
 
@@ -3075,7 +3174,7 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
 </div>
 
 
-
+  
 </nav>
 
         </div>
@@ -3086,6 +3185,10 @@ nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di svil
 
 
 <script src="../_theme/js/mandelbrot.js?cachebust=1.0.7"></script>
+
+<script src="../build/styleguide.min.js?cachebust=1.0.7"></script>
+
+<script src="../ita-web-toolkit/theme/styleguide-menu-override.js?cachebust=1.0.7"></script>
 
 
 

@@ -2,11 +2,7 @@
 
 html {
   color: #000;
-  font-size: 18px;
-}
-
-.Frame-panel--sidebar {
-  background-color: #00264d !important;
+  font-size: 100%;
 }
 
 /*
@@ -14,6 +10,13 @@ html {
   background-color: #f5f5f0 !important;
 }
 */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+}
 
 .Header-title,
 .Document-title,
@@ -26,25 +29,13 @@ html {
   line-height: 1.55;
 }
 
-.Header-button {
-  min-width: 3em;
-}
-
 .Frame-inner {
   min-width: 314px;
 }
 
-.Header-title {
-  background: url("/ita-web-toolkit/theme/logo-it.svg") no-repeat 1em 50%;
-  background-size: 30px 30px;
-  font-size: 24px;
-  font-weight: 600;
-  padding-left: 3em;
-}
-
 .Document-title {
   color: #000;
-  font-size: 40px;
+  font-size: 2.5em;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.2;
@@ -57,10 +48,11 @@ html {
 .Prose h3,
 .Prose h4 {
   color: #222;
+  font-size: inherit;
 }
 
 .Prose h2 {
-  font-size: 32px;
+  font-size: 2em;
   margin-bottom: 0.5em;
 }
 
@@ -69,13 +61,13 @@ html {
 }
 
 .Prose h3 {
-  font-size: 23px;
+  font-size: 1.6em;
 }
 
 .Prose code pre,
 .Prose code pre span {
   font-family: Hack, Consolas, Monaco, "Andale Mono", monospace !important;
-  font-size: 15px;
+  font-size: 1em;
 }
 
 .Document-header,
@@ -83,111 +75,190 @@ html {
   max-width: 40em;
 }
 
+.Document {
+  padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .Document {
+    padding: 2rem 4rem;
+  }
+}
+
 .Prose a,
 .Prose a:visited {
   color: #06c;
 }
 
-.Header {
-  background-color: #06c;
-  box-shadow: 0 3px 3px #aaa;
+[dir="ltr"] .Tree-title {
+  padding-left: 1.6rem;
 }
 
-.Tree-entityLink,
-.Tree-collectionLabel {
-  border-bottom: 1px solid #036;
-  font-size: 16px !important;
-  padding-bottom: 0.8em;
-  padding-top: 0.8em;
+/* Header */
+
+.Header-button {
+  height: 5rem;
+  min-width: 3em;
+  width: 5rem;
 }
 
-.Tree-entityLink span,
-.Tree-collectionLabel span {
-  color: white;
+[dir="ltr"] .t-Pac .Header-button {
+  border-right: none;
 }
 
-/*
-.Tree-entityLink:hover,
-.Tree-collectionLabel:hover {
-  color: #00264d;
+.t-Pac .Header-button {
+  height: auto;
+  width: auto;
 }
-.Tree-entityLink:hover,
-.Tree-collectionLabel:hover {
-  background-color: #8ebeed;
+
+@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .t-Pac .Header-button {
+    margin-top: -0.5rem;
+  }
 }
-*/
+
+.t-Pac .Header-button:focus {
+  box-shadow: inset 0 0 0 3px #ff8c00 !important;
+  outline: none;
+}
+
+.t-Pac .Header-button:active,
+.t-Pac .Header-button:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.t-Pac .Header .Header-navbar {
+  background-color: #06c !important;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .t-Pac .Header-logo img {
+    height: 5.5rem;
+    width: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .t-Pac .Header-button .Header-toggleText {
+    margin-bottom: 0;
+    margin-top: -0.6rem;
+  }
+}
+
+.t-Pac .Frame .Header-navToggleIcon--open,
+.t-Pac .Frame.is-closed .Header-navToggleIcon--closed {
+  height: 4rem;
+  width: 4rem;
+}
+
+@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .t-Pac .Frame .Header-navToggleIcon--open,
+  .t-Pac .Frame.is-closed .Header-navToggleIcon--closed {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+.t-Pac .Hamburger-toggleContainer {
+  line-height: normal;
+}
+
+/* Tree */
 
 .Tree-title {
-  color: #8ebeed;
-  font-size: 20px;
+  color: #1c2024;
+  font-family: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  font-size: 1.2em;
   font-weight: 700;
   letter-spacing: 0;
+  padding-left: 1.6rem;
+  text-transform: none;
 }
 
-.Tree-collectionLabel span::before,
-[dir="ltr"] .Tree-collection.is-closed .Tree-collectionLabel span::before {
-  background: none;
+.Tree ul > li .Status {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.Tree-collection.is-closed .Tree-collectionLabel span::after {
-  content: " + ";
-  float: right;
-  font-size: 30px;
-  margin-right: 1em;
-  margin-top: -0.4em;
+.Tree ul > li > a {
+  color: #003e54 !important;
 }
 
-.Tree-collectionLabel span::after {
-  content: " - ";
-  float: right;
-  font-size: 30px;
-  margin-right: 1em;
-  margin-top: -0.4em;
+.Tree ul > li.is-current a {
+  background-color: #e2f7ff !important;
 }
 
-.Tree-collectionItems {
-  background: #004080;
-}
-
-.Tree-collectionItems .Tree-collectionItems {
-  background: #004d99;
-}
-
-.Tree-entity a {
-  width: 100%;
-}
-
-.Tree-entity.is-current {
-  background: #06c;
-  color: white !important;
-  font-weight: 700;
+.Tree .Treeview [aria-expanded] > a {
+  background-position: right 1em center;
 }
 
 .Frame-panel--sidebar {
   background-color: white;
+  min-width: 280px !important;
 }
 
 .Code pre {
-  font-size: 14px;
+  font-size: 1em;
 }
 
-.Footer {
-  padding-top: 2em;
-  width: 100%;
-}
+/* Footer */
 
-.Prose ul.Footer-links {
+.t-Pac .Document .Footer .Footer-links {
   border-top: 1px solid #008383;
   padding-left: 0;
   padding-top: 1em;
 }
 
-.Footer-links li {
-  display: inline;
+.t-Pac .Document .Footer .Footer-links li {
+  display: inline-block;
+  margin-left: 0;
   margin-right: 2em;
 }
 
-.Footer-links a {
-  color: #008383 !important;
-  font-size: 15px;
+.t-Pac .Document .Footer-links a {
+  font-size: 1em;
+}
+
+/* Browser */
+
+.Browser-tab {
+  max-width: none;
+}
+
+/* Status */
+
+.Status-label {
+  font-size: 1.3rem;
+}
+
+.Status-dot {
+  height: 0.9rem;
+  margin-left: 0.2em;
+  width: 0.9rem;
+}
+
+/* Browser */
+
+.Browser-tab a {
+  font-size: 1.6rem;
+}
+
+/* Pen */
+
+.Pen .Pen-header {
+  max-height: 8rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.t-Pac .Pen-header .Pen-title.u-text-h4 {
+  margin-bottom: 0 !important;
 }

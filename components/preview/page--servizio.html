@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
+<!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="it">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="preload" href="../../build/IWT.min.js" as="script"> -->
+  <!--
+    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
+      <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
+    o dal repository locale (src/fonts)
+  -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: {
+        families: ['Titillium+Web:400,600,700,400italic:latin']
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- include html5shim per Explorer 8 -->
+  <script src="../../build/vendor/modernizr.js"></script>
+
+  <link media="all" rel="stylesheet" href="../../build/vendor.css">
+  <link media="all" rel="stylesheet" href="../../build/build.css">
+
+  <script src="../../build/vendor/jquery.min.js"></script>
+
+  <title>Preview Layout</title>
+</head>
+
+<body class="t-Pac">
+
+  <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
+  <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
+    <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br>
+  </p>
+  <p>
+    <button class="Button Button--default u-text-r-xxs js-cookieBarAccept u-inlineBlock u-margin-r-all">Accetto</button>
+    <a href="" class="u-text-r-xs u-color-teal-50">Privacy policy</a>
+  </p>
+</div>
+
+<ul class="Skiplinks js-fr-bypasslinks u-hiddenPrint">
+  <li><a href="#main">Vai al Contenuto</a></li>
+  <li><a class="js-fr-offcanvas-open" href="#menu"
+    aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">Vai alla navigazione del sito</a></li>
+</ul>
+
+
+<header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
+
+  <div class="Header-banner">
+    <div class="Header-owner Headroom-hideme">
+      <a href=""><span>Nome amministrazione afferente</span></a>
+      <div class="Header-languages">
+          <a class="Header-language is-active u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="sito in italiano">
+            <abbr title="Italiano">ITA</abbr>
+          </a>
+          <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="website in english" lang="en">
+            <abbr title="English">ENG</abbr>
+          </a>
+          <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max is-active u-inlineBlock">
+            <span class="u-hiddenVisually">lingua attiva:</span>
+            <span class="u-md-hidden u-lg-hidden">ITA</span>
+            <span class="Icon Icon-expand u-padding-left-xs u-md-hidden u-lg-hidden"></span>
+            <span class="Icon Icon-more-actions u-padding-left-xxs u-padding-right-xxs u-hidden u-md-inlineBlock u-lg-inlineBlock"></span>
+          </a>
+          <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsDisplayNone u-nojsDisplayNone">
+            <ul class="Linklist">
+              <li><a href="#1" class="u-padding-r-all"><span lang="en">English</span></a></li>
+              <li><a href="#1" class="u-padding-r-all"><span lang="ar">عربي</span></a></li>
+              <li><a href="#2" class="u-padding-r-all"><span lang="ch">中文网</span></a></li>
+              <li><a href="#3" class="u-padding-r-all"><span lang="de">Deutsch</span></a></li>
+              <li><a href="#8" class="u-padding-r-all"><span lang="es">Español</span></a></li>
+              <li><a href="#4" class="u-padding-r-all"><span lang="fr">Français</span></a></li>
+              <li><a href="#5" class="u-padding-r-all"><span lang="jp">日本語</span></a></li>
+              <li><a href="#6" class="u-padding-r-all"><span lang="pt">Portuguese</span></a></li>
+              <li><a href="#7" class="u-padding-r-all"><span lang="ru">НА РУССКОМ</span></a></li>
+              <li><a href="#10" class="u-padding-r-all"><span lang="uk">УКРАЇНСЬКA</span></a></li>
+              <li><a href="#9" class="u-padding-r-all"><span lang="tr">TÜRKÇE</span></a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Header-navbar Grid Grid--alignMiddle">
+    <div class="Header-toggle Grid-cell">
+      <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock
+        " href="#menu"
+        aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
+        <span class="Hamburger-toggle" role="presentation"></span>
+        <span class="Header-toggleText" role="presentation">Menu</span>
+      </a>
+    </div>
+
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="" tabindex="-1">
+        <img src="//placehold.it/75x80" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
+      <h1 class="Header-titleLink">
+        <a href="/">
+          Nome della Pubblica Amministrazione<br>
+          <small>eventuale sottotitolo</small>
+        </a>
+      </h1>
+    </div>
+
+    <div class="Header-searchTrigger Grid-cell">
+      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search"
+        title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
+      </button>
+      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden"
+        title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="Header-utils Grid-cell">
+      <div class="Header-social Headroom-hideme">
+        <p>Seguici su:</p>
+        <ul class="Header-socialIcons">
+          <li><a href="" title="Facebook"><span class="Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+          <li><a href="" title="Twitter"><span class="Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+          <li><a href="" title="Youtube"><span class="Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+        </ul>
+      </div>
+      <div class="Header-search" id="header-search">
+        <form class="Form">
+  <div class="Form-field Form-field--withPlaceholder Grid" role="search">
+    <input class="Form-input Grid-cell u-sizeFill u-text-r-s" required id="cerca">
+    <label class="Form-label" for="cerca">Cerca...</label>
+    <button class="Grid-cell u-sizeFit Icon-search u-background-60 u-color-white u-padding-all-s u-textWeight-700"
+      title="Avvia la ricerca" aria-label="Avvia la ricerca">
+    </button>
+  </div>
+</form>
+
+      </div>
+    </div>
+  </div>
+  <!-- Header-navbar -->
+
+  
+
+</header>
+
+
+
+<section class="Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden u-nojsDisplayNone u-hiddenPrint" id="menu">
+	<h2 class="u-hiddenVisually">Menu di navigazione</h2>
+  <div class="Offcanvas-content u-background-white">
+    <div class="Offcanvas-toggleContainer u-background-70 u-jsHidden">
+      <a class="Hamburger-toggleContainer u-block u-color-white u-padding-bottom-xxl u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close"
+        aria-controls="menu" aria-label="esci dalla navigazione" title="esci dalla navigazione" href="#">
+        <span class="Hamburger-toggle is-active" aria-hidden="true"></span>
+      </a>
+    </div>
+    <nav>
+			<ul class="Linklist Linklist--padded Treeview Treeview--default js-fr-treeview u-text-r-xs">
+  <li><a href="#">Culpa voluptatem praesentium</a>
+    <ul>
+      <li><a href="#">Ipsa est consequuntur</a></li>
+      <li><a href="#">Iure vitae magni</a></li>
+      <li><a href="#">Qui saepe voluptatibus</a>
+        <ul>
+          <li><a href="#">Vel ut autem</a></li>
+          <li><a href="#">Quos ipsa sunt</a>
+            <ul>
+              <li><a href="#">Quos ipsa sunt</a></li>
+              <li><a href="#">Est quidem dolorem</a></li>
+              <li><a href="#">Distinctio quod dolor</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Fugit iure consectetur</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Necessitatibus voluptatem omnis</a></li>
+      <li><a href="#">Culpa voluptatem praesentium</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Fugit iure consectetur</a>
+    <ul>
+      <li><a href="#">Qui saepe voluptatibus</a></li>
+      <li><a href="#">Iure vitae magni</a></li>
+      <li><a href="#">Ipsa est consequuntur</a>
+        <ul>
+          <li><a href="#">Est quidem dolorem</a></li>
+          <li><a href="#">Quos ipsa sunt</a></li>
+          <li><a href="#">Vel ut autem</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Distinctio quod dolor</a></li>
+      <li><a href="#">Fugit iure consectetur</a>
+        <ul>
+          <li><a href="#">Necessitatibus voluptatem omnis</a></li>
+          <li><a href="#">Ipsa est consequuntur</a></li>
+          <li><a href="#">Iure vitae magni</a></li>
+          <li><a href="#">Qui saepe voluptatibus</a></li>
+          <li><a href="#">Vel ut autem</a></li>
+          <li><a href="#">Quos ipsa sunt</a></li>
+          <li><a href="#">Est quidem dolorem</a></li>
+          <li><a href="#">Distinctio quod dolor</a></li>
+          <li><a href="#">Fugit iure consectetur</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-megamenu-class="Megamenu-area">
+    <a data-megamenu-class="Button u-border-none u-color-95 u-background-compl u-text-r-xxs" href="#">Accedi</a>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</section>
+
+
+<main role="main" id="main">
+  <section>
+  <p class="u-md-hidden u-lg-hidden u-padding-r-all u-text-m u-background-grey-20">
+    <span class="Icon-list u-text-r-xl u-alignMiddle u-padding-r-right" aria-hidden="true"></span>
+    <a href="#subnav" class="js-scrollTo u-text-r-s u-textClean u-color-grey-50 u-alignMiddle">
+      Esplora contenuti correlati
+    </a>
+  </p>
+
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-r-top">
+    <nav aria-label="sei qui:" role="navigation">
+  <ul class="Breadcrumb">
+    <li class="Breadcrumb-item"><a class="Breadcrumb-link u-color-50" href="">Home</a></li>
+    <li class="Breadcrumb-item"><a class="Breadcrumb-link u-color-50" href="">pagina interna</a></li>
+    <li class="Breadcrumb-item"><a class="Breadcrumb-link u-color-50" href="">pagina interna</a></li>
+    <li class="Breadcrumb-item"><a class="Breadcrumb-link u-color-50" href="">pagina interna</a></li>
+  </ul>
+</nav>
+
+  </div>
+
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
+
+    <h1 class="u-text-h2">
+      Nome del servizio
+    </h1>
+
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+        <article class="Prose u-layout-prose">
+          <p>
+            Una breve descrizione del servizio. Labore cumque sequi quia. Quis omnis repellendus culpa deserunt ad est. Tempore similique vitae iure qui ex omnis. Quo distinctio aut in.
+          </p>
+          <p>
+            Questo servizio serve per:
+          </p>
+          <ul>
+            <li>fare qualcosa</li>
+            <li>verificare lo stato della propria pratica</li>
+          </ul>
+          <h2 class="u-text-h3">A chi è rivolto</h2>
+          <p>
+            Nihil omnis aliquid in voluptatem rerum illum et. Et qui nam ea voluptatem quis minus quaerat omnis. Occaecati id omnis quidem. Soluta quos laboriosam ex maiores consequatur. Nobis accusamus quisquam velit dolores cum iure eveniet cumque.
+ Accusantium esse et consequatur cupiditate accusamus. Sit repellat beatae fugiat non repellendus perferendis tempora. Iste veritatis sit. Voluptatem sequi est praesentium aperiam.
+ Error est sequi doloremque nostrum voluptas harum. Quia quod laborum non iure earum accusantium. Assumenda voluptas libero ea dolorem laudantium exercitationem. At reiciendis voluptas consequuntur assumenda recusandae. Laborum eum nam doloribus praesentium vero dolorum laudantium. Temporibus quae suscipit consequatur officia aspernatur.
+          </p>
+          <h2 class="u-text-h3">Come funziona</h2>
+          <p>
+            Sit et facilis reiciendis libero sit ipsum qui nam. Aperiam hic provident laudantium voluptatem ipsum aperiam. Voluptatibus saepe voluptas placeat unde deserunt voluptatem. Rerum est architecto quas aut enim est. Ullam veritatis cum modi voluptatem et deleniti.
+ Quia culpa officiis accusantium. Voluptas sed ducimus optio est. Est voluptates vitae in nulla. Distinctio aliquid optio quaerat libero voluptates expedita. Aut dolorum porro dolorem distinctio consequuntur hic voluptas qui non. Provident mollitia natus et ut corporis.
+ Alias consequatur unde quod ratione eos odio consectetur commodi. Cum est perspiciatis placeat aut quo numquam. Sunt eum velit. Dolore omnis aspernatur molestias enim aliquid ut culpa beatae et.
+          </p>
+          <h2 class="u-text-h3">Prima di iniziare</h2>
+          <p>
+            Accertati di aver già...
+            <ul>
+              <li>azione 1</li>
+              <li>azione 2</li>
+              <li>azione 3</li>
+            </ul>
+          </p>
+          <p>
+            <button type="button" class="Button Button--default u-text-r-xs">Accedi al servizio</button>
+          </p>
+        </article>
+      </div>
+
+      <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
+        <div class="u-cf u-padding-bottom-xxl u-hidden u-md-block u-lg-block">
+          <button type="button" class="Button Button--default u-text-r-xs">Accedi al servizio</button>
+        </div>
+        <h3 class="u-text-h4">Altri servizi</h3>
+        <div class="u-sizeFull" id="subnav">
+          <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
+  <li>
+    <a class="Linklist-link Linklist-link--lev1" href="">Exercitationem enim corporis provident nemo voluptas nisi veniam iure totam.</a>
+  </li>
+  <li><a class="Linklist-link Linklist-link--lev2 is-expanded" href="">Ipsam occaecati delectus.</a>
+    <ul>
+      <li><a href="" class="Linklist-link Linklist-link--lev3">Fugit molestias deleniti accusamus fugiat id sapiente ut.</a></li>
+      <li><a href="">Dolor officiis ut incidunt cupiditate sit autem unde numquam.</a></li>
+      <li><a href="">Itaque officiis esse atque.</a></li>
+      <li><a href="">Labore maiores quia ut impedit aut excepturi exercitationem aut sed.</a></li>
+    </ul>
+  </li>
+  <li><a href="">Tempora ea impedit quos laboriosam fugit.</a></li>
+  <li><a href="">Ullam repudiandae accusantium.</a></li>
+  <li><a href="" class="Linklist-link is-collapsed">Adipisci fugiat deleniti tenetur quam ex sunt nihil.</a></li>
+  <li><a href="">Aut rerum cupiditate.</a></li>
+</ul>
+
+        </div>
+        <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
+      </aside>
+    </div>
+
+  </div>
+</section>
+
+  <div class="u-background-grey-80 u-hiddenPrint">
+    <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
+        <footer class="Footer u-padding-all-s">
+
+  <div class="u-cf">
+    <img class="Footer-logo" src="//placehold.it/75x80?text=placeholder" alt="">
+    <p class="Footer-siteName">
+      Nome della pubblica amministrazione
+    </p>
+  </div>
+
+  <div class="Grid Grid--withGutter">
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Argomento 1</h2>
+      <ul>
+        <li><a href="">iure vitae magni</a></li>
+        <li><a href="">qui saepe voluptatibus</a></li>
+        <li><a href="">vel ut autem</a></li>
+        <li><a href="">quos ipsa sunt</a></li>
+      </ul>
+    </div>
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Argomento 2</h2>
+      <ul>
+        <li><a href="">iure vitae magni</a></li>
+        <li><a href="">qui saepe voluptatibus</a></li>
+        <li><a href="">vel ut autem</a></li>
+        <li><a href="">quos ipsa sunt</a></li>
+      </ul>
+    </div>
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Argomento 3</h2>
+      <ul>
+        <li><a href="">iure vitae magni</a></li>
+        <li><a href="">qui saepe voluptatibus</a></li>
+        <li><a href="">vel ut autem</a></li>
+        <li><a href="">quos ipsa sunt</a></li>
+      </ul>
+    </div>
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Argomento 4</h2>
+      <ul>
+        <li><a href="">iure vitae magni</a></li>
+        <li><a href="">qui saepe voluptatibus</a></li>
+        <li><a href="">vel ut autem</a></li>
+        <li><a href="">quos ipsa sunt</a></li>
+      </ul>
+    </div>
+    
+
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Contatti</h2>
+      <div class="Footer-subBlock">
+        <h3 class="Footer-subTitle">Recapiti</h3>
+        <address>
+          Via ipsa est consequuntur<br>
+          ipsa est consequuntur<br>
+          Tel. (+00) 00.0000.0000
+        </address>
+      </div>
+    </div>
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Contatti</h2>
+      <div class="Footer-subBlock">
+        <h3 class="Footer-subTitle">Recapiti</h3>
+        <address>
+          Via iure vitae magni<br>
+          iure vitae magni<br>
+          Tel. (+00) 00.0000.0000
+        </address>
+      </div>
+    </div>
+    
+
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Contatti</h2>
+      <div class="Footer-subBlock">
+        <h3 class="Footer-subTitle">Indirizzo PEC</h3>
+        <p><a href="">indirizzo.pec@gov.it</a></p>
+      </div>
+    </div>
+
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Seguici su</h2>
+      <div class="Footer-subBlock">
+        <ul class="Footer-socialIcons">
+          <li><a href=""><span class="Icon Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+          <li><a href=""><span class="Icon Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+          <li><a href=""><span class="Icon Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <ul class="Footer-links u-cf">
+    <li><a href="" title="Privacy policy">Privacy</a></li>
+    <li><a href="" title="Note legali">Note legali</a></li>
+    <li><a href="" title="Dati monitoraggio sito">Contatti</a></li>
+  </ul>
+
+</footer>
+
+    </div>
+</div>
+
+<a href="#" title="torna all'inizio del contenuto" class="ScrollTop js-scrollTop js-scrollTo">
+  <i class="ScrollTop-icon Icon-arrow-up" aria-hidden="true"></i>
+  <span class="u-hiddenVisually">torna all'inizio del contenuto</span>
+</a>
+
+
+</main>
+
+
+  <!--[if IE 8]>
+  <script src="../../build/vendor/respond.min.js"></script>
+  <script src="../../build/vendor/rem.min.js"></script>
+  <script src="../../build/vendor/selectivizr.js"></script>
+  <script src="../../build/vendor/slice.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <script src="../../build/vendor/polyfill.min.js"></script>
+  <![endif]-->
+
+  <script src="../../build/IWT.min.js"></script>
+
+</body>
+</html>
+

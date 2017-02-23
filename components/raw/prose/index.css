@@ -28,7 +28,11 @@
   @extend .u-text-r-xxs;
 }
 
+.Prose > a,
 .Prose p > a {
+  @extend .u-text-r-xs;
+  @extend .u-lineHeight-xl;
+
   color: var(--Prose-color-link);
 }
 

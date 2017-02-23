@@ -1,0 +1,19 @@
+.ErrorPage {
+  margin-bottom: 4em;
+  margin-top: 2em;
+}
+
+.ErrorPage-title {
+  @extend .u-lineHeight-s;
+  @extend .u-color-50;
+
+  font-size: 11.2em;
+  font-weight: 400;
+}
+
+.ErrorPage-subtitle {
+  @extend .u-lineHeight-s;
+  @extend .u-color-50;
+
+  font-size: 3.3em;
+}
