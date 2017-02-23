@@ -45,8 +45,8 @@ const nunj = require('@frctl/nunjucks')({
     }),
     __IMAGES__: _.range(10).map(function() {
       return faker.image.image()
-    }),
-  },
+    })
+  }
 })
 
 fractal.components.engine(nunj)
@@ -56,23 +56,46 @@ fractal.components.set('ext', '.tmpl')
 fractal.docs.set('ext', '.md')
 
 /*
- *  Theme
+ *  Specify default theme
  */
 const mandelbrot = require('@frctl/mandelbrot')
 
+/*
+ *  Specify custom theme
+ */
 const myCustomisedTheme = mandelbrot({
   skin: 'blue',
-  'nav': ['docs', 'components'],
+  'nav': [
+    'docs',
+    'components'
+  ],
   //  ["html", "view", "context", "resources", "info", "notes"]
-  'panels': ['html', 'resources', 'info', 'notes'],
+  'panels': [
+    'html',
+    'resources',
+    'info',
+    'notes'
+  ],
   'lang': 'it',
   'styles': [
     'default',
-    '/ita-web-toolkit/theme/styleguide.css'
+    '/ita-web-toolkit/theme/styleguide.css',
+    '/build/build-styleguide.css',
+    '/build/vendor.css'
+  ],
+  'scripts': [
+    'default',
+    '/build/styleguide.min.js',
+    '/ita-web-toolkit/theme/styleguide-menu-override.js'
   ]
 })
 
 myCustomisedTheme.addStatic(__dirname + '/theme', '/ita-web-toolkit/theme')
+
+/*
+ * Specify theme-overrides folder
+ */
+myCustomisedTheme.addLoadPath(__dirname + '/views')
 
 fractal.components.set('title', 'Componenti')
 fractal.docs.set('title', 'Documentazione')

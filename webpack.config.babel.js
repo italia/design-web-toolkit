@@ -1,7 +1,6 @@
 var webpack = require('webpack')
 var path = require('path')
 var libraryName = 'IWT'
-var outputFile = libraryName + '.min.js'
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
@@ -26,11 +25,14 @@ loaders.push({
 plugins.push(new ExtractTextPlugin('vendor.css'))
 
 var config = {
-  entry: __dirname + '/index.js',
+  entry: {
+    IWT: __dirname + '/index.js',
+    styleguide: __dirname + '/theme/index-styleguide.js'
+  },
   devtool: 'source-map',
   output: {
     path: __dirname + '/build',
-    filename: outputFile,
+    filename: "[name].min.js",
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true
@@ -51,7 +53,10 @@ var config = {
     }]
   },
   resolve: {
-    root: path.resolve('./src'),
+    root: [
+      path.resolve('./src'),
+      path.resolve('./theme')
+    ],
     extensions: ['', '.js']
   },
   plugins: plugins,
