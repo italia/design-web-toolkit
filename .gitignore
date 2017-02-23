@@ -7,3 +7,4 @@ config.local.js
 npm-debug.log
 styleguide
 gh-pages
+build/*
