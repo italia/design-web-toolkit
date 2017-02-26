@@ -29,5 +29,5 @@
 
 .Forward span {
   opacity: 0.9;
-  width: var(--Forward-width: 3em);
+  width: var(--Forward-width);
 }

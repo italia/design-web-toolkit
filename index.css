@@ -8,54 +8,15 @@
  *  @FIXME: replace with glob patterns when this gets merged:
  *    https://github.com/TrySound/postcss-easy-import/pull/7
  */
-@import "src/utils/borders";
-@import "src/utils/colors";
-@import "src/utils/corners";
-@import "src/utils/display";
-@import "src/utils/layout";
-@import "src/utils/shadows";
-@import "src/utils/space";
-@import "src/utils/text";
-@import "src/utils/zindex";
+@import "src/utils/**/index.css";
 
 @import "src/icons/ita";
 
-@import "src/components/button";
-@import "src/components/form";
-@import "src/components/forward";
-@import "src/components/prose";
-@import "src/components/table";
+@import "src/components/**/index.css";
 
-@import "src/modules/accordion";
-@import "src/modules/alert";
-@import "src/modules/breadcrumb";
-@import "src/modules/bullets";
-@import "src/modules/callout";
-@import "src/modules/card";
-@import "src/modules/carousel";
-@import "src/modules/cookiebar";
-@import "src/modules/dialog";
-@import "src/modules/dot";
-@import "src/modules/dropdown";
-@import "src/modules/entrypoint";
-@import "src/modules/errorpage";
-@import "src/modules/footer";
-@import "src/modules/hamburger";
-@import "src/modules/header";
-@import "src/modules/hero";
-@import "src/modules/leads";
-@import "src/modules/linklist";
-@import "src/modules/megamenu";
-@import "src/modules/masonry";
-@import "src/modules/navscroll";
-@import "src/modules/offcanvas";
-@import "src/modules/scrolltop";
-@import "src/modules/skiplinks";
-@import "src/modules/tooltip";
-@import "src/modules/treeview";
+@import "src/modules/**/index.css";
 
-@import "src/extra/share";
-@import "src/extra/spid";
+@import "src/extra/**/index.css";
 
 @import "src/print";
 

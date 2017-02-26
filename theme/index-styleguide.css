@@ -8,32 +8,32 @@
  *  @FIXME: replace with glob patterns when this gets merged:
  *    https://github.com/TrySound/postcss-easy-import/pull/7
  */
-@import "/src/utils/borders";
-@import "/src/utils/colors";
-@import "/src/utils/corners";
-@import "/src/utils/display";
-@import "/src/utils/layout";
-@import "/src/utils/shadows";
-@import "/src/utils/space";
-@import "/src/utils/text";
-@import "/src/utils/zindex";
+@import "../src/utils/borders";
+@import "../src/utils/colors";
+@import "../src/utils/corners";
+@import "../src/utils/display";
+@import "../src/utils/layout";
+@import "../src/utils/shadows";
+@import "../src/utils/space";
+@import "../src/utils/text";
+@import "../src/utils/zindex";
 
-@import "/src/components/prose";
+@import "../src/components/prose";
 
-@import "/src/modules/accordion";
-@import "/src/modules/hamburger";
-@import "/src/modules/header";
-@import "/src/modules/linklist";
-@import "/src/modules/skiplinks";
-@import "/src/modules/treeview";
+@import "../src/modules/accordion";
+@import "../src/modules/hamburger";
+@import "../src/modules/header";
+@import "../src/modules/linklist";
+@import "../src/modules/skiplinks";
+@import "../src/modules/treeview";
 
 /*
  * WebFontLoaded: _import "src/fonts/titillium"
  * see src/_preview.html
  */
-@import "/src/themes/pac";
+@import "../src/themes/pac";
 
-@import "/src/legacy";
+@import "../src/legacy";
 
 @custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 991px);
 @custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1365px);
