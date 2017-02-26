@@ -1,11 +1,18 @@
-### 0.1.0-alpha11
+### 0.1.0-alpha12
+
+* Aggiunto npm-shinkwrap per lock delle nuove versioni dei pacchetti
+  - postcss-easy-import
+  - stylelint-config-suitcss
 
 * Aggiornati pacchetti suitcss
+* Fix errore in componente Forward
+* Fix (lint) del CSS
+
+### 0.1.0-alpha11
+
 * Integrato nuovo tema per la styleguide
 * Aggiunto nuovo template - pagina di ingresso al servizio
 * Aggiunto nuovo template - pagina di errore (403, 404)
-* Fix errore in componente Forward
-* Fix (lint) del CSS
 
 ### 0.1.0-alpha10
 

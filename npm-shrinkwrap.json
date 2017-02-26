@@ -1,6 +1,6 @@
 {
   "name": "ita-web-toolkit",
-  "version": "0.1.0-alpha10",
+  "version": "0.1.0-alpha11",
   "dependencies": {
     "@allmarkedup/fang": {
       "version": "1.0.0",
@@ -5903,21 +5903,21 @@
       "dev": true
     },
     "postcss-easy-import": {
-      "version": "1.0.1",
-      "from": "postcss-easy-import@>=1.0.1 <2.0.0",
-      "resolved": "https://registry.npmjs.org/postcss-easy-import/-/postcss-easy-import-1.0.1.tgz",
+      "version": "2.0.0",
+      "from": "postcss-easy-import@2.0.0",
+      "resolved": "https://registry.npmjs.org/postcss-easy-import/-/postcss-easy-import-2.0.0.tgz",
       "dev": true,
       "dependencies": {
-        "glob": {
-          "version": "6.0.4",
-          "from": "glob@>=6.0.1 <7.0.0",
-          "resolved": "https://registry.npmjs.org/glob/-/glob-6.0.4.tgz",
+        "is-extglob": {
+          "version": "2.1.1",
+          "from": "is-extglob@>=2.1.0 <3.0.0",
+          "resolved": "https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz",
           "dev": true
         },
-        "globby": {
-          "version": "4.1.0",
-          "from": "globby@>=4.0.0 <5.0.0",
-          "resolved": "https://registry.npmjs.org/globby/-/globby-4.1.0.tgz",
+        "is-glob": {
+          "version": "3.1.0",
+          "from": "is-glob@>=3.1.0 <4.0.0",
+          "resolved": "https://registry.npmjs.org/is-glob/-/is-glob-3.1.0.tgz",
           "dev": true
         }
       }
@@ -5955,9 +5955,9 @@
       }
     },
     "postcss-import": {
-      "version": "8.2.0",
-      "from": "postcss-import@>=8.0.1 <9.0.0",
-      "resolved": "https://registry.npmjs.org/postcss-import/-/postcss-import-8.2.0.tgz",
+      "version": "9.1.0",
+      "from": "postcss-import@>=9.1.0 <10.0.0",
+      "resolved": "https://registry.npmjs.org/postcss-import/-/postcss-import-9.1.0.tgz",
       "dev": true
     },
     "postcss-inline-svg": {
@@ -7276,10 +7276,33 @@
       "resolved": "https://registry.npmjs.org/suitcss-preprocessor/-/suitcss-preprocessor-3.0.1.tgz",
       "dev": true,
       "dependencies": {
+        "glob": {
+          "version": "6.0.4",
+          "from": "glob@>=6.0.1 <7.0.0",
+          "resolved": "https://registry.npmjs.org/glob/-/glob-6.0.4.tgz",
+          "dev": true
+        },
+        "globby": {
+          "version": "4.1.0",
+          "from": "globby@>=4.0.0 <5.0.0",
+          "resolved": "https://registry.npmjs.org/globby/-/globby-4.1.0.tgz",
+          "dev": true
+        },
         "postcss-color-function": {
           "version": "2.0.1",
           "from": "postcss-color-function@>=2.0.1 <3.0.0",
           "resolved": "https://registry.npmjs.org/postcss-color-function/-/postcss-color-function-2.0.1.tgz",
+          "dev": true
+        },
+        "postcss-easy-import": {
+          "version": "2.0.0",
+          "from": "postcss-easy-import@>=1.0.1 <2.0.0",
+          "dev": true
+        },
+        "postcss-import": {
+          "version": "8.2.0",
+          "from": "postcss-import@>=8.0.1 <9.0.0",
+          "resolved": "https://registry.npmjs.org/postcss-import/-/postcss-import-8.2.0.tgz",
           "dev": true
         },
         "postcss-reporter": {
@@ -7290,7 +7313,7 @@
         },
         "stylelint-config-suitcss": {
           "version": "9.0.0",
-          "from": "stylelint-config-suitcss@latest",
+          "from": "stylelint-config-suitcss@>=8.0.0 <9.0.0",
           "dev": true
         }
       }

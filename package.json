@@ -46,6 +46,7 @@
     "postcss-copy-assets": "^0.3.0",
     "postcss-devtools": "^1.1.0",
     "postcss-each": "^0.9.3",
+    "postcss-easy-import": "^2.0.0",
     "postcss-extend": "^1.0.1",
     "postcss-flexbugs-fixes": "^2.0.0",
     "postcss-inline-svg": "^2.0.1",
