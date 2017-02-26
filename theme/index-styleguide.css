@@ -4,10 +4,6 @@
 
 @import "suitcss-components-form";
 
-/*
- *  @FIXME: replace with glob patterns when this gets merged:
- *    https://github.com/TrySound/postcss-easy-import/pull/7
- */
 @import "../src/utils/**/index.css";
 
 @import "../src/components/prose";

@@ -64,10 +64,14 @@ h4 {
   font-size: 1.6em;
 }
 
+.Prose code pre {
+  padding: 1em;
+}
+
 .Prose code pre,
 .Prose code pre span {
   font-family: Hack, Consolas, Monaco, "Andale Mono", monospace !important;
-  font-size: 1em;
+  font-size: 15px !important;
 }
 
 .Document-header,
