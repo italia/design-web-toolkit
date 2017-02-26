@@ -167,18 +167,21 @@
   @extend .u-text-r-xxl;
   @extend .u-textWeight-700;
   @extend .u-margin-bottom-s;
+  @extend .u-lineHeight-m;
 }
 
 .u-text-h2 {
   @extend .u-text-r-xl;
   @extend .u-textWeight-700;
   @extend .u-margin-bottom-s;
+  @extend .u-lineHeight-m;
 }
 
 .u-text-h3 {
   @extend .u-text-r-l;
   @extend .u-textWeight-700;
   @extend .u-margin-bottom-s;
+  @extend .u-lineHeight-m;
 }
 
 .u-text-h4 {

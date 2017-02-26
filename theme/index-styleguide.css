@@ -8,15 +8,7 @@
  *  @FIXME: replace with glob patterns when this gets merged:
  *    https://github.com/TrySound/postcss-easy-import/pull/7
  */
-@import "../src/utils/borders";
-@import "../src/utils/colors";
-@import "../src/utils/corners";
-@import "../src/utils/display";
-@import "../src/utils/layout";
-@import "../src/utils/shadows";
-@import "../src/utils/space";
-@import "../src/utils/text";
-@import "../src/utils/zindex";
+@import "../src/utils/**/index.css";
 
 @import "../src/components/prose";
 

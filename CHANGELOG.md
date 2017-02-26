@@ -1,9 +1,12 @@
-### 0.1.0-alpha12
+### 1.0.0-beta1
 
+* Modificato il comportamento della Treeview aggiungendo un handler
+* Modificata la line-height di default per gli heading in .Prose
 * Aggiunto npm-shinkwrap per lock delle nuove versioni dei pacchetti
   - postcss-easy-import
   - stylelint-config-suitcss
-
+* Modificato import dei CSS: tramite postcss-easy-import
+  vengono importati tutti i file index.css utilizzando pattern di globbing
 * Aggiornati pacchetti suitcss
 * Fix errore in componente Forward
 * Fix (lint) del CSS
