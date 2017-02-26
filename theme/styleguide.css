@@ -205,8 +205,9 @@ h4 {
   min-width: 280px !important;
 }
 
-.Code pre {
-  font-size: 0.8em;
+.Browser-panel *,
+.Browser-code .Code pre {
+  font-size: 15px !important;
 }
 
 /* Footer */
