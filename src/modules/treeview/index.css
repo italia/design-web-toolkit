@@ -9,7 +9,7 @@
   --Treeview-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
 }
 
-.Treeview-handler {
+.Treeview-handler--default {
   @extend .u-zindex-30;
   @extend .u-posAbsolute;
   @extend .u-block;
@@ -18,17 +18,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: var(--Treeview-link-arrow-width);
-  content: " ";
+  border-left: 1px solid var(--Color-grey-30);
   height: 100%;
   max-width: var(--Treeview-link-maxWidth);
   min-width: var(--Treeview-link-minWidth);
   right: 0;
   top: 0;
   width: var(--Treeview-link-padding);
-}
-
-.Treeview-handler--default {
-  border-left: 1px solid var(--Color-grey-30);
 }
 
 .Treeview [aria-expanded="true"] > a > .Treeview-handler {

@@ -17,7 +17,7 @@ const Treeview = function({
   styleMenuHandler: styleMenuHandler = 'Treeview-handler--default',
   ariaLabelHandler: ariaLabelHandler = 'espandi la sezione',
   multiselectable: multiselectable = true,
-  animationMs: animationMs = 150,
+  animationMs: animationMs = 100,
 } = {}) {
 
   const keys = {
@@ -276,7 +276,7 @@ const Treeview = function({
     }
 
     // closest('li')
-    const $parent = $item.parent().parent()
+    const $parent = $item.closest('li')
 
     treeview.$activeItem = $parent
     _updateStyling(treeview, $parent)
@@ -292,21 +292,19 @@ const Treeview = function({
     })
 
     treeview.$items.keydown(function(e) {
-      console.log('keywodnw')
       return _handleKeyDown(treeview, $(this), e)
     })
 
     treeview.$items.keypress(function(e) {
-      console.log('keypress')
       return _handleKeyPress(treeview, $(this), e)
     })
 
     treeview.$handlers.keydown(function(e) {
-      return _handleKeyDown(treeview, $(this).parent().parent(), e)
+      return _handleKeyDown(treeview, $(this).closest('li'), e)
     })
 
     treeview.$handlers.keypress(function(e) {
-      return _handleKeyPress(treeview, $(this).parent().parent(), e)
+      return _handleKeyPress(treeview, $(this).closest('li'), e)
     })
 
     $(document).click(function() {
@@ -330,25 +328,30 @@ const Treeview = function({
     // Put tabindex="-1" on every LI (if it's not the first one)
     // Put class=<classParent> on every LI that contains an UL
     $el.find('li').each(function(i, li) {
-        const $li = $(li)
-        $li
-          .attr('role', 'treeitem')
-          // .attr('tabindex', (0 === i) ? '0' : '-1')
-          //  .find('a[href]').not('[href^=#]').attr('tabindex', 0)
-          //  .parent().attr('aria-label', function() { return $(this).text() })
-        if ($li.find('ul').length !== 0) {
+      const $li = $(li)
+      $li
+        .attr('role', 'treeitem')
+      // .attr('tabindex', (0 === i) ? '0' : '-1')
+      //  .find('a[href]').not('[href^=#]').attr('tabindex', 0)
+      //  .parent().attr('aria-label', function() { return $(this).text() })
+      if ($li.find('ul').length !== 0) {
 
-          $li.find('> a')
-            .append(`<span class="${classMenuHandler} ${styleMenuHandler}"
+        $li.find('> a')
+          .append(`<span class="${classMenuHandler} ${styleMenuHandler}"
               aria-label="${ariaLabelHandler}" role="button" tabindex="0"></span>`)
 
-          if (!li.hasAttribute('aria-expanded')) {
-            $li.attr('aria-expanded', 'false')
-          }
-          $li.addClass(classParent)
+        $li.children("a[href='#']")
+          .addClass(classMenuHandler)
+          .attr('aria-label', ariaLabelHandler)
+          .attr('role', 'button')
+
+        if (!li.hasAttribute('aria-expanded')) {
+          $li.attr('aria-expanded', 'false')
         }
-      })
-      // Put role="group" on every contained UL
+        $li.addClass(classParent)
+      }
+    })
+    // Put role="group" on every contained UL
     $el.find('ul').attr('role', 'group')
   }
 

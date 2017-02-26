@@ -197,7 +197,7 @@ h4 {
 }
 
 .Tree ul > li.is-current a {
-  background-color: #e2f7ff !important;
+  font-weight: 700;
 }
 
 .Tree .Treeview [aria-expanded] > a {
@@ -207,6 +207,7 @@ h4 {
 .Frame-panel--sidebar {
   background-color: white;
   min-width: 280px !important;
+  padding-bottom: 2em;
 }
 
 .Browser-panel *,
@@ -266,4 +267,8 @@ h4 {
 
 .t-Pac .Pen-header .Pen-title.u-text-h4 {
   margin-bottom: 0 !important;
+}
+
+.Navigation-group {
+  border-bottom: 1px solid #ddd;
 }
