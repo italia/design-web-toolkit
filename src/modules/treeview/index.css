@@ -3,31 +3,41 @@
 :root {
   --Treeview-link-minWidth: 4em;
   --Treeview-link-maxWidth: 6em;
-  --Treeview-link-padding: 15%;
+  --Treeview-link-padding: 2em;
+  --Treeview-link-handler-width: 15%;
   --Treeview-link-arrow-width: 1em;
   --Treeview-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
   --Treeview-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
 }
 
+.Treeview-handler--default,
+.Treeview-handler--standalone {
+  background-image: var(--Treeview-link-arrow-down);
+  background-repeat: no-repeat;
+  background-size: var(--Treeview-link-arrow-width);
+}
+
 .Treeview-handler--default {
+  background-position: right var(--Treeview-link-padding) center;
+}
+
+.Treeview-handler--standalone {
   @extend .u-zindex-30;
   @extend .u-posAbsolute;
   @extend .u-block;
 
-  background-image: var(--Treeview-link-arrow-down);
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: var(--Treeview-link-arrow-width);
   border-left: 1px solid var(--Color-grey-30);
   height: 100%;
   max-width: var(--Treeview-link-maxWidth);
   min-width: var(--Treeview-link-minWidth);
   right: 0;
   top: 0;
-  width: var(--Treeview-link-padding);
+  width: var(--Treeview-link-handler-width);
 }
 
-.Treeview [aria-expanded="true"] > a > .Treeview-handler {
+.Treeview [aria-expanded="true"] > a > .Treeview-handler--default,
+.Treeview [aria-expanded="true"] > a > .Treeview-handler--standalone {
   background-image: var(--Treeview-link-arrow-up);
 }
 
@@ -42,7 +52,7 @@
 .Treeview-parent > a {
   @extend .u-posRelative;
 
-  padding-right: var(--Treeview-link-padding);
+  padding-right: calc(var(--Treeview-link-padding) * 2);
 }
 
 /*

@@ -13,9 +13,10 @@ const Treeview = function({
   selector: selector = '.js-Treeview',
   classFocused: classFocused = 'hasFocus',
   classParent: classParent = 'Treeview-parent',
-  classMenuHandler: classMenuHandler = 'Treeview-handler',
+  classMenuHandler: classMenuHandler = 'js-Treeview-handler',
   styleMenuHandler: styleMenuHandler = 'Treeview-handler--default',
-  ariaLabelHandler: ariaLabelHandler = 'espandi la sezione',
+  styleMenuHandlerStandalone: styleMenuHandlerStandalone = 'Treeview-handler--standalone',
+  ariaLabelHandler: ariaLabelHandler = '',
   multiselectable: multiselectable = true,
   animationMs: animationMs = 100,
 } = {}) {
@@ -336,12 +337,13 @@ const Treeview = function({
       //  .parent().attr('aria-label', function() { return $(this).text() })
       if ($li.find('ul').length !== 0) {
 
-        $li.find('> a')
-          .append(`<span class="${classMenuHandler} ${styleMenuHandler}"
+        $li.children('a').not('[href=#]')
+          .append(`<span class="${classMenuHandler} ${styleMenuHandlerStandalone}"
               aria-label="${ariaLabelHandler}" role="button" tabindex="0"></span>`)
 
         $li.children("a[href='#']")
           .addClass(classMenuHandler)
+          .addClass(styleMenuHandler)
           .attr('aria-label', ariaLabelHandler)
           .attr('role', 'button')
 
