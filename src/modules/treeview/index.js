@@ -95,9 +95,9 @@ const Treeview = function({
       return true
     }
 
-    if (!$(e.currentTarget).is('.' + classMenuHandler)) {
-      return true
-    }
+    // if (!$(e.currentTarget).is('.' + classMenuHandler)) {
+    //   return true
+    // }
 
     switch (e.keyCode) {
       case keys.tab:
@@ -110,7 +110,7 @@ const Treeview = function({
       case keys.home:
         {
           treeview.$activeItem = treeview.$parents.first()
-          treeview.$activeItem.focus()
+          treeview.$activeItem.find(':focusable:first').focus()
           e.stopPropagation()
           return false
         }
@@ -118,7 +118,7 @@ const Treeview = function({
       case keys.end:
         {
           treeview.$activeItem = treeview.$visibleItems.last()
-          treeview.$activeItem.focus()
+          treeview.$activeItem.find(':focusable:first').focus()
           e.stopPropagation()
           return false
         }
@@ -126,13 +126,12 @@ const Treeview = function({
       case keys.enter:
       case keys.space:
         {
-          if (!$item.is('.' + classParent)) {
-            // do nothing
-          } else {
+          if ($(e.currentTarget).is('.' + classMenuHandler)) {
             _toggleGroup(treeview, $item)
+            e.stopPropagation()
+            return false
           }
-          e.stopPropagation()
-          return false
+          return true
         }
 
       case keys.left:
@@ -143,7 +142,7 @@ const Treeview = function({
             let $itemUL = $item.parent()
             let $itemParent = $itemUL.parent()
             treeview.$activeItem = $itemParent
-            treeview.$activeItem.focus()
+            treeview.$activeItem.find(':focusable:first').focus()
           }
           e.stopPropagation()
           return false
@@ -157,7 +156,7 @@ const Treeview = function({
             _expandGroup(treeview, $item)
           } else {
             treeview.$activeItem = $item.children('ul').children('li').first()
-            treeview.$activeItem.focus()
+            treeview.$activeItem.find(':focusable:first').focus()
           }
           e.stopPropagation()
           return false
@@ -168,7 +167,7 @@ const Treeview = function({
           if (curNdx > 0) {
             let $prev = treeview.$visibleItems.eq(curNdx - 1)
             treeview.$activeItem = $prev
-            $prev.focus()
+            $prev.find(':focusable:first').focus()
           }
           e.stopPropagation()
           return false
@@ -179,7 +178,7 @@ const Treeview = function({
           if (curNdx < treeview.$visibleItems.length - 1) {
             let $next = treeview.$visibleItems.eq(curNdx + 1)
             treeview.$activeItem = $next
-            $next.focus()
+            $next.find(':focusable:first').focus()
           }
           e.stopPropagation()
           return false
@@ -259,7 +258,7 @@ const Treeview = function({
 
           if (bMatch == true) {
             treeview.$activeItem = treeview.$visibleItems.eq(curNdx)
-            treeview.$activeItem.focus()
+            treeview.$activeItem.find(':focusable:first').focus()
           }
 
           e.stopPropagation()
@@ -290,6 +289,16 @@ const Treeview = function({
   function _bindEvents(treeview) {
     treeview.$handlers.click(function(e) {
       return _handleClick(treeview, $(this), e)
+    })
+
+    treeview.$items.keydown(function(e) {
+      console.log('keywodnw')
+      return _handleKeyDown(treeview, $(this), e)
+    })
+
+    treeview.$items.keypress(function(e) {
+      console.log('keypress')
+      return _handleKeyPress(treeview, $(this), e)
     })
 
     treeview.$handlers.keydown(function(e) {
