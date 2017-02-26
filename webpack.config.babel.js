@@ -32,7 +32,7 @@ var config = {
   devtool: 'source-map',
   output: {
     path: __dirname + '/build',
-    filename: "[name].min.js",
+    filename: '[name].min.js',
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true

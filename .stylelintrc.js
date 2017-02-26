@@ -1,4 +1,4 @@
-{
+module.exports = {
   "plugins": [
     "stylelint-selector-bem-pattern"
   ],

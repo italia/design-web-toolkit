@@ -1,6 +1,7 @@
 /** @define utilities; */
 
 @media (--md-viewport) {
+
   .u-md-block {
     display: block !important;
   }

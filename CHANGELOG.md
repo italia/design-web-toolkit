@@ -1,3 +1,12 @@
+### 0.1.0-alpha11
+
+* Aggiornati pacchetti suitcss
+* Integrato nuovo tema per la styleguide
+* Aggiunto nuovo template - pagina di ingresso al servizio
+* Aggiunto nuovo template - pagina di errore (403, 404)
+* Fix errore in componente Forward
+* Fix (lint) del CSS
+
 ### 0.1.0-alpha10
 
 * Aggiunta icona instagram

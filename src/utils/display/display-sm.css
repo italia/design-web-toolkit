@@ -1,6 +1,7 @@
 /** @define utilities; */
 
 @media (--sm-viewport) {
+
   .u-sm-block {
     display: block !important;
   }
