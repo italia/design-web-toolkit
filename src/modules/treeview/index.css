@@ -36,7 +36,7 @@
   width: var(--Treeview-link-handler-width);
 }
 
-.Treeview [aria-expanded="true"] > a > .Treeview-handler--default,
+.Treeview [aria-expanded="true"] > .Treeview-handler--default,
 .Treeview [aria-expanded="true"] > a > .Treeview-handler--standalone {
   background-image: var(--Treeview-link-arrow-up);
 }
