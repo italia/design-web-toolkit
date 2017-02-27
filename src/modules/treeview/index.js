@@ -347,8 +347,15 @@ const Treeview = function({
           .attr('aria-label', ariaLabelHandler)
           .attr('role', 'button')
 
-        if (!li.hasAttribute('aria-expanded')) {
+        const containsExpandedLink =
+          $li.find('[aria-expanded=true]').length > 0
+          || $li.find('.is-current').length > 0
+
+        if (!li.hasAttribute('aria-expanded') && !containsExpandedLink) {
           $li.attr('aria-expanded', 'false')
+        }
+        else if (containsExpandedLink) {
+          $li.attr('aria-expanded', 'true')
         }
         $li.addClass(classParent)
       }
