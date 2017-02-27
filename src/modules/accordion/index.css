@@ -47,10 +47,10 @@
 
 .Accordion-header {
   background-image: var(--Accordion-link-arrow-down);
-  background-position: right var(--Accordion-link-padding) center;
+  background-position: left var(--Accordion-link-padding) center;
   background-repeat: no-repeat;
   background-size: var(--Accordion-link-arrow-width);
-  padding-right:
+  padding-left:
     calc(
       var(--Accordion-link-arrow-width) + (2 * var(--Accordion-link-padding))
     );
