@@ -10,7 +10,8 @@
 }
 
 .Prose > p,
-.Prose > pre {
+.Prose > pre
+.Prose > figure {
   @extend .u-margin-bottom-xl;
 }
 
@@ -84,4 +85,28 @@
 .Prose > ol > li {
   @extend .u-padding-top-xxs;
   @extend .u-padding-bottom-xxs;
+}
+
+.Prose > h1 {
+  @extend .u-text-h1;
+}
+
+.Prose > h2 {
+  @extend .u-text-h2;
+}
+
+.Prose > h3 {
+  @extend .u-text-h3;
+}
+
+.Prose > h4 {
+  @extend .u-text-h4;
+}
+
+.Prose > h5 {
+  @extend .u-text-h5;
+}
+
+.Prose > h6 {
+  @extend .u-text-h6;
 }

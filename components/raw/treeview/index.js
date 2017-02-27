@@ -2,7 +2,6 @@ import $ from 'jquery'
 
 /*
  *	TODO:
- *		- arrow up
  *		- repack as a frend _component and CSS
  *		- refactor without jQuery
  */
@@ -10,13 +9,16 @@ import $ from 'jquery'
 /*
  * Porting of http://www.oaa-accessibility.org/examplep/treeview1/
  */
-const Frtreeview = function({
-  selector: selector = '.js-fr-treeview',
-  openOnClick: openOnClick = true,
-  classFocused: classFocused = 'fr-tree-focus',
-  classParent: classParent = 'fr-tree-parent',
-  multiselectable: multiselectable = true
-    // readyClass: readyClass = 'fr-accordion--is-ready',
+const Treeview = function({
+  selector: selector = '.js-Treeview',
+  classFocused: classFocused = 'hasFocus',
+  classParent: classParent = 'Treeview-parent',
+  classMenuHandler: classMenuHandler = 'js-Treeview-handler',
+  styleMenuHandler: styleMenuHandler = 'Treeview-handler--default',
+  styleMenuHandlerStandalone: styleMenuHandlerStandalone = 'Treeview-handler--standalone',
+  ariaLabelHandler: ariaLabelHandler = 'expand',
+  multiselectable: multiselectable = true,
+  animationMs: animationMs = 100,
 } = {}) {
 
   const keys = {
@@ -45,7 +47,7 @@ const Frtreeview = function({
 
   function _expandGroup(treeview, $item) {
     let $group = $item.children('ul')
-    $group.slideDown(250, () => {
+    $group.slideDown(animationMs, () => {
       $group.attr('aria-hidden', 'false')
       $item.attr('aria-expanded', 'true')
       treeview.$visibleItems = treeview.$el.find('li:visible')
@@ -54,7 +56,7 @@ const Frtreeview = function({
 
   function _collapseGroup(treeview, $item) {
     let $group = $item.children('ul')
-    $group.slideUp(250, () => {
+    $group.slideUp(animationMs, () => {
       $group.attr('aria-hidden', 'true')
       $item.attr('aria-expanded', 'false')
       treeview.$visibleItems = treeview.$el.find('li:visible')
@@ -94,9 +96,9 @@ const Frtreeview = function({
       return true
     }
 
-    if (!$(e.target).is('[role=treeitem]')) {
-      return true
-    }
+    // if (!$(e.currentTarget).is('.' + classMenuHandler)) {
+    //   return true
+    // }
 
     switch (e.keyCode) {
       case keys.tab:
@@ -109,7 +111,7 @@ const Frtreeview = function({
       case keys.home:
         {
           treeview.$activeItem = treeview.$parents.first()
-          treeview.$activeItem.focus()
+          treeview.$activeItem.find(':focusable:first').focus()
           e.stopPropagation()
           return false
         }
@@ -117,7 +119,7 @@ const Frtreeview = function({
       case keys.end:
         {
           treeview.$activeItem = treeview.$visibleItems.last()
-          treeview.$activeItem.focus()
+          treeview.$activeItem.find(':focusable:first').focus()
           e.stopPropagation()
           return false
         }
@@ -125,13 +127,12 @@ const Frtreeview = function({
       case keys.enter:
       case keys.space:
         {
-          if (!$item.is('.' + classParent)) {
-            // do nothing
-          } else {
+          if ($(e.currentTarget).is('.' + classMenuHandler)) {
             _toggleGroup(treeview, $item)
+            e.stopPropagation()
+            return false
           }
-          e.stopPropagation()
-          return false
+          return true
         }
 
       case keys.left:
@@ -142,7 +143,7 @@ const Frtreeview = function({
             let $itemUL = $item.parent()
             let $itemParent = $itemUL.parent()
             treeview.$activeItem = $itemParent
-            treeview.$activeItem.focus()
+            treeview.$activeItem.find(':focusable:first').focus()
           }
           e.stopPropagation()
           return false
@@ -156,7 +157,7 @@ const Frtreeview = function({
             _expandGroup(treeview, $item)
           } else {
             treeview.$activeItem = $item.children('ul').children('li').first()
-            treeview.$activeItem.focus()
+            treeview.$activeItem.find(':focusable:first').focus()
           }
           e.stopPropagation()
           return false
@@ -167,7 +168,7 @@ const Frtreeview = function({
           if (curNdx > 0) {
             let $prev = treeview.$visibleItems.eq(curNdx - 1)
             treeview.$activeItem = $prev
-            $prev.focus()
+            $prev.find(':focusable:first').focus()
           }
           e.stopPropagation()
           return false
@@ -178,7 +179,7 @@ const Frtreeview = function({
           if (curNdx < treeview.$visibleItems.length - 1) {
             let $next = treeview.$visibleItems.eq(curNdx + 1)
             treeview.$activeItem = $next
-            $next.focus()
+            $next.find(':focusable:first').focus()
           }
           e.stopPropagation()
           return false
@@ -258,7 +259,7 @@ const Frtreeview = function({
 
           if (bMatch == true) {
             treeview.$activeItem = treeview.$visibleItems.eq(curNdx)
-            treeview.$activeItem.focus()
+            treeview.$activeItem.find(':focusable:first').focus()
           }
 
           e.stopPropagation()
@@ -269,52 +270,27 @@ const Frtreeview = function({
     return true
   }
 
-  function _handleDblClick(treeview, $item, e) {
-    if (e.altKey || e.ctrlKey || e.shiftKey) {
-      // do nothing
-      return true
-    }
-
-    if (!$(e.target).parent().is('[aria-expanded]')) {
-      return true
-    }
-
-    treeview.$activeItem = $item
-    _updateStyling(treeview, $item)
-    _toggleGroup(treeview, $item)
-    e.stopPropagation()
-    return false
-  }
-
   function _handleClick(treeview, $item, e) {
     if (e.altKey || e.ctrlKey || e.shiftKey) {
       // do nothing
       return true
     }
 
-    if (!$(e.target).parent().is('[aria-expanded]')) {
-      return true
-    }
+    // closest('li')
+    const $parent = $item.closest('li')
 
-    treeview.$activeItem = treeview.$el
-    _updateStyling(treeview, $item)
+    treeview.$activeItem = $parent
+    _updateStyling(treeview, $parent)
+    _toggleGroup(treeview, $parent)
+
     e.stopPropagation()
     return false
   }
 
   function _bindEvents(treeview) {
-    if (openOnClick) {
-      treeview.$parents.click(function(e) {
-        return _handleDblClick(treeview, $(this), e)
-      })
-    } else {
-      treeview.$parents.click(function(e) {
-        return _handleDblClick(treeview, $(this), e)
-      })
-      treeview.$items.click(function(e) {
-        return _handleClick(treeview, $(this), e)
-      })
-    }
+    treeview.$handlers.click(function(e) {
+      return _handleClick(treeview, $(this), e)
+    })
 
     treeview.$items.keydown(function(e) {
       return _handleKeyDown(treeview, $(this), e)
@@ -322,6 +298,14 @@ const Frtreeview = function({
 
     treeview.$items.keypress(function(e) {
       return _handleKeyPress(treeview, $(this), e)
+    })
+
+    treeview.$handlers.keydown(function(e) {
+      return _handleKeyDown(treeview, $(this).closest('li'), e)
+    })
+
+    treeview.$handlers.keypress(function(e) {
+      return _handleKeyPress(treeview, $(this).closest('li'), e)
     })
 
     $(document).click(function() {
@@ -345,20 +329,31 @@ const Frtreeview = function({
     // Put tabindex="-1" on every LI (if it's not the first one)
     // Put class=<classParent> on every LI that contains an UL
     $el.find('li').each(function(i, li) {
-        const $li = $(li)
-        $li
-          .attr('role', 'treeitem')
-          .attr('tabindex', (0 === i) ? '0' : '-1')
-          //  .find('a[href]').not('[href^=#]').attr('tabindex', 0)
-          //  .parent().attr('aria-label', function() { return $(this).text() })
-        if ($li.find('ul').length !== 0) {
-          if (!li.hasAttribute('aria-expanded')) {
-            $li.attr('aria-expanded', 'false')
-          }
-          $li.addClass(classParent)
+      const $li = $(li)
+      $li
+        .attr('role', 'treeitem')
+      // .attr('tabindex', (0 === i) ? '0' : '-1')
+      //  .find('a[href]').not('[href^=#]').attr('tabindex', 0)
+      //  .parent().attr('aria-label', function() { return $(this).text() })
+      if ($li.find('ul').length !== 0) {
+
+        $li.children('a').not('[href=#]')
+          .append(`<span class="${classMenuHandler} ${styleMenuHandlerStandalone}"
+              aria-label="${ariaLabelHandler}" role="button" tabindex="0"></span>`)
+
+        $li.children("a[href='#']")
+          .addClass(classMenuHandler)
+          .addClass(styleMenuHandler)
+          .attr('aria-label', ariaLabelHandler)
+          .attr('role', 'button')
+
+        if (!li.hasAttribute('aria-expanded')) {
+          $li.attr('aria-expanded', 'false')
         }
-      })
-      // Put role="group" on every contained UL
+        $li.addClass(classParent)
+      }
+    })
+    // Put role="group" on every contained UL
     $el.find('ul').attr('role', 'group')
   }
 
@@ -370,6 +365,7 @@ const Frtreeview = function({
         $el: $el,
         $items: $el.find('li'),
         $parents: $el.find('.' + classParent),
+        $handlers: $el.find('.' + classMenuHandler),
         $visibleItems: null,
         $activeItem: null
       }
@@ -388,8 +384,8 @@ const Frtreeview = function({
 
 }
 
-new Frtreeview()
+new Treeview()
 
 export default {
-  Frtreeview
+  Treeview
 }
