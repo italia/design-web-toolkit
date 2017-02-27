@@ -1,4 +1,4 @@
-### 1.0.0-alpha13
+### 0.2.0-alpha12
 
 * Aggiornati pacchetti suitcss in package.json
 
