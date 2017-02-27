@@ -825,8 +825,15 @@
           .attr(<span class="hljs-string">'aria-label'</span>, ariaLabelHandler)
           .attr(<span class="hljs-string">'role'</span>, <span class="hljs-string">'button'</span>)
 
-        <span class="hljs-keyword">if</span> (!li.hasAttribute(<span class="hljs-string">'aria-expanded'</span>)) {
+        <span class="hljs-keyword">const</span> containsExpandedLink =
+          $li.find(<span class="hljs-string">'[aria-expanded=true]'</span>).length &gt; <span class="hljs-number">0</span>
+          || $li.find(<span class="hljs-string">'.is-current'</span>).length &gt; <span class="hljs-number">0</span>
+
+        <span class="hljs-keyword">if</span> (!li.hasAttribute(<span class="hljs-string">'aria-expanded'</span>) &amp;&amp; !containsExpandedLink) {
           $li.attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'false'</span>)
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (containsExpandedLink) {
+          $li.attr(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-string">'true'</span>)
         }
         $li.addClass(classParent)
       }
@@ -883,7 +890,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">10.2 KB</span>
+                    <span class="Meta-value">10.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -906,7 +913,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="treeview--default.html">
@@ -915,6 +922,10 @@
             
                 <a href="">
                     <span>Comuni</span>
+                </a>, 
+            
+                <a href="treeview--placeholders.html">
+                    <span>Placeholders</span>
                 </a>
             
             </span>
@@ -2842,6 +2853,30 @@
         <li class=" is-current" data-state="current" data-role="item">
             <a href="" data-pjax>
                 <span>Comuni</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="" data-role="item">
+            <a href="treeview--placeholders.html" data-pjax>
+                <span>Placeholders</span>
                 
 
 <div class="Status Status--unlabelled">

@@ -11,6 +11,10 @@ html {
 }
 */
 
+a {
+  transition: none !important;
+}
+
 h1,
 h2,
 h3,
@@ -198,10 +202,6 @@ h4 {
 
 .Tree ul > li.is-current a {
   font-weight: 700;
-}
-
-.Tree .Treeview [aria-expanded] > a {
-  background-position: right 1em center;
 }
 
 .Frame-panel--sidebar {
