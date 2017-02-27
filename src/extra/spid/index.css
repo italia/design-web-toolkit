@@ -72,10 +72,8 @@
   width: 100%;
 }
 
-.Spid-idp:hover,
-.Spid-idp:focus {
-  @extend .u-background-grey-20;
-  @extend .u-borderSoftFocus;
+.Spid-idp:hover {
+  @extend .u-background-grey-10;
 }
 
 .Spid-idp > img {
