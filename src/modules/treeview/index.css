@@ -22,9 +22,10 @@
   @extend .u-zindex-30;
   @extend .u-posAbsolute;
   @extend .u-block;
+  @extend .u-text-r-xs;
 
   background-position: center;
-  content: " ";
+  content: "";
   height: 100%;
   max-width: var(--Treeview-link-maxWidth);
   min-width: var(--Treeview-link-minWidth);
