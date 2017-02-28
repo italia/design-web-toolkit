@@ -53,8 +53,12 @@
   @extend .u-padding-left-xl;
 }
 
-.Megamenu-item:first-child > a {
-  @extend .u-padding-left-none;
+/*
+ * 1. HACK: align to logo
+ */
+
+.Megamenu-list {
+  margin-left: -2em; /* [1] */
 }
 
 .Megamenu-item > a:focus {
