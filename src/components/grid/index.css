@@ -1,0 +1,17 @@
+/** @define Grid; */
+
+.Grid--withGutterM {
+  margin: 0 -var(--Grid-gutter-size);
+}
+
+.Grid--withGutterM > .Grid-cell {
+  padding: 0 calc(var(--Grid-gutter-size));
+}
+
+.Grid--withGutterL {
+  margin: 0 calc(-1.5 * var(--Grid-gutter-size));
+}
+
+.Grid--withGutterL > .Grid-cell {
+  padding: 0 calc(1.5 * var(--Grid-gutter-size));
+}
