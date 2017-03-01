@@ -308,7 +308,7 @@
   @extend .u-inlineBlock;
 }
 
-.Header-socialIcons > li a {
+.Header-socialIcons > li > a {
   @extend .u-margin-left-xs;
 }
 
