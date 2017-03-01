@@ -308,6 +308,10 @@
   @extend .u-inlineBlock;
 }
 
+.Header-socialIcons > li a {
+  @extend .u-margin-left-xs;
+}
+
 .Header-socialIcons [class^="Icon-"],
 .Header-socialIcons [class*=" Icon-"] {
   @extend .u-inlineBlock;
@@ -315,7 +319,6 @@
   @extend .u-color-50;
   @extend .u-padding-all-xxs;
   @extend .u-borderRadius-circle;
-  @extend .u-margin-left-xs;
 }
 
 /*
