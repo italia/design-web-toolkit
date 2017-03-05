@@ -10,7 +10,8 @@ var plugins = []
 var loaders = []
 
 plugins.push(new UglifyJsPlugin({
-  minimize: true
+  minimize: true,
+  sourceMap: true
 }))
 
 loaders.push({
@@ -20,9 +21,12 @@ loaders.push({
 
 loaders.push({
   test: /\.css$/,
-  loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+  use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
 })
-plugins.push(new ExtractTextPlugin('vendor.css'))
+
+plugins.push(new ExtractTextPlugin({ filename: 'vendor.css' }))
+
+plugins.push(new webpack.LoaderOptionsPlugin({ debug: true }))
 
 var config = {
   entry: {
@@ -35,14 +39,16 @@ var config = {
     filename: '[name].min.js',
     library: libraryName,
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    publicPath: '/build/',
+    chunkFilename: '[name].chunk.js'
   },
   externals: {
     'jquery': 'jQuery',
     '$': 'jQuery',
   },
   module: {
-    loaders: [...loaders, {
+    rules: [...loaders, {
       test: /(\.jsx|\.js)$/,
       loader: 'babel-loader',
       //      exclude: /(node_modules|bower_components)/
@@ -53,14 +59,13 @@ var config = {
     }]
   },
   resolve: {
-    root: [
+    modules: [
       path.resolve('./src'),
-      path.resolve('./theme')
-    ],
-    extensions: ['', '.js']
+      path.resolve('./theme'),
+      'node_modules'
+    ]
   },
   plugins: plugins,
-  debug: true
 }
 
 module.exports = config
