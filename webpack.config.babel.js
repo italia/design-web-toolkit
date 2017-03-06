@@ -2,9 +2,8 @@ var webpack = require('webpack')
 var path = require('path')
 var libraryName = 'IWT'
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
-  // var env = process.env.WEBPACK_ENV
+// var env = process.env.WEBPACK_ENV
 
 var plugins = []
 var loaders = []
@@ -17,12 +16,6 @@ loaders.push({
   test: /\.png/,
   loader: 'url-loader?limit=100000&minetype=image/png'
 })
-
-loaders.push({
-  test: /\.css$/,
-  loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-})
-plugins.push(new ExtractTextPlugin('vendor.css'))
 
 var config = {
   entry: {
@@ -45,7 +38,7 @@ var config = {
     loaders: [...loaders, {
       test: /(\.jsx|\.js)$/,
       loader: 'babel-loader',
-      //      exclude: /(node_modules|bower_components)/
+      // exclude: /(node_modules|bower_components)/
     }, {
       test: /(\.jsx|\.js)$/,
       loader: 'eslint-loader',

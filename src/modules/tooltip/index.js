@@ -1,11 +1,5 @@
 import Frtooltip from 'fr-tooltip'
 
-/* eslint-disable no-unused-vars */
-
-import stylesheet from 'fr-tooltip/tooltip.css'
-
-/* eslint-enable */
-
 const opts = {
   // String - Container selector, hook for JS init() method
   selector: '.js-fr-tooltip',

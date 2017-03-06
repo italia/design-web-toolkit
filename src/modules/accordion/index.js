@@ -1,11 +1,5 @@
 import Fraccordion from 'fr-accordion'
 
-/* eslint-disable no-unused-vars */
-
-import stylesheet from 'fr-accordion/accordion.css'
-
-/* eslint-enable */
-
 const accordion = Fraccordion({
 	// String - Use header id on element to tie each accordion panel to its header - see panelIdPrefix
 	headerIdPrefix: 'accordion-header',

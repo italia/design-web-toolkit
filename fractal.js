@@ -9,7 +9,7 @@ fractal.docs.set('path', __dirname + '/docs')
 fractal.web.set('static.path', __dirname + '/build')
 
 // prefix all resources url with '/build'
-//
+
 if (process.env.DEPLOY === 'true') {
   fractal.web.set('static.mount', '/ita-web-toolkit/build')
 } else {
@@ -80,8 +80,7 @@ const myCustomisedTheme = mandelbrot({
   'styles': [
     'default',
     '/ita-web-toolkit/theme/styleguide.css',
-    '/build/build-styleguide.css',
-    '/build/vendor.css'
+    '/build/build-styleguide.css'
   ],
   'scripts': [
     'default',
