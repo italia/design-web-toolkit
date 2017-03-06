@@ -38,7 +38,7 @@ In produzione vanno inclusi almeno i file:
 ```
 
 facendo riferimento al
-**[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/master/src/_preview.tmpl)**
+**[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/gh-pages/build/index.html)**
 
 La directory `src/icons` contiene le icone personalizzate in formato SVG, PNG e *icon font*.
 

@@ -1,3 +1,10 @@
+### 2.0.0
+
+* Modificato CSS dell'header per permettere di impostare i colori tramite variabili
+* Modificato il template dell'header (selettore dei linguaggi)
+
+* Aggiornato ambiente di build a webpack v2 con code splitting
+
 ### 0.2.0-alpha12
 
 * Aggiornati pacchetti suitcss in package.json

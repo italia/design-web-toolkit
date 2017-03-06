@@ -1,5 +1,16 @@
 /* @define Header; weak */
 
+:root {
+  --Header-banner-bg: var(--Color-grey-80);
+  --Header-navbar-bg: var(--Color-50);
+  --Header-searchTrigger-bg: var(--Color-40);
+  --Header-languages-bg: var(--Color-95);
+  --Header-activeLanguage-bg: var(--Color-80);
+  --Header-language-other-bg: var(--Color-grey-10);
+  --Header-socialIcons-bg: var(--Color-white);
+  --Header-text-color: var(--Color-white);
+}
+
 .Header {
   @extend .u-layout-centerContent;
 
@@ -9,8 +20,6 @@
 .Header-banner {
   @extend .u-cf;
   @extend .u-sizeFull;
-  @extend .u-background-90;
-  @extend .u-color-60;
   @extend .u-padding-left-s;
   @media (--sm-viewport) {
     @extend .u-padding-left-none;
@@ -18,6 +27,8 @@
   @media (--lg-viewport) {
     padding-left: calc((1 / 8 + 1 / 12) * 100%) !important;
   }
+
+  background-color: var(--Header-banner-bg);
 }
 
 .Header-owner > a {
@@ -25,7 +36,6 @@
   @extend .u-sm-before4of12;
   @extend .u-md-before3of12;
   @extend .u-text-r-xxs;
-  @extend .u-color-white;
   @extend .u-textClean;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
@@ -33,6 +43,8 @@
   @media (--lg-viewport), (--md-viewport) {
     @extend .u-textWeight-600;
   }
+
+  color: var(--Header-text-color);
 }
 
 .Header-owner > a > span {
@@ -47,8 +59,6 @@
 /* ========================================== */
 
 .Header-navbar {
-  @extend .u-background-50;
-
   @extend .u-padding-top-s;
   @extend .u-padding-bottom-s;
   @extend .u-padding-right-xs;
@@ -62,6 +72,7 @@
     @extend .u-padding-right-xxl;
   }
 
+  background-color: var(--Header-navbar-bg);
   width: 100%;
 }
 
@@ -85,11 +96,11 @@
   @extend .u-md-block;
   @extend .u-lg-block;
 
-  @extend .u-color-white;
   @extend .u-text-r-xxs;
   @extend .u-textWeight-700;
   @extend .u-textClean;
 
+  color: var(--Header-text-color);
   letter-spacing: 0.1em !important;
   margin-bottom: -calc(1rem + var(--Hamburger-height));
   margin-top: calc(1rem + var(--Hamburger-height));
@@ -151,10 +162,11 @@
   @extend .u-text-lg-l;
   @extend .u-lineHeight-m;
   @extend .u-textWeight-700;
-  @extend .u-color-white;
   @extend .u-textClean;
   @extend .u-padding-left-xxs;
   @extend .u-padding-right-xxs;
+
+  color: var(--Header-text-color);
 }
 
 .Header-titleLink small {
@@ -163,11 +175,12 @@
   @extend .u-text-md-m;
   @extend .u-text-lg-m;
   @extend .u-textWeight-400;
-  @extend .u-color-white;
   @extend .u-textClean;
   @extend .u-hidden;
   @extend .u-md-inline;
   @extend .u-lg-inline;
+
+  color: var(--Header-text-color);
 }
 
 /* Search button for small screens
@@ -183,10 +196,11 @@
 
 .Header-searchTrigger button {
   @extend .u-linkClean;
-  @extend .u-background-40;
-  @extend .u-color-white;
   @extend .u-padding-all-s;
   @extend .u-text-r-xxs;
+
+  background-color: var(--Header-searchTrigger-bg);
+  color: var(--Header-text-color);
 }
 
 /* Utils block (social + languages + search form)
@@ -247,12 +261,12 @@
   ================================================ */
 
 .Header-languages {
-  @extend .u-background-95;
   @extend .u-floatRight;
+
+  background-color: var(--Header-languages-bg);
 }
 
 .Header-language {
-  @extend .u-color-white;
   @extend .u-text-r-xxs;
   @extend .u-textWeight-600;
   @extend .u-padding-left-s;
@@ -260,6 +274,8 @@
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
   @extend .u-linkClean;
+
+  color: var(--Header-text-color);
 }
 
 .Header-language abbr {
@@ -270,15 +286,11 @@
   cursor: pointer;
 }
 
-.Header-language.is-active {
-  @extend .u-background-80;
-}
-
 .Header-language-other {
   @extend .u-zindex-max;
-  @extend .u-background-grey-10;
   @extend .u-borderShadow-xxl;
 
+  background-color: var(--Header-language-other-bg);
   right: 0;
   top: 0;
 }
@@ -288,9 +300,10 @@
 
 .Header-social {
   @extend .u-text-r-xs;
-  @extend .u-color-white;
   @extend .u-margin-left-s;
   @extend .u-margin-bottom-s;
+
+  color: var(--Header-text-color);
 }
 
 .Header-social > * {
@@ -315,10 +328,11 @@
 .Header-socialIcons [class^="Icon-"],
 .Header-socialIcons [class*=" Icon-"] {
   @extend .u-inlineBlock;
-  @extend .u-background-white;
-  @extend .u-color-50;
   @extend .u-padding-all-xxs;
   @extend .u-borderRadius-circle;
+
+  background-color: var(--Header-socialIcons-bg);
+  color: var(--Header-navbar-bg);
 }
 
 /*

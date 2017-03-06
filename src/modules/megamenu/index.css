@@ -117,7 +117,7 @@
 /* Some custom style */
 
 .Megamenu--default {
-  background-color: color(var(--Color-primary) l(+5%) s(-15%)) !important;
+  background-color: color(var(--Color-primary) l(+5%) s(-15%));
 }
 
 .Megamenu--default .Megamenu-item:first-child {
