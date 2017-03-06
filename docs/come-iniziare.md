@@ -31,7 +31,6 @@ In produzione vanno inclusi almeno i file:
 ```
 .
 ├── build.css
-├── vendor.css
 ├── vendor/modernizr.js
 ├── vendor/jquery.min.js
 └── IWT.min.js

@@ -4,7 +4,7 @@ var libraryName = 'IWT'
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
-  // var env = process.env.WEBPACK_ENV
+// var env = process.env.WEBPACK_ENV
 
 var plugins = []
 var loaders = []
@@ -21,12 +21,19 @@ loaders.push({
 
 loaders.push({
   test: /\.css$/,
-  use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
+  use: ExtractTextPlugin.extract({
+    fallback: 'style-loader',
+    use: 'css-loader'
+  })
 })
 
-plugins.push(new ExtractTextPlugin({ filename: 'vendor.css' }))
+plugins.push(new ExtractTextPlugin({
+  filename: 'vendor.css'
+}))
 
-plugins.push(new webpack.LoaderOptionsPlugin({ debug: true }))
+plugins.push(new webpack.LoaderOptionsPlugin({
+  debug: true
+}))
 
 var config = {
   entry: {
@@ -51,7 +58,7 @@ var config = {
     rules: [...loaders, {
       test: /(\.jsx|\.js)$/,
       loader: 'babel-loader',
-      //      exclude: /(node_modules|bower_components)/
+      // exclude: /(node_modules|bower_components)/
     }, {
       test: /(\.jsx|\.js)$/,
       loader: 'eslint-loader',
