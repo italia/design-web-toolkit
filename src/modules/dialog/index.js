@@ -1,11 +1,5 @@
 import Frdialogmodal from 'fr-dialogmodal/dialogmodal.js'
 
-/* eslint-disable no-unused-vars */
-
-import stylesheet from 'fr-dialogmodal/dialogmodal.css'
-
-/* eslint-enable */
-
 var dialog = Frdialogmodal({
   // String - Outer container selector, hook for JS init() method
   selector: '.js-fr-dialogmodal',
