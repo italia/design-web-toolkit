@@ -12,6 +12,10 @@
   box-shadow: 0 8px 24px 0 rgba(50, 50, 50, 0.3) !important;
 }
 
+.u-borderShadow-l {
+  box-shadow: 0px 10px 40px -5px rgba(133, 133, 133, 1);
+}
+
 .u-borderShadow-xxl {
   box-shadow: 1px 1px 80px 1px rgba(0, 0, 0, 0.35) !important;
 }

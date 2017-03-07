@@ -1,7 +1,10 @@
 ### 0.3.0-alpha
 
 * Modificato il CSS dell'header per permettere di impostare i colori tramite variabili
-* Modificato il template dell'header, semplificato il selettore dei linguaggi
+
+* Modificato il template dell'header:
+  - semplificato il selettore dei linguaggi
+  - rivista griglia per allineare i componenti
 
 * Aggiunto un template con campo di input e icona associata
 

@@ -9,36 +9,33 @@
   --Header-language-other-bg: var(--Color-grey-10);
   --Header-socialIcons-bg: var(--Color-white);
   --Header-text-color: var(--Color-white);
+  --Header-search-maxWidth: 20em;
 }
 
 .Header {
-  @extend .u-layout-centerContent;
-
   width: 100%;
 }
 
 .Header-banner {
   @extend .u-cf;
   @extend .u-sizeFull;
-  @extend .u-padding-left-s;
-  @media (--sm-viewport) {
-    @extend .u-padding-left-none;
-  }
-  @media (--lg-viewport) {
-    padding-left: calc((1 / 8 + 1 / 12) * 100%) !important;
-  }
+  @extend .u-layout-r-withGutter;
 
   background-color: var(--Header-banner-bg);
 }
 
-.Header-owner > a {
-  @extend .u-floatLeft;
-  @extend .u-sm-before4of12;
-  @extend .u-md-before3of12;
-  @extend .u-text-r-xxs;
-  @extend .u-textClean;
+.Header-owner {
+  @extend .u-layout-wide;
+  @extend .u-layoutCenter;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
+  @extend .u-border-bottom-xxs;
+  @extend .u-color-40;
+}
+
+.Header-owner > a {
+  @extend .u-text-r-xxs;
+  @extend .u-textClean;
 
   @media (--lg-viewport), (--md-viewport) {
     @extend .u-textWeight-600;
@@ -50,7 +47,6 @@
 .Header-owner > a > span {
   @extend .u-text-xxs;
   @extend .u-lineHeight-s;
-
   @media (--lg-viewport), (--md-viewport) {
     @extend .u-text-xs;
   }
@@ -59,19 +55,9 @@
 /* ========================================== */
 
 .Header-navbar {
-  @extend .u-padding-top-s;
+  @extend .u-layout-r-withGutter;
+  @extend .u-padding-top-l;
   @extend .u-padding-bottom-s;
-  @extend .u-padding-right-xs;
-  @extend .u-padding-left-xs;
-
-  @media (--md-viewport) {
-    @extend .u-padding-right-l;
-  }
-
-  @media (--lg-viewport) {
-    @extend .u-padding-right-xxl;
-  }
-
   background-color: var(--Header-navbar-bg);
   width: 100%;
 }
@@ -216,6 +202,9 @@
   @extend .u-md-size4of12;
   @extend .u-lg-size4of12;
 
+  @extend .u-md-before2of12;
+  @extend .u-lg-before2of12;
+
   @media (--sm-viewport) {
     @extend .u-margin-top-xs;
     @extend .u-margin-bottom-xs;
@@ -248,7 +237,7 @@
     @extend .u-padding-right-none;
     @extend .u-floatRight;
 
-    max-width: 24em;
+    max-width: var(--Header-search-maxWidth);
   }
 }
 
@@ -271,8 +260,6 @@
   @extend .u-textWeight-600;
   @extend .u-padding-left-s;
   @extend .u-padding-right-s;
-  @extend .u-padding-r-top;
-  @extend .u-padding-r-bottom;
   @extend .u-linkClean;
 
   color: var(--Header-text-color);
@@ -322,7 +309,7 @@
 }
 
 .Header-socialIcons > li > a {
-  @extend .u-margin-left-xs;
+  @extend .u-margin-left-s;
 }
 
 .Header-socialIcons [class^="Icon-"],

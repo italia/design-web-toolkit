@@ -31,52 +31,55 @@
     </div>
   </div>
 
-  <div class="Header-navbar Grid Grid--alignMiddle {{ backgroundClass }}">
-    <div class="Header-toggle Grid-cell">
-      <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock
-        {% if hideOnDesktop %}u-lg-hidden u-md-hidden{% endif %}" href="#menu"
-        aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
-        <span class="Hamburger-toggle" role="presentation"></span>
-        <span class="Header-toggleText" role="presentation">Menu</span>
-      </a>
-    </div>
-
-    <div class="Header-logo Grid-cell" aria-hidden="true">
-      <a href="" tabindex="-1">
-        <img src="{{ site.logo }}" alt="">
-      </a>
-    </div>
-
-    <div class="Header-title Grid-cell">
-      <h1 class="Header-titleLink">
-        <a href="/">
-          {{ site.name }}<br>
-          <small>{{ site.subtitle }}</small>
+  <div class="Header-navbar {{ backgroundClass }}">
+    <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
+      <div class="Header-logo Grid-cell" aria-hidden="true">
+        <a href="" tabindex="-1">
+          <img src="{{ site.logo }}" alt="">
         </a>
-      </h1>
-    </div>
-
-    <div class="Header-searchTrigger Grid-cell">
-      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search"
-        title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
-      </button>
-      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden"
-        title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
-      </button>
-    </div>
-
-    <div class="Header-utils Grid-cell">
-      <div class="Header-social Headroom-hideme">
-        <p>Seguici su</p>
-        <ul class="Header-socialIcons">
-          <li><a href="" title="Facebook"><span class="Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
-          <li><a href="" title="Twitter"><span class="Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
-          <li><a href="" title="Youtube"><span class="Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
-        </ul>
       </div>
-      <div class="Header-search" id="header-search">
-        {% render '@formtpl--search' %}
+
+      <div class="Header-title Grid-cell">
+        <h1 class="Header-titleLink">
+          <a href="/">
+            {{ site.name }}<br>
+            <small>{{ site.subtitle }}</small>
+          </a>
+        </h1>
       </div>
+
+      <div class="Header-searchTrigger Grid-cell">
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search"
+          title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
+        </button>
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden"
+          title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
+        </button>
+      </div>
+
+      <div class="Header-utils Grid-cell">
+        <div class="Header-social Headroom-hideme">
+          <p>Seguici su</p>
+          <ul class="Header-socialIcons">
+            <li><a href="" title="Facebook"><span class="Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+            <li><a href="" title="Twitter"><span class="Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+            <li><a href="" title="Youtube"><span class="Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+          </ul>
+        </div>
+        <div class="Header-search" id="header-search">
+          {% render '@formtpl--search' %}
+        </div>
+      </div>
+
+      <div class="Header-toggle Grid-cell">
+        <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock
+          {% if hideOnDesktop %}u-lg-hidden u-md-hidden{% endif %}" href="#menu"
+          aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
+          <span class="Hamburger-toggle" role="presentation"></span>
+          <span class="Header-toggleText" role="presentation">Menu</span>
+        </a>
+      </div>
+
     </div>
   </div>
   <!-- Header-navbar -->
@@ -84,7 +87,7 @@
   {% if menu %}
   <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
     {% if clone %}
-      <nav class="Megamenu Megamenu--default js-megamenu" data-rel=".Offcanvas .Treeview"></nav>
+      <nav class="Megamenu Megamenu--default js-megamenu {{ backgroundClass }}" data-rel=".Offcanvas .Treeview"></nav>
     {% elif megamenu %}
       {% render '@megamenu', { backgroundClass: backgroundClass } %}
     {% else %}
