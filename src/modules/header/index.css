@@ -146,7 +146,7 @@
   @extend .u-text-sm-m;
   @extend .u-text-md-l;
   @extend .u-text-lg-l;
-  @extend .u-lineHeight-m;
+  @extend .u-lineHeight-s;
   @extend .u-textWeight-700;
   @extend .u-textClean;
   @extend .u-padding-left-xxs;
@@ -156,11 +156,9 @@
 }
 
 .Header-titleLink small {
-  @extend .u-text-xxs;
-  @extend .u-text-sm-xs;
-  @extend .u-text-md-m;
-  @extend .u-text-lg-m;
+  @extend .u-text-r-xs;
   @extend .u-textWeight-400;
+  @extend .u-lineHeight-s;
   @extend .u-textClean;
   @extend .u-hidden;
   @extend .u-md-inline;
