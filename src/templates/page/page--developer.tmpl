@@ -30,6 +30,20 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
 
 <section class="u-background-grey-15 u-layout-r-withGutter u-padding-r-top u-padding-r-bottom">
   <div class="u-layout-wide u-layoutCenter">
-    <h2 class="u-text-r-l u-textWeight-300 u-color-50">Progetti in evidenza</h2>
+    <h2 class="u-text-r-l u-textWeight-300 u-color-50 u-padding-r-bottom">Progetti in evidenza</h2>
+
+    <div class="Grid Grid--withGutter">
+      {% for i in [1, 2, 3] %}
+        <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
+          {% render '@tile--simple' %}
+        </div>
+      {% endfor %}
+      {% for i in [1, 2, 3] %}
+        <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
+          {% render '@tile--simple', { text: '' } %}
+        </div>
+      {% endfor %}
+    </div>
+
   </div>
 </section>

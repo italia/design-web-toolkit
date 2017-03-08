@@ -7,6 +7,9 @@
   --Separator-skewY: 2deg;
 }
 
+/* 
+ *  1. avoid body overflow
+ */
 .Separator {
   @extend .u-layout-releaseFull;
   @extend .u-border-none;
@@ -17,8 +20,10 @@
   height: var(--Separator-height);
   left: 0;
   margin-bottom: -var(--Separator-height) !important;
+  margin-left: -1em;
   top: -var(--Separator-offset);
   z-index: -1;
+  width: 99.99%; /* [1] */
 }
 
 .Separator--down {
