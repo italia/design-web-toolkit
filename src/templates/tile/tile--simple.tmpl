@@ -18,14 +18,14 @@
     {% if hasMore or hasSocial %}
     <div class="Grid u-padding-r-bottom u-padding-r-top u-margin-r-top">
       {% if hasMore %}
-      <p class="Grid-cell u-md-size1of2 u-lg-size1of2">
+      <p class="Grid-cell u-md-size1of2 u-lg-size1of2 u-padding-r-bottom">
         <a href="#" class="u-color-50 u-text-r-xxs u-textWeight-600 u-linkClean">per saperne di più
           <span class="Icon Icon-chevron-right u-margin-left-xs u-text-xxs"></span>
         </a>
       </p>
       {% endif %}
       {% if hasSocial %}
-      <p class="Grid-cell u-md-size1of2 u-lg-size1of2 u-textRight">
+      <p class="Grid-cell u-md-size1of2 u-lg-size1of2 u-textRight u-padding-r-bottom">
         <a href="#" class="u-linkClean">
           {% for i in [1, 2, 3] %}
           <span class="Icon Icon-twitter u-inlineBlock u-text-r-xs u-padding-all-xxs u-borderRadius-circle

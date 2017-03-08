@@ -66,21 +66,24 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
   </div>
 </section>
 
-<hr class="Separator-room u-background-grey-15" />
-<hr class="Separator Separator--down u-background-white" />
+<hr class="Separator-room u-background-white" />
+<hr class="Separator Separator--up u-background-50" />
 
-<section class="u-background-white u-layout-r-withGutter u-padding-r-top u-padding-r-bottom">
-  <div class="u-layout-wide u-layoutCenter">
-    <h2 class="u-text-r-l u-textWeight-300 u-color-50">Strumenti</h2>
-
-    <div class="Grid Grid--withGutter">
+<section class="u-background-50 u-layout-r-withGutter u-padding-r-top u-padding-bottom-xxl">
+  <div class="u-layout-wide u-layoutCenter u-textCenter u-padding-bottom-xxl">
+    <h2 class="u-text-r-l u-textWeight-300 u-color-white u-padding-r-bottom">Strumenti</h2>
+    <p class="u-text-r-xs u-color-5">{{ __SHORT_TEXTS__[0] }}</p>
+    <div class="Grid Grid--withGutter u-layout-prose u-layoutCenter u-padding-top-xl u-color-white">
       {% for i in [1, 2, 3] %}
-        <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
-          {% render '@tile--simple', { hasSocial: false, hasMore: true } %}
-        </div>
+      <span class="Grid-cell u-md-size3of12 u-lg-size3of12 u-margin-r-bottom u-margin-r-top">
+        <span class="Icon Icon-twitter u-text-r-xl"></span>
+      </span>
+      <span class="Grid-cell u-md-size9of12 u-lg-size9of12 u-margin-r-bottom u-margin-r-top">
+        <h3 class="u-text-r-m u-textWeight-600 u-textLeft u-padding-bottom-xs">{{ __WORDS__[1] | capitalize }}</h3>
+        <p class="u-textLeft">{{ __TEXTS__[1] }}</p>
+      </span>
       {% endfor %}
     </div>
-
   </div>
 </section>
 

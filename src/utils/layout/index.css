@@ -1,7 +1,7 @@
 /** @define utilities; */
 
 :root {
-  --Layout-container-wide: 144rem;
+  --Layout-container-wide: 138rem;
   --Layout-container-wider: 168rem;
   --Layout-container-medium: 128rem;
   --Layout-container-small: 96rem;
@@ -52,6 +52,10 @@
 
 .u-layout-wide {
   max-width: var(--Layout-container-wide) !important;
+
+  @media (--md-viewport) {
+    max-width: var(--Layout-container-medium) !important;
+  }
 }
 
 .u-layout-wider {
