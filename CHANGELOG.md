@@ -7,6 +7,7 @@
   - rivista griglia per allineare i componenti
 
 * Aggiunto un template con campo di input e icona associata
+* Aggiunto un componente "separatore" per le regioni del layout
 
 * Aggiornato ambiente di build a webpack v2 + code splitting
 * Eliminato vendor.css (confluito in build.css)

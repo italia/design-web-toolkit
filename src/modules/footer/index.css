@@ -2,13 +2,15 @@
 
 :root {
   --Footer-color-link: var(--Color-teal-50);
+  --Footer-background-color: var(--Color-95);
 }
 
 .Footer {
-  @extend .u-background-grey-80;
   @extend .u-color-white;
   @extend .u-padding-bottom-xxl;
   @extend .u-padding-top-xxl;
+
+  background: var(--Footer-background-color);
 }
 
 .Footer a {
@@ -101,10 +103,10 @@
 .Footer-socialIcons [class^="Icon-"],
 .Footer-socialIcons [class*=" Icon-"] {
   @extend .u-inlineBlock;
-  @extend .u-color-grey-80;
   @extend .u-padding-all-xs;
   @extend .u-borderRadius-circle;
   @extend .u-text-r-m;
 
+  color: var(--Footer-background-color);
   background-color: var(--Footer-color-link);
 }
