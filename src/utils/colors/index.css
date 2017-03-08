@@ -10,6 +10,7 @@
   --Color-black: #000;
   --Color-white: #fff;
   --Color-grey-10: #f5f5f0;
+  --Color-grey-15: #f6f9fc;
   --Color-grey-20: #eee;
   --Color-grey-30: #ddd;
   --Color-grey-40: #a5abb0;
@@ -62,6 +63,14 @@
 
 .u-background-grey-10 {
   background-color: var(--Color-grey-10) !important;
+}
+
+.u-color-grey-15 {
+  color: var(--Color-grey-15) !important;
+}
+
+.u-background-grey-15 {
+  background-color: var(--Color-grey-15) !important;
 }
 
 .u-color-grey-20 {

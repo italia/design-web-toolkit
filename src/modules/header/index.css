@@ -6,7 +6,7 @@
   --Header-searchTrigger-bg: var(--Color-40);
   --Header-languages-bg: var(--Color-95);
   --Header-activeLanguage-bg: var(--Color-80);
-  --Header-language-other-bg: var(--Color-grey-10);
+  --Header-language-other-bg: var(--Color-white);
   --Header-socialIcons-bg: var(--Color-white);
   --Header-text-color: var(--Color-white);
   --Header-search-maxWidth: 20em;
@@ -177,13 +177,14 @@
   @extend .u-sm-hidden;
   @extend .u-md-hidden;
   @extend .u-lg-hidden;
-  @extend .u-textCenter;
+  @extend .u-textRight;
 }
 
 .Header-searchTrigger button {
   @extend .u-linkClean;
   @extend .u-padding-all-s;
-  @extend .u-text-r-xxs;
+  @extend .u-text-r-l;
+  @extend .u-textWeight-700;
 
   background-color: var(--Header-searchTrigger-bg);
   color: var(--Header-text-color);
@@ -204,6 +205,11 @@
 
   @extend .u-md-before2of12;
   @extend .u-lg-before2of12;
+
+  @extend .u-sm-flexOrderNone;
+  @extend .u-md-flexOrderNone;
+  @extend .u-lg-flexOrderNone;
+  @extend .u-flexOrderLast;
 
   @media (--sm-viewport) {
     @extend .u-margin-top-xs;
@@ -275,11 +281,11 @@
 
 .Header-language-other {
   @extend .u-zindex-max;
-  @extend .u-borderShadow-xxl;
+  @extend .u-borderRadius-m;
+  @extend .u-borderShadow-l;
+  @extend .u-padding-r-all;
 
   background-color: var(--Header-language-other-bg);
-  right: 0;
-  top: 0;
 }
 
 /* Social icons / link
