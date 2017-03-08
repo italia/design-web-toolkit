@@ -35,15 +35,59 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
     <div class="Grid Grid--withGutter">
       {% for i in [1, 2, 3] %}
         <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
-          {% render '@tile--simple' %}
+          {% render '@tile--simple', { hasShadow: true, hasSocial: true, hasMore: true } %}
         </div>
       {% endfor %}
       {% for i in [1, 2, 3] %}
         <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
-          {% render '@tile--simple', { text: '' } %}
+          {% render '@tile--simple', { text: '', hasShadow: true, hasMore: false } %}
         </div>
       {% endfor %}
     </div>
 
   </div>
 </section>
+
+<hr class="Separator-room u-background-grey-15" />
+<hr class="Separator Separator--down u-background-white" />
+
+<section class="u-background-white u-layout-r-withGutter u-padding-r-top u-padding-r-bottom">
+  <div class="u-layout-wide u-layoutCenter">
+    <h2 class="u-text-r-l u-textWeight-300 u-color-50">Novità</h2>
+
+    <div class="Grid Grid--withGutter">
+      {% for i in [1, 2, 3] %}
+        <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
+          {% render '@tile--simple', { hasSocial: false, hasMore: true } %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<hr class="Separator-room u-background-grey-15" />
+<hr class="Separator Separator--down u-background-white" />
+
+<section class="u-background-white u-layout-r-withGutter u-padding-r-top u-padding-r-bottom">
+  <div class="u-layout-wide u-layoutCenter">
+    <h2 class="u-text-r-l u-textWeight-300 u-color-50">Strumenti</h2>
+
+    <div class="Grid Grid--withGutter">
+      {% for i in [1, 2, 3] %}
+        <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
+          {% render '@tile--simple', { hasSocial: false, hasMore: true } %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<div class="u-background-grey-80">
+  <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter u-hiddenPrint">
+    {% render '@footer' %}
+  </div>
+</div>
+
+{% render '@scrolltop' %}
