@@ -3,10 +3,10 @@
 }
 
 .Dropdown-menu[aria-hidden=true] {
-  display: none;
+  visibility: hidden;
 }
 
 .Dropdown-menu:target,
 .Dropdown-menu[aria-hidden=false] {
-  display: block;
+  visibility: visible;
 }
