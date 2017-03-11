@@ -2,6 +2,7 @@
 
 :root {
   --Megamenu-arrow-width: 0.5em;
+  --Megamenu-subnav-width: 14em;
 }
 
 /*
@@ -79,48 +80,49 @@
 .Megamenu.is-ready .Megamenu-subnav {
   @extend .u-posAbsolute;
   @extend .u-zindex-max;
+  @extend .u-inlineBlock;
 
   left: 0;
   top: 100%;
   visibility: hidden;
-  width: 100%;
 }
 
 /* sub-navigation panel open state */
 
 .Megamenu.is-ready .Megamenu-subnav.is-open {
-  @extend .u-flex;
-  @extend .u-sizeFull;
-  @extend .u-md-flexWrap;
-  @extend .u-lg-flexWrap;
-
   visibility: visible;
 }
 
 /* list of items within sub-navigation panel */
 
 .Megamenu-subnavGroup {
-  @extend .u-sizeFull;
-  @extend .u-lg-size1of4;
-  @extend .u-md-size1of4;
+  @extend .u-inlineBlock;
+  @extend .u-alignTop;
+}
+
+.Megamenu-subnavGroup:nth-child(3n+0) {
+  @extend .u-cf;
 }
 
 /* list item within sub-navigation panel */
 
 .Megamenu-subnavGroup > li {
   @extend .u-block;
+
+  width: var(--Megamenu-subnav-width);
 }
 
 /* Some custom style */
 
 .Megamenu--default {
+  @extend .u-layout-r-withGutter;
+
   background-color: color(var(--Color-primary) l(+5%) s(-15%));
 }
 
 .Megamenu--default > .Megamenu-list {
   @extend .u-layout-wide;
   @extend .u-layoutCenter;
-  @extend .u-layout-r-withGutter;
 
   @media (--lg-viewport) {
     padding-left: 0 !important;
@@ -196,7 +198,6 @@
 .Megamenu--default .Megamenu-subnavGroup {
   @extend .u-textLeft;
   @extend .u-color-grey-40;
-  @extend .u-floatLeft;
 }
 
 .Megamenu--default .Megamenu-subnavGroup:last-child {
