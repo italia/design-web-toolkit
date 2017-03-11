@@ -1,4 +1,5 @@
-<div class="u-color-grey-30 u-padding-r-all {% if hasShadow %}u-borderShadow-m{% endif %} u-borderRadius-s u-background-white">
+<div class="u-color-grey-30 u-padding-r-all u-xs-padding-all-none
+  {% if hasShadow %}u-borderShadow-m u-xs-borderShadow-none{% endif %} u-borderRadius-s u-background-white">
   <div class="u-padding-r-all">
     <h3 class="u-padding-bottom-xs u-padding-top-l">
     <a class="u-textClean u-textWeight-600 u-text-r-l u-color-50" href="#">
@@ -16,16 +17,17 @@
       {{ text | d(__TEXTS__[0]) }}
     </p>
     {% if hasMore or hasSocial %}
-    <div class="Grid u-padding-r-bottom u-padding-r-top u-margin-r-top">
+    <div class="u-padding-r-bottom u-padding-r-top u-margin-r-top">
       {% if hasMore %}
-      <p class="Grid-cell u-md-size1of2 u-lg-size1of2 u-padding-r-bottom">
+      <p class="u-layout-centerRight u-padding-r-bottom">
         <a href="#" class="u-color-50 u-text-r-xxs u-textWeight-600 u-linkClean">per saperne di più
           <span class="Icon Icon-chevron-right u-margin-left-xs u-text-xxs"></span>
         </a>
       </p>
+      <br class="u-sm-hidden u-md-hidden u-lg-hidden">
       {% endif %}
       {% if hasSocial %}
-      <p class="Grid-cell u-md-size1of2 u-lg-size1of2 u-textRight u-padding-r-bottom">
+      <p class="u-layout-centerRight u-padding-r-bottom">
           {% for i in [1, 2, 3] %}
           <a href="#" class="u-linkClean">
           <span class="Icon Icon-twitter u-inlineBlock u-text-r-xs u-padding-all-xxs u-borderRadius-circle

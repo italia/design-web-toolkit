@@ -24,6 +24,7 @@
 
 @import "src/legacy";
 
+@custom-media --xs-viewport screen and (max-width: 767px);
 @custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 991px);
 @custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1365px);
 @custom-media --lg-viewport screen and (min-width: 1366px);

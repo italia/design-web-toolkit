@@ -32,3 +32,9 @@
   transition: opacity 0.3s 0s, visibility 0s 0s;
   width: 1em;
 }
+
+@media (--xs-viewport) {
+
+  .u-xs-borderShadow-none { box-shadow: none !important; }
+
+}
