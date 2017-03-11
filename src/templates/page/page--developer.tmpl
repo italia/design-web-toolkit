@@ -25,8 +25,7 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
   <p class="u-text-r-xs u-padding-r-all u-color-white">Laboris ea incididunt id eiusmod consectetur ipsum fugiat laboris et voluptate ad.</p>
 </div>
 
-<hr class="Separator-room u-background-50" />
-<hr class="Separator Separator--up u-background-grey-15" />
+{% render '@separator', { backgroundPrev: 'u-background-50', backgroundNext: 'u-background-grey-15', dir: 'up' } %}
 
 <section class="u-background-grey-15 u-layout-r-withGutter u-padding-r-top u-padding-r-bottom">
   <div class="u-layout-wide u-layoutCenter">
@@ -48,8 +47,7 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
   </div>
 </section>
 
-<hr class="Separator-room u-background-grey-15" />
-<hr class="Separator Separator--down u-background-white" />
+{% render '@separator', { backgroundPrev: 'u-background-grey-15', backgroundNext: 'u-background-white', dir: 'down' } %}
 
 <section class="u-background-white u-layout-r-withGutter u-padding-r-top u-padding-r-bottom">
   <div class="u-layout-wide u-layoutCenter">
@@ -66,8 +64,7 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
   </div>
 </section>
 
-<hr class="Separator-room u-background-white" />
-<hr class="Separator Separator--up u-background-50" />
+{% render '@separator', { backgroundPrev: 'u-background-white', backgroundNext: 'u-background-50', dir: 'up' } %}
 
 <section class="u-background-50 u-layout-r-withGutter u-padding-r-top u-padding-bottom-xxl">
   <div class="u-layout-wide u-layoutCenter u-textCenter u-padding-bottom-xxl">
@@ -78,10 +75,10 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
       <span class="Grid-cell u-md-size3of12 u-lg-size3of12 u-margin-r-bottom u-margin-r-top">
         <span class="Icon Icon-twitter u-text-r-xl"></span>
       </span>
-      <span class="Grid-cell u-md-size9of12 u-lg-size9of12 u-margin-r-bottom u-margin-r-top">
+      <div class="Grid-cell u-md-size9of12 u-lg-size9of12 u-margin-r-bottom u-margin-r-top">
         <h3 class="u-text-r-m u-textWeight-600 u-textLeft u-padding-bottom-xs">{{ __WORDS__[1] | capitalize }}</h3>
         <p class="u-textLeft">{{ __TEXTS__[1] }}</p>
-      </span>
+      </div>
       {% endfor %}
     </div>
   </div>
