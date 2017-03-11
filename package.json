@@ -12,6 +12,7 @@
     "headroom.js": "^0.9.3",
     "jquery.cookie": "^1.4.1",
     "owl.carousel": "^2.1.4",
+    "popper.js": "^1.0.7",
     "salvattore": "^1.0.9",
     "suitcss": "^2.0.0",
     "suitcss-base": "^2.0.0",

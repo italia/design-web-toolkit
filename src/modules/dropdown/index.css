@@ -1,4 +1,11 @@
+:root {
+  --Dropdown-arrow-size: 10px;
+}
+
 .Dropdown-menu {
+  @extend .u-zindex-max;
+
+  margin-top: calc(var(--Dropdown-arrow-size) - 1);
   position: absolute;
 }
 
@@ -9,4 +16,16 @@
 .Dropdown-menu:target,
 .Dropdown-menu[aria-hidden=false] {
   visibility: visible;
+}
+
+.Dropdown-arrow {
+  display: block;
+  font-size: calc(var(--Dropdown-arrow-size) * 2);
+  height: calc(var(--Dropdown-arrow-size) * 3);
+  left: 50%;
+  margin-left: -var(--Dropdown-arrow-size);
+  position: absolute;
+  text-shadow: 0 -1px 1px #bbb;
+  top: calc(var(--Dropdown-arrow-size) * -1.5);
+  width: calc(var(--Dropdown-arrow-size) * 3);
 }
