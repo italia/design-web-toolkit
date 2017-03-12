@@ -243,7 +243,6 @@
 .Megamenu--default .Megamenu-area {
   @extend .u-flex;
   @extend .u-flexAlignItemsCenter;
-  @extend .u-padding-r-right;
   @extend .u-padding-r-left;
   @extend .u-posAbsolute;
 

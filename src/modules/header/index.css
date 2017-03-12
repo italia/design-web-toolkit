@@ -29,7 +29,6 @@
   @extend .u-layoutCenter;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
-  @extend .u-border-bottom-xxs;
   @extend .u-color-40;
 }
 

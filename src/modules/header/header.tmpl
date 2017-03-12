@@ -3,7 +3,7 @@
 <header class="Header {% if isFixed %}Headroom--fixed js-Headroom{% endif %} u-hiddenPrint">
 
   <div class="Header-banner {{ backgroundClass }}">
-    <div class="Header-owner Headroom-hideme">
+    <div class="Header-owner Headroom-hideme {% if backgroundClass %}u-border-bottom-xxs{% endif %}">
       <a href=""><span>{{ site.owner }}</span></a>
       <div class="Header-languages {{ backgroundClass }}">
           <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
