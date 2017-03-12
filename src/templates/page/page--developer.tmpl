@@ -11,7 +11,8 @@
     clone: true,
     backgroundClass: 'u-background-50',
     site: {
-      name: '/developers <span class="u-background-10 u-color-50 u-text-xxs
+      name: '/developers <span class="u-lg-hidden u-md-hidden u-sm-hidden u-cf u-padding-top-xxs u-block"></span>
+        <span class="u-background-10 u-color-50 u-text-xxs
         u-alignMiddle u-padding-right-xs u-padding-left-xs u-borderRadius-l">beta</span>',
       subtitle: 'La community italiana di sviluppatori di servizi pubblici',
       owner: 'AgID <span class="u-hidden u-md-inline u-lg-inline u-sm-inline">- Agenzia per l\'Italia Digitale</span>',
@@ -26,10 +27,10 @@
     e realizzano i servizi pubblici in Italia</h3>
 </div> -->
 
-<div class="u-background-50 u-textCenter u-padding-r-all u-textCenter">
+<div class="u-background-50 u-textCenter u-padding-r-all u-textCenter u-padding-bottom-xxl">
   <h3 class="u-text-r-l u-textWeight-300 u-color-white u-margin-top-l u-lineHeight-l">
     Progetti</h3>
-  <p class="u-text-r-xs u-padding-r-all u-color-10 u-layout-prose u-layoutCenter">
+  <p class="u-text-r-xs u-padding-r-all u-color-10 u-layout-prose u-layoutCenter u-padding-bottom-xxl u-margin-bottom-xxl">
     {{ __SHORT_TEXTS__[0] }}
     {{ __SHORT_TEXTS__[1] }}
   </p>
@@ -37,18 +38,20 @@
 
 {% render '@separator', { backgroundPrev: 'u-background-50', backgroundNext: 'u-background-grey-15', dir: 'up' } %}
 
+<hr class="Separator Separator--down u-background-grey-15">
+
 <div class="u-background-grey-15 u-layout-r-withGutter u-padding-r-top u-padding-bottom-xxl u-posRelative u-zindex-30">
   <div class="u-layout-wide u-layoutCenter u-padding-bottom-xxl">
 
-    <div class="Grid Grid--withGutter" style="margin-top: -120px">
+    <div class="Grid Grid--withGutter" style="margin-top: -140px">
       {% for i in [1, 2, 3] %}
         <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
-          {% render '@tile--simple', { hasShadow: true, hasSocial: true, hasMore: true } %}
+          {% render '@tile--simple', { text: __TEXTS__[i], title: __WORDS__[i], hasShadow: true, hasSocial: true, hasMore: true } %}
         </div>
       {% endfor %}
       {% for i in [1, 2, 3] %}
         <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
-          {% render '@tile--simple', { text: '', hasShadow: true, hasMore: false } %}
+          {% render '@tile--simple', { text: __TEXTS__[i + 2], title: __WORDS__[i + 2], hasShadow: true, hasMore: false } %}
         </div>
       {% endfor %}
     </div>
