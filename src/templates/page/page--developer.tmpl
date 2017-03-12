@@ -12,8 +12,8 @@
     backgroundClass: 'u-background-50',
     site: {
       name: '/developers <span class="u-lg-hidden u-md-hidden u-sm-hidden u-cf u-padding-top-xxs u-block"></span>
-        <span class="u-background-10 u-color-50 u-text-xxs
-        u-alignMiddle u-padding-right-xs u-padding-left-xs u-borderRadius-l">beta</span>',
+        <span class="u-color-20 u-text-xxs
+        u-alignMiddle u-padding-right-xxs u-padding-left-xxs">beta</span>',
       subtitle: 'La community italiana di sviluppatori di servizi pubblici',
       owner: 'AgID <span class="u-hidden u-md-inline u-lg-inline u-sm-inline">- Agenzia per l\'Italia Digitale</span>',
       logo: 'http://designer.italia.it/images/loghi/logo-it.svg'
@@ -41,16 +41,16 @@
 <hr class="Separator Separator--down u-background-grey-15">
 
 <div class="u-background-grey-15 u-layout-r-withGutter u-padding-r-top u-padding-bottom-xxl u-posRelative u-zindex-30">
-  <div class="u-layout-wide u-layoutCenter u-padding-bottom-xxl">
+  <div class="u-layout-wide u-layoutCenter u-padding-bottom-xxl u-cf">
 
-    <div class="Grid Grid--withGutter" style="margin-top: -140px">
+    <div class="js-Masonry-container" style="margin-top: -10em" data-columns>
       {% for i in [1, 2, 3] %}
-        <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
+        <div class="Masonry-item js-Masonry-item">
           {% render '@tile--simple', { text: __TEXTS__[i], title: __WORDS__[i], hasShadow: true, hasSocial: true, hasMore: true } %}
         </div>
       {% endfor %}
       {% for i in [1, 2, 3] %}
-        <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
+        <div class="Masonry-item js-Masonry-item">
           {% render '@tile--simple', { text: __TEXTS__[i + 2], title: __WORDS__[i + 2], hasShadow: true, hasMore: false } %}
         </div>
       {% endfor %}
