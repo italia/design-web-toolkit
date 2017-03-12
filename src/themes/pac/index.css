@@ -11,3 +11,7 @@
 .t-Pac {
   font-family: var(--Pac-font-family-sans);
 }
+
+.t-Pac--padded {
+  @extend .u-background-95;
+}

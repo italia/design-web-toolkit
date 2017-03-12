@@ -3,8 +3,8 @@
 :root {
   --Header-banner-bg: var(--Color-grey-80);
   --Header-navbar-bg: var(--Color-50);
-  --Header-searchTrigger-bg: var(--Color-40);
-  --Header-languages-bg: var(--Color-95);
+  --Header-searchTrigger-bg: var(--Color-50);
+  --Header-languages-bg: var(--Color-grey-80);
   --Header-activeLanguage-bg: var(--Color-80);
   --Header-language-other-bg: var(--Color-white);
   --Header-socialIcons-bg: var(--Color-white);
@@ -58,6 +58,7 @@
   @extend .u-layout-r-withGutter;
   @extend .u-padding-top-l;
   @extend .u-padding-bottom-s;
+
   background-color: var(--Header-navbar-bg);
   width: 100%;
 }

@@ -1,5 +1,24 @@
-{% render '@cookiebar' %} {% render '@header', { isFixed: false, hideOnDesktop: true, menu: true, megamenu: true, clone: true, backgroundClass: 'u-background-50', site: {name: '/developers', subtitle: 'La community italiana di sviluppatori di servizi
-pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render '@offcanvas', { treeview: 'treeview--comuni', showOpenButton: false }, true %}
+{% render '@cookiebar' %}
+
+<div class="u-background-95">
+<div class="u-layout-wide u-layoutCenter">
+
+{% render '@header', {
+    isFixed: false,
+    hideOnDesktop: true,
+    menu: true,
+    megamenu: true,
+    clone: true,
+    backgroundClass: 'u-background-50',
+    site: {
+      name: '/developers <span class="u-background-10 u-color-50 u-text-xxs
+        u-alignMiddle u-padding-right-xs u-padding-left-xs u-borderRadius-l">beta</span>',
+      subtitle: 'La community italiana di sviluppatori di servizi pubblici',
+      owner: 'AgID <span class="u-hidden u-md-inline u-lg-inline u-sm-inline">- Agenzia per l\'Italia Digitale</span>',
+      logo: 'http://designer.italia.it/images/loghi/logo-it.svg'
+    }
+ }, true %}
+ {% render '@offcanvas', { treeview: 'treeview--comuni', showOpenButton: false }, true %}
 
 <!-- <div class="u-background-50 u-textCenter u-padding-all-xxl">
   <h3 class="u-text-r-l u-textWeight-300 u-color-white u-margin-top-l u-lineHeight-l">
@@ -18,10 +37,10 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
 
 {% render '@separator', { backgroundPrev: 'u-background-50', backgroundNext: 'u-background-grey-15', dir: 'up' } %}
 
-<div class="u-background-grey-15 u-layout-r-withGutter u-padding-r-top u-padding-r-bottom">
-  <div class="u-layout-wide u-layoutCenter">
+<div class="u-background-grey-15 u-layout-r-withGutter u-padding-r-top u-padding-bottom-xxl u-posRelative u-zindex-30">
+  <div class="u-layout-wide u-layoutCenter u-padding-bottom-xxl">
 
-    <div class="Grid Grid--withGutter" style="margin-top: -100px">
+    <div class="Grid Grid--withGutter" style="margin-top: -120px">
       {% for i in [1, 2, 3] %}
         <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
           {% render '@tile--simple', { hasShadow: true, hasSocial: true, hasMore: true } %}
@@ -37,46 +56,12 @@ pubblici', owner: 'Agid - Agenzia per l\'Italia Digitale'} }, true %} {% render 
   </div>
 </div>
 
-{% render '@separator', { backgroundPrev: 'u-background-grey-15', backgroundNext: 'u-background-white', dir: 'down' } %}
-
-<section class="u-background-white u-layout-r-withGutter u-padding-r-top u-padding-r-bottom">
-  <div class="u-layout-wide u-layoutCenter">
-    <h2 class="u-text-r-l u-textWeight-300 u-color-50">Novità</h2>
-
-    <div class="Grid Grid--withGutter">
-      {% for i in [1, 2, 3] %}
-        <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-margin-r-bottom">
-          {% render '@tile--simple', { hasSocial: false, hasMore: true } %}
-        </div>
-      {% endfor %}
-    </div>
-
-  </div>
-</section>
-
-{% render '@separator', { backgroundPrev: 'u-background-white', backgroundNext: 'u-background-50', dir: 'up' } %}
-
-<section class="u-background-50 u-layout-r-withGutter u-padding-r-top u-padding-bottom-xxl">
-  <div class="u-layout-wide u-layoutCenter u-textCenter u-padding-bottom-xxl">
-    <h2 class="u-text-r-l u-textWeight-300 u-color-white u-padding-r-bottom">Strumenti</h2>
-    <p class="u-text-r-xs u-color-5">{{ __SHORT_TEXTS__[0] }}</p>
-    <div class="Grid Grid--withGutter u-layout-prose u-layoutCenter u-padding-top-xl u-color-white">
-      {% for i in [1, 2, 3] %}
-      <span class="Grid-cell u-md-size3of12 u-lg-size3of12 u-margin-r-bottom u-margin-r-top">
-        <span class="Icon Icon-twitter u-text-r-xl"></span>
-      </span>
-      <div class="Grid-cell u-md-size9of12 u-lg-size9of12 u-margin-r-bottom u-margin-r-top">
-        <h3 class="u-text-r-m u-textWeight-600 u-textLeft u-padding-bottom-xs">{{ __WORDS__[1] | capitalize }}</h3>
-        <p class="u-textLeft">{{ __TEXTS__[1] }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+</div>
+</div>
 
 <div class="u-background-95">
   <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter u-hiddenPrint">
-    {% render '@footer' %}
+    {% render '@footer--simple', { site: { owner_logo: 'https://www.spid.gov.it/assets/img/agid-logo-bb.svg' } } %}
   </div>
 </div>
 

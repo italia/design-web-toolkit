@@ -1,7 +1,7 @@
 /** @define utilities; */
 
 :root {
-  --Layout-container-wide: 138rem;
+  --Layout-container-wide: 144rem;
   --Layout-container-wider: 168rem;
   --Layout-container-medium: 128rem;
   --Layout-container-small: 96rem;
@@ -34,8 +34,8 @@
 @media (--lg-viewport) {
 
   .u-layout-lg-withGutter {
-    padding-left: calc(3 * var(--Layout-gutter)) !important;
-    padding-right: calc(3 * var(--Layout-gutter)) !important;
+    padding-left: calc(13 * var(--Layout-gutter)) !important;
+    padding-right: calc(13 * var(--Layout-gutter)) !important;
   }
 }
 
