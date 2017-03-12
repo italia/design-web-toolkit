@@ -40,11 +40,12 @@ $('[data-menu-trigger]').each((i, el) => {
                 element: '.Dropdown-arrow'
               },
               flip: {
-                  behavior: ['left', 'right']
+                  behavior: ['left', 'right'],
+                  boundariesElement: 'scrollParent'
               },
-              preventOverflow: {
-                  boundariesElement: 'viewport'
-              },
+              // preventOverflow: {
+              //     boundariesElement: 'viewport'
+              // },
           },
     })
   }
