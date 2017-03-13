@@ -12,6 +12,10 @@ plugins.push(new UglifyJsPlugin({
   minimize: true
 }))
 
+plugins.push(
+  new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /it/)
+)
+
 loaders.push({
   test: /\.png/,
   loader: 'url-loader?limit=100000&minetype=image/png'
@@ -38,6 +42,7 @@ var config = {
     loaders: [...loaders, {
       test: /(\.jsx|\.js)$/,
       loader: 'babel-loader',
+      exclude: /(pikaday)/,
       // exclude: /(node_modules|bower_components)/
     }, {
       test: /(\.jsx|\.js)$/,
