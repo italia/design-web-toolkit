@@ -4,25 +4,25 @@
         {
             "name": "default",
             "context": {
-              "modifier": "Card--withBorder"
+              "modifier": "u-border-all-xxs"
             }
         },
         {
             "name": "shadow",
             "context": {
-              "modifier": "Card--shadow"
+              "modifier": "u-borderShadow-xxs"
             }
         },
         {
             "name": "round",
             "context": {
-              "modifier": "Card--withBorder Card--round"
+              "modifier": "u-border-all-xxs u-borderRadius-m"
             }
         },
         {
             "name": "all",
             "context": {
-              "modifier": "Card--shadow Card--round"
+              "modifier": "u-borderShadow-xxs u-borderRadius-m"
             }
         }
     ]
