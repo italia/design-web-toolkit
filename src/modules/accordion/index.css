@@ -3,51 +3,55 @@
 /** @define Accordion */
 
 :root {
-  --Accordion-border-color: #d8d8d8;
-  --Accordion-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
-  --Accordion-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
+  --Accordion-border-color: var(--Color-grey-30);
+  --Accordion-link-arrow-up: svg-load("icons/ita/img/SVG/collapse.svg", fill=var(--Color-50));
+  --Accordion-link-arrow-down: svg-load("icons/ita/img/SVG/expand.svg", fill=var(--Color-50));
   --Accordion-link-padding: 0.5em;
-  --Accordion-link-arrow-width: 0.8em;
-}
-
-.Accordion {
-  @extend .u-color-grey-30;
-  @extend .u-border-top-xxs;
-  @extend .u-border-bottom-xxs;
+  --Accordion-link-arrow-width: 1em;
 }
 
 .Accordion-panel {
-  transition: height 250ms ease-out, visibility 250ms;
+  transition: height 150ms linear, visibility 150ms;
 }
 
 .Accordion-header {
-  @extend .u-color-grey-30;
-  @extend .u-border-top-xxs;
   @extend .u-block;
-  @extend .u-text-r-m;
-  @extend .u-textWeight-400;
   @extend .u-nbfc;
 }
 
-.Accordion-header:hover {
+.Accordion--default .Accordion-header {
+  @extend .u-color-grey-30;
+  @extend .u-border-top-xxs;
+  @extend .u-text-r-xs;
+  @extend .u-padding-r-bottom;
+  @extend .u-padding-r-top;
+}
+
+.Accordion--default .Accordion-header:first-child {
+  @extend .u-border-top-none;
+}
+
+.Accordion--default .Accordion-header:hover {
   @extend .u-background-5;
 }
 
 .Accordion-link {
   @extend .u-block;
-  @extend .u-textClean;
-  @extend .u-padding-all-s;
 }
 
-.Accordion-link {
+.Accordion--default .Accordion-link {
+  @extend .u-textClean;
+  @extend .u-padding-all-s;
+  @extend .u-text-r-m;
   @extend .u-color-50;
+  @extend .u-textWeight-600;
 }
 
 .Accordion-link--leaf {
   @extend .u-padding-left-xl;
 }
 
-.Accordion-header {
+.Accordion--default .Accordion-header {
   background-image: var(--Accordion-link-arrow-down);
   background-position: left var(--Accordion-link-padding) center;
   background-repeat: no-repeat;
@@ -58,6 +62,6 @@
     );
 }
 
-.Accordion-header[aria-expanded="true"] {
+.Accordion--default .Accordion-header[aria-expanded="true"] {
   background-image: var(--Accordion-link-arrow-up);
 }

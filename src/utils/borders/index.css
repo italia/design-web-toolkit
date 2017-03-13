@@ -30,6 +30,12 @@
 .u-border-left-l { border-left: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
 .u-border-all-l { border: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
 
+.u-border-top-none { border-top: none !important; }
+.u-border-right-none { border-right: none !important; }
+.u-border-bottom-none { border-bottom: none !important; }
+.u-border-left-none { border-left: none !important; }
+.u-border-all-none { border: none !important; }
+
 /*
  *	Border for responsive cell
  *	see http://codepen.io/Hawkun/pen/rsIEp
