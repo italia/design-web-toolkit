@@ -1,13 +1,19 @@
-### 0.3.0-alpha
+### 1.0.0-alpha
+
+* BREAKING CHANGE: Modificato modulo Accordion
+* BREAKING CHANGE: Modificato modulo Dropdown
+* BREAKING CHANGE: Modificato modulo Header
+* BREAKING CHANGE: Modificato modulo Megamenu
+
+* BREAKING CHANGE: rimosso il modulo CSS 'Card'
+  - rifattorizzato tramite template HTML (senza CSS)
 
 * Modificato il CSS dell'header per permettere di impostare i colori tramite variabili
 
-* Modificato il template dell'header:
-  - semplificato il selettore dei linguaggi
-  - rivista griglia per allineare i componenti
+* Aggiunto modulo 'Separator'
+* Aggiunto modulo 'Pills'
 
-* Aggiunto un template con campo di input e icona associata
-* Aggiunto un componente "separatore" per le regioni del layout
+* Aggiunto un template con campo di input con icona associata
 
 * Aggiornato ambiente di build a webpack v2 + code splitting
 * Eliminato vendor.css (confluito in build.css)
