@@ -9,10 +9,16 @@ var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 var plugins = []
 var loaders = []
 
-plugins.push(new UglifyJsPlugin({
-  minimize: true,
-  sourceMap: true
-}))
+if (process.env.WEBPACK_ENV !== 'dev') {
+  plugins.push(new UglifyJsPlugin({
+    minimize: true,
+    sourceMap: true
+  }))
+}
+
+plugins.push(
+  new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /it/)
+)
 
 loaders.push({
   test: /\.png/,
@@ -58,6 +64,7 @@ var config = {
     rules: [...loaders, {
       test: /(\.jsx|\.js)$/,
       loader: 'babel-loader',
+      exclude: /(pikaday)/,
       // exclude: /(node_modules|bower_components)/
     }, {
       test: /(\.jsx|\.js)$/,

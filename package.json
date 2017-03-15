@@ -11,6 +11,7 @@
     "headroom.js": "^0.9.3",
     "jquery.cookie": "^1.4.1",
     "owl.carousel": "^2.1.4",
+    "pikaday": "git@github.com:dbushell/Pikaday.git#e2defb22cd78da263dace78445eb01af76ff0258",
     "popper.js": "^1.0.7",
     "salvattore": "^1.0.9",
     "suitcss": "^2.0.0",
