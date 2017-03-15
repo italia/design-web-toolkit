@@ -13,10 +13,6 @@ $.fn['menu'] = function() {
   })
 }
 
-$(document).bind('enhance', function(e) {
-  $('[data-menu]', e.target)['menu']()
-})
-
 $.fn['menu-trigger'] = function() {
   return this.each(function() {
     new Menutrigger(this).init()
@@ -24,6 +20,7 @@ $.fn['menu-trigger'] = function() {
 }
 
 $(document).bind('enhance', function(e) {
+  $('[data-menu]', e.target)['menu']()
   $('[data-menu-trigger]', e.target)['menu-trigger']()
 })
 
