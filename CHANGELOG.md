@@ -4,9 +4,15 @@
 * BREAKING CHANGE: Modificato modulo Dropdown
 * BREAKING CHANGE: Modificato modulo Header
 * BREAKING CHANGE: Modificato modulo Megamenu
+* BREAKING CHANGE: Modificato modulo Tooltip
 
 * BREAKING CHANGE: rimosso il modulo CSS 'Card'
   - rifattorizzato tramite template HTML (senza CSS)
+
+* Rivista struttura directory con template HTML:
+  - elements: elementi che hanno una corrispondenza 1-a-1 con tag HTML
+  - components: componenti autonomi dell'interfaccia
+  - modules: componenti che dipendono da altri componenti
 
 * Modificato il CSS dell'header per permettere di impostare i colori tramite variabili
 

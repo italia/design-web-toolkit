@@ -8,11 +8,9 @@
 
 @import "src/icons/ita";
 
+@import "src/elements/**/index.css";
 @import "src/components/**/index.css";
-
 @import "src/modules/**/index.css";
-
-@import "src/extra/**/index.css";
 
 @import "src/print";
 

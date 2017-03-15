@@ -6,14 +6,9 @@
 
 @import "../src/utils/**/index.css";
 
-@import "../src/components/prose";
-
-@import "../src/modules/accordion";
-@import "../src/modules/hamburger";
-@import "../src/modules/header";
-@import "../src/modules/linklist";
-@import "../src/modules/skiplinks";
-@import "../src/modules/treeview";
+@import "src/elements/**/index.css";
+@import "src/components/**/index.css";
+@import "src/modules/**/index.css";
 
 /*
  * WebFontLoaded: _import "src/fonts/titillium"
