@@ -33,6 +33,12 @@ h4 {
   line-height: 1.55;
 }
 
+
+.Header-title {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .Frame-inner {
   min-width: 314px;
 }
@@ -120,13 +126,6 @@ h4 {
   width: auto;
 }
 
-@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
-
-  .t-Pac .Header-button {
-    margin-top: -0.5rem;
-  }
-}
-
 .t-Pac .Header-button:focus {
   box-shadow: inset 0 0 0 3px #ff8c00 !important;
   outline: none;
@@ -144,11 +143,35 @@ h4 {
   padding-top: 0 !important;
 }
 
+@media screen and (min-width: 1366px) {
+  .Header-navbar.Header-navbar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.Header-toggle.Header-toggle {
+  text-align: left !important;
+}
+
+@media screen and (max-width: 767px) {
+  .t-Pac .Header-logo img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .Header-navToggle {
+    margin-left: 2em;
+  }
+}
+
 @media screen and (max-width: 991px) and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
 
   .t-Pac .Header-logo img {
-    height: 5.5rem;
-    width: 5.5rem;
+    height: 5rem;
+    width: 5rem;
   }
 }
 

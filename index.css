@@ -6,7 +6,7 @@
 
 @import "src/utils/**/index.css";
 
-@import "src/icons/ita";
+@import "src/icons/**/index.css";
 
 @import "src/elements/**/index.css";
 @import "src/components/**/index.css";

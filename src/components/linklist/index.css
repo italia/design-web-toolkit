@@ -2,8 +2,8 @@
 
 :root {
   --Linklist-border-color: #d8d8d8;
-  --Linklist-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
-  --Linklist-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
+  --Linklist-link-arrow-up: inline("icons/img/SVG/collapse.svg");
+  --Linklist-link-arrow-down: inline("icons/img/SVG/expand.svg");
   --Linklist-link-padding: 0.5em;
   --Linklist-link-arrow-width: 0.8em;
 }

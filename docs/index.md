@@ -4,7 +4,7 @@ title: Web Toolkit
 label: Introduzione
 ---
 
-## Implementazione di riferimento delle<br>"Linee guida di design per i servizi web della PA"
+## <span class="u-text-h5">Implementazione di riferimento delle<br>"Linee guida di design per i servizi web della PA"</span>
 
 <img src="/ita-web-toolkit/theme/docs/hero-img.svg" width="100%" alt="design.italia.it" />
 
