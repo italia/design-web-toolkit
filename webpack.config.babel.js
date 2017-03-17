@@ -4,6 +4,7 @@ var libraryName = 'IWT'
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+var publicPath = process.env.WEBPACK_PUBLIC_PATH || 'assets/toolkit/';
 // var env = process.env.WEBPACK_ENV
 
 var plugins = []
@@ -47,7 +48,7 @@ var config = {
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true,
-    publicPath: '/build/',
+    publicPath: publicPath,
     chunkFilename: '[name].chunk.js'
   },
   externals: {
