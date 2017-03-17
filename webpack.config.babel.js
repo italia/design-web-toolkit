@@ -10,10 +10,12 @@ var publicPath = process.env.WEBPACK_PUBLIC_PATH || 'assets/toolkit/';
 var plugins = []
 var loaders = []
 
-plugins.push(new UglifyJsPlugin({
-  minimize: true,
-  sourceMap: true
-}))
+if ('dev' !== process.env.WEBPACK_ENV) {
+  plugins.push(new UglifyJsPlugin({
+    minimize: true,
+    sourceMap: true
+  }))
+}
 
 loaders.push({
   test: /\.png/,

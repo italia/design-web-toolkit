@@ -1,30 +1,29 @@
 ### 1.0.0-alpha
 
-* BREAKING CHANGE: Modificato modulo Accordion
-* BREAKING CHANGE: Modificato modulo Dropdown
-* BREAKING CHANGE: Modificato modulo Header
-* BREAKING CHANGE: Modificato modulo Megamenu
-* BREAKING CHANGE: Modificato modulo Tooltip
+* BREAKING CHANGE: Modificato componente Accordion
+* BREAKING CHANGE: Modificato componente Dropdown
+* BREAKING CHANGE: Modificato componente Megamenu
+* BREAKING CHANGE: Modificato componente Tooltip
 
-* BREAKING CHANGE: rimosso il modulo CSS 'Card'
-  - rifattorizzato tramite template HTML (senza CSS)
+* BREAKING CHANGE: Modifcato componente Card
+  - spostato tra i template HTML (rimosso il CSS)
+
+* BREAKING CHANGE: Modificato modulo Header
+
+* Aggiunto componente 'Separator'
+* Aggiunto componente 'Pills'
 
 * Rivista struttura directory con template HTML:
-  - elements: elementi che hanno una corrispondenza 1-a-1 con tag HTML
   - components: componenti autonomi dell'interfaccia
   - modules: componenti che dipendono da altri componenti
 
-* Modificato il CSS dell'header per permettere di impostare i colori tramite variabili
-
-* Aggiunto modulo 'Separator'
-* Aggiunto modulo 'Pills'
-
-* Aggiunto un template con campo di input con icona associata
+* Modificato il CSS del modulo Header per permettere di impostare i colori tramite variabili
+* Modificato il CSS del componente Treeview (palette dei colori e icona)
 
 * Aggiornato ambiente di build a webpack v2 + code splitting
 * Eliminato vendor.css (confluito in build.css)
 
-* Fix versionamento semantico
+* Aggiornato a versionamento semantico (1.0.0)
 
 ### 0.2.0-alpha12
 
@@ -77,7 +76,7 @@
 
 ### 0.1.0-alpha3
 
-* Aggiunto template di esempio con menu per Comuni (modulo 'hero')
+* Aggiunto template di esempio con menu per Comuni (componente 'hero')
 * Modificato header (posizione tasti per scelta della lingua e dropdown)
 * Modificato menu orizzontale (posizione link di accesso ai servizi)
 

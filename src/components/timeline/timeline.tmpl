@@ -1,0 +1,20 @@
+<div class="u-padding-all-xxl u-background-grey-15 u-sizeFull">
+  {% for i in [1, 2, 3] %}
+  <div class="Timeline u-layout-prose u-layoutCenter">
+    <div class="Timeline-point">
+      <div class="Timeline-point-content u-background-95 u-color-white">
+        <div class="u-textWeight-700">{{ __WORD__[i] }}</div>
+      </div>
+    </div>
+    <div class="Timeline-content u-color-black">
+      <div class="Timeline-arrow Icon-drop-down u-color-white"></div>
+      <div class="u-borderShadow-xs u-padding-r-all u-background-white u-borderRadius-xs">
+        <h2 class="u-text-r-xs u-padding-r-bottom">{{ __WORDS__[i] }}</h2>
+        <p class="u-text-p u-textSecondary">
+          {{ __TEXTS__[i] }}
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
