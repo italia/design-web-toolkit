@@ -17,9 +17,11 @@
       <a href="" tabindex="-1" class="Header-logo u-margin-r-right">
         <img src="/ita-web-toolkit/theme/docs/logo-it.svg" alt="">
       </a>
-      <h1 class="Header-titleLink u-text-h1">
-        <a href="{{ path('/') }}" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
-      </h1>
+      <div class="u-margin-r-left">
+        <h1 class="Header-titleLink u-text-h1">
+          <a href="{{ path('/') }}" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
+        </h1>
+      </div>
     </div>
   </div>
   <!-- Header-navbar -->

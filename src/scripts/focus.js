@@ -10,4 +10,4 @@ $(document).on('keydown', (e) => {
 })
 
 $(document).on('click', () => $('body').addClass(NOFOCUS_CLASSNAME))
-$(document).addClass(NOFOCUS_CLASSNAME)
+$('body').addClass(NOFOCUS_CLASSNAME)
