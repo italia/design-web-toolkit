@@ -9,10 +9,12 @@ var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 var plugins = []
 var loaders = []
 
-plugins.push(new UglifyJsPlugin({
-  minimize: true,
-  sourceMap: true
-}))
+if ('dev' !== process.env.WEBPACK_ENV) {
+  plugins.push(new UglifyJsPlugin({
+    minimize: true,
+    sourceMap: true
+  }))
+}
 
 loaders.push({
   test: /\.png/,

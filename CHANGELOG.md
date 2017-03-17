@@ -6,11 +6,10 @@
 * BREAKING CHANGE: Modificato modulo Megamenu
 * BREAKING CHANGE: Modificato modulo Tooltip
 
-* BREAKING CHANGE: rimosso il modulo CSS 'Card'
-  - rifattorizzato tramite template HTML (senza CSS)
+* BREAKING CHANGE: rimosso il CSS dal modulo 'Card'
+  - rifattorizzato tramite template HTML e classi di utilità
 
 * Rivista struttura directory con template HTML:
-  - elements: elementi che hanno una corrispondenza 1-a-1 con tag HTML
   - components: componenti autonomi dell'interfaccia
   - modules: componenti che dipendono da altri componenti
 
@@ -18,8 +17,6 @@
 
 * Aggiunto modulo 'Separator'
 * Aggiunto modulo 'Pills'
-
-* Aggiunto un template con campo di input con icona associata
 
 * Aggiornato ambiente di build a webpack v2 + code splitting
 * Eliminato vendor.css (confluito in build.css)
