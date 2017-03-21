@@ -1,5 +1,11 @@
 const Config = require('./config')
 
+/* eslint-disable */
+if (window.__PUBLIC_PATH__) {
+  __webpack_public_path__ = window.__PUBLIC_PATH__
+}
+/* eslint-enable */
+
 function _findIndex(ar, predicate) {
   for (let index = 0; index < ar.length; index++) {
     if (predicate(ar[index])) {

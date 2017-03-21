@@ -16,11 +16,7 @@ Il **codice CSS** va collocato in un file:
 
   `src/modules/<nome-modulo>/index.css`
 
-dopodiché va inserita la riga
-
-  `@import 'src/modules/<nome-modulo>';`
-
-nell'`index.css` contenuto nella directory radice del toolkit.
+e verrà automaticamente incluso nella build.
 
 Il **codice Javascript** va collocato in un file
 

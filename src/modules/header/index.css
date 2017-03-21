@@ -281,9 +281,17 @@
   @extend .u-zindex-max;
   @extend .u-borderRadius-m;
   @extend .u-borderShadow-l;
-  @extend .u-padding-r-all;
+  @extend .u-margin-top-s;
 
   background-color: var(--Header-language-other-bg);
+}
+
+.Header-language-other a {
+  @extend .u-inlineBlock;
+  @extend .u-sizeFull;
+  @extend .u-padding-all-s;
+  @extend .u-color-50;
+  @extend .u-textClean;
 }
 
 /* Social icons / link

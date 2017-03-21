@@ -26,6 +26,7 @@ const CONFIG = {}
  *
  */
 CONFIG.includes = [
+  '(.*)scripts(.*)',
   '(.*)theme(.*)',
   '(.*)utils(.*)',
   '(.*)offcanvas(.*)',

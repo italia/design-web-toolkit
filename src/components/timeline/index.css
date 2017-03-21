@@ -1,0 +1,56 @@
+/* @define Timeline */
+
+:root {
+  --Timeline-padding: 3rem;
+  --Timeline-arrow-size: 1rem;
+  --Timeline-point-size: 10rem;
+}
+
+.Timeline {
+  @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
+  @extend .u-color-grey-30;
+  @extend .u-border-left-xs;
+
+  margin-left: var(--Timeline-padding);
+  margin-right: -var(--Timeline-padding);
+}
+
+.Timeline-point {
+  @extend .u-padding-r-top;
+  @extend .u-padding-r-bottom;
+
+  margin-right: -var(--Timeline-padding);
+}
+
+.Timeline-point-content {
+  @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
+  @extend .u-flexJustifyCenter;
+  @extend .u-borderRadius-circle;
+  @extend .u-borderShadow-m;
+  @extend .u-border-all-xs;
+  @extend .u-padding-r-all;
+
+  height: var(--Timeline-point-size);
+  transform: translateX(-50%);
+  width: var(--Timeline-point-size);
+}
+
+.Timeline-content {
+  @extend .u-padding-r-all;
+  @extend .u-posRelative;
+}
+
+.Timeline-arrow {
+  display: block;
+  font-size: calc(var(--Timeline-arrow-size) * 2);
+  height: calc(var(--Timeline-arrow-size) * 3);
+  left: 0;
+  margin-left: -var(--Timeline-arrow-size);
+  position: absolute;
+  text-shadow: 0 -4px 4px #e5e5e5;
+  top: 50%;
+  transform: rotate(-90deg) translateY(50%) translateX(50%);
+  width: calc(var(--Timeline-arrow-size) * 3);
+}

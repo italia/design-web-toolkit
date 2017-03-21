@@ -9,7 +9,7 @@ var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 var plugins = []
 var loaders = []
 
-if (process.env.WEBPACK_ENV !== 'dev') {
+if ('dev' !== process.env.WEBPACK_ENV) {
   plugins.push(new UglifyJsPlugin({
     minimize: true,
     sourceMap: true
@@ -19,6 +19,8 @@ if (process.env.WEBPACK_ENV !== 'dev') {
 plugins.push(
   new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /it/)
 )
+=======
+>>>>>>> v2.2
 
 loaders.push({
   test: /\.png/,
@@ -53,7 +55,7 @@ var config = {
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true,
-    publicPath: '/build/',
+    publicPath: process.env.PUBLIC_PATH || '',
     chunkFilename: '[name].chunk.js'
   },
   externals: {

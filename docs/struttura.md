@@ -6,11 +6,11 @@ label: Struttura del file system
 
 La directory `src` contiene le sotto-directory:
 
-- **components** - componenti base (CSS/HTML) quali form, bottoni, griglia responsive, tipografia, ...
+- **components** - CSS/Javascript/HTML dei componenti autonomi dell'interfaccia
+- **modules** - CSS/Javascript/HTML degli elementi complessi dell'interfaccia
 - **fonts** - il font Titillium Web e le direttive CSS @font-face relative
 - **icons** - le icone svg / png utilizzate nel progetto e il CSS per l'*icon font*
 - **legacy** - CSS per supportare i vecchi browser
-- **modules** - CSS/Javascript per i vari elementi dell'interfaccia (es. accordion, carousel, ...)
 - **scripts** - Javscript "globali" (non legati a una particolare componente dell'interfaccia)
 - **templates** - template HTML per elementi del layout e pagine web
 - **themes** - il foglio di stile con le personalizzazioni per uno specifico tema (es. colore principale dal quale viene declinata l'intera *palette*)
@@ -22,10 +22,6 @@ La directory `src` contiene le sotto-directory:
 ├── docs
 └── src
     ├── components
-    │   ├── button
-    │   ├── form
-    │   ├── grid
-    │   ├── heading
     │   └── ...
     ├── fonts
     │   └── titillium
@@ -37,7 +33,6 @@ La directory `src` contiene le sotto-directory:
     │       └── svg
     ├── legacy
     ├── modules
-    │   ├── accordion
     │   └── ...
     ├── scripts
     ├── templates

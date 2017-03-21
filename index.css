@@ -6,7 +6,7 @@
 
 @import "src/utils/**/index.css";
 
-@import "src/icons/ita";
+@import "src/icons/**/index.css";
 
 @import "src/elements/**/index.css";
 @import "src/components/**/index.css";
@@ -86,10 +86,13 @@ body {
 }
 
 :focus {
-  outline: 3px solid var(--it-Base-focus-color);
+  box-shadow: 0 0 0 3px var(--Border-focus-color) inset !important;
+
+  /*  outline: 3px solid var(--it-Base-focus-color); */
 }
 
 .c-hideFocus :focus {
+  box-shadow: none !important;
   outline: none !important;
 }
 

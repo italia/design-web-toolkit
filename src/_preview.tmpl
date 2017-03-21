@@ -32,7 +32,7 @@
     })();
   </script>
 
-  <!-- include html5shim per Explorer 8 -->
+  <!-- include HTML5shim per Explorer 8 -->
   <script src="{{ '/build/vendor/modernizr.js' | path }}"></script>
 
   <link media="all" rel="stylesheet" href="{{ '/build/build.css' | path }}">
@@ -56,6 +56,10 @@
   <!--[if lte IE 9]>
   <script src="{{ '/build/vendor/polyfill.min.js' | path }}"></script>
   <![endif]-->
+
+  <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+    è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
+  <script>__PUBLIC_PATH__ = '{{ '/build/' | path }}'</script>
 
   <script src="{{ '/build/IWT.min.js' | path }}"></script>
 

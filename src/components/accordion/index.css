@@ -4,8 +4,8 @@
 
 :root {
   --Accordion-border-color: var(--Color-grey-30);
-  --Accordion-link-arrow-up: svg-load("icons/ita/img/SVG/collapse.svg", fill=var(--Color-50));
-  --Accordion-link-arrow-down: svg-load("icons/ita/img/SVG/expand.svg", fill=var(--Color-50));
+  --Accordion-link-arrow-up: svg-load("icons/img/SVG/collapse.svg", fill=var(--Color-50));
+  --Accordion-link-arrow-down: svg-load("icons/img/SVG/expand.svg", fill=var(--Color-50));
   --Accordion-link-padding: 0.5em;
   --Accordion-link-arrow-width: 1em;
 }
