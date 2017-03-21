@@ -1,17 +1,17 @@
 ### 1.0.0-alpha
 
-* BREAKING CHANGE: Modificato componente Accordion
-* BREAKING CHANGE: Modificato componente Dropdown
+* BREAKING CHANGE: Modificato modulo Header
 * BREAKING CHANGE: Modificato componente Megamenu
+* BREAKING CHANGE: Modificato componente Dropdown
 * BREAKING CHANGE: Modificato componente Tooltip
+* BREAKING CHANGE: Modificato componente Accordion
 
 * BREAKING CHANGE: Modifcato componente Card
   - spostato tra i template HTML (rimosso il CSS)
 
-* BREAKING CHANGE: Modificato modulo Header
-
-* Aggiunto componente 'Separator'
-* Aggiunto componente 'Pills'
+* Aggiunto componente Timeline
+* Aggiunto componente Separator
+* Aggiunto componente Pills
 
 * Rivista struttura directory con template HTML:
   - components: componenti autonomi dell'interfaccia

@@ -49,7 +49,7 @@ var config = {
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true,
-    publicPath: '/build/',
+    publicPath: process.env.PUBLIC_PATH || '/build/',
     chunkFilename: '[name].chunk.js'
   },
   externals: {
