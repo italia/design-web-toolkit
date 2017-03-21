@@ -19,8 +19,6 @@ if ('dev' !== process.env.WEBPACK_ENV) {
 plugins.push(
   new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /it/)
 )
-=======
->>>>>>> v2.2
 
 loaders.push({
   test: /\.png/,

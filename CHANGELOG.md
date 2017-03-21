@@ -16,6 +16,7 @@
     una variabile (__PUBLIC_PATH__) per impostare il percorso degli assets javascript
     da caricare a runtime (di default è la directory '/build' relativa alla root del sito)
 
+* Aggiunto componente Datepicker
 * Aggiunto componente Timeline
 * Aggiunto componente Separator
 * Aggiunto componente Pills

@@ -265,15 +265,6 @@ option:hover {
 }
 
 /*
-*	Custom components: date field
-*	===================================
-*/
-
-.Form-field--date .Form-input {
-  appearance: textfield;
-}
-
-/*
 *	Custom components: fieldset
 *	===================================
 */
