@@ -33,10 +33,9 @@ h4 {
   line-height: 1.55;
 }
 
-
 .Header-title {
-  padding-top: 0 !important;
   padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 .Frame-inner {
@@ -144,6 +143,7 @@ h4 {
 }
 
 @media screen and (min-width: 1366px) {
+
   .Header-navbar.Header-navbar {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -155,6 +155,7 @@ h4 {
 }
 
 @media screen and (max-width: 767px) {
+
   .t-Pac .Header-logo img {
     height: 3.5rem;
     width: 3.5rem;
@@ -162,6 +163,7 @@ h4 {
 }
 
 @media screen and (min-width: 767px) {
+
   .Header-navToggle {
     margin-left: 2em;
   }

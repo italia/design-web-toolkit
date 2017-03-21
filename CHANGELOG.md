@@ -6,23 +6,31 @@
 * BREAKING CHANGE: Modificato componente Tooltip
 * BREAKING CHANGE: Modificato componente Accordion
 
-* BREAKING CHANGE: Modifcato componente Card
+* BREAKING CHANGE: Modificato componente Card
   - spostato tra i template HTML (rimosso il CSS)
+
+* BREAKING CHANGE: Aggiornato ambiente di build a webpack v2
+  - il codice degli elementi Javascript opzionali è ora importato a runtime
+    solo nelle pagine dove viene effettivamente utilizzato (es. carousel)
+  - è stata introdotta, nel file \_preview.tmpl (l'index.htm di esempio),
+    una variabile (__PUBLIC_PATH__) per impostare il percorso degli assets javascript
+    da caricare a runtime (di default è la directory '/build' relativa alla root del sito)
 
 * Aggiunto componente Timeline
 * Aggiunto componente Separator
 * Aggiunto componente Pills
 
-* Rivista struttura directory con template HTML:
-  - components: componenti autonomi dell'interfaccia
-  - modules: componenti che dipendono da altri componenti
+* Rivista la struttura del filesystem della styleguide:
+  - 'components': componenti autonomi dell'interfaccia
+  - 'modules': componenti che dipendono da altri componenti
 
+* Modificato il CSS del modulo Footer in modo da permettere la scelta del colore di sfondo
 * Modificato il CSS del modulo Header per permettere di impostare i colori tramite variabili
 * Modificato il CSS del componente Treeview (palette dei colori e icona)
 
-* Aggiornato ambiente di build a webpack v2 + code splitting
-* Eliminato vendor.css (confluito in build.css)
+* Eliminato vendor.css (il codice è confluito in build.css)
 
+* Modificato il tema della styleguide
 * Aggiornato a versionamento semantico (1.0.0)
 
 ### 0.2.0-alpha12
