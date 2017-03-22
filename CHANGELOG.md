@@ -11,9 +11,9 @@
 
 * BREAKING CHANGE: Aggiornato ambiente di build a webpack v2
   - il codice degli elementi Javascript opzionali è ora importato a runtime
-    solo nelle pagine dove viene effettivamente utilizzato (es. carousel)
+    solo nelle pagine dove viene effettivamente utilizzato (es. carousel, datepicker)
   - è stata introdotta, nel file \_preview.tmpl (l'index.htm di esempio),
-    una variabile (__PUBLIC_PATH__) per impostare il percorso degli assets javascript
+    una variabile (__PUBLIC_PATH__) per impostare il percorso degli assets Javascript
     da caricare a runtime (di default è la directory '/build' relativa alla root del sito)
 
 * Aggiunto componente Datepicker

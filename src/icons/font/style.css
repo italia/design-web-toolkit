@@ -38,6 +38,22 @@
   transform: rotate(-90deg);
 }
 
+.Icon-linkedin::before {
+  content: "\4c";
+}
+
+.Icon-medium::before {
+  content: "\4d";
+}
+
+.Icon-github::before {
+  content: "\67";
+}
+
+.Icon-youtube::before {
+  content: "\59";
+}
+
 .Icon-instagram::before {
   content: "\49";
 }
@@ -86,8 +102,8 @@
   content: "\1f4c3";
 }
 
-.Icon-youtube::before {
-  content: "\59";
+.Icon-youtube-text::before {
+  content: "\79";
 }
 
 .Icon-comment::before {
