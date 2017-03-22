@@ -284,7 +284,7 @@ limitations under the License.
             event.preventDefault()
             event.stopPropagation()
             this.justFocused = false
-          } else if (isTouch) {
+          } else if (isTouch || this.mouseFocused) {
             event.preventDefault()
             event.stopPropagation()
             _togglePanel.call(this, event, target.hasClass(this.settings.openClass))
