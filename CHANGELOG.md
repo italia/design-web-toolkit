@@ -9,6 +9,9 @@
 * BREAKING CHANGE: Modificato componente Card
   - spostato tra i template HTML (rimosso il CSS)
 
+* BREAKING CHANGE: Modificato componente Table--responsive
+  - aggiunto Javascript tablesaw (https://github.com/filamentgroup/tablesaw)
+
 * BREAKING CHANGE: Aggiornato ambiente di build a webpack v2
   - il codice degli elementi Javascript opzionali è ora importato a runtime
     solo nelle pagine dove viene effettivamente utilizzato (es. carousel, datepicker)

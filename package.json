@@ -1,6 +1,6 @@
 {
   "name": "ita-web-toolkit",
-  "version": "0.3.0-alpha",
+  "version": "1.0.0-alpha",
   "description": "Implementazione di riferimento per le linee guida di design della PA",
   "main": "index.js",
   "dependencies": {
@@ -11,7 +11,7 @@
     "headroom.js": "^0.9.3",
     "jquery.cookie": "^1.4.1",
     "owl.carousel": "^2.1.4",
-    "pikaday": "git@github.com:dbushell/Pikaday.git#e2defb22cd78da263dace78445eb01af76ff0258",
+    "pikaday": "https://registry.npmjs.org/pikaday/-/pikaday-1.5.1.tgz",
     "popper.js": "^1.0.7",
     "salvattore": "^1.0.9",
     "suitcss": "^2.0.0",
@@ -19,6 +19,7 @@
     "suitcss-components": "^1.0.1",
     "suitcss-components-form": "^1.0.0",
     "suitcss-utils": "^2.0.0",
+    "tablesaw": "^3.0.0",
     "throttle-debounce": "^1.0.1"
   },
   "devDependencies": {

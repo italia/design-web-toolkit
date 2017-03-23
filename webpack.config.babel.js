@@ -2,7 +2,6 @@ var webpack = require('webpack')
 var path = require('path')
 var libraryName = 'IWT'
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 // var env = process.env.WEBPACK_ENV
 
@@ -27,15 +26,25 @@ loaders.push({
 
 loaders.push({
   test: /\.css$/,
-  use: ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    use: 'css-loader'
-  })
+  use: [
+    { loader: 'style-loader' },
+    { loader: 'css-loader' },
+  ]
 })
 
-plugins.push(new ExtractTextPlugin({
-  filename: 'vendor.css'
-}))
+// var ExtractTextPlugin = require('extract-text-webpack-plugin')
+//
+// loaders.push({
+//   test: /\.css$/,
+//   use: ExtractTextPlugin.extract({
+//     fallback: 'style-loader',
+//     use: 'css-loader'
+//   })
+// })
+//
+// plugins.push(new ExtractTextPlugin({
+//   filename: 'vendor.css'
+// }))
 
 plugins.push(new webpack.LoaderOptionsPlugin({
   debug: true
