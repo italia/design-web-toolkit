@@ -25,7 +25,7 @@
     </div>
 
     <div style="position: absolute; right: 1em"
-      class="u-hidden u-sm-inlineBlock u-md-inlineBlock u-lg-inlineBlock u-borderRadius-xs u-padding-all-xxs u-background-teal-50">
+      class="u-hidden u-sm-inlineBlock u-md-inlineBlock u-lg-inlineBlock u-borderRadius-xs u-padding-all-xxs u-background-white">
       <a class="u-inlineBlock u-margin-r-left u-margin-r-right u-linkClean u-color-95" href="//github.com/italia/ita-web-toolkit">
         <span class="u-inlineBlock u-alignMiddle u-margin-r-right">{% include 'icons/github.svg' %}</span>
         <span class="u-inlineBlock u-alignMiddle u-text-r-s">GitHub</span>
