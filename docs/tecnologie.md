@@ -41,6 +41,9 @@ integrato da un insieme di plugin *ad-hoc*; è possibile visualizzare la lista d
 nel file [`.postcss.js`](https://github.com/italia/ita-web-toolkit/blob/master/.postcss.js)
 contenuto nella directory radice del *repository*.
 
+È possibile consultare l'
+[elenco e la documentazione di tutte le classi SUIT CSS](https://github.com/suitcss/suit/blob/master/doc/api.md).
+
 ## PostCSS
 
 [PostCSS](http://postcss.org/) è un tool che permette di manipolare i CSS tramite javascript.

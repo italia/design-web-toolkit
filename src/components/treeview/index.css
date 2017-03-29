@@ -6,9 +6,8 @@
   --Treeview-link-padding: 2em;
   --Treeview-link-handler-width: 15%;
   --Treeview-link-arrow-width: 1em;
-  --Treeview-link-arrow-up: inline("icons/img/SVG/expand.svg");
-  --Treeview-link-arrow-up-alt: svg-load("icons/img/SVG/expand.svg", fill=#fff);
-  --Treeview-link-arrow-down: inline("icons/img/SVG/chevron-right.svg");
+  --Treeview-link-arrow-down: inline("icons/img/SVG/expand.svg");
+  --Treeview-link-arrow-up: inline("icons/img/SVG/collapse.svg");
 }
 
 .Treeview-handler--default::after,
@@ -63,25 +62,14 @@
  * -----------------------
  */
 
-.Treeview--default li[aria-expanded=true] a,
-.Treeview--default li[aria-expanded=true] a:hover {
-  @extend .u-color-white;
-  @extend .u-background-90;
-}
-
-.Treeview--default > li[aria-expanded="true"] > .Treeview-handler--default::after,
-.Treeview--default > li[aria-expanded="true"] > a > .Treeview-handler--standalone {
-  background-image: var(--Treeview-link-arrow-up-alt);
-}
-
 .Treeview--default li[aria-expanded=true] li a,
 .Treeview--default li[aria-expanded=true] li a:hover {
   @extend .u-color-95;
-  @extend .u-background-10;
+  @extend .u-background-grey-20;
 }
 
 .Treeview--default li[aria-expanded=true] li li a,
 .Treeview--default li[aria-expanded=true] li li a:hover {
   @extend .u-color-95;
-  @extend .u-background-5;
+  @extend .u-background-grey-30;
 }

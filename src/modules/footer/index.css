@@ -9,8 +9,6 @@
   @extend .u-color-white;
   @extend .u-padding-bottom-xxl;
   @extend .u-padding-top-xxl;
-
-  background: var(--Footer-background-color);
 }
 
 .Footer a {

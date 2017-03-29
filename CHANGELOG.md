@@ -1,28 +1,40 @@
 ### 1.0.0-alpha
 
-* BREAKING CHANGE: Modificato componente Accordion
-* BREAKING CHANGE: Modificato componente Dropdown
+* BREAKING CHANGE: Modificato modulo Header
 * BREAKING CHANGE: Modificato componente Megamenu
+* BREAKING CHANGE: Modificato componente Dropdown
 * BREAKING CHANGE: Modificato componente Tooltip
+* BREAKING CHANGE: Modificato componente Accordion
 
-* BREAKING CHANGE: Modifcato componente Card
+* BREAKING CHANGE: Modificato componente Card
   - spostato tra i template HTML (rimosso il CSS)
 
-* BREAKING CHANGE: Modificato modulo Header
+* BREAKING CHANGE: Modificato componente Table--responsive
+  - aggiunto Javascript tablesaw (https://github.com/filamentgroup/tablesaw)
 
-* Aggiunto componente 'Separator'
-* Aggiunto componente 'Pills'
+* BREAKING CHANGE: Aggiornato ambiente di build a webpack v2
+  - il codice degli elementi Javascript opzionali è ora importato a runtime
+    solo nelle pagine dove viene effettivamente utilizzato (es. carousel, datepicker)
+  - è stata introdotta, nel file \_preview.tmpl (l'index.htm di esempio),
+    una variabile (__PUBLIC_PATH__) per impostare il percorso degli assets Javascript
+    da caricare a runtime (di default è la directory '/build' relativa alla root del sito)
 
-* Rivista struttura directory con template HTML:
-  - components: componenti autonomi dell'interfaccia
-  - modules: componenti che dipendono da altri componenti
+* Aggiunto componente Datepicker
+* Aggiunto componente Timeline
+* Aggiunto componente Separator
+* Aggiunto componente Pills
 
+* Rivista la struttura del filesystem della styleguide:
+  - 'components': componenti autonomi dell'interfaccia
+  - 'modules': componenti che dipendono da altri componenti
+
+* Modificato il CSS del modulo Footer in modo da permettere la scelta del colore di sfondo
 * Modificato il CSS del modulo Header per permettere di impostare i colori tramite variabili
 * Modificato il CSS del componente Treeview (palette dei colori e icona)
 
-* Aggiornato ambiente di build a webpack v2 + code splitting
-* Eliminato vendor.css (confluito in build.css)
+* Eliminato vendor.css (il codice è confluito in build.css)
 
+* Modificato il tema della styleguide
 * Aggiornato a versionamento semantico (1.0.0)
 
 ### 0.2.0-alpha12

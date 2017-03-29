@@ -3339,6 +3339,12 @@
       "resolved": "https://registry.npmjs.org/istextorbinary/-/istextorbinary-2.1.0.tgz",
       "dev": true
     },
+    "javascript-natural-sort": {
+      "version": "0.7.1",
+      "from": "javascript-natural-sort@>=0.7.1 <0.8.0",
+      "resolved": "https://registry.npmjs.org/javascript-natural-sort/-/javascript-natural-sort-0.7.1.tgz",
+      "optional": true
+    },
     "jodid25519": {
       "version": "1.0.2",
       "from": "jodid25519@>=1.0.0 <2.0.0",
@@ -3986,6 +3992,12 @@
         }
       }
     },
+    "moment": {
+      "version": "2.18.1",
+      "from": "moment@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.18.1.tgz",
+      "optional": true
+    },
     "ms": {
       "version": "0.7.1",
       "from": "ms@0.7.1",
@@ -4507,6 +4519,11 @@
       "from": "pify@>=2.3.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz",
       "dev": true
+    },
+    "pikaday": {
+      "version": "1.5.1",
+      "from": "https://registry.npmjs.org/pikaday/-/pikaday-1.5.1.tgz",
+      "resolved": "https://registry.npmjs.org/pikaday/-/pikaday-1.5.1.tgz"
     },
     "pinkie": {
       "version": "2.0.4",
@@ -5579,6 +5596,11 @@
       "resolved": "https://registry.npmjs.org/shelljs/-/shelljs-0.7.6.tgz",
       "dev": true
     },
+    "shoestring": {
+      "version": "2.0.0",
+      "from": "shoestring@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/shoestring/-/shoestring-2.0.0.tgz"
+    },
     "shx": {
       "version": "0.2.2",
       "from": "shx@>=0.2.2 <0.3.0",
@@ -6251,6 +6273,11 @@
           "dev": true
         }
       }
+    },
+    "tablesaw": {
+      "version": "3.0.0",
+      "from": "tablesaw@latest",
+      "resolved": "https://registry.npmjs.org/tablesaw/-/tablesaw-3.0.0.tgz"
     },
     "tapable": {
       "version": "0.2.6",

@@ -159,11 +159,19 @@
   @extend .u-padding-left-xs; /* 1 */
   @extend .u-text-r-xxs;
   @extend .u-posAbsolute;
+
   @extend .Icon;
 
   bottom: 35%;
-  content: "\23f6";
   right: 0.5em;
+}
+
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=false]::after {
+  content: "\23f6";
+}
+
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after {
+  content: "\23f7";
 }
 
 .Megamenu--default .Megamenu-list > li > a[aria-expanded=true] {
