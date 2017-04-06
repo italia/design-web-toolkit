@@ -12,7 +12,8 @@
 }
 
 .Footer a {
-  color: var(--Footer-color-link);
+  @extend .u-color-40;
+  text-decoration: none;
 }
 
 .Footer-logo {

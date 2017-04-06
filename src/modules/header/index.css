@@ -9,7 +9,7 @@
 .Header-banner {
   @extend .u-cf;
   @extend .u-sizeFull;
-  @extend .u-background-90;
+  background-color: #30373d;
   @extend .u-color-60;
   @extend .u-padding-left-s;
   @media (--sm-viewport) {
@@ -247,7 +247,6 @@
   ================================================ */
 
 .Header-languages {
-  @extend .u-background-95;
   @extend .u-floatRight;
 }
 
