@@ -2,8 +2,8 @@
 
 :root {
   --Linklist-border-color: #d8d8d8;
-  --Linklist-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
-  --Linklist-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
+  --Linklist-link-arrow-up: inline("icons/ita/img/SVG/collapse-white.svg");
+  --Linklist-link-arrow-down: inline("icons/ita/img/SVG/expand-white.svg");
   --Linklist-link-padding: 0.5em;
   --Linklist-link-arrow-width: 0.8em;
 }
@@ -15,11 +15,13 @@
 
 .Linklist {
   @extend .u-color-grey-30;
+  @extend .u-background-grey-80;
 }
 
 .Linklist li {
   @extend .u-color-grey-30;
-  @extend .u-border-top-xxs;
+
+  /* @extend .u-border-top-xxs; */
   @extend .u-block;
   @extend .u-nbfc;
 }
@@ -27,7 +29,7 @@
 .Linklist-link,
 .Linklist a {
   @extend .u-block;
-  @extend .u-color-50;
+  @extend .u-color-white;
   @extend .u-textClean;
   @extend .u-padding-r-bottom;
   @extend .u-padding-r-top;
@@ -43,8 +45,12 @@
 }
 
 .Linklist a:hover {
+
+  /*
   @extend .u-background-5;
   @extend .u-color-95;
+  */
+  @extend .u-background-grey-45;
 }
 
 .Linklist ul ul ul > li > a {
@@ -56,7 +62,7 @@
 }
 
 .Linklist ul > li > a {
-  padding-left: 1.5em;
+  padding-left: 1em;
 }
 
 .Linklist-link.Linklist-link--lev1,

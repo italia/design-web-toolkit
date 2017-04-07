@@ -7,7 +7,7 @@
   --Color-grey-20: #eee;
   --Color-grey-30: #ddd;
   --Color-grey-40: #a5abb0;
-  --Color-grey-50: #5a6772;
+  --Color-grey-50: #5a5f64;
   --Color-grey-60: #444e57;
   --Color-grey-80: #30373d;
   --Color-grey-90: #1c2024;
@@ -15,6 +15,13 @@
   --Color-teal-50: #65dcdf;
   --Color-teal-70: #004a4d;
   --Color-focus: #ff8c00;
+}
+
+/*
+ * Custom Colors
+ */
+:root {
+    --Color-grey-45: #6e7377;
 }
 
 /*
@@ -71,6 +78,10 @@
 
 .u-background-grey-40 {
   background-color: var(--Color-grey-40) !important;
+}
+
+.u-background-grey-45 {
+  background-color: var(--Color-grey-45) !important;
 }
 
 .u-color-grey-50 {

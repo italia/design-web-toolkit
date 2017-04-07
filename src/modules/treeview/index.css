@@ -6,8 +6,8 @@
   --Treeview-link-padding: 2em;
   --Treeview-link-handler-width: 15%;
   --Treeview-link-arrow-width: 1em;
-  --Treeview-link-arrow-up: inline("icons/ita/img/SVG/collapse.svg");
-  --Treeview-link-arrow-down: inline("icons/ita/img/SVG/expand.svg");
+  --Treeview-link-arrow-up: inline("icons/ita/img/SVG/collapse-white.svg");
+  --Treeview-link-arrow-down: inline("icons/ita/img/SVG/expand-white.svg");
 }
 
 .Treeview-handler--default::after,
@@ -27,9 +27,9 @@
   background-position: center;
   content: "";
   height: 100%;
+  left: 0;
   max-width: var(--Treeview-link-maxWidth);
   min-width: var(--Treeview-link-minWidth);
-  right: 0;
   top: 0;
   width: var(--Treeview-link-handler-width);
 }
@@ -68,11 +68,13 @@
 
 .Treeview--default li[aria-expanded=true] > a,
 .Treeview--default li[aria-expanded=true] > a:hover {
-  @extend .u-background-grey-10;
+  @extend .u-background-50;
 }
 
-.Treeview--default ul a,
+.Treeview--default ul a {
+  @extend .u-background-grey-50;
+}
+
 .Treeview--default ul a:hover {
-  @extend .u-color-95;
-  @extend .u-background-5;
+  @extend .u-background-grey-45;
 }
