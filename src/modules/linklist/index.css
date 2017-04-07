@@ -26,6 +26,10 @@
   @extend .u-nbfc;
 }
 
+.Linklist .is-current {
+  @extend .u-background-40;
+}
+
 .Linklist-link,
 .Linklist a {
   @extend .u-block;
