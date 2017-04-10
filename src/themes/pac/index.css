@@ -1,6 +1,8 @@
 :root {
   --Color-primary: #0777be;
-  --Pac-font-family-sans: "Source Sans Pro", sans-serif;
+
+  /* --Pac-font-family-sans: "Source Sans Pro", sans-serif; */
+  --Pac-font-family-sans: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
 }
 
 /*

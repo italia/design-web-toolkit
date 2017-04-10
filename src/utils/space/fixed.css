@@ -14,6 +14,7 @@
 .u-padding-all-l { padding: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-all-xl { padding: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-all-xxl { padding: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-padding-all-xxxl { padding: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 .u-margin-all-none { margin: 0 !important; }
 .u-margin-all-xxs { margin: var(--Spacing-unit-fixed) !important; }
@@ -23,6 +24,7 @@
 .u-margin-all-l { margin: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-all-xl { margin: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-all-xxl { margin: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-margin-all-xxxl { margin: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 /* Top */
 
@@ -34,6 +36,7 @@
 .u-padding-top-l { padding-top: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-top-xl { padding-top: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-top-xxl { padding-top: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-padding-top-xxxl { padding-top: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 .u-margin-top-none { margin-top: 0 !important; }
 .u-margin-top-xxs { margin-top: var(--Spacing-unit-fixed) !important; }
@@ -43,6 +46,7 @@
 .u-margin-top-l { margin-top: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-top-xl { margin-top: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-top-xxl { margin-top: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-margin-top-xxxl { margin-top: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 /* Bottom */
 
@@ -54,6 +58,7 @@
 .u-padding-bottom-l { padding-bottom: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-bottom-xl { padding-bottom: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-bottom-xxl { padding-bottom: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-padding-bottom-xxxl { padding-bottom: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 .u-margin-bottom-none { margin-bottom: 0 !important; }
 .u-margin-bottom-xxs { margin-bottom: var(--Spacing-unit-fixed) !important; }
@@ -63,6 +68,7 @@
 .u-margin-bottom-l { margin-bottom: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-bottom-xl { margin-bottom: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-bottom-xxl { margin-bottom: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-margin-bottom-xxxl { margin-bottom: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 /* Left */
 
@@ -74,6 +80,7 @@
 .u-padding-left-l { padding-left: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-left-xl { padding-left: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-left-xxl { padding-left: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-padding-left-xxxl { padding-left: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 .u-margin-left-none { margin-left: 0 !important; }
 .u-margin-left-xxs { margin-left: var(--Spacing-unit-fixed) !important; }
@@ -83,6 +90,7 @@
 .u-margin-left-l { margin-left: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-left-xl { margin-left: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-left-xxl { margin-left: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-margin-left-xxxl { margin-left: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 /* Right */
 
@@ -94,6 +102,7 @@
 .u-padding-right-l { padding-right: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-right-xl { padding-right: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-right-xxl { padding-right: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-padding-right-xxxl { padding-right: calc(15 * var(--Spacing-unit-fixed)) !important; }
 
 .u-margin-right-none { margin-right: 0 !important; }
 .u-margin-right-xxs { margin-right: var(--Spacing-unit-fixed) !important; }
@@ -103,3 +112,4 @@
 .u-margin-right-l { margin-right: calc(6 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-right-xl { margin-right: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-margin-right-xxl { margin-right: calc(10 * var(--Spacing-unit-fixed)) !important; }
+.u-margin-right-xxxl { margin-right: calc(15 * var(--Spacing-unit-fixed)) !important; }

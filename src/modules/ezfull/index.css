@@ -1,0 +1,55 @@
+/* eZ-Publish full page */
+
+.u-content {
+  @extend .u-padding-left-xxxl;
+  @extend .u-padding-right-xxxl;
+  @extend .u-margin-top-m;
+  @extend .Grid;
+}
+
+.u-content .u-content-main {
+  @extend .Grid-cell;
+}
+
+/* u-content-main-side  da aggiungere solo se c'è un content related */
+
+.u-content .u-content-main-side {
+  @extend .u-md-size2of3;
+  @extend .u-lg-size2of3;
+}
+
+.u-content .u-content-main .u-content-title h1 {
+  @extend .u-color-40;
+  @extend .u-margin-bottom-m;
+  font-size: 3.2rem !important;
+}
+
+.u-content .u-content-main .u-content-title .u-content-abstract {
+  @extend .u-margin-bottom-s;
+  font-size: 2.2rem !important;
+  font-style: italic;
+}
+
+.u-content .u-content-main .u-content-title .u-content-dates {
+  font-size: 1.5rem !important;
+}
+
+.u-content .u-content-main h4 {
+  @extend .u-color-40;
+  @extend .u-margin-top-m;
+}
+
+.u-content .u-content-related {
+  @extend .u-md-size1of3;
+  @extend .u-lg-size1of3;
+}
+
+.u-content .u-content-related h4 {
+  @extend .u-color-40;
+  @extend .u-margin-bottom-m;
+}
+
+.u-content .u-content-related h5 {
+  @extend .u-margin-top-l;
+  @extend .u-margin-bottom-m;
+}
