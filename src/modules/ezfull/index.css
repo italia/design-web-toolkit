@@ -3,11 +3,13 @@
 .u-content {
   @extend .u-margin-top-m;
   @extend .Grid;
+  @extend .u-padding-left-xxxl;
+  @extend .u-padding-right-xxxl;
+  @extend .u-padding-bottom-xxxl;
 }
 
 .u-content .u-content-main {
   @extend .Grid-cell;
-  @extend .u-padding-left-xxxl;
   @extend .u-padding-right-xxxl;
   @extend .u-padding-bottom-xxxl;
 }
@@ -46,12 +48,37 @@
   @extend .u-lg-size1of3;
 }
 
+.u-content .u-content-related .u-content-related-item {
+  @extend .u-margin-bottom-xl;
+}
+
+.u-content .u-content-related .u-content-related-item h4 {
+  @extend .u-margin-bottom-m;
+}
+
 .u-content .u-content-related .u-content-related-item h4 .u-content-related-item-title {
   @extend .u-color-40;
-  @extend .u-margin-bottom-m;
+  @extend .u-margin-left-s;
 }
 
 .u-content .u-content-related .u-content-related-item h5 {
   @extend .u-margin-top-l;
   @extend .u-margin-bottom-m;
+}
+
+.u-content .u-content-related .u-content-related-item .Prose ul {
+  margin-left: 2rem !important;
+}
+
+.u-content .u-content-related .u-content-related-item .Prose > ul > li {
+  @extend .u-color-40;
+}
+
+@media (max-width: 992px) {
+
+  .u-content .u-content-related {
+    @extend .u-padding-left-xxxl;
+    @extend .u-padding-right-xxxl;
+    @extend .u-padding-bottom-xxxl;
+  }
 }
