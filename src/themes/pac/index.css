@@ -10,6 +10,12 @@
  *		class="t-Pac"
  */
 
-.t-Pac {
+{
   font-family: var(--Pac-font-family-sans);
+}
+
+.t-Pac a {
+  @extend .u-color-40;
+
+  text-decoration: none;
 }
