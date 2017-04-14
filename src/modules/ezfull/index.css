@@ -37,9 +37,12 @@
   font-size: 1.8rem !important;
 }
 
+.u-content .u-content-main .Prose {
+  @extend .u-margin-top-m;
+}
+
 .u-content .u-content-main h4 {
   @extend .u-color-40;
-  @extend .u-margin-top-m;
 }
 
 .u-content .u-content-related {
