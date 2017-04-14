@@ -114,6 +114,15 @@
   @extend .u-block;
 }
 
+.Megamenu-subnavItem {
+  width: 100%;
+  text-align: center;
+}
+
+.Megamenu-subnavItem > li {
+  @extend .u-padding-all-s;
+}
+
 /* Some custom style */
 
 .Megamenu--default {
@@ -167,14 +176,25 @@
 }
 
 .Megamenu--default .Megamenu-list > li > a[aria-expanded=true] {
-  @extend .u-background-grey-20;
-  @extend .u-color-80;
+  @extend .u-background-grey-45;
+  @extend .u-color-white;
 }
 
 .Megamenu--default .Megamenu-subnav {
-  @extend .u-background-grey-20;
+  @extend .u-background-grey-45;
   @extend .u-padding-all-l;
 }
+
+/*
+.Megamenu--default .Megamenu-subnavItem > li > a {
+  @extend .u-color-white;
+}
+
+.Megamenu--default .Megamenu-subnavItem > li > a::hover {
+  @extend .u-background-60;
+  @extend .u-color-white;
+}
+*/
 
 .Megamenu--default .Megamenu-subnavGroup:nth-child(3n+1) {
   @extend .u-md-before2of12;
