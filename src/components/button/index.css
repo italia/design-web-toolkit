@@ -47,10 +47,6 @@
   color: var(--Button-default-color);
 }
 
-.Button--default a {
-  color: var(--Button-default-color) !important;
-}
-
 .Button--default[disabled],
 .Button--default.is-disabled {
   background-color: var(--Button-default-bg) !important;

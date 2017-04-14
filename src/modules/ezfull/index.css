@@ -1,5 +1,18 @@
 /* eZ-Publish full page */
 
+.u-content-length {
+  @extend .u-background-40;
+  
+  float: left;
+  width: 0.6rem;
+  display: none;
+}
+
+.u-content-length .u-content-timetoread {
+  @extend .u-background-text;
+  width: 0.6rem;
+}
+
 .u-content {
   @extend .u-margin-top-m;
   @extend .Grid;

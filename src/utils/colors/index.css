@@ -49,6 +49,14 @@
   background-color: var(--Color-white) !important;
 }
 
+.u-color-text {
+  color: var(--Color-text) !important;
+}
+
+.u-background-text {
+  background-color: var(--Color-text) !important;
+}
+
 .u-color-grey-10 {
   color: var(--Color-grey-10) !important;
 }

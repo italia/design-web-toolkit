@@ -9,6 +9,10 @@
   @extend .u-color-white;
   @extend .u-padding-bottom-xxl;
   @extend .u-padding-top-xxl;
+
+  /* Modifica per far funzionar timetoread */
+  position: relative;
+  z-index: 10;
 }
 
 .Footer a {
