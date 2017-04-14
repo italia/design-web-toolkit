@@ -10,13 +10,13 @@
 
 .u-content .u-content-main {
   @extend .Grid-cell;
-  @extend .u-padding-right-xxxl;
   @extend .u-padding-bottom-xxxl;
 }
 
 /* u-content-main-side  da aggiungere solo se c'è un content related */
 
 .u-content .u-content-main-side {
+  @extend .u-padding-right-xxxl;
   @extend .u-md-size2of3;
   @extend .u-lg-size2of3;
 }
