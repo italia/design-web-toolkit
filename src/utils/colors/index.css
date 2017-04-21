@@ -154,43 +154,43 @@
 /* Color primary */
 
 .u-color-5 {
-  color: color(var(--Color-primary) l(+50%) s(-50%)) !important;
+  color: color(var(--Color-5)) !important;
 }
 
 .u-background-5 {
-  background-color: color(var(--Color-primary) l(+50%) s(-50%)) !important;
+  background-color: color(var(--Color-5)) !important;
 }
 
 .u-color-10 {
-  color: color(var(--Color-primary) l(+40%) s(-40%)) !important;
+  color: color(var(--Color-10)) !important;
 }
 
 .u-background-10 {
-  background-color: color(var(--Color-primary) l(+40%) s(-40%)) !important;
+  background-color: color(var(--Color-10)) !important;
 }
 
 .u-color-20 {
-  color: color(var(--Color-primary) l(+30%) s(-30%)) !important;
+  color: color(var(--Color-20)) !important;
 }
 
 .u-background-20 {
-  background-color: color(var(--Color-primary) l(+30%) s(-30%)) !important;
+  background-color: color(var(--Color-20)) !important;
 }
 
 .u-color-30 {
-  color: color(var(--Color-primary) l(+20%) s(-20%)) !important;
+  color: color(var(--Color-30)) !important;
 }
 
 .u-background-30 {
-  background-color: color(var(--Color-primary) l(+20%) s(-20%)) !important;
+  background-color: color(var(--Color-30)) !important;
 }
 
 .u-color-40 {
-  color: color(var(--Color-primary) l(+8%) s(-15%)) !important;
+  color: color(var(--Color-40)) !important;
 }
 
 .u-background-40 {
-  background-color: color(var(--Color-primary) l(+8%) s(-15%)) !important;
+  background-color: color(var(--Color-40)) !important;
 }
 
 .u-color-50 {
@@ -202,35 +202,35 @@
 }
 
 .u-color-60 {
-  color: color(var(--Color-primary) l(-5%)) !important;
+  color: color(var(--Color-60)) !important;
 }
 
 .u-background-60 {
-  background-color: color(var(--Color-primary) l(-5%)) !important;
+  background-color: color(var(--Color-60)) !important;
 }
 
 .u-color-70 {
-  color: color(var(--Color-primary) l(-10%)) !important;
+  color: color(var(--Color-70)) !important;
 }
 
 .u-background-70 {
-  background-color: color(var(--Color-primary) l(-10%)) !important;
+  background-color: color(var(--Color-70)) !important;
 }
 
 .u-color-80 {
-  color: color(var(--Color-primary) l(-15%)) !important;
+  color: color(var(--Color-80)) !important;
 }
 
 .u-background-80 {
-  background-color: color(var(--Color-primary) l(-15%)) !important;
+  background-color: color(var(--Color-80)) !important;
 }
 
 .u-color-90 {
-  color: color(var(--Color-primary) l(-20%)) !important;
+  color: color(var(--Color-90)) !important;
 }
 
 .u-background-90 {
-  background-color: color(var(--Color-primary) l(-20%)) !important;
+  background-color: color(var(--Color-90)) !important;
 }
 
 .u-color-95 {

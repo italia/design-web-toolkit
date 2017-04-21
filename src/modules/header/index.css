@@ -9,7 +9,7 @@
 .Header-banner {
   @extend .u-cf;
   @extend .u-sizeFull;
-  background-color: #30373d;
+  @extend .u-background-text;
   @extend .u-color-60;
   @extend .u-padding-left-s;
   @media (--sm-viewport) {
@@ -18,6 +18,10 @@
   @media (--lg-viewport) {
     padding-left: calc((1 / 8 + 1 / 12) * 100%) !important;
   }
+}
+
+.Header-banner a {
+  color: #fff !important;
 }
 
 .Header-owner > a {
@@ -47,7 +51,7 @@
 /* ========================================== */
 
 .Header-navbar {
-  @extend .u-background-50;
+  @extend .u-background-white;
 
   @extend .u-padding-top-s;
   @extend .u-padding-bottom-s;

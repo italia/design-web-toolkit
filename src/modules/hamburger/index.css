@@ -21,13 +21,19 @@
 .Hamburger-toggle,
 .Hamburger-toggle::before,
 .Hamburger-toggle::after {
-  background: white;
+  @extend .u-background-text;
   border-radius: 4px;
   content: " ";
   display: block;
   height: calc(var(--Hamburger-height) / 3);
   position: relative;
   width: calc(var(--Hamburger-width) * 0.7);
+}
+
+
+.Hamburger-toggle::before .is-active,
+.Hamburger-toggle::after .is-active {
+    background-color: white;
 }
 
 /*

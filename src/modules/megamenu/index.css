@@ -97,7 +97,8 @@
   @extend .u-sizeFull;
   @extend .u-md-flexWrap;
   @extend .u-lg-flexWrap;
-  @extend .u-bottomShadow-xxl;
+
+  /* @extend .u-bottomShadow-xxl; */
 }
 
 /* list of items within sub-navigation panel */
@@ -115,8 +116,8 @@
 }
 
 .Megamenu-subnavItem {
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .Megamenu-subnavItem > li {
@@ -126,7 +127,9 @@
 /* Some custom style */
 
 .Megamenu--default {
-  background-color: color(var(--Color-primary) l(+5%) s(-15%)) !important;
+  @extend .u-background-80;
+
+  /* background-color: color(var(--Color-primary) l(+5%) s(-15%)) !important; */
 }
 
 .Megamenu--default .Megamenu-item:first-child {
@@ -182,19 +185,14 @@
 
 .Megamenu--default .Megamenu-subnav {
   @extend .u-background-grey-45;
-  @extend .u-padding-all-l;
+
+  /* @extend .u-padding-all-l; */
 }
 
-/*
-.Megamenu--default .Megamenu-subnavItem > li > a {
+.Megamenu--default .Megamenu-subnavItem > li:hover {
+  @extend .u-background-40;
   @extend .u-color-white;
 }
-
-.Megamenu--default .Megamenu-subnavItem > li > a::hover {
-  @extend .u-background-60;
-  @extend .u-color-white;
-}
-*/
 
 .Megamenu--default .Megamenu-subnavGroup:nth-child(3n+1) {
   @extend .u-md-before2of12;
