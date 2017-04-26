@@ -8,11 +8,13 @@
   --Treeview-link-arrow-width: 1em;
   --Treeview-link-arrow-up: inline("icons/ita/img/SVG/collapse-white.svg");
   --Treeview-link-arrow-down: inline("icons/ita/img/SVG/expand-white.svg");
+  --Treeview-link-arrow-up-grey: inline("icons/ita/img/SVG/collapse.svg");
+  --Treeview-link-arrow-down-grey: inline("icons/ita/img/SVG/expand.svg");
 }
 
 .Treeview-handler--default::after,
 .Treeview-handler--standalone {
-  background-image: var(--Treeview-link-arrow-down);
+  background-image: var(--Treeview-link-arrow-down-grey);
   background-repeat: no-repeat;
   background-size: var(--Treeview-link-arrow-width);
 }
@@ -23,7 +25,6 @@
   @extend .u-posAbsolute;
   @extend .u-block;
   @extend .u-text-r-xs;
-
   background-position: center;
   content: "";
   height: 100%;
@@ -34,9 +35,11 @@
   width: var(--Treeview-link-handler-width);
 }
 
+/*
 .Treeview-handler--standalone {
   border-left: 1px solid var(--Color-grey-30);
 }
+*/
 
 .Treeview [aria-expanded="true"] > .Treeview-handler--default::after,
 .Treeview [aria-expanded="true"] > a > .Treeview-handler--standalone {
@@ -77,4 +80,98 @@
 
 .Treeview--default ul a:hover {
   @extend .u-background-grey-45;
+}
+
+/*
+ * Treeview ez style (3 levels max)
+ * -----------------------
+ */
+
+.Treeview--ez {
+  @extend .u-background-white;
+}
+
+.Treeview--ez ul li {
+  border-color: white !important;
+}
+
+.Treeview--ez a {
+  @extend .u-color-text;
+}
+
+.Treeview--ez a:hover {
+  @extend .u-background-80;
+  @extend .u-color-white;
+  text-decoration: none !important;
+}
+
+.Treeview--ez a:hover .Treeview-Item {
+  @extend .u-color-white;
+}
+
+.Treeview--ez li[aria-expanded=true] > a,
+.Treeview--ez li[aria-expanded=true] > a:hover {
+  @extend .u-color-white;
+  @extend .u-background-80;
+}
+
+.Treeview--ez li[aria-expanded=true] > a .TreeView-Item {
+  @extend .u-color-white;
+}
+
+/* Indenta il menu */
+
+.Treeview--ez ul .Treeview-Item {
+  margin-left: 20rem !important;
+}
+
+.Treeview--ez ul ul .Treeview-Item {
+  margin-left: 30rem !important;
+}
+
+.Treeview--ez ul .Treeview-handler--standalone {
+  margin-left: 10rem !important;
+}
+
+.Treeview--ez ul ul .Treeview-handler--standalone {
+  margin-left: 20rem !important;
+}
+
+.Treeview--ez ul a {
+  @extend .u-background-grey-80;
+}
+
+.Treeview--ez ul ul a {
+  @extend .u-background-grey-50;
+}
+
+.Treeview--ez ul a .Treeview-Item {
+  @extend .u-color-white;
+}
+
+.Treeview--ez ul a:hover {
+  @extend .u-background-40;
+}
+
+.Treeview--ez ul li[aria-expanded=true] > a,
+.Treeview--ez ul li[aria-expanded=true] > a:hover {
+  @extend .u-color-white;
+  @extend .u-background-40;
+}
+
+.Treeview--ez .Treeview-Item {
+  @extend .u-color-text;
+  margin-left: 10rem;
+}
+
+.Treeview--ez .Treeview-Item-Abstract {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+/* Cambio colore freccia menu */
+
+.Treeview--ez ul .Treeview-handler--standalone {
+  background-image: var(--Treeview-link-arrow-down);
 }

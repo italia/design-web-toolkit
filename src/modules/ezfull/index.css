@@ -2,10 +2,9 @@
 
 .u-content-length {
   @extend .u-background-40;
-  
+  display: none;
   float: left;
   width: 0.6rem;
-  display: none;
 }
 
 .u-content-length .u-content-timetoread {

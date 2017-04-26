@@ -15,7 +15,6 @@
 
 .Linklist {
   @extend .u-color-grey-30;
-  @extend .u-background-grey-80;
 }
 
 .Linklist li {

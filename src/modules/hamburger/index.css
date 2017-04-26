@@ -30,10 +30,9 @@
   width: calc(var(--Hamburger-width) * 0.7);
 }
 
-
 .Hamburger-toggle::before .is-active,
 .Hamburger-toggle::after .is-active {
-    background-color: white;
+  background-color: white;
 }
 
 /*

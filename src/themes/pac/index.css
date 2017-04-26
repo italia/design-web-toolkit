@@ -1,7 +1,6 @@
 :root {
   --Color-primary: #03a9f4;
   --Color-text: #2e363c;
-  
   --Color-5: #e1f5fe;
   --Color-10: #b3e5fc;
   --Color-20: #81dafa;
@@ -12,8 +11,9 @@
   --Color-70: #0288d1;
   --Color-80: #0277bd;
   --Color-90: #01579b;
-  
+
   /* --Pac-font-family-sans: "Source Sans Pro", sans-serif; */
+
   --Pac-font-family-sans: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
 }
 
