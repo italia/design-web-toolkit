@@ -14,7 +14,7 @@
 
 .Treeview-handler--default::after,
 .Treeview-handler--standalone {
-  background-image: var(--Treeview-link-arrow-down-grey);
+  background-image: var(--Treeview-link-arrow-down);
   background-repeat: no-repeat;
   background-size: var(--Treeview-link-arrow-width);
 }
@@ -171,6 +171,10 @@
 }
 
 /* Cambio colore freccia menu */
+
+.Treeview--ez .Treeview-handler--standalone {
+  background-image: var(--Treeview-link-arrow-down-grey);
+}
 
 .Treeview--ez ul .Treeview-handler--standalone {
   background-image: var(--Treeview-link-arrow-down);
