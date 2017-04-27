@@ -26,7 +26,7 @@ $(document).bind('enhance', function(e) {
 
 ////////////////////////////////////
 
-$('[data-menu-trigger]').each((i, el) => {
+$('[data-menu-trigger]:not(.Share-revealText)').each((i, el) => {
   const $target = $('#' + $(el).attr('data-menu-trigger'))
 
   if (el && $target.length > 0) {
