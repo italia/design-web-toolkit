@@ -81,6 +81,7 @@
 .u-padding-left-xl { padding-left: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-left-xxl { padding-left: calc(10 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-left-xxxl { padding-left: calc(15 * var(--Spacing-unit-fixed)) !important; }
+.u-padding-left-xxxxl { padding-left: 10rem; }
 
 .u-margin-left-none { margin-left: 0 !important; }
 .u-margin-left-xxs { margin-left: var(--Spacing-unit-fixed) !important; }
@@ -103,6 +104,7 @@
 .u-padding-right-xl { padding-right: calc(8 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-right-xxl { padding-right: calc(10 * var(--Spacing-unit-fixed)) !important; }
 .u-padding-right-xxxl { padding-right: calc(15 * var(--Spacing-unit-fixed)) !important; }
+.u-padding-right-xxxxl { padding-right: 10rem; }
 
 .u-margin-right-none { margin-right: 0 !important; }
 .u-margin-right-xxs { margin-right: var(--Spacing-unit-fixed) !important; }

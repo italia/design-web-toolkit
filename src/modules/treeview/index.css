@@ -91,12 +91,13 @@
   @extend .u-background-white;
 }
 
-.Treeview--ez ul li {
-  border-color: white !important;
+.Treeview--ez li .Treeview-Item {
+  color: var(--Color-text);
+  margin-left: 10rem;
 }
 
-.Treeview--ez a {
-  @extend .u-color-text;
+.Treeview--ez ul li {
+  border-color: white !important;
 }
 
 .Treeview--ez a:hover {
@@ -115,7 +116,7 @@
   @extend .u-background-80;
 }
 
-.Treeview--ez li[aria-expanded=true] > a .TreeView-Item {
+.Treeview--ez li[aria-expanded=true] .Treeview-Item {
   @extend .u-color-white;
 }
 
@@ -159,10 +160,6 @@
   @extend .u-background-40;
 }
 
-.Treeview--ez .Treeview-Item {
-  @extend .u-color-text;
-  margin-left: 10rem;
-}
 
 .Treeview--ez .Treeview-Item-Abstract {
   display: block;

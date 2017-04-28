@@ -31,7 +31,7 @@
 }
 
 .t-Pac a {
-  @extend .u-color-80;
+  color: var(--Color-80);
 
   text-decoration: none;
 }

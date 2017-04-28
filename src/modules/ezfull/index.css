@@ -15,9 +15,9 @@
 .u-content {
   @extend .u-margin-top-m;
   @extend .Grid;
-  @extend .u-padding-left-xxxl;
-  @extend .u-padding-right-xxxl;
   @extend .u-padding-bottom-xxxl;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .u-content .u-content-main {
