@@ -63,7 +63,7 @@
 }
 
 .Table--striped tbody tr:nth-child(odd) {
-  background-color: var(--Table-stripe-color);
+  background-color: var(--Color-grey-10);
 }
 
 /* Border modifiers
