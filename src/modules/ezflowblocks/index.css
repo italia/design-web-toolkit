@@ -75,3 +75,20 @@
   @extend .u-margin-right-xs;
   @extend .u-margin-top-m;
 }
+
+/*
+ * TREEVIEW
+ */
+
+.u-flow-treeview {
+  @extend .u-layout-centerContent;
+  @extend .u-padding-r-top;
+}
+
+.u-flow-treeview section {
+  @extend .u-layout-wide;
+  @extend .u-layout-r-withGutter;
+  @extend .u-text-r-s;
+  @extend .u-padding-r-top;
+  @extend .u-padding-r-bottom;
+}
