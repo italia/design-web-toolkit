@@ -1,0 +1,36 @@
+/* eZ-Publish landing page */
+
+.u-landing {
+  @extend .u-margin-top-m;
+  @extend .Grid;
+  @extend .u-padding-bottom-xxxl;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.u-landing .u-landing-main {
+  @extend .Grid-cell;
+  @extend .Grid;
+}
+
+.u-landing .u-landing-main .u-landing-title {
+  @extend .Grid-cell;
+  @extend .u-lg-size8of12;
+  @extend .u-md-size8of12;
+}
+
+.u-landing .u-landing-main .u-landing-title h1 {
+  @extend .u-color-80;
+  font-size: 3.2rem !important;
+}
+
+.u-landing .u-landing-main .u-landing-parent {
+  @extend .Grid-cell;
+  @extend .u-lg-size4of12;
+  @extend .u-md-size4of12;
+}
+
+.u-landing .u-landing-main .u-landing-parent h1 {
+  @extend .u-color-40;
+  font-size: 3.2rem !important;
+}
