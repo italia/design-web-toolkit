@@ -1,3 +1,16 @@
+/* eZPublish ezflow blocks */
+
+.u-flow {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+  .u-flow {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 /*
  * PANELS
@@ -9,7 +22,6 @@
 }
 
 .u-flow-panels section {
-  @extend .u-layout-wide;
   @extend .u-layout-r-withGutter;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
@@ -52,16 +64,19 @@
  */
 
 .u-flow-links {
-  @extend .u-layout-centerContent;
   @extend .u-padding-r-top;
+  margin-left: -10rem;
+  margin-right: -10rem;
 }
 
 .u-flow-links section {
-  @extend .u-layout-wide;
   @extend .u-layout-r-withGutter;
   @extend .u-text-r-s;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
+  
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
 .u-flow-links section h2 {
@@ -76,6 +91,18 @@
   @extend .u-margin-top-m;
 }
 
+@media (--xs-viewport), (--sm-viewport) {
+  .u-flow-links {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  
+  .u-flow-links section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 /*
  * TREEVIEW
  */
@@ -86,7 +113,6 @@
 }
 
 .u-flow-treeview section {
-  @extend .u-layout-wide;
   @extend .u-layout-r-withGutter;
   @extend .u-text-r-s;
   @extend .u-padding-r-top;
