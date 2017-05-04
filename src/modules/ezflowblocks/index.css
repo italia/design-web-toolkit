@@ -6,10 +6,12 @@
 }
 
 @media (--xs-viewport), (--sm-viewport) {
+
   .u-flow {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
 }
 
 /*
@@ -59,6 +61,44 @@
   margin-top: 20px;
 }
 
+/* event */
+
+.u-flow-panels section .u-flow-event {
+  @extend .u-margin-all-xs;
+  @extend .u-background-grey-10;
+  min-height: 100px;
+}
+    
+.u-flow-panels section .u-flow-event .u-event-when {
+  @extend .u-background-80;
+  @extend .u-color-white;
+  @extend .u-textCenter;
+  float: left;
+  width: 90px;
+  height: 100px;
+}
+
+.u-flow-panels section .u-flow-event .u-event-when .u-event-monthday {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.u-flow-panels section .u-flow-event .u-event-when .u-event-month {
+  font-size: 1rem;
+}
+
+.u-flow-panels section .u-flow-event .u-event-what {
+  @extend .u-padding-all-s;
+  float: none;
+  height: 100px;
+  margin-left: 90px;
+}
+
+.u-flow-panels section .u-flow-event .u-event-what .u-event-title {
+    @extend .u-margin-bottom-xs;
+    font-weight: bold;
+}
+
 /*
  * LINKS
  */
@@ -74,7 +114,6 @@
   @extend .u-text-r-s;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
-  
   margin-left: 10rem;
   margin-right: 10rem;
 }
@@ -92,15 +131,17 @@
 }
 
 @media (--xs-viewport), (--sm-viewport) {
+
   .u-flow-links {
     margin-left: -1rem;
     margin-right: -1rem;
   }
-  
+
   .u-flow-links section {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
 }
 
 /*
