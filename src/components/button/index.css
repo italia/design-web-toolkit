@@ -75,7 +75,7 @@
 .Button--danger {
   background-color: var(--Button-danger-bg);
   border-color: var(--Button-danger-border);
-  color: var(--Button-danger-color);
+  color: var(--Button-danger-color) !important;
 }
 
 .Button--danger[disabled],
