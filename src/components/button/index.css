@@ -128,3 +128,8 @@
   border-color: color(var(--Button-info-color) l(-25%));
   color: var(--Button-info-bg);
 }
+
+.Button--xs {
+  font-size: 1.3rem !important;
+  padding: 0.1em 0.3em !important;
+}
