@@ -20,6 +20,15 @@
   padding-right: 10rem;
 }
 
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-content {
+    @extend .u-padding-left-xs;
+    @extend .u-padding-right-xs;
+  }
+
+}
+
 .u-content .u-content-main {
   @extend .Grid-cell;
   @extend .u-padding-bottom-xxxl;
@@ -92,8 +101,8 @@
 @media (max-width: 992px) {
 
   .u-content .u-content-related {
-    @extend .u-padding-left-xxxl;
-    @extend .u-padding-right-xxxl;
+    @extend .u-padding-left-xs;
+    @extend .u-padding-right-xs;
     @extend .u-padding-bottom-xxxl;
   }
 }

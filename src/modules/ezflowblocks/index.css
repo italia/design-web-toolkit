@@ -50,7 +50,7 @@
   @extend .u-padding-all-l;
   @extend .u-margin-all-xs;
   @extend .u-background-grey-10;
-  min-height: 150px;
+  min-height: 10rem;
 }
 
 .u-flow-panels section .u-flow-panel .u-flow-icon {
@@ -58,7 +58,7 @@
 }
 
 .u-flow-panels section .u-flow-item .subtitle {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 /* event */
@@ -66,16 +66,16 @@
 .u-flow-panels section .u-flow-event {
   @extend .u-margin-all-xs;
   @extend .u-background-grey-10;
-  min-height: 100px;
+  min-height: 10rem;
 }
-    
+
 .u-flow-panels section .u-flow-event .u-event-when {
   @extend .u-background-80;
   @extend .u-color-white;
   @extend .u-textCenter;
   float: left;
-  width: 90px;
-  height: 100px;
+  height: 10rem;
+  width: 9rem;
 }
 
 .u-flow-panels section .u-flow-event .u-event-when .u-event-monthday {
@@ -90,13 +90,46 @@
 .u-flow-panels section .u-flow-event .u-event-what {
   @extend .u-padding-all-s;
   float: none;
-  height: 100px;
-  margin-left: 90px;
+  height: 10rem;
+  margin-left: 9rem;
 }
 
 .u-flow-panels section .u-flow-event .u-event-what .u-event-title {
-    @extend .u-margin-bottom-xs;
-    font-weight: bold;
+  @extend .u-margin-bottom-xs;
+  font-weight: bold;
+}
+
+/* banner */
+
+.u-flow-panels section .u-flow-banner {
+  @extend .u-margin-all-xs;
+  @extend .u-background-grey-10;
+  min-height: 10rem;
+}
+
+.u-flow-panels section .u-flow-banner .u-banner-icon {
+  @extend .u-color-white;
+  @extend .u-textCenter;
+  @extend .u-padding-all-s;
+  float: left;
+  font-size: 6rem;
+  height: 10rem;
+  width: 9rem;
+}
+
+.u-flow-panels section .u-flow-banner .u-banner-content {
+  @extend .u-padding-all-s;
+  float: none;
+  height: 10rem;
+  margin-left: 12rem;
+}
+
+.u-flow-panels section .u-flow-banner .u-banner-content .u-banner-title {
+  font-weight: bold;
+}
+
+.u-flow-panels section .u-flow-banner .u-banner-content .u-banner-subtitle {
+  @extend .u-margin-top-xs;
 }
 
 /*
