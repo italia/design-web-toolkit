@@ -66,6 +66,10 @@
   @extend .u-color-40;
 }
 
+.u-content .u-content-main .u-content-main-image img {
+  width: 100%;
+}
+
 .u-content .u-content-related {
   @extend .Grid-cell;
   @extend .u-md-size1of3;

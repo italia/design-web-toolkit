@@ -173,7 +173,7 @@ option:hover {
 }
 
 .Form-field--choose :focus + span {
-  outline: 3px solid var(--Color-focus);
+  outline: none;
 }
 
 .Form-field--choose .Form-input {

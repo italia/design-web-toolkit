@@ -87,9 +87,11 @@ body {
   min-width: 300px; /* 1 */
 }
 
+
 :focus {
-  outline: 3px solid var(--it-Base-focus-color);
+  outline: none;
 }
+
 
 a:hover {
   text-decoration: underline !important;

@@ -52,3 +52,7 @@
   @extend .u-textSecondary;
   @extend .u-margin-bottom-l;
 }
+
+.Card .Card-image figure {
+  min-height: 25rem;
+}
