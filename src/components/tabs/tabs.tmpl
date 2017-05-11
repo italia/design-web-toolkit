@@ -1,0 +1,19 @@
+<div class="Tabs tabpanel"> 
+
+  <ul class="tablist" role="tablist">
+  {% for i in range(0, 4) %}
+  {% if i == 1 %}
+    <li id="tab-{{ i }}" class="tab selected" aria-controls="panel-{{ i }}" aria-selected="true" role="tab" tabindex="0"><span class="Tab-label">{{ __WORD__[i] }}</span></li>
+  {% else %}
+    <li id="tab-{{ i }}" class="tab" aria-controls="panel-{{ i }}" role="tab" aria-selected="false" tabindex="-1"><span class="Tab-label">{{ __WORD__[i] }}</span></li> 
+  {% endif %}
+  {% endfor %}
+  </ul> 
+  
+  {% for i in range(0, 4) %}
+  <div id="panel-{{ i }}" class="panel" aria-labelledby="tab-{{ i }}" role="tabpanel">
+  {% render '@prose--paragraph', { text: __TEXTS__[i] } %}
+  </div> 
+  {% endfor %}
+
+</div> 
