@@ -5314,6 +5314,11 @@
         }
       }
     },
+    "rellax": {
+      "version": "1.0.0",
+      "from": "rellax@latest",
+      "resolved": "https://registry.npmjs.org/rellax/-/rellax-1.0.0.tgz"
+    },
     "repeat-element": {
       "version": "1.1.2",
       "from": "repeat-element@>=1.1.2 <2.0.0",
