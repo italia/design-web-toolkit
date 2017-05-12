@@ -11,8 +11,13 @@
 
 .Offcanvas,
 .Offcanvas-content {
+  @extend .u-background-grey-80;
   max-width: var(--Offcanvas-max-width);
   width: var(--Offcanvas-width);
+}
+
+.Offcanvas a:hover{
+  text-decoration: none !important;
 }
 
 .no-js .Offcanvas:target {
