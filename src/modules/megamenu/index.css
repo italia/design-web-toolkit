@@ -116,7 +116,6 @@
 }
 
 .Megamenu-subnavItem {
-  text-align: center;
   width: 100%;
 }
 
@@ -133,15 +132,13 @@
 }
 
 .Megamenu--default .Megamenu-item:first-child {
-  @extend .u-md-before2of12;
-  @extend .u-lg-before1of8;
+  margin-left: 14rem;
 }
 
 .Megamenu--default .Megamenu-item > a,
 .Megamenu--default .Megamenu-subnavGroup > li > a {
   @extend .u-textClean;
   @extend .u-posRelative;
-  @extend .u-textWeight-600;
 }
 
 .Megamenu--default .Megamenu-subnavGroup > li > a {

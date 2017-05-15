@@ -16,7 +16,7 @@
   width: var(--Offcanvas-width);
 }
 
-.Offcanvas a:hover{
+.Offcanvas a:hover {
   text-decoration: none !important;
 }
 
