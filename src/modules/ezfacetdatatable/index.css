@@ -3,13 +3,22 @@
 .u-facet {
   @extend .u-margin-top-m;
   @extend .Grid;
-  @extend .u-padding-bottom-xxxl;
+  margin-bottom: -3.2rem;
 }
 
 .u-facet .u-facet-title {
   @extend .Grid-cell;
   padding-left: 10rem;
   padding-right: 10rem;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-facet .u-facet-title {
+    @extend .u-padding-left-xs;
+    @extend .u-padding-right-xs;
+  }
+
 }
 
 .u-facet .u-facet-title .u-facet-heading {
@@ -54,6 +63,15 @@
   padding-top: 2rem;
 }
 
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-facet .u-facet-form .u-facet-form-cell {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
 .u-facet .u-facet-form .u-facet-form-cell-wide {
   @extend .Grid-cell;
   padding-bottom: 2rem;
@@ -87,8 +105,16 @@
 
 .u-facet .u-facet-table {
   @extend .Grid-cell;
-  padding-bottom: 5rem;
   padding-left: 10rem;
   padding-right: 10rem;
   padding-top: 5rem;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-facet .u-facet-table {
+    @extend .u-padding-left-xs;
+    @extend .u-padding-right-xs;
+  }
+
 }
