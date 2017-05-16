@@ -36,6 +36,7 @@
 
 * Modificato il tema della styleguide
 * Aggiornato a versionamento semantico (1.0.0)
+* Aggiornato suitcss-preprocessor (4.0.0)
 
 ### 0.2.0-alpha12
 

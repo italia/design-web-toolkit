@@ -62,7 +62,7 @@
     "stylelint": "^7.9.0",
     "stylelint-config-suitcss": "^9.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0",
-    "suitcss-preprocessor": "^3.0.1",
+    "suitcss-preprocessor": "^4.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1"
   },

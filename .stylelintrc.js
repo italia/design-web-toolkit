@@ -4,7 +4,8 @@ module.exports = {
   ],
   "rules": {
     "plugin/selector-bem-pattern": {
-      "preset": "suit"
+      "preset": "suit",
+      "utilitySelectors": "^\\.u-[a-zA-Z0-9\-]+$"
     },
     "at-rule-empty-line-before": null,
   },

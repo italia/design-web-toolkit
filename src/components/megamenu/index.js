@@ -143,9 +143,9 @@ $(document).ready(function() {
             behavior: ['left', 'right'],
             boundariesElement: 'scrollParent'
           },
-          // preventOverflow: {
-          //   boundariesElement: 'viewport'
-          // },
+          preventOverflow: {
+            boundariesElement: 'viewport'
+          },
         },
       })
     }
