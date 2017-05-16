@@ -72,6 +72,26 @@
 
 }
 
+.u-facet .u-facet-form .u-facet-form-cell-half {
+  @extend .Grid-cell;
+  @extend .u-sm-size1of2;
+  @extend .u-md-size1of2;
+  @extend .u-lg-size1of2;
+  padding-bottom: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2rem;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-facet .u-facet-form .u-facet-form-cell-half {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
 .u-facet .u-facet-form .u-facet-form-cell-wide {
   @extend .Grid-cell;
   padding-bottom: 2rem;
@@ -80,12 +100,21 @@
   padding-top: 2rem;
 }
 
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-facet .u-facet-form .u-facet-form-cell-wide {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
 .u-facet .u-facet-form .u-facet-form-cell-wide .viv_toggle_button {
   @extend .u-margin-right-s;
   cursor: pointer;
 }
 
-.u-facet .u-facet-form .u-facet-form-cell .Form-field {
+.u-facet .u-facet-form .Form-field {
   height: 6rem;
 }
 
@@ -117,4 +146,73 @@
     @extend .u-padding-right-xs;
   }
 
+}
+
+.u-facet .u-facet-calendar {
+  @extend .Grid-cell;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 5rem;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-facet .u-facet-calendar {
+    @extend .u-padding-left-xs;
+    @extend .u-padding-right-xs;
+  }
+
+}
+
+.u-facet .u-facet-calendar .u-facet-event {
+  @extend .u-margin-bottom-s;
+  @extend .u-background-grey-10;
+  min-height: 10rem;
+}
+
+.u-facet .u-facet-calendar .u-facet-event .u-event-when {
+  @extend .u-background-80;
+  @extend .u-color-white;
+  @extend .u-textCenter;
+  border-bottom: 1px solid white;
+  float: left;
+  height: 10rem;
+  width: 9rem;
+}
+
+.u-facet .u-facet-calendar .u-facet-event .u-event-monthday {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.u-facet .u-facet-calendar .u-facet-event .u-event-month {
+  font-size: 1rem;
+}
+
+.u-facet .u-facet-calendar .u-facet-event .u-event-what {
+  @extend .u-padding-all-s;
+  @extend .Grid;
+  border-bottom: 1px solid white;
+  float: none;
+  height: 10rem;
+  margin-left: 9rem;
+}
+
+.u-facet .u-facet-calendar .u-facet-event .u-event-what .u-event-main {
+  @extend .Grid-cell;
+  @extend .u-size2of3;
+}
+
+.u-facet .u-facet-calendar .u-facet-event .u-event-what .u-event-main .u-event-title {
+  @extend .u-margin-bottom-xs;
+  font-weight: bold;
+}
+
+.u-facet .u-facet-calendar .u-facet-event .u-event-what .u-event-details {
+  @extend .Grid-cell;
+  @extend .u-size1of3;
+}
+
+.u-facet .u-facet-calendar .u-facet-event .u-event-what .u-event-details .u-event-type {
+  @extend .u-margin-bottom-xs;
 }

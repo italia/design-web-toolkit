@@ -298,3 +298,9 @@ option:hover {
 .Form-input--m {
   max-width: 6em !important;
 }
+
+.Form-input-inline {
+  display: inline !important;
+  margin-left: 1rem;
+  width: 30% !important;
+}
