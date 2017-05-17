@@ -65,6 +65,7 @@
 
 select.Form-input {
   background-color: currentColor;
+  line-height: normal;
 }
 
 /* postcss-bem-linter: ignore */

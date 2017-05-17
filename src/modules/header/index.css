@@ -11,12 +11,9 @@
   @extend .u-sizeFull;
   @extend .u-background-text;
   @extend .u-color-60;
-  @extend .u-padding-left-s;
-  @media (--sm-viewport) {
-    @extend .u-padding-left-none;
-  }
+  padding-left: 16.66667%;
   @media (--lg-viewport) {
-    padding-left: calc((1 / 8 + 1 / 12) * 100%) !important;
+    padding-left: 12.5%;
   }
 }
 
@@ -26,8 +23,6 @@
 
 .Header-owner > a {
   @extend .u-floatLeft;
-  @extend .u-sm-before4of12;
-  @extend .u-md-before3of12;
   @extend .u-text-r-xxs;
   @extend .u-color-white;
   @extend .u-textClean;
