@@ -89,6 +89,17 @@
 
 .Treeview--ez {
   @extend .u-background-white;
+  margin-left: -10rem;
+  margin-right: -10rem;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .Treeview--ez {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
 }
 
 .Treeview--ez li .Treeview-Item {
@@ -122,20 +133,62 @@
 
 /* Indenta il menu */
 
-.Treeview--ez ul .Treeview-Item {
+.Treeview--ez .Treeview-Item {
   margin-left: 20rem !important;
+  margin-right: 20rem !important;
+}
+
+.Treeview--ez ul .Treeview-Item {
+  margin-left: 30rem !important;
+  margin-right: 30rem !important;
 }
 
 .Treeview--ez ul ul .Treeview-Item {
-  margin-left: 30rem !important;
+  margin-left: 40rem !important;
+  margin-right: 40rem !important;
 }
 
-.Treeview--ez ul .Treeview-handler--standalone {
+.Treeview--ez .Treeview-handler--standalone {
   margin-left: 10rem !important;
 }
 
-.Treeview--ez ul ul .Treeview-handler--standalone {
+.Treeview--ez ul .Treeview-handler--standalone {
   margin-left: 20rem !important;
+}
+
+.Treeview--ez ul ul .Treeview-handler--standalone {
+  margin-left: 30rem !important;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .Treeview--ez .Treeview-Item {
+    margin-left: 11rem !important;
+    margin-right: 11rem !important;
+  }
+
+  .Treeview--ez ul .Treeview-Item {
+    margin-left: 21rem !important;
+    margin-right: 21rem !important;
+  }
+
+  .Treeview--ez ul ul .Treeview-Item {
+    margin-left: 31rem !important;
+    margin-right: 31rem !important;
+  }
+
+  .Treeview--ez .Treeview-handler--standalone {
+    margin-left: 1rem !important;
+  }
+
+  .Treeview--ez ul .Treeview-handler--standalone {
+    margin-left: 11rem !important;
+  }
+
+  .Treeview--ez ul ul .Treeview-handler--standalone {
+    margin-left: 21rem !important;
+  }
+
 }
 
 .Treeview--ez ul a {

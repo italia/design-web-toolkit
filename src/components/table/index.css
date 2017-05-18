@@ -103,63 +103,71 @@
  * 	http://dbushell.com/2016/03/04/css-only-responsive-tables/
    ========================================================================== */
 
-.Table--responsive {
+/*
+ * Applico table responsive solo a xs sm e md viewport
+ */
 
-  /*
-   * IE needs inline-block to position scrolling shadows otherwise use:
-   * display: block;
-   * max-width: min-content;
-  */
-  border-collapse: collapse;
-  border-spacing: 0;
-  display: inline-block;
-  max-width: 100%;
-  overflow-x: auto;
-  vertical-align: top;
+@media (--xs-viewport), (--sm-viewport), (--md-viewport) {
 
-  /* optional - looks better for small cell values */
-  white-space: nowrap;
-  width: auto;
-}
+  .Table--responsive {
 
-.Table--responsive,
-.Table--flip tbody {
+    /*
+     * IE needs inline-block to position scrolling shadows otherwise use:
+     * display: block;
+     * max-width: min-content;
+    */
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+    vertical-align: top;
 
-  /* scrolling shadows */
-  background:
-    radial-gradient(
-      left,
-      ellipse,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0) 75%
-    ) 0 center,
-    radial-gradient(
-      right,
-      ellipse,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0) 75%
-    ) 100% center;
-  background-attachment: scroll, scroll;
-  background-repeat: no-repeat;
-  background-size: 10px 100%, 10px 100%;
+    /* optional - looks better for small cell values */
+    white-space: nowrap;
+    width: auto;
+  }
 
-  /* optional - enable iOS momentum scrolling */
-  -webkit-overflow-scrolling: touch;
-}
+  .Table--responsive,
+  .Table--flip tbody {
 
-.Table--responsive td:first-child,
-.Table--flip tbody tr:first-child {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-size: 20px 100%;
-}
+    /* scrolling shadows */
+    background:
+      radial-gradient(
+        left,
+        ellipse,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0) 75%
+      ) 0 center,
+      radial-gradient(
+        right,
+        ellipse,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0) 75%
+      ) 100% center;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat;
+    background-size: 10px 100%, 10px 100%;
 
-.Table--responsive td:last-child,
-.Table--flip tbody tr:last-child {
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-  background-size: 20px 100%;
+    /* optional - enable iOS momentum scrolling */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .Table--responsive td:first-child,
+  .Table--flip tbody tr:first-child {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 20px 100%;
+  }
+
+  .Table--responsive td:last-child,
+  .Table--flip tbody tr:last-child {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 20px 100%;
+  }
+
 }
 
 .Table--flip {
