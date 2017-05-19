@@ -31,6 +31,7 @@
 
 .u-content .u-content-main-parent h1 {
   @extend .u-color-80;
+  @extend .u-margin-bottom-xl;
 }
 
 .u-content .u-content-main {
@@ -123,4 +124,5 @@
   @extend .Grid-cell;
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
+  @extend .u-margin-bottom-xl;
 }
