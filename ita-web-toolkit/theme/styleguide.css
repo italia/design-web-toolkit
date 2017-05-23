@@ -11,10 +11,6 @@ html {
 }
 */
 
-a {
-  transition: none !important;
-}
-
 h1,
 h2,
 h3,
@@ -68,14 +64,10 @@ h4 {
   font-size: 1.6em;
 }
 
-.Prose code pre {
-  padding: 1em;
-}
-
 .Prose code pre,
 .Prose code pre span {
   font-family: Hack, Consolas, Monaco, "Andale Mono", monospace !important;
-  font-size: 15px !important;
+  font-size: 1em;
 }
 
 .Document-header,
@@ -201,18 +193,20 @@ h4 {
 }
 
 .Tree ul > li.is-current a {
-  font-weight: 700;
+  background-color: #e2f7ff !important;
+}
+
+.Tree .Treeview [aria-expanded] > a {
+  background-position: right 1em center;
 }
 
 .Frame-panel--sidebar {
   background-color: white;
   min-width: 280px !important;
-  padding-bottom: 2em;
 }
 
-.Browser-panel *,
-.Browser-code .Code pre {
-  font-size: 15px !important;
+.Code pre {
+  font-size: 1em;
 }
 
 /* Footer */
@@ -267,8 +261,4 @@ h4 {
 
 .t-Pac .Pen-header .Pen-title.u-text-h4 {
   margin-bottom: 0 !important;
-}
-
-.Navigation-group {
-  border-bottom: 1px solid #ddd;
 }

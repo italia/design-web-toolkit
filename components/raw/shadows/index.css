@@ -9,7 +9,11 @@
 }
 
 .u-borderShadow-m {
-  box-shadow: 0 8px 24px 0 rgba(50, 50, 50, 0.3) !important;
+  box-shadow: 0 8px 24px 0 rgba(50, 50, 50, 0.15) !important;
+}
+
+.u-borderShadow-l {
+  box-shadow: 0px 10px 40px -5px rgba(133, 133, 133, 1);
 }
 
 .u-borderShadow-xxl {
@@ -27,4 +31,10 @@
   top: 0;
   transition: opacity 0.3s 0s, visibility 0s 0s;
   width: 1em;
+}
+
+@media (--xs-viewport) {
+
+  .u-xs-borderShadow-none { box-shadow: none !important; }
+
 }

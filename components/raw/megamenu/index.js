@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import Popper from 'popper.js'
 import Megamenu from './megamenu'
 
 // ASAP hide megamenu panels
@@ -98,6 +99,9 @@ $(document).ready(function() {
       }
     }
 
+    $el.find('.' + opts.panelClass)
+      .append('<span class="Icon-drop-down Dropdown-arrow u-color-white"></span>')
+
     $el.accessibleMegaMenu(opts)
 
     if (opts.addCloseButton) {
@@ -112,6 +116,41 @@ $(document).ready(function() {
     })
 
   })
+
+  $('.' + opts.topNavItemClass + ' > a').each((i, el) => {
+    const $target = $(el).parent().find('.' + opts.panelClass)
+
+    if (el && $target.length > 0) {
+      new Popper(el, $target, {
+        // onUpdate: (data) => {
+        //   const $el = $(data.instance.popper)
+        //   if ($el.offset().left + $el.outerWidth() > $(window).width()) {
+        //     $el.css({ width: '95%' })
+        //   }
+        // },
+        // onCreate: (data) => {
+        //   const $el = $(data.instance.popper)
+        //   if ($el.offset().left + $el.outerWidth() > $(window).width()) {
+        //     $el.css({ width: '95%' })
+        //   }
+        // },
+        placement: 'bottom',
+        modifiers: {
+          arrow: {
+            element: '.Dropdown-arrow'
+          },
+          flip: {
+            behavior: ['left', 'right'],
+            boundariesElement: 'scrollParent'
+          },
+          preventOverflow: {
+            boundariesElement: 'viewport'
+          },
+        },
+      })
+    }
+  })
+
 })
 
 export default {

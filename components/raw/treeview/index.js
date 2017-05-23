@@ -84,8 +84,8 @@ const Treeview = function({
   }
 
   function _updateStyling(treeview, $item) {
-    treeview.$items.removeClass(classFocused).attr('tabindex', '-1')
-    $item.addClass(classFocused).attr('tabindex', '0')
+    treeview.$items.removeClass(classFocused)
+    $item.addClass(classFocused)
   }
 
   function _handleKeyDown(treeview, $item, e) {

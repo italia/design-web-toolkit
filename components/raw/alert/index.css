@@ -4,19 +4,19 @@
   --Alert-error-bg: #ffcbcb;
   --Alert-error-color: #1e1212;
   --Alert-error-border: #b50000;
-  --Alert-error-background-image: inline("icons/ita/img/SVG/error.svg");
+  --Alert-error-background-image: inline("icons/img/SVG/error.svg");
   --Alert-warning-bg: #ffef9f;
   --Alert-warning-color: #4f4310;
   --Alert-warning-border: #1e1212;
-  --Alert-warning-background-image: inline("icons/ita/img/SVG/warning.svg");
+  --Alert-warning-background-image: inline("icons/img/SVG/warning.svg");
   --Alert-success-bg: #dff0d8;
   --Alert-success-color: #274d28;
   --Alert-success-border: #d6e9c6;
-  --Alert-success-background-image: inline("icons/ita/img/SVG/check.svg");
+  --Alert-success-background-image: inline("icons/img/SVG/check.svg");
   --Alert-info-bg: #c6f3f5;
   --Alert-info-color: #004446;
   --Alert-info-border: #1e1212;
-  --Alert-info-background-image: inline("icons/ita/img/SVG/info.svg");
+  --Alert-info-background-image: inline("icons/img/SVG/info.svg");
 }
 
 .Alert {

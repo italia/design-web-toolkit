@@ -21,7 +21,7 @@
   <script type="text/javascript">
     WebFontConfig = {
       google: {
-        families: ['Titillium+Web:400,600,700,400italic:latin']
+        families: ['Titillium+Web:300,400,600,700,400italic:latin']
       }
     };
     (function() {
@@ -34,10 +34,9 @@
     })();
   </script>
 
-  <!-- include html5shim per Explorer 8 -->
+  <!-- include HTML5shim per Explorer 8 -->
   <script src="../../build/vendor/modernizr.js"></script>
 
-  <link media="all" rel="stylesheet" href="../../build/vendor.css">
   <link media="all" rel="stylesheet" href="../../build/build.css">
 
   <script src="../../build/vendor/jquery.min.js"></script>
@@ -47,14 +46,14 @@
 
 <body class="t-Pac">
 
-  <div class="Card Card--round u-color-grey-30 u-background-white">
-  <section class="Card-content u-padding-r-all">
-    <div class="Card-text">
-      <p class="u-color-50 u-text-r-xxs">nome account</p>
+  <div class="u-nbfc u-borderRadius-m u-color-grey-30 u-background-white">
+  <section class="u-text-r-l u-padding-r-all u-layout-prose">
+    <div class="u-text-p u-padding-r-bottom">
+      <p class="u-color-50 u-text-r-xxs u-textWeight-600">nome account</p>
       <p class="u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
     </div>
-    <h3 class="Card-titleLink u-padding-r-bottom">
-      Eaque porro quisquam.
+    <h3 class="u-text-p u-textWeight-400 u-color-grey-80 u-margin-r-bottom u-padding-r-bottom">
+      Id et facere.
     </h3>
     <p>
       <a title="visualizza su twitter" class="u-color-50 u-textClean u-text-xl" href="http://twitter.com">
@@ -76,6 +75,10 @@
   <!--[if lte IE 9]>
   <script src="../../build/vendor/polyfill.min.js"></script>
   <![endif]-->
+
+  <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+    è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
+  <script>__PUBLIC_PATH__ = '../../build.html'</script>
 
   <script src="../../build/IWT.min.js"></script>
 

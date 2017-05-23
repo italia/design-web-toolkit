@@ -2,12 +2,6 @@ import $ from 'jquery'
 
 import Froffcanvas from 'fr-offcanvas/offcanvas'
 
-/* eslint-disable no-unused-vars */
-
-import stylesheet from 'fr-offcanvas/offcanvas.css'
-
-/* eslint-enable */
-
 const opts = {
   // String - panel
   panelSelector: '.Offcanvas',

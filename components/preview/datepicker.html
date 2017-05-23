@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
+<!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="it">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="preload" href="../../build/IWT.min.js" as="script"> -->
+  <!--
+    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
+      <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
+    o dal repository locale (src/fonts)
+  -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: {
+        families: ['Titillium+Web:300,400,600,700,400italic:latin']
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- include HTML5shim per Explorer 8 -->
+  <script src="../../build/vendor/modernizr.js"></script>
+
+  <link media="all" rel="stylesheet" href="../../build/build.css">
+
+  <script src="../../build/vendor/jquery.min.js"></script>
+
+  <title>Preview Layout</title>
+</head>
+
+<body class="t-Pac">
+
+  <div class="u-margin-all-m">
+  <h2>Senza datepicker</h2></div>
+
+<div class="u-margin-all-m">
+
+  <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose">
+    <fieldset class="Form-fieldset">
+
+      <legend class="Form-legend">Data di nascita</legend>
+
+      <div class="Grid Grid--fit Grid--withGutter">
+
+        <div class="Form-field Form-field--date Grid-cell">
+          <label class="Form-label" for="giorno">Giorno</label>
+          <input class="Form-input u-text-r-s u-borderRadius-m" id="giorno" value="" type="number" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" min="1" max="31">
+        </div>
+
+        <div class="Form-field Form-field--date Grid-cell">
+          <label class="Form-label" for="mese">Mese</label>
+          <input class="Form-input u-text-r-s u-borderRadius-m" id="mese" value="" type="number" pattern="0?[1-9]|1[012]" min="1" max="12">
+        </div>
+
+        <div class="Form-field Form-field--date Grid-cell">
+          <label class="Form-label" for="anno">Anno</label>
+          <input class="Form-input u-text-r-s u-borderRadius-m" id="anno" value="" type="number" pattern="[0-9]{4}" min="1900" max="2010">
+        </div>
+
+      </div>
+
+    </fieldset>
+  </form>
+
+</div>
+
+<div class="u-margin-all-m">
+  <h2>Con datepicker</h2></div>
+
+<div class="u-margin-all-m">
+
+  <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose">
+    <fieldset class="Form-fieldset">
+
+      <legend class="Form-legend" id="appointment-label">Fissa la data per l'appuntamento</legend>
+
+      <div class="Form-field">
+
+        <label class="Form-label" for="appointment">Data (gg/mm/aaaa)</label>
+
+        <div class="Grid Grid--alignMiddle Grid--fit Grid--withGutter">
+
+          <div class="Grid-cell u-size10of12">
+            <input class="Form-input u-text-r-s u-borderRadius-m js-Datepicker" type="date" id="appointment" />
+          </div>
+
+          <div class="Grid-cell u-size2of12">
+            <button type="button" aria-describedby="appointment-label" aria-controls="appointment">
+              <span class="u-hiddenVisually">Seleziona la data</span>
+              <span class="Icon-calendar u-text-r-l"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+
+</div>
+
+
+  <!--[if IE 8]>
+  <script src="../../build/vendor/respond.min.js"></script>
+  <script src="../../build/vendor/rem.min.js"></script>
+  <script src="../../build/vendor/selectivizr.js"></script>
+  <script src="../../build/vendor/slice.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <script src="../../build/vendor/polyfill.min.js"></script>
+  <![endif]-->
+
+  <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+    è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
+  <script>__PUBLIC_PATH__ = '../../build.html'</script>
+
+  <script src="../../build/IWT.min.js"></script>
+
+</body>
+</html>
+

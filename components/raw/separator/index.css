@@ -1,0 +1,43 @@
+/* @define .Separator */
+
+:root {
+  --Separator-skewY: skewY(2deg);
+  --Separator-height: 10rem;
+  --Separator-offset: 4rem;
+  --Separator-skewY: 2deg;
+}
+
+/*
+ *  1. avoid body overflow
+ */
+
+.Separator {
+  @extend .u-border-none;
+  @extend .u-margin-all-none;
+  @extend .u-posRelative;
+  @extend .u-zindex-30;
+
+  height: var(--Separator-height);
+  left: 0;
+  margin-bottom: -var(--Separator-height) !important;
+  margin-left: -1em;
+  top: -var(--Separator-offset);
+  width: 99.999999%; /* [1] */
+}
+
+.Separator--down {
+  transform: skewX(0) skewY(var(--Separator-skewY));
+}
+
+.Separator--up {
+  transform: skewX(0) skewY(-var(--Separator-skewY));
+}
+
+.Separator-room {
+  @extend .u-block;
+  @extend .u-border-none;
+  @extend .u-margin-all-none;
+  @extend .u-posRelative;
+
+  padding-bottom: var(--Separator-height);
+}

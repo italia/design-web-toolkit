@@ -21,7 +21,7 @@
   <script type="text/javascript">
     WebFontConfig = {
       google: {
-        families: ['Titillium+Web:400,600,700,400italic:latin']
+        families: ['Titillium+Web:300,400,600,700,400italic:latin']
       }
     };
     (function() {
@@ -34,10 +34,9 @@
     })();
   </script>
 
-  <!-- include html5shim per Explorer 8 -->
+  <!-- include HTML5shim per Explorer 8 -->
   <script src="../../build/vendor/modernizr.js"></script>
 
-  <link media="all" rel="stylesheet" href="../../build/vendor.css">
   <link media="all" rel="stylesheet" href="../../build/build.css">
 
   <script src="../../build/vendor/jquery.min.js"></script>
@@ -47,15 +46,46 @@
 
 <body class="t-Pac">
 
+  <div class="u-textLeft">
   <a href="#options" data-menu-trigger="options" class="Button Button--info">Menu</a>
-<div id="options" data-menu class="Dropdown-menu u-borderShadow-m">
-  <ul class="Linklist">
-    <li><a href="#" class="u-color-50 u-padding-r-all">Fugiat aut eaque molestias.</a></li>
-    <li><a href="#" class="u-color-50 u-padding-r-all">Ullam doloribus rerum.</a></li>
-    <li><a href="#" class="u-color-50 u-padding-r-all">Porro fugit voluptas.</a></li>
-    <li><a href="#" class="u-color-50 u-padding-r-all">Et tenetur modi molestiae.</a></li>
-    
-  </ul>
+  <div id="options" data-menu class="Dropdown-menu u-borderShadow-m u-background-white">
+    <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+    <ul class="Linklist">
+      <li><a href="#" class="u-color-50 u-padding-r-all">Ex necessitatibus sed sed sed quam.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Fuga beatae quo cum dolorum tempora est non et.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Consequuntur et debitis quo dolores sint quae deserunt.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Ut odio dolore.</a></li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="u-textRight">
+  <a href="#options-2" data-menu-trigger="options-2" class="Button Button--info">Menu</a>
+  <div id="options-2" data-menu class="Dropdown-menu u-borderShadow-m u-background-white">
+    <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+    <ul class="Linklist">
+      <li><a href="#" class="u-color-50 u-padding-r-all">Ex necessitatibus sed sed sed quam.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Fuga beatae quo cum dolorum tempora est non et.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Consequuntur et debitis quo dolores sint quae deserunt.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Ut odio dolore.</a></li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="u-textCenter">
+  <a href="#options-3" data-menu-trigger="options-3" class="Button Button--info">Menu</a>
+  <div id="options-3" data-menu class="Dropdown-menu u-borderShadow-m u-background-white">
+    <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+    <ul class="Linklist">
+      <li><a href="#" class="u-color-50 u-padding-r-all">Ex necessitatibus sed sed sed quam.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Fuga beatae quo cum dolorum tempora est non et.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Consequuntur et debitis quo dolores sint quae deserunt.</a></li>
+      <li><a href="#" class="u-color-50 u-padding-r-all">Ut odio dolore.</a></li>
+      
+    </ul>
+  </div>
 </div>
 
 
@@ -69,6 +99,10 @@
   <!--[if lte IE 9]>
   <script src="../../build/vendor/polyfill.min.js"></script>
   <![endif]-->
+
+  <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+    è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
+  <script>__PUBLIC_PATH__ = '../../build.html'</script>
 
   <script src="../../build/IWT.min.js"></script>
 

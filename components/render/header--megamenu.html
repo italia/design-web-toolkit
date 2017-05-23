@@ -9,24 +9,19 @@
 
 <header class="Header  u-hiddenPrint">
 
-  <div class="Header-banner">
-    <div class="Header-owner Headroom-hideme">
+  <div class="Header-banner ">
+    <div class="Header-owner Headroom-hideme ">
       <a href=""><span>Nome amministrazione afferente</span></a>
-      <div class="Header-languages">
-          <a class="Header-language is-active u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="sito in italiano">
-            <abbr title="Italiano">ITA</abbr>
-          </a>
-          <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="website in english" lang="en">
-            <abbr title="English">ENG</abbr>
-          </a>
-          <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max is-active u-inlineBlock">
+      <div class="Header-languages ">
+          <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
             <span class="u-hiddenVisually">lingua attiva:</span>
-            <span class="u-md-hidden u-lg-hidden">ITA</span>
-            <span class="Icon Icon-expand u-padding-left-xs u-md-hidden u-lg-hidden"></span>
-            <span class="Icon Icon-more-actions u-padding-left-xxs u-padding-right-xxs u-hidden u-md-inlineBlock u-lg-inlineBlock"></span>
+            <span class="">ITA</span>
+            <!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
+            <span class="Icon Icon-expand u-padding-left-xs"></span>
           </a>
-          <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsDisplayNone u-nojsDisplayNone">
-            <ul class="Linklist">
+          <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
+            <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+            <ul>
               <li><a href="#1" class="u-padding-r-all"><span lang="en">English</span></a></li>
               <li><a href="#1" class="u-padding-r-all"><span lang="ar">عربي</span></a></li>
               <li><a href="#2" class="u-padding-r-all"><span lang="ch">中文网</span></a></li>
@@ -44,61 +39,63 @@
     </div>
   </div>
 
-  <div class="Header-navbar Grid Grid--alignMiddle">
-    <div class="Header-toggle Grid-cell">
-      <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock
-        u-lg-hidden u-md-hidden" href="#menu"
-        aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
-        <span class="Hamburger-toggle" role="presentation"></span>
-        <span class="Header-toggleText" role="presentation">Menu</span>
-      </a>
-    </div>
-
-    <div class="Header-logo Grid-cell" aria-hidden="true">
-      <a href="" tabindex="-1">
-        <img src="//placehold.it/75x80" alt="">
-      </a>
-    </div>
-
-    <div class="Header-title Grid-cell">
-      <h1 class="Header-titleLink">
-        <a href="/">
-          Nome della Pubblica Amministrazione<br>
-          <small>eventuale sottotitolo</small>
+  <div class="Header-navbar ">
+    <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
+      <div class="Header-logo Grid-cell" aria-hidden="true">
+        <a href="" tabindex="-1">
+          <img src="//placehold.it/75x80" alt="">
         </a>
-      </h1>
-    </div>
-
-    <div class="Header-searchTrigger Grid-cell">
-      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search"
-        title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
-      </button>
-      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden"
-        title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
-      </button>
-    </div>
-
-    <div class="Header-utils Grid-cell">
-      <div class="Header-social Headroom-hideme">
-        <p>Seguici su:</p>
-        <ul class="Header-socialIcons">
-          <li><a href="" title="Facebook"><span class="Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
-          <li><a href="" title="Twitter"><span class="Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
-          <li><a href="" title="Youtube"><span class="Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
-        </ul>
       </div>
-      <div class="Header-search" id="header-search">
-        <form class="Form">
-  <div class="Form-field Form-field--withPlaceholder Grid" role="search">
-    <input class="Form-input Grid-cell u-sizeFill u-text-r-s" required id="cerca">
-    <label class="Form-label" for="cerca">Cerca...</label>
-    <button class="Grid-cell u-sizeFit Icon-search u-background-60 u-color-white u-padding-all-s u-textWeight-700"
-      title="Avvia la ricerca" aria-label="Avvia la ricerca">
-    </button>
+
+      <div class="Header-title Grid-cell">
+        <h1 class="Header-titleLink">
+          <a href="/">
+            Nome della Pubblica Amministrazione<br>
+            <small>eventuale sottotitolo</small>
+          </a>
+        </h1>
+      </div>
+
+      <div class="Header-searchTrigger Grid-cell">
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search "
+          title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
+        </button>
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden "
+          title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
+        </button>
+      </div>
+
+      <div class="Header-utils Grid-cell">
+        <div class="Header-social Headroom-hideme">
+          <p>Seguici su</p>
+          <ul class="Header-socialIcons">
+            <li><a href="" title="Facebook"><span class="Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+            <li><a href="" title="Twitter"><span class="Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+            <li><a href="" title="Youtube"><span class="Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+          </ul>
+        </div>
+        <div class="Header-search" id="header-search">
+          <form class="Form">
+  <div class="Form-field Form-field--withPlaceholder Grid u-background-white u-color-grey-30 u-borderRadius-s" role="search">
+    <input class="Form-input Form-input--ultraLean Grid-cell u-sizeFill u-text-r-s u-color-black u-text-r-xs u-borderRadius-s"
+      required id="cerca">
+    <label class="Form-label u-color-grey-50 u-text-r-xxs" for="cerca">cerca nel sito</label>
+    <button class="Grid-cell u-sizeFit Icon-search Icon--rotated u-color-grey-50 u-padding-all-s u-textWeight-700" title="Avvia la ricerca" aria-label="Avvia la ricerca">
+  </button>
   </div>
 </form>
 
+        </div>
       </div>
+
+      <div class="Header-toggle Grid-cell">
+        <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock u-lg-hidden u-md-hidden" href="#menu"
+          aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
+          <span class="Hamburger-toggle" role="presentation"></span>
+          <span class="Header-toggleText" role="presentation">Menu</span>
+        </a>
+      </div>
+
     </div>
   </div>
   <!-- Header-navbar -->
@@ -106,79 +103,79 @@
   
   <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
     
-      <nav class="Megamenu Megamenu--default js-megamenu">
+      <nav class="Megamenu Megamenu--default js-megamenu ">
   <ul class="Megamenu-list">
     <li class="Megamenu-item">
       <a href="#">
-        Est sunt est<br>Quae qui et
+        Consectetur vel quo<br>Blanditiis consequatur accusamus
       </a>
       <div class="Megamenu-subnav u-jsDisplayNone">
         <ul class="Megamenu-subnavGroup">
-          <li><a href="/">Quae qui et</a>
+          <li><a href="/">Blanditiis consequatur accusamus</a>
             <ul>
-              <li><a href="/1">Laborum neque nemo</a></li>
-              <li><a href="/2">Qui nemo aut</a></li>
-              <li><a href="/3">Quo provident sint</a></li>
-              <li><a href="/4">Quisquam ea numquam</a></li>
+              <li><a href="/1">Omnis rem esse</a></li>
+              <li><a href="/2">Velit sunt et</a></li>
+              <li><a href="/3">Quia quasi ullam</a></li>
+              <li><a href="/4">Minima velit ut</a></li>
             </ul>
           </li>
-          <li><a href="">Modi consequatur aperiam</a></li>
+          <li><a href="">Accusantium neque enim</a></li>
         </ul>
         <ul class="Megamenu-subnavGroup">
-          <li><a href="">Sit non voluptatem</a>
+          <li><a href="">Sunt qui dolor</a>
             <ul>
-              <li><a href="/1">Nihil officia hic</a></li>
-              <li><a href="/2">Ut voluptas voluptas</a></li>
-              <li><a href="/3">Est sunt est</a></li>
-              <li><a href="/4">Quae qui et</a></li>
+              <li><a href="/1">Ut consectetur doloribus</a></li>
+              <li><a href="/2">Repellat rerum aperiam</a></li>
+              <li><a href="/3">Consectetur vel quo</a></li>
+              <li><a href="/4">Blanditiis consequatur accusamus</a></li>
             </ul>
           </li>
-          <li><a href="">Laborum neque nemo</a></li>
+          <li><a href="">Omnis rem esse</a></li>
         </ul>
         <ul class="Megamenu-subnavGroup">
-          <li><a href="">Qui nemo aut</a>
+          <li><a href="">Velit sunt et</a>
             <ul>
-              <li><a href="/1">Quo provident sint</a></li>
-              <li><a href="/2">Quisquam ea numquam</a></li>
-              <li><a href="/3">Modi consequatur aperiam</a></li>
-              <li><a href="/4">Sit non voluptatem</a></li>
+              <li><a href="/1">Quia quasi ullam</a></li>
+              <li><a href="/2">Minima velit ut</a></li>
+              <li><a href="/3">Accusantium neque enim</a></li>
+              <li><a href="/4">Sunt qui dolor</a></li>
             </ul>
           </li>
-          <li><a href="">Nihil officia hic</a></li>
+          <li><a href="">Ut consectetur doloribus</a></li>
         </ul>
       </div>
     </li>
     <li class="Megamenu-item">
-      <a href="#">Ut voluptas voluptas</a>
+      <a href="#">Repellat rerum aperiam</a>
       <div class="Megamenu-subnav u-jsDisplayNone">
         <ul class="Megamenu-subnavGroup">
-          <li><a href="/1">Est sunt est</a></li>
-          <li><a href="/2">Quae qui et</a></li>
+          <li><a href="/1">Consectetur vel quo</a></li>
+          <li><a href="/2">Blanditiis consequatur accusamus</a></li>
         </ul>
         <ul class="Megamenu-subnavGroup">
-          <li><a href="/1">Laborum neque nemo</a></li>
-          <li><a href="/2">Qui nemo aut</a></li>
+          <li><a href="/1">Omnis rem esse</a></li>
+          <li><a href="/2">Velit sunt et</a></li>
         </ul>
         <ul class="Megamenu-subnavGroup">
-          <li><a href="/1">Quo provident sint</a></li>
-          <li><a href="/2">Quisquam ea numquam</a></li>
+          <li><a href="/1">Quia quasi ullam</a></li>
+          <li><a href="/2">Minima velit ut</a></li>
         </ul>
       </div>
     </li>
     <li class="Megamenu-item">
-      <a href="#">Modi consequatur aperiam</a>
+      <a href="#">Accusantium neque enim</a>
       <div class="Megamenu-subnav u-jsDisplayNone">
         <ul class="Megamenu-subnavGroup">
-          <li><a href="/1">Sit non voluptatem</a></li>
-          <li><a href="/2">Nihil officia hic</a></li>
+          <li><a href="/1">Sunt qui dolor</a></li>
+          <li><a href="/2">Ut consectetur doloribus</a></li>
         </ul>
         <ul class="Megamenu-subnavGroup">
-          <li><a href="/1">Ut voluptas voluptas</a></li>
-          <li><a href="/2">Est sunt est</a></li>
+          <li><a href="/1">Repellat rerum aperiam</a></li>
+          <li><a href="/2">Consectetur vel quo</a></li>
         </ul>
         <ul class="Megamenu-subnavGroup">
-          <li><a href="/1">Quae qui et</a></li>
-          <li><a href="/2">Laborum neque nemo</a></li>
+          <li><a href="/1">Blanditiis consequatur accusamus</a></li>
+          <li><a href="/2">Omnis rem esse</a></li>
         </ul>
       </div>
     </li>

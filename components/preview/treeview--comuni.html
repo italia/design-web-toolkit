@@ -21,7 +21,7 @@
   <script type="text/javascript">
     WebFontConfig = {
       google: {
-        families: ['Titillium+Web:400,600,700,400italic:latin']
+        families: ['Titillium+Web:300,400,600,700,400italic:latin']
       }
     };
     (function() {
@@ -34,10 +34,9 @@
     })();
   </script>
 
-  <!-- include html5shim per Explorer 8 -->
+  <!-- include HTML5shim per Explorer 8 -->
   <script src="../../build/vendor/modernizr.js"></script>
 
-  <link media="all" rel="stylesheet" href="../../build/vendor.css">
   <link media="all" rel="stylesheet" href="../../build/build.css">
 
   <script src="../../build/vendor/jquery.min.js"></script>
@@ -93,14 +92,14 @@
             <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a></li> -->
         </ul>
       </li>
-      <li><a href="#">Attività e procedimenti <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></a>
+      <li><a href="#">Attività e procedimenti <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a>
         <ul>
           <li><a href="#">Dichiarazioni sostitutive e acquisizione d'ufficio dei dati</a></li>
           <!-- <li><a href="#" data-megamenu-class="u-text-h4">altro
             <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a></li> -->
         </ul>
       </li>
-      <li><a href="#">Bandi di concorso <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></a>
+      <li><a href="#">Bandi di concorso <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a>
         <ul>
           <li><a href="#">Concorsi attivi</a></li>
           <li><a href="#">Avvisi</a></li>
@@ -109,7 +108,7 @@
             <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a></li> -->
         </ul>
       </li>
-      <li><a href="#">Personale <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></a>
+      <li><a href="#">Personale <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a>
         <ul>
           <li><a href="#">Incarichi amministrativi di vertice</a></li>
           <li><a href="#">Dirigenti</a></li>
@@ -117,7 +116,7 @@
             <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a></li> -->
         </ul>
       </li>
-      <li><a href="#">Bandi di gara e contratti <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></a>
+      <li><a href="#">Bandi di gara e contratti <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a>
         <ul>
           <li><a href="#">Gare e procedure in corso</a></li>
           <li><a href="#">Avvisi di aggiudicazione, esiti e affidamenti</a></li>
@@ -127,7 +126,7 @@
             <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a></li> -->
         </ul>
       </li>
-      <li><a href="#">Altre risorse <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></a>
+      <li><a href="#">Altre risorse <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a>
         <ul>
           <li><a href="#">Enti controllati</a></li>
           <li><a href="#">Provvedimenti</a></li>
@@ -205,12 +204,12 @@
       <!-- <li><a href="#">news</a></li>
       <li><a href="#">eventi</a></li> -->
       <li><a href="#" data-megamenu-class="u-text-h4">mappa del sito
-        <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a></li>
+        <span data-megamenu-class="Icon Icon-chevron-right u-text-r-xxs"></span></a>
       </li>
     </ul>
   </li>
-  <li data-megamenu-class="Megamenu-area">
-    <a data-megamenu-class="Button u-border-none u-color-95 u-background-compl u-text-r-xxs" href="#">Accedi</a>
+  <li data-megamenu-class="u-hidden">
+    <a class="Button u-border-none u-color-95 u-background-compl u-text-r-xxs" href="#">Accedi</a>
   </li>
 </ul>
 
@@ -225,6 +224,10 @@
   <!--[if lte IE 9]>
   <script src="../../build/vendor/polyfill.min.js"></script>
   <![endif]-->
+
+  <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+    è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
+  <script>__PUBLIC_PATH__ = '../../build.html'</script>
 
   <script src="../../build/IWT.min.js"></script>
 

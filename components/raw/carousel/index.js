@@ -1,12 +1,5 @@
 import $ from 'jquery'
 
-/* eslint-disable no-unused-vars */
-
-import owlCarousel from 'owl.carousel'
-import a11y from './a11y'
-
-/* eslint-enable no-unused-vars */
-
 const opts = {
   owlPrev: '.owl-prev',
   owlNext: '.owl-next',
@@ -39,25 +32,31 @@ const opts = {
 const init = function() {
   const $owl = $(opts.jsSelector)
 
-  $(opts.owlPrev).click(() => $owl.trigger('prev.owl.carousel'))
-  $(opts.owlNext).click(() => $owl.trigger('next.owl.carousel'))
+  if ($owl.length <= 0) {
+    return
+  }
 
-  $owl.on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', (event) => {
-    if (!event.namespace) return
+  require(['owl.carousel', './a11y'], () => {
+    $(opts.owlPrev).click(() => $owl.trigger('prev.owl.carousel'))
+    $(opts.owlNext).click(() => $owl.trigger('next.owl.carousel'))
 
-    var carousel = event.relatedTarget,
-      element = event.target,
-      current = carousel.current()
+    $owl.on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', (event) => {
+      if (!event.namespace) return
 
-    $(`${opts.owlNext}[aria-controls='${element.id}']`)
-      .toggleClass('u-visibilityHidden', current === carousel.maximum())
+      var carousel = event.relatedTarget,
+        element = event.target,
+        current = carousel.current()
 
-    $(`${opts.owlPrev}[aria-controls='${element.id}']`)
-      .toggleClass('u-visibilityHidden', current === carousel.minimum())
+      $(`${opts.owlNext}[aria-controls='${element.id}']`)
+        .toggleClass('u-visibilityHidden', current === carousel.maximum())
+
+      $(`${opts.owlPrev}[aria-controls='${element.id}']`)
+        .toggleClass('u-visibilityHidden', current === carousel.minimum())
+    })
+
+    // must be called after events initialization
+    $owl.owlCarousel(opts.owlOpts)
   })
-
-  // must be called after events initialization
-  $owl.owlCarousel(opts.owlOpts)
 }
 
 $(document).ready(init)
