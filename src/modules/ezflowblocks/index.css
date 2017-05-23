@@ -192,3 +192,43 @@
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
 }
+
+/*
+ * MAP
+ */
+
+.u-flow-map {
+  @extend .u-padding-r-top;
+  margin-left: -10rem;
+  margin-right: -10rem;
+}
+
+.u-flow-map .u-map-title {
+  @extend .u-layout-r-withGutter;
+  @extend .u-text-r-s;
+  @extend .u-padding-r-top;
+  @extend .u-padding-r-bottom;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.u-flow-map .u-map-title h2 {
+  @extend .u-text-r-s;
+  @extend .u-color-50;
+  @extend .u-text-h3;
+  @extend .u-margin-all-xs;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-flow-map {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .u-flow-map .u-map-title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+}

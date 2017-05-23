@@ -15,6 +15,10 @@
   --Color-teal-50: #65dcdf;
   --Color-teal-70: #004a4d;
   --Color-focus: #ff8c00;
+  
+  --Color-compl: #83b81a;
+  --Color-compl-5: #cbd300;
+  
 }
 
 /*
@@ -246,19 +250,19 @@
 }
 
 .u-color-compl {
-  color: color(var(--Color-primary) h(+180) s(100%) l(70%)) !important;
+  color: var(--Color-compl) !important;
 }
 
 .u-background-compl {
-  background-color: color(var(--Color-primary) h(+180) s(100%) l(70%)) !important;
-}
-
-.u-background-compl-5 {
-  background-color: color(var(--Color-primary) h(+180) s(20%) l(95%)) !important;
+  background-color: var(--Color-compl) !important;
 }
 
 .u-color-compl-5 {
-  color: color(var(--Color-primary) h(+180) s(20%) l(95%)) !important;
+  color: cvar(--Color-compl-5) !important;
+}
+
+.u-background-compl-5 {
+  background-color: var(--Color-compl-5) !important;
 }
 
 .u-color-compl-10 {

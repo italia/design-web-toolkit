@@ -12,6 +12,14 @@
   --Button-info-bg: #fff;
   --Button-info-color: #003e54;
   --Button-info-border: #ccc;
+
+  --Button-compl-bg: var(--Color-compl);
+  --Button-compl-color: #fff;
+  --Button-compl-border: var(--Color-compl);
+
+  --Button-compl-5-bg: var(--Color-compl-5);
+  --Button-compl-5-color: #fff;
+  --Button-compl-5-border: var(--Color-compl-5);
 }
 
 .Button {
@@ -104,9 +112,9 @@
  */
 
 .Button--info {
-  background-color: var(--Button-info-bg);
-  border-color: var(--Button-info-border);
-  color: var(--Button-info-color);
+  background-color: var(--Button-info-bg) !important;
+  border-color: var(--Button-info-border) !important;
+  color: var(--Button-info-color) !important;
 }
 
 .Button--info[disabled],
@@ -122,14 +130,73 @@
   border-color: color(var(--Button-info-border) l(-10%));
 }
 
-.Button--info:active,
-.Button--info.is-pressed {
-  background-color: var(--Button-info-color);
-  border-color: color(var(--Button-info-color) l(-25%));
-  color: var(--Button-info-bg);
+.Button--compl:active,
+.Button--compl.is-pressed {
+  background-color: var(--Button-compl-color) !important;
+  border-color: color(var(--Button-compl-color) l(-25%)) !important;
+  color: var(--Button-compl-bg) !important;
+}
+
+.Button--compl {
+  background-color: var(--Button-compl-bg) !important;
+  border-color: var(--Button-compl-border) !important;
+  color: var(--Button-compl-color) !important;
+  text-transform: none;
+}
+
+.Button--compl[disabled],
+.Button--compl.is-disabled {
+  background-color: var(--Button-compl-bg) !important;
+  border-color: var(--Button-compl-border) !important;
+  color: var(--Button-compl-color) !important;
+}
+
+.Button--compl:focus,
+.Button--compl:hover {
+  background-color: color(var(--Button-compl-bg) l(-10%));
+  border-color: color(var(--Button-compl-border) l(-10%));
+}
+
+.Button--compl:active,
+.Button--compl.is-pressed {
+  background-color: var(--Button-compl-color) !important;
+  border-color: color(var(--Button-compl-color) l(-25%)) !important;
+  color: var(--Button-compl-bg) !important;
+}
+
+.Button--compl5 {
+  background-color: var(--Button-compl-5-bg) !important;
+  border-color: var(--Button-compl-5-border) !important;
+  color: var(--Button-compl-5-color) !important;
+  text-transform: none;
+}
+
+.Button--compl5[disabled],
+.Button--compl5.is-disabled {
+  background-color: var(--Button-compl-5-bg) !important;
+  border-color: var(--Button-compl-5-border) !important;
+  color: var(--Button-compl-5-color) !important;
+}
+
+.Button--compl5:focus,
+.Button--compl5:hover {
+  background-color: color(var(--Button-compl-5-bg) l(-10%));
+  border-color: color(var(--Button-compl-5-border) l(-10%));
+}
+
+.Button--compl5:active,
+.Button--compl5.is-pressed {
+  background-color: var(--Button-compl-5-color) !important;
+  border-color: color(var(--Button-compl-5-color) l(-25%)) !important;
+  color: var(--Button-compl-5-bg) !important;
 }
 
 .Button--xs {
   font-size: 1.3rem !important;
   padding: 0.1em 0.3em !important;
+}
+
+.Button--s {
+  font-size: 1.3rem !important;
+  padding: 0.3em 0.5em !important;
 }
