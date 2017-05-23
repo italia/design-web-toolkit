@@ -2,12 +2,12 @@
   font-family: "ita";
   font-style: normal;
   font-weight: normal;
-  src: url("./fonts/ita.eot?v1");
+  src: url("./fonts/ita.eot?v2");
   src:
-    url("./fonts/ita.eot?v1#iefix") format("embedded-opentype"),
-    url("./fonts/ita.ttf?v1") format("truetype"),
-    url("./fonts/ita.woff?v1") format("woff"),
-    url("./fonts/ita.svg?v1#ita") format("svg");
+    url("./fonts/ita.eot?v2#iefix") format("embedded-opentype"),
+    url("./fonts/ita.ttf?v2") format("truetype"),
+    url("./fonts/ita.woff?v2") format("woff"),
+    url("./fonts/ita.svg?v2#ita") format("svg");
 }
 
 .Icon,
@@ -36,6 +36,10 @@
 
 .Icon--rotated {
   transform: rotate(-90deg);
+}
+
+.Icon-behance::before {
+  content: "\62";
 }
 
 .Icon-linkedin::before {
