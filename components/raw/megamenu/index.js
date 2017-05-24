@@ -118,22 +118,12 @@ $(document).ready(function() {
   })
 
   $('.' + opts.topNavItemClass + ' > a').each((i, el) => {
-    const $target = $(el).parent().find('.' + opts.panelClass)
+    const $target = $(el).parent()
+      .find('.' + opts.panelClass)
+      .not(el)
 
     if (el && $target.length > 0) {
       new Popper(el, $target, {
-        // onUpdate: (data) => {
-        //   const $el = $(data.instance.popper)
-        //   if ($el.offset().left + $el.outerWidth() > $(window).width()) {
-        //     $el.css({ width: '95%' })
-        //   }
-        // },
-        // onCreate: (data) => {
-        //   const $el = $(data.instance.popper)
-        //   if ($el.offset().left + $el.outerWidth() > $(window).width()) {
-        //     $el.css({ width: '95%' })
-        //   }
-        // },
         placement: 'bottom',
         modifiers: {
           arrow: {

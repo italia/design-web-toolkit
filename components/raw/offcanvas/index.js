@@ -53,7 +53,7 @@ const _handleModal = (e) => {
     !$(e.target).is(opts.contentSelector)) {
     // for some odd reason plain jquery click() does not work here
     // // so we add that get(0) call
-    $(opts.closeSelector).get(0).click()
+    $(e.target).find(opts.closeSelector).get(0).click()
   }
   // we're using "one" here instead of "bind" because
   // otherwise $(opts.closeSelector).click() would trigger
