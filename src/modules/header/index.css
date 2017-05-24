@@ -68,8 +68,7 @@
   ========================================== */
 
 .Header-toggle {
-  @extend .u-size2of12;
-  @extend .u-lg-size1of8;
+  @extend .u-size1of12;
   @extend .u-textCenter;
 }
 
@@ -99,10 +98,7 @@
   ========================================== */
 
 .Header-logo {
-  @extend .u-size2of12;
-  @extend .u-sm-size2of12;
-  @extend .u-md-size1of12;
-  @extend .u-lg-size1of12;
+  @extend .u-size1of12;
 }
 
 .Header-logo img {
@@ -126,10 +122,7 @@
 
   @extend .u-lineHeight-xxs;
 
-  @extend .u-size6of12;
-  @extend .u-sm-size4of12;
-  @extend .u-md-size5of12;
-  @extend .u-lg-size5of12;
+  @extend .u-size7of12;
 
   @media (--md-viewport), (--lg-viewport) {
     @extend .u-lineHeight-m;
@@ -197,9 +190,9 @@
   @extend .u-textRight;
 
   @extend .u-sizeFull;
-  @extend .u-sm-size4of12;
-  @extend .u-md-size4of12;
-  @extend .u-lg-size4of12;
+  @extend .u-sm-size3of12;
+  @extend .u-md-size3of12;
+  @extend .u-lg-size3of12;
 
   @media (--sm-viewport) {
     @extend .u-margin-top-xs;

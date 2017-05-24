@@ -230,7 +230,7 @@
 }
 
 .Treeview li .TreeviewItemIcon {
-  @extend .u-color-50;
+  @extend .u-color-40;
   position: absolute;
   right: 2rem;
 }
