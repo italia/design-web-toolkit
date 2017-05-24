@@ -22,12 +22,9 @@
  *		class="t-Pac"
  */
 
-{
-  font-family: var(--Pac-font-family-sans);
-}
-
 .t-Pac {
   color: var(--Color-text);
+  font-family: var(--Pac-font-family-sans);
 }
 
 .t-Pac a {

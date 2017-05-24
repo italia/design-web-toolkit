@@ -2,12 +2,12 @@
   font-family: "ita";
   font-style: normal;
   font-weight: normal;
-  src: url("./fonts/ita.eot?v1");
+  src: url("../fonts/ita.eot?v1");
   src:
-    url("./fonts/ita.eot?v1#iefix") format("embedded-opentype"),
-    url("./fonts/ita.ttf?v1") format("truetype"),
-    url("./fonts/ita.woff?v1") format("woff"),
-    url("./fonts/ita.svg?v1#ita") format("svg");
+    url("../fonts/ita.eot?v1#iefix") format("embedded-opentype"),
+    url("../fonts/ita.ttf?v1") format("truetype"),
+    url("../fonts/ita.woff?v1") format("woff"),
+    url("../fonts/ita.svg?v1#ita") format("svg");
 }
 
 .Icon,

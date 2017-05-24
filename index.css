@@ -87,11 +87,9 @@ body {
   min-width: 300px; /* 1 */
 }
 
-
 :focus {
   outline: none;
 }
-
 
 a:hover {
   text-decoration: underline !important;
