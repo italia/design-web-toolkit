@@ -11,10 +11,7 @@
   @extend .u-sizeFull;
   @extend .u-background-text;
   @extend .u-color-60;
-  padding-left: 16.66667%;
-  @media (--lg-viewport) {
-    padding-left: 12.5%;
-  }
+  padding-left: 8.33333%;
 }
 
 .Header-banner a {
