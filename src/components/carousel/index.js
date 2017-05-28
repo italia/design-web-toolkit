@@ -54,8 +54,10 @@ const init = function() {
         .toggleClass('u-visibilityHidden', current === carousel.minimum())
     })
 
+    const settings = $.extend({}, opts.owlOpts || {}, $owl.data('carouselOptions'))
+
     // must be called after events initialization
-    $owl.owlCarousel(opts.owlOpts)
+    $owl.owlCarousel(settings)
   })
 }
 
