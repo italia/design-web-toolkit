@@ -36,7 +36,7 @@ const init = function() {
     return
   }
 
-  require(['owl.carousel', './a11y'], () => {
+  require(['owl.carousel', './a11y', 'owl.carousel/dist/assets/owl.carousel.css'], () => {
     $(opts.owlPrev).click(() => $owl.trigger('prev.owl.carousel'))
     $(opts.owlNext).click(() => $owl.trigger('next.owl.carousel'))
 

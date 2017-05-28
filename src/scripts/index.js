@@ -1,5 +1,9 @@
 /* Promise polyfill for IE10 */
-require('core-js/fn/promise')
+import Promise from 'promise-polyfill'
+
+if (!window.Promise) {
+  window.Promise = Promise
+}
 
 require('./console')
 require('./ehnance')
