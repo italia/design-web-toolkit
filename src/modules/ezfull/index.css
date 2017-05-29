@@ -48,7 +48,7 @@
 }
 
 .u-content .u-content-main .u-content-title h1 {
-  @extend .u-color-40;
+  @extend .u-color-80;
   @extend .u-margin-bottom-m;
   font-size: 3.2rem !important;
 }
@@ -59,16 +59,37 @@
   font-style: italic;
 }
 
-.u-content .u-content-main .u-content-title .u-content-dates {
-  font-size: 1.8rem !important;
+.u-content .u-content-main .u-content-title .u-content-date {
+  font-size: 1.3rem !important;
 }
 
 .u-content .u-content-main .Prose {
   @extend .u-margin-top-m;
+  margin-top: 3rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.u-content .u-content-main h2 {
+  @extend .u-color-50;
+  margin-top: 3rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.u-content .u-content-main h3 {
+  @extend .u-color-50;
+  margin-top: 3rem !important;
+  margin-bottom: 0rem !important;
 }
 
 .u-content .u-content-main h4 {
-  @extend .u-color-40;
+  @extend .u-color-50;
+  margin-top: 3rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.u-content .u-content-main h5 {
+  margin-top: 3rem !important;
+  margin-bottom: 0rem !important;
 }
 
 .u-content .u-content-main .u-content-main-image img {

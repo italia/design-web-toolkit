@@ -12,17 +12,17 @@
 .Prose > p,
 .Prose > pre
 .Prose > figure {
-  @extend .u-margin-bottom-xl;
+  @extend .u-margin-bottom-m;
 }
 
 .Prose,
 .Prose > p,
 .Prose > ul > li,
 .Prose > ol > li {
-  @extend .u-text-r-xs;
   @extend .u-lineHeight-xl;
 
   color: var(--Prose-color-text-primary);
+  font-size: 1.6rem !important;
 }
 
 .Prose > p > small {
@@ -31,7 +31,6 @@
 
 .Prose > a,
 .Prose p > a {
-  @extend .u-text-r-xs;
   @extend .u-lineHeight-xl;
 
   color: var(--Prose-color-link);
@@ -67,10 +66,8 @@
 
 .Prose > ul,
 .Prose > ol {
-  @extend .u-margin-bottom-xl;
-  @extend .u-margin-left-xl;
-
   list-style-position: outside;
+  margin-left: 6rem;
 }
 
 .Prose > ul {
@@ -79,12 +76,6 @@
 
 .Prose > ol {
   list-style-type: decimal;
-}
-
-.Prose > ul > li,
-.Prose > ol > li {
-  @extend .u-padding-top-xxs;
-  @extend .u-padding-bottom-xxs;
 }
 
 .Prose > h1 {
