@@ -51,6 +51,10 @@
   @extend .u-margin-all-xs;
   @extend .u-background-grey-10;
   min-height: 10rem;
+
+  @media (--lg-viewport) {
+    min-height: 14rem;
+  }
 }
 
 .u-flow-panels section .u-flow-panel .u-flow-icon {
@@ -59,6 +63,14 @@
 
 .u-flow-panels section .u-flow-item .subtitle {
   margin-top: 2rem;
+}
+
+.u-flow-panels section .u-flow-item .subtitle p {
+  display: inline;
+}
+
+.u-flow-panels section .u-flow-item .subtitle p:nth-child(n+2) {
+  margin-left: 0.5rem;
 }
 
 /* event */

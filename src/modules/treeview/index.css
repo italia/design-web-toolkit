@@ -33,6 +33,7 @@
   min-width: var(--Treeview-link-minWidth);
   top: 0;
   width: var(--Treeview-link-handler-width);
+  background-position: left;
 }
 
 /*
@@ -154,6 +155,7 @@
 
 .Treeview--ez ul .Treeview-handler--standalone {
   margin-left: 20rem !important;
+  background-position-x: 2rem;
 }
 
 .Treeview--ez ul ul .Treeview-handler--standalone {
