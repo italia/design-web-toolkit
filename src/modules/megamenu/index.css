@@ -159,9 +159,10 @@
  *  1. Cannot use padding-r-* because of pseudoselector.
  */
 
+/*
 .Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after,
 .Megamenu--default .Megamenu-list > li > a[aria-expanded=false]::after {
-  @extend .u-padding-left-xs; /* 1 */
+  @extend .u-padding-left-xs;
   @extend .u-text-r-xxs;
   @extend .u-posAbsolute;
   @extend .Icon;
@@ -170,6 +171,7 @@
   content: "\23f6";
   right: 0.5em;
 }
+*/
 
 .Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after {
   visibility: hidden;

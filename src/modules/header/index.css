@@ -248,6 +248,9 @@
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
   @extend .u-linkClean;
+  
+  padding-top: 0.7em !important;
+  padding-bottom: 0.7em !important;
 }
 
 .Header-language abbr {
