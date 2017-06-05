@@ -89,6 +89,7 @@
   margin-bottom: -calc(1rem + var(--Hamburger-height));
   margin-top: calc(1rem + var(--Hamburger-height));
   text-transform: uppercase;
+  font-size: 1.3rem !important;
 }
 
 /* Logo image

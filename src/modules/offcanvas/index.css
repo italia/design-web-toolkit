@@ -88,3 +88,7 @@
   top: 0;
   width: 100%;
 }
+
+.Offcanvas .Treeview-handler--default:after, .Offcanvas .Treeview-handler--standalone {
+  background-position: center !important;
+}
