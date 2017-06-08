@@ -34,7 +34,7 @@ proponendo di incorporare le proprie modifiche nella linea principale di svilupp
 Per poter compilare i sorgenti (CSS / JS) è richiesta l'installazione di [Node.js / npm](https://nodejs.org).
 
 Terminata l'installazione, la seguente sequenza di comandi eseguiti all'interno della directory del toolkit
-completerà il download delle librerie richieste per lo sviluppo:
+completerà il download e l'installazione delle librerie richieste per lo sviluppo:
 
 ```
 npm install

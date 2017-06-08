@@ -23,7 +23,7 @@ Per utilizzare i componenti all'interno del tuo sito è necessario<br>
 includere, oltre l'HTML, i fogli di stile (CSS) e i Javascript (JS) necessari.
 
 Puoi scaricare i file CSS / JS già compilati da incorporare in ogni pagina:<br>
-**[CSS / Javascript già compilati](https://github.com/italia/ita-web-toolkit/tree/gh-pages/build)**
+**[CSS / Javascript già compilati](https://github.com/italia/ita-web-toolkit/tree/gh-pages/ita-web-toolkit/build)**
 
 In produzione vanno inclusi i file:
 
@@ -36,7 +36,7 @@ In produzione vanno inclusi i file:
 ```
 
 facendo riferimento al
-**[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/gh-pages/build/index.html)**
+**[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/gh-pages/ita-web-toolkit/build/index.html)**
 
 ### File Javascript di componenti opzionali
 
