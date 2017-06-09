@@ -11,6 +11,39 @@ html {
 }
 */
 
+::-webkit-scrollbar {
+  height: initial;
+  width: initial;
+}
+
+::-webkit-scrollbar-button {
+  height: initial;
+  width: initial;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0 none transparent;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: initial;
+  border: 0 none initial;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: initial;
+}
+
+::-webkit-scrollbar-track:active {
+  background: initial;
+}
+
+::-webkit-scrollbar-corner {
+  background: initial;
+}
+
 a {
   transition: none !important;
 }
