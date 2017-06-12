@@ -10,24 +10,15 @@
 
 .u-landing .u-landing-main {
   @extend .Grid-cell;
-  @extend .Grid;
 }
 
 .u-landing .u-landing-main .u-landing-title {
-  @extend .Grid-cell;
-  @extend .u-lg-size8of12;
-  @extend .u-md-size8of12;
+  @extend .u-margin-top-m;
 }
 
 .u-landing .u-landing-main .u-landing-title h1 {
   @extend .u-color-80;
   font-size: 3.2rem !important;
-}
-
-.u-landing .u-landing-main .u-landing-parent {
-  @extend .Grid-cell;
-  @extend .u-lg-size4of12;
-  @extend .u-md-size4of12;
 }
 
 .u-landing .u-landing-main .u-landing-parent h1 {

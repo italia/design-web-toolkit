@@ -65,31 +65,31 @@
 
 .u-content .u-content-main .Prose {
   @extend .u-margin-top-m;
+  margin-bottom: 0 !important;
   margin-top: 3rem !important;
-  margin-bottom: 0rem !important;
 }
 
 .u-content .u-content-main h2 {
   @extend .u-color-50;
+  margin-bottom: 0 !important;
   margin-top: 3rem !important;
-  margin-bottom: 0rem !important;
 }
 
 .u-content .u-content-main h3 {
   @extend .u-color-50;
+  margin-bottom: 0 !important;
   margin-top: 3rem !important;
-  margin-bottom: 0rem !important;
 }
 
 .u-content .u-content-main h4 {
+  margin-bottom: 0 !important;
   @extend .u-color-50;
   margin-top: 3rem !important;
-  margin-bottom: 0rem !important;
 }
 
 .u-content .u-content-main h5 {
+  margin-bottom: 0 !important;
   margin-top: 3rem !important;
-  margin-bottom: 0rem !important;
 }
 
 .u-content .u-content-main .u-content-main-image img {
@@ -104,6 +104,12 @@
 
 .u-content .u-content-related .u-content-related-item {
   @extend .u-margin-bottom-xl;
+  @extend .u-padding-bottom-s;
+  border-bottom: 1px solid var(--Color-text);
+}
+
+.u-content .u-content-related .u-content-related-item:last-of-type {
+  border-bottom: none;
 }
 
 .u-content .u-content-related .u-content-related-item h4 {
