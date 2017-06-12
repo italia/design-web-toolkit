@@ -53,8 +53,12 @@
   min-height: 10rem;
 
   @media (--lg-viewport) {
-    min-height: 14rem;
+    min-height: 16rem;
   }
+}
+
+.u-flow-panels section .u-flow-panel-comunicato {
+  min-height: 10rem !important;
 }
 
 .u-flow-panels section .u-flow-panel .u-flow-icon {
@@ -65,6 +69,7 @@
   margin-top: 2rem;
 }
 
+/*
 .u-flow-panels section .u-flow-item .subtitle p {
   display: inline;
 }
@@ -72,6 +77,7 @@
 .u-flow-panels section .u-flow-item .subtitle p:nth-child(n+2) {
   margin-left: 0.5rem;
 }
+*/
 
 /* event */
 

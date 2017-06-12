@@ -7,9 +7,9 @@
  */
 
 :root {
-  --Hamburger-width: 4.6rem;
+  --Hamburger-width: 4rem;
   --Hamburger-height: 1.2rem;
-  --Hamburger-pad: 0.2rem;
+  --Hamburger-pad: 0.1rem;
 }
 
 /*
@@ -22,12 +22,21 @@
 .Hamburger-toggle::before,
 .Hamburger-toggle::after {
   @extend .u-background-text;
-  border-radius: 4px;
   content: " ";
   display: block;
   height: calc(var(--Hamburger-height) / 3);
   position: relative;
   width: calc(var(--Hamburger-width) * 0.7);
+}
+
+.Hamburger-toggleContainer:hover .Hamburger-toggle,
+.Hamburger-toggleContainer:hover .Hamburger-toggle::before,
+.Hamburger-toggleContainer:hover .Hamburger-toggle::after {
+  @extend .u-background-40;
+}
+
+.Hamburger-toggleContainer:hover .Header-toggleText {
+  @extend .u-color-40;
 }
 
 .Hamburger-toggle::before .is-active,
@@ -75,8 +84,9 @@
 
 .Hamburger-toggle,
 .Hamburger-toggle::before,
-.Hamburger-toggle::after {
-  transition: all 500ms ease-in-out;
+.Hamburger-toggle::after,
+.Header-toggleText {
+  transition: all 250ms ease-in-out;
 }
 
 .Hamburger-toggle.is-active {

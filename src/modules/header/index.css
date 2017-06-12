@@ -89,14 +89,21 @@
   margin-bottom: -calc(1rem + var(--Hamburger-height));
   margin-top: calc(1rem + var(--Hamburger-height));
   text-transform: uppercase;
-  font-size: 1.3rem !important;
+  font-size: 1.2rem !important;
 }
 
 /* Logo image
   ========================================== */
 
 .Header-logo {
-  @extend .u-size1of12;
+  @extend .u-size2of12;
+  @extend .u-lg-size1of12;
+  @extend .u-md-size1of12;
+
+  @media (--lg-viewport) {
+    width: 5% !important;
+  }
+
 }
 
 .Header-logo img {
@@ -120,7 +127,9 @@
 
   @extend .u-lineHeight-xxs;
 
-  @extend .u-size7of12;
+  @extend .u-size6of12;
+  @extend .u-lg-size7of12;
+  @extend .u-md-size7of12;
 
   @media (--md-viewport), (--lg-viewport) {
     @extend .u-lineHeight-m;
@@ -158,6 +167,37 @@
   @extend .u-hidden;
   @extend .u-md-inline;
   @extend .u-lg-inline;
+}
+
+.Header-titleLink .Header-siteName {
+  @extend .u-color-text;
+  @extend .u-textUppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.Headroom--not-top .Header-titleLink .Header-siteName {
+  display: none;
+}
+
+
+.Header-siteLogo {
+  width: 350px;
+    
+  @media (--md-viewport) {
+    width: 200px;
+  }
+  @media (--sm-viewport) {
+    width: 150px;
+  }
+  @media (--xs-viewport) {
+    width: 150px;
+  }
+}
+
+.Headroom--not-top .Header-siteLogo {
+  width: 150px !important;
 }
 
 /* Search button for small screens
