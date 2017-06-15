@@ -92,3 +92,7 @@
 .Offcanvas .Treeview-handler--default:after, .Offcanvas .Treeview-handler--standalone {
   background-position: center !important;
 }
+
+.Offcanvas-itemtext {
+  display: block;
+}

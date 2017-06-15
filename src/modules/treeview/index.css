@@ -249,6 +249,7 @@
   @extend .u-color-40;
   position: absolute;
   right: 2rem;
+  margin-top: -1.5rem;
 }
 
 .Treeview li[aria-expanded=true] .TreeviewItemIcon {
