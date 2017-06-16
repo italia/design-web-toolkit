@@ -1,8 +1,8 @@
-{
+module.exports = {
   "ecmaFeatures": {
     "globalReturn": true,
     "jsx": false,
-    "modules": true
+    "modules": true,
   },
   "rules": {
     "strict": 1,
@@ -42,6 +42,7 @@
     "expect": true,
     "sinon": true
   },
+  "root": true,
   "parser": "babel-eslint",
-  "plugins": [],
+  "plugins": []
 }
