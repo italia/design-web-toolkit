@@ -96,6 +96,14 @@
   width: 100%;
 }
 
+.u-content .u-content-main .tags h3 span {
+  font-size: 1.6rem;
+}
+
+.u-content .u-content-main .tags a {
+  font-size: 1.6rem;
+}
+
 .u-content .u-content-related {
   @extend .Grid-cell;
   @extend .u-md-size1of3;
