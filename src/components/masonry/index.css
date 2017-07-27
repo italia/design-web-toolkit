@@ -18,4 +18,6 @@
   @media (--lg-viewport) {
     content: "3 .u-floatLeft.u-size1of3";
   }
+
+  display: none;
 }
