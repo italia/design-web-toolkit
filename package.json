@@ -12,7 +12,7 @@
     "jquery.cookie": "^1.4.1",
     "owl.carousel": "^2.1.4",
     "pikaday": "https://registry.npmjs.org/pikaday/-/pikaday-1.5.1.tgz",
-    "popper.js": "^1.0.7",
+    "popper.js": "^1.11.0",
     "promise-polyfill": "^6.0.2",
     "salvattore": "^1.0.9",
     "suitcss": "^2.0.0",
@@ -65,7 +65,7 @@
     "stylelint-selector-bem-pattern": "^1.0.0",
     "suitcss-preprocessor": "^4.0.0",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.1"
+    "webpack": "^3.4.1"
   },
   "scripts": {
     "build:resources": "shx mkdir -p build/src && shx cp -r src/vendor build/ && shx cp -r src/icons build/src/icons && shx cp src/_preview.tmpl build/index.html",
