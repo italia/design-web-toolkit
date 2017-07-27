@@ -99,8 +99,11 @@ $(document).ready(function() {
       }
     }
 
-    $el.find('.' + opts.panelClass)
-      .append('<span class="Icon-drop-down Dropdown-arrow u-color-white"></span>')
+    $el
+      .find('.' + opts.panelClass)
+      .append(
+        '<span class="Icon-drop-down Dropdown-arrow u-color-white"></span>'
+      )
 
     $el.accessibleMegaMenu(opts)
 
@@ -114,13 +117,10 @@ $(document).ready(function() {
       $('.' + opts.menuClass).trigger(e)
       return false
     })
-
   })
 
   $('.' + opts.topNavItemClass + ' > a').each((i, el) => {
-    const $target = $(el).parent()
-      .find('.' + opts.panelClass)
-      .not(el)
+    const $target = $(el).parent().find('.' + opts.panelClass).not(el)
 
     if (el && $target.length > 0) {
       new Popper(el, $target, {
@@ -130,17 +130,17 @@ $(document).ready(function() {
             element: '.Dropdown-arrow'
           },
           flip: {
-            behavior: ['left', 'right'],
-            boundariesElement: 'scrollParent'
+            enabled: false
           },
           preventOverflow: {
-            boundariesElement: 'viewport'
-          },
-        },
+            padding: 8,
+            priority: ['right', 'left'],
+            boundariesElement: 'scrollParent'
+          }
+        }
       })
     }
   })
-
 })
 
 export default {
