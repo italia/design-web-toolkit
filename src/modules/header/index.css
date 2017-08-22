@@ -452,4 +452,9 @@ body .Header-title {
       width: 11.66667% !important;
       margin-left: 5%;
   }
+
+  body .Header-navbar {
+      background: #eaebec !important;
+  }
+
 }
