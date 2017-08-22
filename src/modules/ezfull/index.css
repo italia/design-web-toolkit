@@ -78,7 +78,7 @@
 .u-content .u-content-main h3 {
   @extend .u-color-50;
   margin-bottom: 0 !important;
-  margin-top: 3rem !important;
+  margin-top: 4rem !important;
 }
 
 .u-content .u-content-main h4 {
@@ -89,7 +89,8 @@
 
 .u-content .u-content-main h5 {
   margin-bottom: 0 !important;
-  margin-top: 3rem !important;
+  margin-top: 1rem!important;
+  margin-bottom: 1rem !important; 
 }
 
 .u-content .u-content-main .u-content-main-image img {
