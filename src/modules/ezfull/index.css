@@ -97,6 +97,19 @@
   width: 100%;
 }
 
+.u-content .u-content-main .tags {
+  @extend .u-margin-top-xxl;
+}
+
+.u-content .u-content-main .tags .tags-margin {
+  border-top: 1px solid var(--Color-primary);
+}
+
+.u-content .u-content-main .tags h3 {
+  margin-top: 0 !important;
+}
+
+
 .u-content .u-content-main .tags h3 span {
   font-size: 1.6rem;
 }
