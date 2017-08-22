@@ -56,3 +56,21 @@
 .Card .Card-image figure {
   min-height: 25rem;
 }
+
+/* modifiche omar */
+
+body .Card-content {
+    min-height: 16rem;
+    max-height: 16rem;
+    background-color: #eaebec !important;
+}
+
+body .Card-content .Card-title {
+    margin-top: 0 !important;
+}
+
+body .Card {
+    border-color: #eaebec !important;
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.8rem !important;
+}

@@ -20,3 +20,7 @@
 .Breadcrumb-item:last-child::after {
   content: none;
 }
+
+body .breadcrumb {
+  margin-left: 3.2rem !important;
+}
