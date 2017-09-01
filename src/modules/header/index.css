@@ -184,7 +184,7 @@
 
 .Header-siteLogo {
   width: 350px;
-    
+
   @media (--md-viewport) {
     width: 200px;
   }
@@ -289,7 +289,7 @@
   @extend .u-padding-r-top;
   @extend .u-padding-r-bottom;
   @extend .u-linkClean;
-  
+
   padding-top: 0.7em !important;
   padding-bottom: 0.7em !important;
 }
@@ -437,4 +437,24 @@
 .Headroom--unpinned {
 
   /* transform: translateY(-100%); */
+}
+
+body .Header-toggle {
+    width: 7.33333% !important;
+}
+
+body .Header-title {
+    width: 59.33333% !important;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+  body .Header-logo {
+      width: 11.66667% !important;
+      margin-left: 5%;
+  }
+
+  body .Header-navbar {
+      background: #eaebec !important;
+  }
+
 }
