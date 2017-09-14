@@ -114,9 +114,15 @@ body .u-content .u-content-main .Prose h5 {
   font-size: 1.8rem!important;
 }
 
-body .Prose > p {
+body .Prose > p, body .Prose > ul li {
   font-size: 1.8rem!important;
   line-height: 1.7 !important;
+  margin: 0;
+}
+
+body .Prose>ul {
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 body .u-content .u-content-related .u-content-related-item .Prose ul {
