@@ -1,8 +1,4 @@
----
-order: 30
-title: Struttura del file system
-label: Struttura del file system
----
+# Struttura del filesystem
 
 La directory `src` contiene le sotto-directory:
 
@@ -47,7 +43,3 @@ La directory `src` contiene le sotto-directory:
     │   └── ...
     └── vendor
 ```
-
-[Realizzare un tema](tema)
-
-{% include '_footer.md' %}

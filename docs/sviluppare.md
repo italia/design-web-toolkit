@@ -1,8 +1,4 @@
----
-order: 20
-title: Utilizzare l'ambiente di sviluppo
-label: Utilizzare l'ambiente di sviluppo
----
+# Utilizzare l'ambiente di sviluppo
 
 La procedura qui descritta è rivolta sia a chi vuole **contribuire allo sviluppo del toolkit**
 sia a chi vuole **utilizzare il CSS personalizzato all'interno di un sito web**
@@ -64,7 +60,3 @@ e visitare con il browser la pagina [http://localhost:1310](http://localhost:131
 A questo punto puoi modificare i sorgenti: qualsiasi modifica effettuata ai fogli di stile CSS,
 Javascript e/o template HTML mentre `npm run watch` rimane in esecuzione risulterà immediatamente visibile
 nel browser **senza dover ricaricare manualmente la pagina o lanciare il comando di build**.
-
-[Creare o modificare un modulo](moduli)
-
-{% include '_footer.md' %}

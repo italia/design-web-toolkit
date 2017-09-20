@@ -1,8 +1,4 @@
----
-order: 3
-title: Come iniziare
-label: Come iniziare
----
+# Come iniziare
 
 ## La styleguide
 
@@ -59,7 +55,6 @@ se il percorso di questa directory differisce da quello di default (`/build`), Ã
 il percorso alternativo, **relativo alla radice del sito web**, come visibile nel
 **[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/gh-pages/build/index.html)**:
 
-{% raw %}
 ```
 <!-- sostituire questo percorso con quello
      degli assets javascript nel proprio sito web:
@@ -68,7 +63,6 @@ il percorso alternativo, **relativo alla radice del sito web**, come visibile ne
 
 <script>__PUBLIC_PATH__ = '/assets/javascript/'</script>
 ```
-{% endraw %}
 
 ### Altri contenuti della directory build
 
@@ -111,7 +105,3 @@ sono particolarmente complesse: in questo caso Ã¨ consigliato
 seguire la procedura descritta in "[Utilizzare l'ambiente di sviluppo](sviluppare)"
 agendo direttamente sul codice sorgente dei fogli di stile del toolkit
 per realizzare una *build* personalizzata, prima di integrare il CSS nel layout.
-
-[Tecnologie utilizzate](tecnologie)
-
-{% include '_footer.md' %}

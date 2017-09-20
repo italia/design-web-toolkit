@@ -1,8 +1,4 @@
----
-order: 40
-title: Realizzare un tema
-label: Realizzare un tema
----
+# Sviluppare un tema personalizzato
 
 All'interno della directory `src/themes` è presente un CSS di esempio in cui viene mostrato come
 sovrascrivere le variabili utilizzate all'interno del toolkit:
@@ -138,5 +134,3 @@ e **non** quindi:
   padding-right: 1em;
 }
 ```
-
-{% include '_footer.md' %}

@@ -1,8 +1,4 @@
----
-order: 27
-title: Compatibilità con altri framework
-label: Compatibilità con altri framework
----
+# Compatibilità con altri framework
 
 Se utilizzi già un framework CSS all'interno del tuo progetto, ma hai intenzione di incorporare
 *anche* uno o più moduli del toolkit, puoi creare una *build* personalizzata volta
@@ -63,7 +59,3 @@ Dopo aver modificato il file `config.js`:
 - eseguendo `npm run build:js` si ottiene in output il file `build/IWT.min.js`
 
 L'output conterrà esclusivamente il CSS e il Javascript dei moduli che hai configurato.
-
-[Struttura del filesystem](struttura)
-
-{% include '_footer.md' %}

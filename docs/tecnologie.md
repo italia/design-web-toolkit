@@ -1,8 +1,4 @@
----
-order: 15
-title: Principali tecnologie utilizzate
-label: Tecnologie utilizzate
----
+# Tecnologie utilizzate
 
 Il toolkit è basato su alcuni software open source che svolgono
 diversi task e di cui è bene possedere una conoscenza anche sommaria
@@ -85,7 +81,3 @@ nel capitolo successivo: ["Utilizzare l'ambiente di sviluppo"](sviluppare):
 - [webpack](https://webpack.github.io) organizza i moduli CSS / Javascript in modo da poter esser utilizzati in produzione
 
 Non è necessario conoscere il funzionamento di questi software che vengono qui citati per completezza.
-
-[Utilizzare l'ambiente di sviluppo](sviluppare)
-
-{% include '_footer.md' %}
