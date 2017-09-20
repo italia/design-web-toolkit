@@ -7,12 +7,13 @@ import recommonmark
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 
-sys.path.append('./versioning')
+# sys.path.append('./versioning')
 
-from github_releases import get_latest_release
+# from github_releases import get_latest_release
 
 # -- PROJECT Variables ----------------------------------------------------
-settings_doc_version = get_latest_release('italia', 'ita-web-toolkit')
+# settings_doc_version = get_latest_release('italia', 'ita-web-toolkit')
+settings_doc_version = ""
 settings_doc_release = settings_doc_version
 settings_project_name = 'Web toolkit'
 settings_copyright_copyleft = 'MIT - Agenzia per l\'Italia Digitale'
