@@ -16,7 +16,7 @@ from recommonmark.transform import AutoStructify
 settings_doc_version = ""
 settings_doc_release = settings_doc_version
 settings_project_name = 'Web toolkit'
-settings_copyright_copyleft = 'MIT - Agenzia per l\'Italia Digitale'
+settings_copyright_copyleft = 'CC-BY 3.0 - Agenzia per l\'Italia Digitale'
 settings_editor_name = 'AgID - Agenzia per l\'Italia Digitale'
 settings_basename = 'web-toolkit'
 settings_file_name = 'web-toolkit'
