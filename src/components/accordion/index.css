@@ -6,6 +6,8 @@
   --Accordion-border-color: var(--Color-grey-30);
   --Accordion-link-arrow-up: svg-load("icons/img/SVG/collapse.svg", fill=var(--Color-50));
   --Accordion-link-arrow-down: svg-load("icons/img/SVG/expand.svg", fill=var(--Color-50));
+  --Accordion-link-plus: svg-load("icons/img/SVG/plus.svg", fill=var(--Color-50));
+  --Accordion-link-minus: svg-load("icons/img/SVG/minus.svg", fill=var(--Color-50));
   --Accordion-link-padding: 0.5em;
   --Accordion-link-arrow-width: 1em;
 }
@@ -19,6 +21,7 @@
   @extend .u-nbfc;
 }
 
+.Accordion--plus .Accordion-header,
 .Accordion--default .Accordion-header {
   @extend .u-color-grey-30;
   @extend .u-border-top-xxs;
@@ -27,10 +30,12 @@
   @extend .u-padding-r-top;
 }
 
+.Accordion--plus .Accordion-header:first-child,
 .Accordion--default .Accordion-header:first-child {
   @extend .u-border-top-none;
 }
 
+.Accordion--plus .Accordion-header:hover,
 .Accordion--default .Accordion-header:hover {
   @extend .u-background-5;
 }
@@ -39,6 +44,7 @@
   @extend .u-block;
 }
 
+.Accordion--plus .Accordion-link,
 .Accordion--default .Accordion-link {
   @extend .u-textClean;
   @extend .u-padding-all-s;
@@ -51,8 +57,8 @@
   @extend .u-padding-left-xl;
 }
 
+.Accordion--plus .Accordion-header,
 .Accordion--default .Accordion-header {
-  background-image: var(--Accordion-link-arrow-down);
   background-position: left var(--Accordion-link-padding) center;
   background-repeat: no-repeat;
   background-size: var(--Accordion-link-arrow-width);
@@ -62,6 +68,18 @@
     );
 }
 
+.Accordion--default .Accordion-header {
+  background-image: var(--Accordion-link-arrow-down);
+}
+
 .Accordion--default .Accordion-header[aria-expanded="true"] {
   background-image: var(--Accordion-link-arrow-up);
+}
+
+.Accordion--plus .Accordion-header {
+  background-image: var(--Accordion-link-plus);
+}
+
+.Accordion--plus .Accordion-header[aria-expanded="true"] {
+  background-image: var(--Accordion-link-minus);
 }
