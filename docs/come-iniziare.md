@@ -57,7 +57,7 @@ finale del file `IWT.min.js` riducendo quindi i tempi di download e parsing dura
 Tail file devono esser presenti nella stessa directory dove è contenuto il file `IWT.min.js`;
 se il percorso di questa directory differisce da quello di default (`/build`), è necessario specificare
 il percorso alternativo, **relativo alla radice del sito web**, come visibile nel
-**[template generico di esempio](https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/build/index.html)**:
+**[template generico di esempio](https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/index.html)**:
 
 {% raw %}
 ```
