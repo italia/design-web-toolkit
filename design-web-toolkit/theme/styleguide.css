@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700");
+
+html {
+  color: #000;
+  font-size: 100%;
+}
+
+/*
+.Frame-panel--main {
+  background-color: #f5f5f0 !important;
+}
+*/
+
+::-webkit-scrollbar {
+  height: initial;
+  width: initial;
+}
+
+::-webkit-scrollbar-button {
+  height: initial;
+  width: initial;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0 none transparent;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: initial;
+  border: 0 none initial;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: initial;
+}
+
+::-webkit-scrollbar-track:active {
+  background: initial;
+}
+
+::-webkit-scrollbar-corner {
+  background: initial;
+}
+
+a {
+  transition: none !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+}
+
+.Header-title,
+.Document-title,
+.Tree-entityLink,
+.Tree-collectionLabel,
+.Prose,
+.Prose *,
+.Prose > * {
+  font-family: Titillium web, sans-serif !important;
+  line-height: 1.55;
+}
+
+.Header-title {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.Frame-inner {
+  min-width: 314px;
+}
+
+.Document-title {
+  color: #000;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.Prose code,
+.Prose p,
+.Prose li,
+.Prose h2,
+.Prose h3,
+.Prose h4 {
+  color: #222;
+  font-size: inherit;
+}
+
+.Prose h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.Prose *:not(hr) + h2 {
+  margin-top: 1em;
+}
+
+.Prose h3 {
+  font-size: 1.6em;
+}
+
+.Prose code pre {
+  padding: 1em;
+}
+
+.Prose code pre,
+.Prose code pre span {
+  font-family: Hack, Consolas, Monaco, "Andale Mono", monospace !important;
+  font-size: 15px !important;
+}
+
+.Document-header,
+.Document-content {
+  max-width: 40em;
+}
+
+.Document {
+  padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .Document {
+    padding: 2rem 4rem;
+  }
+}
+
+.Prose a,
+.Prose a:visited {
+  color: #06c;
+}
+
+[dir="ltr"] .Tree-title {
+  padding-left: 1.6rem;
+}
+
+/* Header */
+
+.Header-button {
+  height: 5rem;
+  min-width: 3em;
+  width: 5rem;
+}
+
+[dir="ltr"] .t-Pac .Header-button {
+  border-right: none;
+}
+
+.t-Pac .Header-button {
+  height: auto;
+  width: auto;
+}
+
+.t-Pac .Header-button:focus {
+  box-shadow: inset 0 0 0 3px #ff8c00 !important;
+  outline: none;
+}
+
+.t-Pac .Header-button:active,
+.t-Pac .Header-button:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.t-Pac .Header .Header-navbar {
+  background-color: #06c !important;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+@media screen and (min-width: 1366px) {
+
+  .Header-navbar.Header-navbar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.Header-toggle.Header-toggle {
+  text-align: left !important;
+}
+
+@media screen and (max-width: 767px) {
+
+  .t-Pac .Header-logo img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+
+  .Header-navToggle {
+    margin-left: 2em;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .t-Pac .Header-logo img {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .t-Pac .Header-button .Header-toggleText {
+    margin-bottom: 0;
+    margin-top: -0.6rem;
+  }
+}
+
+.t-Pac .Frame .Header-navToggleIcon--open,
+.t-Pac .Frame.is-closed .Header-navToggleIcon--closed {
+  height: 4rem;
+  width: 4rem;
+}
+
+@media screen and (min-width: 768px), screen and (max-width: 1365px) and (min-width: 992px), screen and (min-width: 1366px) {
+
+  .t-Pac .Frame .Header-navToggleIcon--open,
+  .t-Pac .Frame.is-closed .Header-navToggleIcon--closed {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+.t-Pac .Hamburger-toggleContainer {
+  line-height: normal;
+}
+
+/* Tree */
+
+.Tree-title {
+  color: #1c2024;
+  font-family: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding-left: 1.6rem;
+  text-transform: none;
+}
+
+.Tree ul > li .Status {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Tree ul > li > a {
+  color: #003e54 !important;
+}
+
+.Tree ul > li.is-current a {
+  font-weight: 700;
+}
+
+.Frame-panel--sidebar {
+  background-color: white;
+  min-width: 280px !important;
+  padding-bottom: 2em;
+}
+
+.Browser-panel *,
+.Browser-code .Code pre {
+  font-size: 15px !important;
+}
+
+/* Footer */
+
+.t-Pac .Document .Footer .Footer-links {
+  border-top: 1px solid #008383;
+  padding-left: 0;
+  padding-top: 1em;
+}
+
+.t-Pac .Document .Footer .Footer-links li {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 2em;
+}
+
+.t-Pac .Document .Footer-links a {
+  font-size: 1em;
+}
+
+/* Browser */
+
+.Browser-tab {
+  max-width: none;
+}
+
+/* Status */
+
+.Status-label {
+  font-size: 1.3rem;
+}
+
+.Status-dot {
+  height: 0.9rem;
+  margin-left: 0.2em;
+  width: 0.9rem;
+}
+
+/* Browser */
+
+.Browser-tab a {
+  font-size: 1.6rem;
+}
+
+/* Pen */
+
+.Pen .Pen-header {
+  max-height: 8rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.t-Pac .Pen-header .Pen-title.u-text-h4 {
+  margin-bottom: 0 !important;
+}
+
+.Navigation-group {
+  border-bottom: 1px solid #ddd;
+}

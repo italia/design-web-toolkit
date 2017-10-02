@@ -8,6 +8,8 @@
   --Treeview-link-arrow-width: 1em;
   --Treeview-link-arrow-down: inline("icons/img/SVG/expand.svg");
   --Treeview-link-arrow-up: inline("icons/img/SVG/collapse.svg");
+  --Treeview-link-plus: inline("icons/img/SVG/plus.svg");
+  --Treeview-link-minus: inline("icons/img/SVG/minus.svg");
 }
 
 .Treeview-handler--default::after,
@@ -15,6 +17,11 @@
   background-image: var(--Treeview-link-arrow-down);
   background-repeat: no-repeat;
   background-size: var(--Treeview-link-arrow-width);
+}
+
+.Treeview--plus > li > .Treeview-handler--default::after,
+.Treeview--plus > li > a > .Treeview-handler--standalone {
+  background-image: var(--Treeview-link-plus);
 }
 
 .Treeview-handler--default::after,
@@ -41,6 +48,11 @@
 .Treeview [aria-expanded="true"] > .Treeview-handler--default::after,
 .Treeview [aria-expanded="true"] > a > .Treeview-handler--standalone {
   background-image: var(--Treeview-link-arrow-up);
+}
+
+.Treeview--plus [aria-expanded="true"] > .Treeview-handler--default::after,
+.Treeview--plus [aria-expanded="true"] > a > .Treeview-handler--standalone {
+  background-image: var(--Treeview-link-minus);
 }
 
 .Treeview [aria-hidden="true"] {
