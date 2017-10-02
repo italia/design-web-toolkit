@@ -14,7 +14,7 @@ Il tool [npm](https://docs.npmjs.com/getting-started/what-is-npm) è utilizzato 
 la gestione delle dipendenze necessarie sia alla fase di sviluppo / compilazione
 che per i componenti Javascript integrati lato client (nel browser).
 
-La lista delle librerie utilizzate è visibile nel file [`package.json`](https://github.com/italia/ita-web-toolkit/blob/master/package.json).
+La lista delle librerie utilizzate è visibile nel file [`package.json`](https://github.com/italia/design-web-toolkit/blob/master/package.json).
 
 Prima di incorporare nuove dipendenze è buona pratica verificare se siano già presenti nel
 [registro npm](https://www.npmjs.com/) in modo da poterle integrare più agevolmente.
@@ -38,7 +38,7 @@ con particolare riferimento alla [griglia responsive](https://github.com/suitcss
 
 3. viene utilizzato il [preprocessore CSS di SUIT](https://github.com/suitcss/preprocessor)
 integrato da un insieme di plugin *ad-hoc*; è possibile visualizzare la lista dei plugin
-nel file [`.postcss.js`](https://github.com/italia/ita-web-toolkit/blob/master/.postcss.js)
+nel file [`.postcss.js`](https://github.com/italia/design-web-toolkit/blob/master/.postcss.js)
 contenuto nella directory radice del *repository*.
 
 È possibile consultare l'

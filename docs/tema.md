@@ -93,7 +93,7 @@ Alcune variabili che è possibile sovrascrivere:
 
 ### Personalizzare i colori
 
-La palette di colori è generata automaticamente a partire da un colore di base (`--Color-primary`) ([`src/utils/colors/index.css`](https://github.com/italia/ita-web-toolkit/blob/master/src/utils/colors/index.css))
+La palette di colori è generata automaticamente a partire da un colore di base (`--Color-primary`) ([`src/utils/colors/index.css`](https://github.com/italia/design-web-toolkit/blob/master/src/utils/colors/index.css))
 applicando tinte e tonalità secondo quanto descritto nel [relativo paragrafo delle Linee Guida](http://design.italia.it/linee-guida/colori/);
 in questo modo è sufficiente sovrascrivere la variabile `--Color-primary` per ottenere l'**intera palette**.
 

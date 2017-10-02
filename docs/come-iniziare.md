@@ -23,7 +23,7 @@ Per utilizzare i componenti all'interno del tuo sito è necessario<br>
 includere, oltre l'HTML, i fogli di stile (CSS) e i Javascript (JS) necessari.
 
 Puoi scaricare i file CSS / JS già compilati da incorporare in ogni pagina:<br>
-**[CSS / Javascript già compilati](https://github.com/italia/ita-web-toolkit/tree/gh-pages/ita-web-toolkit/build)**
+**[CSS / Javascript già compilati](https://github.com/italia/design-web-toolkit/tree/gh-pages/design-web-toolkit/build)**
 
 In produzione vanno inclusi i file:
 
@@ -36,7 +36,7 @@ In produzione vanno inclusi i file:
 ```
 
 facendo riferimento al
-**[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/gh-pages/ita-web-toolkit/build/index.html)**
+**[template generico di esempio](https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/index.html)**
 
 ### File Javascript di componenti opzionali
 
@@ -57,7 +57,7 @@ finale del file `IWT.min.js` riducendo quindi i tempi di download e parsing dura
 Tail file devono esser presenti nella stessa directory dove è contenuto il file `IWT.min.js`;
 se il percorso di questa directory differisce da quello di default (`/build`), è necessario specificare
 il percorso alternativo, **relativo alla radice del sito web**, come visibile nel
-**[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/gh-pages/build/index.html)**:
+**[template generico di esempio](https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/build/index.html)**:
 
 {% raw %}
 ```

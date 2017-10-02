@@ -170,7 +170,7 @@ class Menu {
 
     this.$element.attr('role', 'menu')
     // @FIXME
-    // ita-web-toolkit mod:
+    // design-web-toolkit mod:
     // be careful with the following as menuitem(s)
     // get a special treatment by screen readers
       .find('li').attr('role', 'menuitem')

@@ -11,7 +11,7 @@ fractal.web.set('static.path', __dirname + '/build')
 // prefix all resources url with '/build'
 
 if (process.env.DEPLOY === 'true') {
-  fractal.web.set('static.mount', '/ita-web-toolkit/build')
+  fractal.web.set('static.mount', '/design-web-toolkit/build')
 } else {
   fractal.web.set('static.mount', '/build')
 }
@@ -79,17 +79,17 @@ const myCustomisedTheme = mandelbrot({
   'lang': 'it',
   'styles': [
     'default',
-    '/ita-web-toolkit/theme/styleguide.css',
+    '/design-web-toolkit/theme/styleguide.css',
     '/build/build-styleguide.css'
   ],
   'scripts': [
     'default',
     '/build/styleguide.min.js',
-    '/ita-web-toolkit/theme/styleguide-menu-override.js'
+    '/design-web-toolkit/theme/styleguide-menu-override.js'
   ]
 })
 
-myCustomisedTheme.addStatic(__dirname + '/theme', '/ita-web-toolkit/theme')
+myCustomisedTheme.addStatic(__dirname + '/theme', '/design-web-toolkit/theme')
 
 /*
  * Specify theme-overrides folder
