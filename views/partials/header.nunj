@@ -15,7 +15,7 @@
 
     <div class="Header-title Grid-cell">
       <a href="" tabindex="-1" class="Header-logo u-margin-r-right">
-        <img src="/ita-web-toolkit/theme/docs/logo-it.svg" alt="">
+        <img src="/design-web-toolkit/theme/docs/logo-it.svg" alt="">
       </a>
       <div class="u-margin-r-left">
         <h1 class="Header-titleLink u-text-h1">
@@ -26,7 +26,7 @@
 
     <div style="position: absolute; right: 1em"
       class="u-hidden u-sm-inlineBlock u-md-inlineBlock u-lg-inlineBlock u-borderRadius-m u-padding-all-xxs u-background-white">
-      <a class="u-inlineBlock u-margin-r-left u-margin-r-right u-linkClean u-color-95" href="//github.com/italia/ita-web-toolkit">
+      <a class="u-inlineBlock u-margin-r-left u-margin-r-right u-linkClean u-color-95" href="//github.com/italia/design-web-toolkit">
         <span class="u-inlineBlock u-alignMiddle u-margin-r-right">{% include 'icons/github.svg' %}</span>
         <span class="u-inlineBlock u-alignMiddle u-text-r-s">GitHub</span>
       </a>
