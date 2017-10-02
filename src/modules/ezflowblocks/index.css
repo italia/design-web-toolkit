@@ -253,6 +253,14 @@
 
 /* modifiche omar */
 
+body .u-lg-size1of3 .u-flow-panels section a.thumbnail {
+    margin-bottom: 0 !important;
+}
+
+body .u-lg-size1of3 .u-flow-panels section {
+    padding-bottom: 0 !important;
+}
+
 body section.u-flow-panels {
     padding: 2.4rem !important;
     padding-bottom: 0rem !important;
