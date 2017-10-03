@@ -1,3 +1,9 @@
+### 1.0.0-beta
+
+* REFACTOR: rinominato ita-web-toolkit in design-web-toolkit
+* FIX: modulo share (posizione icone)
+* FIX: javascript treeview
+
 ### 1.0.0-alpha
 
 * BREAKING CHANGE: Modificato modulo Header
