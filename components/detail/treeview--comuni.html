@@ -902,7 +902,7 @@
       <span class="hljs-comment">//  .parent().attr('aria-label', function() { return $(this).text() })</span>
       <span class="hljs-keyword">if</span> ($li.find(<span class="hljs-string">'ul'</span>).length !== <span class="hljs-number">0</span>) {
 
-        $li.children(<span class="hljs-string">'a'</span>).not(<span class="hljs-string">'[href=#]'</span>)
+        $li.children(<span class="hljs-string">'a'</span>).not(<span class="hljs-string">"[href='#']"</span>)
           .append(<span class="hljs-string">`&lt;span class="<span class="hljs-subst">${classMenuHandler}</span> <span class="hljs-subst">${styleMenuHandlerStandalone}</span>"
               aria-label="<span class="hljs-subst">${ariaLabelHandler}</span>" role="button" tabindex="0"&gt;&lt;/span&gt;`</span>)
 
