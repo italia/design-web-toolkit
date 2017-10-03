@@ -337,7 +337,7 @@ const Treeview = function({
       //  .parent().attr('aria-label', function() { return $(this).text() })
       if ($li.find('ul').length !== 0) {
 
-        $li.children('a').not('[href=#]')
+        $li.children('a').not('[href=\\#]')
           .append(`<span class="${classMenuHandler} ${styleMenuHandlerStandalone}"
               aria-label="${ariaLabelHandler}" role="button" tabindex="0"></span>`)
 
