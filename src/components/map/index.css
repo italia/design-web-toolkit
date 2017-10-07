@@ -7,10 +7,10 @@
 
 
 .leaflet-retina .leaflet-control-layers-toggle {
-	background-image: none;
+	background-image: url('images/layers.png');
 	background-size: 26px 26px;
 }
 
 .leaflet-default-icon-path {
-	background-image: none;
+	background-image: url('images/marker-icon.png');
 }
