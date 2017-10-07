@@ -1,0 +1,16 @@
+@import "leaflet/dist/leaflet.css";
+
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: url('images/layers.png');
+	background-size: 26px 26px;
+}
+
+
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: none;
+	background-size: 26px 26px;
+}
+
+.leaflet-default-icon-path {
+	background-image: none;
+}
