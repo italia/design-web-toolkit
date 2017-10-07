@@ -4,11 +4,16 @@ import requests
 
 #http://servicemap.disit.org/WebAppGrafo/api/v1/?selection=43.7756;11.2490&categories=SensorSite;Car_park&maxResults=10&maxDists=0.2&lang=it&format=json
 
-fields = {
-    'selection':'43.7756;11.2490',
-    'categories': 'SensorSite;Car_park',
+payload = {
+    'selection':[43.7756,11.2490],
+    'categories': ';'.join(['SensorSite','Car_park']),
     'maxResults': 10,
     'maxDists': 0.2,
     'lang': 'it',
     'format': 'json'
 }
+
+r = requests.get('http://servicemap.disit.org/WebAppGrafo/api/v1/', params=payload)
+data = r.json()
+
+print(len(data))
