@@ -122,9 +122,16 @@
     base_map.addTo(map);
 
     function pop_expl(feature, layer) {
+        var incidenti_year = feature.properties.incidenti;
+        var incidenti_total = 0;
+        for (var y in incidenti_year){
+            if (y>=rangeMin && y <=rangeMax) {
+                incidenti_total += incidenti_year[y];
+            }
+        }
         var popupContent = "<b>ente:</b> " + feature.properties.ente
             + "<br><b>incidenti:</b> " + JSON.stringify(feature.properties.incidenti)
-            + "<br><b>incidenti 2010:</b> " + parseInt(feature.properties.incidenti["2010"]);
+            + "<br><b>incidenti total: </b>" + incidenti_total;
         layer.bindPopup(popupContent);
     }
 
@@ -147,11 +154,18 @@
             onEachFeature: pop_expl,
             filter:
                 function(feature, layer) {
-                    //var incidentMinYear = parseInt(feature.properties.incidenti['2010']); //rangeMin.toString()
+                    var incidenti_year = feature.properties.incidenti;
+                    var incidenti_total = 0;
+                    for (var y in incidenti_year){
+                        if (y>=rangeMin && y <=rangeMax) {
+                            incidenti_total += incidenti_year[y];
+                        }
+                    }
+                    //var incidentMinYear = parseInt(feature.properties.incidenti[rangeMin]); //rangeMin.toString()
                     //parseInt(feature.properties.date.substring(feature.properties.date.length-4));
                     //return (inputyear <= rangeMax) && (inputyear >= rangeMin);
-                    //return incidentMinYear > 0;
-                    return true;
+                    return incidenti_total > 0;
+                    //return true;
                 },
             pointToLayer: recording_marker
             });
