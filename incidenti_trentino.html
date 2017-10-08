@@ -2,17 +2,18 @@
 <meta charset="UTF-8">
 
 <html>
-
 <head>
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mappa incidenti Trentino</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <!--<script src="leaflet.ajax.min.js" type="text/javascript"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.0.0/leaflet.ajax.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.js"></script>
+  <!--<script src="leaflet.ajax.min.js" type="text/javascript"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.0.0/leaflet.ajax.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.js"></script>
 
 	<style>
   	html {
@@ -22,7 +23,7 @@
     	height: 100%;
   	}
   	#map {
-    	height: 98%;
+    	height: 90vh;
   	}
     #wrapper {
         height: 100%;
@@ -102,19 +103,21 @@
         </div>
         <div id="openModal" class="modalDialog">
             <div><a href="#close" title="Close" class="close">X</a>
-
                 <h2>Mappa degli incidenti nel Trentino 2003 - 2015 per 1000 residenti</h2>
-
                 <p>Vedi risorsa http://dati.trentino.it/dataset/incidenti-stradali-per-1-000-residenti</p>
             </div>
         </div>
     </div>
-
 	<script type="text/javascript">
+    // variable that contains the geo data
+    let data_map;
+    // url where data can be found
+    const MapUrl = "https://raw.githubusercontent.com/kercos/km4city/master/incidenti.geojson";
+//    const MapUrl = "http://127.0.0.1:8887/incidenti.geojson";
 
-    var map = L.map('map', {scrollWheelZoom:false}).setView([46.0748, 11.1217], 9);
+    let map = L.map('map', {scrollWheelZoom:false}).setView([46.0748, 11.1217], 9);
 
-    var base_map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    let base_map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
@@ -122,14 +125,16 @@
     base_map.addTo(map);
 
     function pop_expl(feature, layer) {
-        var incidenti_year = feature.properties.incidenti;
-        var incidenti_total = 0;
-        for (var y in incidenti_year){
-            if (y>=rangeMin && y <=rangeMax) {
-                incidenti_total += incidenti_year[y];
-            }
+        let incidenti_year = feature.properties.incidenti;
+        let incidenti_total = 0;
+
+        for (let y in incidenti_year) {
+          if (y >= rangeMin && y <= rangeMax) {
+            incidenti_total += incidenti_year[y];
+          }
         }
-        var popupContent = "<b>ente:</b> " + feature.properties.ente
+      
+        let popupContent = "<b>ente:</b> " + feature.properties.ente
             + "<br><b>incidenti:</b> " + JSON.stringify(feature.properties.incidenti)
             + "<br><b>incidenti total: </b>" + incidenti_total;
         layer.bindPopup(popupContent);
@@ -138,48 +143,44 @@
     function recording_marker(feature, latlng) {
         return L.circleMarker(latlng, {
             radius: 8.0,
-            fillColor: '#11fe00',
-            color: '#000000',
+            fillColor: "springgreen",
+            color: "#000000",
             weight: 1,
             opacity: 1.0,
             fillOpacity: 0.8
         })
     }
 
-    var points_group = L.featureGroup();
+    // creates layers for showing map
+    let points_groups = [L.featureGroup(), L.featureGroup()];
+    // current group pointer: 0 or 1
+    let gp = 0;
 
-    function addDataToMap(data, map) {
-        var dataLayer = L.geoJson(data, {
-            //feature.properties.incidenti
+    function addDataToMap(data, map, gp) {
+        let dataLayer = L.geoJson(data, {
             onEachFeature: pop_expl,
             filter:
                 function(feature, layer) {
-                    var incidenti_year = feature.properties.incidenti;
-                    var incidenti_total = 0;
-                    for (var y in incidenti_year){
-                        if (y>=rangeMin && y <=rangeMax) {
+                    let incidenti_year = feature.properties.incidenti;
+                    let incidenti_total = 0;
+                    
+                    for (let y in incidenti_year) {
+                        if (y >= rangeMin && y <= rangeMax) {
                             incidenti_total += incidenti_year[y];
                         }
                     }
-                    //var incidentMinYear = parseInt(feature.properties.incidenti[rangeMin]); //rangeMin.toString()
-                    //parseInt(feature.properties.date.substring(feature.properties.date.length-4));
-                    //return (inputyear <= rangeMax) && (inputyear >= rangeMin);
+
                     return incidenti_total > 0;
-                    //return true;
                 },
             pointToLayer: recording_marker
             });
-        dataLayer.addTo(points_group);
+        dataLayer.addTo(points_groups[gp]);
+        points_groups[gp].addTo(map);
     }
 
-    points_group.addTo(map);
-
-    //var MapUrl = "https://raw.githubusercontent.com/kercos/km4city/master/incidenti.geojson"
-    var MapUrl = "http://127.0.0.1:8887/incidenti.geojson"
-
-    data_map = $.getJSON(MapUrl, function(data) { addDataToMap(data, map); });
-
-    var slidervar = document.getElementById('slider');
+    // slider management
+    let slidervar = document.getElementById('slider');
+    // settings
     noUiSlider.create(slidervar, {
         connect: true,
         start: [ 2003, 2015],
@@ -190,8 +191,8 @@
         step: 1,
     });
 
-    var inputNumberMin = document.getElementById('input-number-min');
-    var inputNumberMax = document.getElementById('input-number-max');
+    let inputNumberMin = document.getElementById('input-number-min');
+    let inputNumberMax = document.getElementById('input-number-max');
     inputNumberMin.addEventListener('change', function(){
         slidervar.noUiSlider.set([this.value, null]);
     });
@@ -199,25 +200,35 @@
         slidervar.noUiSlider.set([null, this.value]);
     });
 
+    // manage changing slider range
     slidervar.noUiSlider.on('update', function( values, handle ) {
         //handle = 0 if min-slider is moved and handle = 1 if max slider is moved
-        if (handle==0){
+        if (handle == 0) {
             document.getElementById('input-number-min').value = parseInt(values[0]);
-        } else {
-            document.getElementById('input-number-max').value =  parseInt(values[1]);
+        }
+        else {
+            document.getElementById('input-number-max').value = parseInt(values[1]);
         }
         rangeMin = document.getElementById('input-number-min').value;
         rangeMax = document.getElementById('input-number-max').value;
-        //first let's clear the layer:
-        points_group.clearLayers();
-        data_map = $.getJSON(MapUrl, function(data) { addDataToMap(data, map); });
-    })
 
 
+        // add data to other layer
+        addDataToMap(data_map, map, 1-gp);
 
+        // clear layer
+        points_groups[gp].clearLayers();
 
+        // update pointer
+        gp = 1 - gp;
+    });
+
+    // download data, add points to maps for the first time and store them locally
+    $.getJSON(MapUrl, function(data) {
+      data_map = data;
+      addDataToMap(data, map, gp);
+    });
 </script>
-
 </body>
 </html>
 
