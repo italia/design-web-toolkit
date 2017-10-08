@@ -2,34 +2,33 @@
     <fieldset class="Form-fieldset">
         <legend class="Form-legend">Map component</legend>
 
-            <div class="Form-field">
-                <div class="u-nbfc u-border-all-xxs u-color-grey-30 u-background-grey-10">
-            		<div class="maps" id="map"></div>
-                	</div>
-        	</div>
-            <div class="Form-field">
-                <label class="Form-label is-required" for="address">Indirizzo</label>
-                <input class="Form-input u-text-r-s u-borderRadius-m" id="map-search-input" aria-required="true" required>
+        <div class="Form-field">
+            <div class="u-nbfc u-border-all-xxs u-color-grey-30 u-background-grey-10">
+                <div class="maps" id="map"></div>
             </div>
+        </div>
+        <div class="Form-field">
+            <label class="Form-label is-required" for="map-search-input-js">Indirizzo</label>
+            <input class="Form-input u-text-r-s u-borderRadius-m" id="map-search-input-js" aria-required="true" required>
+        </div>
     </fieldset>
-    <div class="Form-field Grid-cell u-textRight">
-        <button type="button" id='map-search-js' class="Button Button--default Button--shadow u-text-m">Invia</button>
-    </div>
 
     <div class="Form-field Grid-cell u-textRight">
-        <button type="button" id='map-search-reset-js' class="Button Button--default Button--shadow u-text-m">Reset</button>
+        <button type="button" id='map-search-js' class="Button Button--default Button--shadow u-text-m">Invia</button>
+        <button type="button" id='map-search-reset-js' class="Button Button--default Button--shadow u-text-m ">Reset</button>
+    </div>
+    <div class="Form-field Grid-cell u-textRight">
+        <span id="map-search-selected-coordinate-js" class="u-textLeft"></span>
     </div>
 
     <table class='Table Table--striped Table--hover Table--withBorder' id='map-search-result' aria-describedby="description">
         <thead>
-            <tr class="u-border-bottom-xs">
-                <th>Risultati</th>
-            </tr>
+        <tr class="u-border-bottom-xs">
+            <th>Risultati</th>
+        </tr>
         </thead>
         <tbody>
-
-        </tboby>
+        </tbody>
     </table>
 </form>
-
 
