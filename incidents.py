@@ -116,6 +116,44 @@ with open('comuni.csv', 'wb') as csv_file:
     for key, value in comuni_data.items():
        writer.writerow([key, value])
 
+
+# convert incidenti.json in geojson with array of years: incidenti per comune
+import json
+
+with open('incidenti.json') as incidenti_data:
+    incidenti = json.load(incidenti_data)
+
+ids = []
+final_features = []
+for entry in incidenti:
+    id = entry['codEnte']
+    if id not in ids:
+        ids.append(id)
+        feature = {
+            "type": "Feature",
+            "properties": {
+                "ente": entry['ente'],
+                "incidenti": [{entry['anno']: entry['incidenti']}]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [entry['latlon'][0], entry['latlon'][1]]
+            }
+        }
+        final_features.append(feature)
+    else:
+        feature = [f for f in final_features if f['properties']['ente']==entry['ente']][0]
+        feature['properties']['incidenti'].append({entry['anno']: entry['incidenti']})
+
+final_incidenti_geojson = {
+    "type": "FeatureCollection",
+    "features": final_features
+}
+
+with open('incidenti.geojson', 'w') as outfile:
+    json.dump(final_incidenti_geojson, outfile, indent=4)
+
+
 #text = json.dumps(incidenti_data, indent=4, sort_keys=True)
 
 
