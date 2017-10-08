@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Created by .ignore support plugin (hsz.mobi)
+=======
 node_modules
 dist
 .tmp
@@ -11,3 +14,4 @@ gh-pages
 .vscode
 build/*
 TODO.txt
+>>>>>>> ae4ed05b641408a294fd819a4b96b6e97f14ebbc
