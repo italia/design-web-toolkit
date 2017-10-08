@@ -1,0 +1,23 @@
+@import "fr-bypasslinks/bypasslinks.css";
+
+/** @define Skiplinks; weak */
+
+.Skiplinks {
+  @extend .u-sizeFull;
+  @extend .u-padding-left-xxl;
+}
+
+.Skiplinks > li {
+  @extend .u-inlineBlock;
+  @extend .u-alignMiddle;
+}
+
+.Skiplinks > li > a {
+  @extend .u-background-white;
+  @extend .u-padding-top-xs;
+  @extend .u-padding-bottom-xs;
+  @extend .u-padding-left-l;
+  @extend .u-padding-right-l;
+  @extend .u-textClean;
+  @extend .u-color-50;
+}

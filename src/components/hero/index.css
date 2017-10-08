@@ -1,0 +1,36 @@
+/* @define Hero; */
+
+/*
+ *  1.About 3 x Header size
+ */
+
+:root {
+  --Hero-height: 30em; /* 1 */
+  --Hero-background-img: url("//placehold.it/2000x500?text=placeholder");
+}
+
+.Hero {
+  background: var(--Hero-background-img);
+  background-size: cover;
+  height: var(--Hero-height);
+
+  @extend .u-posRelative;
+}
+
+.Hero-content {
+  @extend .u-posRelative;
+  @extend .u-layoutCenterVertically;
+
+  @extend .u-padding-r-all;
+  @extend .u-background-grey-20;
+
+  @extend .u-sizeFull;
+
+  @extend .u-md-size6of12;
+  @extend .u-md-before2of12;
+
+  @extend .u-lg-size5of12;
+  @extend .u-lg-before1of8;
+
+  opacity: 0.95;
+}

@@ -30,6 +30,12 @@
 .u-border-left-l { border-left: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
 .u-border-all-l { border: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
 
+.u-border-top-none { border-top: none !important; }
+.u-border-right-none { border-right: none !important; }
+.u-border-bottom-none { border-bottom: none !important; }
+.u-border-left-none { border-left: none !important; }
+.u-border-all-none { border: none !important; }
+
 /*
  *	Border for responsive cell
  *	see http://codepen.io/Hawkun/pen/rsIEp
@@ -47,11 +53,6 @@
 
 .u-border-none {
   border: none !important;
-}
-
-.u-borderFocus:focus {
-  box-shadow: 0 0 0 3px var(--Border-focus-color) inset !important;
-  outline: none;
 }
 
 .u-borderHideFocus:focus {

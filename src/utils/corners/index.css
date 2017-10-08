@@ -12,6 +12,10 @@
   border-radius: 8px !important;
 }
 
+.u-borderRadius-xl {
+  border-radius: 2em !important;
+}
+
 .u-borderRadius-circle {
-  border-radius: 50% !important;
+  border-radius: 100% !important;
 }

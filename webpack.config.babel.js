@@ -2,16 +2,22 @@ var webpack = require('webpack')
 var path = require('path')
 var libraryName = 'IWT'
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
-  // var env = process.env.WEBPACK_ENV
+// var env = process.env.WEBPACK_ENV
 
 var plugins = []
 var loaders = []
 
-plugins.push(new UglifyJsPlugin({
-  minimize: true
-}))
+if ('dev' !== process.env.WEBPACK_ENV) {
+  plugins.push(new UglifyJsPlugin({
+    minimize: true,
+    sourceMap: true
+  }))
+}
+
+plugins.push(
+  new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /it/)
+)
 
 loaders.push({
   test: /\.png/,
@@ -20,9 +26,29 @@ loaders.push({
 
 loaders.push({
   test: /\.css$/,
-  loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+  use: [
+    { loader: 'style-loader' },
+    { loader: 'css-loader' },
+  ]
 })
-plugins.push(new ExtractTextPlugin('vendor.css'))
+
+// var ExtractTextPlugin = require('extract-text-webpack-plugin')
+//
+// loaders.push({
+//   test: /\.css$/,
+//   use: ExtractTextPlugin.extract({
+//     fallback: 'style-loader',
+//     use: 'css-loader'
+//   })
+// })
+//
+// plugins.push(new ExtractTextPlugin({
+//   filename: 'vendor.css'
+// }))
+
+plugins.push(new webpack.LoaderOptionsPlugin({
+  debug: true
+}))
 
 var config = {
   entry: {
@@ -35,17 +61,20 @@ var config = {
     filename: '[name].min.js',
     library: libraryName,
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    publicPath: process.env.PUBLIC_PATH || '',
+    chunkFilename: '[name].chunk.js'
   },
   externals: {
     'jquery': 'jQuery',
     '$': 'jQuery',
   },
   module: {
-    loaders: [...loaders, {
+    rules: [...loaders, {
       test: /(\.jsx|\.js)$/,
       loader: 'babel-loader',
-      //      exclude: /(node_modules|bower_components)/
+      exclude: /(pikaday)/,
+      // exclude: /(node_modules|bower_components)/
     }, {
       test: /(\.jsx|\.js)$/,
       loader: 'eslint-loader',
@@ -53,14 +82,13 @@ var config = {
     }]
   },
   resolve: {
-    root: [
+    modules: [
       path.resolve('./src'),
-      path.resolve('./theme')
-    ],
-    extensions: ['', '.js']
+      path.resolve('./theme'),
+      'node_modules'
+    ]
   },
   plugins: plugins,
-  debug: true
 }
 
 module.exports = config

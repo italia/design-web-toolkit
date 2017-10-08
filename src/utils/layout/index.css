@@ -34,8 +34,8 @@
 @media (--lg-viewport) {
 
   .u-layout-lg-withGutter {
-    padding-left: calc(3 * var(--Layout-gutter)) !important;
-    padding-right: calc(3 * var(--Layout-gutter)) !important;
+    padding-left: calc(13 * var(--Layout-gutter)) !important;
+    padding-right: calc(13 * var(--Layout-gutter)) !important;
   }
 }
 
@@ -52,6 +52,10 @@
 
 .u-layout-wide {
   max-width: var(--Layout-container-wide) !important;
+
+  @media (--md-viewport) {
+    max-width: var(--Layout-container-medium) !important;
+  }
 }
 
 .u-layout-wider {
@@ -89,6 +93,7 @@
   @extend .u-flexJustifyCenter;
   @extend .u-md-flexJustifyStart;
   @extend .u-lg-flexJustifyStart;
+  @extend .u-sizeFull;
   @extend .u-md-size1of2;
   @extend .u-lg-size1of2;
 }
@@ -98,6 +103,7 @@
   @extend .u-flexJustifyCenter;
   @extend .u-md-flexJustifyEnd;
   @extend .u-lg-flexJustifyEnd;
+  @extend .u-sizeFull;
   @extend .u-md-size1of2;
   @extend .u-lg-size1of2;
 }

@@ -7,24 +7,32 @@
 <header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
   <div class="Header-navbar Grid Grid--alignMiddle">
     <div class="Header-toggle Grid-cell">
-      <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+      <button class="Header-button Header-navToggle u-alignMiddle u-margin-right-xxl" data-action="toggle-sidebar">
         {% include 'icons/close-nav.svg' %}
         {% include 'icons/open-nav.svg' %}
-        <span class="Header-toggleText">Menu</span>
       </button>
     </div>
 
-    <div class="Header-logo Grid-cell" aria-hidden="true">
-      <a href="" tabindex="-1">
-        <img src="/ita-web-toolkit/theme/docs/logo-it.svg" alt="">
+    <div class="Header-title Grid-cell">
+      <a href="" tabindex="-1" class="Header-logo u-margin-r-right">
+        <img src="/design-web-toolkit/theme/docs/logo-it.svg" alt="">
+      </a>
+      <div class="u-margin-r-left">
+        <h1 class="Header-titleLink u-text-h1">
+          <a href="{{ path('/') }}" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
+        </h1>
+      </div>
+    </div>
+
+    <div style="position: absolute; right: 1em"
+      class="u-hidden u-sm-inlineBlock u-md-inlineBlock u-lg-inlineBlock u-borderRadius-m u-padding-all-xxs u-background-white">
+      <a class="u-inlineBlock u-margin-r-left u-margin-r-right u-linkClean u-color-95" href="//github.com/italia/design-web-toolkit">
+        <span class="u-inlineBlock u-alignMiddle u-margin-r-right">{% include 'icons/github.svg' %}</span>
+        <span class="u-inlineBlock u-alignMiddle u-text-r-s">GitHub</span>
       </a>
     </div>
 
-    <div class="Header-title Grid-cell">
-      <h1 class="Header-titleLink u-text-h1">
-        <a href="{{ path('/') }}" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
-      </h1>
-    </div>
   </div>
+
   <!-- Header-navbar -->
 </header>

@@ -1,0 +1,92 @@
+/** @define Linklist; weak; */
+
+:root {
+  --Linklist-border-color: #d8d8d8;
+  --Linklist-link-arrow-up: inline("icons/img/SVG/collapse.svg");
+  --Linklist-link-arrow-down: inline("icons/img/SVG/expand.svg");
+  --Linklist-link-padding: 0.5em;
+  --Linklist-link-arrow-width: 0.8em;
+}
+
+/*
+ *	FIXME:
+ *	  -webkit-overflow-scrolling: touch;
+ */
+
+.Linklist {
+  @extend .u-color-grey-30;
+}
+
+.Linklist li {
+  @extend .u-color-grey-30;
+  @extend .u-border-top-xxs;
+  @extend .u-block;
+  @extend .u-nbfc;
+}
+
+.Linklist-link,
+.Linklist a {
+  @extend .u-block;
+  @extend .u-color-50;
+  @extend .u-textClean;
+  @extend .u-padding-r-bottom;
+  @extend .u-padding-r-top;
+}
+
+.Linklist--padded > li > .Linklist-link,
+.Linklist--padded > li > a {
+  @extend .u-padding-left-s;
+}
+
+.Linklist a:hover {
+  @extend .u-background-5;
+  @extend .u-color-95;
+}
+
+.Linklist ul ul ul > li > a {
+  padding-left: 2.5em;
+}
+
+.Linklist ul ul > li > a {
+  padding-left: 2em;
+}
+
+.Linklist ul > li > a {
+  padding-left: 1.5em;
+}
+
+.Linklist-link.Linklist-link--lev1,
+.Linklist-link.Linklist-link--lev1:hover {
+  @extend .u-color-white;
+  @extend .u-background-90;
+}
+
+.Linklist-link.Linklist-link--lev2,
+.Linklist-link.Linklist-link--lev2:hover {
+  @extend .u-color-95;
+  @extend .u-background-20;
+}
+
+.Linklist-link.Linklist-link--lev3 {
+  @extend .u-color-95;
+  @extend .u-background-10;
+}
+
+.Linklist-link.is-expanded,
+.Linklist-link.is-collapsed {
+  background-position: right var(--Linklist-link-padding) center;
+  background-repeat: no-repeat;
+  background-size: var(--Linklist-link-arrow-width);
+  padding-right:
+    calc(
+      var(--Linklist-link-arrow-width) + (2 * var(--Linklist-link-padding))
+    );
+}
+
+.Linklist-link.is-collapsed {
+  background-image: var(--Linklist-link-arrow-down);
+}
+
+.Linklist-link.is-expanded {
+  background-image: var(--Linklist-link-arrow-up);
+}

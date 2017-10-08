@@ -1,0 +1,35 @@
+{% render '@developer--start' %}
+
+<div class="u-background-50 u-textCenter u-padding-r-all u-textCenter u-padding-bottom-xxl">
+  <h1 class="u-text-r-l u-textWeight-300 u-color-white u-margin-top-l u-lineHeight-l">
+    Progetti</h1>
+  <p class="u-text-r-xs u-padding-r-all u-color-10 u-layout-prose u-layoutCenter u-padding-bottom-xxl u-margin-bottom-xxl">
+    {{ __SHORT_TEXTS__[0] }}
+    {{ __SHORT_TEXTS__[1] }}
+  </p>
+</div>
+
+{% render '@separator', { backgroundPrev: 'u-background-50', backgroundNext: 'u-background-grey-15', dir: 'up' } %}
+
+<hr class="Separator Separator--down u-background-grey-15">
+
+<div class="u-background-grey-15 u-layout-r-withGutter u-padding-r-top u-padding-bottom-xxl u-posRelative u-zindex-30">
+  <div class="u-layout-wide u-layoutCenter u-padding-bottom-xxl u-cf">
+
+    <div class="js-Masonry-container" style="margin-top: -10em" data-columns>
+      {% for i in [1, 2, 3] %}
+        <div class="Masonry-item js-Masonry-item">
+          {% render '@tile--simple', { text: __TEXTS__[i], title: __WORDS__[i], hasShadow: true, hasSocial: true, hasMore: true } %}
+        </div>
+      {% endfor %}
+      {% for i in [1, 2, 3] %}
+        <div class="Masonry-item js-Masonry-item">
+          {% render '@tile--simple', { text: __TEXTS__[i + 2], title: __WORDS__[i + 2], hasShadow: true, hasMore: false } %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{% render '@developer--end' %}

@@ -9,9 +9,8 @@ label: Come iniziare
 I componenti grafici del toolkit sono presentati tramite una styleguide;
 puoi visualizzarli navigando dal menu "Componenti":
 
-- **Components**: elementi base (form, tipografia, tabelle, griglia responsive, ...)  
-- **Modules**: elementi grafici e interattivi autonomi (carousel, accordion, menu, ...)
-- **Extra**: moduli personalizzati che dipendono da altri moduli (bottone spid, tasto per condivisione sui social, ...)
+- **Components**: elementi autonomi dell'interfaccia (form, tipografia, tabelle, griglia responsive, ...)  
+- **Modules**: elementi che dipendono da altri componenti (header, footer, ...)
 - **Templates**: template HTML di pagine intere o parti del layout
 - **Utils**: componenti di utilità (margini, padding, colori, tipografia, ...)
 - **Icons**: icone personalizzate in formato SVG, PNG e icon font
@@ -24,25 +23,58 @@ Per utilizzare i componenti all'interno del tuo sito è necessario<br>
 includere, oltre l'HTML, i fogli di stile (CSS) e i Javascript (JS) necessari.
 
 Puoi scaricare i file CSS / JS già compilati da incorporare in ogni pagina:<br>
-**[CSS / Javascript già compilati](https://github.com/italia/ita-web-toolkit/tree/gh-pages/build)**
+**[CSS / Javascript già compilati](https://github.com/italia/design-web-toolkit/tree/gh-pages/design-web-toolkit/build)**
 
-In produzione vanno inclusi almeno i file:
+In produzione vanno inclusi i file:
 
 ```
 .
 ├── build.css
-├── vendor.css
 ├── vendor/modernizr.js
 ├── vendor/jquery.min.js
 └── IWT.min.js
 ```
 
 facendo riferimento al
-**[template generico di esempio](https://raw.githubusercontent.com/italia/ita-web-toolkit/master/src/_preview.tmpl)**
+**[template generico di esempio](https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/index.html)**
 
-La directory `src/icons` contiene le icone personalizzate in formato SVG, PNG e *icon font*.
+### File Javascript di componenti opzionali
 
-I file con estensione \*.map sono utili solo in fase di debug e possono essere omessi in produzione.
+I file contenuti nella directory `build` del tipo
+
+```
+├── 0.chunk.js
+├── 1.chunk.js
+├── ...
+```
+
+sono Javascript associati a componenti dell'interfaccia opzionali; vengono **caricati automaticamente** a runtime
+solo dove il componente (es. carousel) viene effettivamente utilizzato nell'HTML.
+
+Questo meccanismo permette di incorporare esempi e widget Javascript complessi nel toolkit, senza che ciò impatti sulla dimensione
+finale del file `IWT.min.js` riducendo quindi i tempi di download e parsing durante il rendering delle pagine web.
+
+Tail file devono esser presenti nella stessa directory dove è contenuto il file `IWT.min.js`;
+se il percorso di questa directory differisce da quello di default (`/build`), è necessario specificare
+il percorso alternativo, **relativo alla radice del sito web**, come visibile nel
+**[template generico di esempio](https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/index.html)**:
+
+{% raw %}
+```
+<!-- sostituire questo percorso con quello
+     degli assets javascript nel proprio sito web:
+     è il percorso, relativo alla webroot, della directory
+     che contiene il file IWT.min.js e i file *.chunk.js -->
+
+<script>__PUBLIC_PATH__ = '/assets/javascript/'</script>
+```
+{% endraw %}
+
+### Altri contenuti della directory build
+
+- `src/icons`: icone personalizzate in formato SVG, PNG e *icon font*.
+- `*.map`: file utili solo in fase di debug e possono essere omessi in produzione.
+- `*.styleguide.*`: file che definiscono l'aspetto della styleguide e possono essere omessi in produzione.
 
 ## Dipendenze esterne
 

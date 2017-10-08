@@ -19,11 +19,11 @@
   --Form-border-width: 0.4rem;
   --Form-choose-height: 1em;
   --Form-select-arrow-width: 0.8em;
-  --Form-select-arrow: inline("icons/ita/img/SVG/expand.svg");
-  --Form-radio: svg-load("icons/ita/img/SVG/radio-button.svg", stroke=var(--Color-teal-50));
-  --Form-radio-checked: svg-load("icons/ita/img/SVG/radio-button-checked.svg", stroke=var(--Color-teal-50));
-  --Form-checkbox: svg-load("icons/ita/img/SVG/checkbox.svg", stroke=var(--Color-teal-50));
-  --Form-checkbox-checked: svg-load("icons/ita/img/SVG/checkbox-checked.svg", stroke=var(--Color-teal-50));
+  --Form-select-arrow: inline("icons/img/SVG/expand.svg");
+  --Form-radio: svg-load("icons/img/SVG/radio-button.svg", stroke=var(--Color-teal-50));
+  --Form-radio-checked: svg-load("icons/img/SVG/radio-button-checked.svg", stroke=var(--Color-teal-50));
+  --Form-checkbox: svg-load("icons/img/SVG/checkbox.svg", stroke=var(--Color-teal-50));
+  --Form-checkbox-checked: svg-load("icons/img/SVG/checkbox-checked.svg", stroke=var(--Color-teal-50));
   --Form-textarea-min-height: 10em;
 }
 

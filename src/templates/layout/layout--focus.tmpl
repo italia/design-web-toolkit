@@ -1,53 +1,23 @@
 <div class=" u-background-compl-10 u-layout-centerContent u-padding-r-top">
 
-  <section class="u-layout-medium u-text-r-s u-padding-r-top u-padding-r-bottom">
+  <section class="u-layout-wide u-layout-r-withGutter u-text-r-s u-padding-r-top u-padding-r-bottom">
 
     <h2 id="news" class="u-layout-centerLeft u-text-r-s">
       <a class="u-color-50 u-textClean u-text-h3 " href="">Notizie</a>
     </h2>
 
-    <div class="Grid Grid--withGutter">
+    <div class="Grid Grid--withGutterM">
 
       <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-flex u-margin-r-bottom u-flexJustifyCenter">
-        <div class="Card Card--shadow Card--round u-text-r-xxs u-background-white u-flexAlignSelfStretch">
-          <div class="Card-image">
-            <img src="//placehold.it/400x220?text=placeholder" class="u-sizeFull" alt="" />
-          </div>
-          <div class="Card-content">
-            <p class="Card-extra"><a class="Card-extraLink u-color-60" href="">{{ __WORDS__[1] }}</a></p>
-            <h3 class="Card-title"><a class="Card-titleLink u-color-60" href="">{{ __SHORT_TEXTS__[3] }}</a></h3>
-            <p class="Card-text u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
-            <p class="Card-text">{{ __TEXTS__[1] }}</p>
-          </div>
-        </div>
+        {% render '@card--simple', { modifier: 'u-borderShadow-xxs u-borderRadius-m' } %}
       </div>
 
       <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-flex u-margin-r-bottom u-flexJustifyCenter">
-        <div class="Card Card--shadow Card--round u-text-r-xxs u-background-white u-flexAlignSelfStretch">
-          <div class="Card-image">
-            <img src="//placehold.it/400x220?text=placeholder" class="u-sizeFull" alt="" />
-          </div>
-          <div class="Card-content">
-            <p class="Card-extra"><a class="Card-extraLink u-color-60" href="">{{ __WORDS__[1] }}</a></p>
-            <h3 class="Card-title"><a class="Card-titleLink u-color-60" href="">{{ __SHORT_TEXTS__[3] }}</a></h3>
-            <p class="Card-text u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
-            <p class="Card-text">{{ __TEXTS__[2] }}</p>
-          </div>
-        </div>
+        {% render '@card--simple', { modifier: 'u-borderShadow-xxs u-borderRadius-m' } %}
       </div>
 
       <div class="Grid-cell u-md-size1of3 u-lg-size1of3 u-flex u-margin-r-bottom u-flexJustifyCenter">
-        <div class="Card Card--shadow Card--round u-text-r-xxs u-background-white u-flexAlignSelfStretch">
-          <div class="Card-image">
-            <img src="//placehold.it/400x220?text=placeholder" class="u-sizeFull" alt="" />
-          </div>
-          <div class="Card-content">
-            <p class="Card-extra"><a class="Card-extraLink u-color-60" href="">{{ __WORDS__[1] }}</a></p>
-            <h3 class="Card-title"><a class="Card-titleLink u-color-60" href="">{{ __SHORT_TEXTS__[3] }}</a></h3>
-            <p class="Card-text u-textSecondary u-text-r-xxs">10 Luglio 2016</p>
-            <p class="Card-text">{{ __TEXTS__[3] }}</p>
-          </div>
-        </div>
+        {% render '@card--simple', { modifier: 'u-borderShadow-xxs u-borderRadius-m' } %}
       </div>
 
     </div>
