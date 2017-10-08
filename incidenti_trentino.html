@@ -23,7 +23,7 @@
     	height: 100%;
   	}
   	#map {
-    	height: 90vh;
+    	height: 80vh;
   	}
     #wrapper {
         height: 100%;
@@ -113,7 +113,7 @@
     let data_map;
     // url where data can be found
     const MapUrl = "https://raw.githubusercontent.com/kercos/km4city/master/incidenti.geojson";
-//    const MapUrl = "http://127.0.0.1:8887/incidenti.geojson";
+    // const MapUrl = "http://127.0.0.1:8887/incidenti.geojson";
 
     let map = L.map('map', {scrollWheelZoom:false}).setView([46.0748, 11.1217], 9);
 
@@ -124,7 +124,54 @@
 
     base_map.addTo(map);
 
+    function getTotalIncidenti(feature) {
+      var incidenti_year = feature.properties.incidenti;
+      var incidenti_total = 0;
+      for (var y in incidenti_year){
+        if (y>=rangeMin && y <=rangeMax) {
+          incidenti_total += incidenti_year[y];
+        }
+      }
+      return incidenti_total;
+    }
+
+    function isValidMarker(feature) {
+      var ente = feature.properties.ente.toLowerCase();
+      if (
+          ente.indexOf('provincia') !== -1 ||
+          ente.indexOf('territorio') !== -1 ||
+          //ente.indexOf('trento') !== -1 ||
+          ente.indexOf('comunità') !== -1)
+      {
+        return false;
+      }
+      var incidenti_total = getTotalIncidenti(feature);
+      return incidenti_total > 0;
+    }
+
+    function recording_marker(feature, latlng) {
+      var radius = Math.max(2, getTotalIncidenti(feature) / 100);
+      return L.circleMarker(latlng, {
+        radius: radius, //8.0,
+        fillColor: '#11fe00',
+        color: '#000000',
+        weight: 1,
+        opacity: 0.8,
+        fillOpacity: 0.8
+      })
+    }
+
     function pop_expl(feature, layer) {
+      var incidenti_total = getTotalIncidenti(feature);
+      var popupContent = "<b>ente:</b> " + feature.properties.ente
+          //+ "<br><b>incidenti:</b> " + JSON.stringify(feature.properties.incidenti)
+          + "<br><b>incidenti total: </b>" + incidenti_total
+      //+ "<br><b>invalid: </b>" + isInvalidMarker(feature)
+      layer.bindPopup(popupContent);
+    }
+
+
+/*    function pop_expl(feature, layer) {
         let incidenti_year = feature.properties.incidenti;
         let incidenti_total = 0;
 
@@ -138,9 +185,9 @@
             + "<br><b>incidenti:</b> " + JSON.stringify(feature.properties.incidenti)
             + "<br><b>incidenti total: </b>" + incidenti_total;
         layer.bindPopup(popupContent);
-    }
+    }*/
 
-    function recording_marker(feature, latlng) {
+/*    function recording_marker(feature, latlng) {
         return L.circleMarker(latlng, {
             radius: 8.0,
             fillColor: "springgreen",
@@ -149,7 +196,7 @@
             opacity: 1.0,
             fillOpacity: 0.8
         })
-    }
+    }*/
 
     // creates layers for showing map
     let points_groups = [L.featureGroup(), L.featureGroup()];
@@ -161,16 +208,7 @@
             onEachFeature: pop_expl,
             filter:
                 function(feature, layer) {
-                    let incidenti_year = feature.properties.incidenti;
-                    let incidenti_total = 0;
-                    
-                    for (let y in incidenti_year) {
-                        if (y >= rangeMin && y <= rangeMax) {
-                            incidenti_total += incidenti_year[y];
-                        }
-                    }
-
-                    return incidenti_total > 0;
+                  return isValidMarker(feature);
                 },
             pointToLayer: recording_marker
             });
