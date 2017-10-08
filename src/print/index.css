@@ -47,8 +47,16 @@
   }
   */
 
+  img {
+    max-width: 100% !important;
+    page-break-after: auto;
+    page-break-before: auto;
+    page-break-inside: avoid;
+  }
+
   pre {
     white-space: pre-wrap !important;
+    word-wrap: break-word;
   }
 
   pre,
@@ -62,16 +70,20 @@
   }
 
   table,
+  blockquote,
+  pre,
+  code,
   figure,
-  tr,
-  img {
+  li,
+  hr,
+  ul,
+  ol,
+  a,
+  tr {
     page-break-inside: avoid;
   }
 
-  img {
-    max-width: 100% !important;
-  }
-
+  a,
   p,
   h2,
   h3 {
@@ -83,7 +95,8 @@
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  h6 {
     page-break-after: avoid;
   }
 

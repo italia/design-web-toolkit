@@ -1,0 +1,41 @@
+<div class="u-nbfc u-color-grey-30 u-xs-padding-all-none
+  {% if hasShadow %}u-borderShadow-m u-xs-borderShadow-none{% endif %} u-borderRadius-m u-background-white">
+  <img src="//placehold.it/400x220" class="u-sizeFull" alt="{{ __WORDS__[2] }}" />
+  <div class="u-padding-r-all">
+    <div class="u-padding-r-all u-xs-padding-all-none">
+      <h3 class="u-padding-bottom-xs">
+      <a class="u-textClean u-textWeight-600 u-text-r-l u-color-50" href="#">
+        {{ title | d(__WORDS__[0]) | capitalize }}
+      </a>
+      </h3>
+          <h4 class="u-textWeight-400 u-lineHeight-l u-text-r-xs u-color-grey-60 u-padding-bottom-xs">
+        {{ subtitle | d(__SHORT_TEXTS__[0]) }}
+      </h4>
+          <!-- <h3 class="u-padding-r-top u-padding-r-bottom"><a class="u-text-h4 u-textClean u-color-black" href="">
+        {{ title | d(__SHORT_TEXTS__[0]) }}
+        </a>
+      </h3> -->
+      <p class="u-text-p u-textSecondary u-margin-r-bottom u-padding-r-bottom">
+        {{ text | d(__TEXTS__[0]) }}
+      </p>
+      {% if hasMore or hasSocial %}
+      <div class="Grid u-padding-r-top u-margin-r-top">
+        {% if hasMore %}
+        <p class="u-layout-centerLeft u-padding-r-bottom">
+          <a href="#" class="u-color-50 u-text-r-xs u-textWeight-600 u-textClean">per saperne di più
+          <span class="Icon Icon-chevron-right u-margin-left-xxs u-text-xxs u-md-hidden u-sm-hidden"></span>
+        </a>
+        </p>
+        <br class="u-sm-hidden u-md-hidden u-lg-hidden"> {% endif %} {% if hasSocial %}
+        <p class="u-layout-centerRight u-padding-r-bottom">
+          {% for i in [1, 2, 3] %}
+          <a href="#" class="u-linkClean">
+            <span class="Icon Icon-twitter u-inlineBlock u-text-r-xs u-padding-all-xxs u-borderRadius-circle
+            u-background-50 u-color-white u-margin-right-xs"></span><span class="u-hiddenVisually">twitter</span></a> {% endfor %}
+        </p>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

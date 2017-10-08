@@ -1,0 +1,101 @@
+@import "suitcss-base";
+@import "suitcss-components";
+@import "suitcss-utils";
+
+@import "suitcss-components-form";
+
+@import "src/utils/**/index.css";
+
+@import "src/icons/**/index.css";
+
+@import "src/elements/**/index.css";
+@import "src/components/**/index.css";
+@import "src/modules/**/index.css";
+
+@import "src/print";
+
+/*
+ * WebFontLoaded: _import "src/fonts/titillium"
+ * see src/_preview.html
+ */
+@import "src/themes/pac";
+
+@import "src/legacy";
+
+@custom-media --xs-viewport screen and (max-width: 767px);
+@custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 991px);
+@custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1365px);
+@custom-media --lg-viewport screen and (min-width: 1366px);
+
+/*
+ *  System font stack see https://github.com/twbs/bootstrap/pull/19098/files
+ */
+
+:root {
+  --it-Base-font-size-ratio: 1.8;
+  --it-Base-font-size: calc(1rem * var(--it-Base-font-size-ratio));
+  --it-Base-text-color: #1c2024;
+  --it-Base-focus-color: #ff8c00;
+  --it-Base-font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    HelveticaNeue-Light,
+    Helvetica Neue Light,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    Lucida Grande,
+    sans-serif;
+}
+
+:root {
+  --Grid-gutter-size: 1.6rem;
+}
+
+/*  stylelint-disable */
+/**
+ * 1. 62.5% = 10px on browsers with base size = 16px
+ * 		so we got 10px = 1rem
+ * 2. See http://stackoverflow.com/questions/7968795/is-it-safe-to-use-the-css-rule-text-rendering-optimizelegibility-on-all-text
+ */
+ /*  stylelint-enable */
+
+html {
+  font-family: var(--it-Base-font-family);
+  font-size: 62.5%; /* 1 */
+  font-variant-ligatures: common-ligatures; /* 2 */
+
+  /* text-rendering: optimizeLegibility; */
+}
+
+/**
+ * 1. Avoid collapsing content
+ */
+
+body {
+  color: var(--it-Base-text-color);
+  font-size: var(--it-Base-font-size);
+  min-width: 300px; /* 1 */
+}
+
+:focus {
+  box-shadow: 0 0 0 3px var(--Border-focus-color) inset !important;
+
+  /*  outline: 3px solid var(--it-Base-focus-color); */
+}
+
+.c-hideFocus :focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}

@@ -1,0 +1,20 @@
+<table class="Table Table--withBorder js-TableResponsive tablesaw tablesaw-swipe" data-tablesaw-mode="swipe">
+  <caption class="u-hiddenVisually">{{ caption | d(__WORDS__[0]) }}</caption>
+  <thead>
+    <tr>
+      <th scope="col" data-tablesaw-priority="persist">Tab. 1</th>
+      <th scope="col">Tab. 2</th>
+      <th scope="col">Tab. 3</th>
+      <th scope="col">Tab. 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in [1, 2, 3, 4] %}
+    <tr>
+      {% for j in [1, 2, 3, 4] %}
+        <td {% if j == 1 %}class="u-textWeight-600"{% endif %}>{{ __SHORT_TEXTS__[j+i] }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

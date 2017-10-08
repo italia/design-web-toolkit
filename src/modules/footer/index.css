@@ -2,10 +2,10 @@
 
 :root {
   --Footer-color-link: var(--Color-teal-50);
+  --Footer-background-color: var(--Color-95);
 }
 
 .Footer {
-  @extend .u-background-grey-80;
   @extend .u-color-white;
   @extend .u-padding-bottom-xxl;
   @extend .u-padding-top-xxl;
@@ -77,19 +77,20 @@
 
 .Footer-links {
   @extend .u-border-top-xxs;
-  @extend .u-margin-top-xxl;
-  @extend .u-padding-top-xs;
+  @extend .u-margin-top-l;
+  @extend .u-padding-r-top;
   @extend .u-sizeFull;
 }
 
 .Footer-links li {
   @extend .u-inlineBlock;
-  @extend .u-margin-left-xs;
-  @extend .u-margin-right-xs;
+  @extend .u-margin-right-xl;
 }
 
 .Footer-links a {
   @extend .u-text-r-xxs;
+  @extend .u-textClean;
+  @extend .u-textWeight-600;
 }
 
 .Footer-socialIcons > li {
@@ -101,10 +102,10 @@
 .Footer-socialIcons [class^="Icon-"],
 .Footer-socialIcons [class*=" Icon-"] {
   @extend .u-inlineBlock;
-  @extend .u-color-grey-80;
   @extend .u-padding-all-xs;
   @extend .u-borderRadius-circle;
-  @extend .u-text-r-m;
+  @extend .u-text-r-s;
 
   background-color: var(--Footer-color-link);
+  color: var(--Footer-background-color);
 }

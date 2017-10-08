@@ -1,6 +1,6 @@
 {% render '@cookiebar' %}
 
-{% render '@header', { hideOnDesktop: true, menu: true, megamenu: true, clone: true, site:
+{% render '@header', { backgroundClass: 'u-background-50', hideOnDesktop: true, menu: true, megamenu: true, clone: true, site:
   {name: 'Nome del comune', subtitle: '', owner: 'Nome Regione'} }, true %}
 
 {% render '@offcanvas', { treeview: 'treeview--comuni', showOpenButton: false }, true %}
@@ -26,7 +26,7 @@
     </p>
   </div>
 
-  <div class="u-background-grey-80 u-hiddenPrint">
+  <div class="u-background-95 u-hiddenPrint">
     <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
       {% render '@footer' %}
     </div>

@@ -1,6 +1,5 @@
-# ita-web-toolkit
-## Linee guida di design per i servizi web della Pubblica Amministrazione
-### Implementazione di riferimento
+# Linee guida di design per i servizi web della Pubblica Amministrazione
+## Implementazione di riferimento
 
 L'implementazione di riferimento contiene fogli di stile CSS, componenti Javascript accessibili e snippet HTML
 riutilizzabili per lo sviluppo del *frontend* dei siti web della Pubblica Amministrazione
@@ -12,17 +11,17 @@ l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli svi
 
 **L'utilizzo in produzione è consigliato a partire dalla release della versione stabile (1.0)**
 
-#### La documentazione per chi vuole utilizze il toolkit o contribuire allo sviluppo è disponibile online
+### La documentazione per chi vuole utilizze il toolkit o contribuire allo sviluppo è disponibile online
 
-- [documentazione](https://italia.github.io/ita-web-toolkit/)
+- [documentazione](https://italia.github.io/design-web-toolkit/)
 
-#### È inoltre possibile consultare la roadmap
+### È inoltre possibile consultare la roadmap
 
-- [roadmap](https://github.com/italia/ita-web-toolkit/milestone/1)
+- [roadmap](https://github.com/italia/design-web-toolkit/milestone/1)
 
-#### I componenti dell'interfaccia sono presentati nella styleguide
+### I componenti dell'interfaccia sono presentati nella styleguide
 
-- https://italia.github.io/ita-web-toolkit/
+- https://italia.github.io/design-web-toolkit/
 
 Per ogni componente è riportato lo stato di maturità in modo da poter decidere
 quali incorporare nel proprio sito web:

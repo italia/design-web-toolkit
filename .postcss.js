@@ -38,7 +38,8 @@ module.exports = {
   },
   'postcss-url': {
     url: 'copy',
-    assetsPath: './'
+    assetsPath: 'assets',
+    useHash: true,
   },
   'postcss-inline-svg': {
     path: 'src/'

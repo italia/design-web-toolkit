@@ -1,0 +1,53 @@
+{% render '@developer--start' %}
+
+<div class="u-background-50 u-layout-r-withGutter u-padding-bottom-xxl u-padding-top-xxl">
+  <h1 class="u-text-r-l u-textWeight-300 u-color-white u-margin-top-l u-lineHeight-l">
+    FAQ - Domande frequenti</h1>
+</div>
+
+{% render '@separator', { backgroundPrev: 'u-background-50', backgroundNext: 'u-background-grey-15', dir: 'up' } %}
+
+<div class="u-background-grey-15 u-layout-r-withGutter u-padding-r-top u-padding-bottom-xxl u-posRelative u-zindex-30">
+
+  <div class="Grid">
+
+    <div class="Grid-cell u-sizeFull u-md-size7of12 u-lg-size7of12">
+      <div class="Accordion Accordion--default fr-accordion js-fr-accordion" id="accordion-1">
+
+        {% for i in range(0, 5) %}
+        <h2 class="Accordion-header js-fr-accordion__header fr-accordion__header" id="accordion-header-{{ i }}">
+  		      <span class="Accordion-link">{{ __SHORT_TEXTS__[i] }}</span>
+  	    </h2>
+        <div id="accordion-panel-{{ i }}" class="Accordion-panel fr-accordion__panel js-fr-accordion__panel">
+          <p class="u-text-p u-padding-r-bottom u-textSecondary">{{ __TEXTS__[i] }}</p>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+    <div class="Grid-cell u-sizeFull u-md-size4of12 u-lg-size4of12 u-md-before1of12 u-lg-before1of12">
+
+      <div class="u-nbfc u-color-grey-30 u-xs-padding-all-none u-sizeFull
+        u-borderShadow-m u-xs-borderShadow-none u-borderRadius-m u-background-white" style="margin-top: -120px">
+
+        <div class="u-padding-r-all">
+          <div class="u-padding-r-all u-xs-padding-all-none" style="min-height: 250px">
+            <h2 class="u-textWeight-400 u-text-r-xs u-color-grey-80 u-margin-r-bottom">Argomenti delle novità</h2>
+              <ul>
+                <li><a href="#" class="Pill Pill--xs u-background-50 u-color-white u-textClean u-textWeight-600">licenze d'uso
+                  <span class="Dot u-background-white u-margin-left-s"></span>
+                </a></li>
+              </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% render '@developer--end' %}

@@ -4,9 +4,9 @@ title: Web Toolkit
 label: Introduzione
 ---
 
-## Implementazione di riferimento delle<br>"Linee guida di design per i servizi web della PA"
+## <span class="u-text-h5">Implementazione di riferimento delle<br>"Linee guida di design per i servizi web della PA"</span>
 
-<img src="/ita-web-toolkit/theme/docs/hero-img.svg" width="100%" alt="design.italia.it" />
+<img src="/design-web-toolkit/theme/docs/hero-img.svg" width="100%" alt="design.italia.it" />
 
 L'implementazione di riferimento (web toolkit) delle "[Linee guida di design](http://design.italia.it)"
 fornisce componenti *open source* da incorporare nei siti web delle Pubbliche Amministrazioni (PA)
@@ -21,10 +21,10 @@ per costruire un'interfaccia grafica usabile, accessibile e consistente:
 Se hai suggerimenti o vuoi contribuire direttamente allo sviluppo del toolkit
 puoi farlo utilizzando il repository GitHub:
 
-#### https://github.com/italia/ita-web-toolkit
+#### https://github.com/italia/design-web-toolkit
 
 Se hai domande sull'utilizzo o bisogno di aiuto per l'installazione
-puoi [aprire una nuova richiesta](https://github.com/italia/ita-web-toolkit/issues/new).
+puoi [aprire una nuova richiesta](https://github.com/italia/design-web-toolkit/issues/new).
 
 ### Obiettivi
 

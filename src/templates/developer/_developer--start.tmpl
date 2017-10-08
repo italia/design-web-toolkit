@@ -1,0 +1,28 @@
+{% render '@cookiebar' %}
+
+<div class="u-background-95">
+<div class="u-layout-wide u-layoutCenter">
+
+{% render '@header', {
+    isFixed: false,
+    hideOnDesktop: true,
+    menu: true,
+    megamenu: true,
+    clone: true,
+    backgroundClass: 'u-background-50',
+    site: {
+      name: '/developers <span class="u-lg-hidden u-md-hidden u-sm-hidden u-cf u-padding-top-xxs u-block"></span>
+        <span class="u-color-20 u-text-xxs
+        u-alignMiddle u-padding-right-xxs u-padding-left-xxs">beta</span>',
+      subtitle: 'La community italiana di sviluppatori di servizi pubblici',
+      owner: 'AgID <span class="u-hidden u-md-inline u-lg-inline u-sm-inline">- Agenzia per l\'Italia Digitale</span>',
+      logo: 'http://designer.italia.it/images/loghi/logo-it.svg'
+    }
+ }, true %}
+ {% render '@offcanvas', { treeview: 'treeview--comuni', showOpenButton: false }, true %}
+
+<!-- <div class="u-background-50 u-textCenter u-padding-all-xxl">
+  <h3 class="u-text-r-l u-textWeight-300 u-color-white u-margin-top-l u-lineHeight-l">
+    La community degli sviluppatori che progettano <br>
+    e realizzano i servizi pubblici in Italia</h3>
+</div> -->

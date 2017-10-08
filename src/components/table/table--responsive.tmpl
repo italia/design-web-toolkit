@@ -1,20 +1,19 @@
-<table class="Table Table--withBorder Table--responsive u-text-r-xs">
+<table class="Table Table--withBorder js-TableResponsive tablesaw tablesaw-stack" data-tablesaw-mode="stack">
   <caption class="u-hiddenVisually">{{ caption | d(__WORDS__[0]) }}</caption>
   <thead>
-    <tr class="u-color-grey-90 u-background-grey-10">
-      <th>{{ __WORDS__[1] }}</th>
-      <th>{{ __WORDS__[2] }}</th>
-      <th>{{ __WORDS__[3] }}.</th>
-      <th>{{ __WORDS__[4] }}</th>
+    <tr>
+      <th scope="col">Tab. 1</th>
+      <th scope="col">Tab. 2</th>
+      <th scope="col">Tab. 3</th>
+      <th scope="col">Tab. 4</th>
     </tr>
   </thead>
   <tbody>
-    {% for i in [1, 4] %}
+    {% for i in [1, 2, 3, 4] %}
     <tr>
-      <td>{{ __WORDS__[i] }}</td>
-      <td>{{ __WORDS__[i] }}</td>
-      <td>{{ __WORDS__[i] }}</td>
-      <td>{{ __WORDS__[i] }}</td>
+      {% for j in [1, 2, 3, 4] %}
+        <td>{{ __SHORT_TEXTS__[j+i] }}</td>
+      {% endfor %}
     </tr>
     {% endfor %}
   </tbody>

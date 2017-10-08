@@ -1,0 +1,12 @@
+<div class="Accordion Accordion--default fr-accordion js-fr-accordion" id="accordion-1">
+
+	{% for i in range(0, 5) %}
+	<h2 class="Accordion-header js-fr-accordion__header fr-accordion__header" id="accordion-header-{{ i }}" >
+		<span class="Accordion-link">{{ __SHORT_TEXTS__[i] }}</span>
+	</h2>
+	<div id="accordion-panel-{{ i }}" class="Accordion-panel fr-accordion__panel js-fr-accordion__panel">
+    {% render '@prose--paragraph', { text: __TEXTS__[i] } %}
+	</div>
+	{% endfor %}
+
+</div>

@@ -1,0 +1,15 @@
+@media (--xs-viewport) {
+
+  .u-xs-padding-all-none { padding: 0 !important; }
+  .u-xs-padding-top-none { padding-top: 0 !important; }
+  .u-xs-padding-bottom-none { padding-bottom: 0 !important; }
+  .u-xs-padding-left-none { padding-left: 0 !important; }
+  .u-xs-padding-right-none { padding-right: 0 !important; }
+
+  .u-xs-margin-all-none { margin: 0 !important; }
+  .u-xs-margin-top-none { margin-top: 0 !important; }
+  .u-xs-margin-bottom-none { margin-bottom: 0 !important; }
+  .u-xs-margin-left-none { margin-left: 0 !important; }
+  .u-xs-margin-right-none { margin-right: 0 !important; }
+
+}

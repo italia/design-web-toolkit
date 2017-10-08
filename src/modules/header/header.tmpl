@@ -2,24 +2,19 @@
 
 <header class="Header {% if isFixed %}Headroom--fixed js-Headroom{% endif %} u-hiddenPrint">
 
-  <div class="Header-banner">
-    <div class="Header-owner Headroom-hideme">
+  <div class="Header-banner {{ backgroundClass }}">
+    <div class="Header-owner Headroom-hideme {% if backgroundClass %}u-border-bottom-xxs{% endif %}">
       <a href=""><span>{{ site.owner }}</span></a>
-      <div class="Header-languages">
-          <a class="Header-language is-active u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="sito in italiano">
-            <abbr title="Italiano">ITA</abbr>
-          </a>
-          <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href="" title="website in english" lang="en">
-            <abbr title="English">ENG</abbr>
-          </a>
-          <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max is-active u-inlineBlock">
+      <div class="Header-languages {{ backgroundClass }}">
+          <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
             <span class="u-hiddenVisually">lingua attiva:</span>
-            <span class="u-md-hidden u-lg-hidden">ITA</span>
-            <span class="Icon Icon-expand u-padding-left-xs u-md-hidden u-lg-hidden"></span>
-            <span class="Icon Icon-more-actions u-padding-left-xxs u-padding-right-xxs u-hidden u-md-inlineBlock u-lg-inlineBlock"></span>
+            <span class="">ITA</span>
+            <!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
+            <span class="Icon Icon-expand u-padding-left-xs"></span>
           </a>
-          <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsDisplayNone u-nojsDisplayNone">
-            <ul class="Linklist">
+          <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
+            <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+            <ul>
               <li><a href="#1" class="u-padding-r-all"><span lang="en">English</span></a></li>
               <li><a href="#1" class="u-padding-r-all"><span lang="ar">عربي</span></a></li>
               <li><a href="#2" class="u-padding-r-all"><span lang="ch">中文网</span></a></li>
@@ -37,52 +32,54 @@
     </div>
   </div>
 
-  <div class="Header-navbar Grid Grid--alignMiddle">
-    <div class="Header-toggle Grid-cell">
-      <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock
-        {% if hideOnDesktop %}u-lg-hidden u-md-hidden{% endif %}" href="#menu"
-        aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
-        <span class="Hamburger-toggle" role="presentation"></span>
-        <span class="Header-toggleText" role="presentation">Menu</span>
-      </a>
-    </div>
-
-    <div class="Header-logo Grid-cell" aria-hidden="true">
-      <a href="" tabindex="-1">
-        <img src="{{ site.logo }}" alt="">
-      </a>
-    </div>
-
-    <div class="Header-title Grid-cell">
-      <h1 class="Header-titleLink">
-        <a href="/">
-          {{ site.name }}<br>
-          <small>{{ site.subtitle }}</small>
+  <div class="Header-navbar {{ backgroundClass }}">
+    <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
+      <div class="Header-logo Grid-cell" aria-hidden="true">
+        <a href="" tabindex="-1">
+          <img src="{{ site.logo }}" alt="">
         </a>
-      </h1>
-    </div>
-
-    <div class="Header-searchTrigger Grid-cell">
-      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search"
-        title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
-      </button>
-      <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden"
-        title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
-      </button>
-    </div>
-
-    <div class="Header-utils Grid-cell">
-      <div class="Header-social Headroom-hideme">
-        <p>Seguici su:</p>
-        <ul class="Header-socialIcons">
-          <li><a href="" title="Facebook"><span class="Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
-          <li><a href="" title="Twitter"><span class="Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
-          <li><a href="" title="Youtube"><span class="Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
-        </ul>
       </div>
-      <div class="Header-search" id="header-search">
-        {% render '@formtpl--search' %}
+
+      <div class="Header-title Grid-cell">
+        <h1 class="Header-titleLink">
+          <a href="/">
+            {{ site.name }}<br>
+            <small>{{ site.subtitle }}</small>
+          </a>
+        </h1>
       </div>
+
+      <div class="Header-searchTrigger Grid-cell">
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search {{ backgroundClass }}"
+          title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
+        </button>
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden {{ backgroundClass }}"
+          title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
+        </button>
+      </div>
+
+      <div class="Header-utils Grid-cell">
+        <div class="Header-social Headroom-hideme">
+          <p>Seguici su</p>
+          <ul class="Header-socialIcons">
+            <li><a href="" title="Facebook"><span class="Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+            <li><a href="" title="Twitter"><span class="Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+            <li><a href="" title="Youtube"><span class="Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+          </ul>
+        </div>
+        <div class="Header-search" id="header-search">
+          {% render '@formtpl--search' %}
+        </div>
+      </div>
+
+      <div class="Header-toggle Grid-cell">
+        <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock u-lg-hidden u-md-hidden" href="#menu"
+          aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">
+          <span class="Hamburger-toggle" role="presentation"></span>
+          <span class="Header-toggleText" role="presentation">Menu</span>
+        </a>
+      </div>
+
     </div>
   </div>
   <!-- Header-navbar -->
@@ -90,9 +87,9 @@
   {% if menu %}
   <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
     {% if clone %}
-      <nav class="Megamenu Megamenu--default js-megamenu" data-rel=".Offcanvas .Treeview"></nav>
+      <nav class="Megamenu Megamenu--default js-megamenu {{ backgroundClass }}" data-rel=".Offcanvas .Treeview"></nav>
     {% elif megamenu %}
-      {% render '@megamenu' %}
+      {% render '@megamenu', { backgroundClass: backgroundClass } %}
     {% else %}
       <nav class="Megamenu Megamenu--default">
         <ul class="Megamenu-list">
