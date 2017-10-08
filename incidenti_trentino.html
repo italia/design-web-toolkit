@@ -91,19 +91,19 @@
     <div id="wrapper">
         <div id="slider" style="top: 0px; right: 1px; margin: 10px 25px;"></div>
         <div style="margin-right: auto; margin-left: auto; width: 90%; margin-bottom: 10px; text-align: center;">
-            <input type="number" min='1' max='35675999' id="input-number-min">
-            <input type="number" min='2' max='35676000' id="input-number-max">
+            <input type="number" id="input-number-min">
+            <input type="number" id="input-number-max">
         </div>
         <div id="map"></div>
         <div id="over_map">
             <a href="#openModal">
-                <img src="qM.png" alt="QuestionMark" style="width:50px; height:50px;">
+                <img src="qM.png" alt="QuestionMark" style="margin-top: 60px; width:50px; height:50px;">
             </a>
         </div>
         <div id="openModal" class="modalDialog">
             <div><a href="#close" title="Close" class="close">X</a>
 
-                <h2>Mappa degli incidenti nel Trentino 2013 - 2015 per 1000 residenti</h2>
+                <h2>Mappa degli incidenti nel Trentino 2003 - 2015 per 1000 residenti</h2>
 
                 <p>Vedi risorsa http://dati.trentino.it/dataset/incidenti-stradali-per-1-000-residenti</p>
             </div>
@@ -112,7 +112,7 @@
 
 	<script type="text/javascript">
 
-    var map = L.map('map', {scrollWheelZoom:false}).setView([46.0748, 11.1217], 8);
+    var map = L.map('map', {scrollWheelZoom:false}).setView([46.0748, 11.1217], 9);
 
     var base_map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -125,8 +125,8 @@
     base_map.addTo(map);
 
     function pop_expl(feature, layer) {
-        var popupContent = "<br>ente</br> " + feature.properties.ente
-            + "<br>incidenti</br> " + JSON.stringify(feature.properties.incidenti);
+        var popupContent = "<b>ente:</b> " + feature.properties.ente
+            + "<br><b>incidenti:</b> " + JSON.stringify(feature.properties.incidenti);
         layer.bindPopup(popupContent);
     }
 
@@ -158,41 +158,22 @@
 
     points_group.addTo(map);
 
-    //var MapUrl = "https://dl.dropboxusercontent.com/u/12016006/tmp/dynamicaudiomapdata.geojson"
-    //var MapUrl = "http://dialectbot.appspot.com/dynamicaudiomapdata.geojson"
-    //var MapUrl = "http://127.0.0.1:8887/dynamicaudiomapdata.geojson"
+    //var MapUrl = "https://raw.githubusercontent.com/kercos/km4city/master/incidenti.geojson"
     var MapUrl = "http://127.0.0.1:8887/incidenti.geojson"
-    //var MapUrl = "http://127.0.0.1:8887/incidenti_flat.geojson"
-
-    //var MapUrl = "http://127.0.0.1:8887/dynamicaudiomapdata_test.geojson"
-    //var MapUrl = "http://127.0.0.1:8887/incidenti_flat_test.geojson"
-    var MapUrl = "https://raw.githubusercontent.com/kercos/km4city/master/incidenti.geojson"
 
     data_map = $.getJSON(MapUrl, function(data) { addDataToMap(data, map); });
-
-    <!--function addDataToMap(data, map) {-->
-        <!--var dataLayer = L.geoJson(data, {-->
-            <!--onEachFeature: pop_expl,-->
-            <!--pointToLayer: recording_marker-->
-            <!--});-->
-        <!--dataLayer.addTo(map);-->
-    <!--}-->
-    <!--var MapUrl = "http://dialectbot.appspot.com/dynamicaudiomapdata.geojson"-->
-    <!--$.getJSON(MapUrl, function(data) { addDataToMap(data, map); });-->
 
     var slidervar = document.getElementById('slider');
     noUiSlider.create(slidervar, {
         connect: true,
-        start: [ 2012, 2017],
+        start: [ 2003, 2015],
         range: {
-            min: 2012,
-            max: 2017
+            min: 2003,
+            max: 2015
         },
-        step: 1
+        step: 1,
     });
 
-    document.getElementById('input-number-min').setAttribute("value", 2012);
-    document.getElementById('input-number-max').setAttribute("value", 2017);
     var inputNumberMin = document.getElementById('input-number-min');
     var inputNumberMax = document.getElementById('input-number-max');
     inputNumberMin.addEventListener('change', function(){
@@ -205,9 +186,9 @@
     slidervar.noUiSlider.on('update', function( values, handle ) {
         //handle = 0 if min-slider is moved and handle = 1 if max slider is moved
         if (handle==0){
-            document.getElementById('input-number-min').value = values[0];
+            document.getElementById('input-number-min').value = parseInt(values[0]);
         } else {
-            document.getElementById('input-number-max').value =  values[1];
+            document.getElementById('input-number-max').value =  parseInt(values[1]);
         }
         rangeMin = document.getElementById('input-number-min').value;
         rangeMax = document.getElementById('input-number-max').value;
