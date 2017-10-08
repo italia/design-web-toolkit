@@ -67,14 +67,14 @@ export default class Map {
     let nominatim = `http://nominatim.openstreetmap.org/search?format=json&limit=5&q=${searchValue}`
     $.getJSON(nominatim, (data) => {
       this.mapResult = {}
-      $('#map-search-result').empty()
+      $('#map-search-result tbody').empty()
 
       $.each(data, (key, val) => {
         this.mapResult[val.place_id] = {
           lat: val.lat,
           lon: val.lon
         }
-        $('#map-search-result').append(`<li data-map-search-id="${val.place_id}" class="map-result-js">${val.display_name}</li>`)
+        $('#map-search-result').append(`<tr><td data-map-search-id="${val.place_id}" class="map-result-js">${val.display_name}</td></tr>`)
       })
 
     })
