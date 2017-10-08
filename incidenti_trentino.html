@@ -146,11 +146,11 @@
     function addDataToMap(data, map) {
         var dataLayer = L.geoJson(data, {
             onEachFeature: pop_expl,
-            filter:
+            /*filter:
                 function(feature, layer) {
                     var inputyear = parseInt(feature.properties.date.substring(feature.properties.date.length-4));
                      return (inputyear <= rangeMax) && (inputyear >= rangeMin);
-                },
+                },*/
             pointToLayer: recording_marker
             });
         dataLayer.addTo(points_group);
