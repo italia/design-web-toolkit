@@ -125,7 +125,8 @@
     base_map.addTo(map);
 
     function pop_expl(feature, layer) {
-        var popupContent = "<b>ente</b> " + feature.properties.ente;
+        var popupContent = "<br>ente</br> " + feature.properties.ente
+            + "<br>incidenti</br> " + JSON.stringify(feature.properties.incidenti);
         layer.bindPopup(popupContent);
     }
 
@@ -145,11 +146,11 @@
     function addDataToMap(data, map) {
         var dataLayer = L.geoJson(data, {
             onEachFeature: pop_expl,
-            /*filter:
+            filter:
                 function(feature, layer) {
                     var inputyear = parseInt(feature.properties.date.substring(feature.properties.date.length-4));
                      return (inputyear <= rangeMax) && (inputyear >= rangeMin);
-                },*/
+                },
             pointToLayer: recording_marker
             });
         dataLayer.addTo(points_group);
