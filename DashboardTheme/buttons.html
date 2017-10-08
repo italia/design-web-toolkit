@@ -220,99 +220,80 @@
 
             </div>
             <div class="Grid-cell u-sizeFill ">
-                
-    <style type="text/css">
-		.main{
+
+	<style>
+		.button-container-div{
+			width: 100%;
 			padding: 20px;
-			margin-top: 100px;
-			margin-left: 200px;
 		}
-		.monthly-recap{
-			width: 60%;
-			height: 300px;
-			border: 2px solid #d9e6f2;
-			text-align:center;
-		}
-		.monthly-recap-title{
-			margin-top: 10px;
-			font-size: 18px;
-			color: #BDBDBD ;
-		}
-		.monthly-recap-tiny{
-			border-radius: 5px;
-			height: 80px;
-			width: 30%;
-			border: 1px solid #d9e6f2;
-			display:inline-block;
-			margin-top: 35px;
-			margin-left: 1%;
-			text-align:center;
-		}
-		.monthly-recap-tiny:hover{
-			background-color: #d9e6f2;
-		}
-		.monthly-recap-tiny-title{
-			margin-top: 10px;	
-			margin-bottom: 7px;
-		}
-		.monthly-recap-tiny-value{
-			margin-top: 15px;
-			color: #C5C5C5;
-			font-size: 20px;
-			display:inline-block;
-		}
-		.monthly-recap-tiny-arrow{
-			display:inline-block;
-			width: 10%;
-			margin-left:5px;
-		}
-		.monthly-recap-tiny-percentage{
+		.button-container{
+			width: 45%;
 			display: inline-block;
+			margin-left:2%;
+			margin-top: 30px;
+			padding-bottom: 10px;
+			border:1px solid #d9e6f2;
+		}
+		.options-header{
+			background-color: #EAEAEA;
+			text-align:center;
+			margin-bottom: 8px;
+			font-size: 15px;
+			padding: 10px;
+		}
+		.Button{
+			margin: 7px 1%;
+			width: 30%;
+			font-size: 10px !important;
 		}
 	</style>
-  	<div class="main">
-		<div class="monthly-recap">
-		 	<h1 class="monthly-recap-title">Resoconto mensile</h1>
-		 	<div class='monthly-recap-tiny'>
-		 		<h6 class='monthly-recap-tiny-title'>Visite</h6>
-		 		<h4 class="monthly-recap-tiny-value">32.345</h4>
-		 		<img src='arrow-green.png' class="monthly-recap-tiny-arrow">
-		 		<h6 class="monthly-recap-tiny-percentage">0.75%</h6>
-		 	</div>
-		 	<div class='monthly-recap-tiny'>
-		 		<h6 class='monthly-recap-tiny-title'>Click</h6>
-		 		<h4 class="monthly-recap-tiny-value">65.123</h4>
-		 		<img src='arrow-red.png' class="monthly-recap-tiny-arrow">
-		 		<h6 class="monthly-recap-tiny-percentage">0.1%</h6>
-		 	</div>
-		 	<div class='monthly-recap-tiny'>
-		 		<h6 class='monthly-recap-tiny-title'>Durata media visite</h6>
-		 		<h4 class="monthly-recap-tiny-value">3.23 min</h4>
-		 		<img  src='arrow-green.png' class="monthly-recap-tiny-arrow">
-		 		<h6 class="monthly-recap-tiny-percentage">1.5%</h6>
-		 	</div>
-		 	<div class='monthly-recap-tiny'>
-		 		<h6 class='monthly-recap-tiny-title'>Sessioni</h6>
-		 		<h4 class="monthly-recap-tiny-value">11.256</h4>
-		 		<img src='arrow-green.png' class="monthly-recap-tiny-arrow">
-		 		<h6 class="monthly-recap-tiny-percentage">13.55%</h6>
-		 	</div>
-		 	<div class='monthly-recap-tiny'>
-		 		<h6 class='monthly-recap-tiny-title'>Bounce rate</h6>
-		 		<h4 class="monthly-recap-tiny-value">3.2%</h4>
-		 		<img src='arrow-green.png' class="monthly-recap-tiny-arrow">
-		 		<h6 class="monthly-recap-tiny-percentage">4.12%</h6>
-		 	</div>
-		 	<div class='monthly-recap-tiny'>
-		 		<h6 class='monthly-recap-tiny-title'>Nuove sessioni</h6>
-		 		<h4 class="monthly-recap-tiny-value">5.000</h4>
-		 		<img src='arrow-red.png' class="monthly-recap-tiny-arrow">
-		 		<h6 class="monthly-recap-tiny-percentage">3.3%</h6>
-		 	</div>
+
+	<div class='main'>
+		<div class=button-container-div>
+			<div class='button-container'>
+				<h1 class='options-header'>Default Buttons</h1>
+				<button type="button" class="Button Button--default u-text-r-xs">default</button>
+				<button type="button" class="Button Button--danger u-text-r-xs">danger</button>
+				<button type="button" class="Button Button--info u-text-r-xs">info</button>
+			</div>
+			<div class='button-container'>
+				<h1 class='options-header'>Pressed Buttons</h1>
+				<button type="button" class="Button Button--default u-text-r-xs is-pressed">default</button>
+				<button type="button" class="Button Button--danger u-text-r-xs is-pressed">danger</button>
+				<button type="button" class="Button Button--info u-text-r-xs is-pressed">info</button>
+			</div>
 		</div>
-	</div>
-                
-                   </div>
+		<div class=button-container-div>
+			<div class='button-container'>
+				<h1 class='options-header'>Disabled Buttons</h1>
+				<button type="button" class="Button Button--default u-text-r-xs is-disabled">default</button>
+				<button type="button" class="Button Button--danger u-text-r-xs is-disabled">danger</button>
+				<button type="button" class="Button Button--info u-text-r-xs is-disabled">info</button>
+			</div>
+			<div class='button-container'>
+				<h1 class='options-header'>Shadow Buttons</h1>
+				<button type="button" class="Button Button--default u-text-r-xs Button--shadow">default</button>
+				<button type="button" class="Button Button--danger u-text-r-xs Button--shadow">danger</button>
+				<button type="button" class="Button Button--info u-text-r-xs Button--shadow">info</button>
+			</div>
+		</div>
+		<div class=button-container-div>
+			<div class='button-container'>
+				<h1 class='options-header'>Round Buttons</h1>
+				<button type="button" class="Button Button--default u-text-r-xs Button--round">default</button>
+				<button type="button" class="Button Button--danger u-text-r-xs Button--round">danger</button>
+				<button type="button" class="Button Button--info u-text-r-xs Button--round">info</button>
+			</div>
+			<div class='button-container'>
+				<h1 class='options-header'>Round Shadow Buttons</h1>
+				<button type="button" class="Button Button--default u-text-r-xs Button--shadow Button--round">default</button>
+				<button type="button" class="Button Button--danger u-text-r-xs Button--shadow Button--round">danger</button>
+				<button type="button" class="Button Button--info u-text-r-xs Button--shadow Button--round">info</button>
+			</div>
+		</div>
+    </div>
+
+            </div>
         </div>
 
 
