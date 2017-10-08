@@ -1,0 +1,23 @@
+<section class="u-layout-wide u-layout-withGutter u-layoutCenter u-padding-r-top">
+  <h1 class="u-text-h2">Home di sezione</h1>
+  <div class="Grid Grid--withGutter">
+
+      {% for i in [1, 2, 3, 4, 5, 6, 7, 8] %}
+      <div class="Grid-cell u-sm-size1of2 u-md-size1of2 u-lg-size1of3 u-padding-r-all">
+        <div class="u-border-top-l u-color-70 u-text-r-l u-padding-r-bottom">
+          <h2 class="u-text-h3 u-padding-r-top">Area tematica</h2>
+          <p class="Prose u-padding-r-top u-padding-r-bottom">
+            {{ __TEXTS__[i] }}
+            <ul class="Linklist Prose u-text-r-xs">
+              <li><a href="">{{ __WORDS__[1] }}</a></li>
+              <li><a href="">{{ __WORDS__[2] }}</a></li>
+              <li><a href="">{{ __WORDS__[3] }}</a></li>
+              <li><a href="">{{ __WORDS__[4] }}</a></li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+
+  </div>
+</section>

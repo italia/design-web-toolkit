@@ -1,0 +1,99 @@
+/** @define Table; */
+
+/*
+ *	Fork of suitcss-component-table:
+ *
+ * 		https://github.com/trunkclub/suitcss-components-table
+ * 		Copyright (c) 2014 Trunk Club
+ *
+ *  alas, not included in npm registry.
+ *
+ */
+
+/** @define Table; weak; */
+
+:root {
+  --Table-border-color: #d6dce3;
+  --Table-cell-pad-h: 0.5em;
+  --Table-cell-pad-v: 1em;
+  --Table-hover-color: #e5f1fa;
+  --Table-stripe-color: #f6f7f9;
+}
+
+.Table {
+  border: 0;
+  border-collapse: collapse;
+  max-width: 100%;
+  width: 100%;
+}
+
+/*
+ *  [1] Don't extend utility class to make it overridable
+ */
+
+.Table td,
+.Table th {
+  @extend .u-padding-r-all;
+
+  text-align: left; /* 1 */
+}
+
+.Table--fixed {
+  table-layout: fixed;
+}
+
+/* Hover row modifiers
+   ========================================================================== */
+
+.Table--hover > tbody > tr:hover > th,
+.Table--hover > tbody > tr:hover > td {
+  background-color: var(--Table-hover-color);
+}
+
+/* Striped row modifiers
+   ========================================================================== */
+
+/**
+ * Remove top borders on all cells.
+ */
+
+.Table--striped th,
+.Table--striped td {
+  border-top: 0;
+}
+
+.Table--striped tbody tr:nth-child(odd) {
+  background-color: var(--Table-stripe-color);
+}
+
+/* Border modifiers
+   ========================================================================== */
+
+/**
+ * Add border around table
+ */
+
+.Table--withBorder tr {
+  border-bottom: 1px var(--Table-border-color) solid;
+}
+
+.Table--withBorder th {
+  border-top: 1px var(--Table-border-color) solid;
+}
+
+.Table--withBorder thead tr:first-child th,
+.Table--withBorder thead tr:first-child td {
+  border-top: 0;
+}
+
+/* Compact layout modifier
+   ========================================================================== */
+
+/**
+ * Reduce vertical padding to match horizontal
+ */
+
+.Table--compact td,
+.Table--compact th {
+  padding: var(--Table-cell-pad-h);
+}

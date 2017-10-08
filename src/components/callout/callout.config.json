@@ -1,0 +1,33 @@
+{
+    "title": "Callout",
+    "variants": [
+        {
+            "name": "default",
+            "hidden": true
+        },
+        {
+            "name": "must",
+            "context": {
+              "modifier": "must"
+            }
+        },
+        {
+            "name": "should",
+            "context": {
+              "modifier": "should"
+            }
+        },
+        {
+            "name": "could",
+            "context": {
+              "modifier": "could"
+            }
+        },
+        {
+            "name": "example",
+            "context": {
+              "modifier": "example"
+            }
+        }
+    ]
+}

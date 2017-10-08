@@ -1,0 +1,81 @@
+/** @define Spid; weak */
+
+/*
+ * 1. mandatory font-family
+ */
+
+:root {
+  --Spid-font-ratio: 1.2em;
+  --Spid-img-height: 2.5em;
+  --Spid-img-width: 3em;
+  --Spid-idp-img-height: 2em;
+  --Spid-background: #06c;
+  --Spid-font-family: "Titillium Web"; /* [1] */
+}
+
+.Spid {
+  @extend .u-inline;
+  @extend .u-posRelative;
+}
+
+.Spid-button {
+  @extend .u-color-white;
+  @extend .u-alignMiddle;
+  @extend .u-linkClean;
+  @extend .u-borderRadius-s;
+  @extend .u-padding-bottom-xxs;
+  @extend .u-padding-top-xxs;
+
+  background-color: var(--Spid-background);
+  font-family: var(--Spid-font-family);
+  text-transform: none !important;
+}
+
+.Spid-button:focus,
+.Spid-button:hover {
+  background-color: color(var(--Spid-background) l(-15%));
+}
+
+.Spid-button > span {
+  @extend .u-alignMiddle;
+
+  font-size: var(--Spid-font-ratio);
+}
+
+.Spid-button > img {
+  @extend .u-alignMiddle;
+  @extend .u-margin-r-right;
+  @extend .u-padding-r-right;
+  @extend .u-border-right-xxs;
+
+  color: color(var(--Spid-background) l(+8%) s(-15%));
+  height: var(--Spid-img-height);
+  width: var(--Spid-img-width);
+}
+
+.Spid-button:focus > img,
+.Spid-button:hover > img {
+  color: color(var(--Spid-background) l(-8%) s(-15%));
+}
+
+.Spid-menu {
+  @extend .u-background-white;
+  @extend .u-borderShadow-m;
+  @extend .u-zindex-50;
+
+  width: 100%;
+}
+
+.Spid-idp {
+  @extend .u-padding-r-all;
+
+  width: 100%;
+}
+
+.Spid-idp:hover {
+  @extend .u-background-grey-10;
+}
+
+.Spid-idp > img {
+  height: var(--Spid-idp-img-height);
+}

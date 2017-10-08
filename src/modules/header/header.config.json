@@ -1,0 +1,38 @@
+{
+  "title": "Header",
+  "context": {
+    "site": {
+      "name": "Nome della Pubblica Amministrazione",
+      "subtitle": "eventuale sottotitolo",
+      "owner": "Nome amministrazione afferente",
+      "logo": "//placehold.it/75x80"
+    }
+  },
+  "isFixed": true,
+  "hideOnDesktop": false,
+  "variants": [{
+    "name": "default",
+    "context": {
+      "clone": false
+    },
+    "name": "monochrome",
+    "context": {
+      "backgroundClass": "u-background-50",
+      "menu": true,
+      "megamenu": true,
+      "hideOnDesktop": true
+    }
+  }, {
+    "name": "menu",
+    "context": {
+      "menu": true
+    }
+  }, {
+    "name": "megamenu",
+    "context": {
+      "menu": true,
+      "megamenu": true,
+      "hideOnDesktop": true
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+/* @define Pill; */
+
+.Pill {
+  @extend .u-inlineBlock;
+  @extend .u-padding-left-s;
+  @extend .u-padding-right-xxs;
+  @extend .u-borderRadius-xl;
+}
+
+.Pill--xs {
+  @extend .u-padding-top-xs;
+  @extend .u-padding-bottom-xs;
+}
+
+.Pill--xxs {
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xxs;
+}

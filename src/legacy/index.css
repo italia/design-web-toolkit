@@ -1,0 +1,133 @@
+/*
+ *	FIXME:
+ *
+ *		Hall of shame
+ *	  The bare minimum to support ancient devices
+ *	  Mostly IE8 / IE9
+ *
+ */
+
+.ie89 .Grid {
+  display: block !important;
+  font-size: 0;
+  text-align: left;
+}
+
+.ie89 .u-flex,
+.ie89 .Grid-cell,
+.ie89 .Header,
+.ie89 .Header > *,
+.ie89 .Header-utils > * {
+  box-sizing: border-box;
+  display: inline-block !important;
+  font-size: 1.8rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  position: static !important;
+  text-align: left;
+  vertical-align: top;
+  width: 100%;
+}
+
+.ie89 .Grid--withGutter {
+  margin: 0 -8px !important;
+}
+
+.ie89 .Grid--withGutter > .Grid-cell {
+  padding: 0 8px !important;
+}
+
+/*
+ *	Header is static
+ */
+
+.ie89 body {
+  padding: 0 !important;
+}
+
+.ie89 header {
+  padding-bottom: 1% !important;
+}
+
+.ie89 .Header-serviceLink {
+  height: 3em;
+  line-height: 3em;
+}
+
+.ie89 .Header-searchTrigger {
+  display: none !important;
+}
+
+.ie89 .Header-utils > * {
+  float: right !important;
+  text-align: right !important;
+}
+
+.ie89 .Header-search .Form-field {
+  float: right;
+  text-align: right;
+}
+
+.ie89 .Header-search .Form-field input {
+  padding: 0.3em;
+}
+
+.ie89 .Header-search label {
+  margin-top: 1em;
+}
+
+.ie89 .Header-search button,
+.ie89 .Header-search .Form-input {
+  float: left !important;
+  width: auto !important;
+}
+
+.ie89 .Header-navbar > * {
+  vertical-align: middle;
+}
+
+/* IE8 */
+
+.ie8 .Megamenu-item {
+  display: inline-block !important;
+}
+
+.ie8 .Header-navbar {
+  background: var(--Color-primary) !important;
+  color: white !important;
+}
+
+.ie8 .Cookiebar,
+.ie8 .Footer {
+  color: white !important;
+}
+
+.ie8 .Header-socialIcons {
+  min-width: 12em;
+}
+
+.ie8 .Header-socialIcons li,
+.ie8 .Header-owner a,
+.ie8 .Header-serviceLink a,
+.ie8 .Header-serviceLink span,
+.ie8 .Header-navbar a {
+  color: white !important;
+  display: inline !important;
+}
+
+.ie8 .Skiplinks a {
+  top: -10em;
+}
+
+/*
+ * 	CSS transform does not work in IE8
+ */
+
+.ie8 .Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
+  left: auto !important;
+}
+
+.ie8 .Offcanvas--left.is-ready[aria-hidden="false"] .Offcanvas-content {
+  right: auto !important;
+}

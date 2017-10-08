@@ -1,0 +1,39 @@
+/** @define utilities; */
+
+@media (--lg-viewport) {
+
+  .u-lg-block {
+    display: block !important;
+  }
+
+  .u-lg-hidden {
+    display: none !important;
+  }
+
+  .u-lg-inline {
+    display: inline !important;
+  }
+
+  /**
+   * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+   * inline-block will display at its default size, and not limit its width to
+   * 100% of an ancestral container.
+   */
+
+  .u-lg-inlineBlock {
+    display: inline-block !important;
+    max-width: 100%; /* 1 */
+  }
+
+  .u-lg-table {
+    display: table !important;
+  }
+
+  .u-lg-tableCell {
+    display: table-cell !important;
+  }
+
+  .u-lg-tableRow {
+    display: table-row !important;
+  }
+}

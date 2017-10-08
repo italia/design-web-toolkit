@@ -1,0 +1,66 @@
+/** @define utilities; */
+
+:root {
+  --Border-size-unit: 0.1rem;
+  --Border-focus-color: #ff8c00;
+  --Border-soft-focus-color: #00c5ca;
+}
+
+.u-border-top-xxs { border-top: var(--Border-size-unit) solid currentColor !important; }
+.u-border-right-xxs { border-right: var(--Border-size-unit) solid currentColor !important; }
+.u-border-bottom-xxs { border-bottom: var(--Border-size-unit) solid currentColor !important; }
+.u-border-left-xxs { border-left: var(--Border-size-unit) solid currentColor !important; }
+.u-border-all-xxs { border: var(--Border-size-unit) solid currentColor !important; }
+
+.u-border-top-xs { border-top: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-right-xs { border-right: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-bottom-xs { border-bottom: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-left-xs { border-left: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-all-xs { border: calc(2 * var(--Border-size-unit)) solid currentColor !important; }
+
+.u-border-top-m { border-top: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-right-m { border-right: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-bottom-m { border-bottom: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-left-m { border-left: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-all-m { border: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+
+.u-border-top-l { border-top: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-right-l { border-right: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-bottom-l { border-bottom: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-left-l { border-left: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-all-l { border: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
+
+.u-border-top-none { border-top: none !important; }
+.u-border-right-none { border-right: none !important; }
+.u-border-bottom-none { border-bottom: none !important; }
+.u-border-left-none { border-left: none !important; }
+.u-border-all-none { border: none !important; }
+
+/*
+ *	Border for responsive cell
+ *	see http://codepen.io/Hawkun/pen/rsIEp
+ */
+
+.u-borderAlt {
+  box-shadow:
+    0.1em 0 0 0 currentColor,
+    0 0.1em 0 0 currentColor,
+    0.1em 0.1em 0 0 currentColor,
+    0.1em 0 0 0 currentColor inset,
+    0 0.1em 0 0 currentColor inset;
+  padding: 0.1em;
+}
+
+.u-border-none {
+  border: none !important;
+}
+
+.u-borderHideFocus:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.u-borderSoftFocus:focus {
+  box-shadow: 0 0 3px 3px color(var(--Border-soft-focus-color) a(70%)) inset !important;
+  outline: none !important;
+}

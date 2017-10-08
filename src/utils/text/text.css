@@ -1,0 +1,32 @@
+/** @define utilities; */
+
+.u-text-xxl {
+  font-size: 3.2rem !important;
+}
+
+.u-text-xl {
+  font-size: 2.8rem !important;
+}
+
+.u-text-l {
+  font-size: 2.2rem !important;
+}
+
+.u-text-m {
+  font-size: 2rem !important;
+  letter-spacing: 0.007em !important;
+}
+
+.u-text-s {
+  font-size: 1.8rem !important;
+  letter-spacing: 0.005em !important;
+}
+
+.u-text-xs {
+  font-size: 1.6rem !important;
+  letter-spacing: 0.01em !important;
+}
+
+.u-text-xxs {
+  font-size: 1.4rem !important;
+}

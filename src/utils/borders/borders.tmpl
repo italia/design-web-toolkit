@@ -1,0 +1,9 @@
+{% for pos in ['top', 'right', 'bottom', 'left', 'all'] %} {% for size in ['xxs', 'm', 'l'] %}
+<div class="u-border-all-xxs u-color-grey-80 u-size1of3 u-padding-all-l">
+  <div class="u-border-{{ pos }}-{{ size }} u-color-teal u-padding-all-l">
+    <h2 class="u-text-h5">
+      u-border-{{ pos }}-{{ size }}
+    </h2>
+  </div>
+</div>
+{% endfor %} {% endfor %}

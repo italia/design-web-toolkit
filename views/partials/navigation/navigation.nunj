@@ -1,0 +1,5 @@
+<nav class="Navigation" id="menu">
+  {% for navPartial in frctl.theme.get('nav') %}
+    {% include 'partials/navigation/' + navPartial + '.nunj' %}
+  {% endfor %}
+</nav>

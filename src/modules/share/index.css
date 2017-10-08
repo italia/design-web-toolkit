@@ -1,0 +1,67 @@
+/** @define Share; weak */
+
+.Share > ul > li {
+  @extend .u-background-50;
+  @extend .u-floatLeft;
+  @extend .u-textCenter;
+  @extend .u-color-white;
+  @extend .u-border-right-xxs;
+  @extend .u-text-r-l;
+
+  height: 1.5em;
+  width: 1.8em;
+}
+
+.Share-reveal > a > span,
+.Share > ul > li > a {
+  @extend .u-inlineBlock;
+  @extend .u-alignMiddle;
+  @extend .u-color-white;
+  @extend .u-textClean;
+  @extend .u-posRelative;
+  @extend .u-layoutCenterVertically;
+}
+
+.Share-reveal {
+  @extend .u-floatLeft;
+  @extend .u-background-grey-20;
+  @extend .u-text-r-l;
+
+  cursor: pointer;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+.Share-revealIcon {
+  @extend .u-color-white;
+  @extend .u-floatLeft;
+  @extend .u-background-50;
+  @extend .u-textCenter;
+
+  height: 100%;
+  line-height: 1.5em !important;
+  width: 1.8em;
+}
+
+.Share-revealIcon.is-open {
+  @extend .u-color-50;
+  @extend .u-background-grey-20;
+}
+
+.Share-revealText {
+  @extend .u-color-grey-50;
+  @extend .u-text-r-l;
+  @extend .u-textWeight-400;
+  @extend .u-textClean;
+
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.Share-revealText:hover {
+  text-decoration: underline;
+}
+
+.Share-revealText:focus {
+  background-color: transparent;
+}

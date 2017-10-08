@@ -1,0 +1,17 @@
+{
+    "title": "Linklist",
+    "variants": [
+        {
+            "name": "default",
+            "context": {
+              "modifier": ""
+            }
+        },
+        {
+            "name": "padded",
+            "context": {
+              "modifier": "Linklist--padded"
+            }
+        }
+    ]
+}

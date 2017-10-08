@@ -1,0 +1,47 @@
+/** @define utilities; */
+
+@media (--sm-viewport) {
+
+  .u-text-sm-xxl {
+    font-size: 3.2rem !important;
+  }
+
+  .u-text-sm-xl {
+    font-size: 3rem !important;
+  }
+
+  .u-text-sm-l {
+    font-size: 2.4rem !important;
+  }
+
+  .u-text-sm-m {
+    font-size: 2.1rem !important;
+    letter-spacing: 0.007em !important;
+  }
+
+  .u-text-sm-s {
+    font-size: 2rem !important;
+    letter-spacing: 0.005em !important;
+  }
+
+  .u-text-sm-xs {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  .u-text-sm-xxs {
+    font-size: 1.5rem !important;
+  }
+
+  .u-text-sm-center {
+    text-align: center !important;
+  }
+
+  .u-text-sm-left {
+    text-align: left !important;
+  }
+
+  .u-text-sm-right {
+    text-align: right !important;
+  }
+}

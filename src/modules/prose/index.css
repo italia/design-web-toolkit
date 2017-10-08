@@ -1,0 +1,112 @@
+/** @define Prose; weak; */
+
+:root {
+  --Prose-color-text-primary: #1c2024;
+  --Prose-color-text-secondary: #5a6772;
+  --Prose-color-text-highlighted: #b2ebed;
+  --Prose-color-link: #06c;
+  --Prose-color-link-hover: #036;
+  --Prose-color-link-visited: #06c;
+}
+
+.Prose > p,
+.Prose > pre
+.Prose > figure {
+  @extend .u-margin-bottom-xl;
+}
+
+.Prose,
+.Prose > p,
+.Prose > ul > li,
+.Prose > ol > li {
+  @extend .u-text-r-xs;
+  @extend .u-lineHeight-xl;
+
+  color: var(--Prose-color-text-primary);
+}
+
+.Prose > p > small {
+  @extend .u-text-r-xxs;
+}
+
+.Prose > a,
+.Prose p > a {
+  @extend .u-text-r-xs;
+  @extend .u-lineHeight-xl;
+
+  color: var(--Prose-color-link);
+}
+
+.Prose {
+  color: var(--Prose-color-text-primary);
+}
+
+.Prose--secondary {
+  color: var(--Prose-color-text-secondary);
+}
+
+.Prose-blockquote {
+  @extend .u-border-left-m;
+  @extend .u-padding-left-l;
+  @extend .u-margin-bottom-xl;
+}
+
+.Prose-blockquote > p {
+  @extend .u-text-r-m;
+  @extend .u-textItalic;
+  @extend .u-textSecondary;
+}
+
+.Prose > p > a:hover {
+  color: var(--Prose-color-link-hover);
+}
+
+.Prose > p > a:visited {
+  color: var(--Prose-color-link-visited);
+}
+
+.Prose > ul,
+.Prose > ol {
+  @extend .u-margin-bottom-xl;
+  @extend .u-margin-left-xl;
+
+  list-style-position: outside;
+}
+
+.Prose > ul {
+  list-style-type: square;
+}
+
+.Prose > ol {
+  list-style-type: decimal;
+}
+
+.Prose > ul > li,
+.Prose > ol > li {
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xxs;
+}
+
+.Prose > h1 {
+  @extend .u-text-h1;
+}
+
+.Prose > h2 {
+  @extend .u-text-h2;
+}
+
+.Prose > h3 {
+  @extend .u-text-h3;
+}
+
+.Prose > h4 {
+  @extend .u-text-h4;
+}
+
+.Prose > h5 {
+  @extend .u-text-h5;
+}
+
+.Prose > h6 {
+  @extend .u-text-h6;
+}

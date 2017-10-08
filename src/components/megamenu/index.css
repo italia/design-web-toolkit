@@ -1,0 +1,272 @@
+/** @define Megamenu; weak; */
+
+:root {
+  --Megamenu-arrow-width: 0.5em;
+  --Megamenu-subnav-width: 14em;
+}
+
+/*
+ *  1. IE hack
+ */
+
+.Megamenu-list {
+  @extend .u-block; /* 1 */
+  @extend .u-flex;
+  @extend .u-flexJustifyStart;
+  @extend .u-flexAlignContentCenter;
+  @extend .u-posRelative;
+  @extend .u-zindex-40;
+  @extend .u-alignMiddle;
+  @extend .u-textLeft;
+}
+
+/* a top level navigation item in the mega menu */
+
+/*
+ *  1. IE hack
+ */
+
+.Megamenu-item {
+  @extend .u-inlineBlock; /* 1 */
+  @extend .u-flex;
+  @extend .u-sizeFit;
+  @extend .u-alignBottom;
+  @extend .u-borderHideFocus;
+}
+
+.Megamenu-item > a:hover,
+.Megamenu-item:hover {
+  cursor: pointer !important;
+}
+
+/* first descendant link within a top level navigation item */
+
+.Megamenu-item > a {
+  @extend .u-alignBottom;
+  @extend .u-inlineBlock;
+  @extend .u-flex;
+  @extend .u-flexCol;
+  @extend .u-flexJustifyCenter;
+  @extend .u-flexAlignSelfStretch;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-padding-right-xl;
+  @extend .u-padding-left-xl;
+}
+
+.Megamenu-item:first-child > a {
+  padding-left: 0 !important;
+}
+
+.Megamenu-item > a:focus {
+  @extend .u-backround-none;
+}
+
+/* focus/open states of first descendant link within a top level
+      navigation item
+      .Megamenu-subnavGroup > li > ul > li > a.is-focus {
+    }
+*/
+
+/* open state of first descendant link within a top level
+      navigation item */
+
+.Megamenu-item > a.is-open {
+  @extend .u-zindex-min;
+}
+
+/* sub-navigation panel */
+
+.Megamenu.is-ready .Megamenu-subnav {
+  @extend .u-posAbsolute;
+  @extend .u-zindex-max;
+  @extend .u-inlineBlock;
+
+  left: 0;
+  top: 100%;
+  visibility: hidden;
+}
+
+/* sub-navigation panel open state */
+
+.Megamenu.is-ready .Megamenu-subnav.is-open {
+  visibility: visible;
+}
+
+/* list of items within sub-navigation panel */
+
+.Megamenu-subnavGroup {
+  @extend .u-inlineBlock;
+  @extend .u-alignTop;
+}
+
+.Megamenu-subnavGroup:nth-child(3n+0) {
+  @extend .u-cf;
+}
+
+/* list item within sub-navigation panel */
+
+.Megamenu-subnavGroup > li {
+  @extend .u-block;
+
+  width: var(--Megamenu-subnav-width);
+}
+
+/* Some custom style */
+
+.Megamenu--default {
+  @extend .u-layout-r-withGutter;
+
+  background-color: color(var(--Color-primary) l(+5%) s(-15%));
+}
+
+.Megamenu--default > .Megamenu-list {
+  @extend .u-layout-wide;
+  @extend .u-layoutCenter;
+
+  @media (--lg-viewport) {
+    padding-left: 0 !important;
+  }
+}
+
+.Megamenu--default .Megamenu-item > a,
+.Megamenu--default .Megamenu-subnavGroup > li > a {
+  @extend .u-textClean;
+  @extend .u-posRelative;
+  @extend .u-textWeight-600;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li > a {
+  @extend .u-color-95;
+  @extend .u-text-r-s;
+  @extend .u-textUppercase;
+  @extend .u-textWeight-700;
+}
+
+.Megamenu--default .Megamenu-item > a {
+  @extend .u-color-white;
+  @extend .u-text-r-xs;
+}
+
+/*
+ *  @FIXME: hack to insert expand icon
+ *
+ *  1. Cannot use padding-r-* because of pseudoselector.
+ */
+
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after,
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=false]::after {
+  @extend .u-padding-left-xs; /* 1 */
+  @extend .u-text-r-xxs;
+  @extend .u-posAbsolute;
+
+  @extend .Icon;
+
+  bottom: 35%;
+  right: 0.5em;
+}
+
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=false]::after {
+  content: "\23f6";
+}
+
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after {
+  content: "\23f7";
+}
+
+.Megamenu--default .Megamenu-list > li > a[aria-expanded=true] {
+  opacity: 0.7;
+}
+
+.Megamenu--default .Megamenu-subnav {
+  @extend .u-background-white;
+  @extend .u-padding-top-l;
+  @extend .u-padding-bottom-l;
+  @extend .u-padding-left-xl;
+  @extend .u-padding-right-xl;
+  @extend .u-borderRadius-m;
+  @extend .u-borderShadow-l;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li {
+  @extend .u-color-grey-50;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-margin-r-right;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li:last-child {
+  border-bottom: none !important;
+}
+
+/*
+ *  Do not put padding and margin here.
+ */
+
+.Megamenu--default .Megamenu-subnavGroup {
+  @extend .u-textLeft;
+  @extend .u-color-grey-40;
+}
+
+.Megamenu--default .Megamenu-subnavGroup:last-child {
+  border-right: none !important;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul {
+  @extend .u-padding-top-xs;
+  @extend .u-margin-top-s;
+  @extend .u-padding-bottom-xxs;
+}
+
+/*
+ *	Max depth = 3 levels
+ */
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul li {
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xs;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul > li a {
+  @extend .u-text-r-xs;
+  @extend .u-color-grey-80;
+  @extend .u-textClean;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul > li > ul > li > a {
+  @extend .u-text-r-xxs;
+  @extend .u-color-grey-80;
+  @extend .u-textClean;
+}
+
+.Megamenu--default .Megamenu-subnavGroup > li > ul > li > ul {
+  @extend .u-margin-top-xs;
+  @extend .u-margin-bottom-xs;
+}
+
+/*
+ *  1. does not work in IE(11)
+ */
+
+.Megamenu--default .Megamenu-area {
+  @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
+  @extend .u-padding-r-left;
+  @extend .u-posAbsolute;
+
+  /* [1] margin-left: auto; */
+
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.Megamenu--default .Megamenu-close {
+  @extend .u-posAbsolute;
+  @extend .u-text-r-m;
+
+  cursor: pointer;
+  opacity: 0.7;
+  right: 2em;
+  top: 2em;
+}

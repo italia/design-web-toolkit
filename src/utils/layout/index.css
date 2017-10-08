@@ -1,0 +1,157 @@
+/** @define utilities; */
+
+:root {
+  --Layout-container-wide: 144rem;
+  --Layout-container-wider: 168rem;
+  --Layout-container-medium: 128rem;
+  --Layout-container-small: 96rem;
+  --Layout-gutter: 0.8rem;
+  --Layout-gutter-wide: 2.4rem;
+  --Layout-prose-width: 32em;
+}
+
+.u-layout-withGutter {
+  padding-left: calc(1.5 * var(--Layout-gutter)) !important;
+  padding-right: calc(1.5 * var(--Layout-gutter)) !important;
+}
+
+@media (--sm-viewport) {
+
+  .u-layout-sm-withGutter {
+    padding-left: calc(2 * var(--Layout-gutter)) !important;
+    padding-right: calc(2 * var(--Layout-gutter)) !important;
+  }
+}
+
+@media (--md-viewport) {
+
+  .u-layout-md-withGutter {
+    padding-left: calc(2.5 * var(--Layout-gutter)) !important;
+    padding-right: calc(2.5 * var(--Layout-gutter)) !important;
+  }
+}
+
+@media (--lg-viewport) {
+
+  .u-layout-lg-withGutter {
+    padding-left: calc(13 * var(--Layout-gutter)) !important;
+    padding-right: calc(13 * var(--Layout-gutter)) !important;
+  }
+}
+
+.u-layout-r-withGutter {
+  @extend .u-layout-withGutter;
+  @extend .u-layout-sm-withGutter;
+  @extend .u-layout-md-withGutter;
+  @extend .u-layout-lg-withGutter;
+}
+
+.u-layout-constrain {
+  min-width: 30rem;
+}
+
+.u-layout-wide {
+  max-width: var(--Layout-container-wide) !important;
+
+  @media (--md-viewport) {
+    max-width: var(--Layout-container-medium) !important;
+  }
+}
+
+.u-layout-wider {
+  max-width: var(--Layout-container-wider) !important;
+}
+
+.u-layout-medium {
+  max-width: var(--Layout-container-medium) !important;
+}
+
+.u-layout-small {
+  max-width: var(--Layout-container-small) !important;
+}
+
+.u-layoutCenter {
+  margin: auto !important;
+}
+
+.u-layoutCenterVertically {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+
+  /*  transform: perspective(1px) translateY(-50%) !important; */
+}
+
+/* postcss-bem-linter: ignore */
+
+.u-layout-centerContent > * {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.u-layout-centerLeft {
+  @extend .u-flex;
+  @extend .u-flexJustifyCenter;
+  @extend .u-md-flexJustifyStart;
+  @extend .u-lg-flexJustifyStart;
+  @extend .u-sizeFull;
+  @extend .u-md-size1of2;
+  @extend .u-lg-size1of2;
+}
+
+.u-layout-centerRight {
+  @extend .u-flex;
+  @extend .u-flexJustifyCenter;
+  @extend .u-md-flexJustifyEnd;
+  @extend .u-lg-flexJustifyEnd;
+  @extend .u-sizeFull;
+  @extend .u-md-size1of2;
+  @extend .u-lg-size1of2;
+}
+
+.u-layout-prose {
+  max-width: var(--Layout-prose-width) !important;
+}
+
+.u-layout-release {
+  max-width: none !important;
+}
+
+/*
+ *	https://css-tricks.com/full-width-containers-limited-width-parents/
+ */
+
+.u-layout-releaseFull {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+.u-layout-matchHeight {
+  @extend .u-flex;
+  @extend .u-flexAlignSelfStretch;
+}
+
+.u-columns-2 {
+  columns: 2 !important;
+}
+
+.u-sm-columns-2 {
+  @media (--sm-viewport) {
+    columns: 2 !important;
+  }
+}
+
+.u-md-columns-2 {
+  @media (--md-viewport) {
+    columns: 2 !important;
+  }
+}
+
+.u-lg-columns-2 {
+  @media (--lg-viewport) {
+    columns: 2 !important;
+  }
+}

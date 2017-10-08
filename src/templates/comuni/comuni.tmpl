@@ -1,0 +1,38 @@
+{% render '@cookiebar' %}
+
+{% render '@header', { isFixed: true, hideOnDesktop: false, menu: true, megamenu: false, clone: false,
+  menuItems: ['Servizi', 'L\'Amministrazione', 'Vivere il Comune', 'Altro'],
+  site: {name: 'Nome del comune', subtitle: '', owner: 'Nome Regione'} }, true %}
+
+{% render '@offcanvas', { treeview: 'treeview--comuni', showOpenButton: false }, true %}
+
+<div id="main">
+
+  {% render '@hero--news' %}
+  {% render '@comuni--top' %}
+  {% render '@layout--focus' %}
+
+  <div class="u-background-white u-color-black u-text-xxl u-padding-r-top u-padding-r-bottom">
+    <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter" id="utilita">
+      {% render '@leads', {title: 'Utilità', leads: ['Open data', 'Comunicati stampa']} %}
+    </div>
+  </div>
+
+  <div class="u-background-compl u-padding-all-xl u-layoutCenter u-hiddenPrint">
+    <p class="u-textCenter u-margin-top-m u-margin-bottom-m">
+      <a href="#" class="u-color-95 u-textClean u-text-h3">
+        <span class="u-padding-r-right Icon Icon-comment">
+          </span> Valuta questo sito
+      </a>
+    </p>
+  </div>
+
+  <div class="u-background-95">
+    <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter u-hiddenPrint">
+      {% render '@footer' %}
+    </div>
+  </div>
+
+  {% render '@scrolltop' %}
+
+</div>

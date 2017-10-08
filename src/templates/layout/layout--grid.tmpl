@@ -1,0 +1,36 @@
+<div class="u-layout-centerContent u-background-grey-20 u-padding-r-bottom">
+  <section class="u-layout-wide">
+    <h2 class="u-padding-r-bottom u-padding-r-top u-text-r-l">{{ __WORDS__[1] | capitalize }}</h2>
+
+    <div class="Grid Grid--withGutter">
+
+      <div class="Grid-cell u-nbfc u-md-size3of4 u-lg-size3of4">
+
+        <div class="Grid u-layout-centerContent">
+          <div class="Grid-cell u-sizeFit">
+            <img src="//placehold.it/330x330?text=placeholder" class="u-sizeFit" alt="..." />
+          </div>
+          <div class="Grid-cell u-md-sizeFill u-lg-sizeFill u-padding-r-left">
+            {% render '@tile', { title: __SHORT_TEXTS__[1] } %}
+          </div>
+        </div>
+      </div>
+
+      <div class="Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left">
+        {% render '@tile', { text: __TEXTS__[2] } %}
+      </div>
+
+      {% for i in [1, 2, 3, 4] %}
+      <div class="Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left">
+        {% render '@tile', { text: __TEXTS__[i + 2] } %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <p class="u-textCenter u-text-md-right u-text-lg-right u-padding-r-top">
+      <a href="#" class="u-color-50 u-textClean u-text-h4">
+          tutti i contenuti <span class="Icon Icon-chevron-right"></a>
+    </p>
+
+  </section>
+</div>

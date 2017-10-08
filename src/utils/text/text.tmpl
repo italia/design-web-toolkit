@@ -1,0 +1,11 @@
+{% for class in [ 'u-textSmooth', 'u-textClean', 'u-textWeight-400', 'u-textWeight-600', 'u-textWeight-700',  'u-textNormal',
+'u-textSecondary', 'u-textItalic', 'u-textPreformatted' ] %}
+
+<section class="u-layout-prose u-padding-bottom-xxl">
+  <small class="u-text-r-xs u-textWeight-400">{{ class }}:</small>
+  <p class="{{ class }} u-margin-top-xs">
+    {{ __TEXTS__[1] }}
+  </p>
+</section>
+
+{% endfor %}

@@ -1,0 +1,38 @@
+<article class="Prose u-layout-prose">
+
+  <h1>Velit irure ad cillum Lorem consequat magna magna pariatur.</h1>
+
+  <h2>Velit irure ad cillum Lorem consequat magna magna pariatur.</h2>
+
+  <h3>Velit irure ad cillum Lorem consequat magna magna pariatur.</h3>
+
+  <h4>Velit irure ad cillum Lorem consequat magna magna pariatur.</h4>
+
+  <h5>Velit irure ad cillum Lorem consequat magna magna pariatur.</h5>
+
+  <h6>Velit irure ad cillum Lorem consequat magna magna pariatur.</h6>
+
+  {% render '@heading--h2', { text: 'Paragafo' } %}
+  {% render '@prose--paragraph' %}
+
+  {% render '@heading--h2', { text: 'Testo preformattato' } %}
+  {% render '@prose--code' %}
+
+  {% render '@heading--h2', { text: 'Citazione' } %}
+  {% render '@prose--blockquote', { text: __SHORT_TEXTS__[0] } %}
+
+  {% render '@heading--h2', { text: 'Liste' } %}
+
+  <ul>
+    {% for i in range(0, 9) %}
+    <li>{{ __SHORT_TEXTS__[i] }}</li>
+    {% endfor %}
+  </ul>
+
+  <ol>
+    {% for i in range(0, 9) %}
+    <li>{{ __SHORT_TEXTS__[i] }}</li>
+    {% endfor %}
+  </ol>
+
+</article>

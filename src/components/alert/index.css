@@ -1,0 +1,85 @@
+/** @define Alert */
+
+:root {
+  --Alert-error-bg: #ffcbcb;
+  --Alert-error-color: #1e1212;
+  --Alert-error-border: #b50000;
+  --Alert-error-background-image: inline("icons/img/SVG/error.svg");
+  --Alert-warning-bg: #ffef9f;
+  --Alert-warning-color: #4f4310;
+  --Alert-warning-border: #1e1212;
+  --Alert-warning-background-image: inline("icons/img/SVG/warning.svg");
+  --Alert-success-bg: #dff0d8;
+  --Alert-success-color: #274d28;
+  --Alert-success-border: #d6e9c6;
+  --Alert-success-background-image: inline("icons/img/SVG/check.svg");
+  --Alert-info-bg: #c6f3f5;
+  --Alert-info-color: #004446;
+  --Alert-info-border: #1e1212;
+  --Alert-info-background-image: inline("icons/img/SVG/info.svg");
+}
+
+.Alert {
+  border-left-style: solid;
+  border-left-width: 0.5em;
+  padding-left: 1em;
+}
+
+.Alert--withIcon {
+  background-size: 1em 1em;
+  min-height: 3em;
+  padding-left: 4em;
+  padding-top: 0.5em;
+}
+
+.Alert--error {
+  border-left-color: color(var(--Alert-error-bg) l(-40%));
+  color: var(--Alert-error-color);
+}
+
+.Alert--error.Alert--withBg {
+  background-color: var(--Alert-error-bg);
+}
+
+.Alert--error.Alert--withIcon {
+  background: var(--Alert-error-background-image) no-repeat 1em 0.5em;
+}
+
+.Alert--warning {
+  border-left-color: color(var(--Alert-warning-bg) l(-40%));
+  color: var(--Alert-warning-color);
+}
+
+.Alert--warning.Alert--withBg {
+  background-color: var(--Alert-warning-bg);
+}
+
+.Alert--warning.Alert--withIcon {
+  background: var(--Alert-warning-background-image) no-repeat 1em 0.5em;
+}
+
+.Alert--success {
+  border-left-color: color(var(--Alert-success-bg) l(-40%));
+  color: var(--Alert-success-color);
+}
+
+.Alert--success.Alert--withBg {
+  background-color: var(--Alert-success-bg);
+}
+
+.Alert--success.Alert--withIcon {
+  background: var(--Alert-success-background-image) no-repeat 1em 0.5em;
+}
+
+.Alert--info {
+  border-left-color: color(var(--Alert-info-bg) l(-40%));
+  color: var(--Alert-info-color);
+}
+
+.Alert--info.Alert--withIcon {
+  background: var(--Alert-info-background-image) no-repeat 1em 0.5em;
+}
+
+.Alert--info.Alert--withBg {
+  background-color: var(--Alert-info-bg);
+}

@@ -1,0 +1,59 @@
+/** @define Callout; weak; */
+
+:root {
+  --Callout-color-must: #f4e6f5;
+  --Callout-color-should: #d1e7ff;
+  --Callout-color-could: #ebf5ef;
+  --Callout-color-example: #e6e5e3;
+  --Callout-border-top-color: #aaa;
+  --Callout-space-unit: 0.5em;
+}
+
+.Callout {
+  border-top: 1px solid var(--Callout-border-top-color);
+  padding: 1em;
+}
+
+.Callout-title {
+  background: transparent;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.Callout--must {
+  background: var(--Callout-color-must);
+  border-top-color: color(var(--Callout-color-must) l(-70%));
+}
+
+.Callout--must > .Callout-title {
+  color: color(var(--Callout-color-must) l(-70%));
+}
+
+.Callout--should {
+  background: var(--Callout-color-should);
+  border-top-color: color(var(--Callout-color-should) l(-70%));
+}
+
+.Callout--should > .Callout-title {
+  color: color(var(--Callout-color-should) l(-70%));
+}
+
+.Callout--could {
+  background: var(--Callout-color-could);
+  border-top-color: color(var(--Callout-color-could) l(-70%));
+}
+
+.Callout--could > .Callout-title {
+  color: color(var(--Callout-color-could) l(-70%));
+}
+
+.Callout--example {
+  background: var(--Callout-color-example);
+  border-top-color: color(var(--Callout-color-example) l(-70%));
+}
+
+.Callout--example > .Callout-title {
+  color: color(var(--Callout-color-example) l(-70%));
+}

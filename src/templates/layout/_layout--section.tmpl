@@ -1,0 +1,40 @@
+<section>
+  <p class="u-md-hidden u-lg-hidden u-padding-r-all u-text-m u-background-grey-20">
+    <span class="Icon-list u-text-r-xl u-alignMiddle u-padding-r-right" aria-hidden="true"></span>
+    <a href="#subnav" class="js-scrollTo u-text-r-s u-textClean u-color-grey-50 u-alignMiddle">Esplora contenuti correlati</a>
+  </p>
+
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-r-top">
+      {% render '@breadcrumb' %}
+  </div>
+
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
+    <h1 class="u-text-h2">
+      Titolo della sezione
+    </h1>
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+        <article class="Prose u-layout-prose">
+          <p>
+            {{ __LONG_TEXTS__[1] }}
+          </p>
+          <p>
+            {{ __LONG_TEXTS__[2] }}
+          </p>
+          <p>
+            {{ __LONG_TEXTS__[3] }}
+          </p>
+        </article>
+      </div>
+      <div class="Grid-cell u-sizeFull u-md-size4of12 u-lg-size4of12">
+        <div class="u-cf u-padding-bottom-xxl">
+          {% render '@share' %}
+        </div>
+        <div class="u-sizeFull u-md-size11of12 u-lg-size11of12" id="subnav">
+          {% render '@linklist--padded' %}
+        </div>
+        <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
+      </div>
+    </div>
+  </div>
+</section>

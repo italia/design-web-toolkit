@@ -1,0 +1,32 @@
+<div id="main">
+
+  <div class="u-layout-wide u-layoutCenter u-text-r-l u-padding-r-top u-margin-r-bottom u-layout-r-withGutter">
+    {% render '@layout--news' %}
+  </div>
+
+  <div class="u-layout-wide u-layoutCenter u-padding-r-bottom u-margin-r-bottom u-layout-r-withGutter">
+    {% render '@entrypoint' %}
+  </div>
+
+  <div class="u-background-grey-20 u-text-r-xxl u-padding-r-top u-padding-r-bottom">
+    <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
+      {% render '@layout--grid' %}
+    </div>
+  </div>
+
+  <div class="u-background-70 u-padding-r-top u-padding-r-bottom">
+    {% render '@layout--twitter' %}
+  </div>
+
+  <div class="u-background-grey-60 u-padding-r-top u-padding-r-bottom u-text-r-xxl">
+    {% render '@carousel' %}
+  </div>
+
+  <div class="u-background-grey-20 u-background-grey-20 u-color-black u-text-xxl u-padding-r-top u-padding-r-bottom">
+    <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
+      {% render '@leads' %}
+    </div>
+  </div>
+
+  {% render '@page--bottom' %}
+</div>

@@ -1,0 +1,21 @@
+<div class="u-layout-centerContent u-background-grey-20">
+  <section class="u-layout-wide u-padding-top-xxl u-padding-bottom-xxl">
+    <h2 class="u-text-r-l u-padding-r-bottom">Notizie</h2>
+
+    {% for a in [1, 2] %}
+    <div class="Grid Grid--withGutter">
+      {% for b in [1, 2, 3, 4] %}
+      <div class="Grid-cell u-md-size1of4 u-lg-size1of4">
+        {% render '@tile' %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    <p class="u-textCenter u-text-md-right u-text-lg-right u-padding-r-top">
+      <a href="#" class="u-color-50 u-textClean u-text-h4">
+          tutte le notizie <span class="Icon Icon-chevron-right"></a>
+    </p>
+
+  </section>
+</div>

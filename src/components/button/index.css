@@ -1,0 +1,128 @@
+/** @define Button; */
+
+:root {
+  --Button-default-bg: #65dde0;
+  --Button-default-color: #004a4d;
+  --Button-default-border: #50d8dc;
+  --Button-danger-bg: #b50000;
+  --Button-danger-color: #fff;
+  --Button-danger-border: #f00;
+  --Button-info-bg: #fff;
+  --Button-info-color: #003e54;
+  --Button-info-border: #ccc;
+}
+
+.Button {
+  font-weight: 600;
+  padding: 0.6em 1.2em;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.Button:active,
+.Button.is-pressed {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.Button--shadow {
+  box-shadow: 0 2px 4px 0 #bdbdbd;
+}
+
+.Button--round {
+  border-radius: 0.1em;
+}
+
+/**
+ * Modifier: default buttons
+ * =========================
+ */
+
+.Button--default {
+  background-color: var(--Button-default-bg);
+  border-color: var(--Button-default-border);
+  color: var(--Button-default-color);
+}
+
+.Button--default[disabled],
+.Button--default.is-disabled {
+  background-color: var(--Button-default-bg) !important;
+  border-color: var(--Button-default-border) !important;
+  color: var(--Button-default-color) !important;
+}
+
+.Button--default:focus,
+.Button--default:hover {
+  background-color: color(var(--Button-default-bg) l(-10%));
+  border-color: color(var(--Button-default-border) l(-10%));
+}
+
+.Button--default:active,
+.Button--default.is-pressed {
+  background-color: var(--Button-default-color);
+  border-color: color(var(--Button-default-color) l(-25%));
+  color: var(--Button-default-bg);
+}
+
+/**
+ * Modifier: danger buttons
+ * =========================
+ */
+
+.Button--danger {
+  background-color: var(--Button-danger-bg);
+  border-color: var(--Button-danger-border);
+  color: var(--Button-danger-color);
+}
+
+.Button--danger[disabled],
+.Button--danger.is-disabled {
+  background-color: var(--Button-danger-bg) !important;
+  border-color: var(--Button-danger-border) !important;
+  color: var(--Button-danger-color) !important;
+}
+
+.Button--danger:focus,
+.Button--danger:hover {
+  background-color: color(var(--Button-danger-bg) l(-10%));
+  border-color: color(var(--Button-danger-border) l(-10%));
+}
+
+.Button--danger:active,
+.Button--danger.is-pressed {
+  background-color: var(--Button-danger-color);
+  border-color: color(var(--Button-danger-color) l(-25%));
+  color: var(--Button-danger-bg);
+}
+
+/**
+ * Modifier: info buttons
+ * =========================
+ */
+
+.Button--info {
+  background-color: var(--Button-info-bg);
+  border-color: var(--Button-info-border);
+  color: var(--Button-info-color);
+}
+
+.Button--info[disabled],
+.Button--info.is-disabled {
+  background-color: var(--Button-info-bg) !important;
+  border-color: var(--Button-info-border) !important;
+  color: var(--Button-info-color) !important;
+}
+
+.Button--info:focus,
+.Button--info:hover {
+  background-color: color(var(--Button-info-bg) l(-10%));
+  border-color: color(var(--Button-info-border) l(-10%));
+}
+
+.Button--info:active,
+.Button--info.is-pressed {
+  background-color: var(--Button-info-color);
+  border-color: color(var(--Button-info-color) l(-25%));
+  color: var(--Button-info-bg);
+}

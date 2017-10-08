@@ -1,0 +1,96 @@
+/** @define Hamburger */
+
+/*
+ * Hamburger animation
+ * ------------------------------------------------------------
+ * Thanks to http://elijahmanor.com/css-animated-hamburger-icon/
+ */
+
+:root {
+  --Hamburger-width: 4.6rem;
+  --Hamburger-height: 1.2rem;
+  --Hamburger-pad: 0.2rem;
+}
+
+/*
+ * 	.Hamburger-toggle {
+ *  	margin-top: calc(var(--Hamburger-height) + var(--Hamburger-pad));
+ * }
+*/
+
+.Hamburger-toggle,
+.Hamburger-toggle::before,
+.Hamburger-toggle::after {
+  background: white;
+  border-radius: 4px;
+  content: " ";
+  display: block;
+  height: calc(var(--Hamburger-height) / 3);
+  position: relative;
+  width: calc(var(--Hamburger-width) * 0.7);
+}
+
+/*
+ *	1. Make the whole <a> area clickable
+ */
+
+.Hamburger-toggleContainer {
+  cursor: pointer;
+  padding-bottom: calc(var(--Hamburger-height) + var(--Hamburger-pad));
+  padding-top: calc(var(--Hamburger-height) + var(--Hamburger-pad));
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Hamburger-toggle,
+  .Hamburger-toggle::before,
+  .Hamburger-toggle::after {
+    width: var(--Hamburger-width);
+  }
+}
+
+.Hamburger-toggle::before {
+  top: -calc((var(--Hamburger-height) + var(--Hamburger-pad)) * 0.8);
+}
+
+.Hamburger-toggle::after {
+  bottom: -calc((-var(--Hamburger-height) / 3) + (var(--Hamburger-height) + var(--Hamburger-pad)) * 0.8);
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Hamburger-toggle::before {
+    top: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
+  }
+
+  .Hamburger-toggle::after {
+    bottom: -calc((-var(--Hamburger-height) / 3) + var(--Hamburger-height) + var(--Hamburger-pad));
+  }
+}
+
+.Hamburger-toggle,
+.Hamburger-toggle::before,
+.Hamburger-toggle::after {
+  transition: all 500ms ease-in-out;
+}
+
+.Hamburger-toggle.is-active {
+  background-color: transparent;
+}
+
+.Hamburger-toggle.is-active::before {
+  top: calc(var(--Hamburger-height) / 3) !important;
+}
+
+.Hamburger-toggle.is-active::before,
+.Hamburger-toggle.is-active::after {
+  top: 0;
+}
+
+.Hamburger-toggle.is-active::before {
+  transform: rotate(45deg);
+}
+
+.Hamburger-toggle.is-active::after {
+  transform: rotate(-45deg);
+}

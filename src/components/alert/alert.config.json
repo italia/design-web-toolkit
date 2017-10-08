@@ -1,0 +1,41 @@
+{
+    "title": "Alert",
+    "variants": [
+        {
+            "name": "default",
+            "hidden": true
+        },
+        {
+            "name": "error",
+            "context": {
+              "modifier": "error",
+              "text": "Si è verificato un errore",
+              "icon": "error"
+            }
+        },
+        {
+            "name": "warning",
+            "context": {
+              "modifier": "warning",
+              "text": "Attenzione",
+              "icon": ""
+            }
+        },
+        {
+            "name": "success",
+            "context": {
+              "modifier": "success",
+              "text": "Operazione eseguita con successo",
+              "icon": "check"
+            }
+        },
+        {
+            "name": "info",
+            "context": {
+              "modifier": "info",
+              "text": "Ulteriori informazioni",
+              "icon": ""
+            }
+        }
+    ]
+}

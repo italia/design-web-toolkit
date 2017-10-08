@@ -1,0 +1,31 @@
+/** @define ScrollTop */
+
+.ScrollTop {
+  @extend .u-posFixed;
+  @extend .u-background-95;
+  @extend .u-color-white;
+  @extend .u-borderRadius-circle;
+  @extend .u-borderShadow-xs;
+  @extend .u-textCenter;
+  @extend .u-linkClean;
+  @extend .u-zindex-max;
+  @extend .u-text-r-xxs;
+
+  border: 2px solid white;
+  bottom: 1em;
+  height: 3em;
+  right: 1em;
+  width: 3em;
+}
+
+.ScrollTop-icon {
+  @extend .u-inlineBlock;
+  @extend .u-posRelative;
+  @extend .u-color-white;
+  @extend .u-textCenter;
+  @extend .u-text-l;
+  @extend .u-textWeight-700;
+
+  font-size: 2em;
+  top: 15%;
+}

@@ -1,0 +1,52 @@
+/** @define Navscroll; weak; */
+
+.Navscroll > ul {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: auto;
+  text-align: justify;
+  white-space: nowrap;
+}
+
+.Navscroll > ul > li {
+  display: inline-block;
+}
+
+/*
+ *	Thanks to http://codepen.io/jordanmoore/pen/pnlAi
+ */
+
+.Navscroll--withHint > ul {
+  background:
+    linear-gradient(90deg, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0), white 70%) 100% 0,
+    radial-gradient(
+      0 50%,
+      farthest-side,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+      100% 50%,
+      farthest-side,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ) 100% 0;
+  background:
+    linear-gradient(90deg, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0), white 70%) 100% 0,
+    radial-gradient(
+      farthest-side at 0 50%,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+      farthest-side at 100% 50%,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ) 100% 0;
+  background-attachment: local, local, scroll, scroll;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+}

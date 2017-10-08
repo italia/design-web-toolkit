@@ -1,0 +1,421 @@
+/* @define Header; weak */
+
+:root {
+  --Header-banner-bg: var(--Color-grey-80);
+  --Header-navbar-bg: var(--Color-50);
+  --Header-searchTrigger-bg: var(--Color-50);
+  --Header-languages-bg: var(--Color-grey-80);
+  --Header-activeLanguage-bg: var(--Color-80);
+  --Header-language-other-bg: var(--Color-white);
+  --Header-socialIcons-bg: var(--Color-white);
+  --Header-text-color: var(--Color-white);
+  --Header-search-maxWidth: 20em;
+}
+
+.Header {
+  width: 100%;
+}
+
+.Header-banner {
+  @extend .u-cf;
+  @extend .u-sizeFull;
+  @extend .u-layout-r-withGutter;
+
+  background-color: var(--Header-banner-bg);
+}
+
+.Header-owner {
+  @extend .u-layout-wide;
+  @extend .u-layoutCenter;
+  @extend .u-padding-r-top;
+  @extend .u-padding-r-bottom;
+  @extend .u-color-40;
+}
+
+.Header-owner > a {
+  @extend .u-text-r-xxs;
+  @extend .u-textClean;
+
+  @media (--lg-viewport), (--md-viewport) {
+    @extend .u-textWeight-600;
+  }
+
+  color: var(--Header-text-color);
+}
+
+.Header-owner > a > span {
+  @extend .u-text-xxs;
+  @extend .u-lineHeight-s;
+  @media (--lg-viewport), (--md-viewport) {
+    @extend .u-text-xs;
+  }
+}
+
+/* ========================================== */
+
+.Header-navbar {
+  @extend .u-layout-r-withGutter;
+  @extend .u-padding-top-l;
+  @extend .u-padding-bottom-s;
+
+  background-color: var(--Header-navbar-bg);
+  width: 100%;
+}
+
+/* Burger button
+  ========================================== */
+
+.Header-toggle {
+  @extend .u-size2of12;
+  @extend .u-lg-size1of8;
+  @extend .u-textCenter;
+}
+
+.Header-toggle > * {
+  @extend .u-inlineBlock;
+  @extend .u-linkClean;
+}
+
+.Header-toggleText {
+  @extend .u-hidden;
+  @extend .u-sm-block;
+  @extend .u-md-block;
+  @extend .u-lg-block;
+
+  @extend .u-text-r-xxs;
+  @extend .u-textWeight-700;
+  @extend .u-textClean;
+
+  color: var(--Header-text-color);
+  letter-spacing: 0.1em !important;
+  margin-bottom: -calc(1rem + var(--Hamburger-height));
+  margin-top: calc(1rem + var(--Hamburger-height));
+  text-transform: uppercase;
+}
+
+/* Logo image
+  ========================================== */
+
+.Header-logo {
+  @extend .u-size2of12;
+  @extend .u-sm-size2of12;
+  @extend .u-md-size1of12;
+  @extend .u-lg-size1of12;
+}
+
+.Header-logo img {
+  @extend .u-alignMiddle;
+
+  height: 4.5rem;
+  width: 4.5rem;
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+}
+
+/* Title link
+  ========================================== */
+
+.Header-title {
+  @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
+
+  @extend .u-lineHeight-xxs;
+
+  @extend .u-size6of12;
+  @extend .u-sm-size4of12;
+  @extend .u-md-size5of12;
+  @extend .u-lg-size5of12;
+
+  @media (--md-viewport), (--lg-viewport) {
+    @extend .u-lineHeight-m;
+  }
+}
+
+.Header-titleLink {
+  @media (--md-viewport) {
+    @extend .u-padding-left-s;
+  }
+}
+
+.Header-titleLink a {
+  @extend .u-inlineBlock;
+  @extend .u-text-xs;
+  @extend .u-text-sm-m;
+  @extend .u-text-md-l;
+  @extend .u-text-lg-l;
+  @extend .u-lineHeight-s;
+  @extend .u-textWeight-700;
+  @extend .u-textClean;
+  @extend .u-padding-left-xxs;
+  @extend .u-padding-right-xxs;
+
+  color: var(--Header-text-color);
+}
+
+.Header-titleLink small {
+  @extend .u-text-r-xs;
+  @extend .u-textWeight-400;
+  @extend .u-lineHeight-s;
+  @extend .u-textClean;
+  @extend .u-hidden;
+  @extend .u-md-inline;
+  @extend .u-lg-inline;
+
+  color: var(--Header-text-color);
+}
+
+/* Search button for small screens
+  ========================================== */
+
+.Header-searchTrigger {
+  @extend .u-sizeFill;
+  @extend .u-sm-hidden;
+  @extend .u-md-hidden;
+  @extend .u-lg-hidden;
+  @extend .u-textRight;
+}
+
+.Header-searchTrigger button {
+  @extend .u-linkClean;
+  @extend .u-padding-all-s;
+  @extend .u-text-r-l;
+  @extend .u-textWeight-700;
+
+  background-color: var(--Header-searchTrigger-bg);
+  color: var(--Header-text-color);
+}
+
+/* Utils block (social + languages + search form)
+  ================================================ */
+
+.Header-utils {
+  @extend .u-block;
+  @extend .u-margin-top-xxs;
+  @extend .u-textRight;
+
+  @extend .u-sizeFull;
+  @extend .u-sm-size4of12;
+  @extend .u-md-size4of12;
+  @extend .u-lg-size4of12;
+
+  @extend .u-md-before2of12;
+  @extend .u-lg-before2of12;
+
+  @extend .u-sm-flexOrderNone;
+  @extend .u-md-flexOrderNone;
+  @extend .u-lg-flexOrderNone;
+  @extend .u-flexOrderLast;
+
+  @media (--sm-viewport) {
+    @extend .u-margin-top-xs;
+    @extend .u-margin-bottom-xs;
+  }
+}
+
+/*
+ *  Hide utils on small screens
+ */
+
+.Header-utils > * {
+  @extend .u-hidden;
+  @extend .u-sm-block;
+  @extend .u-md-block;
+  @extend .u-lg-block;
+  @extend .u-floatRight;
+  @extend .u-cf;
+
+  width: 100%;
+}
+
+/* Search form
+  ================================================ */
+
+.Header-search {
+  @extend .u-padding-all-xxs;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-margin-bottom-m;
+    @extend .u-padding-left-m;
+    @extend .u-padding-right-none;
+    @extend .u-floatRight;
+
+    max-width: var(--Header-search-maxWidth);
+  }
+}
+
+.Header-search.is-active {
+  @extend .u-block;
+  @extend .u-margin-top-xs;
+}
+
+/* Lanaguage bar
+  ================================================ */
+
+.Header-languages {
+  @extend .u-floatRight;
+
+  background-color: var(--Header-languages-bg);
+}
+
+.Header-language {
+  @extend .u-text-r-xxs;
+  @extend .u-textWeight-600;
+  @extend .u-padding-left-s;
+  @extend .u-padding-right-s;
+  @extend .u-linkClean;
+
+  color: var(--Header-text-color);
+}
+
+.Header-language abbr {
+  text-decoration: none;
+}
+
+.Header-language:hover {
+  cursor: pointer;
+}
+
+.Header-language-other {
+  @extend .u-zindex-max;
+  @extend .u-borderRadius-m;
+  @extend .u-borderShadow-l;
+  @extend .u-margin-top-s;
+
+  background-color: var(--Header-language-other-bg);
+}
+
+.Header-language-other a {
+  @extend .u-inlineBlock;
+  @extend .u-sizeFull;
+  @extend .u-padding-all-s;
+  @extend .u-color-50;
+  @extend .u-textClean;
+}
+
+/* Social icons / link
+  ================================================ */
+
+.Header-social {
+  @extend .u-text-r-xs;
+  @extend .u-margin-left-s;
+  @extend .u-margin-bottom-s;
+
+  color: var(--Header-text-color);
+}
+
+.Header-social > * {
+  @extend .u-hidden;
+  @extend .u-md-inlineBlock;
+  @extend .u-lg-inlineBlock;
+}
+
+.Header-socialIcons {
+  @extend .u-padding-left-xxs;
+  @extend .u-text-r-xs;
+}
+
+.Header-socialIcons > li {
+  @extend .u-inlineBlock;
+}
+
+.Header-socialIcons > li > a {
+  @extend .u-margin-left-s;
+}
+
+.Header-socialIcons [class^="Icon-"],
+.Header-socialIcons [class*=" Icon-"] {
+  @extend .u-inlineBlock;
+  @extend .u-padding-all-xxs;
+  @extend .u-borderRadius-circle;
+
+  background-color: var(--Header-socialIcons-bg);
+  color: var(--Header-navbar-bg);
+}
+
+/*
+ * Headroom.js for sticky header
+ * =============================
+ */
+
+.Headroom--fixed,
+.Headroom--pinned {
+  transform: translateY(0%);
+}
+
+/*
+ *	1. Allow transition on element heights
+ */
+
+.Headroom-hideme {
+  max-height: 5em; /* 1 */
+  transition: all 250ms ease;
+  will-change: all;
+}
+
+.Headroom--fixed.Headroom--not-top .Headroom-hideme,
+.Headroom--pinned.Headroom--not-top .Headroom-hideme {
+  margin: 0 !important;
+  max-height: 0;
+  overflow: hidden;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.js .Headroom--fixed,
+.Headroom--pinned.Headroom--not-top {
+  @extend .u-zindex-40;
+
+  min-width: 30rem;
+  position: fixed;
+  top: 0;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-titleLink,
+.Headroom--pinned.Headroom--not-top .Header-titleLink {
+  @extend .u-flexAlignSelfCenter;
+  @extend .u-flex;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-titleLink a,
+.Headroom--pinned.Headroom--not-top .Header-titleLink a {
+  @extend .u-text-xxs;
+  @extend .u-text-sm-xs;
+  @extend .u-text-md-s;
+  @extend .u-text-lg-m;
+  @extend .u-textWeight-400;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-toggleText,
+.Headroom--fixed.Headroom--not-top .Header-titleLink small,
+.Headroom--pinned.Headroom--not-top .Header-titleLink small {
+  @extend .u-hidden;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-navbar,
+.Headroom--pinned.Headroom--not-top .Header-navbar {
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-none;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-padding-top-xxs;
+    @extend .u-padding-bottom-xxs;
+  }
+}
+
+.Headroom--fixed.Headroom--not-top .Header-logo img,
+.Headroom--pinned.Headroom--not-top .Header-logo img {
+  max-height: 3em;
+  max-width: 3em;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-search,
+.Headroom--pinned.Headroom--not-top .Header-search {
+  @extend .u-margin-bottom-xxs;
+  @extend .u-padding-bottom-xxs;
+}
+
+.Headroom--unpinned {
+
+  /* transform: translateY(-100%); */
+}

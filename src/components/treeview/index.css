@@ -1,0 +1,87 @@
+/** @define Treeview; weak; */
+
+:root {
+  --Treeview-link-minWidth: 4em;
+  --Treeview-link-maxWidth: 6em;
+  --Treeview-link-padding: 2em;
+  --Treeview-link-handler-width: 15%;
+  --Treeview-link-arrow-width: 1em;
+  --Treeview-link-arrow-down: inline("icons/img/SVG/expand.svg");
+  --Treeview-link-arrow-up: inline("icons/img/SVG/collapse.svg");
+  --Treeview-link-plus: inline("icons/img/SVG/plus.svg");
+  --Treeview-link-minus: inline("icons/img/SVG/minus.svg");
+}
+
+.Treeview-handler--default::after,
+.Treeview-handler--standalone {
+  background-image: var(--Treeview-link-arrow-down);
+  background-repeat: no-repeat;
+  background-size: var(--Treeview-link-arrow-width);
+}
+
+.Treeview--plus > li > .Treeview-handler--default::after,
+.Treeview--plus > li > a > .Treeview-handler--standalone {
+  background-image: var(--Treeview-link-plus);
+}
+
+.Treeview-handler--default::after,
+.Treeview-handler--standalone {
+  @extend .u-zindex-30;
+  @extend .u-posAbsolute;
+  @extend .u-block;
+  @extend .u-text-r-xs;
+
+  background-position: center;
+  content: "";
+  height: 100%;
+  max-width: var(--Treeview-link-maxWidth);
+  min-width: var(--Treeview-link-minWidth);
+  right: 0;
+  top: 0;
+  width: var(--Treeview-link-handler-width);
+}
+
+.Treeview-handler--standalone {
+  border-left: 1px solid var(--Color-grey-30);
+}
+
+.Treeview [aria-expanded="true"] > .Treeview-handler--default::after,
+.Treeview [aria-expanded="true"] > a > .Treeview-handler--standalone {
+  background-image: var(--Treeview-link-arrow-up);
+}
+
+.Treeview--plus [aria-expanded="true"] > .Treeview-handler--default::after,
+.Treeview--plus [aria-expanded="true"] > a > .Treeview-handler--standalone {
+  background-image: var(--Treeview-link-minus);
+}
+
+.Treeview [aria-hidden="true"] {
+  display: none;
+}
+
+.Treeview li {
+  cursor: pointer;
+}
+
+.Treeview-parent > a {
+  @extend .u-posRelative;
+
+  padding-right: calc(var(--Treeview-link-padding) * 2);
+}
+
+/*
+ * Treeview default style
+ * -----------------------
+ */
+
+.Treeview--default li[aria-expanded=true] li a,
+.Treeview--default li[aria-expanded=true] li a:hover {
+  @extend .u-color-95;
+  @extend .u-background-grey-20;
+}
+
+.Treeview--default li[aria-expanded=true] li li a,
+.Treeview--default li[aria-expanded=true] li li a:hover {
+  @extend .u-color-95;
+  @extend .u-background-grey-30;
+}

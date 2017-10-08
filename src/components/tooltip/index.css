@@ -1,0 +1,10 @@
+/** @define Tooltip */
+
+:root {
+  --Tooltip-border-color: #b4efef;
+}
+
+.Tooltip-toggle {
+  border-bottom: 1px dotted currentColor;
+  cursor: help;
+}

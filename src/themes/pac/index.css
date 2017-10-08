@@ -1,0 +1,13 @@
+:root {
+  --Color-primary: #06c;
+  --Pac-font-family-sans: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+}
+
+/*
+ *	Only apply to body
+ *		class="t-Pac"
+ */
+
+.t-Pac {
+  font-family: var(--Pac-font-family-sans);
+}

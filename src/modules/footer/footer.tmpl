@@ -1,0 +1,64 @@
+<footer class="Footer u-background-95">
+
+  <div class="u-cf">
+    <img class="Footer-logo" src="//placehold.it/75x80?text=placeholder" alt="">
+    <p class="Footer-siteName">
+      {{ site.name }}
+    </p>
+  </div>
+
+  <div class="Grid Grid--withGutter">
+    {% for i in [1, 2, 3, 4] %}
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Argomento {{ i }}</h2>
+      <ul>
+        <li><a href="">{{ __WORDS__[2] }}</a></li>
+        <li><a href="">{{ __WORDS__[3] }}</a></li>
+        <li><a href="">{{ __WORDS__[4] }}</a></li>
+        <li><a href="">{{ __WORDS__[5] }}</a></li>
+      </ul>
+    </div>
+    {% endfor %}
+
+    {% for i in [1, 2] %}
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Contatti</h2>
+      <div class="Footer-subBlock">
+        <h3 class="Footer-subTitle">Recapiti</h3>
+        <address>
+          Via {{ __WORDS__[i] }}<br>
+          {{ __WORDS__[i] }}<br>
+          Tel. (+00) 00.0000.0000
+        </address>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Contatti</h2>
+      <div class="Footer-subBlock">
+        <h3 class="Footer-subTitle">Indirizzo PEC</h3>
+        <p><a href="">indirizzo.pec@gov.it</a></p>
+      </div>
+    </div>
+
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Seguici su</h2>
+      <div class="Footer-subBlock">
+        <ul class="Footer-socialIcons">
+          <li><a href=""><span class="Icon Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+          <li><a href=""><span class="Icon Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+          <li><a href=""><span class="Icon Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <ul class="Footer-links u-cf">
+    <li><a href="" title="Privacy policy">Privacy</a></li>
+    <li><a href="" title="Note legali">Note legali</a></li>
+    <li><a href="" title="Dati monitoraggio sito">Contatti</a></li>
+  </ul>
+
+</footer>

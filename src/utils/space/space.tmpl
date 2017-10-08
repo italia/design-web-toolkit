@@ -1,0 +1,9 @@
+{% for pm in ['padding', 'margin'] %} {% for pos in ['top', 'right', 'bottom', 'left', 'all'] %} {% for size in ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'] %}
+<div class="u-border-all-xxs u-color-grey-80 u-md-size1of3 u-lg-size1of3 u-margin-all-l u-padding-all-xxs">
+  <div class="u-layoutCenter u-{{ pm }}-{{ pos }}-{{ size }} u-background-teal-50">
+    <p class="u-layoutCenter u-background-95 u-color-white u-border-all-xxs">
+      u-{{ pm }}-{{ pos }}-{{ size }}
+    </p>
+  </div>
+</div>
+{% endfor %} {% endfor %} {% endfor %}

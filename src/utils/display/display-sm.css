@@ -1,0 +1,39 @@
+/** @define utilities; */
+
+@media (--sm-viewport) {
+
+  .u-sm-block {
+    display: block !important;
+  }
+
+  .u-sm-hidden {
+    display: none !important;
+  }
+
+  .u-sm-inline {
+    display: inline !important;
+  }
+
+  /**
+   * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+   * inline-block will display at its default size, and not limit its width to
+   * 100% of an ancestral container.
+   */
+
+  .u-sm-inlineBlock {
+    display: inline-block !important;
+    max-width: 100%; /* 1 */
+  }
+
+  .u-sm-table {
+    display: table !important;
+  }
+
+  .u-sm-tableCell {
+    display: table-cell !important;
+  }
+
+  .u-sm-tableRow {
+    display: table-row !important;
+  }
+}

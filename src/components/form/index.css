@@ -1,0 +1,300 @@
+/** @define Form; */
+
+/*
+ *	Custom theme for
+ *		https://github.com/giuseppeg/suitcss-components-form
+ *		Copyright (c) Giuseppe Gurgone
+ */
+
+:root {
+  --Form-input-border-color: #ccc;
+  --Form-input-border-radius: 0;
+  --Form-state-invalid-border-color: #b50000;
+  --Form-state-invalid-label-color: #1c2024;
+  --Form-state-invalid-message-color: #1c2024;
+  --Form-state-warning-border-color: #e5ce23;
+  --Form-state-warning-label-color: #1c2024;
+  --Form-state-warning-message-color: #1c2024;
+  --Form-label-checked-background: #c6f3f5;
+  --Form-border-width: 0.4rem;
+  --Form-choose-height: 1em;
+  --Form-select-arrow-width: 0.8em;
+  --Form-select-arrow: inline("icons/img/SVG/expand.svg");
+  --Form-radio: svg-load("icons/img/SVG/radio-button.svg", stroke=var(--Color-teal-50));
+  --Form-radio-checked: svg-load("icons/img/SVG/radio-button-checked.svg", stroke=var(--Color-teal-50));
+  --Form-checkbox: svg-load("icons/img/SVG/checkbox.svg", stroke=var(--Color-teal-50));
+  --Form-checkbox-checked: svg-load("icons/img/SVG/checkbox-checked.svg", stroke=var(--Color-teal-50));
+  --Form-textarea-min-height: 10em;
+}
+
+.Form--spaced {
+  @extend .u-margin-top-none;
+}
+
+.Form--spaced .Form-label {
+  @extend .u-padding-bottom-xxs;
+}
+
+.Form--spaced .Form-input {
+  @extend .u-margin-top-xxs;
+}
+
+.Form--spaced .Form-fieldset,
+.Form--spaced .Form-legend {
+  @extend .u-margin-bottom-s;
+}
+
+.Form--spaced .Form-field {
+  @extend .u-margin-top-none;
+  @extend .u-padding-bottom-l;
+}
+
+.Form--lean .Form-input,
+.Form-input--lean {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+
+.Form--ultraLean .Form-input,
+.Form-input--ultraLean {
+  border: none !important;
+}
+
+/* postcss-bem-linter: ignore */
+
+select.Form-input {
+  background-color: currentColor;
+}
+
+/* postcss-bem-linter: ignore */
+
+option:hover {
+  box-shadow: 0 0 10px 100px #1882a8 inset;
+}
+
+/* .Form-legend.is-required::after,
+.Form-label.is-required::after {
+  content: " * ";
+} */
+
+.Form-label.is-checked {
+  background: var(--Form-label-checked-background);
+}
+
+.Form-field.is-invalid .Form-input,
+.Form-field.is-warning .Form-input {
+  border-width: var(--Form-border-width);
+}
+
+.Form-input:not(.is-disabled),
+.Form-input:not(:disabled) {
+  background-color: white;
+}
+
+.Form-textarea {
+  min-height: var(--Form-textarea-min-height);
+}
+
+/*
+ *	Custom components: label block
+ *	==============================
+ */
+
+.Form-label--block {
+  background-color: white;
+  border: 1px solid var(--Form-input-border-color);
+  border-bottom: 0;
+  line-height: calc(2 * var(--Form-choose-height));
+  min-height: calc(var(--Form-choose-height) + 2 * var(--Form-choose-height));
+  padding: calc(var(--Form-choose-height) / 2);
+}
+
+.Form-label--block:last-child {
+  border-bottom: 1px solid var(--Form-input-border-color);
+}
+
+/*
+ *	Custom components: label as placeholder
+ *	=======================================
+ */
+
+.Form-field--withPlaceholder {
+  @extend .u-flex;
+  @extend .u-posRelative;
+}
+
+.Form-field--withPlaceholder .Form-label {
+  @extend .u-textWeight-400;
+  @extend .u-posAbsolute;
+  @extend .u-layoutCenterVertically;
+
+  left: 1em;
+}
+
+.Form-field--withPlaceholder .Form-input:focus + .Form-label,
+.Form-field--withPlaceholder .Form-input:valid + .Form-label {
+  opacity: 0;
+}
+
+/*
+ *	Accessibile tooltip: http://heydonworks.com/practical_aria_examples/
+ *	=======================================
+ */
+
+.Form-input + [role="tooltip"] {
+  @extend .u-hidden;
+}
+
+/* postcss-bem-linter: ignore */
+
+.Form-input.Form-input:focus + [role="tooltip"] {
+  @extend .u-block;
+  @extend .u-color-white;
+  @extend .u-borderRadius-m;
+  @extend .u-background-grey-80;
+  @extend .u-borderShadow-xs;
+  @extend .u-padding-r-all;
+  @extend .u-posAbsolute;
+  @extend .u-margin-top-xxs;
+
+  outline: none !important;
+}
+
+/*
+*	Custom components: checkbox / radio
+*	===================================
+*/
+
+.Form-field--choose .Form-label {
+  display: inline-block;
+  font-weight: normal;
+  width: 100%;
+}
+
+.Form-field--choose :focus + span {
+  outline: 3px solid var(--Color-focus);
+}
+
+.Form-field--choose .Form-input {
+  display: inline-block;
+  margin-right: calc(var(--Form-choose-height) / 2);
+  width: auto;
+}
+
+.Form-field--choose .Form-input {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.Form-fieldIcon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  margin-right: 0.5em;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  width: 1em;
+}
+
+/*
+
+/* postcss-bem-linter: ignore * /
+.Form-field--choose input:focus ~ .Form-fieldIcon {
+  box-shadow: 0 0 0 0.1rem var(--Color-grey-50),
+    0 0 0 0.5rem var(--Color-focus);
+}
+
+/* postcss-bem-linter: ignore * /
+.Form-field--choose input:checked ~ .Form-fieldIcon {
+  background-color: var(--Color-teal-70);
+  color: var(--Color-grey-40);
+}
+
+/* postcss-bem-linter: ignore * /
+.Form-field--choose input:active ~ .Form-fieldIcon {
+  background-color: var(--Color-teal-30);
+  color: var(--Color-grey-40);
+}
+
+/* postcss-bem-linter: ignore * /
+.Form-field--choose [type=checkbox] ~ .Form-fieldIcon {
+  border-radius: 0.25rem;
+}
+
+/* postcss-bem-linter: ignore * /
+.Form-field--choose [type=radio] ~ .Form-fieldIcon {
+  border-radius: 50%;
+}
+
+*/
+
+.Form-field--choose .Form-fieldIcon {
+  color: var(--Color-teal-50);
+  font-size: 2em;
+}
+
+/* postcss-bem-linter: ignore */
+
+.Form-field--choose [type=checkbox] ~ .Form-fieldIcon {
+  background-image: var(--Form-checkbox);
+}
+
+/* postcss-bem-linter: ignore */
+
+.Form-field--choose [type=checkbox]:checked ~ .Form-fieldIcon {
+  background-image: var(--Form-checkbox-checked);
+}
+
+/* postcss-bem-linter: ignore */
+
+.Form-field--choose [type=radio] ~ .Form-fieldIcon {
+  background-image: var(--Form-radio);
+}
+
+/* postcss-bem-linter: ignore */
+
+.Form-field--choose [type=radio]:checked ~ .Form-fieldIcon {
+  background-image: var(--Form-radio-checked);
+}
+
+/*
+*	Custom components: fieldset
+*	===================================
+*/
+
+/* postcss-bem-linter: ignore */
+
+.Form-fieldset > legend {
+  @extend .u-inlineBlock;
+  @extend .u-sizeFull;
+  @extend .u-border-bottom-xxs;
+  @extend .u-text-r-m;
+}
+
+.Form-field > legend {
+  @extend .u-textWeight-700;
+}
+
+/*
+*	Custom components: width
+*	===================================
+*/
+
+.Form-input--xs {
+  max-width: 2em !important;
+}
+
+.Form-input--s {
+  max-width: 4em !important;
+}
+
+.Form-input--m {
+  max-width: 6em !important;
+}

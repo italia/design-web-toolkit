@@ -1,0 +1,29 @@
+{
+    "title": "Card",
+    "variants": [
+        {
+            "name": "default",
+            "context": {
+              "modifier": "u-border-all-xxs"
+            }
+        },
+        {
+            "name": "shadow",
+            "context": {
+              "modifier": "u-borderShadow-xxs"
+            }
+        },
+        {
+            "name": "round",
+            "context": {
+              "modifier": "u-border-all-xxs u-borderRadius-m"
+            }
+        },
+        {
+            "name": "all",
+            "context": {
+              "modifier": "u-borderShadow-xxs u-borderRadius-m"
+            }
+        }
+    ]
+}

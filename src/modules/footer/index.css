@@ -1,0 +1,111 @@
+/** @define Footer; weak */
+
+:root {
+  --Footer-color-link: var(--Color-teal-50);
+  --Footer-background-color: var(--Color-95);
+}
+
+.Footer {
+  @extend .u-color-white;
+  @extend .u-padding-bottom-xxl;
+  @extend .u-padding-top-xxl;
+}
+
+.Footer a {
+  color: var(--Footer-color-link);
+}
+
+.Footer-logo {
+  @extend .u-floatLeft;
+  @extend .u-padding-right-xl;
+}
+
+.Footer-link {
+  @extend .u-text-r-s;
+}
+
+.Footer-siteName {
+  @extend .u-text-r-l;
+}
+
+.Footer-blockTitle {
+  @extend .u-text-r-m;
+  @extend .u-padding-bottom-xl;
+  @extend .u-color-white;
+}
+
+.Footer-subBlock {
+  @extend .u-color-grey-50;
+  @extend .u-border-top-xxs;
+  @extend .u-padding-all-s;
+}
+
+.Footer-subTitle {
+  @extend .u-text-r-m;
+  @extend .u-color-white;
+  @extend .u-textWeight-400;
+  @extend .u-padding-bottom-l;
+}
+
+.Footer-block {
+  @extend .u-text-xxl;
+  @extend .u-margin-r-top;
+  @extend .u-margin-r-bottom;
+}
+
+.Footer-block address {
+  @extend .u-text-r-xxs;
+  @extend .u-textNormal;
+  @extend .u-color-grey-10;
+}
+
+.Footer-block ul {
+  @extend .u-sizeFull;
+}
+
+.Footer-block li {
+  @extend .u-color-grey-50;
+  @extend .u-border-top-xxs;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+}
+
+.Footer-block a {
+  @extend .u-text-r-xxs;
+  @extend .u-textWeight-700;
+}
+
+.Footer-links {
+  @extend .u-border-top-xxs;
+  @extend .u-margin-top-l;
+  @extend .u-padding-r-top;
+  @extend .u-sizeFull;
+}
+
+.Footer-links li {
+  @extend .u-inlineBlock;
+  @extend .u-margin-right-xl;
+}
+
+.Footer-links a {
+  @extend .u-text-r-xxs;
+  @extend .u-textClean;
+  @extend .u-textWeight-600;
+}
+
+.Footer-socialIcons > li {
+  @extend .u-inlineBlock;
+  @extend .u-margin-right-s;
+  @extend .u-border-none;
+}
+
+.Footer-socialIcons [class^="Icon-"],
+.Footer-socialIcons [class*=" Icon-"] {
+  @extend .u-inlineBlock;
+  @extend .u-padding-all-xs;
+  @extend .u-borderRadius-circle;
+  @extend .u-text-r-s;
+
+  background-color: var(--Footer-color-link);
+  color: var(--Footer-background-color);
+}

@@ -1,0 +1,76 @@
+<div class="u-padding-all-xxl">
+
+<h3 class="u-text-h3">Versione GET</h3>
+
+<div class="Grid">
+  {% for size in ['xxs', 'xs', 's', 'm' ] %}
+  <div class="Grid-cell u-md-size1of2 u-lg-size1of4">
+    <div class="Spid">
+      <a href="#spid-button-get-{{ size }}" data-menu-trigger="spid-button-get-{{ size }}" class="Button Spid-button u-text-r-{{ size }}">
+        <img src="../raw/spid/spid-ico-circle-bb.svg" alt="" />
+        <span>Entra con SPID</span>
+      </a>
+      <div id="spid-button-get-{{ size }}" data-menu class="Spid-menu Dropdown-menu">
+        <ul class="Linklist js-randomize">
+          {% for i in IDP %}
+          <li>
+            <a href="#" class="Spid-idp">
+              <span class="u-hiddenVisually">Prosegui con {{ i.idp }}</span>
+              <img src="../raw/spid/spid-idp-{{ i.img }}.svg"
+                alt="" class="u-text-r-{{ size }}" />
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <ul class="Prose u-margin-top-l u-margin-bottom-xxl">
+      <li>
+        <a href="http://www.spid.gov.it" class="u-color-50">Informazioni su SPID</a>
+      </li>
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+<h3 class="u-text-h3">Versione POST</h3>
+
+<div class="Grid">
+  {% for size in ['xxs', 'xs', 's', 'm' ] %}
+  <div class="Grid-cell u-md-size1of2 u-lg-size1of4">
+    <div class="Spid">
+    <form name="spid_idp_access" action="#" method="post" class="Spid u-margin-bottom-xxl">
+
+      <input type="hidden" name="param_001" value="" />
+      <input type="hidden" name="param_002" value="" />
+      <input type="hidden" name="param_003" value="" />
+
+      <a href="#spid-button-post-{{ size }}" data-menu-trigger="spid-button-post-{{ size }}" class="Button Spid-button u-text-r-{{ size }}">
+        <img src="../raw/spid/spid-ico-circle-bb.svg" alt="" />
+        <span>Entra con SPID</span>
+      </a>
+      <div id="spid-button-post-{{ size }}" data-menu class="Spid-menu Dropdown-menu">
+        <ul class="Linklist js-randomize">
+          {% for i in IDP %}
+          <li>
+            <button class="Spid-idp" tabindex="0">
+              <span class="u-hiddenVisually">Prosegui con {{ i.idp }}</span>
+              <img src="../raw/spid/spid-idp-{{ i.img }}.svg" alt="" class="u-text-r-{{ size }}" />
+            </button>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </form>
+    </div>
+    <ul class="Prose u-margin-top-l u-margin-bottom-xxl">
+      <li>
+        <a href="http://www.spid.gov.it" class="u-color-50">Informazioni su SPID</a>
+      </li>
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+</div>

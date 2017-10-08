@@ -1,0 +1,19 @@
+{% for i in [1, 2] %}
+<div class="u-background-grey-20 u-layout-centerContent u-cf">
+  <section class="js-Masonry-container u-layout-medium" data-columns>
+
+    {% for i in [1, 2] %}
+    <div class="Masonry-item js-Masonry-item">
+      {% render '@card--simple', { modifier: 'u-borderShadow-xxs u-borderRadius-m', text: __TEXTS__[i] } %}
+    </div>
+    <div class="Masonry-item js-Masonry-item">
+      {% render '@card--simple', { modifier: 'u-borderShadow-xxs u-borderRadius-m', text: __TEXTS__[i + 1] } %}
+    </div>
+    <div class="Masonry-item js-Masonry-item">
+      {% render '@card--simple', { modifier: 'u-borderShadow-xxs u-borderRadius-m', text: __TEXTS__[i + 2] } %}
+    </div>
+    {% endfor %}
+
+  </section>
+</div>
+{% endfor %}

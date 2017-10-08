@@ -1,0 +1,9 @@
+{
+  "title": "Footer",
+  "context": {
+    "site": {
+      "name": "Nome della pubblica amministrazione",
+      "url": "www.sito-pubblica-amministrazione.gov.it"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+/** @define utilities; */
+
+.u-padding-r-all { padding: 1em !important; }
+.u-margin-r-all { margin: 1em !important; }
+
+.u-padding-r-top { padding-top: 1em !important; }
+.u-margin-r-top { margin-top: 1em !important; }
+
+.u-padding-r-bottom { padding-bottom: 1em !important; }
+.u-margin-r-bottom { margin-bottom: 1em !important; }
+
+.u-padding-r-left { padding-left: 1em !important; }
+.u-margin-r-left { margin-left: 1em !important; }
+
+.u-padding-r-right { padding-right: 1em !important; }
+.u-margin-r-right { margin-right: 1em !important; }
+
+/* Font size reset for inner elements */
+
+/* postcss-bem-linter: ignore */
+
+.u-padding-r-all > *,
+.u-margin-r-all > *,
+.u-padding-r-top > *,
+.u-margin-r-top > *,
+.u-padding-r-bottom > *,
+.u-margin-r-bottom > *,
+.u-padding-r-left > *,
+.u-margin-r-left > *,
+.u-padding-r-right > *,
+.u-margin-r-right > * {
+  font-size: medium;
+}

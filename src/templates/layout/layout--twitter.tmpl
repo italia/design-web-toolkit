@@ -1,0 +1,18 @@
+<div class="u-layout-centerContent u-background-70 u-padding-r-all">
+  <section class="u-layout-medium">
+    <div class="Grid">
+      <div class="Grid-cell u-layout-centerLeft">
+        <h2 class="u-text-r-l"><a class="u-color-white" href="">Twitter @amministrazione</a></h2>
+      </div>
+    </div>
+    <div class="u-text-r-xxl u-padding-r-top">
+      <div class="Grid Grid--withGutter">
+        {% for i in [1, 2, 3] %}
+        <div class="Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-margin-r-bottom u-layout-matchHeight u-padding-r-all">
+          {% render '@tile--twitter', { text: __TEXTS__[i] | truncate(s, 140, false, end='.')} %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>

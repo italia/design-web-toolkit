@@ -1,0 +1,25 @@
+{
+  "title": "Error page",
+  "default": "404",
+  "hidden": true,
+  "variants": [
+    {
+      "name": "404",
+      "context": {
+        "title": "404",
+        "subtitle": "Pagina non trovata",
+        "text": "Oops! La pagina che cerchi non è stata trovata, <a href=\"javascript:history.back();\" title=\"Torna alla pagina precedente\">torna indietro</a> o utilizza il menu per continuare la navigazione.",
+        "button": "Torna alla Home"
+      }
+    },
+    {
+      "name": "403",
+      "context": {
+        "title": "403",
+        "subtitle": "Accesso negato",
+        "text": "Non disponi delle autorizzazioni per accedere a questa pagina, <a href=\"javascript:history.back();\" title=\"Torna alla pagina precedente\">torna indietro</a> o utilizza il menu per continuare la navigazione.",
+        "button": "Torna alla Home"
+      }
+    }
+  ]
+}

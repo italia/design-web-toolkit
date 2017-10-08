@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Print styles.
+   Fork of HTML5 Boilerplate print stylesheet - https://html5boilerplate.com/
+   License MIT - Copyright (c) HTML5 Boilerplate
+   ========================================================================== */
+
+:root {
+  --Print-font-family: Georgia, "Times New Roman", Times, serif;
+  --Print-line-height: 1.5;
+  --Print-max-width: 960px;
+  --Print-font-size: 60%;
+}
+
+@page {
+  margin: 0;
+  size: A4;
+}
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /*
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  */
+
+  img {
+    max-width: 100% !important;
+    page-break-after: auto;
+    page-break-before: auto;
+    page-break-inside: avoid;
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+    word-wrap: break-word;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  table,
+  blockquote,
+  pre,
+  code,
+  figure,
+  li,
+  hr,
+  ul,
+  ol,
+  a,
+  tr {
+    page-break-inside: avoid;
+  }
+
+  a,
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  /* Custom styles
+    ================= */
+
+  html,
+  body {
+    font-family: var(--Print-font-family) !important;
+    font-size: var(--Print-font-size) !important;
+    line-height: var(--Print-line-height) !important;
+    max-width: var(--Print-max-width) !important;
+    padding-top: 0 !important;
+  }
+}

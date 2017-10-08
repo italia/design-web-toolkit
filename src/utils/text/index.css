@@ -1,0 +1,204 @@
+/** @define utilities */
+
+@import "./text.css";
+@import "./text-sm.css";
+@import "./text-md.css";
+@import "./text-lg.css";
+@import "./lineheight.css";
+
+:root {
+  --Text-color-text-primary: #333;
+  --Text-color-text-secondary: #5a6772;
+  --Text-preFormatted-font:
+    Consolas,
+    "Andale Mono WT",
+    "Andale Mono",
+    "Lucida Console",
+    "Lucida Sans Typewriter",
+    "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono",
+    "Liberation Mono",
+    "Nimbus Mono L",
+    Monaco,
+    "Courier New",
+    Courier,
+    monospace;
+}
+
+.u-textSecondary {
+  color: var(--Text-color-text-secondary) !important;
+}
+
+/*
+ * 	1. antialiasing firefox per mac
+ * 	2. antialiasing chrome, safari per mac
+ */
+
+.u-textSmooth {
+  -moz-osx-font-smoothing: grayscale !important; /* 1 */
+  -webkit-font-smoothing: antialiased !important; /* 2 */
+}
+
+.u-textClean {
+  text-decoration: none !important;
+}
+
+.u-textClean:hover {
+  text-decoration: underline !important;
+}
+
+.u-textWeight-200 {
+  font-weight: 200 !important;
+}
+
+.u-textWeight-300 {
+  font-weight: 300 !important;
+}
+
+.u-textWeight-400 {
+  font-weight: 400 !important;
+}
+
+.u-textWeight-600 {
+  font-weight: 600 !important;
+}
+
+.u-textWeight-700 {
+  font-weight: 700 !important;
+}
+
+.u-textWeight-900 {
+  font-weight: 900 !important;
+}
+
+.u-textNormal {
+  font-style: normal !important;
+}
+
+.u-textItalic {
+  font-style: italic !important;
+}
+
+.u-textLowercase {
+  text-transform: lowercase !important;
+}
+
+.u-textUppercase {
+  text-transform: uppercase !important;
+}
+
+.u-textSmallCaps {
+  font-variant: small-caps !important;
+}
+
+.u-textPreformatted {
+  font-family: var(--Text-preFormatted-font) !important;
+}
+
+.u-textOverflow {
+  overflow-x: auto !important;
+}
+
+/*
+ *	Responsive font sizing
+ * 	====================================
+ */
+
+.u-text-r-xxl {
+  @extend .u-text-xxl;
+  @extend .u-text-sm-xxl;
+  @extend .u-text-lg-xxl;
+  @extend .u-text-md-xxl;
+}
+
+.u-text-r-xl {
+  @extend .u-text-xl;
+  @extend .u-text-sm-xl;
+  @extend .u-text-lg-xl;
+  @extend .u-text-md-xl;
+}
+
+.u-text-r-l {
+  @extend .u-text-l;
+  @extend .u-text-sm-l;
+  @extend .u-text-lg-l;
+  @extend .u-text-md-l;
+}
+
+.u-text-r-m {
+  @extend .u-text-m;
+  @extend .u-text-sm-m;
+  @extend .u-text-lg-m;
+  @extend .u-text-md-m;
+}
+
+.u-text-r-s {
+  @extend .u-text-s;
+  @extend .u-text-sm-s;
+  @extend .u-text-lg-s;
+  @extend .u-text-md-s;
+}
+
+.u-text-r-xs {
+  @extend .u-text-xs;
+  @extend .u-text-sm-xs;
+  @extend .u-text-lg-xs;
+  @extend .u-text-md-xs;
+}
+
+.u-text-r-xxs {
+  @extend .u-text-xxs;
+  @extend .u-text-sm-xxs;
+  @extend .u-text-lg-xxs;
+  @extend .u-text-md-xxs;
+}
+
+.u-text-p {
+  @extend .u-text-r-xs;
+  @extend .u-lineHeight-xl;
+}
+
+/*
+ *	Heading - set default margins
+ * 	=====================================
+ */
+
+.u-text-h1 {
+  @extend .u-text-r-xxl;
+  @extend .u-textWeight-700;
+  @extend .u-margin-bottom-s;
+  @extend .u-lineHeight-m;
+}
+
+.u-text-h2 {
+  @extend .u-text-r-xl;
+  @extend .u-textWeight-700;
+  @extend .u-margin-bottom-s;
+  @extend .u-lineHeight-m;
+}
+
+.u-text-h3 {
+  @extend .u-text-r-l;
+  @extend .u-textWeight-700;
+  @extend .u-margin-bottom-s;
+  @extend .u-lineHeight-m;
+}
+
+.u-text-h4 {
+  @extend .u-text-r-m;
+  @extend .u-textWeight-700;
+  @extend .u-margin-bottom-s;
+}
+
+.u-text-h5 {
+  @extend .u-text-r-s;
+  @extend .u-textWeight-400;
+  @extend .u-margin-bottom-s;
+  @extend .u-textSecondary;
+}
+
+.u-text-h6 {
+  @extend .u-text-r-xs;
+  @extend .u-textWeight-700;
+  @extend .u-margin-bottom-s;
+}
