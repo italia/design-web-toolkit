@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+
+<head>
+
+	<title>Mappa dei dialetti italiani</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!--<script src="leaflet.ajax.min.js" type="text/javascript"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.0.0/leaflet.ajax.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.js"></script>
+
+	<style>
+  	html {
+    	height: 100%;
+  	}
+  	body {
+    	height: 100%;
+  	}
+  	#map {
+    	height: 98%;
+  	}
+    #wrapper {
+        height: 100%;
+    }
+    #over_map {
+        position: absolute; width: 100px; height: 100px; right: 20px; top: 20px; z-index: 99;
+    }
+
+    .modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99999;
+        opacity: 0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+    }
+
+    .modalDialog:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modalDialog > div {
+        width: 450px;
+        position: relative;
+        margin: 10% auto;
+        padding: 5px 20px 13px 20px;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    .close {
+        background: #606061;
+        color: #FFFFFF;
+        line-height: 25px;
+        position: absolute;
+        right: -12px;
+        text-align: center;
+        top: -10px;
+        width: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px #000;
+    }
+
+    .close:hover {
+        background: #00d9ff;
+    }
+	</style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="slider" style="top: 0px; right: 1px; margin: 10px 25px;"></div>
+        <div style="margin-right: auto; margin-left: auto; width: 90%; margin-bottom: 10px; text-align: center;">
+            <input type="number" min='1' max='35675999' id="input-number-min">
+            <input type="number" min='2' max='35676000' id="input-number-max">
+        </div>
+        <div id="map"></div>
+        <div id="over_map">
+            <a href="#openModal">
+                <img src="qM.png" alt="QuestionMark" style="width:50px; height:50px;">
+            </a>
+        </div>
+        <div id="openModal" class="modalDialog">
+            <div><a href="#close" title="Close" class="close">X</a>
+
+                <h2>Mappa Collaborativa dei Dialetti Italiani</h2>
+
+                <p>Questa è la mappa delle registrazioni di diversi dialetti italiani registrate da persone come te.
+                Clicca sui punti nella mappa per ascoltare gli audio.</p>
+                <p>Se vuoi contribuire a questo progetto, usa il
+                    <a href="https://telegram.me/dialectbot" target="_blank">bot @DialectBot di Telegram</a> per aggiungere
+                    una registrazione di un proverbio o modo di dire nel dialetto della tua zona
+                    usando il tuo cellulare, tablet o computer!</p>
+            </div>
+        </div>
+    </div>
+
+	<script type="text/javascript">
+
+    var map = L.map('map', {scrollWheelZoom:false}).setView([42.3674, 12.8975], 6);
+
+    var base_map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+
+    <!--var base_map = L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {-->
+        <!--attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a> contributors'-->
+    <!--})-->
+    base_map.addTo(map);
+
+    function pop_expl(feature, layer) {
+        var popupContent = feature.properties.audio
+                + "<b>Spiegazione:</b> " + feature.properties.translation
+                + "<br>Registrata da " + feature.properties.person
+                + " il " + feature.properties.date;
+        layer.bindPopup(popupContent);
+    }
+
+    function recording_marker(feature, latlng) {
+        return L.circleMarker(latlng, {
+            radius: 8.0,
+            fillColor: '#11fe00',
+            color: '#000000',
+            weight: 1,
+            opacity: 1.0,
+            fillOpacity: 0.8
+        })
+    }
+
+    var points_group = L.featureGroup();
+
+    function addDataToMap(data, map) {
+        var dataLayer = L.geoJson(data, {
+            onEachFeature: pop_expl,
+            filter:
+                function(feature, layer) {
+                    var inputyear = parseInt(feature.properties.date.substring(feature.properties.date.length-4));
+                     return (inputyear <= rangeMax) && (inputyear >= rangeMin);
+                },
+            pointToLayer: recording_marker
+            });
+        dataLayer.addTo(points_group);
+    }
+
+    points_group.addTo(map);
+
+    //var MapUrl = "https://dl.dropboxusercontent.com/u/12016006/tmp/dynamicaudiomapdata.geojson"
+    var MapUrl = "http://dialectbot.appspot.com/dynamicaudiomapdata.geojson"
+
+    data_map = $.getJSON(MapUrl, function(data) { addDataToMap(data, map); });
+
+    <!--function addDataToMap(data, map) {-->
+        <!--var dataLayer = L.geoJson(data, {-->
+            <!--onEachFeature: pop_expl,-->
+            <!--pointToLayer: recording_marker-->
+            <!--});-->
+        <!--dataLayer.addTo(map);-->
+    <!--}-->
+    <!--var MapUrl = "http://dialectbot.appspot.com/dynamicaudiomapdata.geojson"-->
+    <!--$.getJSON(MapUrl, function(data) { addDataToMap(data, map); });-->
+
+    var slidervar = document.getElementById('slider');
+    noUiSlider.create(slidervar, {
+        connect: true,
+        start: [ 2012, 2017],
+        range: {
+            min: 2012,
+            max: 2017
+        },
+        step: 1
+    });
+
+    document.getElementById('input-number-min').setAttribute("value", 2012);
+    document.getElementById('input-number-max').setAttribute("value", 2017);
+    var inputNumberMin = document.getElementById('input-number-min');
+    var inputNumberMax = document.getElementById('input-number-max');
+    inputNumberMin.addEventListener('change', function(){
+        slidervar.noUiSlider.set([this.value, null]);
+    });
+    inputNumberMax.addEventListener('change', function(){
+        slidervar.noUiSlider.set([null, this.value]);
+    });
+
+    slidervar.noUiSlider.on('update', function( values, handle ) {
+        //handle = 0 if min-slider is moved and handle = 1 if max slider is moved
+        if (handle==0){
+            document.getElementById('input-number-min').value = values[0];
+        } else {
+            document.getElementById('input-number-max').value =  values[1];
+        }
+        rangeMin = document.getElementById('input-number-min').value;
+        rangeMax = document.getElementById('input-number-max').value;
+        //first let's clear the layer:
+        points_group.clearLayers();
+        data_map = $.getJSON(MapUrl, function(data) { addDataToMap(data, map); });
+    })
+
+
+
+
+</script>
+
+</body>
+</html>
+
