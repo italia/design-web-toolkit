@@ -1,5 +1,6 @@
 import requests
 import json
+import geojsonio
 
 # http://www.statweb.provincia.tn.it/indicatoristrutturalisubpro/exp.aspx?ntab=Sub_Numero_Incidenti&info=d&fmt=json
 # http://www.dati.gov.it/dataset/trasporti-pubblici-sgm-servizio-realtime/resource/6a3e4d4e-65b3-425c-8c1d-9e3e05054898
