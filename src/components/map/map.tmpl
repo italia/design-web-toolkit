@@ -1,24 +1,24 @@
-
 <form class="Form Form--spaced u-padding-all-xl u-text-r-xs" id="map-form">
-	
     <fieldset class="Form-fieldset">
         <legend class="Form-legend">Map component</legend>
 
-<div class="Form-field">
- <div class="u-nbfc u-border-all-xxs u-color-grey-30 u-background-grey-10">
-		<div class="maps" id="map"></div>
-	</div>
-	</div>
-        <div class="Form-field">
-            <label class="Form-label is-required" for="address">Indirizzo</label>
-            <input class="Form-input u-text-r-s u-borderRadius-m" id="map-search-input" aria-required="true" required>
-        </div>
+            <div class="Form-field">
+                <div class="u-nbfc u-border-all-xxs u-color-grey-30 u-background-grey-10">
+            		<div class="maps" id="map"></div>
+                	</div>
+        	</div>
+            <div class="Form-field">
+                <label class="Form-label is-required" for="address">Indirizzo</label>
+                <input class="Form-input u-text-r-s u-borderRadius-m" id="map-search-input" aria-required="true" required>
+            </div>
     </fieldset>
     <div class="Form-field Grid-cell u-textRight">
         <button type="button" id='map-search-js' class="Button Button--default Button--shadow u-text-m">Invia</button>
     </div>
-    <ul id='map-search-result'>
+    <ul class='Grid' id='map-search-result'>
     </ul>
     <div id="results"></div>
     </div>
 </form>
+
+
