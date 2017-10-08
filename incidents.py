@@ -134,10 +134,11 @@ for entry in incidenti:
             "properties": {
                 "ente": entry['ente'],
                 "incidenti": [{entry['anno']: entry['incidenti']}]
+                #entry['anno']: entry['incidenti']
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [entry['latlon'][0], entry['latlon'][1]]
+                "coordinates": [entry['latlon'][1],entry['latlon'][0]]
             }
         }
         final_features.append(feature)

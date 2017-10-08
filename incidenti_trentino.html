@@ -5,7 +5,7 @@
 
 <head>
 
-	<title>Mappa dei dialetti italiani</title>
+	<title>Mappa incidenti Trentino</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -103,21 +103,16 @@
         <div id="openModal" class="modalDialog">
             <div><a href="#close" title="Close" class="close">X</a>
 
-                <h2>Mappa Collaborativa dei Dialetti Italiani</h2>
+                <h2>Mappa degli incidenti nel Trentino 2013 - 2015 per 1000 residenti</h2>
 
-                <p>Questa è la mappa delle registrazioni di diversi dialetti italiani registrate da persone come te.
-                Clicca sui punti nella mappa per ascoltare gli audio.</p>
-                <p>Se vuoi contribuire a questo progetto, usa il
-                    <a href="https://telegram.me/dialectbot" target="_blank">bot @DialectBot di Telegram</a> per aggiungere
-                    una registrazione di un proverbio o modo di dire nel dialetto della tua zona
-                    usando il tuo cellulare, tablet o computer!</p>
+                <p>Vedi risorsa http://dati.trentino.it/dataset/incidenti-stradali-per-1-000-residenti</p>
             </div>
         </div>
     </div>
 
 	<script type="text/javascript">
 
-    var map = L.map('map', {scrollWheelZoom:false}).setView([42.3674, 12.8975], 6);
+    var map = L.map('map', {scrollWheelZoom:false}).setView([46.0748, 11.1217], 8);
 
     var base_map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -130,10 +125,7 @@
     base_map.addTo(map);
 
     function pop_expl(feature, layer) {
-        var popupContent = feature.properties.audio
-                + "<b>Spiegazione:</b> " + feature.properties.translation
-                + "<br>Registrata da " + feature.properties.person
-                + " il " + feature.properties.date;
+        var popupContent = "<b>ente</b> " + feature.properties.ente;
         layer.bindPopup(popupContent);
     }
 
@@ -153,11 +145,11 @@
     function addDataToMap(data, map) {
         var dataLayer = L.geoJson(data, {
             onEachFeature: pop_expl,
-            filter:
+            /*filter:
                 function(feature, layer) {
                     var inputyear = parseInt(feature.properties.date.substring(feature.properties.date.length-4));
                      return (inputyear <= rangeMax) && (inputyear >= rangeMin);
-                },
+                },*/
             pointToLayer: recording_marker
             });
         dataLayer.addTo(points_group);
@@ -166,7 +158,14 @@
     points_group.addTo(map);
 
     //var MapUrl = "https://dl.dropboxusercontent.com/u/12016006/tmp/dynamicaudiomapdata.geojson"
-    var MapUrl = "http://dialectbot.appspot.com/dynamicaudiomapdata.geojson"
+    //var MapUrl = "http://dialectbot.appspot.com/dynamicaudiomapdata.geojson"
+    //var MapUrl = "http://127.0.0.1:8887/dynamicaudiomapdata.geojson"
+    var MapUrl = "http://127.0.0.1:8887/incidenti.geojson"
+    //var MapUrl = "http://127.0.0.1:8887/incidenti_flat.geojson"
+
+    //var MapUrl = "http://127.0.0.1:8887/dynamicaudiomapdata_test.geojson"
+    //var MapUrl = "http://127.0.0.1:8887/incidenti_flat_test.geojson"
+
 
     data_map = $.getJSON(MapUrl, function(data) { addDataToMap(data, map); });
 
