@@ -133,7 +133,7 @@ for entry in incidenti:
             "type": "Feature",
             "properties": {
                 "ente": entry['ente'],
-                "incidenti": [{int(entry['anno']): int(entry['incidenti'])}]
+                "incidenti": {int(entry['anno']): int(entry['incidenti'])}
                 #entry['anno']: entry['incidenti']
             },
             "geometry": {
@@ -144,7 +144,7 @@ for entry in incidenti:
         final_features.append(feature)
     else:
         feature = [f for f in final_features if f['properties']['ente']==entry['ente']][0]
-        feature['properties']['incidenti'].append({int(entry['anno']): int(entry['incidenti'])})
+        feature['properties']['incidenti'][int(entry['anno'])] = int(entry['incidenti'])
 
 final_incidenti_geojson = {
     "type": "FeatureCollection",

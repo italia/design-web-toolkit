@@ -119,14 +119,12 @@
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-    <!--var base_map = L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {-->
-        <!--attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a> contributors'-->
-    <!--})-->
     base_map.addTo(map);
 
     function pop_expl(feature, layer) {
         var popupContent = "<b>ente:</b> " + feature.properties.ente
-            + "<br><b>incidenti:</b> " + JSON.stringify(feature.properties.incidenti);
+            + "<br><b>incidenti:</b> " + JSON.stringify(feature.properties.incidenti)
+            + "<br><b>incidenti 2010:</b> " + parseInt(feature.properties.incidenti["2010"]);
         layer.bindPopup(popupContent);
     }
 
@@ -145,12 +143,16 @@
 
     function addDataToMap(data, map) {
         var dataLayer = L.geoJson(data, {
+            //feature.properties.incidenti
             onEachFeature: pop_expl,
-            /*filter:
+            filter:
                 function(feature, layer) {
-                    var inputyear = parseInt(feature.properties.date.substring(feature.properties.date.length-4));
-                     return (inputyear <= rangeMax) && (inputyear >= rangeMin);
-                },*/
+                    //var incidentMinYear = parseInt(feature.properties.incidenti['2010']); //rangeMin.toString()
+                    //parseInt(feature.properties.date.substring(feature.properties.date.length-4));
+                    //return (inputyear <= rangeMax) && (inputyear >= rangeMin);
+                    //return incidentMinYear > 0;
+                    return true;
+                },
             pointToLayer: recording_marker
             });
         dataLayer.addTo(points_group);
