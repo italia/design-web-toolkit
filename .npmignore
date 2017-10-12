@@ -9,6 +9,5 @@ styleguide
 gh-pages
 .idea
 .vscode
-build/*
 TODO.txt
 docs/_themes
