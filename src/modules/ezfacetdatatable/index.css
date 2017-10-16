@@ -8,8 +8,8 @@
 
 .u-facet .u-facet-title {
   @extend .Grid-cell;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 10rem !important;
+  padding-right: 10rem !important;
 }
 
 @media (--xs-viewport), (--sm-viewport) {
@@ -48,8 +48,8 @@
   @extend .u-background-grey-10;
   @extend .u-padding-top-xl;
   @extend .u-padding-bottom-xl;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
 }
 
 .u-facet .u-facet-form .u-facet-form-cell {
@@ -57,10 +57,10 @@
   @extend .u-sm-size1of2;
   @extend .u-md-size1of3;
   @extend .u-lg-size1of3;
-  padding-bottom: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 2rem;
+  padding-bottom: 2rem !important;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+  padding-top: 2rem !important;
 }
 
 @media (--xs-viewport), (--sm-viewport) {
@@ -77,10 +77,10 @@
   @extend .u-sm-size1of2;
   @extend .u-md-size1of2;
   @extend .u-lg-size1of2;
-  padding-bottom: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 2rem;
+  padding-bottom: 2rem !important;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+  padding-top: 2rem !important;
 }
 
 @media (--xs-viewport), (--sm-viewport) {
@@ -94,10 +94,10 @@
 
 .u-facet .u-facet-form .u-facet-form-cell-wide {
   @extend .Grid-cell;
-  padding-bottom: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 2rem;
+  padding-bottom: 2rem !important;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+  padding-top: 2rem !important;
 }
 
 @media (--xs-viewport), (--sm-viewport) {
@@ -118,29 +118,12 @@
   height: 6rem;
 }
 
-@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
-
-  .u-facet .u-facet-form select.Form-input {
-    background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C!--%20Generated%20by%20IcoMoon.io%20--%3E%0D%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%0D%0A%3Cpath%20fill%3D%22%23029be5%22%20d%3D%22M3.733%206.133l-3.733%203.733%2016%2016%2016-16-3.733-3.733-12.267%2012.267-12.267-12.267z%22%3E%3C%2Fpath%3E%0D%0A%3C%2Fsvg%3E');
-  }
-
-}
-
-.u-facet .u-facet-form select option {
-  @extend .u-background-grey-45;
-  @extend .u-color-white;
-  height: 6rem;
-}
-
-.u-facet .u-facet-form select option:hover {
-  @extend .u-background-40;
-}
 
 .u-facet .u-facet-table {
   @extend .Grid-cell;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  padding-top: 5rem;
+  padding-left: 10rem !important;
+  padding-right: 10rem !important;
+  padding-top: 5rem !important;
 }
 
 @media (--xs-viewport), (--sm-viewport) {
@@ -154,9 +137,9 @@
 
 .u-facet .u-facet-calendar {
   @extend .Grid-cell;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  padding-top: 5rem;
+  padding-left: 10rem !important;
+  padding-right: 10rem !important;
+  padding-top: 5rem !important;
 }
 
 @media (--xs-viewport), (--sm-viewport) {
@@ -220,3 +203,46 @@
 .u-facet .u-facet-calendar .u-facet-event .u-event-what .u-event-details .u-event-type {
   @extend .u-margin-bottom-xs;
 }
+
+.ie89 .u-facet .u-facet-title,
+.ie89 .u-facet .u-facet-title .u-facet-heading,
+.ie89 .u-facet .u-facet-title .u-facet-result-count,
+.ie89 .u-facet .u-facet-form,
+.ie89 .u-facet .u-facet-form .u-facet-form-cell,
+.ie89 .u-facet .u-facet-form .u-facet-form-cell-half,
+.ie89 .u-facet .u-facet-form .u-facet-form-cell-wide,
+.ie89 .u-facet .u-facet-table,
+.ie89 .u-facet .u-facet-calendar,
+.ie89 .u-facet .u-facet-calendar .u-facet-event .u-event-what .u-event-main,
+.ie89 .u-facet .u-facet-calendar .u-facet-event .u-event-what .u-event-details {
+  box-sizing: border-box;
+  display: inline-block !important;
+  font-size: 1.8rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  position: static !important;
+  text-align: left;
+  vertical-align: top;
+  width: 100%;
+}
+
+@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+
+  .u-facet .u-facet-form select.Form-input {
+    background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C!--%20Generated%20by%20IcoMoon.io%20--%3E%0D%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%0D%0A%3Cpath%20fill%3D%22%23029be5%22%20d%3D%22M3.733%206.133l-3.733%203.733%2016%2016%2016-16-3.733-3.733-12.267%2012.267-12.267-12.267z%22%3E%3C%2Fpath%3E%0D%0A%3C%2Fsvg%3E');
+  }
+
+  /*
+  .u-facet .u-facet-form select option {
+    @extend .u-background-grey-45;
+    @extend .u-color-white;
+    height: 6rem;
+  }
+
+  .u-facet .u-facet-form select option:hover {
+    @extend .u-background-40;
+  }
+  */
+}
+
