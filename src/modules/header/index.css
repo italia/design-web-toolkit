@@ -61,6 +61,14 @@
   width: 100%;
 }
 
+@media (--xs-viewport) {
+
+  .Header-navbar {
+      @extend .u-background-grey-20;
+  }
+
+}
+
 /* Burger button
   ========================================== */
 
@@ -175,6 +183,14 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-left: 1rem;
+}
+
+@media (--xs-viewport) {
+    
+  .Header-titleLink .Header-siteName {
+    display: none;
+  }
+
 }
 
 .Headroom--not-top .Header-titleLink .Header-siteName {

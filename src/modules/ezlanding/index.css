@@ -8,6 +8,15 @@
   padding-right: 10rem;
 }
 
+@media (--xs-viewport), (--sm-viewport) {
+  
+  .u-landing {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+   
+}
+
 .u-landing .u-landing-main {
   @extend .Grid-cell;
 }
@@ -21,7 +30,20 @@
   font-size: 3.2rem !important;
 }
 
+
 .u-landing .u-landing-main .u-landing-parent h1 {
   @extend .u-color-40;
   font-size: 3.2rem !important;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+    
+  .u-landing .u-landing-main .u-landing-title h1 {
+    font-size: 2rem !important;
+  }
+  
+  .u-landing .u-landing-main .u-landing-parent h1 {
+    font-size: 2rem !important;
+  }
+    
 }
