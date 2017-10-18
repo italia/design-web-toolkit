@@ -105,8 +105,8 @@
 
 .Megamenu-subnavGroup {
   @extend .u-sizeFull;
-  @extend .u-lg-size1of4;
-  @extend .u-md-size1of4;
+  @extend .u-lg-size2of12;
+  @extend .u-md-size2of12;
 }
 
 /* list item within sub-navigation panel */
@@ -191,9 +191,9 @@
   @extend .u-color-white;
 }
 
-.Megamenu--default .Megamenu-subnavGroup:nth-child(3n+1) {
+.Megamenu--default .Megamenu-subnavGroup:nth-child(4n+1) {
   @extend .u-md-before2of12;
-  @extend .u-lg-before1of8;
+  @extend .u-lg-before2of12;
 }
 
 .Megamenu--default .Megamenu-subnavGroup > li {
