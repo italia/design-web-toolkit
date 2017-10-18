@@ -34,6 +34,10 @@
   @extend .u-background-grey-10;
 }
 
+.u-autocomplete .easy-autocomplete .easy-autocomplete-container ul li:nth-child(even) {
+  @extend .u-background-grey-30;
+}
+
 .u-autocomplete .easy-autocomplete .easy-autocomplete-container ul li.selected{
     @extend .u-background-10;
 }
