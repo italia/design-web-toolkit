@@ -284,6 +284,18 @@
   }
 }
 
+.Header-search .search-input-background {
+  @extend .u-background-grey-20;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .Header-search .search-input-background {
+    @extend .u-background-white;
+  }
+
+}
+
 .Header-search.is-active {
   @extend .u-block;
   @extend .u-margin-top-xs;

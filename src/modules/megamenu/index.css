@@ -143,9 +143,11 @@
 
 .Megamenu--default .Megamenu-subnavGroup > li > a {
   @extend .u-color-95;
-  @extend .u-text-r-s;
   @extend .u-textUppercase;
   @extend .u-textWeight-700;
+  
+  font-size: 1.6rem;
+  letter-spacing: 0.005em;
 }
 
 .Megamenu--default .Megamenu-item > a {

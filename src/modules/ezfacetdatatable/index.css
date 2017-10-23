@@ -52,6 +52,15 @@
   padding-right: 5rem !important;
 }
 
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-facet .u-facet-form {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+}
+
 .u-facet .u-facet-form .u-facet-form-cell {
   @extend .Grid-cell;
   @extend .u-sm-size1of2;
@@ -66,8 +75,8 @@
 @media (--xs-viewport), (--sm-viewport) {
 
   .u-facet .u-facet-form .u-facet-form-cell {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
 }
@@ -86,8 +95,8 @@
 @media (--xs-viewport), (--sm-viewport) {
 
   .u-facet .u-facet-form .u-facet-form-cell-half {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
 }
@@ -103,8 +112,8 @@
 @media (--xs-viewport), (--sm-viewport) {
 
   .u-facet .u-facet-form .u-facet-form-cell-wide {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
 }
@@ -117,7 +126,6 @@
 .u-facet .u-facet-form .Form-field {
   height: 6rem;
 }
-
 
 .u-facet .u-facet-table {
   @extend .Grid-cell;
