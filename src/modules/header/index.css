@@ -61,7 +61,7 @@
   width: 100%;
 }
 
-@media (--xs-viewport) {
+@media (--xs-viewport), (--sm-viewport) {
 
   .Header-navbar {
       @extend .u-background-grey-20;
