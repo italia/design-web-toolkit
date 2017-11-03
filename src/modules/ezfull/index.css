@@ -206,3 +206,19 @@
   @extend .u-padding-r-bottom;
   @extend .u-margin-bottom-xl;
 }
+
+/*
+ * SEARCH
+ */
+
+.FullSearch .search-cell {
+  @extend .u-padding-all-xxxl;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .FullSearch .search-cell {
+    @extend .u-padding-all-l;
+  }
+
+}

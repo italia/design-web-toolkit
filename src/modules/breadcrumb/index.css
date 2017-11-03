@@ -20,3 +20,18 @@
 .Breadcrumb-item:last-child::after {
   content: none;
 }
+
+.Breadcrumb {
+  @extend .u-padding-left-xxxxl;
+  @extend .u-padding-right-xxxxl;
+  @extend .u-padding-top-xxl;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+  
+  .Breadcrumb {
+    @extend .u-padding-left-xs;
+    @extend .u-padding-right-xs;
+  }
+  
+}

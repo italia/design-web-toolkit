@@ -53,7 +53,7 @@
   min-height: 10rem;
 
   @media (--lg-viewport) {
-    min-height: 16rem;
+    min-height: 20rem;
   }
 }
 
