@@ -22,7 +22,7 @@
   @extend .u-lineHeight-xl;
 
   color: var(--Prose-color-text-primary);
-  font-size: 1.6rem !important;
+  font-size: 1.7rem !important;
 }
 
 .Prose > p > small {
@@ -100,4 +100,31 @@
 
 .Prose > h6 {
   @extend .u-text-h6;
+}
+
+/* modifiche omar */
+
+body .Prose > h3 {
+  font-size: 2.5rem!important;
+}
+
+body .u-content .u-content-main .Prose h5 {
+  margin-top: 1rem!important;
+  margin-bottom: 1rem !important;
+  font-size: 1.8rem!important;
+}
+
+body .Prose > p {
+  font-size: 1.8rem!important;
+  line-height: 1.7 !important;
+}
+
+body .u-content .u-content-related .u-content-related-item .Prose ul {
+  padding: 0;
+  margin: 0.5rem !important;
+  list-style: none;
+}
+
+body .u-content .u-content-related .u-content-related-item .Prose ul li .fa {
+  margin-right: 1rem !important;
 }
