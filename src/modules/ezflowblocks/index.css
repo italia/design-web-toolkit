@@ -250,3 +250,30 @@
   }
 
 }
+
+/* modifiche omar */
+
+body section.u-flow-panels {
+    padding: 2.4rem !important;
+    padding-bottom: 0rem !important;
+}
+
+body section.u-flow-panels .u-margin-bottom-xl {
+    margin-left: 0.8rem !important;
+    margin-right: 0.8rem !important;
+}
+
+.Grid-cell.u-md-size1of2.u-lg-size1of3 .u-flow-panels section {
+    padding-top: 0 !important;
+}
+
+.Footer .u-flow {
+    padding-left:13.4rem !important;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+  body section.u-flow-panels .u-margin-bottom-xl {
+      margin-left: 0.8rem !important;
+      margin-right: 0.8rem !important;
+  }
+}
