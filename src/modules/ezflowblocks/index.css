@@ -52,7 +52,7 @@
   @extend .u-background-grey-10;
   min-height: 10rem;
 
-  @media (--lg-viewport) {
+  @media (--lg-viewport), (--md-viewport) {
     min-height: 20rem;
   }
 }
