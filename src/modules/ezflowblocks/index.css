@@ -253,6 +253,10 @@
 
 /* modifiche omar */
 
+.flexslider {
+    margin-top: 40px;
+}
+
 body .u-lg-size1of3 .u-flow-panels section a.thumbnail {
     margin-bottom: 0 !important;
 }
