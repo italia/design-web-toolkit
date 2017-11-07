@@ -22,5 +22,6 @@
 }
 
 body .breadcrumb {
-  margin-left: 3.2rem !important;
+    margin-left: 13.2rem !important;
+    margin-top: 3rem;
 }
