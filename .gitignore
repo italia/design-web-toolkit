@@ -11,3 +11,4 @@ gh-pages
 .vscode
 build/*
 
+/nbproject/private/
