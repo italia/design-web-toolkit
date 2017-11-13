@@ -1,0 +1,43 @@
+.u-autocomplete {
+  @extend .u-flow;
+}
+
+.u-autocomplete input {
+    min-height: 2.5em;
+}
+
+.u-autocomplete button {
+    max-height: 3em;
+}
+
+.u-autocomplete .easy-autocomplete {
+  @extend .Grid-cell;
+  @extend .u-sizeFill;
+  @extend .Grid;
+    
+}
+
+.u-autocomplete .easy-autocomplete .easy-autocomplete-container {
+  @extend .Grid-cell;
+}
+
+.u-autocomplete .easy-autocomplete .easy-autocomplete-container ul {
+  @extend .u-background-white;
+}
+
+.u-autocomplete .easy-autocomplete .easy-autocomplete-container ul li {
+  @extend .u-padding-all-xs;
+  cursor: pointer;
+}
+
+.u-autocomplete .easy-autocomplete .easy-autocomplete-container ul li:nth-child(odd) {
+  @extend .u-background-grey-10;
+}
+
+.u-autocomplete .easy-autocomplete .easy-autocomplete-container ul li:nth-child(even) {
+  @extend .u-background-grey-30;
+}
+
+.u-autocomplete .easy-autocomplete .easy-autocomplete-container ul li.selected{
+    @extend .u-background-10;
+}

@@ -21,6 +21,17 @@
   content: none;
 }
 
-body .breadcrumb {
+.Breadcrumb {
+  @extend .u-padding-top-xxl;
+  
   margin-left: 3.2rem !important;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+  
+  .Breadcrumb {
+    @extend .u-padding-left-xs;
+    @extend .u-padding-right-xs;
+  }
+  
 }

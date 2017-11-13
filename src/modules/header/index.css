@@ -61,6 +61,14 @@
   width: 100%;
 }
 
+@media (--xs-viewport), (--sm-viewport) {
+
+  .Header-navbar {
+      @extend .u-background-grey-20;
+  }
+
+}
+
 /* Burger button
   ========================================== */
 
@@ -177,6 +185,14 @@
   margin-left: 1rem;
 }
 
+@media (--xs-viewport) {
+    
+  .Header-titleLink .Header-siteName {
+    display: none;
+  }
+
+}
+
 .Headroom--not-top .Header-titleLink .Header-siteName {
   display: none;
 }
@@ -266,6 +282,18 @@
 
     max-width: 24em;
   }
+}
+
+.Header-search .search-input-background {
+  @extend .u-background-grey-20;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .Header-search .search-input-background {
+    @extend .u-background-white;
+  }
+
 }
 
 .Header-search.is-active {
