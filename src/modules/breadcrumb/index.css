@@ -22,9 +22,9 @@
 }
 
 .Breadcrumb {
-  @extend .u-padding-left-xxxxl;
-  @extend .u-padding-right-xxxxl;
   @extend .u-padding-top-xxl;
+  
+  margin-left: 3.2rem !important;
 }
 
 @media (--xs-viewport), (--sm-viewport) {

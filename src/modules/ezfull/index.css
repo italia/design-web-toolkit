@@ -243,3 +243,29 @@ a.u-anchor {
   }
 
 }
+
+body .u-content {
+    padding-left: calc(12.4rem + 0.8rem);
+}
+
+body .u-content .u-content-related .u-content-related-item {
+    padding-bottom: 3.2rem !important;
+}
+
+body .Header-titleLink a:hover {
+  text-decoration: none !important;
+  color: #83B81A !important;
+}
+
+.Header-titleLink small:hover {
+  text-decoration: none !important;
+}
+
+@media (max-width: 992px) {
+
+  body .Grid.FullSearch .Grid-cell:nth-child(1) {
+      padding-left: 13.2rem !important;
+  }
+  
+}
+  

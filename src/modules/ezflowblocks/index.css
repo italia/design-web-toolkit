@@ -253,6 +253,14 @@
 
 /* modifiche omar */
 
+body .u-lg-size1of3 .u-flow-panels section a.thumbnail {
+    margin-bottom: 0 !important;
+}
+
+body .u-lg-size1of3 .u-flow-panels section {
+    padding-bottom: 0 !important;
+}
+
 body section.u-flow-panels {
     padding: 2.4rem !important;
     padding-bottom: 0rem !important;
@@ -271,9 +279,36 @@ body section.u-flow-panels .u-margin-bottom-xl {
     padding-left:13.4rem !important;
 }
 
+.Footer .u-flow:nth-child(3) {
+    font-size: 1.2rem;
+}
+
+.Footer p, .Footer h2 {
+  font-size: 1.6rem;
+}
+
+h2.Footer-blockTitle {
+    font-size: 1.8rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.Footer h2 .fa {
+    font-size: 2rem;
+    top: 2px;
+    position: relative;
+    margin-right: 0.5rem;
+}
+
 @media (--xs-viewport), (--sm-viewport) {
   body section.u-flow-panels .u-margin-bottom-xl {
       margin-left: 0.8rem !important;
       margin-right: 0.8rem !important;
+  }
+  .Footer .u-flow {
+      padding-left: 3rem!important;
+  }
+  body section.u-flow-panels {
+      padding: 1.2rem!important;
+      padding-bottom: 0!important;
   }
 }
