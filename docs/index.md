@@ -6,7 +6,7 @@ label: Introduzione
 
 ## <span class="u-text-h5">Implementazione di riferimento delle<br>"Linee guida di design per i servizi web della PA"</span>
 
-<img src="/assets/docs/hero-img.svg" width="100%" alt="design.italia.it" />
+<img src="/design-web-toolkit/assets/docs/hero-img.svg" width="100%" alt="design.italia.it" />
 
 L'implementazione di riferimento (web toolkit) delle "[Linee guida di design](http://design.italia.it)"
 fornisce componenti *open source* da incorporare nei siti web delle Pubbliche Amministrazioni (PA)

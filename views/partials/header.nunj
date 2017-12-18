@@ -15,7 +15,7 @@
 
     <div class="Header-title Grid-cell">
       <a href="" tabindex="-1" class="Header-logo u-margin-r-right">
-        <img src="/assets/docs/logo-it.svg" alt="">
+        <img src="/design-web-toolkit/assets/docs/logo-it.svg" alt="">
       </a>
       <div class="u-margin-r-left">
         <h1 class="Header-titleLink u-text-h1">
