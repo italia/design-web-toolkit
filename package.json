@@ -78,7 +78,7 @@
     "build:styleguide": "fractal build",
     "watch:styleguide": "fractal start --watch --sync --port 1310",
     "watch": "npm-run-all --parallel build:resources build:styleguidecss watch:css watch:js watch:styleguide",
-    "build": "npm-run-all build:resources build:css build:js build:styleguide",
+    "build": "npm-run-all build:resources build:css build:js build:styleguidecss build:styleguide",
     "deploy": "git subtree push --prefix styleguide origin gh-pages",
     "deploy:force": "git push origin `git subtree split --prefix styleguide master`:gh-pages --force"
   },
