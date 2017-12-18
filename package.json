@@ -70,7 +70,7 @@
   },
   "scripts": {
     "build:resources": "shx mkdir -p build/src && shx cp -r src/vendor build/ && shx cp -r src/icons build/src/icons && shx cp src/_preview.tmpl build/index.html",
-    "build:styleguidecss": "suitcss -m -c .postcss.js theme/index-styleguide.css build/build-styleguide.css",
+    "build:styleguidecss": "suitcss -m -c .postcss.js assets/index-styleguide.css build/build-styleguide.css",
     "build:css": "suitcss -m -c .postcss.js index.css build/build.css",
     "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
     "build:js": "cross-env WEBPACK_ENV=build webpack",

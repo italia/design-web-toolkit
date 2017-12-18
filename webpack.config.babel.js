@@ -53,7 +53,7 @@ plugins.push(new webpack.LoaderOptionsPlugin({
 var config = {
   entry: {
     IWT: __dirname + '/index.js',
-    styleguide: __dirname + '/theme/index-styleguide.js'
+    styleguide: __dirname + '/assets/index-styleguide.js'
   },
   devtool: 'source-map',
   output: {
@@ -84,7 +84,7 @@ var config = {
   resolve: {
     modules: [
       path.resolve('./src'),
-      path.resolve('./theme'),
+      path.resolve('./assets'),
       'node_modules'
     ]
   },
