@@ -16,6 +16,9 @@ if (process.env.DEPLOY === 'true') {
   fractal.web.set('static.mount', '/build')
 }
 
+//TODO fix
+fractal.web.set('static.mount', '/design-web-toolkit/build')
+
 fractal.web.set('builder.dest', __dirname + '/styleguide')
 
 fractal.components.set('default.preview', '@preview')
