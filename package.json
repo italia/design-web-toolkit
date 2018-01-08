@@ -24,9 +24,9 @@
     "throttle-debounce": "^1.0.1"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.0.11",
-    "@frctl/mandelbrot": "1.1.0",
-    "@frctl/nunjucks": "^1.0.1",
+    "@frctl/fractal": "^1.1.7",
+    "@frctl/mandelbrot": "^1.2.0",
+    "@frctl/nunjucks": "^1.0.3",
     "ava": "^0.24.0",
     "babel-core": "^6.9.1",
     "babel-eslint": "^7.1.1",
@@ -80,6 +80,7 @@
     "watch:styleguide": "fractal start --watch --sync --port 1310",
     "watch": "npm-run-all --parallel build:resources build:styleguidecss watch:css watch:js watch:styleguide",
     "build": "npm-run-all build:resources build:css build:styleguidecss build:js build:styleguide",
+    "start": "npm run build && npm run watch",
     "deploy": "npm run build && node deploy"
   },
   "author": "AgID",
