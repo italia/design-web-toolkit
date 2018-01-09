@@ -1,0 +1,22 @@
+{
+  "title": "Listing",
+  "context": {
+    "link": "#",
+    "colour": ""
+  },
+  "variants": [
+    {
+      "name": "blue",
+      "context": {
+        "colour": "u-color-70"
+      }
+    },
+    {
+      "name": "orange",
+      "context": {
+        "colour": "u-color-compl-80"
+      }
+    }
+  ]
+}
+

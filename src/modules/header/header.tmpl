@@ -2,10 +2,10 @@
 
 <header class="Header {% if isFixed %}Headroom--fixed js-Headroom{% endif %} u-hiddenPrint">
 
-  <div class="Header-banner {{ backgroundClass }}">
-    <div class="Header-owner Headroom-hideme {% if backgroundClass %}u-border-bottom-xxs{% endif %}">
+  <div class="Header-banner {{ backgroundClassName }}">
+    <div class="Header-owner Headroom-hideme {% if backgroundClassName %}u-border-bottom-xxs{% endif %}">
       <a href=""><span>{{ site.owner }}</span></a>
-      <div class="Header-languages {{ backgroundClass }}">
+      <div class="Header-languages {{ backgroundClassName }}">
           <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
             <span class="u-hiddenVisually">lingua attiva:</span>
             <span class="">ITA</span>
@@ -32,7 +32,7 @@
     </div>
   </div>
 
-  <div class="Header-navbar {{ backgroundClass }}">
+  <div class="Header-navbar {{ backgroundClassName }}">
     <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
       <div class="Header-logo Grid-cell" aria-hidden="true">
         <a href="" tabindex="-1">
@@ -50,10 +50,10 @@
       </div>
 
       <div class="Header-searchTrigger Grid-cell">
-        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search {{ backgroundClass }}"
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search {{ backgroundClassName }}"
           title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
         </button>
-        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden {{ backgroundClass }}"
+        <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden {{ backgroundClassName }}"
           title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
         </button>
       </div>
@@ -87,9 +87,9 @@
   {% if menu %}
   <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
     {% if clone %}
-      <nav class="Megamenu Megamenu--default js-megamenu {{ backgroundClass }}" data-rel=".Offcanvas .Treeview"></nav>
+      <nav class="Megamenu Megamenu--default js-megamenu {{ backgroundClassName }}" data-rel=".Offcanvas .Treeview"></nav>
     {% elif megamenu %}
-      {% render '@megamenu', { backgroundClass: backgroundClass } %}
+      {% render '@megamenu', { backgroundClassName: backgroundClassName } %}
     {% else %}
       <nav class="Megamenu Megamenu--default">
         <ul class="Megamenu-list">

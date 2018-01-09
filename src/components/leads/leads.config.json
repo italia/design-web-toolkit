@@ -1,7 +1,26 @@
 {
   "title": "Leads",
   "context": {
-    "title": "Utilità",
-    "leads": ["Amministrazione trasparente", "Albo pretorio", "Bandi e concorsi", "Accesso civico"]
-  }
+    "title": "",
+    "leads": [
+      "lead 1",
+      "lead 2",
+      "lead 3",
+      "lead 4"
+    ]
+  },
+  "variants": [
+    {
+      "name": "utilità",
+      "context": {
+        "title": "Utilità",
+        "leads": [
+          "Amministrazione trasparente",
+          "Albo pretorio",
+          "Bandi e concorsi",
+          "Accesso civico"
+        ]
+      }
+    }
+  ]
 }
