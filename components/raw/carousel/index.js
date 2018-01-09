@@ -37,10 +37,7 @@ const init = function() {
   }
 
   require(['owl.carousel', './a11y', 'owl.carousel/dist/assets/owl.carousel.css'], () => {
-    $(opts.owlPrev).click(() => $owl.trigger('prev.owl.carousel'))
-    $(opts.owlNext).click(() => $owl.trigger('next.owl.carousel'))
-
-    $owl.on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', (event) => {
+    $owl.on('changed.owl.carousel refreshed.owl.carousel', (event) => {
       if (!event.namespace) return
 
       var carousel = event.relatedTarget,
@@ -49,9 +46,21 @@ const init = function() {
 
       $(`${opts.owlNext}[aria-controls='${element.id}']`)
         .toggleClass('u-visibilityHidden', current === carousel.maximum())
+        .click(() => carousel.trigger('next.owl.carousel'))
 
       $(`${opts.owlPrev}[aria-controls='${element.id}']`)
         .toggleClass('u-visibilityHidden', current === carousel.minimum())
+    })
+
+    $owl.on('initialized.owl.carousel', (event) => {
+      if (!event.namespace) return
+      var element = event.target
+
+      $(`${opts.owlNext}[aria-controls='${element.id}']`)
+        .click(() => $(`#${element.id}`).trigger('next.owl.carousel'))
+
+      $(`${opts.owlPrev}[aria-controls='${element.id}']`)
+        .click(() => $(`#${element.id}`).trigger('prev.owl.carousel'))
     })
 
     const settings = $.extend({}, opts.owlOpts || {}, $owl.data('carouselOptions'))

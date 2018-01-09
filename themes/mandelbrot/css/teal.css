@@ -678,7 +678,6 @@ h6 {
 
 .AssetList-icon {
   -webkit-margin-end: 0.5rem;
-     -moz-margin-end: 0.5rem;
           margin-inline-end: 0.5rem; }
   [dir="ltr"] .AssetList-icon {
     margin-right: 0.5rem; }
@@ -1342,7 +1341,6 @@ h6 {
   padding-bottom: 0.5rem; }
   .Document-header .Status {
     -webkit-margin-start: auto;
-       -moz-margin-start: auto;
             margin-inline-start: auto; }
     [dir="ltr"] .Document-header .Status {
       margin-left: auto; }
@@ -1388,7 +1386,6 @@ h6 {
   .FileBrowser-selectWrapper .select2-container {
     font: normal 0.875rem/1.71429 "Open Sans", Helvetica, Arial, sans-serif;
     -webkit-margin-start: -0.25rem;
-       -moz-margin-start: -0.25rem;
             margin-inline-start: -0.25rem;
     margin-bottom: -1px;
     min-width: 15em; }
@@ -1490,7 +1487,6 @@ h6 {
   @media (max-width: 31.24em) {
     .Frame-body {
       -webkit-margin-end: 240px;
-         -moz-margin-end: 240px;
               margin-inline-end: 240px;
       -webkit-transform: translate3d(-240px, 0, 0);
               transform: translate3d(-240px, 0, 0);
@@ -1517,7 +1513,6 @@ h6 {
 
 .Frame-panel--sidebar {
   -webkit-border-end: 1px solid rgba(83, 83, 99, 0.25);
-     -moz-border-end: 1px solid rgba(83, 83, 99, 0.25);
           border-inline-end: 1px solid rgba(83, 83, 99, 0.25);
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
@@ -1552,7 +1547,6 @@ h6 {
 .Frame-handle {
   transition: all 0.15s ease-out;
   -webkit-margin-end: -0.625rem;
-     -moz-margin-end: -0.625rem;
           margin-inline-end: -0.625rem;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
@@ -1605,7 +1599,6 @@ h6 {
 
 .Header-button {
   -webkit-border-end: 1px solid rgba(0, 51, 51, 0.25);
-     -moz-border-end: 1px solid rgba(0, 51, 51, 0.25);
           border-inline-end: 1px solid rgba(0, 51, 51, 0.25);
   display: block;
   border: 0;
@@ -1688,7 +1681,6 @@ h6 {
 @media (min-width: 37.5em) {
   .Frame.is-closed .Meta-item {
     -webkit-padding-start: 10rem;
-       -moz-padding-start: 10rem;
             padding-inline-start: 10rem; }
     [dir="ltr"] .Frame.is-closed .Meta-item {
       padding-left: 10rem; }
@@ -1696,7 +1688,6 @@ h6 {
       padding-right: 10rem; }
   .Frame.is-closed .Meta-key {
     -webkit-margin-start: -10rem;
-       -moz-margin-start: -10rem;
             margin-inline-start: -10rem;
     width: 10rem;
     float: left; }
@@ -1708,7 +1699,6 @@ h6 {
 @media (min-width: 50em) {
   .Frame:not(.is-closed) .Meta-item {
     -webkit-padding-start: 10rem;
-       -moz-padding-start: 10rem;
             padding-inline-start: 10rem; }
     [dir="ltr"] .Frame:not(.is-closed) .Meta-item {
       padding-left: 10rem; }
@@ -1716,7 +1706,6 @@ h6 {
       padding-right: 10rem; }
   .Frame:not(.is-closed) .Meta-key {
     -webkit-margin-start: -10rem;
-       -moz-margin-start: -10rem;
             margin-inline-start: -10rem;
     width: 10rem;
     float: left; }
@@ -1771,10 +1760,8 @@ h6 {
           align-items: center; }
   .Pen-header .Status {
     -webkit-margin-start: auto;
-       -moz-margin-start: auto;
             margin-inline-start: auto;
     -webkit-padding-start: 0.5rem;
-       -moz-padding-start: 0.5rem;
             padding-inline-start: 0.5rem; }
     [dir="ltr"] .Pen-header .Status {
       margin-left: auto; }
@@ -1956,7 +1943,6 @@ h6 {
 
 .Preview-handle {
   -webkit-border-start: 1px solid rgba(83, 83, 99, 0.25);
-     -moz-border-start: 1px solid rgba(83, 83, 99, 0.25);
           border-inline-start: 1px solid rgba(83, 83, 99, 0.25);
   transition: all 0.15s ease-out;
   offset-inline-end: 0;
@@ -2002,7 +1988,6 @@ h6 {
   .Prose ul,
   .Prose ol {
     -webkit-padding-start: 1.25em;
-       -moz-padding-start: 1.25em;
             padding-inline-start: 1.25em; }
     [dir="ltr"] .Prose ul, [dir="ltr"]
     .Prose ol {
@@ -2045,10 +2030,8 @@ h6 {
     font-feature-settings: "c2sc"; }
   .Prose blockquote {
     -webkit-border-start: solid rgba(83, 83, 99, 0.25);
-       -moz-border-start: solid rgba(83, 83, 99, 0.25);
             border-inline-start: solid rgba(83, 83, 99, 0.25);
     -webkit-padding-start: 1em;
-       -moz-padding-start: 1em;
             padding-inline-start: 1em;
     opacity: 0.75; }
     [dir="ltr"] .Prose blockquote {
@@ -2062,6 +2045,8 @@ h6 {
   .Prose code,
   .Prose code pre {
     background-color: rgba(83, 83, 99, 0.075); }
+  .Prose img {
+    max-width: 100%; }
   .Prose p code,
   .Prose li code {
     padding: 0.125rem; }
@@ -2137,7 +2122,6 @@ h6 {
 
 .Status-dot + .Status-dot {
   -webkit-margin-start: 3px;
-     -moz-margin-start: 3px;
           margin-inline-start: 3px; }
   [dir="ltr"] .Status-dot + .Status-dot {
     margin-left: 3px; }
@@ -2156,7 +2140,6 @@ h6 {
 
 .Status-label + .Status-label {
   -webkit-margin-start: 0.25rem;
-     -moz-margin-start: 0.25rem;
           margin-inline-start: 0.25rem; }
   [dir="ltr"] .Status-label + .Status-label {
     margin-left: 0.25rem; }
@@ -2165,7 +2148,6 @@ h6 {
 
 .Status--labelled .Status-label {
   -webkit-margin-end: 0.75rem;
-     -moz-margin-end: 0.75rem;
           margin-inline-end: 0.75rem; }
   [dir="ltr"] .Status--labelled .Status-label {
     margin-right: 0.75rem; }
@@ -2180,7 +2162,6 @@ h6 {
   letter-spacing: 0.075em;
   text-transform: uppercase;
   -webkit-padding-start: 1rem;
-     -moz-padding-start: 1rem;
           padding-inline-start: 1rem;
   margin-bottom: 0.5rem;
   color: rgba(83, 83, 99, 0.75); }
@@ -2214,10 +2195,8 @@ h6 {
     background-color: rgba(83, 83, 99, 0.05); }
   .Tree-collectionLabel span {
     -webkit-padding-start: 0.75rem;
-       -moz-padding-start: 0.75rem;
             padding-inline-start: 0.75rem;
     -webkit-margin-start: -1.75rem;
-       -moz-margin-start: -1.75rem;
             margin-inline-start: -1.75rem;
     display: block;
     position: relative; }
@@ -2266,7 +2245,6 @@ h6 {
     background-color: rgba(83, 83, 99, 0.075); }
   .Tree-entityLink .Status {
     -webkit-margin-start: 0.25rem;
-       -moz-margin-start: 0.25rem;
             margin-inline-start: 0.25rem; }
     [dir="ltr"] .Tree-entityLink .Status {
       margin-left: 0.25rem; }
@@ -2276,7 +2254,6 @@ h6 {
 .Tree-depth-1 .Tree-collectionLabel,
 .Tree-depth-1 .Tree-entityLink {
   -webkit-padding-start: 1rem;
-     -moz-padding-start: 1rem;
           padding-inline-start: 1rem; }
   [dir="ltr"] .Tree-depth-1 .Tree-collectionLabel, [dir="ltr"]
   .Tree-depth-1 .Tree-entityLink {
@@ -2288,7 +2265,6 @@ h6 {
 .Tree-depth-2 .Tree-collectionLabel,
 .Tree-depth-2 .Tree-entityLink {
   -webkit-padding-start: 2rem;
-     -moz-padding-start: 2rem;
           padding-inline-start: 2rem; }
   [dir="ltr"] .Tree-depth-2 .Tree-collectionLabel, [dir="ltr"]
   .Tree-depth-2 .Tree-entityLink {
@@ -2300,7 +2276,6 @@ h6 {
 .Tree-depth-3 .Tree-collectionLabel,
 .Tree-depth-3 .Tree-entityLink {
   -webkit-padding-start: 3rem;
-     -moz-padding-start: 3rem;
           padding-inline-start: 3rem; }
   [dir="ltr"] .Tree-depth-3 .Tree-collectionLabel, [dir="ltr"]
   .Tree-depth-3 .Tree-entityLink {
@@ -2312,7 +2287,6 @@ h6 {
 .Tree-depth-4 .Tree-collectionLabel,
 .Tree-depth-4 .Tree-entityLink {
   -webkit-padding-start: 4rem;
-     -moz-padding-start: 4rem;
           padding-inline-start: 4rem; }
   [dir="ltr"] .Tree-depth-4 .Tree-collectionLabel, [dir="ltr"]
   .Tree-depth-4 .Tree-entityLink {
@@ -2324,7 +2298,6 @@ h6 {
 .Tree-depth-5 .Tree-collectionLabel,
 .Tree-depth-5 .Tree-entityLink {
   -webkit-padding-start: 5rem;
-     -moz-padding-start: 5rem;
           padding-inline-start: 5rem; }
   [dir="ltr"] .Tree-depth-5 .Tree-collectionLabel, [dir="ltr"]
   .Tree-depth-5 .Tree-entityLink {
@@ -2336,7 +2309,6 @@ h6 {
 .Tree-depth-6 .Tree-collectionLabel,
 .Tree-depth-6 .Tree-entityLink {
   -webkit-padding-start: 6rem;
-     -moz-padding-start: 6rem;
           padding-inline-start: 6rem; }
   [dir="ltr"] .Tree-depth-6 .Tree-collectionLabel, [dir="ltr"]
   .Tree-depth-6 .Tree-entityLink {
@@ -2348,7 +2320,6 @@ h6 {
 .Tree-depth-7 .Tree-collectionLabel,
 .Tree-depth-7 .Tree-entityLink {
   -webkit-padding-start: 7rem;
-     -moz-padding-start: 7rem;
           padding-inline-start: 7rem; }
   [dir="ltr"] .Tree-depth-7 .Tree-collectionLabel, [dir="ltr"]
   .Tree-depth-7 .Tree-entityLink {
@@ -2360,7 +2331,6 @@ h6 {
 .Tree-depth-8 .Tree-collectionLabel,
 .Tree-depth-8 .Tree-entityLink {
   -webkit-padding-start: 8rem;
-     -moz-padding-start: 8rem;
           padding-inline-start: 8rem; }
   [dir="ltr"] .Tree-depth-8 .Tree-collectionLabel, [dir="ltr"]
   .Tree-depth-8 .Tree-entityLink {

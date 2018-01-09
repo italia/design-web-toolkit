@@ -1,0 +1,33 @@
+/* @define Forward; */
+
+:root {
+  --Forward-width: 3em;
+  --Forward-color: var(--Color-grey-20);
+}
+
+.Forward[aria-hidden] {
+  @extend .u-linkClean;
+  @extend .u-text-r-xxl;
+  @extend .u-textCenter;
+
+  color: var(--Forward-color);
+}
+
+.Forward--floating {
+  @extend .u-block;
+  @extend .u-sizeFull;
+  @extend .u-textCenter;
+}
+
+.Forward--absolute {
+  @extend .u-posAbsolute;
+  @extend .u-zindex-30;
+
+  bottom: 0;
+  left: 50%;
+}
+
+.Forward span {
+  opacity: 0.9;
+  width: var(--Forward-width);
+}
