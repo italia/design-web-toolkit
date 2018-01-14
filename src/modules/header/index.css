@@ -112,6 +112,18 @@
   }
 }
 
+.Header-logo img {
+  @extend .u-alignMiddle;
+
+  height: 4.5rem;
+  width: 4.5rem;
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+}
+
 /* Title link
   ========================================== */
 
