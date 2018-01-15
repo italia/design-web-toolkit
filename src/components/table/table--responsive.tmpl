@@ -9,12 +9,8 @@
     </tr>
   </thead>
   <tbody>
-    {% for i in [1, 2, 3, 4] %}
-    <tr>
-      {% for j in [1, 2, 3, 4] %}
-        <td>{{ __SHORT_TEXTS__[j+i] }}</td>
-      {% endfor %}
-    </tr>
-    {% endfor %}
+    {% for i in [1, 2, 3, 4] %}<tr>
+      {% for j in [1, 2, 3, 4] %}<td>{{ __SHORT_TEXTS__[j+i] }}</td>{% endfor %}
+    </tr>{% endfor %}
   </tbody>
 </table>
