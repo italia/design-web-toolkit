@@ -1,6 +1,8 @@
 import $ from 'jquery'
 
-$(document).ready(function() {
+$(function() {
+
+  // input[type="radio"],  input[type="checkbox"]
   $(':radio, :checkbox').on('change', function() {
     if ($(this).is(':radio')) {
       $(this).closest('.Form-field').find('.Form-label.is-checked').removeClass('is-checked')
@@ -12,11 +14,9 @@ $(document).ready(function() {
     }
   })
 
-  // Gestione elemento INPUT FILE
-  var fileInput = document.querySelector('.Form-input-file')
-  var fileName = document.querySelector('.Form-file-name')
-  fileInput.addEventListener('change', function() {  
-    fileName.innerHTML = this.value
+  // input[type="file"]
+  $(':file').on('change', function(e){
+    $(this).siblings('.Form-file--name').text(e.currentTarget.value)
   })
 
 })
