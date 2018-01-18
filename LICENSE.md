@@ -1,69 +1,116 @@
-# Licenza
+CC0 1.0 Universal
 
-## Componenti distribuiti con il toolkit
+Statement of Purpose
 
-Vengono di seguito elencati i componenti distribuiti con il toolkit
-che hanno una propria licenza diversa da CC0.
+The laws of most jurisdictions throughout the world automatically confer
+exclusive Copyright and Related Rights (defined below) upon the creator and
+subsequent owner(s) (each and all, an "owner") of an original work of
+authorship and/or a database (each, a "Work").
 
-- [src/vendor/jquery.min.js](https://jquery.com/) (c) jQuery Foundation, licenza MIT
-- [src/vendor/modernizr.js](https://modernizr.com/) licenza MIT
-- [src/vendor/polyfill.min.js](https://github.com/inexorabletash/polyfill) Unlicense (Public Domain)
-- [src/vendor/rem.min.js](https://github.com/chuckcarpenter/REM-unit-polyfill) (c)) Chuck Carpenter, licenza MIT
-- [src/vendor/respond.min.js](https://github.com/scottjehl/Respond) (c) Scott Jehl, licenza MIT
-- [src/vendor/selectivzr.js](http://selectivizr.com/) (c) Keith Clark, licenza MIT
+Certain owners wish to permanently relinquish those rights to a Work for the
+purpose of contributing to a commons of creative, cultural and scientific
+works ("Commons") that the public can reliably and without fear of later
+claims of infringement build upon, modify, incorporate in other works, reuse
+and redistribute as freely as possible in any form whatsoever and for any
+purposes, including without limitation commercial purposes. These owners may
+contribute to the Commons to promote the ideal of a free culture and the
+further production of creative, cultural and scientific works, or to gain
+reputation or greater distribution for their Work in part through the use and
+efforts of others.
 
-- [src/modules/megamenu/megamenu.js](https://adobe-accessibility.github.io/Accessible-Mega-Menu/) (c) Adobe Systems Incorporated, licenza Apache 2.0
-- [src/src/modules/carousel/a11y.js](https://github.com/rtrvrtg/owlcarousel2-a11ylayer) (c) 2015 Geoffrey Roberts, licenza MIT
-- [src/modules/cookiebar/cookiebar.js](https://github.com/carlwoodhouse/jquery.cookieBar) (c) 2016 Carl Woodhouse, licenza MIT
-- [src/components/form/index.css](https://github.com/giuseppeg/suitcss-components-form) (c) Giuseppe Gurgone, licenza MIT
-- [src/components/table/index.css](https://github.com/trunkclub/suitcss-components-table) (c) Trunk Club, licenza MIT
-- [src/print/index.css](https://github.com/h5bp/html5-boilerplate) (c) HTML5 Boilerplate, licenza MIT
+For these and/or other purposes and motivations, and without any expectation
+of additional consideration or compensation, the person associating CC0 with a
+Work (the "Affirmer"), to the extent that he or she is an owner of Copyright
+and Related Rights in the Work, voluntarily elects to apply CC0 to the Work
+and publicly distribute the Work under its terms, with knowledge of his or her
+Copyright and Related Rights in the Work and the meaning and intended legal
+effect of CC0 on those rights.
 
-Tramite gli [archivi npm](https://www.npmjs.com/):
+1. Copyright and Related Rights. A Work made available under CC0 may be
+protected by copyright and related or neighboring rights ("Copyright and
+Related Rights"). Copyright and Related Rights include, but are not limited
+to, the following:
 
-- [frend](https://frend.co/) (c) 2015 Adam Duncan, Tom Digby, licenza MIT
-- [suitcss](http://suitcss.github.io/) (c) Nicolas Gallagher, licenza MIT
-- [headroom.js](http://wicky.nillia.ms/headroom.js/) (c) 2013 Nick Williams, licenza MIT
-- [jquery.cookie](https://www.npmjs.com/package/jquery.cookie) (c) Klaus Hartl, licenza MIT
-- [owl carousel](http://www.owlcarousel.owlgraphic.com/) (c) Owl (David Deutsch), licenza MIT
-- [throttle-debounce](https://github.com/niksy/throttle-debounce) (c) Ivan Nikolić, Ben Alman, licenza MIT
-- [salvattore](http://salvattore.com/) (c) 2013-2014 Rolando Murillo and Giorgio Leveroni, licenza MIT
-- [piakaday](https://github.com/dbushell/Pikaday) (c) 2014 David Bushell BSD, licenza MIT
-- [tablesaw](https://github.com/filamentgroup/tablesaw) (c) 2013 Filament Group, licenza MIT
-- [popper.js](https://popper.js.org/) (c) 2016 Federico Zivolo and contributors, licenza MIT
+  i. the right to reproduce, adapt, distribute, perform, display, communicate,
+  and translate a Work;
 
-### Dipendenze per la fase di compilazione
+  ii. moral rights retained by the original author(s) and/or performer(s);
 
-- compilatore per i fogli di stile [PostCSS](https://github.com/postcss/postcss) (c) Andrey Sitnik, licenza MIT
-- generatore della styleguide [Fractal](https://github.com/frctl/fractal) (c) Mark Perkins, licenza MIT
-- bundler per i moduli javascript [Webpack](https://webpack.github.io/) (c) Tobias Koppers, licenza MIT
-- transpiler per moduli javascript [Babel](https://babeljs.io/), (c) 2014-2016 Sebastian McKenzie, licenza MIT
-- linter per javascript [ESLint](http://eslint.org/), (c) jQuery Foundation and other contributors, licenza MIT
-- linter per fogli di stile CSS [Stylelint](http://stylelint.io/) (c) Maxime Thirouin, David Clark & Richard Hallows, licenza MIT
+  iii. publicity and privacy rights pertaining to a person's image or likeness
+  depicted in a Work;
 
-### Testo completo Licenza MIT
+  iv. rights protecting against unfair competition in regards to a Work,
+  subject to the limitations in paragraph 4(a), below;
 
-The MIT License (MIT)
+  v. rights protecting the extraction, dissemination, use and reuse of data in
+  a Work;
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  vi. database rights (such as those arising under Directive 96/9/EC of the
+  European Parliament and of the Council of 11 March 1996 on the legal
+  protection of databases, and under any national implementation thereof,
+  including any amended or successor version of such directive); and
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  vii. other similar, equivalent or corresponding rights throughout the world
+  based on applicable law or treaty, and any national implementations thereof.
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+2. Waiver. To the greatest extent permitted by, but not in contravention of,
+applicable law, Affirmer hereby overtly, fully, permanently, irrevocably and
+unconditionally waives, abandons, and surrenders all of Affirmer's Copyright
+and Related Rights and associated claims and causes of action, whether now
+known or unknown (including existing as well as future claims and causes of
+action), in the Work (i) in all territories worldwide, (ii) for the maximum
+duration provided by applicable law or treaty (including future time
+extensions), (iii) in any current or future medium and for any number of
+copies, and (iv) for any purpose whatsoever, including without limitation
+commercial, advertising or promotional purposes (the "Waiver"). Affirmer makes
+the Waiver for the benefit of each member of the public at large and to the
+detriment of Affirmer's heirs and successors, fully intending that such Waiver
+shall not be subject to revocation, rescission, cancellation, termination, or
+any other legal or equitable action to disrupt the quiet enjoyment of the Work
+by the public as contemplated by Affirmer's express Statement of Purpose.
 
-## Salvo dove diversamente indicato, il software è distribuito con licenza CC0.
+3. Public License Fallback. Should any part of the Waiver for any reason be
+judged legally invalid or ineffective under applicable law, then the Waiver
+shall be preserved to the maximum extent permitted taking into account
+Affirmer's express Statement of Purpose. In addition, to the extent the Waiver
+is so judged Affirmer hereby grants to each affected person a royalty-free,
+non transferable, non sublicensable, non exclusive, irrevocable and
+unconditional license to exercise Affirmer's Copyright and Related Rights in
+the Work (i) in all territories worldwide, (ii) for the maximum duration
+provided by applicable law or treaty (including future time extensions), (iii)
+in any current or future medium and for any number of copies, and (iv) for any
+purpose whatsoever, including without limitation commercial, advertising or
+promotional purposes (the "License"). The License shall be deemed effective as
+of the date CC0 was applied by Affirmer to the Work. Should any part of the
+License for any reason be judged legally invalid or ineffective under
+applicable law, such partial invalidity or ineffectiveness shall not
+invalidate the remainder of the License, and in such case Affirmer hereby
+affirms that he or she will not (i) exercise any of his or her remaining
+Copyright and Related Rights in the Work or (ii) assert any associated claims
+and causes of action with respect to the Work, in either case contrary to
+Affirmer's express Statement of Purpose.
 
-### Creative Commons Zero v1.0 Universal
+4. Limitations and Disclaimers.
 
-Questa è una versione comprensibile ad esseri umani del Codice Legale
-([leggi il testo integrale](https://wiki.creativecommons.org/wiki/Publicdomain/zero/1.0/LegalText_(Italian))).
+  a. No trademark or patent rights held by Affirmer are waived, abandoned,
+  surrendered, licensed or otherwise affected by this document.
 
-#### Nessun Diritto d'Autore (No Copyright)
+  b. Affirmer offers the Work as-is and makes no representations or warranties
+  of any kind concerning the Work, express, implied, statutory or otherwise,
+  including without limitation warranties of title, merchantability, fitness
+  for a particular purpose, non infringement, or the absence of latent or
+  other defects, accuracy, or the present or absence of errors, whether or not
+  discoverable, all to the greatest extent permissible under applicable law.
 
-Questa licenza è accettabile per Opere Culturali Libere. La persona che ha associato un'opera con questo atto ha dedicato l'opera al pubblico dominio attraverso la rinuncia a tutti i suoi diritti sull'opera in tutto il mondo come previsti dalle leggi sul diritto d'autore, inclusi tutti i diritti connessi al diritto d'autore o affini, nella misura consentita dalla legge.
+  c. Affirmer disclaims responsibility for clearing rights of other persons
+  that may apply to the Work or any use thereof, including without limitation
+  any person's Copyright and Related Rights in the Work. Further, Affirmer
+  disclaims responsibility for obtaining any necessary consents, permissions
+  or other rights required for any use of the Work.
 
-Puoi copiare, modificare, distribuire ed utilizzare l'opera, anche per fini commerciali, senza chiedere alcun permesso. Guarda le Altre Informazioni di seguito.
+  d. Affirmer understands and acknowledges that Creative Commons is not a
+  party to this document and has no duty or obligation with respect to this
+  CC0 or use of the Work.
 
-#### Altre informazioni
-
-In nessun modo CC0 riguarda brevetti e marchi di alcuna persona, né sono pregiudicati i diritti che terzi possono vantare sull'opera o sul modo in cui essa viene utilizzata, come, per esempio, il diritto di sfruttamento pubblicitario e il diritto alla riservatezza. Se non diversamente specificato, la persona che ha identificato l'opera con questo atto non fornisce alcuna garanzia sull'opera stessa, e declina ogni responsabilità per tutti gli utilizzi dell'opera nella più ampia misura consentita dalla legge applicabile. Quando utilizzi o citi l'opera non puoi fare intendere alcun tipo di avallo, riconoscimento o sponsorizzazione da parte dell'autore o della persona che ha associato l'opera con questo atto.
+For more information, please see
+<http://creativecommons.org/publicdomain/zero/1.0/>
