@@ -11,4 +11,12 @@ $(document).ready(function() {
       $(this).closest('.Form-label').removeClass('is-checked')
     }
   })
+
+  // Gestione elemento INPUT FILE
+  var fileInput = document.querySelector('.Form-input-file')
+  var fileName = document.querySelector('.Form-file-name')
+  fileInput.addEventListener('change', function() {  
+    fileName.innerHTML = this.value
+  })
+
 })
