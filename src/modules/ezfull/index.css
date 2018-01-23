@@ -1,5 +1,9 @@
 /* eZ-Publish full page */
 
+body {
+  overflow-x: hidden !important;
+}
+
 .u-content-length {
   @extend .u-background-40;
   display: none;
