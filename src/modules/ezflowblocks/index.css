@@ -194,6 +194,27 @@
   }
 
 }
+/*
+ * HERO
+ */
+
+.u-flow-hero {
+  margin-left: -10rem;
+  margin-right: -10rem;
+}
+
+.u-flow-hero .flexslider {
+  border: none !important;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-flow-hero {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+}
 
 /*
  * TREEVIEW
