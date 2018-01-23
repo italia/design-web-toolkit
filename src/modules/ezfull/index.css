@@ -179,6 +179,10 @@ body .Header-titleLink a:hover {
   text-decoration: none !important;
 }
 
+.FullSearch .search-cell {
+    padding-left: 13.5rem !important;
+}
+
 @media (max-width: 992px) {
 
   body .Grid.FullSearch .Grid-cell:nth-child(1) {
