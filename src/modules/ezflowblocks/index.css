@@ -52,8 +52,8 @@
   @extend .u-background-grey-10;
   min-height: 10rem;
 
-  @media (--lg-viewport) {
-    min-height: 16rem;
+  @media (--lg-viewport), (--md-viewport) {
+    min-height: 20rem;
   }
 }
 
@@ -191,6 +191,27 @@
   .u-flow-links section {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+}
+/*
+ * HERO
+ */
+
+.u-flow-hero {
+  margin-left: -10rem;
+  margin-right: -10rem;
+}
+
+.u-flow-hero .flexslider {
+  border: none !important;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .u-flow-hero {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
 }

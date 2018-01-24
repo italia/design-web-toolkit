@@ -61,6 +61,14 @@
   width: 100%;
 }
 
+@media (--xs-viewport), (--sm-viewport) {
+
+  .Header-navbar {
+      @extend .u-background-grey-20;
+  }
+
+}
+
 /* Burger button
   ========================================== */
 
@@ -150,7 +158,7 @@
   @extend .u-text-lg-l;
   @extend .u-lineHeight-m;
   @extend .u-textWeight-700;
-  @extend .u-color-white;
+  @extend .u-color-80;
   @extend .u-textClean;
   @extend .u-padding-left-xxs;
   @extend .u-padding-right-xxs;
@@ -162,7 +170,7 @@
   @extend .u-text-md-m;
   @extend .u-text-lg-m;
   @extend .u-textWeight-400;
-  @extend .u-color-white;
+  @extend .u-color-text;
   @extend .u-textClean;
   @extend .u-hidden;
   @extend .u-md-inline;
@@ -175,6 +183,14 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-left: 1rem;
+}
+
+@media (--xs-viewport) {
+    
+  .Header-titleLink .Header-siteName {
+    display: none;
+  }
+
 }
 
 .Headroom--not-top .Header-titleLink .Header-siteName {
@@ -266,6 +282,18 @@
 
     max-width: 24em;
   }
+}
+
+.Header-search .search-input-background {
+  @extend .u-background-grey-20;
+}
+
+@media (--xs-viewport), (--sm-viewport) {
+
+  .Header-search .search-input-background {
+    @extend .u-background-white;
+  }
+
 }
 
 .Header-search.is-active {

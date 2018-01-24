@@ -97,7 +97,7 @@
   @extend .u-sizeFull;
   @extend .u-md-flexWrap;
   @extend .u-lg-flexWrap;
-
+  
   /* @extend .u-bottomShadow-xxl; */
 }
 
@@ -105,8 +105,8 @@
 
 .Megamenu-subnavGroup {
   @extend .u-sizeFull;
-  @extend .u-lg-size1of4;
-  @extend .u-md-size1of4;
+  @extend .u-lg-size2of12;
+  @extend .u-md-size2of12;
 }
 
 /* list item within sub-navigation panel */
@@ -143,9 +143,11 @@
 
 .Megamenu--default .Megamenu-subnavGroup > li > a {
   @extend .u-color-95;
-  @extend .u-text-r-s;
   @extend .u-textUppercase;
   @extend .u-textWeight-700;
+  
+  font-size: 1.6rem;
+  letter-spacing: 0.005em;
 }
 
 .Megamenu--default .Megamenu-item > a {
@@ -191,9 +193,9 @@
   @extend .u-color-white;
 }
 
-.Megamenu--default .Megamenu-subnavGroup:nth-child(3n+1) {
+.Megamenu--default .Megamenu-subnavGroup:nth-child(4n+1) {
   @extend .u-md-before2of12;
-  @extend .u-lg-before1of8;
+  @extend .u-lg-before2of12;
 }
 
 .Megamenu--default .Megamenu-subnavGroup > li {
