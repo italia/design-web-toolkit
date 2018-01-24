@@ -21,19 +21,7 @@
   content: none;
 }
 
-.Breadcrumb {
-  @extend .u-padding-left-xxxxl;
-  @extend .u-padding-right-xxxxl;
-  @extend .u-padding-top-xxl;
-  
-  margin-left: 3.2rem !important;
-}
-
-@media (--xs-viewport), (--sm-viewport) {
-  
-  .Breadcrumb {
-    @extend .u-padding-left-xs;
-    @extend .u-padding-right-xs;
-  }
-  
+body .breadcrumb {
+    margin-left: 13.2rem !important;
+    margin-top: 3rem;
 }

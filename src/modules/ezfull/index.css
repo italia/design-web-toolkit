@@ -1,5 +1,9 @@
 /* eZ-Publish full page */
 
+body {
+  overflow-x: hidden !important;
+}
+
 .u-content-length {
   @extend .u-background-40;
   display: none;
@@ -259,6 +263,10 @@ body .Header-titleLink a:hover {
 
 .Header-titleLink small:hover {
   text-decoration: none !important;
+}
+
+.FullSearch .search-cell {
+    padding-left: 13.5rem !important;
 }
 
 @media (max-width: 992px) {

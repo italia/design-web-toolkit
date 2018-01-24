@@ -32,5 +32,47 @@
   @extend .u-lg-size5of12;
   @extend .u-lg-before1of8;
 
-  opacity: 0.95;
+  opacity: 0;
+  background: transparent !important;
+  width: 50% !important;
+  margin-left: 12.5rem !important;
+  top: auto !important;
+  bottom: 15% !important;
+  transform: translateY(0) !important;
+  position: absolute !important;
+  z-index: 2;
+}
+
+body .Hero-content .u-text-h2 {
+    color: #fff !important;
+    font-size: 60px !important;
+    line-height: 1.2 !important;
+}
+
+body .Hero-content .u-text-p {
+    color: #fff !important;
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+    padding: 0 0 20px 0 !important;
+}
+
+body .Hero-content .Button--default {
+    background: #fff;
+    color: #006390 !important;
+    padding: 15px 40px;
+}
+
+body .Hero:before {
+    content: " ";
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.flex-control-nav {
+      bottom: 10px !important;
 }
