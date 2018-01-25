@@ -32,7 +32,7 @@
   @extend .u-lg-size5of12;
   @extend .u-lg-before1of8;
 
-  opacity: 0;
+  opacity: 1;
   background: transparent !important;
   width: 50% !important;
   margin-left: 12.5rem !important;
