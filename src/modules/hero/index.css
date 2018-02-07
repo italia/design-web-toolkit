@@ -80,3 +80,23 @@ body .Hero:before {
 .u-lg-size2of3 .flex-control-nav {
       bottom: -40px !important;
 }
+
+@media (max-width:768px) {
+.Hero-content {
+    width: 100%;
+    margin-left: 0 !important;
+    padding: 30px 60px !important;
+}
+body .Hero-content .u-text-h2 {
+    color: #fff!important;
+    font-size: 41px!important;
+    line-height: 1.2!important;
+}
+body .Hero-content .u-text-p {
+  color: #fff!important;
+  font-size: 25px!important;
+  line-height: 1.2!important;
+  padding: 0 0 20px!important;
+  margin-bottom: 0 !important;
+}
+}
