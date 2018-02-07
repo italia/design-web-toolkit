@@ -76,3 +76,7 @@ body .Hero:before {
 .flex-control-nav {
       bottom: 10px !important;
 }
+
+.u-lg-size2of3 .flex-control-nav {
+      bottom: -40px !important;
+}

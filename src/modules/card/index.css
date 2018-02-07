@@ -63,9 +63,10 @@
 /* modifiche omar */
 
 body .Card-content {
-    min-height: 16rem;
-    max-height: 16rem;
-    background-color: #eaebec !important;
+    min-height: 2rem;
+    max-height: 8rem;
+    background-color: #eaebec!important;
+    padding: 0.7em !important;
 }
 
 body .u-content .u-content-main .Card-content .Card-title {
@@ -76,4 +77,14 @@ body .Card {
     border-color: #eaebec !important;
     margin-top: 0.8rem !important;
     margin-bottom: 0.8rem !important;
+}
+
+body .Card-title a {
+    color: #006390 !important;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+}
+
+body h3.Card-title {
+    margin-bottom: 0 !important;
 }
