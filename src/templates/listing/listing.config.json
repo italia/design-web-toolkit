@@ -1,0 +1,20 @@
+{
+  "title": "Listing",
+  "context": {
+    "title": "sample title",
+    "text": "sample text",
+    "barClassName": "u-color-70",
+    "titleClassName": "u-color-60",
+    "textClassName": ""
+  },
+  "variants": [
+    {
+      "name": "orange",
+      "context": {
+        "barClassName": "u-color-compl-80",
+        "titleClassName": "u-color-compl-80",
+        "textClassName": "u-color-compl-80"
+      }
+    }
+  ]
+}

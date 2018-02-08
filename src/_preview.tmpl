@@ -59,7 +59,8 @@
 
   <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
     è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
-  <script>__PUBLIC_PATH__ = '{{ _config.web.static.mount }}/'</script>
+  {# path filter adds '.html' to the path, hence the need for replace #}
+  <script>__PUBLIC_PATH__ = '{{ '/build/' | path | replace(".html", "/") }}'</script>
 
   <script src="{{ '/build/IWT.min.js' | path }}"></script>
 

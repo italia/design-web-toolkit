@@ -103,6 +103,15 @@
   @extend .u-lg-size1of12;
 }
 
+.Header-logo,
+.Header-logo svg {
+  @extend .u-alignMiddle;
+  width: 3.2rem;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    width: 4.6rem;
+  }
+}
+
 .Header-logo img {
   @extend .u-alignMiddle;
 
