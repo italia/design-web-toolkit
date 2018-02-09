@@ -336,15 +336,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-21c89c5d153bde053be7c4cbb7cebef6">index.css</option>
+                <option value="file-ab659bc30366dc96f1fb49562e59a7b0">index.css</option>
                 
-                <option value="file-5247055bdf7f676cca1b7422eaf93276">index.js</option>
+                <option value="file-55a65dcbb145c294b158008b4fd93aa9">index.js</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-21c89c5d153bde053be7c4cbb7cebef6" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-ab659bc30366dc96f1fb49562e59a7b0" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -365,16 +365,16 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/datepicker/index.css</span>
+                    <span class="Meta-value">src\components\datepicker\index.css</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">35 Bytes</span>
+                    <span class="Meta-value">36 Bytes</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-5247055bdf7f676cca1b7422eaf93276" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-55a65dcbb145c294b158008b4fd93aa9" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -384,28 +384,57 @@
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>
 
-$(<span class="hljs-string">'.js-Datepicker'</span>).each(<span class="hljs-function">(<span class="hljs-params">i, el</span>) =&gt;</span> {
-  $(el).attr(<span class="hljs-string">'type'</span>, <span class="hljs-string">'text'</span>)
+<span class="hljs-keyword">const</span> datepickerInit = <span class="hljs-function"><span class="hljs-params">cb</span> =&gt;</span> <span class="hljs-built_in">require</span>([<span class="hljs-string">'moment'</span>, <span class="hljs-string">'pikaday'</span>], cb)
 
-  <span class="hljs-built_in">require</span>([<span class="hljs-string">'moment'</span>, <span class="hljs-string">'pikaday'</span>], (Moment, Pikaday) =&gt; {
-    <span class="hljs-keyword">new</span> Pikaday({
-      <span class="hljs-attr">field</span>: $(el)[<span class="hljs-number">0</span>],
-      <span class="hljs-attr">trigger</span>: $(<span class="hljs-string">`[aria-controls='<span class="hljs-subst">${el.id}</span>']`</span>)[<span class="hljs-number">0</span>],
-      <span class="hljs-attr">format</span>: <span class="hljs-string">'DD/MM/YYYY'</span>,
-      <span class="hljs-attr">i18n</span>: {
-        <span class="hljs-attr">previousMonth</span>: <span class="hljs-string">'Mese precedente'</span>,
-        <span class="hljs-attr">nextMonth</span>: <span class="hljs-string">'Mese successivo'</span>,
-        <span class="hljs-attr">months</span>: [<span class="hljs-string">'Gennaio'</span>, <span class="hljs-string">'Febbraio'</span>, <span class="hljs-string">'Marzo'</span>, <span class="hljs-string">'Aprile'</span>, <span class="hljs-string">'Maggio'</span>, <span class="hljs-string">'Giugno'</span>, <span class="hljs-string">'Luglio'</span>, <span class="hljs-string">'Agosto'</span>, <span class="hljs-string">'Settembre'</span>, <span class="hljs-string">'Ottobre'</span>, <span class="hljs-string">'Novembre'</span>, <span class="hljs-string">'Dicembre'</span>],
-        <span class="hljs-attr">weekdays</span>: [<span class="hljs-string">'Domenica'</span>, <span class="hljs-string">'Lunedì'</span>, <span class="hljs-string">'Martedì'</span>, <span class="hljs-string">'Mercoledì'</span>, <span class="hljs-string">'Giovedì'</span>, <span class="hljs-string">'Venerdì'</span>, <span class="hljs-string">'Sabato'</span>],
-        <span class="hljs-attr">weekdaysShort</span>: [<span class="hljs-string">'Dom'</span>, <span class="hljs-string">'Lun'</span>, <span class="hljs-string">'Mar'</span>, <span class="hljs-string">'Mer'</span>, <span class="hljs-string">'Gio'</span>, <span class="hljs-string">'Ven'</span>, <span class="hljs-string">'Sab'</span>]
-      },
-      <span class="hljs-comment">// onSelect: () =&gt; {</span>
-      <span class="hljs-comment">//   console.log(this.getMoment().format('Do MMMM YYYY'))</span>
-      <span class="hljs-comment">// }</span>
+<span class="hljs-keyword">const</span> dateInputs = $(<span class="hljs-string">'.js-Datepicker'</span>)
+
+<span class="hljs-keyword">if</span> (dateInputs.length &gt; <span class="hljs-number">0</span>) {
+  datepickerInit(<span class="hljs-function">(<span class="hljs-params">Moment, Pikaday</span>) =&gt;</span> {
+    dateInputs.each(<span class="hljs-function">(<span class="hljs-params">i, el</span>) =&gt;</span> {
+      $(el).attr(<span class="hljs-string">'type'</span>, <span class="hljs-string">'text'</span>)
+      <span class="hljs-keyword">new</span> Pikaday({
+        <span class="hljs-attr">field</span>: $(el)[<span class="hljs-number">0</span>],
+        <span class="hljs-attr">trigger</span>: $(<span class="hljs-string">`[aria-controls='<span class="hljs-subst">${el.id}</span>']`</span>)[<span class="hljs-number">0</span>],
+        <span class="hljs-attr">format</span>: <span class="hljs-string">'DD/MM/YYYY'</span>,
+        <span class="hljs-attr">i18n</span>: {
+          <span class="hljs-attr">previousMonth</span>: <span class="hljs-string">'Mese precedente'</span>,
+          <span class="hljs-attr">nextMonth</span>: <span class="hljs-string">'Mese successivo'</span>,
+          <span class="hljs-attr">months</span>: [
+            <span class="hljs-string">'Gennaio'</span>,
+            <span class="hljs-string">'Febbraio'</span>,
+            <span class="hljs-string">'Marzo'</span>,
+            <span class="hljs-string">'Aprile'</span>,
+            <span class="hljs-string">'Maggio'</span>,
+            <span class="hljs-string">'Giugno'</span>,
+            <span class="hljs-string">'Luglio'</span>,
+            <span class="hljs-string">'Agosto'</span>,
+            <span class="hljs-string">'Settembre'</span>,
+            <span class="hljs-string">'Ottobre'</span>,
+            <span class="hljs-string">'Novembre'</span>,
+            <span class="hljs-string">'Dicembre'</span>
+          ],
+          <span class="hljs-attr">weekdays</span>: [
+            <span class="hljs-string">'Domenica'</span>,
+            <span class="hljs-string">'Lunedì'</span>,
+            <span class="hljs-string">'Martedì'</span>,
+            <span class="hljs-string">'Mercoledì'</span>,
+            <span class="hljs-string">'Giovedì'</span>,
+            <span class="hljs-string">'Venerdì'</span>,
+            <span class="hljs-string">'Sabato'</span>
+          ],
+          <span class="hljs-attr">weekdaysShort</span>: [<span class="hljs-string">'Dom'</span>, <span class="hljs-string">'Lun'</span>, <span class="hljs-string">'Mar'</span>, <span class="hljs-string">'Mer'</span>, <span class="hljs-string">'Gio'</span>, <span class="hljs-string">'Ven'</span>, <span class="hljs-string">'Sab'</span>]
+        }
+        <span class="hljs-comment">// onSelect: () =&gt; {</span>
+        <span class="hljs-comment">//   console.log(this.getMoment().format('Do MMMM YYYY'))</span>
+        <span class="hljs-comment">// }</span>
+      })
     })
   })
+}
 
-})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  datepickerInit
+}
 </pre>
                             </code>
                             
@@ -418,11 +447,11 @@ $(<span class="hljs-string">'.js-Datepicker'</span>).each(<span class="hljs-func
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/datepicker/index.js</span>
+                    <span class="Meta-value">src\components\datepicker\index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">813 Bytes</span>
+                    <span class="Meta-value">1.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -463,7 +492,7 @@ $(<span class="hljs-string">'.js-Datepicker'</span>).each(<span class="hljs-func
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/datepicker/datepicker.tmpl</span>
+            <span class="Meta-value">src\components\datepicker\datepicker.tmpl</span>
         </li>
         
         
