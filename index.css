@@ -91,7 +91,8 @@ body {
   /*  outline: 3px solid var(--it-Base-focus-color); */
 }
 
-.c-hideFocus :focus {
+.c-hideFocus :focus,
+.c-hideFocus:focus {
   box-shadow: none !important;
   outline: none !important;
 }
