@@ -58,14 +58,14 @@ const listToMegaMenu = ($ul, _opts) => {
     .removeAttr(attrs)
     .end()
     .find('> li')
-    .each(function(i, li) {
+    .each(function (i, li) {
       $(li)
-        .addClass(function() {
+        .addClass(function () {
           let className = $(this).data('megamenu-class')
           return className ? className : _opts.topNavItemClass
         })
         .find('[data-megamenu-class]')
-        .addClass(function() {
+        .addClass(function () {
           return $(this).data('megamenu-class')
         })
         .end()
@@ -83,7 +83,7 @@ const listToMegaMenu = ($ul, _opts) => {
     .end()
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('.js-megamenu').each((i, el) => {
     const $el = $(el)
     const rel = $(el).data('rel')
@@ -111,7 +111,7 @@ $(document).ready(function() {
       $(opts.closeButtonTemplate).appendTo($('.' + opts.panelClass))
     }
 
-    $('.' + opts.closeButtonClass).on('click', function() {
+    $('.' + opts.closeButtonClass).on('click', function () {
       const e = $.Event('keydown')
       e.which = 27
       $('.' + opts.menuClass).trigger(e)
@@ -120,11 +120,13 @@ $(document).ready(function() {
   })
 
   $('.' + opts.topNavItemClass + ' > a').each((i, el) => {
+    const $el = $(el)
+    const placement = $el.closest('.js-megamenu').attr('data-placement')
     const $target = $(el).parent().find('.' + opts.panelClass).not(el)
 
     if (el && $target.length > 0) {
       new Popper(el, $target, {
-        placement: 'bottom',
+        placement: placement || 'bottom',
         modifiers: {
           arrow: {
             element: '.Dropdown-arrow'
