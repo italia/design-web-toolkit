@@ -7,8 +7,6 @@ Il Web Toolkit contiene fogli di stile CSS, componenti Javascript accessibili e 
 
 L'obiettivo del progetto è convogliare, in un framework condiviso di sviluppo, i contributi della community di [Designers Italia](https://designers.italia.it/), l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli sviluppatori.
 
-**L'utilizzo in produzione è consigliato a partire dalla release della versione stabile (1.0)**
-
 ## Documentazione
 
 La documentazione dettagliata per chi vuole utilizzare il Web Toolkit o contribuire allo sviluppo è disponibile online:
