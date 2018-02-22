@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../build/build-styleguide.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Come iniziare | Web Toolkit Styleguide</title>
+<title>Come iniziare | Web Toolkit</title>
 
 </head>
 <body class="t-Pac">
@@ -58,7 +58,7 @@
       </a>
       <div class="u-margin-r-left">
         <h1 class="Header-titleLink">
-          <a href="../index.html" data-pjax>Web Toolkit Styleguide</a>
+          <a href="../index.html" data-pjax>Web Toolkit</a>
         </h1>
       </div>
     </div>
@@ -175,9 +175,7 @@
 
     
     
-    <h2 id="la-styleguide">La styleguide</h2>
-<p>I componenti grafici del toolkit sono presentati tramite una styleguide;
-puoi visualizzarli navigando dal menu “Componenti”:</p>
+    <p>I componenti grafici del toolkit sono presentati tramite la styleguide inclusa in questo sito web, accessibile attraverso il menu alla tua sinistra:</p>
 <ul>
 <li><strong>Components</strong>: elementi autonomi dell’interfaccia (form, tipografia, tabelle, griglia responsive, …)  </li>
 <li><strong>Modules</strong>: elementi che dipendono da altri componenti (header, footer, …)</li>
@@ -185,75 +183,124 @@ puoi visualizzarli navigando dal menu “Componenti”:</p>
 <li><strong>Utils</strong>: componenti di utilità (margini, padding, colori, tipografia, …)</li>
 <li><strong>Icons</strong>: icone personalizzate in formato SVG, PNG e icon font</li>
 </ul>
-<p>Nella pagina che illustra ogni elemento è visibile in calce il template HTML che lo realizza.</p>
-<h2 id="utilizzo-del-toolkit">Utilizzo del toolkit</h2>
-<p>Per utilizzare i componenti all’interno del tuo sito è necessario<br>
-includere, oltre l’HTML, i fogli di stile (CSS) e i Javascript (JS) necessari.</p>
-<p>Puoi scaricare i file CSS / JS già compilati da incorporare in ogni pagina:<br>
-<strong><a href="https://github.com/italia/design-web-toolkit/tree/gh-pages/build">CSS / Javascript già compilati</a></strong></p>
-<p>In produzione vanno inclusi i file:</p>
+<p>Nella pagina che illustra ogni singolo elemento è visibile in calce il template HTML che lo realizza.</p>
+<h2 id="come-includere-il-web-toolkit">Come includere il Web Toolkit</h2>
+<p>Per utilizzare i componenti all’interno del tuo sito è necessario includere, oltre all’HTML, i fogli di stile (CSS) e i Javascript (JS) necessari.</p>
+<p>Puoi scaricare i file CSS e i file Javascript già compilati da incorporare in ogni pagina:</p>
+<p><a role="button" href="https://github.com/italia/design-web-toolkit/tree/gh-pages/build" class="Button Button--default Button--shadow Button--round u-text-r-xs">Scarica il Web Toolkit</a></p>
+<p>Facendo riferimento al <strong><a href="https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/build/index.html">template HTML di esempio</a></strong>, vanno inclusi nella tua pagina HTML i file:</p>
 <code><pre>.
 ├── build<span class="hljs-selector-class">.css</span>
 ├── vendor/modernizr<span class="hljs-selector-class">.js</span>
 ├── vendor/jquery<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.js</span>
-└── IWT<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.js</span></pre></code><p>facendo riferimento al
-<strong><a href="https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/build/index.html">template generico di esempio</a></strong></p>
-<h3 id="file-javascript-di-componenti-opzionali">File Javascript di componenti opzionali</h3>
-<p>I file contenuti nella directory <code>build</code> del tipo</p>
+└── IWT<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.js</span></pre></code><p>Gli altri file contenuti nella directory <code>build</code> sono Javascript associati a componenti dell’interfaccia opzionali:</p>
 <code><pre>├── <span class="hljs-number">0</span><span class="hljs-selector-class">.chunk</span><span class="hljs-selector-class">.js</span>
 ├── <span class="hljs-number">1</span><span class="hljs-selector-class">.chunk</span><span class="hljs-selector-class">.js</span>
-├── ...</pre></code><p>sono Javascript associati a componenti dell’interfaccia opzionali; vengono <strong>caricati automaticamente</strong> a runtime
-solo dove il componente (es. carousel) viene effettivamente utilizzato nell’HTML.</p>
-<p>Questo meccanismo permette di incorporare esempi e widget Javascript complessi nel toolkit, senza che ciò impatti sulla dimensione
-finale del file <code>IWT.min.js</code> riducendo quindi i tempi di download e parsing durante il rendering delle pagine web.</p>
-<p>Tail file devono esser presenti nella stessa directory dove è contenuto il file <code>IWT.min.js</code>;
-se il percorso di questa directory differisce da quello di default (<code>/build</code>), è necessario specificare
-il percorso alternativo, <strong>relativo alla radice del sito web</strong>, come visibile nel
-<strong><a href="https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/build/index.html">template generico di esempio</a></strong>:</p>
+├── ...</pre></code><p>Tali file vengono <strong>caricati automaticamente</strong> a runtime solo dove il componente (es. carousel) viene effettivamente utilizzato nell’HTML.</p>
+<p>Questo meccanismo permette di incorporare esempi e widget Javascript complessi nel toolkit, senza che ciò abbia impatto sulla dimensione finale del file <code>IWT.min.js</code>, riducendo quindi i tempi di scaricamento e parsing durante il rendering delle pagine.</p>
+<p>Tali file devono essere comunque presenti nella stessa directory dove è situato il file <code>IWT.min.js</code>. Se il percorso di questa directory differisce da quello di default (<code>/build</code>), è necessario specificare il percorso alternativo, <strong>relativo alla radice del sito web</strong>.</p>
 <code><pre><span class="hljs-comment">&lt;!-- sostituire questo percorso con quello
      degli assets javascript nel proprio sito web:
      è il percorso, relativo alla webroot, della directory
      che contiene il file IWT.min.js e i file *.chunk.js --&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">__PUBLIC_PATH__ = <span class="hljs-string">'/assets/javascript/'</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></code><h3 id="altri-contenuti-della-directory-build">Altri contenuti della directory build</h3>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">__PUBLIC_PATH__ = <span class="hljs-string">'/assets/javascript/'</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></code><h4 id="altri-file">Altri file</h4>
+<p>Oltre ai file CSS e Javascript già descritti, nella cartella <code>build</code> sono presenti i seguenti file:</p>
 <ul>
 <li><code>src/icons</code>: icone personalizzate in formato SVG, PNG e <em>icon font</em>.</li>
 <li><code>*.map</code>: file utili solo in fase di debug e possono essere omessi in produzione.</li>
-<li><code>*.styleguide.*</code>: file che definiscono l’aspetto della styleguide e possono essere omessi in produzione.</li>
+<li><code>*.styleguide.*</code>: file che definiscono gli stili dell’interfaccia della styleguide che stai consultando e non devono essere inclusi in produzione.</li>
 </ul>
-<h2 id="dipendenze-esterne">Dipendenze esterne</h2>
-<p>Nella directory <code>vendor</code> si trovano i <em>polyfill</em> che è consigliabile includere per garantire la compatibilità
-con i browser obsoleti (IE8/9):</p>
+<h4 id="dipendenze-esterne">Dipendenze esterne</h4>
+<p>Nella directory <code>vendor</code> si trovano i <em>polyfill</em> che è necessario includere soltanto se si desidera garantire la compatibilità con browser obsoleti (IE8/9):</p>
 <code><pre>.
 ├── polyfill<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.js</span>
 ├── rem<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.js</span>
 ├── respond<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.js</span>
 ├── selectivizr<span class="hljs-selector-class">.js</span>
-└── slice.js</pre></code><p>La directory <code>vendor</code> Contiene inoltre la <a href="https://jquery.com/">libreria jQuery</a>,
-una dipendenza necessaria per alcuni componenti del toolkit.</p>
-<p>Molti CMS o framework CSS vengono già distribuiti con una loro versione della libreria <code>jQuery</code>;
-in questo caso non è necessario utilizzare quella del toolkit, a patto che venga inclusa
-nell’HTML prima del file <code>IWT.min.js</code>.</p>
-<p>I componenti del toolkit lavorano con versioni di jQuery &gt;= 1.11.x, tuttavia
-se vuoi garantire la compatibilità con IE8 ricorda di utilizzare versioni
-di jQuery inferiori alla 2.x.</p>
+└── slice.js</pre></code><p>La directory <code>vendor</code> Contiene inoltre la <a href="https://jquery.com/">libreria jQuery</a>, una dipendenza necessaria per alcuni componenti del toolkit.</p>
+<p>Molti CMS o framework CSS vengono già distribuiti con una loro versione della libreria <code>jQuery</code>; in questo caso non è necessario utilizzare quella del toolkit, a patto che venga inclusa nell’HTML prima del file <code>IWT.min.js</code>.</p>
 <h2 id="personalizzare-lo-stile-css-">Personalizzare lo stile (CSS)</h2>
-<p>Se vuoi personalizzare gli elementi grafici (es. colori)
-utilizzando i file già compilati dovrai necessariamente <strong>sovrascrivere</strong> le classi del CSS di base (<code>build.css</code>)
-includendo un tuo ulteriore CSS contenente le direttive <em>custom</em>;
-questa metodologia non è ottimale se le personalizzazioni
-sono particolarmente complesse: in questo caso è consigliato
-seguire la procedura descritta in “<a href="sviluppare">Utilizzare l’ambiente di sviluppo</a>“
-agendo direttamente sul codice sorgente dei fogli di stile del toolkit
-per realizzare una <em>build</em> personalizzata, prima di integrare il CSS nel layout.</p>
-<p><a href="tecnologie">Tecnologie utilizzate</a></p>
+<p>Se vuoi personalizzare gli elementi grafici (es. colori) utilizzando i file già compilati dovrai necessariamente <strong>sovrascrivere</strong> le classi del CSS di base (<code>build.css</code>) includendo un tuo ulteriore CSS contenente le direttive <em>custom</em>.</p>
+<p>Questa metodologia non è ottimale se le personalizzazioni sono particolarmente complesse: in questo caso è consigliato seguire la procedura descritta alla sezione “<a href="sviluppare">Utilizzare l’ambiente di sviluppo</a>“ agendo direttamente sul codice sorgente dei fogli di stile del toolkit per realizzare una <em>build</em> personalizzata, prima di integrare il CSS nel layout.</p>
+<h2 id="tecnologie-utilizzate">Tecnologie utilizzate</h2>
+<p>Il toolkit è basato su alcuni software open source che svolgono
+diversi task e di cui è bene possedere una conoscenza anche sommaria
+prima di procedere a modificare i sorgenti.</p>
+<h4 id="npm">npm</h4>
+<p>Il tool <a href="https://docs.npmjs.com/getting-started/what-is-npm">npm</a> è utilizzato per
+la gestione delle dipendenze necessarie sia alla fase di sviluppo / compilazione
+che per i componenti Javascript integrati lato client (nel browser).</p>
+<p>La lista delle librerie utilizzate è visibile nel file <a href="https://github.com/italia/design-web-toolkit/blob/master/package.json"><code>package.json</code></a>.</p>
+<p>Prima di incorporare nuove dipendenze è buona pratica verificare se siano già presenti nel
+<a href="https://www.npmjs.com/">registro npm</a> in modo da poterle integrare più agevolmente.</p>
+<h4 id="suit-css">SUIT CSS</h4>
+<p><a href="http://suitcss.github.io/">SUIT CSS</a> è una metodologia di implementazione
+per i fogli di stile CSS a corredo di un insieme di utilità che ne facilitano
+la manutenzione.</p>
+<p>Relativamente al toolkit:</p>
+<ol>
+<li><p>vengono adottate le
+<a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">convenzioni di nomenclatura</a>
+SUIT CSS nella stesura del codice dei fogli di stile</p>
+</li>
+<li><p>vengono utilizzate le <a href="https://github.com/suitcss/suit/blob/master/doc/utilities.md">classi di utilità</a>
+fornite dalla libreria. Si consiglia in particolare di far riferimento alla
+<a href="https://github.com/suitcss/utils">documentazione online delle classi SUIT CSS</a>
+con particolare riferimento alla <a href="https://github.com/suitcss/components-grid/">griglia responsive</a></p>
+</li>
+<li><p>viene utilizzato il <a href="https://github.com/suitcss/preprocessor">preprocessore CSS di SUIT</a>
+integrato da un insieme di plugin <em>ad-hoc</em>; è possibile visualizzare la lista dei plugin
+nel file <a href="https://github.com/italia/design-web-toolkit/blob/master/.postcss.js"><code>.postcss.js</code></a>
+contenuto nella directory radice del <em>repository</em>.</p>
+</li>
+</ol>
+<p>È possibile consultare l’
+<a href="https://github.com/suitcss/suit/blob/master/doc/api.md">elenco e la documentazione di tutte le classi SUIT CSS</a>.</p>
+<h4 id="postcss">PostCSS</h4>
+<p><a href="http://postcss.org/">PostCSS</a> è un tool che permette di manipolare i CSS tramite javascript.</p>
+<p>I fogli di stile del toolkit vengono trasformati tramite PostCSS: in questo modo è possibile
+usufruire di alcuni costrutti non standard che agevolano il mantenimento del codice.
+Puoi far riferimento alla documentazione online dei singoli plugin:</p>
+<ul>
+<li><a href="https://github.com/postcss/postcss-devtools">postcss-devtools</a></li>
+<li><a href="https://github.com/TrySound/postcss-easy-import">postcss-easy-import</a></li>
+<li><a href="https://github.com/postcss/postcss-custom-properties">postcss-custom-properties</a></li>
+<li><a href="https://github.com/postcss/postcss-custom-media">postcss-custom-media</a></li>
+<li><a href="https://github.com/jonathantneal/postcss-nesting">postcss-nesting</a></li>
+<li><a href="https://github.com/travco/postcss-extend">postcss-extend</a></li>
+<li><a href="https://github.com/postcss/postcss-color-function">postcss-color-function</a></li>
+<li><a href="https://github.com/TrySound/postcss-inline-svg">postcss-inline-svg</a></li>
+<li><a href="https://github.com/assetsjs/postcss-assets">postcss-assets</a></li>
+<li><a href="https://github.com/postcss/postcss-url">postcss-url</a></li>
+<li><a href="https://github.com/postcss/postcss-calc">postcss-calc</a></li>
+<li><a href="https://github.com/postcss/autoprefixer">autoprefixer</a></li>
+<li><a href="https://github.com/axa-ch/postcss-pseudoelements">postcss-pseudoelements</a></li>
+<li><a href="https://github.com/luisrudge/postcss-flexbugs-fixes">postcss-flexbugs-fixes</a></li>
+<li><a href="https://github.com/postcss/postcss-reporter">postcss-reporter</a></li>
+</ul>
+<h4 id="verifica-della-sintassi">Verifica della sintassi</h4>
+<p>Per il <em>linting</em> (ovvero, l’analisi del codice in cerca di errori e/o costrutti con sintassi errata)
+vengono utlizzati i due tool:</p>
+<ul>
+<li><a href="http://stylelint.io/">stylelint</a> - per il codice CSS</li>
+<li><a href="http://eslint.org/">ESLint</a> - per il codice Javascript</li>
+</ul>
+<h4 id="generazione-della-styleguide-e-dei-moduli-css-js">Generazione della styleguide e dei moduli CSS / JS</h4>
+<p>Questi due tool sono attivati dagli <em>script npm</em> secondo le modalità descritte
+nel capitolo successivo: <a href="sviluppare">“Utilizzare l’ambiente di sviluppo”</a>:</p>
+<ul>
+<li><a href="http://fractal.build">fractal</a> è utilizzato per generare la <em>styleguide</em> (l’elenco navigabile dei componenti grafici)</li>
+<li><a href="https://webpack.github.io">webpack</a> organizza i moduli CSS / Javascript in modo da poter esser utilizzati in produzione</li>
+</ul>
+<p>Non è necessario conoscere il funzionamento di questi software che vengono qui citati per completezza.</p>
+<p><a href="sviluppare">Utilizzare l’ambiente di sviluppo</a></p>
 <div class="Footer">
 
   <ul class="Footer-links">
-    <li><a href="https://github.com/italia/design-web-toolkit">GitHub</a></li>
-    <li><a href="//design.italia.it/">Linee guida design</a></li>
-    <li><a href="//design.italia.it/privacy-policy/">Privacy</a></li>
-    <li><a href="//design.italia.it/note-legali/">Note legali</a></li>
+    <li><a href="https://design-italia.readthedocs.io/it/stable/index.html">Linee guida design</a></li>
+    <li><a href="https://designers.italia.it/privacy-policy/">Privacy</a></li>
+    <li><a href="https://designers.italia.it/note-legali/">Note legali</a></li>
   </ul>
 
 </div>
@@ -310,16 +357,6 @@ per realizzare una <em>build</em> personalizzata, prima di integrare il CSS nel 
         
         
         <li class="" data-role="item">
-            <a href="tecnologie.html" data-pjax>
-                <span>Tecnologie utilizzate</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
             <a href="sviluppare.html" data-pjax>
                 <span>Utilizzare l'ambiente di sviluppo</span>
                 
@@ -332,26 +369,6 @@ per realizzare una <em>build</em> personalizzata, prima di integrare il CSS nel 
         <li class="" data-role="item">
             <a href="moduli.html" data-pjax>
                 <span>Creare o modificare un modulo</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
-            <a href="compatibilita.html" data-pjax>
-                <span>Compatibilità con altri framework</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
-            <a href="struttura.html" data-pjax>
-                <span>Struttura del file system</span>
                 
             </a>
         </li>

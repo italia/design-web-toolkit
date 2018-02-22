@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../build/build-styleguide.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Utilizzare l'ambiente di sviluppo | Web Toolkit Styleguide</title>
+<title>Utilizzare l'ambiente di sviluppo | Web Toolkit</title>
 
 </head>
 <body class="t-Pac">
@@ -58,7 +58,7 @@
       </a>
       <div class="u-margin-r-left">
         <h1 class="Header-titleLink">
-          <a href="../index.html" data-pjax>Web Toolkit Styleguide</a>
+          <a href="../index.html" data-pjax>Web Toolkit</a>
         </h1>
       </div>
     </div>
@@ -175,45 +175,105 @@
 
     
     
-    <p>La procedura qui descritta è rivolta sia a chi vuole <strong>contribuire allo sviluppo del toolkit</strong>
-sia a chi vuole <strong>utilizzare il CSS personalizzato all’interno di un sito web</strong>
-per realizzare quindi un “tema” grafico specifico.</p>
-<h4 id="ottenere-i-sorgenti">Ottenere i sorgenti</h4>
-<p>Per ottenere i sorgenti puoi scaricare direttamente
-l’<a href="https://github.com/italia/design-web-toolkit/releases/">archivio compresso</a> da GitHub.</p>
-<p>Un’alternativa migliore è il download dei sorgenti tramite
-il software di versionamento <a href="https://git-scm.com/">Git</a>;
-dopo aver <a href="https://git-scm.com/book/it/v1/Per-Iniziare-Installare-Git">installato Git</a>
-puoi effettuare una copia locale del repository digitando da linea di comando:</p>
-<code><pre>git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/italia/design-web-toolkit</pre></code><p>L’utilizzo di Git permette di mantenere i sorgenti sincronizzati
-con i nuovi rilasci del toolkit nonché di contribuire al progetto
-proponendo di incorporare le proprie modifiche nella linea principale di sviluppo, vedi anche:</p>
+    <h4 id="premessa">Premessa</h4>
+<p>La procedura di seguito descritta è rivolta ad utenti con esperienza, in particolare:</p>
+<ul>
+<li>chi desidera <strong>contribuire allo sviluppo del Web Toolkit</strong></li>
+<li>chi vuole <strong>personalizzare il CSS</strong> per realizzare quindi un “tema” grafico specifico</li>
+</ul>
+<h2 id="ottenere-il-codice-sorgente">Ottenere il codice sorgente</h2>
+<p>Per ottenere il codice sorgente puoi fare riferimento al <a href="https://github.com/italia/design-web-toolkit">repository</a> del Web Toolkit su GitHub, utilizzando il software di versionamento <a href="https://git-scm.com/">Git</a>.</p>
+<p>Dopo aver <a href="https://git-scm.com/book/it/v1/Per-Iniziare-Installare-Git">installato Git</a>, puoi effettuare una copia locale del repository digitando da linea di comando:</p>
+<code><pre>git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/italia/design-web-toolkit</pre></code><p>L’utilizzo di Git permette di mantenere il codice sorgente sincronizzato con i nuovi rilasci del toolkit, nonché di contribuire al progetto proponendo di incorporare le proprie modifiche nella linea principale di sviluppo, vedi anche:</p>
 <ul>
 <li><a href="https://help.github.com/articles/fork-a-repo/">Fork a repo</a></li>
 <li><a href="https://help.github.com/articles/using-pull-requests/">Using pull request</a></li>
 </ul>
-<h4 id="installare-il-software-richiesto">Installare il software richiesto</h4>
-<p>Per poter compilare i sorgenti (CSS / JS) è richiesta l’installazione di <a href="https://nodejs.org">Node.js / npm</a>.</p>
-<p>Terminata l’installazione, la seguente sequenza di comandi eseguiti all’interno della directory del toolkit
-completerà il download e l’installazione delle librerie richieste per lo sviluppo:</p>
-<code><pre>npm <span class="hljs-keyword">install</span></pre></code><h4 id="compilare-i-sorgenti">Compilare i sorgenti</h4>
-<p>Dopo aver eseguito il comando</p>
-<code><pre>npm <span class="hljs-keyword">run</span><span class="bash"> build</span></pre></code><p>la directory <code>build</code> conterrà i file CSS e Javascript compilati.</p>
-<h4 id="modificare-i-sorgenti">Modificare i sorgenti</h4>
-<p>Per poter visualizzare la styleguide in locale (i template HTML con i diversi componenti grafici)
-puoi sostituire come ultimo passaggio (al posto di <code>npm run build</code>) il comando</p>
-<code><pre>npm <span class="hljs-keyword">run</span><span class="bash"> watch</span></pre></code><p>e visitare con il browser la pagina <a href="http://localhost:1310">http://localhost:1310</a></p>
-<p>A questo punto puoi modificare i sorgenti: qualsiasi modifica effettuata ai fogli di stile CSS,
-Javascript e/o template HTML mentre <code>npm run watch</code> rimane in esecuzione risulterà immediatamente visibile
-nel browser <strong>senza dover ricaricare manualmente la pagina o lanciare il comando di build</strong>.</p>
-<p><a href="moduli">Creare o modificare un modulo</a></p>
+<h4 id="installare-le-dipendenze">Installare le dipendenze</h4>
+<p>Per poter compilare il codice sorgente (CSS / JS) è richiesta l’installazione di <a href="https://nodejs.org">Node.js / npm</a>.</p>
+<p>Terminata l’installazione, la seguente sequenza di comandi eseguiti all’interno della directory del Web Toolkit completerà il download e l’installazione delle librerie richieste per lo sviluppo:</p>
+<code><pre>npm <span class="hljs-keyword">install</span></pre></code><h4 id="compilazione-del-codice-sorgente">Compilazione del codice sorgente</h4>
+<p>Per compilare il codice sorgente e quindi generare i file minificati nella cartella <code>build</code>, è necessario eseguire il comando seguente:</p>
+<code><pre>npm <span class="hljs-keyword">run</span><span class="bash"> build</span></pre></code><h4 id="modificare-il-codice-sorgente">Modificare il codice sorgente</h4>
+<p>Per poter visualizzare la styleguide in locale (la documentazione che stai leggendo, con tutti i diversi componenti grafici) puoi sostituire come ultimo passaggio (al posto di <code>npm run build</code>) il comando seguente e visitare con il browser la pagina <a href="http://localhost:1310">http://localhost:1310</a>:</p>
+<code><pre>npm <span class="hljs-keyword">run</span><span class="bash"> watch</span></pre></code><p>A questo punto è possibile iniziare a modificare i file sorgente: qualsiasi modifica effettuata ai fogli di stile CSS, Javascript e/o template HTML risulterà immediatamente visibile nel browser, senza dover ricaricare manualmente la pagina o lanciare di nuovo il comando di build, grazie allo script <code>npm run watch</code> che controlla le modifiche e lancia il processo di build automaticamente.</p>
+<h2 id="struttura-delle-cartelle">Struttura delle cartelle</h2>
+<p>La directory <code>src</code> contiene le sotto-directory:</p>
+<ul>
+<li><strong>components</strong> - CSS/Javascript/HTML dei componenti autonomi dell’interfaccia</li>
+<li><strong>modules</strong> - CSS/Javascript/HTML degli elementi complessi dell’interfaccia</li>
+<li><strong>fonts</strong> - il font Titillium Web e le direttive CSS @font-face relative</li>
+<li><strong>icons</strong> - le icone svg / png utilizzate nel progetto e il CSS per l’<em>icon font</em></li>
+<li><strong>legacy</strong> - CSS per supportare i vecchi browser</li>
+<li><strong>scripts</strong> - Javscript “globali” (non legati a una particolare componente dell’interfaccia)</li>
+<li><strong>templates</strong> - template HTML per elementi del layout e pagine web</li>
+<li><strong>themes</strong> - il foglio di stile con le personalizzazioni per uno specifico tema (es. colore principale dal quale viene declinata l’intera <em>palette</em>)</li>
+<li><strong>utils</strong> - CSS contenenti classi di utilità generica (margini, padding, tipografia responsive, …)</li>
+<li><strong>vendor</strong> - Javascript da incorporare per garantire un minimo grado di compatibilità con i browser obsoleti (IE8/9)</li>
+</ul>
+<code><pre>.
+├── docs
+└── src
+    ├── components
+    │   └── ...
+    ├── fonts
+    │   └── titillium
+    │       └── font
+    ├── icons
+    │   └── ita
+    │       ├── font
+    │       ├── png
+    │       └── svg
+    ├── legacy
+    ├── modules
+    │   └── ...
+    ├── scripts
+    ├── templates
+    │   ├── layout
+    │   ├── pages
+    │   └── ...
+    ├── themes
+    │   └── pac
+    ├── utils
+    │   ├── borders
+    │   ├── colors
+    │   └── ...
+    └── vendor</pre></code><h2 id="compatibilit-con-altri-framework">Compatibilità con altri framework</h2>
+<p>Se utilizzi già un framework CSS all’interno del tuo progetto, ma hai intenzione di incorporare <em>anche</em> uno o più moduli del toolkit, puoi creare una <em>build</em> personalizzata volta a risolvere eventuali incompatibilità che potrebbero incorrere includendo il CSS/JS <em>as-is</em>.</p>
+<p><strong>Scegliendo selettivamente i singoli moduli prima della fase di compilazione</strong> puoi escludere dall’output il codice di quelli che non vuoi utilizzare.</p>
+<p>In questo modo si evitano eventuali conflitti con i plugin Javascript e i nomi delle classi CSS e al contempo si riduce la dimensione dei file che il browser deve scaricare per visualizzare le pagine.</p>
+<h4 id="configurazione-dinamica-dei-moduli-da-includere-o-escludere">Configurazione dinamica dei moduli da includere o escludere</h4>
+<p>Per escludere dai CSS/JS generati alcuni moduli e/o includerne selettivamente altri edita il file <a href="https://github.com/italia/design-web-toolkit/blob/master/config.js">config.js</a> contenuto nella directory radice del toolkit prima di effettuare una nuova <code>build</code>.</p>
+<p>Il file contiene due liste di <strong>espressioni regolari</strong>:</p>
+<ul>
+<li>l’array <code>CONFIG.excludes</code> è la <em>blacklist</em> con i percorsi su filesystem dei moduli da escludere</li>
+<li>l’array <code>CONFIG.includes</code> è la <em>whitelist</em> con i percorsi su filesystem dei moduli da includere</li>
+</ul>
+<h4 id="esempi-di-utilizzo-di-blacklist-whitelist">Esempi di utilizzo di blacklist / whitelist</h4>
+<p>Per includere solo il modulo che realizza la visualizzazione ad albero (<em>treeview</em>) più uno stile di base per la lista dei link (<em>linklist</em>) utilizza la seguente whitelist:</p>
+<code><pre>CONFIG<span class="hljs-selector-class">.includes</span> = [
+    <span class="hljs-string">'(.*)theme(.*)'</span>,
+    <span class="hljs-string">'(.*)utils(.*)'</span>,
+    <span class="hljs-string">'(.*)linklist(.*)'</span>,
+    <span class="hljs-string">'(.*)treeview(.*)'</span>,
+]</pre></code><p>Per escludere i moduli che non verrebbero utilizzati (es. carousel, spid), puoi utilizzare una blacklist:</p>
+<code><pre>CONFIG<span class="hljs-selector-class">.excludes</span> = [
+    <span class="hljs-string">'(.*)carousel(.*)'</span>,
+    <span class="hljs-string">'(.*)spid(.*)'</span>,
+]</pre></code><p>Per escludere <code>normalize.css</code> (perché eventualmente già incluso dal tuo framework):</p>
+<code><pre>CONFIG<span class="hljs-selector-class">.excludes</span> = [
+    <span class="hljs-string">'(.*)normalize(.*)'</span>,
+]</pre></code><p>Dopo aver modificato il file <code>config.js</code>, l’output conterrà esclusivamente il CSS e il Javascript dei moduli che hai configurato. Ciò si può ottenere eseguendo i seguenti comandi:</p>
+<ul>
+<li>eseguendo <code>npm run build:css</code> si ottiene in output il file <code>build/build.css</code></li>
+<li>eseguendo <code>npm run build:js</code> si ottiene in output il file <code>build/IWT.min.js</code></li>
+</ul>
 <div class="Footer">
 
   <ul class="Footer-links">
-    <li><a href="https://github.com/italia/design-web-toolkit">GitHub</a></li>
-    <li><a href="//design.italia.it/">Linee guida design</a></li>
-    <li><a href="//design.italia.it/privacy-policy/">Privacy</a></li>
-    <li><a href="//design.italia.it/note-legali/">Note legali</a></li>
+    <li><a href="https://design-italia.readthedocs.io/it/stable/index.html">Linee guida design</a></li>
+    <li><a href="https://designers.italia.it/privacy-policy/">Privacy</a></li>
+    <li><a href="https://designers.italia.it/note-legali/">Note legali</a></li>
   </ul>
 
 </div>
@@ -269,16 +329,6 @@ nel browser <strong>senza dover ricaricare manualmente la pagina o lanciare il c
     
         
         
-        <li class="" data-role="item">
-            <a href="tecnologie.html" data-pjax>
-                <span>Tecnologie utilizzate</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
         <li class=" is-current" data-state="current" data-role="item">
             <a href="" data-pjax>
                 <span>Utilizzare l'ambiente di sviluppo</span>
@@ -292,26 +342,6 @@ nel browser <strong>senza dover ricaricare manualmente la pagina o lanciare il c
         <li class="" data-role="item">
             <a href="moduli.html" data-pjax>
                 <span>Creare o modificare un modulo</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
-            <a href="compatibilita.html" data-pjax>
-                <span>Compatibilità con altri framework</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
-            <a href="struttura.html" data-pjax>
-                <span>Struttura del file system</span>
                 
             </a>
         </li>

@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../build/build-styleguide.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Creare o modificare un modulo | Web Toolkit Styleguide</title>
+<title>Creare o modificare un modulo | Web Toolkit</title>
 
 </head>
 <body class="t-Pac">
@@ -58,7 +58,7 @@
       </a>
       <div class="u-margin-r-left">
         <h1 class="Header-titleLink">
-          <a href="../index.html" data-pjax>Web Toolkit Styleguide</a>
+          <a href="../index.html" data-pjax>Web Toolkit</a>
         </h1>
       </div>
     </div>
@@ -175,32 +175,26 @@
 
     
     
-    <p>Gli elementi dell’interfaccia (moduli), contenuti nella directory <code>src/modules</code> sono costituiti da:</p>
-<ol>
-<li>uno (o più) file <strong>CSS</strong></li>
-<li>uno (o più) file <strong>Javascript</strong></li>
-<li>uno (o più) snippet HTML di esempio (file *.tmpl)</li>
-</ol>
-<p>All’interno della directory di ogni modulo deve esser presente almeno una tra queste tre componenti.</p>
-<p>Il <strong>codice CSS</strong> va collocato in un file:</p>
-<p>  <code>src/modules/&lt;nome-modulo&gt;/index.css</code></p>
-<p>e verrà automaticamente incluso nella build.</p>
-<p>Il <strong>codice Javascript</strong> va collocato in un file</p>
-<p>  <code>src/modules/&lt;nome-modulo&gt;/index.js</code></p>
-<p>e verrà automaticamente incluso nella build.</p>
-<p>Puoi includere ulteriori <strong>assets</strong> (CSS / JS / immagini) contenuti nella directory del modulo
-utilizzando le direttive <code>require</code> (nell’index.js) o <code>@import</code> (nell’ index.css).</p>
+    <p>Gli elementi dell’interfaccia (moduli), contenuti nella directory <code>src/modules</code> sono di norma costituiti da:</p>
+<ul>
+<li>uno o più file <strong>CSS</strong></li>
+<li>uno o più file <strong>Javascript</strong></li>
+<li>uno o più snippet HTML di esempio (file *.tmpl)</li>
+</ul>
+<p>All’interno della directory di ogni modulo deve esser presente almeno una tra queste tre componenti. Per la creazione di un nuovo modulo, va mantenuta una nomenclatura e rispettate una serie di regole già esistenti:</p>
+<h4 id="css">CSS</h4>
+<p>Il <strong>codice CSS</strong> va collocato in un file di tipo <code>src/modules/&lt;nome-modulo&gt;/index.css</code> e verrà automaticamente incluso nella build.</p>
+<h4 id="javascript">Javascript</h4>
+<p>Il <strong>codice Javascript</strong> va collocato in un file di tipo <code>src/modules/&lt;nome-modulo&gt;/index.js</code> e verrà automaticamente incluso nella build.</p>
+<h4 id="asset-aggiuntivi">Asset aggiuntivi</h4>
+<p>Puoi includere ulteriori <strong>asset</strong> (CSS / JS / immagini) nella directory del modulo utilizzando le direttive <code>require</code> (nell’index.js) o <code>@import</code> (nell’ index.css).</p>
+<h4 id="nomi-dei-file">Nomi dei file</h4>
 <p>Il nome dei file con gli snippet HTML <em>deve</em> iniziare con quello del modulo, ad esempio:</p>
 <ul>
 <li><code>src/modules/&lt;nome-modulo&gt;/&lt;nome-modulo&gt;.tmpl</code></li>
 <li><code>src/modules/&lt;nome-modulo&gt;/&lt;nome-modulo&gt;--2.tmpl</code></li>
 </ul>
-<p>Negli snippet HTML è possibile utilizzare i costrutti del
-<a href="https://mozilla.github.io/nunjucks/">linguaggio di templating nunjucks</a>.</p>
-<p>I CSS vengono processati tramite PostCSS (e i relativi plugin presentati nella sezione <a href="tecnologie">Tecnologie</a>)
-al momento dell’esecuzione di <code>npm run build</code> (o <code>npm run build:css</code>).</p>
-<p>Nei file Javascript è possibile utilizzare la sintassi <a href="https://babeljs.io/docs/learn-es2015/">ECMAScript 2015</a>.</p>
-<h3 id="regole-generali-nello-sviluppo-di-nuovi-moduli">Regole generali nello sviluppo di nuovi moduli</h3>
+<h2 id="regole-generali">Regole generali</h2>
 <ul>
 <li>i moduli devono essere quanto più possibile indipendenti tra loro</li>
 <li>nei CSS si possono utilizzare le classi di utilità (quelle con prefisso <code>u-*</code>), ma <strong>non</strong> incorporare selettori di altri moduli</li>
@@ -208,14 +202,15 @@ al momento dell’esecuzione di <code>npm run build</code> (o <code>npm run buil
 <li>i componenti Javascript devono dichiarare tutte le loro dipendenze nell’<code>index.js</code> (es. tramite i costrutti <code>import</code> o <code>require</code>)</li>
 <li>è incoraggiato l’utilizzo del costrutto PostCSS <code>@extend</code>, ma <strong>esclusivamente</strong> per estendere le classi di utilità (<code>u-*</code>)</li>
 </ul>
-<p><a href="compatibilita">Compatibilita con altri framework</a></p>
+<p>Negli snippet HTML è possibile utilizzare i costrutti del <a href="https://mozilla.github.io/nunjucks/">linguaggio di templating nunjucks</a>.</p>
+<p>I CSS vengono processati tramite PostCSS (e i relativi plugin presentati nella sezione <a href="tecnologie">Tecnologie</a>) al momento dell’esecuzione di <code>npm run build</code>.</p>
+<p>Nei file Javascript è possibile utilizzare la sintassi <a href="https://babeljs.io/docs/learn-es2015/">ECMAScript 2015</a>.</p>
 <div class="Footer">
 
   <ul class="Footer-links">
-    <li><a href="https://github.com/italia/design-web-toolkit">GitHub</a></li>
-    <li><a href="//design.italia.it/">Linee guida design</a></li>
-    <li><a href="//design.italia.it/privacy-policy/">Privacy</a></li>
-    <li><a href="//design.italia.it/note-legali/">Note legali</a></li>
+    <li><a href="https://design-italia.readthedocs.io/it/stable/index.html">Linee guida design</a></li>
+    <li><a href="https://designers.italia.it/privacy-policy/">Privacy</a></li>
+    <li><a href="https://designers.italia.it/note-legali/">Note legali</a></li>
   </ul>
 
 </div>
@@ -272,16 +267,6 @@ al momento dell’esecuzione di <code>npm run build</code> (o <code>npm run buil
         
         
         <li class="" data-role="item">
-            <a href="tecnologie.html" data-pjax>
-                <span>Tecnologie utilizzate</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
             <a href="sviluppare.html" data-pjax>
                 <span>Utilizzare l'ambiente di sviluppo</span>
                 
@@ -294,26 +279,6 @@ al momento dell’esecuzione di <code>npm run build</code> (o <code>npm run buil
         <li class=" is-current" data-state="current" data-role="item">
             <a href="" data-pjax>
                 <span>Creare o modificare un modulo</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
-            <a href="compatibilita.html" data-pjax>
-                <span>Compatibilità con altri framework</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
-            <a href="struttura.html" data-pjax>
-                <span>Struttura del file system</span>
                 
             </a>
         </li>

@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../build/build-styleguide.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Realizzare un tema | Web Toolkit Styleguide</title>
+<title>Realizzare un tema | Web Toolkit</title>
 
 </head>
 <body class="t-Pac">
@@ -58,7 +58,7 @@
       </a>
       <div class="u-margin-r-left">
         <h1 class="Header-titleLink">
-          <a href="../index.html" data-pjax>Web Toolkit Styleguide</a>
+          <a href="../index.html" data-pjax>Web Toolkit</a>
         </h1>
       </div>
     </div>
@@ -189,7 +189,7 @@ sovrascrivere le variabili utilizzate all’interno del toolkit:</p>
   <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--Pac-font-family-sans);
 }</pre></code><p>Similmente è possibile sovrascrivere qualsiasi variabile contenuta nei moduli CSS,
 modificando ad esempio i colori che caratterizzano l’aspetto grafico dei vari elementi.</p>
-<h3 id="variabili-css">Variabili CSS</h3>
+<h4 id="variabili-css">Variabili CSS</h4>
 <p>Alcune variabili che è possibile sovrascrivere:</p>
 <code><pre>-<span class="ruby">-Color-focus
 </span>-<span class="ruby">-Color-primary
@@ -250,41 +250,33 @@ modificando ad esempio i colori che caratterizzano l’aspetto grafico dei vari 
 </span>
 -<span class="ruby">-Hero-height
 </span>-<span class="ruby">-Hero-background-img
-</span>  ...</pre></code><h3 id="personalizzare-i-colori">Personalizzare i colori</h3>
+</span>  ...</pre></code><h4 id="personalizzazione-dei-colori">Personalizzazione dei colori</h4>
 <p>La palette di colori è generata automaticamente a partire da un colore di base (<code>--Color-primary</code>) (<a href="https://github.com/italia/design-web-toolkit/blob/master/src/utils/colors/index.css"><code>src/utils/colors/index.css</code></a>)
-applicando tinte e tonalità secondo quanto descritto nel <a href="http://design.italia.it/linee-guida/colori/">relativo paragrafo delle Linee Guida</a>;
+applicando tinte e tonalità secondo quanto descritto nel <a href="https://design-italia.readthedocs.io/it/stable/doc/user-interface/stile.html#colori">relativo paragrafo delle Linee Guida</a>;
 in questo modo è sufficiente sovrascrivere la variabile <code>--Color-primary</code> per ottenere l’<strong>intera palette</strong>.</p>
-<p>Per applicare font e colori personalizzati bisogna:</p>
+<p>Per applicare font e colori personalizzati è necessario:</p>
 <ol>
 <li>modificare il file del tema <code>src/themes/pac/index.css</code> sovrascrivendo le variabili CSS</li>
-<li>effettuare una nuova <em>build</em> del toolkit tramite <code>npm run build</code> (vedi <a href="sviluppare">“Utilizzare l’ambiente di sviluppo”</a>)</li>
+<li>effettuare una nuova <em>build</em> del toolkit tramite <code>npm run build</code>, secondo quanto descritto nella sezione “<a href="sviluppare">Utilizzare l’ambiente di sviluppo</a>“</li>
 <li>incorporare i CSS generati (contenuti nella directory <code>build</code>) nei template HTML</li>
 </ol>
-<p>In alternativa, è possibile modificare i CSS <em>mentre</em> il comando <code>npm run watch</code> è in esecuzione
-(senza effetuare quindi una nuova build per ogni modifica); in questo caso
-è possibile visualizzare immediatamente il risultato delle modifiche accedendo con il browser
-all’indirizzo della styleguide (<code>http://localhost:1310</code>) e navigando tra i componenti dell’interfaccia.</p>
-<h3 id="nomenclatura-delle-regole-css-personalizzate">Nomenclatura delle regole CSS personalizzate</h3>
-<p>Tutte le modifiche che riguardano uno specifico <strong>tema</strong> vanno applicate assegnando al tag <code>body</code>
-la <strong>classe</strong> utilizzata in <code>src/themes/*/index.css</code> (nel caso specifico <code>t-Pac</code>, ma può esser scelta arbitrariamente).</p>
+<h4 id="nomenclatura-delle-regole-css-personalizzate">Nomenclatura delle regole CSS personalizzate</h4>
+<p>Tutte le modifiche che riguardano uno specifico <strong>tema</strong> vanno applicate assegnando al tag <code>body</code> la <strong>classe</strong> utilizzata in <code>src/themes/*/index.css</code> (nel caso specifico <code>t-Pac</code>, ma può esser scelta arbitrariamente).</p>
 <code><pre><span class="hljs-comment">&lt;!-- nel template HTML --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"t-Pac"</span>&gt;</span> ...</pre></code><p>Ciò significa che tale classe deve comparire <strong>necessariamente</strong> come prefisso nei selettori
-di ogni nuova regola CSS introdotta dal tema (e/o qualsiasi
-modifica ai moduli effettuata sovrascrivendo le regole originali).</p>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"t-Pac"</span>&gt;</span> ...</pre></code><p>Ciò significa che tale classe deve comparire <strong>necessariamente</strong> come prefisso nei selettori di ogni nuova regola CSS introdotta dal tema (e/o qualsiasi modifica ai moduli effettuata sovrascrivendo le regole originali).</p>
 <p>Ad esempio, all’interno di <code>src/themes/index.css</code>, per applicare un <code>padding</code> alla classe <code>.Alert</code> dovrai utilizzare:</p>
 <code><pre><span class="hljs-selector-class">.t-Pac</span> <span class="hljs-selector-class">.Alert</span> {
   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;
 }</pre></code><p>e <strong>non</strong> quindi:</p>
-<code><pre><span class="hljs-comment">/* No !!! Mai senza prefisso ! */</span>
+<code><pre><span class="hljs-comment">/* Mai senza prefisso! */</span>
 <span class="hljs-selector-class">.Alert</span> {
   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;
 }</pre></code><div class="Footer">
 
   <ul class="Footer-links">
-    <li><a href="https://github.com/italia/design-web-toolkit">GitHub</a></li>
-    <li><a href="//design.italia.it/">Linee guida design</a></li>
-    <li><a href="//design.italia.it/privacy-policy/">Privacy</a></li>
-    <li><a href="//design.italia.it/note-legali/">Note legali</a></li>
+    <li><a href="https://design-italia.readthedocs.io/it/stable/index.html">Linee guida design</a></li>
+    <li><a href="https://designers.italia.it/privacy-policy/">Privacy</a></li>
+    <li><a href="https://designers.italia.it/note-legali/">Note legali</a></li>
   </ul>
 
 </div>
@@ -341,16 +333,6 @@ modifica ai moduli effettuata sovrascrivendo le regole originali).</p>
         
         
         <li class="" data-role="item">
-            <a href="tecnologie.html" data-pjax>
-                <span>Tecnologie utilizzate</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
             <a href="sviluppare.html" data-pjax>
                 <span>Utilizzare l'ambiente di sviluppo</span>
                 
@@ -363,26 +345,6 @@ modifica ai moduli effettuata sovrascrivendo le regole originali).</p>
         <li class="" data-role="item">
             <a href="moduli.html" data-pjax>
                 <span>Creare o modificare un modulo</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
-            <a href="compatibilita.html" data-pjax>
-                <span>Compatibilità con altri framework</span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="" data-role="item">
-            <a href="struttura.html" data-pjax>
-                <span>Struttura del file system</span>
                 
             </a>
         </li>
