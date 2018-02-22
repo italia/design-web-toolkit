@@ -15,12 +15,6 @@ La documentazione dettagliata per chi vuole utilizzare il Web Toolkit o contribu
 
 Alla stessa pagina, sono consultabili componenti, moduli, classi di utilità, ed interi template per la costruzione di un'interfaccia web completa, accessibile e funzionale.
 
-Per ogni componente è riportato lo stato di maturità accanto al nome del componente stesso, in modo da poter decidere quali incorporare nel proprio sito web:
-
-- _prototype_: proposte di componenti, da discutere nella community
-- _wip (work in progress)_: componenti in attesa di esser validati
-- _ready_: componenti pronti per esser utilizzati in produzione
-
 ## Richieste di informazioni
 
 Se hai domande sull'utilizzo del Web Toolkit o ti serve aiuto per l'installazione puoi [aprire una nuova richiesta](https://github.com/italia/design-web-toolkit/issues/new).
