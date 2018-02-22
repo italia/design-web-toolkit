@@ -1,34 +1,31 @@
-# Linee guida di design per i servizi web della Pubblica Amministrazione
-## Implementazione di riferimento
+[![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7658JRJR/)
+[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
-L'implementazione di riferimento contiene fogli di stile CSS, componenti Javascript accessibili e snippet HTML
-riutilizzabili per lo sviluppo del *frontend* dei siti web della Pubblica Amministrazione
-conformi alle [linee guida di design](http://design.italia.it).
+# Web Toolkit
 
-L'obiettivo del progetto è convogliare, in un unico framework di sviluppo,
-i contributi della community di [design.italia.it](http://design.italia.it),
-l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli sviluppatori.
+Il Web Toolkit contiene fogli di stile CSS, componenti Javascript accessibili e snippet HTML riutilizzabili in linea con le [linee guida di design per i siti web della Pubblica Amministrazione](https://design-italia.readthedocs.io/it/stable/index.html).
+
+L'obiettivo del progetto è convogliare, in un framework condiviso di sviluppo, i contributi della community di [Designers Italia](https://designers.italia.it/), l'esperienza sul campo dei fornitori della PA e le competenze tecniche degli sviluppatori.
 
 **L'utilizzo in produzione è consigliato a partire dalla release della versione stabile (1.0)**
 
-### La documentazione per chi vuole utilizze il toolkit o contribuire allo sviluppo è disponibile online
+## Documentazione
 
-- [documentazione](https://italia.github.io/design-web-toolkit/)
-
-### È inoltre possibile consultare la roadmap
-
-- [roadmap](https://github.com/italia/design-web-toolkit/milestone/1)
-
-### I componenti dell'interfaccia sono presentati nella styleguide
+La documentazione dettagliata per chi vuole utilizzare il Web Toolkit o contribuire allo sviluppo è disponibile online:
 
 - https://italia.github.io/design-web-toolkit/
 
-Per ogni componente è riportato lo stato di maturità in modo da poter decidere
-quali incorporare nel proprio sito web:
+Alla stessa pagina, sono consultabili componenti, moduli, classi di utilità, ed interi template per la costruzione di un'interfaccia web completa, accessibile e funzionale.
 
-- prototype: proposte di componenti, da discutere nella community
-- wip (work in progress): componenti in attesa di esser validati
-- ready: componenti pronti per esser utilizzati in produzione
+Per ogni componente è riportato lo stato di maturità accanto al nome del componente stesso, in modo da poter decidere quali incorporare nel proprio sito web:
+
+- _prototype_: proposte di componenti, da discutere nella community
+- _wip (work in progress)_: componenti in attesa di esser validati
+- _ready_: componenti pronti per esser utilizzati in produzione
+
+## Richieste di informazioni
+
+Se hai domande sull'utilizzo del Web Toolkit o ti serve aiuto per l'installazione puoi [aprire una nuova richiesta](https://github.com/italia/design-web-toolkit/issues/new).
 
 # Licenze software dei componenti di terze parti
 

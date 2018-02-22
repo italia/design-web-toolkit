@@ -76,7 +76,7 @@ h4 {
 }
 
 .Document-title {
-  color: #000;
+  color: #5a6772;
   font-size: 2.5em;
   font-weight: 700;
   letter-spacing: 0;
@@ -94,6 +94,7 @@ h4 {
 }
 
 .Prose h2 {
+  color: #5a6772;
   font-size: 2em;
   margin-bottom: 0.5em;
 }
@@ -106,8 +107,12 @@ h4 {
   font-size: 1.6em;
 }
 
-.Prose code pre {
-  padding: 1em;
+.Prose code {
+  font-family: Hack, Consolas, Monaco, "Andale Mono", monospace !important;
+  font-size: 14px;
+  pre {
+    padding: 1em;
+  }
 }
 
 .Prose code pre,
@@ -132,9 +137,13 @@ h4 {
   }
 }
 
-.Prose a,
-.Prose a:visited {
+.Prose a:not([role=button]),
+.Prose a:not([role=button]):visited {
   color: #06c;
+}
+
+.Prose a[role=button] {
+  color: #004a4d !important;
 }
 
 [dir="ltr"] .Tree-title {
@@ -152,7 +161,9 @@ h4 {
 [dir="ltr"] .t-Pac .Header-button {
   border-right: none;
 }
-
+.t-Pac .Header {
+  box-shadow: none;
+}
 .t-Pac .Header-button {
   height: auto;
   width: auto;
@@ -170,7 +181,6 @@ h4 {
 
 .t-Pac .Header .Header-navbar {
   background-color: #06c !important;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   padding-bottom: 0 !important;
   padding-top: 0 !important;
 }
@@ -240,7 +250,7 @@ h4 {
 /* Tree */
 
 .Tree-title {
-  color: #1c2024;
+  color: #5a6772;
   font-family: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
   font-size: 1.2em;
   font-weight: 700;
@@ -265,7 +275,7 @@ h4 {
 .Frame-panel--sidebar {
   background-color: white;
   min-width: 280px !important;
-  padding-bottom: 2em;
+  padding: 0 0 1.5rem 0;
 }
 
 .Browser-panel *,
@@ -326,7 +336,11 @@ h4 {
 .t-Pac .Pen-header .Pen-title.u-text-h4 {
   margin-bottom: 0 !important;
 }
-
-.Navigation-group {
+.Navigation .Navigation-group {
   border-bottom: 1px solid #ddd;
 }
+.Navigation .Navigation-group:first-child .Tree .Tree-title {
+    display: none;
+  }
+}
+

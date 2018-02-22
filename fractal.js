@@ -1,6 +1,6 @@
 const fractal = module.exports = require('@frctl/fractal').create()
 
-fractal.set('project.title', 'Web Toolkit Styleguide')
+fractal.set('project.title', 'Web Toolkit')
 
 fractal.components.set('path', __dirname + '/src')
 
