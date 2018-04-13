@@ -55,8 +55,7 @@
 }
 
 .Headroom--fixed.Headroom--not-top .Megamenu-item > a,
-.Headroom--pinned.Headroom--not-top .Megamenu-item > a
- {
+.Headroom--pinned.Headroom--not-top .Megamenu-item > a {
   @extend .u-padding-top-xs;
   @extend .u-padding-bottom-xs;
 }
