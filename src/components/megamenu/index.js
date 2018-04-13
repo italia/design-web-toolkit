@@ -141,6 +141,9 @@ $(document).ready(function () {
           }
         }
       })
+      $el.click(function( event ) {
+        event.preventDefault()
+      })
     }
   })
 })
