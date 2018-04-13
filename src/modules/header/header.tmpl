@@ -85,7 +85,7 @@
   <!-- Header-navbar -->
 
   {% if menu %}
-  <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
+  <div class="{% if not isMenuFixed %}Headroom-hideme{% endif %} u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
     {% if clone %}
       <nav class="Megamenu Megamenu--default js-megamenu {{ backgroundClassName }}" data-rel=".Offcanvas .Treeview"></nav>
     {% elif megamenu %}

@@ -54,6 +54,13 @@
   @extend .u-padding-left-xl;
 }
 
+.Headroom--fixed.Headroom--not-top .Megamenu-item > a,
+.Headroom--pinned.Headroom--not-top .Megamenu-item > a
+ {
+  @extend .u-padding-top-xs;
+  @extend .u-padding-bottom-xs;
+}
+
 .Megamenu-item:first-child > a {
   padding-left: 0 !important;
 }
@@ -164,6 +171,13 @@
 
   bottom: 35%;
   right: 0.5em;
+}
+
+.Headroom--fixed.Headroom--not-top .Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after,
+.Headroom--fixed.Headroom--not-top .Megamenu--default .Megamenu-list > li > a[aria-expanded=false]::after,
+.Headroom--pinned.Headroom--not-top .Megamenu--default .Megamenu-list > li > a[aria-expanded=true]::after,
+.Headroom--pinned.Headroom--not-top .Megamenu--default .Megamenu-list > li > a[aria-expanded=false]::after {
+  bottom: 25%;
 }
 
 .Megamenu--default .Megamenu-list > li > a[aria-expanded=false]::after {

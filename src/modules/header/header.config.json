@@ -9,6 +9,7 @@
     }
   },
   "isFixed": true,
+  "isMenuFixed": true,
   "variants": [
     {
       "name": "default",
