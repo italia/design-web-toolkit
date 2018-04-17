@@ -197,6 +197,11 @@
   color: var(--Header-text-color);
 }
 
+.Headroom--fixed.Headroom--not-top .Header-search button,
+.Headroom--pinned.Headroom--not-top .Header-search buttn {
+  @extend .u-padding-all-xs;
+}
+
 /* Utils block (social + languages + search form)
   ================================================ */
 
