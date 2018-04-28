@@ -1,0 +1,5 @@
+@import "leaflet/dist/leaflet.css";
+.maps{
+    width: 100%;
+    height: 400px;
+}
