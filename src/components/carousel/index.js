@@ -29,12 +29,8 @@ const opts = {
   }
 }
 
-const init = function() {
-  const $owl = $(opts.jsSelector)
-
-  if ($owl.length <= 0) {
-    return
-  }
+const owlInit = function(owlInstance) {
+  const $owl = $(owlInstance)
 
   require(['owl.carousel', './a11y', 'owl.carousel/dist/assets/owl.carousel.css'], () => {
     $owl.on('changed.owl.carousel refreshed.owl.carousel', (event) => {
@@ -63,12 +59,25 @@ const init = function() {
         .click(() => $(`#${element.id}`).trigger('prev.owl.carousel'))
     })
 
-    const settings = $.extend({}, opts.owlOpts || {}, $owl.data('carouselOptions'))
+    const settings = $.extend({}, opts.owlOpts || {}, $owl.data('carouselOptions') )
 
     // must be called after events initialization
     $owl.owlCarousel(settings)
   })
 }
+
+const init = function() {
+    const $owl = $(opts.jsSelector)
+
+    if ($owl.length <= 0) {
+      return
+    }
+
+    $owl.each(function( index, element ) {
+      owlInit(element)
+    })
+}
+
 
 $(document).ready(init)
 

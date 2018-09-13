@@ -1,0 +1,90 @@
+<section class="u-background-grey-60 u-padding-r-all">
+  <div class="u-layout-medium u-layoutCenter">
+
+    <div class="Grid">
+      <h2 id="carousel-heading-1" class="Grid-cell u-text-h2 u-color-white u-layout-centerLeft">Slider 1</h2>
+
+      <!-- <next / prev buttons> -->
+      <div class="Grid-cell u-layout-centerRight">
+        <button class="owl-prev u-padding-bottom-xl u-padding-right-xxl u-text-r-xl u-color-teal-50" aria-controls="carousel-1">
+            <span class="u-hiddenVisually">Vai alla slide precedente</span>
+            <span class="u-alignMiddle Icon Icon-arrow-left" role="presentation"></span>
+        </button>
+        <button class="owl-next u-padding-bottom-xl u-padding-left u-text-r-xl u-color-teal-50" aria-controls="carousel-1">
+          <span class="u-hiddenVisually">Vai alla slide successiva</span>
+          <span class="u-alignMiddle Icon Icon-arrow-right" role="presentation"></span>
+        </button>
+        <p class="u-hiddenVisually">È possibile navigare le slide utilizzando i tasti freccia</p>
+      </div>
+      <!-- </next / prev buttons> -->
+    </div>
+
+    <div id="carousel-1" class="owl-carousel owl-theme" role="region" data-carousel-options='{"items":1,"responsive":false,"dots":true}'>
+      {% for i in [1, 2, 3, 4, 5]%}
+      <div class="Carousel-item">
+        {% render '@tile--gallery', { index: i, text: __SHORT_TEXTS__[i] } %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="u-background-grey-60 u-padding-r-all">
+  <div class="u-layout-medium u-layoutCenter">
+
+    <div class="Grid">
+      <h2 id="carousel-heading-2" class="Grid-cell u-text-h2 u-color-white u-layout-centerLeft">Slider 2</h2>
+
+      <!-- <next / prev buttons> -->
+      <div class="Grid-cell u-layout-centerRight">
+        <button class="owl-prev u-padding-bottom-xl u-padding-right-xxl u-text-r-xl u-color-teal-50" aria-controls="carousel-2">
+            <span class="u-hiddenVisually">Vai alla slide precedente</span>
+            <span class="u-alignMiddle Icon Icon-arrow-left" role="presentation"></span>
+        </button>
+        <button class="owl-next u-padding-bottom-xl u-padding-left u-text-r-xl u-color-teal-50" aria-controls="carousel-2">
+          <span class="u-hiddenVisually">Vai alla slide successiva</span>
+          <span class="u-alignMiddle Icon Icon-arrow-right" role="presentation"></span>
+        </button>
+        <p class="u-hiddenVisually">È possibile navigare le slide utilizzando i tasti freccia</p>
+      </div>
+      <!-- </next / prev buttons> -->
+    </div>
+
+    <div id="carousel-2" class="owl-carousel owl-theme" role="region" data-carousel-options='{"items":2,"autoplay":true,"responsive":false,"dots":true}'>
+      {% for i in [1, 2, 3, 4, 5, 6, 7, 8]%}
+      <div class="Carousel-item">
+        {% render '@tile--gallery', { index: i, text: __SHORT_TEXTS__[i] } %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="u-background-grey-60 u-padding-r-all">
+  <div class="u-layout-medium u-layoutCenter">
+
+    <div class="Grid">
+      <h2 id="carousel-heading-3" class="Grid-cell u-text-h2 u-color-white u-layout-centerLeft">Slider 3</h2>
+
+      <!-- <next / prev buttons> -->
+      <div class="Grid-cell u-layout-centerRight">
+        <button class="owl-prev u-padding-bottom-xl u-padding-right-xxl u-text-r-xl u-color-teal-50" aria-controls="carousel-3">
+            <span class="u-hiddenVisually">Vai alla slide precedente</span>
+            <span class="u-alignMiddle Icon Icon-arrow-left" role="presentation"></span>
+        </button>
+        <button class="owl-next u-padding-bottom-xl u-padding-left u-text-r-xl u-color-teal-50" aria-controls="carousel-3">
+          <span class="u-hiddenVisually">Vai alla slide successiva</span>
+          <span class="u-alignMiddle Icon Icon-arrow-right" role="presentation"></span>
+        </button>
+        <p class="u-hiddenVisually">È possibile navigare le slide utilizzando i tasti freccia</p>
+      </div>
+      <!-- </next / prev buttons> -->
+    </div>
+
+    <div id="carousel-3" class="owl-carousel owl-theme" role="region" >
+      {% for i in [1, 2, 3, 4, 5, 6, 7]%}
+      <div class="Carousel-item">
+        {% render '@tile--gallery', { index: i, text: __SHORT_TEXTS__[i] } %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
