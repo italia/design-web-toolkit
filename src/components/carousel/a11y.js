@@ -31,7 +31,7 @@
  */
 
 ;
-(function($, window) {
+(function($) {
 
   var Owl2A11y = function(carousel) {
     this._core = carousel
@@ -140,17 +140,29 @@
    */
   Owl2A11y.prototype.setupFocus = function() {
     // Only needed to initialise once for the entire document
-    this.$element.bind('focusin', function() {
-      $(this).attr({
-        'data-owl-carousel-focused': '1',
-        'aria-live': 'polite'
-      }).trigger('stop.owl.autoplay')
-    }).bind('focusout', function() {
-      $(this).attr({
-        'data-owl-carousel-focused': '0',
-        'aria-live': 'off'
-      }).trigger('play.owl.autoplay')
-    })
+    if (this._core.options.autoplay) {
+      this.$element.bind('focusin', function() {
+        $(this).attr({
+            'data-owl-carousel-focused': '1',
+            'aria-live': 'polite'
+          }).trigger('stop.owl.autoplay')
+        }).bind('focusout', function() {
+        $(this).attr({
+          'data-owl-carousel-focused': '0',
+          'aria-live': 'off'
+        }).trigger('play.owl.autoplay')
+      })
+    } else {
+      this.$element.bind('focusin', function() {
+        $(this).attr({
+            'data-owl-carousel-focused': '1',
+          })
+        }).bind('focusout', function() {
+        $(this).attr({
+          'data-owl-carousel-focused': '0',
+        })
+      })
+    }
 
     // Add tabindex to allow navigation to be focused.
     if (!!this._core._plugins.navigation) {
@@ -272,13 +284,13 @@
       adjustFocus = this.adjustFocus
 
     if (!!stage) {
-      var offs = stage.offset()
-      if (!!targ) {
-        window.scrollTo(
-          offs.left,
-          offs.top - parseInt($('body').css('padding-top'), 10)
-        )
-      }
+//      var offs = stage.offset()
+//      if (!!targ) {
+//        window.scrollTo(
+//          offs.left,
+//          offs.top - parseInt($('body').css('padding-top'), 10)
+//        )
+//      }
 
       this._core.$stage.children().each(function() {
         var item = $(this)
