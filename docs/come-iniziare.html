@@ -190,10 +190,11 @@
 <p><a role="button" href="https://github.com/italia/design-web-toolkit/tree/gh-pages/build" class="Button Button--default Button--shadow Button--round u-text-r-xs">Scarica il Web Toolkit</a></p>
 <p>Facendo riferimento al <strong><a href="https://raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/build/index.html">template HTML di esempio</a></strong>, vanno inclusi nella tua pagina HTML i file:</p>
 <code><pre>.
-├── build<span class="hljs-selector-class">.css</span>
-├── vendor/modernizr<span class="hljs-selector-class">.js</span>
-├── vendor/jquery<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.js</span>
-└── IWT<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.js</span></pre></code><p>Gli altri file contenuti nella directory <code>build</code> sono Javascript associati a componenti dell’interfaccia opzionali:</p>
+├── assets/*
+├── build.css
+├── vendor/modernizr.js
+├── vendor/jquery.<span class="hljs-keyword">min</span>.js
+└── IWT.<span class="hljs-keyword">min</span>.js</pre></code><p>Gli altri file contenuti nella directory <code>build</code> sono Javascript associati a componenti dell’interfaccia opzionali:</p>
 <code><pre>├── <span class="hljs-number">0</span><span class="hljs-selector-class">.chunk</span><span class="hljs-selector-class">.js</span>
 ├── <span class="hljs-number">1</span><span class="hljs-selector-class">.chunk</span><span class="hljs-selector-class">.js</span>
 ├── ...</pre></code><p>Tali file vengono <strong>caricati automaticamente</strong> a runtime solo dove il componente (es. carousel) viene effettivamente utilizzato nell’HTML.</p>
