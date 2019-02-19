@@ -14,10 +14,8 @@
 
 @import "src/print";
 
-/*
- * WebFontLoaded: _import "src/fonts/titillium"
- * see src/_preview.html
- */
+@import "src/fonts/titillium";
+
 @import "src/themes/pac";
 
 @import "src/legacy";
