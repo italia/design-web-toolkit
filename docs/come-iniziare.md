@@ -26,6 +26,7 @@ Facendo riferimento al **[template HTML di esempio](https://raw.githubuserconten
 
 ```
 .
+├── assets/*
 ├── build.css
 ├── vendor/modernizr.js
 ├── vendor/jquery.min.js
