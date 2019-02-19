@@ -1,13 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700");
+
 html {
   color: #000;
   font-size: 100%;
 }
-
-/*
-.Frame-panel--main {
-  background-color: #f5f5f0 !important;
-}
-*/
 
 ::-webkit-scrollbar {
   height: initial;
