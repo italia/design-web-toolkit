@@ -260,26 +260,6 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- &lt;link rel="preload" href="../../build/IWT.min.js" as="script"&gt; --&gt;</span>
-    <span class="hljs-comment">&lt;!--
-    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
-      &lt;link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' /&gt;
-    o dal repository locale (src/fonts)
-  --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
-        WebFontConfig = {
-            <span class="hljs-attr">google</span>: {
-                <span class="hljs-attr">families</span>: [<span class="hljs-string">'Titillium+Web:300,400,600,700,400italic:latin'</span>]
-            }
-        };
-        (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-            <span class="hljs-keyword">var</span> wf = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'script'</span>);
-            wf.src = <span class="hljs-string">'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js'</span>;
-            wf.type = <span class="hljs-string">'text/javascript'</span>;
-            wf.async = <span class="hljs-string">'true'</span>;
-            <span class="hljs-keyword">var</span> s = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'script'</span>)[<span class="hljs-number">0</span>];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- include HTML5shim per Explorer 8 --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../build/vendor/modernizr.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -357,7 +337,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src\_preview.tmpl</span>
+            <span class="Meta-value">src/_preview.tmpl</span>
         </li>
         
         
@@ -863,10 +843,21 @@
         
     
         
+        <li>
+            <a href="#">
+                Carousel
+            </a>
+            <ul>
+            
+            
+            
+            
+    
+        
         
         <li class="" data-role="item">
-            <a href="carousel.html" data-pjax>
-                <span>Carousel</span>
+            <a href="carousel--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -883,6 +874,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="" data-role="item">
+            <a href="carousel--multi.html" data-pjax>
+                <span>Multi</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     

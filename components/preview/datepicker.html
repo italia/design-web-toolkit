@@ -13,26 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- <link rel="preload" href="../../build/IWT.min.js" as="script"> -->
-  <!--
-    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
-      <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
-    o dal repository locale (src/fonts)
-  -->
-  <script type="text/javascript">
-    WebFontConfig = {
-      google: {
-        families: ['Titillium+Web:300,400,600,700,400italic:latin']
-      }
-    };
-    (function() {
-      var wf = document.createElement('script');
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  </script>
 
   <!-- include HTML5shim per Explorer 8 -->
   <script src="../../build/vendor/modernizr.js"></script>
@@ -60,17 +40,17 @@
 
         <div class="Form-field Form-field--date Grid-cell">
           <label class="Form-label" for="giorno">Giorno</label>
-          <input class="Form-input u-text-r-s u-borderRadius-m" id="giorno" value="" type="number" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" min="1" max="31">
+          <input class="Form-input u-text-r-s u-borderRadius-m" id="giorno" value="" type="text" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" min="1" max="31">
         </div>
 
         <div class="Form-field Form-field--date Grid-cell">
           <label class="Form-label" for="mese">Mese</label>
-          <input class="Form-input u-text-r-s u-borderRadius-m" id="mese" value="" type="number" pattern="0?[1-9]|1[012]" min="1" max="12">
+          <input class="Form-input u-text-r-s u-borderRadius-m" id="mese" value="" type="text" pattern="0?[1-9]|1[012]" min="1" max="12">
         </div>
 
         <div class="Form-field Form-field--date Grid-cell">
           <label class="Form-label" for="anno">Anno</label>
-          <input class="Form-input u-text-r-s u-borderRadius-m" id="anno" value="" type="number" pattern="[0-9]{4}" min="1900" max="2010">
+          <input class="Form-input u-text-r-s u-borderRadius-m" id="anno" value="" type="text" pattern="[0-9]{4}" min="1900" max="2010">
         </div>
 
       </div>
