@@ -1,4 +1,4 @@
-**NOTA IMPORTANTE: Questa libreria è deprecata, si consiglia l'utilizzo di [Bootstrap Italia](https://italia.github.io/bootstrap-italia/), che sostituisce questo Web Toolkit e lo aggiorna secondo le più recenti Linee guida di design.**
+**NOTA IMPORTANTE: Questa libreria è deprecata, si consiglia l'utilizzo di [Bootstrap Italia](https://italia.github.io/bootstrap-italia/), che sostituisce il Web Toolkit e lo aggiorna secondo le più recenti Linee guida di design.**
 
 ---
 
