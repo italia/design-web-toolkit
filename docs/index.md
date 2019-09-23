@@ -4,6 +4,8 @@ title: Web Toolkit
 label: Introduzione
 ---
 
+**NOTA IMPORTANTE: Questa libreria è deprecata, si consiglia l'utilizzo di [Bootstrap Italia](https://italia.github.io/bootstrap-italia/), che sostituisce il Web Toolkit e lo aggiorna secondo le più recenti Linee guida di design.**
+
 Il Web Toolkit mette a disposizione degli sviluppatori di siti web dei componenti *open source* per la costruzione di interfacce grafiche usabili, accessibili, e conformi alle [linee guida di design per i siti web della Pubblica Amministrazione](https://design-italia.readthedocs.io/it/stable/index.html).
 
 Esso fornisce inoltre pattern e template che facilitano una rapida prototipazione dei siti, in modo da poter coinvolgere gli utenti fin dalle prime fasi di progettazione, mettendo a disposizione codice HTML/CSS, oltre a componenti interattivi e template di pagina pronti all'uso. 
