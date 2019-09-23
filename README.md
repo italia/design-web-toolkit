@@ -1,3 +1,7 @@
+**NOTA IMPORTANTE: Questa libreria è deprecata, si consiglia l'utilizzo di [Bootstrap Italia](https://italia.github.io/bootstrap-italia/), che sostituisce questo Web Toolkit e lo aggiorna secondo le più recenti Linee guida di design.**
+
+---
+
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7658JRJR/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
