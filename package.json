@@ -92,7 +92,7 @@
   "optionalDependencies": {
     "async": "^2.1.4",
     "cheerio": "^0.22.0",
-    "node-fetch": "^1.6.3",
+    "node-fetch": "^2.6.1",
     "spid-graphics": "git+https://github.com/italia/spid-graphics.git"
   }
 }
